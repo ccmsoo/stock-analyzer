@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>📊 주식 시그널 대시보드</title>
+<style>
+  :root {
+    --bg:#0b0d10; --fg:#e6e6e6; --muted:#8a929b; --card:#151a20; --border:#23272e;
+    --hi:#2dd4bf; --new:#3b82f6; --cont:#a78bfa; --unclear:#f59e0b;
+    --conf-high:#22c55e; --conf-med:#eab308; --conf-low:#ef4444;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font: 14px/1.55 -apple-system, "Pretendard", sans-serif; margin: 0; padding: 24px 32px; }
+  h1 { margin: 0 0 4px; font-size: 22px; }
+  h2 { margin: 28px 0 12px; font-size: 16px; color: var(--hi); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  .meta { color: var(--muted); margin-bottom: 18px; font-size: 13px; }
+  nav.tabs { display:flex; gap:6px; margin: 16px 0 10px; flex-wrap: wrap; }
+  nav.tabs button { background: var(--card); color: var(--fg); border: 1px solid var(--border); padding: 6px 12px; cursor: pointer; border-radius: 6px; font-size: 13px; }
+  nav.tabs button.active { background: var(--hi); color:#000; border-color: var(--hi); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap: 8px; }
+  .name { font-weight: 600; }
+  .ticker { color: var(--muted); font-size: 12px; font-family: ui-monospace, monospace; }
+  .conf { font-size: 11px; padding: 1px 6px; border-radius: 999px; font-weight: 600; }
+  .conf.high { background: rgba(34,197,94,.15); color: var(--conf-high); }
+  .conf.medium { background: rgba(234,179,8,.15); color: var(--conf-med); }
+  .conf.low { background: rgba(239,68,68,.15); color: var(--conf-low); }
+  .signal { color: var(--hi); margin: 6px 0; }
+  .keywords span { display: inline-block; background:#1e2530; border:1px solid var(--border); border-radius: 4px; padding: 1px 6px; margin: 2px 4px 0 0; font-size: 12px; color: var(--muted); font-family: ui-monospace, monospace; cursor: pointer; }
+  .keywords span:hover { color: var(--hi); border-color: var(--hi); }
+  .badge { font-size: 11px; padding: 1px 6px; border-radius: 4px; color: var(--muted); background: #1e2530; border: 1px solid var(--border); margin-left: 6px; }
+  .section { display: none; }
+  .section.active { display: block; }
+  .empty { color: var(--muted); padding: 24px; text-align: center; }
+  input[type=search] { background: var(--card); color: var(--fg); border: 1px solid var(--border); padding: 6px 10px; border-radius: 6px; font-size: 13px; min-width: 240px; }
+  .theme-row { background: var(--card); border:1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; cursor: pointer; }
+  .theme-row:hover { border-color: var(--hi); }
+  .theme-row .row { align-items: center; }
+  .theme-row .stocks { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  table { width:100%; border-collapse: collapse; }
+  table th, table td { padding: 8px 10px; border-bottom: 1px solid var(--border); text-align: left; font-size: 13px; }
+  table th { color: var(--muted); font-weight: 500; font-size: 12px; }
+  table tr:hover { background: var(--card); }
+  .hist { font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); }
+  a { color: var(--hi); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>📊 주식 시그널 대시보드</h1>
+<div class="meta" id="meta">로딩 중...</div>
+
+<nav class="tabs">
+  <button class="active" data-tab="dates">📅 일별 리포트</button>
+  <button data-tab="themes">🎯 테마 사전</button>
+  <button data-tab="keywords">🔑 키워드 사전</button>
+  <button data-tab="stocks">📈 종목 타임라인</button>
+</nav>
+
+<div style="margin: 12px 0">
+  <input type="search" id="search" placeholder="🔍 종목명/테마/키워드 검색..." />
+</div>
+
+<section id="tab-dates" class="section active">
+  <h2>일별 리포트</h2>
+  <div id="date-list" class="grid"></div>
+</section>
+
+<section id="tab-themes" class="section">
+  <h2>테마 사전 — 같은 시그널로 묶인 종목들</h2>
+  <div id="theme-list"></div>
+</section>
+
+<section id="tab-keywords" class="section">
+  <h2>키워드 사전 — 향후 매칭 후보</h2>
+  <div id="keyword-list"></div>
+</section>
+
+<section id="tab-stocks" class="section">
+  <h2>종목별 타임라인 — 등장 이력 + 누적 변동</h2>
+  <table id="stock-table">
+    <thead><tr>
+      <th>종목</th><th>최초</th><th>최근</th><th>연속</th><th>테마</th><th>지엽 시그널</th><th>신뢰</th><th>이력</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<script>
+let STATE = { signals: {} };
+let SEARCH = '';
+
+async function load() {
+  try {
+    const res = await fetch('dashboard.json', {cache:'no-store'});
+    if (!res.ok) throw new Error('no dashboard.json — main.py 한 번 돌려주세요');
+    STATE = await res.json();
+  } catch (e) {
+    document.getElementById('meta').textContent = '❌ ' + e.message;
+    return;
+  }
+  render();
+}
+
+function render() {
+  const sigs = Object.entries(STATE.signals || {});
+  document.getElementById('meta').innerHTML =
+    `누적 종목 <b>${sigs.length}</b>건 · 마지막 업데이트 ${STATE.generated_at || '?'}`;
+  renderDates(sigs);
+  renderThemes(sigs);
+  renderKeywords(sigs);
+  renderStocks(sigs);
+}
+
+function pass(s) {
+  if (!SEARCH) return true;
+  const q = SEARCH.toLowerCase();
+  return [
+    s.name, s.ticker, s.main_theme, s.specific_signal,
+    (s.watch_keywords||[]).join(','), (s.related_stocks||[]).join(',')
+  ].some(x => (x||'').toLowerCase().includes(q));
+}
+
+function renderDates(sigs) {
+  // 일별 카운트 집계: date -> count
+  const dateCount = {};
+  for (const [, s] of sigs) {
+    for (const h of (s.history || [])) {
+      dateCount[h.date] = (dateCount[h.date]||0) + 1;
+    }
+  }
+  const dates = Object.keys(dateCount).sort().reverse();
+  const wrap = document.getElementById('date-list');
+  if (!dates.length) { wrap.innerHTML = '<div class="empty">아직 데이터가 없습니다. main.py 실행 후 다시 확인하세요.</div>'; return; }
+  wrap.innerHTML = dates.map(d => `
+    <div class="card">
+      <div class="row"><span class="name">${d}</span><span class="badge">${dateCount[d]}종목</span></div>
+      <div style="margin-top:8px">
+        <a href="report_${d}.html">📄 HTML 리포트</a> ·
+        <a href="report_${d}.md">📝 Markdown</a> ·
+        <a href="report_${d}.csv">📊 CSV</a>
+      </div>
+    </div>`).join('');
+}
+
+function renderThemes(sigs) {
+  // specific_signal 또는 main_theme별 그룹
+  const groups = {};
+  for (const [t, s] of sigs.filter(([_,s]) => pass(s))) {
+    const key = (s.specific_signal && s.specific_signal.trim()) || s.main_theme || '미분류';
+    (groups[key] = groups[key] || []).push([t, s]);
+  }
+  const sorted = Object.entries(groups).sort((a,b) => b[1].length - a[1].length);
+  const wrap = document.getElementById('theme-list');
+  if (!sorted.length) { wrap.innerHTML = '<div class="empty">매칭된 테마가 없습니다.</div>'; return; }
+  wrap.innerHTML = sorted.map(([theme, items]) => `
+    <details class="theme-row" ${items.length >= 2 ? 'open' : ''}>
+      <summary><span class="name">${theme}</span> <span class="badge">${items.length}종목</span></summary>
+      <div class="stocks" style="margin-top:8px">
+        ${items.map(([t,s]) => `
+          <div style="padding:6px 0; border-top:1px solid var(--border); display:flex; justify-content:space-between;">
+            <div>
+              <span class="name">${s.name||t}</span>
+              <span class="ticker">${t}</span>
+              <span class="conf ${(s.confidence||'low')}">${s.confidence||'-'}</span>
+            </div>
+            <div class="hist">${(s.history||[]).map(h => `${h.date.slice(4)}:${(h.change_pct||0).toFixed(1)}%`).join(' ')}</div>
+          </div>`).join('')}
+      </div>
+    </details>`).join('');
+}
+
+function renderKeywords(sigs) {
+  // 키워드별 등장 횟수, 그 키워드를 가진 종목들
+  const kwMap = {};
+  for (const [t, s] of sigs.filter(([_,s]) => pass(s))) {
+    for (const k of (s.watch_keywords||[])) {
+      const key = (k||'').trim();
+      if (!key) continue;
+      if (!kwMap[key]) kwMap[key] = { stocks: [], avgPct: 0 };
+      kwMap[key].stocks.push([t, s]);
+    }
+  }
+  const sorted = Object.entries(kwMap)
+    .map(([k, v]) => {
+      const pcts = v.stocks.flatMap(([, s]) => (s.history||[]).map(h => h.change_pct||0));
+      const avg = pcts.length ? pcts.reduce((a,b)=>a+b,0)/pcts.length : 0;
+      return [k, v.stocks, avg];
+    })
+    .sort((a,b) => b[1].length - a[1].length || b[2] - a[2]);
+  const wrap = document.getElementById('keyword-list');
+  if (!sorted.length) { wrap.innerHTML = '<div class="empty">키워드가 없습니다.</div>'; return; }
+  wrap.innerHTML = sorted.map(([k, stocks, avg]) => `
+    <details class="theme-row">
+      <summary>
+        <span class="name">🔑 ${k}</span>
+        <span class="badge">${stocks.length}회</span>
+        <span class="badge">평균 ${avg.toFixed(1)}%</span>
+      </summary>
+      <div class="stocks" style="margin-top:8px">
+        ${stocks.map(([t,s]) => `
+          <div style="padding:4px 0; display:flex; justify-content:space-between;">
+            <span><span class="name">${s.name||t}</span> <span class="ticker">${t}</span></span>
+            <span class="hist">${(s.history||[]).map(h => `${h.date.slice(4)}:${(h.change_pct||0).toFixed(1)}%`).join(' ')}</span>
+          </div>`).join('')}
+      </div>
+    </details>`).join('');
+}
+
+function renderStocks(sigs) {
+  const tbody = document.querySelector('#stock-table tbody');
+  const rows = sigs.filter(([_,s]) => pass(s))
+    .sort((a,b) => (b[1].last_seen||'').localeCompare(a[1].last_seen||''));
+  if (!rows.length) { tbody.innerHTML = '<tr><td colspan="8" class="empty">데이터 없음</td></tr>'; return; }
+  tbody.innerHTML = rows.map(([t, s]) => `
+    <tr>
+      <td><span class="name">${s.name||t}</span><br><span class="ticker">${t} · ${s.market||''}</span></td>
+      <td>${s.first_seen||'-'}</td>
+      <td>${s.last_seen||'-'}</td>
+      <td>${s.consecutive_days||1}일</td>
+      <td>${s.main_theme||'-'}</td>
+      <td>${s.specific_signal||'-'}</td>
+      <td><span class="conf ${(s.confidence||'low')}">${s.confidence||'-'}</span></td>
+      <td class="hist">${(s.history||[]).map(h => `${h.date.slice(4)}:${(h.change_pct||0).toFixed(1)}`).join(' ')}</td>
+    </tr>`).join('');
+}
+
+document.querySelectorAll('nav.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav.tabs button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('tab-' + b.dataset.tab).classList.add('active');
+}));
+
+document.getElementById('search').addEventListener('input', e => { SEARCH = e.target.value; render(); });
+
+load();
+</script>
+</body>
+</html>
