@@ -21,3 +21,4 @@ logs/*.log
 # 개인 메모/실험
 notes/
 scratch/
+.github/workflows/
