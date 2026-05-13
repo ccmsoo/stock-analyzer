@@ -1,12 +1,9 @@
-$ cat /tmp/daily.yml.bak
-
 name: 일일 주식 분석
 
-on:
+"on":
   schedule:
-    # 평일 KST 15:30 = UTC 06:30
     - cron: '30 6 * * 1-5'
-  workflow_dispatch:    # 수동 실행 버튼
+  workflow_dispatch:
     inputs:
       date:
         description: '특정 날짜 (YYYYMMDD, 비우면 최근 영업일)'
@@ -18,7 +15,7 @@ on:
         default: '20'
 
 permissions:
-  contents: write       # state/reports 변경분 자동 commit + push
+  contents: write
 
 jobs:
   analyze:
@@ -26,19 +23,19 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - name: 레포 체크아웃
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Python 3.13 세팅
+      - name: Setup Python 3.13
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
           cache: 'pip'
 
-      - name: 의존성 설치
+      - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: 일일 분석 실행
+      - name: Run daily analysis
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -53,12 +50,12 @@ jobs:
             python -u main.py --top "$TOP_N"
           fi
 
-      - name: 역방향 추천 갱신
+      - name: Refresh reverse signals
         env:
           TZ: Asia/Seoul
         run: python -u -m recommenders.reverse_signal
 
-      - name: 산출물 아티팩트 업로드
+      - name: Upload artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -71,14 +68,14 @@ jobs:
             reports/reverse_candidates.json
           retention-days: 30
 
-      - name: 변경분 자동 commit & push
+      - name: Commit and push results
         run: |
           git config user.name "stock-analyzer-bot"
           git config user.email "bot@stockanalyzer"
           git add reports/ state/ || true
           if git diff --staged --quiet; then
-            echo "변경 없음 — commit 생략"
+            echo "No changes"
           else
-            git commit -m "🤖 일일 분석 자동 갱신 ($(date +%Y%m%d))"
+            git commit -m "auto: daily analysis $(date +%Y%m%d)"
             git push
           fi
