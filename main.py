@@ -140,7 +140,7 @@ def main(date_str=None, top_n=10, use_general_news=True, historical=False, skip_
                 'main_theme': prev.get('main_theme', ''),
                 'specific_signal': prev.get('specific_signal', ''),
                 'trigger_type': prev.get('trigger_type', ''),
-                'reasoning': f"이전 분석 재사용 (최초 {prev.get('first_seen')}, {prev.get('consecutive_days', 1)}일째 등장)",
+                'reasoning': f"이전 분석 재사용 (최초 {prev.get('first_seen')}, {prev.get('consecutive_days', 1) + 1}일째 등장)",
                 'related_stocks': prev.get('related_stocks', []),
                 'watch_keywords': prev.get('watch_keywords', []),
                 'confidence': prev.get('confidence', 'medium'),
@@ -149,7 +149,9 @@ def main(date_str=None, top_n=10, use_general_news=True, historical=False, skip_
             }
             status_map[t] = 'continuation'
             cont_count += 1
-            print(f"   - [{t}] {stock['name']} → 연속 상승 (캐시)")
+            # 캐시 재사용이라도 history는 누적 — 같은 시그널이 며칠 가는지 추적용
+            record_signal(state, t, stock, analysis[t], date_str)
+            print(f"   - [{t}] {stock['name']} → 연속 상승 (캐시, {state['signals'][t].get('consecutive_days')}일째)")
             continue
 
         articles = merged_news.get(t, [])

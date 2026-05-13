@@ -1,0 +1,23 @@
+# 환경
+.env
+.env.local
+*.local
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+
+# 임시 캐시 (영속 X — 매 실행마다 새로 만들어도 됨)
+state/hist_cache_*.pkl
+*.log
+/tmp/*.log
+
+# 로컬 로그
+logs/*.log
+
+# 개인 메모/실험
+notes/
+scratch/
