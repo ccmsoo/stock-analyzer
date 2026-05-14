@@ -2,8 +2,8 @@ name: 실시간 키워드 레이더
 
 "on":
   schedule:
-    # KST 9~16시 (UTC 0~7시) 평일, 15분 간격
-    - cron: '*/15 0-7 * * 1-5'
+    # 24/7, 15분 간격 — 글로벌 뉴스/공시는 시간 무관 등장
+    - cron: '*/15 * * * *'
   workflow_dispatch: {}
 
 permissions:
