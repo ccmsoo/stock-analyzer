@@ -5811,6 +5811,34 @@
       "3c368dcfd6de",
       "4155ec7fe25b",
       "885bbb10409c"
+    ],
+    "live_radar": [
+      "4bce25fa233a"
     ]
-  }
+  },
+  "live_alerts": [
+    {
+      "keyword": "한타바이러스 백신",
+      "matched_owners": [
+        {
+          "ticker": "005250",
+          "name": "녹십자홀딩스",
+          "cluster": "cell_therapy"
+        }
+      ],
+      "clusters": [
+        "cell_therapy"
+      ],
+      "new_articles": [
+        {
+          "title": "네이버가 더 편해지는 순간웨일 브라우저 알아보기",
+          "link": "https://naver.me/FWTmTscE",
+          "source": "",
+          "date": "",
+          "origin": "search:한타바이러스 백신"
+        }
+      ],
+      "detected_at": "2026-05-15T04:23:56"
+    }
+  ]
 }
