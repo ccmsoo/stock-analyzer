@@ -2,6 +2,7 @@ name: 일일 주식 분석
 
 "on":
   schedule:
+    # 평일 KST 15:30 = UTC 06:30
     - cron: '30 6 * * 1-5'
   workflow_dispatch:
     inputs:

@@ -21,4 +21,6 @@ logs/*.log
 # 개인 메모/실험
 notes/
 scratch/
-.github/workflows/
+
+# Claude Code local settings (퍼스널 권한 등)
+.claude/

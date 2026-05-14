@@ -30,7 +30,11 @@ SYSTEM_PROMPT = """당신은 한국 주식 시장 분석가입니다. 단기 급
    원인 뉴스가 없거나 D-day 당일에만 있고 사전 단서가 전무하면 confidence='low'.
 5. 같은 시그널로 함께 움직일 연관 종목 1~3개 (가능한 경우만, 모르면 비워두기).
 6. 신뢰도: 'high'(명확한 호재/공시 있음), 'medium'(뉴스로 추정 가능), 'low'(원인 불명/단순 테마성).
-7. 향후 추적할 키워드(watch_keywords)는 **재현 가능한 지엽적 표현**으로 — 종목명, 흔한 테마어는 제외.
+7. watch_keywords는 정확히 **4~6개** 추출. 클러스터링용이므로 다음 두 종류를 섞어서:
+   - **상위 테마어 (2~3개)**: 다른 종목과 묶일 보편 키워드. 예) "휴머노이드", "AI 데이터센터", "재개발", "한타바이러스", "어닝 서프라이즈", "M&A", "FDA 승인"
+   - **지엽적 명사구 (2~3개)**: 이 종목 고유의 구체 트리거. 예) "HBM4 12단", "AP209 8월 투약", "압구정 명품관", "CPO 본딩 첫 수주"
+   - 종목명·회사명은 절대 포함하지 말 것 (예: '코스모로보틱스' X, '휴머노이드' O)
+   - '관련주', '테마주', '실적', '발표' 같은 공허한 단어 금지
 
 반드시 지정된 JSON 형식으로만 응답하세요."""
 
@@ -69,13 +73,14 @@ def _build_user_prompt(stock, articles):
 }}"""
 
 
-def analyze_single_stock(client, stock, articles, model="gpt-4o"):
+def analyze_single_stock(client, stock, articles, model="gpt-5-mini"):
     """한 종목 분석"""
     try:
         response = client.chat.completions.create(
             model=model,
-            max_tokens=1024,
-            response_format={"type": "json_object"},  # JSON 강제 출력
+            max_completion_tokens=2500,
+            reasoning_effort='low',   # 인과 추론은 약간 필요, minimal은 약함
+            response_format={"type": "json_object"},
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": _build_user_prompt(stock, articles)},
@@ -100,12 +105,12 @@ def analyze_single_stock(client, stock, articles, model="gpt-4o"):
         }
 
 
-def analyze_with_gpt(stocks, news_data, model="gpt-4o"):
+def analyze_with_gpt(stocks, news_data, model="gpt-5-mini"):
     """
     종목 리스트를 GPT-4o로 일괄 분석
     
     Args:
-        model: 'gpt-4o' (균형), 'gpt-4o-mini' (저렴), 'gpt-4-turbo' (고품질)
+        model: 'gpt-5-mini' (균형), 'gpt-5-mini-mini' (저렴), 'gpt-4-turbo' (고품질)
     
     Returns:
         dict: {ticker: analysis_result}

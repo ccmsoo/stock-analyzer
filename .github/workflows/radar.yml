@@ -1,0 +1,48 @@
+name: 실시간 키워드 레이더
+
+"on":
+  schedule:
+    # KST 9~16시 (UTC 0~7시) 평일, 15분 간격
+    - cron: '*/15 0-7 * * 1-5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run live radar
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TZ: Asia/Seoul
+        run: python -u -m monitor.live_radar --once --hours 1 --max-keywords 30
+
+      - name: Commit state if changed
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar@stockanalyzer"
+          git add state/signals.json reports/dashboard.json || true
+          if git diff --staged --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "radar: $(date -u +%Y%m%d-%H%M)"
+            git push
+          fi

@@ -26,6 +26,7 @@ from typing import Dict, List
 import FinanceDataReader as fdr
 
 from state_manager import load_state
+from recommenders.stopwords import CLUSTER_STOPWORDS, NAME_MATCH_STOPWORDS
 
 
 # 종목명 정규화 (괄호·공백 제거 후 매칭 시도)
@@ -72,7 +73,7 @@ def _cluster_signals(signals: Dict[str, dict]) -> List[dict]:
         tokens = set()
         for m in re.finditer(r'[가-힣]{3,}|[A-Za-z][A-Za-z0-9\-]{2,}', text):
             tok = m.group(0)
-            if tok in ('관련주', '테마주', '코스피', '코스닥', '상한가', '거래량', '주가'):
+            if tok in CLUSTER_STOPWORDS:
                 continue
             tokens.add(tok)
         for tok in tokens:
@@ -131,7 +132,10 @@ def _expand_pool_by_listing(pool: Dict[str, set], listing: Dict[str, dict],
     expanded = {k: set(v) for k, v in pool.items()}
     for theme in themes:
         key = theme['keyword']
-        if not (3 <= len(key) <= 8):    # 너무 짧거나 긴 키워드는 매칭 안 함
+        # 5~12자 + NAME_MATCH_STOPWORDS 아닌 키워드만 종목명 매칭 (노이즈 방지)
+        if not (5 <= len(key) <= 12):
+            continue
+        if key in NAME_MATCH_STOPWORDS:
             continue
         norm_kw = _norm(key)
         for norm_name, info in listing.items():

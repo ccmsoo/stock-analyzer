@@ -49,7 +49,7 @@ else:
     from analyzers.gpt_analyzer import analyze_single_stock
     from openai import OpenAI
     AI_MODEL_NAME = 'GPT-4o'
-    _AI_MODEL = 'gpt-4o'
+    _AI_MODEL = 'gpt-5-mini'
 
 
 def _make_client():

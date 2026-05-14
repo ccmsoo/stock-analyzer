@@ -115,20 +115,73 @@ def _finalize(articles):
     return articles
 
 
-def get_article_body(url, max_chars=2000):
-    """기사 본문 가져오기 (네이버 뉴스 링크인 경우)"""
+def _resolve_naver_redirect(url, html):
+    """finance.naver.com/item/news_read.naver는 JS redirect → n.news.naver.com 으로 변환"""
+    if 'news_read.naver' not in url:
+        return url, html
+    m = re.search(r"top\.location\.href='([^']+)'", html)
+    if not m:
+        return url, html
+    real_url = m.group(1)
     try:
-        res = requests.get(url, headers=HEADERS, timeout=10)
-        soup = BeautifulSoup(res.text, 'lxml')
-        
-        # 네이버 뉴스 본문 영역 시도
-        for selector in ['#dic_area', '#articleBodyContents', '.article_body', '#newsct_article']:
-            content = soup.select_one(selector)
-            if content:
-                text = content.get_text(separator=' ', strip=True)
+        res = requests.get(real_url, headers=HEADERS, timeout=10, allow_redirects=True)
+        res.encoding = res.apparent_encoding or 'utf-8'
+        return real_url, res.text
+    except Exception:
+        return url, html
+
+
+def get_article_body(url, max_chars=2000):
+    """기사 본문 가져오기 — 네이버/외부 매체 모두 지원.
+    1) 네이버 도메인은 알려진 selector 사용
+    2) 외부 매체는 readability-lxml로 자동 추출
+    3) 둘 다 실패 시 paragraph 태그 최장 블록
+    """
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=10, allow_redirects=True)
+        res.encoding = res.apparent_encoding or 'utf-8'
+        html = res.text
+
+        # finance.naver.com/news_read.naver 는 JS redirect — 실제 페이지로 이동
+        url, html = _resolve_naver_redirect(url, html)
+
+        # 1. 네이버 뉴스 페이지 직접 추출
+        if 'naver.com' in url:
+            soup = BeautifulSoup(html, 'lxml')
+            for selector in ['#dic_area', '#articleBodyContents', '.article_body', '#newsct_article', '#articleBody']:
+                content = soup.select_one(selector)
+                if content:
+                    text = content.get_text(separator=' ', strip=True)
+                    if len(text) > 100:
+                        return text[:max_chars]
+
+        # 2. readability-lxml로 일반 본문 추출
+        try:
+            from readability import Document
+            doc = Document(html)
+            text_html = doc.summary()
+            text = BeautifulSoup(text_html, 'lxml').get_text(separator=' ', strip=True)
+            if len(text) > 100:
                 return text[:max_chars]
-        
-        return ''
+        except Exception:
+            pass
+
+        # 3. fallback — 가장 긴 <p> 또는 <div class~article>
+        soup = BeautifulSoup(html, 'lxml')
+        candidates = []
+        for tag in soup.find_all(['article', 'div', 'section']):
+            cls = ' '.join(tag.get('class', []))
+            if any(x in cls.lower() for x in ['article', 'content', 'body', 'view']):
+                text = tag.get_text(separator=' ', strip=True)
+                if len(text) > 200:
+                    candidates.append(text)
+        if candidates:
+            return max(candidates, key=len)[:max_chars]
+
+        # 정말 못 찾으면 모든 p 태그 합쳐서
+        ps = [p.get_text(strip=True) for p in soup.find_all('p')]
+        text = ' '.join([p for p in ps if len(p) > 30])
+        return text[:max_chars] if text else ''
     except Exception:
         return ''
 
