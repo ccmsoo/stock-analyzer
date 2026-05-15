@@ -6767,7 +6767,19 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "4bce25fa233a"
+      "f66b47b0c2a3",
+      "7211e4a8717a",
+      "a29d18723a2c",
+      "f1f21f6e8fe3",
+      "b83078b55b7f",
+      "3270f6d72abb",
+      "bd2bed16e0ac",
+      "ed823d562832",
+      "4bce25fa233a",
+      "54b38c7ceff0",
+      "f456094a1330",
+      "dccae380221a",
+      "7d0d1a535cf2"
     ],
     "069640": [
       "f07174791096",
@@ -7269,6 +7281,165 @@
         }
       ],
       "detected_at": "2026-05-15T04:23:56"
+    },
+    {
+      "keyword": "식품의약품안전처",
+      "matched_owners": [
+        {
+          "ticker": "003060",
+          "name": "에이프로젠바이오로직스",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "007460",
+          "name": "에이프로젠",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "462510",
+          "name": "라메디텍",
+          "cluster": "biotech_policy_beneficiary"
+        }
+      ],
+      "clusters": [
+        "biotech_policy_beneficiary",
+        "osteoarthritis_drug"
+      ],
+      "new_articles": [
+        {
+          "title": "[주요공시] 삼성전자, 알테오젠, 이수화학, 다우데이타, 삼천당제약, 대...",
+          "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=205317",
+          "source": "데일리경제",
+          "date": "2026.05.15 23:53",
+          "origin": "search:식품의약품안전처"
+        },
+        {
+          "title": "요리에 '개미 토핑'했다가…'미슐랭2스타' 레스토랑 대표 기소",
+          "link": "https://www.hankyung.com/article/2026051503737",
+          "source": "",
+          "date": "2026.05.15 23:46",
+          "origin": "search:식품의약품안전처"
+        },
+        {
+          "title": "‘개미 디저트’ 판매 ‘미슐랭 2스타’…식품위생법 위반 혐의 기소",
+          "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8562497&ref=A",
+          "source": "",
+          "date": "2026.05.15 23:36",
+          "origin": "search:식품의약품안전처"
+        },
+        {
+          "title": "'개미 토핑 요리' 미슐랭 2스타 레스토랑 대표 재판행",
+          "link": "https://www.slist.kr/news/articleView.html?idxno=739367",
+          "source": "싱글리스트",
+          "date": "2026.05.15 23:21",
+          "origin": "search:식품의약품안전처"
+        },
+        {
+          "title": "미슐랭 2스타 식당의 '개미 요리'…1만2000번 팔고 결국 재판행",
+          "link": "http://weekly.chosun.com/news/articleView.html?idxno=51629",
+          "source": "",
+          "date": "2026.05.15 23:08",
+          "origin": "search:식품의약품안전처"
+        }
+      ],
+      "detected_at": "2026-05-16T00:01:35"
+    },
+    {
+      "keyword": "한국미래소재",
+      "matched_owners": [
+        {
+          "ticker": "000500",
+          "name": "가온전선",
+          "cluster": "sustainable_materials_policy"
+        }
+      ],
+      "clusters": [
+        "sustainable_materials_policy"
+      ],
+      "new_articles": [
+        {
+          "title": "K-푸드, 멕시코 공략에 나서",
+          "link": "http://www.fsnews.co.kr/news/articleView.html?idxno=60936",
+          "source": "대한급식신문",
+          "date": "2026.05.15 23:09",
+          "origin": "search:한국미래소재"
+        }
+      ],
+      "detected_at": "2026-05-16T00:01:57"
+    },
+    {
+      "keyword": "기후에너지환경부",
+      "matched_owners": [
+        {
+          "ticker": "322000",
+          "name": "HD현대에너지솔루션",
+          "cluster": "solar_energy_policy"
+        }
+      ],
+      "clusters": [
+        "solar_energy_policy"
+      ],
+      "new_articles": [
+        {
+          "title": "한국환경공단, 몽골과 탄소시장 협력 확대",
+          "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=205322",
+          "source": "데일리경제",
+          "date": "2026.05.15 23:58",
+          "origin": "search:기후에너지환경부"
+        },
+        {
+          "title": "한국환경공단, 배출권 정산 실무교육 실시",
+          "link": "https://www.kdpress.co.kr/news/articleView.html?idxno=205320",
+          "source": "데일리경제",
+          "date": "2026.05.15 23:56",
+          "origin": "search:기후에너지환경부"
+        },
+        {
+          "title": "[이슈] 한국전력, 해남 해상풍력 공동접속 추진…\"3.6조 비용절감 기대...",
+          "link": "http://www.paxetv.com/news/articleView.html?idxno=272256",
+          "source": "팍스경제TV",
+          "date": "2026.05.15 23:40",
+          "origin": "search:기후에너지환경부"
+        }
+      ],
+      "detected_at": "2026-05-16T00:02:09"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "외국인은 팔았는데 비중은 최고…코스피 수급의 역설",
+          "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3063864",
+          "source": "뉴스클레임",
+          "date": "2026.05.15 23:58",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "[심층분석] '8000 코스피' 하루만에 신기루로…외인 4.9조 역대급 폭탄에...",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=77088",
+          "source": "더페어",
+          "date": "2026.05.15 23:58",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "한국거래소, ETF 8종목 상장으로 투자 선택지 확대",
+          "link": "https://www.tokenpost.kr/news/market/360199",
+          "source": "토큰포스트",
+          "date": "2026.05.15 23:38",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-05-16T00:02:20"
     }
   ]
 }
