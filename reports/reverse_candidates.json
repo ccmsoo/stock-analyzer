@@ -1,38 +1,171 @@
 {
-  "generated_at": "2026-05-14T18:19:22",
-  "reference_date": "20260514",
+  "generated_at": "2026-05-15T18:36:39",
+  "reference_date": "20260515",
   "themes": [
     {
-      "keyword": "영업이익",
+      "keyword": "순이익",
       "risen_members": [
         {
-          "ticker": "001540",
-          "name": "안국약품",
-          "change_pct": 29.94,
-          "specific_signal": "1분기 영업이익 전년 실적 초과",
+          "ticker": "003690",
+          "name": "코리안리",
+          "change_pct": 7.62,
+          "specific_signal": "1분기 영업이익 2,845억원·당기순이익 2,095억원(전년비 131%↑) 공시",
           "confidence": "high"
         },
         {
-          "ticker": "001740",
-          "name": "SK네트웍스",
-          "change_pct": 29.93,
-          "specific_signal": "1분기 영업이익 102% 증가",
+          "ticker": "111770",
+          "name": "영원무역",
+          "change_pct": 11.58,
+          "specific_signal": "1분기 영업이익 급증(전년比 약46%) 및 OEM 오더 증가·수익성 개선 (순이익 100%+ 증가 보도)",
           "confidence": "high"
         },
         {
-          "ticker": "005430",
-          "name": "한국공항",
-          "change_pct": 18.11,
-          "specific_signal": "1분기 영업이익 35.51% 증가",
+          "ticker": "493280",
+          "name": "아이엠바이오로직스",
+          "change_pct": 20.9,
+          "specific_signal": "1분기 영업익·순이익 달성 및 IMB-101 마일스톤 인식",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "093050",
+          "name": "LF",
+          "market": "KOSPI",
+          "marcap": 722228000000,
+          "last_close": 24700,
+          "last_change_pct": -2.37,
+          "avg_abs_change_5d": 2.5,
+          "avg_value_5d_eok": 15.4,
+          "vol_surge": 1.87,
+          "value_surge": 1.81,
+          "close_5d_return": 0.2,
+          "risk_score": 4.71
+        },
+        {
+          "code": "105630",
+          "name": "한세실업",
+          "market": "KOSPI",
+          "marcap": 426000000000,
+          "last_close": 10650,
+          "last_change_pct": 1.91,
+          "avg_abs_change_5d": 2.71,
+          "avg_value_5d_eok": 11.5,
+          "vol_surge": 1.61,
+          "value_surge": 1.47,
+          "close_5d_return": 1.62,
+          "risk_score": 4.5
+        },
+        {
+          "code": "005830",
+          "name": "DB손해보험",
+          "market": "KOSPI",
+          "marcap": 10774807410500,
+          "last_close": 164500,
+          "last_change_pct": -4.91,
+          "avg_abs_change_5d": 2.96,
+          "avg_value_5d_eok": 384.2,
+          "vol_surge": 1.17,
+          "value_surge": 1.14,
+          "close_5d_return": 1.42,
+          "risk_score": 3.58
+        },
+        {
+          "code": "000810",
+          "name": "삼성화재",
+          "market": "KOSPI",
+          "marcap": 24734700042000,
+          "last_close": 554000,
+          "last_change_pct": 2.97,
+          "avg_abs_change_5d": 2.72,
+          "avg_value_5d_eok": 1116.7,
+          "vol_surge": 1.09,
+          "value_surge": 1.2,
+          "close_5d_return": 9.7,
+          "risk_score": 3.55
+        }
+      ]
+    },
+    {
+      "keyword": "OEM",
+      "risen_members": [
+        {
+          "ticker": "111770",
+          "name": "영원무역",
+          "change_pct": 11.58,
+          "specific_signal": "1분기 영업이익 급증(전년比 약46%) 및 OEM 오더 증가·수익성 개선 (순이익 100%+ 증가 보도)",
           "confidence": "high"
         },
         {
-          "ticker": "009450",
-          "name": "경동나비엔",
-          "change_pct": 11.98,
-          "specific_signal": "1분기 영업이익 62% 증가",
-          "confidence": "high"
+          "ticker": "168330",
+          "name": "내츄럴엔도텍",
+          "change_pct": 19.0,
+          "specific_signal": "EstroG-100의 글로벌 제약사·대형 건기식 브랜드 연속 채택 및 미국 시장(Thorne HealthTech) 관련 캠페인 노출로 인한 수출·유통 파트너십 기대감",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "406820",
+          "name": "뷰티스킨",
+          "market": "KOSDAQ",
+          "marcap": 48062933800,
+          "last_close": 3400,
+          "last_change_pct": -17.07,
+          "avg_abs_change_5d": 11.43,
+          "avg_value_5d_eok": 141.8,
+          "vol_surge": 1.38,
+          "value_surge": 1.75,
+          "close_5d_return": -5.69,
+          "risk_score": 15.76
         },
+        {
+          "code": "093050",
+          "name": "LF",
+          "market": "KOSPI",
+          "marcap": 722228000000,
+          "last_close": 24700,
+          "last_change_pct": -2.37,
+          "avg_abs_change_5d": 2.5,
+          "avg_value_5d_eok": 15.4,
+          "vol_surge": 1.87,
+          "value_surge": 1.81,
+          "close_5d_return": 0.2,
+          "risk_score": 4.71
+        },
+        {
+          "code": "105630",
+          "name": "한세실업",
+          "market": "KOSPI",
+          "marcap": 426000000000,
+          "last_close": 10650,
+          "last_change_pct": 1.91,
+          "avg_abs_change_5d": 2.71,
+          "avg_value_5d_eok": 11.5,
+          "vol_surge": 1.61,
+          "value_surge": 1.47,
+          "close_5d_return": 1.62,
+          "risk_score": 4.5
+        },
+        {
+          "code": "014100",
+          "name": "메디앙스",
+          "market": "KOSDAQ",
+          "marcap": 18868200000,
+          "last_close": 1599,
+          "last_change_pct": -0.06,
+          "avg_abs_change_5d": 1.49,
+          "avg_value_5d_eok": 0.5,
+          "vol_surge": 1.63,
+          "value_surge": 1.5,
+          "close_5d_return": -5.38,
+          "risk_score": 2.42
+        }
+      ]
+    },
+    {
+      "keyword": "수익성",
+      "risen_members": [
         {
           "ticker": "010780",
           "name": "아이에스동서",
@@ -41,45 +174,24 @@
           "confidence": "high"
         },
         {
-          "ticker": "025560",
-          "name": "미래산업",
-          "change_pct": 29.98,
-          "specific_signal": "1분기 영업이익 및 매출 급증",
+          "ticker": "069260",
+          "name": "TKG휴켐스",
+          "change_pct": 12.86,
+          "specific_signal": "우레탄(폴리우레탄) 공급 부족에 따른 수익성 개선 및 1분기 영업이익(152억) 개선 공시",
           "confidence": "high"
         },
         {
-          "ticker": "042520",
-          "name": "한스바이오메드",
-          "change_pct": 21.3,
-          "specific_signal": "ECM 스킨부스터 '셀르디엠' 싱가포르 품목허가 및 영업이익 급증",
-          "confidence": "high"
-        },
-        {
-          "ticker": "060590",
-          "name": "씨티씨바이오",
-          "change_pct": 15.29,
-          "specific_signal": "1분기 영업이익 414% 증가",
-          "confidence": "high"
-        },
-        {
-          "ticker": "090460",
-          "name": "비에이치",
-          "change_pct": 24.38,
-          "specific_signal": "1분기 흑자전환 및 하반기 이익 개선 예측",
-          "confidence": "high"
-        },
-        {
-          "ticker": "092190",
-          "name": "서울바이오시스",
-          "change_pct": 29.94,
-          "specific_signal": "서울바이오시스의 2026년 1분기 흑자 전환",
+          "ticker": "111770",
+          "name": "영원무역",
+          "change_pct": 11.58,
+          "specific_signal": "1분기 영업이익 급증(전년比 약46%) 및 OEM 오더 증가·수익성 개선 (순이익 100%+ 증가 보도)",
           "confidence": "high"
         },
         {
           "ticker": "196450",
           "name": "코아시아씨엠",
           "change_pct": 30.0,
-          "specific_signal": "1분기 영업이익 96% 증가",
+          "specific_signal": "1분기 영업이익 96% 증가 발표",
           "confidence": "high"
         },
         {
@@ -88,124 +200,138 @@
           "change_pct": 30.0,
           "specific_signal": "1분기 영업이익 147% 성장 발표",
           "confidence": "high"
-        },
-        {
-          "ticker": "420570",
-          "name": "제이투케이바이오",
-          "change_pct": 19.47,
-          "specific_signal": "1분기 영업이익 476% 증가",
-          "confidence": "high"
-        },
-        {
-          "ticker": "483650",
-          "name": "달바글로벌",
-          "change_pct": 13.5,
-          "specific_signal": "달바글로벌 1분기 영업이익 451억원, 전년 대비 50% 증가 및 해외 매출 85% 급증",
-          "confidence": "high"
-        },
-        {
-          "ticker": "493280",
-          "name": "아이엠바이오로직스",
-          "change_pct": 20.9,
-          "specific_signal": "1분기 영업익·순익 동시 흑자 달성",
-          "confidence": "high"
-        },
-        {
-          "ticker": "499790",
-          "name": "GS피앤엘",
-          "change_pct": 12.84,
-          "specific_signal": "1분기 영업이익 58.8% 증가",
-          "confidence": "high"
         }
       ],
       "candidates": [
         {
-          "code": "000660",
-          "name": "SK하이닉스",
+          "code": "010060",
+          "name": "OCI홀딩스",
           "market": "KOSPI",
-          "marcap": 1404023659050000,
-          "last_close": 1970000,
-          "last_change_pct": -0.3,
-          "avg_abs_change_5d": 4.76,
-          "avg_value_5d_eok": 126232.3,
-          "vol_surge": 1.64,
-          "value_surge": 2.33,
-          "close_5d_return": 16.84,
-          "risk_score": 10.46
+          "marcap": 5433037512000,
+          "last_close": 291000,
+          "last_change_pct": -20.16,
+          "avg_abs_change_5d": 6.83,
+          "avg_value_5d_eok": 1606.4,
+          "vol_surge": 0.92,
+          "value_surge": 0.89,
+          "close_5d_return": -8.92,
+          "risk_score": 6.29
         },
         {
-          "code": "161890",
-          "name": "한국콜마",
+          "code": "093050",
+          "name": "LF",
           "market": "KOSPI",
-          "marcap": 2379391761600,
-          "last_close": 100800,
-          "last_change_pct": 3.49,
-          "avg_abs_change_5d": 4.17,
-          "avg_value_5d_eok": 467.8,
-          "vol_surge": 2.15,
-          "value_surge": 2.4,
-          "close_5d_return": 7.69,
-          "risk_score": 10.32
+          "marcap": 722228000000,
+          "last_close": 24700,
+          "last_change_pct": -2.37,
+          "avg_abs_change_5d": 2.5,
+          "avg_value_5d_eok": 15.4,
+          "vol_surge": 1.87,
+          "value_surge": 1.81,
+          "close_5d_return": 0.2,
+          "risk_score": 4.71
         },
         {
-          "code": "145020",
-          "name": "휴젤",
-          "market": "KOSDAQ",
-          "marcap": 3512801421500,
-          "last_close": 285500,
-          "last_change_pct": 2.7,
-          "avg_abs_change_5d": 4.41,
-          "avg_value_5d_eok": 304.2,
-          "vol_surge": 2.17,
-          "value_surge": 2.39,
-          "close_5d_return": -2.06,
-          "risk_score": 9.57
-        },
-        {
-          "code": "402340",
-          "name": "SK스퀘어",
+          "code": "105630",
+          "name": "한세실업",
           "market": "KOSPI",
-          "marcap": 154523270006000,
-          "last_close": 1171000,
-          "last_change_pct": -1.6,
-          "avg_abs_change_5d": 4.12,
-          "avg_value_5d_eok": 12232.6,
-          "vol_surge": 1.46,
-          "value_surge": 1.94,
-          "close_5d_return": 6.65,
-          "risk_score": 6.81
-        },
-        {
-          "code": "046890",
-          "name": "서울반도체",
-          "market": "KOSDAQ",
-          "marcap": 1065822712000,
-          "last_close": 18280,
-          "last_change_pct": 3.34,
-          "avg_abs_change_5d": 5.5,
-          "avg_value_5d_eok": 677.3,
-          "vol_surge": 1.16,
-          "value_surge": 1.33,
-          "close_5d_return": 1.56,
-          "risk_score": 6.57
+          "marcap": 426000000000,
+          "last_close": 10650,
+          "last_change_pct": 1.91,
+          "avg_abs_change_5d": 2.71,
+          "avg_value_5d_eok": 11.5,
+          "vol_surge": 1.61,
+          "value_surge": 1.47,
+          "close_5d_return": 1.62,
+          "risk_score": 4.5
         }
       ]
     },
     {
-      "keyword": "반도체",
+      "keyword": "로봇주",
       "risen_members": [
         {
-          "ticker": "032580",
-          "name": "피델릭스",
-          "change_pct": 20.4,
-          "specific_signal": "미래반도체와 한울반도체의 상한가 영향",
+          "ticker": "008490",
+          "name": "서흥",
+          "change_pct": 10.86,
+          "specific_signal": "1분기 영업이익 84% 급증(영업레버리지) + 로봇주 동반강세로 인한 수급 유입(자동화 설비 수주 기대)",
           "confidence": "medium"
         },
         {
-          "ticker": "078350",
-          "name": "한양디지텍",
-          "change_pct": 25.18,
-          "specific_signal": "중소형 반도체 주 상승 - 삼성전자 반등에 영향",
+          "ticker": "014915",
+          "name": "성문전자우",
+          "change_pct": 29.91,
+          "specific_signal": "이격도과열 및 급등락주 관련 테마",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "031330",
+          "name": "에스에이엠티",
+          "change_pct": 30.0,
+          "specific_signal": "코스닥 내 로봇주·반도체 관련 종목 동시 급등(일부 종목 상한가·이격도·상대강도 과열 표출)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "454910",
+          "name": "두산로보틱스",
+          "change_pct": 19.29,
+          "specific_signal": "피지컬 AI(Physical AI) 모멘텀에 따른 로봇주 동반 강세/테마 순환매",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "475400",
+          "name": "씨메스로보틱스",
+          "market": "KOSDAQ",
+          "marcap": 372667165400,
+          "last_close": 31700,
+          "last_change_pct": -0.47,
+          "avg_abs_change_5d": 4.19,
+          "avg_value_5d_eok": 100.6,
+          "vol_surge": 2.29,
+          "value_surge": 2.22,
+          "close_5d_return": -8.51,
+          "risk_score": 9.58
+        },
+        {
+          "code": "272210",
+          "name": "한화시스템",
+          "market": "KOSPI",
+          "marcap": 19704292272700,
+          "last_close": 104300,
+          "last_change_pct": -10.16,
+          "avg_abs_change_5d": 4.39,
+          "avg_value_5d_eok": 1104.0,
+          "vol_surge": 1.13,
+          "value_surge": 1.02,
+          "close_5d_return": -10.16,
+          "risk_score": 4.98
+        },
+        {
+          "code": "064350",
+          "name": "현대로템",
+          "market": "KOSPI",
+          "marcap": 21992172039500,
+          "last_close": 201500,
+          "last_change_pct": -5.18,
+          "avg_abs_change_5d": 1.99,
+          "avg_value_5d_eok": 1172.8,
+          "vol_surge": 0.51,
+          "value_surge": 0.45,
+          "close_5d_return": -8.2,
+          "risk_score": 1.01
+        }
+      ]
+    },
+    {
+      "keyword": "공급계약",
+      "risen_members": [
+        {
+          "ticker": "033240",
+          "name": "자화전자",
+          "change_pct": 16.53,
+          "specific_signal": "고배율 줌 및 손떨림 보정(이미지 안정화) 기술 부각으로 전장(자동차)용 카메라 부품 성장 기대",
           "confidence": "medium"
         },
         {
@@ -216,657 +342,314 @@
           "confidence": "high"
         },
         {
-          "ticker": "131970",
-          "name": "두산테스나",
-          "change_pct": 25.69,
-          "specific_signal": "AI 반도체 밸류체인 확대",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "144960",
-          "name": "뉴파워프라즈마",
-          "change_pct": 29.95,
-          "specific_signal": "세정 및 친환경 배기 시스템 개발",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "330860",
-          "name": "네패스아크",
-          "change_pct": 22.01,
-          "specific_signal": "뉴로모픽 테마 수급 집중",
+          "ticker": "168330",
+          "name": "내츄럴엔도텍",
+          "change_pct": 19.0,
+          "specific_signal": "EstroG-100의 글로벌 제약사·대형 건기식 브랜드 연속 채택 및 미국 시장(Thorne HealthTech) 관련 캠페인 노출로 인한 수출·유통 파트너십 기대감",
           "confidence": "medium"
         }
       ],
       "candidates": [
         {
-          "code": "254490",
-          "name": "미래반도체",
+          "code": "406820",
+          "name": "뷰티스킨",
           "market": "KOSDAQ",
-          "marcap": 620834000000,
-          "last_close": 43000,
-          "last_change_pct": 13.76,
-          "avg_abs_change_5d": 13.21,
-          "avg_value_5d_eok": 855.7,
-          "vol_surge": 2.25,
-          "value_surge": 3.5,
-          "close_5d_return": 39.38,
-          "risk_score": 44.61
+          "marcap": 48062933800,
+          "last_close": 3400,
+          "last_change_pct": -17.07,
+          "avg_abs_change_5d": 11.43,
+          "avg_value_5d_eok": 141.8,
+          "vol_surge": 1.38,
+          "value_surge": 1.75,
+          "close_5d_return": -5.69,
+          "risk_score": 15.76
         },
         {
-          "code": "320000",
-          "name": "한울반도체",
+          "code": "388790",
+          "name": "라이콤",
           "market": "KOSDAQ",
-          "marcap": 90028935000,
-          "last_close": 13500,
-          "last_change_pct": -5.86,
-          "avg_abs_change_5d": 15.25,
-          "avg_value_5d_eok": 276.6,
-          "vol_surge": 1.0,
-          "value_surge": 1.0,
-          "close_5d_return": 35.41,
-          "risk_score": 22.88
+          "marcap": 150009384000,
+          "last_close": 4900,
+          "last_change_pct": -10.26,
+          "avg_abs_change_5d": 9.54,
+          "avg_value_5d_eok": 60.4,
+          "vol_surge": 1.09,
+          "value_surge": 1.03,
+          "close_5d_return": -16.95,
+          "risk_score": 10.43
         },
         {
-          "code": "095610",
-          "name": "테스",
+          "code": "014100",
+          "name": "메디앙스",
           "market": "KOSDAQ",
-          "marcap": 2398704000000,
-          "last_close": 123900,
-          "last_change_pct": 1.14,
-          "avg_abs_change_5d": 6.91,
-          "avg_value_5d_eok": 688.2,
-          "vol_surge": 1.95,
-          "value_surge": 2.43,
-          "close_5d_return": 33.37,
-          "risk_score": 20.22
-        },
-        {
-          "code": "240810",
-          "name": "원익IPS",
-          "market": "KOSDAQ",
-          "marcap": 6253288987400,
-          "last_close": 127400,
-          "last_change_pct": -2.9,
-          "avg_abs_change_5d": 5.23,
-          "avg_value_5d_eok": 1166.2,
-          "vol_surge": 1.39,
-          "value_surge": 1.49,
-          "close_5d_return": -4.14,
-          "risk_score": 7.26
-        },
-        {
-          "code": "046890",
-          "name": "서울반도체",
-          "market": "KOSDAQ",
-          "marcap": 1065822712000,
-          "last_close": 18280,
-          "last_change_pct": 3.34,
-          "avg_abs_change_5d": 5.5,
-          "avg_value_5d_eok": 677.3,
-          "vol_surge": 1.16,
-          "value_surge": 1.33,
-          "close_5d_return": 1.56,
-          "risk_score": 6.57
-        }
-      ]
-    },
-    {
-      "keyword": "솔루션",
-      "risen_members": [
-        {
-          "ticker": "009450",
-          "name": "경동나비엔",
-          "change_pct": 11.98,
-          "specific_signal": "1분기 영업이익 62% 증가",
-          "confidence": "high"
-        },
-        {
-          "ticker": "066570",
-          "name": "LG전자",
-          "change_pct": 13.38,
-          "specific_signal": "1분기 깜짝 실적 및 로봇 사업 확장 가시화",
-          "confidence": "high"
-        },
-        {
-          "ticker": "128820",
-          "name": "대성산업",
-          "change_pct": 18.03,
-          "specific_signal": "차세대 공기열 히트펌프와 에너지 전환 솔루션",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "356680",
-          "name": "엑스게이트",
-          "change_pct": 15.49,
-          "specific_signal": "엑스게이트의 '철벽 보안' 미래 주목",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "389680",
-          "name": "유디엠텍",
-          "change_pct": 29.87,
-          "specific_signal": "엔비디아 기반 차세대 디지털 트윈 플랫폼 공급 계약",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "417970",
-          "name": "모델솔루션",
-          "market": "KOSDAQ",
-          "marcap": 129213340000,
-          "last_close": 20200,
-          "last_change_pct": -6.05,
-          "avg_abs_change_5d": 4.53,
-          "avg_value_5d_eok": 46.5,
-          "vol_surge": 5.43,
-          "value_surge": 5.87,
-          "close_5d_return": 9.43,
-          "risk_score": 29.29
-        },
-        {
-          "code": "086960",
-          "name": "MDS테크",
-          "market": "KOSDAQ",
-          "marcap": 141099385080,
-          "last_close": 3435,
-          "last_change_pct": 4.57,
-          "avg_abs_change_5d": 7.25,
-          "avg_value_5d_eok": 443.4,
-          "vol_surge": 1.0,
-          "value_surge": 1.0,
-          "close_5d_return": 8.7,
-          "risk_score": 8.52
-        },
-        {
-          "code": "290660",
-          "name": "다이나믹솔루션",
-          "market": "KOSDAQ",
-          "marcap": 77059857512,
-          "last_close": 916,
-          "last_change_pct": -4.38,
-          "avg_abs_change_5d": 5.43,
-          "avg_value_5d_eok": 34.2,
-          "vol_surge": 1.2,
-          "value_surge": 1.11,
-          "close_5d_return": -23.92,
-          "risk_score": 6.49
-        },
-        {
-          "code": "011690",
-          "name": "와이투솔루션",
-          "market": "KOSPI",
-          "marcap": 266473900440,
-          "last_close": 7260,
-          "last_change_pct": -9.59,
-          "avg_abs_change_5d": 5.47,
-          "avg_value_5d_eok": 164.7,
-          "vol_surge": 1.17,
-          "value_surge": 1.16,
-          "close_5d_return": -19.24,
-          "risk_score": 6.41
-        },
-        {
-          "code": "011070",
-          "name": "LG이노텍",
-          "market": "KOSPI",
-          "marcap": 17987001320000,
-          "last_close": 760000,
-          "last_change_pct": 0.93,
-          "avg_abs_change_5d": 4.52,
-          "avg_value_5d_eok": 2216.5,
-          "vol_surge": 0.98,
-          "value_surge": 1.33,
-          "close_5d_return": 21.79,
-          "risk_score": 6.33
-        }
-      ]
-    },
-    {
-      "keyword": "글로벌",
-      "risen_members": [
-        {
-          "ticker": "001080",
-          "name": "만호제강",
-          "change_pct": 18.2,
-          "specific_signal": "글로벌 와이어로프 시장 공략 가속",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "412350",
-          "name": "레이저쎌",
-          "change_pct": 29.95,
-          "specific_signal": "레이저 본딩 글로벌 CPO 제조사 양산용 첫 수주",
-          "confidence": "high"
-        },
-        {
-          "ticker": "483650",
-          "name": "달바글로벌",
-          "change_pct": 13.5,
-          "specific_signal": "달바글로벌 1분기 영업이익 451억원, 전년 대비 50% 증가 및 해외 매출 85% 급증",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "308100",
-          "name": "형지글로벌",
-          "market": "KOSDAQ",
-          "marcap": 20996108992,
-          "last_close": 874,
-          "last_change_pct": -6.12,
-          "avg_abs_change_5d": 5.4,
-          "avg_value_5d_eok": 19.2,
-          "vol_surge": 8.44,
-          "value_surge": 7.69,
-          "close_5d_return": -3.32,
-          "risk_score": 45.59
-        },
-        {
-          "code": "084110",
-          "name": "휴온스글로벌",
-          "market": "KOSDAQ",
-          "marcap": 514621357800,
-          "last_close": 40650,
-          "last_change_pct": -4.13,
-          "avg_abs_change_5d": 10.23,
-          "avg_value_5d_eok": 141.3,
-          "vol_surge": 3.3,
-          "value_surge": 2.56,
-          "close_5d_return": -37.27,
-          "risk_score": 33.72
-        },
-        {
-          "code": "043710",
-          "name": "코스리거글로벌",
-          "market": "KOSDAQ",
-          "marcap": 72452820870,
-          "last_close": 4185,
-          "last_change_pct": 3.33,
-          "avg_abs_change_5d": 3.25,
-          "avg_value_5d_eok": 0.7,
-          "vol_surge": 3.32,
-          "value_surge": 3.09,
-          "close_5d_return": -2.67,
-          "risk_score": 10.79
-        },
-        {
-          "code": "039030",
-          "name": "이오테크닉스",
-          "market": "KOSDAQ",
-          "marcap": 5901064450000,
-          "last_close": 479000,
-          "last_change_pct": -0.1,
-          "avg_abs_change_5d": 6.93,
-          "avg_value_5d_eok": 646.1,
-          "vol_surge": 1.55,
+          "marcap": 18868200000,
+          "last_close": 1599,
+          "last_change_pct": -0.06,
+          "avg_abs_change_5d": 1.49,
+          "avg_value_5d_eok": 0.5,
+          "vol_surge": 1.63,
           "value_surge": 1.5,
-          "close_5d_return": 0.1,
-          "risk_score": 10.77
-        },
-        {
-          "code": "161890",
-          "name": "한국콜마",
-          "market": "KOSPI",
-          "marcap": 2379391761600,
-          "last_close": 100800,
-          "last_change_pct": 3.49,
-          "avg_abs_change_5d": 4.17,
-          "avg_value_5d_eok": 467.8,
-          "vol_surge": 2.15,
-          "value_surge": 2.4,
-          "close_5d_return": 7.69,
-          "risk_score": 10.32
+          "close_5d_return": -5.38,
+          "risk_score": 2.42
         }
       ]
     },
     {
-      "keyword": "에너지",
+      "keyword": "대규모",
       "risen_members": [
-        {
-          "ticker": "051780",
-          "name": "큐로홀딩스",
-          "change_pct": 29.95,
-          "specific_signal": "미국 유가스전 개발 진격",
-          "confidence": "high"
-        },
-        {
-          "ticker": "128820",
-          "name": "대성산업",
-          "change_pct": 18.03,
-          "specific_signal": "차세대 공기열 히트펌프와 에너지 전환 솔루션",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "322000",
-          "name": "HD현대에너지솔루션",
-          "change_pct": 15.09,
-          "specific_signal": "정부의 태양광 인버터 산업 활성화 협의체 발족",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "119850",
-          "name": "지엔씨에너지",
-          "market": "KOSDAQ",
-          "marcap": 569954696850,
-          "last_close": 34650,
-          "last_change_pct": -2.39,
-          "avg_abs_change_5d": 2.94,
-          "avg_value_5d_eok": 118.7,
-          "vol_surge": 1.4,
-          "value_surge": 1.42,
-          "close_5d_return": -8.82,
-          "risk_score": 4.12
-        },
-        {
-          "code": "229640",
-          "name": "LS에코에너지",
-          "market": "KOSPI",
-          "marcap": 2802176428500,
-          "last_close": 91500,
-          "last_change_pct": -2.03,
-          "avg_abs_change_5d": 3.43,
-          "avg_value_5d_eok": 483.3,
-          "vol_surge": 0.87,
-          "value_surge": 1.08,
-          "close_5d_return": 1.55,
-          "risk_score": 3.08
-        },
-        {
-          "code": "020150",
-          "name": "롯데에너지머티리얼즈",
-          "market": "KOSPI",
-          "marcap": 3503249474700,
-          "last_close": 66900,
-          "last_change_pct": -1.04,
-          "avg_abs_change_5d": 4.15,
-          "avg_value_5d_eok": 291.8,
-          "vol_surge": 0.67,
-          "value_surge": 0.73,
-          "close_5d_return": -6.3,
-          "risk_score": 2.78
-        },
-        {
-          "code": "005090",
-          "name": "SGC에너지",
-          "market": "KOSPI",
-          "marcap": 740639716200,
-          "last_close": 51400,
-          "last_change_pct": -1.91,
-          "avg_abs_change_5d": 3.93,
-          "avg_value_5d_eok": 76.7,
-          "vol_surge": 0.66,
-          "value_surge": 0.62,
-          "close_5d_return": -16.83,
-          "risk_score": 2.61
-        },
-        {
-          "code": "100840",
-          "name": "SNT에너지",
-          "market": "KOSPI",
-          "marcap": 1018528562750,
-          "last_close": 49250,
-          "last_change_pct": -3.81,
-          "avg_abs_change_5d": 3.47,
-          "avg_value_5d_eok": 155.2,
-          "vol_surge": 0.74,
-          "value_surge": 0.69,
-          "close_5d_return": -13.29,
-          "risk_score": 2.58
-        }
-      ]
-    },
-    {
-      "keyword": "테스트",
-      "risen_members": [
-        {
-          "ticker": "080220",
-          "name": "제주반도체",
-          "change_pct": 28.35,
-          "specific_signal": "에이팩트와의 메모리 웨이퍼 테스트 파트너십 협약",
-          "confidence": "high"
-        },
-        {
-          "ticker": "131970",
-          "name": "두산테스나",
-          "change_pct": 25.69,
-          "specific_signal": "AI 반도체 밸류체인 확대",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "095610",
-          "name": "테스",
-          "market": "KOSDAQ",
-          "marcap": 2398704000000,
-          "last_close": 123900,
-          "last_change_pct": 1.14,
-          "avg_abs_change_5d": 6.91,
-          "avg_value_5d_eok": 688.2,
-          "vol_surge": 1.95,
-          "value_surge": 2.43,
-          "close_5d_return": 33.37,
-          "risk_score": 20.22
-        },
-        {
-          "code": "086390",
-          "name": "유니테스트",
-          "market": "KOSDAQ",
-          "marcap": 444873352300,
-          "last_close": 21050,
-          "last_change_pct": 15.53,
-          "avg_abs_change_5d": 4.4,
-          "avg_value_5d_eok": 166.6,
-          "vol_surge": 2.16,
-          "value_surge": 2.3,
-          "close_5d_return": 14.22,
-          "risk_score": 12.2
-        },
-        {
-          "code": "240810",
-          "name": "원익IPS",
-          "market": "KOSDAQ",
-          "marcap": 6253288987400,
-          "last_close": 127400,
-          "last_change_pct": -2.9,
-          "avg_abs_change_5d": 5.23,
-          "avg_value_5d_eok": 1166.2,
-          "vol_surge": 1.39,
-          "value_surge": 1.49,
-          "close_5d_return": -4.14,
-          "risk_score": 7.26
-        },
-        {
-          "code": "200470",
-          "name": "에이팩트",
-          "market": "KOSDAQ",
-          "marcap": 373210039330,
-          "last_close": 8810,
-          "last_change_pct": 2.8,
-          "avg_abs_change_5d": 4.52,
-          "avg_value_5d_eok": 90.4,
-          "vol_surge": 0.7,
-          "value_surge": 0.75,
-          "close_5d_return": -11.72,
-          "risk_score": 3.17
-        }
-      ]
-    },
-    {
-      "keyword": "프로젝트",
-      "risen_members": [
-        {
-          "ticker": "010690",
-          "name": "화신",
-          "change_pct": 10.4,
-          "specific_signal": "완성차 로봇 전략",
-          "confidence": "medium"
-        },
         {
           "ticker": "047040",
           "name": "대우건설",
           "change_pct": 12.61,
-          "specific_signal": "광명 하안주공 미니 신도시 시공사 선정",
+          "specific_signal": "신축 단지 재개발 및 대단지 분양 착수",
           "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "018880",
-          "name": "한온시스템",
-          "market": "KOSPI",
-          "marcap": 5131312760000,
-          "last_close": 5000,
-          "last_change_pct": -0.79,
-          "avg_abs_change_5d": 7.17,
-          "avg_value_5d_eok": 3052.8,
-          "vol_surge": 1.77,
-          "value_surge": 2.0,
-          "close_5d_return": 4.82,
-          "risk_score": 13.91
         },
         {
-          "code": "000720",
-          "name": "현대건설",
-          "market": "KOSPI",
-          "marcap": 18852531014500,
-          "last_close": 169300,
-          "last_change_pct": 5.35,
-          "avg_abs_change_5d": 3.48,
-          "avg_value_5d_eok": 1921.8,
-          "vol_surge": 0.86,
-          "value_surge": 0.83,
-          "close_5d_return": 3.23,
-          "risk_score": 3.21
-        },
-        {
-          "code": "006360",
-          "name": "GS건설",
-          "market": "KOSPI",
-          "marcap": 2982514926500,
-          "last_close": 34850,
-          "last_change_pct": 4.97,
-          "avg_abs_change_5d": 4.31,
-          "avg_value_5d_eok": 519.1,
-          "vol_surge": 0.37,
-          "value_surge": 0.32,
-          "close_5d_return": -6.69,
-          "risk_score": 1.59
-        }
-      ]
-    },
-    {
-      "keyword": "차전지",
-      "risen_members": [
-        {
-          "ticker": "006110",
-          "name": "삼아알미늄",
-          "change_pct": 18.74,
-          "specific_signal": "2차전지 양극박 수요 증가",
+          "ticker": "069640",
+          "name": "한세엠케이",
+          "change_pct": 29.98,
+          "specific_signal": "모이몰른 대규모 강남역 대형 미디어 캠페인(오프라인 광고 집행) 및 계열사 1Q 영업익 흑자 전환 공시(그룹 실적 개선 기대)",
           "confidence": "medium"
         },
         {
-          "ticker": "010780",
-          "name": "아이에스동서",
-          "change_pct": 13.72,
-          "specific_signal": "아이에스동서 1분기 영업이익 흑자 전환",
-          "confidence": "high"
-        },
-        {
-          "ticker": "101330",
-          "name": "모베이스",
-          "change_pct": 22.79,
-          "specific_signal": "BMS 양산 가속",
+          "ticker": "131970",
+          "name": "두산테스나",
+          "change_pct": 25.69,
+          "specific_signal": "AI 반도체 밸류체인 확대",
           "confidence": "medium"
         }
       ],
       "candidates": [
         {
-          "code": "009520",
-          "name": "포스코엠텍",
+          "code": "095610",
+          "name": "테스",
           "market": "KOSDAQ",
-          "marcap": 811199854440,
-          "last_close": 19480,
-          "last_change_pct": 1.67,
-          "avg_abs_change_5d": 2.46,
-          "avg_value_5d_eok": 50.3,
-          "vol_surge": 0.42,
-          "value_surge": 0.4,
-          "close_5d_return": -6.79,
-          "risk_score": 1.03
+          "marcap": 2286416000000,
+          "last_close": 118100,
+          "last_change_pct": -4.68,
+          "avg_abs_change_5d": 7.02,
+          "avg_value_5d_eok": 722.4,
+          "vol_surge": 2.13,
+          "value_surge": 2.72,
+          "close_5d_return": 12.26,
+          "risk_score": 18.63
         },
         {
-          "code": "003010",
-          "name": "혜인",
+          "code": "240810",
+          "name": "원익IPS",
+          "market": "KOSDAQ",
+          "marcap": 5629923444700,
+          "last_close": 114700,
+          "last_change_pct": -9.97,
+          "avg_abs_change_5d": 7.22,
+          "avg_value_5d_eok": 1165.3,
+          "vol_surge": 1.43,
+          "value_surge": 1.5,
+          "close_5d_return": -19.0,
+          "risk_score": 10.36
+        },
+        {
+          "code": "016450",
+          "name": "한세예스24홀딩스",
           "market": "KOSPI",
-          "marcap": 82378600560,
-          "last_close": 6480,
-          "last_change_pct": 0.0,
-          "avg_abs_change_5d": 3.9,
-          "avg_value_5d_eok": 34.9,
-          "vol_surge": 0.2,
-          "value_surge": 0.18,
-          "close_5d_return": -12.55,
-          "risk_score": 0.76
+          "marcap": 175200000000,
+          "last_close": 4380,
+          "last_change_pct": 0.46,
+          "avg_abs_change_5d": 1.09,
+          "avg_value_5d_eok": 1.6,
+          "vol_surge": 0.82,
+          "value_surge": 0.78,
+          "close_5d_return": -1.46,
+          "risk_score": 0.89
         }
       ]
     },
     {
-      "keyword": "데이터센터",
+      "keyword": "인프라",
       "risen_members": [
+        {
+          "ticker": "092790",
+          "name": "넥스틸",
+          "change_pct": 12.07,
+          "specific_signal": "북미 인프라 투자 확대 수혜 전망(시장 댓글·리포트에 의한 매수 흐름)",
+          "confidence": "medium"
+        },
         {
           "ticker": "189330",
           "name": "씨이랩",
           "change_pct": 16.92,
           "specific_signal": "호남권 AI 데이터센터 구축 MOU 체결",
           "confidence": "high"
-        },
-        {
-          "ticker": "270520",
-          "name": "앱튼",
-          "change_pct": 29.97,
-          "specific_signal": "온디바이스 AI 기반 스마트 데이터센터 사업 본격화 발표",
-          "confidence": "high"
-        },
-        {
-          "ticker": "290690",
-          "name": "소룩스",
-          "change_pct": 30.0,
-          "specific_signal": "250억 CB 발행 및 AI 데이터센터 구축 MOU",
-          "confidence": "high"
         }
       ],
       "candidates": [
         {
-          "code": "052400",
-          "name": "코나아이",
-          "market": "KOSDAQ",
-          "marcap": 894186067400,
-          "last_close": 61400,
-          "last_change_pct": 3.02,
-          "avg_abs_change_5d": 3.02,
-          "avg_value_5d_eok": 113.9,
-          "vol_surge": 1.17,
-          "value_surge": 1.14,
-          "close_5d_return": 3.19,
-          "risk_score": 3.75
+          "code": "001430",
+          "name": "세아베스틸지주",
+          "market": "KOSPI",
+          "marcap": 2513934541900,
+          "last_close": 70100,
+          "last_change_pct": -3.31,
+          "avg_abs_change_5d": 4.1,
+          "avg_value_5d_eok": 261.1,
+          "vol_surge": 1.36,
+          "value_surge": 1.32,
+          "close_5d_return": -3.97,
+          "risk_score": 5.56
         },
         {
           "code": "030200",
           "name": "KT",
           "market": "KOSPI",
-          "marcap": 15524535796000,
-          "last_close": 61600,
-          "last_change_pct": 3.88,
-          "avg_abs_change_5d": 1.59,
-          "avg_value_5d_eok": 294.5,
-          "vol_surge": 1.08,
-          "value_surge": 1.05,
-          "close_5d_return": 3.88,
-          "risk_score": 1.84
+          "marcap": 14793672909500,
+          "last_close": 58700,
+          "last_change_pct": -4.71,
+          "avg_abs_change_5d": 2.46,
+          "avg_value_5d_eok": 347.4,
+          "vol_surge": 1.29,
+          "value_surge": 1.25,
+          "close_5d_return": -0.17,
+          "risk_score": 3.16
+        },
+        {
+          "code": "460860",
+          "name": "동국제강",
+          "market": "KOSPI",
+          "marcap": 642919900320,
+          "last_close": 12960,
+          "last_change_pct": -5.4,
+          "avg_abs_change_5d": 4.0,
+          "avg_value_5d_eok": 63.9,
+          "vol_surge": 0.41,
+          "value_surge": 0.38,
+          "close_5d_return": -5.19,
+          "risk_score": 1.64
+        }
+      ]
+    },
+    {
+      "keyword": "밸류체인",
+      "risen_members": [
+        {
+          "ticker": "003550",
+          "name": "LG",
+          "change_pct": 7.69,
+          "specific_signal": "LG전자 상한가 및 로봇사업 밸류체인 기대감에 따른 지주사(그룹주) 동반 랠리",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "131970",
+          "name": "두산테스나",
+          "change_pct": 25.69,
+          "specific_signal": "AI 반도체 밸류체인 확대",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "095610",
+          "name": "테스",
+          "market": "KOSDAQ",
+          "marcap": 2286416000000,
+          "last_close": 118100,
+          "last_change_pct": -4.68,
+          "avg_abs_change_5d": 7.02,
+          "avg_value_5d_eok": 722.4,
+          "vol_surge": 2.13,
+          "value_surge": 2.72,
+          "close_5d_return": 12.26,
+          "risk_score": 18.63
+        },
+        {
+          "code": "240810",
+          "name": "원익IPS",
+          "market": "KOSDAQ",
+          "marcap": 5629923444700,
+          "last_close": 114700,
+          "last_change_pct": -9.97,
+          "avg_abs_change_5d": 7.22,
+          "avg_value_5d_eok": 1165.3,
+          "vol_surge": 1.43,
+          "value_surge": 1.5,
+          "close_5d_return": -19.0,
+          "risk_score": 10.36
+        },
+        {
+          "code": "011070",
+          "name": "LG이노텍",
+          "market": "KOSPI",
+          "marcap": 17324322324000,
+          "last_close": 732000,
+          "last_change_pct": -3.68,
+          "avg_abs_change_5d": 4.84,
+          "avg_value_5d_eok": 2550.7,
+          "vol_surge": 1.11,
+          "value_surge": 1.51,
+          "close_5d_return": 6.4,
+          "risk_score": 6.07
+        }
+      ]
+    },
+    {
+      "keyword": "브랜드",
+      "risen_members": [
+        {
+          "ticker": "069640",
+          "name": "한세엠케이",
+          "change_pct": 29.98,
+          "specific_signal": "모이몰른 대규모 강남역 대형 미디어 캠페인(오프라인 광고 집행) 및 계열사 1Q 영업익 흑자 전환 공시(그룹 실적 개선 기대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "168330",
+          "name": "내츄럴엔도텍",
+          "change_pct": 19.0,
+          "specific_signal": "EstroG-100의 글로벌 제약사·대형 건기식 브랜드 연속 채택 및 미국 시장(Thorne HealthTech) 관련 캠페인 노출로 인한 수출·유통 파트너십 기대감",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "406820",
+          "name": "뷰티스킨",
+          "market": "KOSDAQ",
+          "marcap": 48062933800,
+          "last_close": 3400,
+          "last_change_pct": -17.07,
+          "avg_abs_change_5d": 11.43,
+          "avg_value_5d_eok": 141.8,
+          "vol_surge": 1.38,
+          "value_surge": 1.75,
+          "close_5d_return": -5.69,
+          "risk_score": 15.76
+        },
+        {
+          "code": "014100",
+          "name": "메디앙스",
+          "market": "KOSDAQ",
+          "marcap": 18868200000,
+          "last_close": 1599,
+          "last_change_pct": -0.06,
+          "avg_abs_change_5d": 1.49,
+          "avg_value_5d_eok": 0.5,
+          "vol_surge": 1.63,
+          "value_surge": 1.5,
+          "close_5d_return": -5.38,
+          "risk_score": 2.42
+        },
+        {
+          "code": "016450",
+          "name": "한세예스24홀딩스",
+          "market": "KOSPI",
+          "marcap": 175200000000,
+          "last_close": 4380,
+          "last_change_pct": 0.46,
+          "avg_abs_change_5d": 1.09,
+          "avg_value_5d_eok": 1.6,
+          "vol_surge": 0.82,
+          "value_surge": 0.78,
+          "close_5d_return": -1.46,
+          "risk_score": 0.89
         }
       ]
     },
@@ -881,6 +664,13 @@
           "confidence": "high"
         },
         {
+          "ticker": "128820",
+          "name": "대성산업",
+          "change_pct": 18.03,
+          "specific_signal": "차세대 공기열 히트펌프와 에너지 전환 솔루션",
+          "confidence": "medium"
+        },
+        {
           "ticker": "144960",
           "name": "뉴파워프라즈마",
           "change_pct": 29.95,
@@ -893,78 +683,183 @@
           "code": "320000",
           "name": "한울반도체",
           "market": "KOSDAQ",
-          "marcap": 90028935000,
-          "last_close": 13500,
-          "last_change_pct": -5.86,
-          "avg_abs_change_5d": 15.25,
-          "avg_value_5d_eok": 276.6,
-          "vol_surge": 1.0,
-          "value_surge": 1.0,
-          "close_5d_return": 35.41,
-          "risk_score": 22.88
+          "marcap": 77825012700,
+          "last_close": 11670,
+          "last_change_pct": -13.56,
+          "avg_abs_change_5d": 11.97,
+          "avg_value_5d_eok": 267.3,
+          "vol_surge": 34.76,
+          "value_surge": 46.81,
+          "close_5d_return": -9.95,
+          "risk_score": 415.98
         },
         {
           "code": "036930",
           "name": "주성엔지니어링",
           "market": "KOSDAQ",
-          "marcap": 7808828328000,
-          "last_close": 168000,
-          "last_change_pct": 0.0,
-          "avg_abs_change_5d": 6.64,
-          "avg_value_5d_eok": 2074.4,
-          "vol_surge": 0.41,
-          "value_surge": 0.6,
-          "close_5d_return": 20.95,
-          "risk_score": 3.89
+          "marcap": 6516653164200,
+          "last_close": 140200,
+          "last_change_pct": -16.55,
+          "avg_abs_change_5d": 9.39,
+          "avg_value_5d_eok": 2733.4,
+          "vol_surge": 0.58,
+          "value_surge": 0.79,
+          "close_5d_return": -14.41,
+          "risk_score": 5.47
         }
       ]
     },
     {
-      "keyword": "현대모비스",
+      "keyword": "경쟁력",
       "risen_members": [
         {
-          "ticker": "012330",
-          "name": "현대모비스",
-          "change_pct": 18.43,
-          "specific_signal": "현대차 그룹 로보틱스 사업 기대감",
-          "confidence": "medium"
+          "ticker": "032800",
+          "name": "판타지오",
+          "change_pct": 30.0,
+          "specific_signal": "50억 규모 제3자배정 유상증자 추진",
+          "confidence": "high"
         },
         {
-          "ticker": "092200",
-          "name": "디아이씨",
-          "change_pct": 8.07,
-          "specific_signal": "현대모비스 주가 상승에 따른 시장 연쇄 반응",
+          "ticker": "064400",
+          "name": "LG씨엔에스",
+          "change_pct": 17.14,
+          "specific_signal": "LG의 미래 기술 인재 확보를 위한 '테크 콘퍼런스' 개최",
+          "confidence": "high"
+        },
+        {
+          "ticker": "290520",
+          "name": "신도기연",
+          "change_pct": 22.43,
+          "specific_signal": "초정밀 평탄 식각 장비 시장 성장",
           "confidence": "medium"
         }
       ],
       "candidates": [
         {
-          "code": "005380",
-          "name": "현대차",
+          "code": "034220",
+          "name": "LG디스플레이",
           "market": "KOSPI",
-          "marcap": 145787529392000,
-          "last_close": 712000,
-          "last_change_pct": 0.28,
-          "avg_abs_change_5d": 4.55,
-          "avg_value_5d_eok": 24919.5,
-          "vol_surge": 3.11,
-          "value_surge": 3.79,
-          "close_5d_return": 16.15,
-          "risk_score": 18.71
+          "marcap": 7050000000000,
+          "last_close": 14100,
+          "last_change_pct": -8.08,
+          "avg_abs_change_5d": 6.17,
+          "avg_value_5d_eok": 3351.7,
+          "vol_surge": 3.36,
+          "value_surge": 3.57,
+          "close_5d_return": 11.82,
+          "risk_score": 25.62
         },
+        {
+          "code": "036930",
+          "name": "주성엔지니어링",
+          "market": "KOSDAQ",
+          "marcap": 6516653164200,
+          "last_close": 140200,
+          "last_change_pct": -16.55,
+          "avg_abs_change_5d": 9.39,
+          "avg_value_5d_eok": 2733.4,
+          "vol_surge": 0.58,
+          "value_surge": 0.79,
+          "close_5d_return": -14.41,
+          "risk_score": 5.47
+        }
+      ]
+    },
+    {
+      "keyword": "자동차",
+      "risen_members": [
+        {
+          "ticker": "010690",
+          "name": "화신",
+          "change_pct": 10.4,
+          "specific_signal": "완성차 로봇 전략",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "033240",
+          "name": "자화전자",
+          "change_pct": 16.53,
+          "specific_signal": "고배율 줌 및 손떨림 보정(이미지 안정화) 기술 부각으로 전장(자동차)용 카메라 부품 성장 기대",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
         {
           "code": "018880",
           "name": "한온시스템",
           "market": "KOSPI",
-          "marcap": 5131312760000,
-          "last_close": 5000,
-          "last_change_pct": -0.79,
-          "avg_abs_change_5d": 7.17,
-          "avg_value_5d_eok": 3052.8,
-          "vol_surge": 1.77,
-          "value_surge": 2.0,
-          "close_5d_return": 4.82,
-          "risk_score": 13.91
+          "marcap": 5182625887600,
+          "last_close": 5050,
+          "last_change_pct": 1.0,
+          "avg_abs_change_5d": 6.84,
+          "avg_value_5d_eok": 3414.9,
+          "vol_surge": 1.92,
+          "value_surge": 2.16,
+          "close_5d_return": -11.87,
+          "risk_score": 13.16
+        },
+        {
+          "code": "388790",
+          "name": "라이콤",
+          "market": "KOSDAQ",
+          "marcap": 150009384000,
+          "last_close": 4900,
+          "last_change_pct": -10.26,
+          "avg_abs_change_5d": 9.54,
+          "avg_value_5d_eok": 60.4,
+          "vol_surge": 1.09,
+          "value_surge": 1.03,
+          "close_5d_return": -16.95,
+          "risk_score": 10.43
+        }
+      ]
+    },
+    {
+      "keyword": "기술력",
+      "risen_members": [
+        {
+          "ticker": "012860",
+          "name": "모베이스전자",
+          "change_pct": 29.96,
+          "specific_signal": "전기차 BMS 양산 가속",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "144960",
+          "name": "뉴파워프라즈마",
+          "change_pct": 29.95,
+          "specific_signal": "세정 및 친환경 배기 시스템 개발",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "320000",
+          "name": "한울반도체",
+          "market": "KOSDAQ",
+          "marcap": 77825012700,
+          "last_close": 11670,
+          "last_change_pct": -13.56,
+          "avg_abs_change_5d": 11.97,
+          "avg_value_5d_eok": 267.3,
+          "vol_surge": 34.76,
+          "value_surge": 46.81,
+          "close_5d_return": -9.95,
+          "risk_score": 415.98
+        },
+        {
+          "code": "036930",
+          "name": "주성엔지니어링",
+          "market": "KOSDAQ",
+          "marcap": 6516653164200,
+          "last_close": 140200,
+          "last_change_pct": -16.55,
+          "avg_abs_change_5d": 9.39,
+          "avg_value_5d_eok": 2733.4,
+          "vol_surge": 0.58,
+          "value_surge": 0.79,
+          "close_5d_return": -14.41,
+          "risk_score": 5.47
         }
       ]
     },
@@ -991,120 +886,316 @@
           "code": "006280",
           "name": "녹십자",
           "market": "KOSPI",
-          "marcap": 1692210702400,
-          "last_close": 144800,
-          "last_change_pct": 4.78,
-          "avg_abs_change_5d": 2.33,
-          "avg_value_5d_eok": 177.0,
-          "vol_surge": 3.39,
-          "value_surge": 3.3,
-          "close_5d_return": 4.85,
-          "risk_score": 8.66
+          "marcap": 1620922820600,
+          "last_close": 138700,
+          "last_change_pct": -4.21,
+          "avg_abs_change_5d": 2.96,
+          "avg_value_5d_eok": 166.9,
+          "vol_surge": 2.86,
+          "value_surge": 2.81,
+          "close_5d_return": 3.35,
+          "risk_score": 9.0
         },
         {
           "code": "068270",
           "name": "셀트리온",
           "market": "KOSPI",
-          "marcap": 43300154721100,
-          "last_close": 195100,
-          "last_change_pct": 2.41,
-          "avg_abs_change_5d": 2.1,
-          "avg_value_5d_eok": 1601.6,
-          "vol_surge": 1.61,
-          "value_surge": 1.54,
-          "close_5d_return": -1.66,
-          "risk_score": 3.39
+          "marcap": 41901943676800,
+          "last_close": 188800,
+          "last_change_pct": -3.23,
+          "avg_abs_change_5d": 2.34,
+          "avg_value_5d_eok": 1645.7,
+          "vol_surge": 1.64,
+          "value_surge": 1.55,
+          "close_5d_return": -1.31,
+          "risk_score": 3.83
         }
       ]
     },
     {
-      "keyword": "생태계",
+      "keyword": "그룹주",
       "risen_members": [
         {
-          "ticker": "001740",
-          "name": "SK네트웍스",
-          "change_pct": 29.93,
-          "specific_signal": "1분기 영업이익 102% 증가",
-          "confidence": "high"
+          "ticker": "003550",
+          "name": "LG",
+          "change_pct": 7.69,
+          "specific_signal": "LG전자 상한가 및 로봇사업 밸류체인 기대감에 따른 지주사(그룹주) 동반 랠리",
+          "confidence": "medium"
         },
         {
-          "ticker": "330860",
-          "name": "네패스아크",
-          "change_pct": 22.01,
-          "specific_signal": "뉴로모픽 테마 수급 집중",
+          "ticker": "012330",
+          "name": "현대모비스",
+          "change_pct": 18.43,
+          "specific_signal": "현대차 그룹 로보틱스 사업 기대감",
           "confidence": "medium"
         }
       ],
       "candidates": [
         {
-          "code": "000660",
-          "name": "SK하이닉스",
+          "code": "005380",
+          "name": "현대차",
           "market": "KOSPI",
-          "marcap": 1404023659050000,
-          "last_close": 1970000,
-          "last_change_pct": -0.3,
-          "avg_abs_change_5d": 4.76,
-          "avg_value_5d_eok": 126232.3,
-          "vol_surge": 1.64,
-          "value_surge": 2.33,
-          "close_5d_return": 16.84,
-          "risk_score": 10.46
+          "marcap": 143330436200000,
+          "last_close": 700000,
+          "last_change_pct": -1.69,
+          "avg_abs_change_5d": 3.45,
+          "avg_value_5d_eok": 24830.2,
+          "vol_surge": 2.44,
+          "value_surge": 2.98,
+          "close_5d_return": 8.36,
+          "risk_score": 9.83
         },
         {
-          "code": "402340",
-          "name": "SK스퀘어",
+          "code": "011070",
+          "name": "LG이노텍",
           "market": "KOSPI",
-          "marcap": 154523270006000,
-          "last_close": 1171000,
-          "last_change_pct": -1.6,
-          "avg_abs_change_5d": 4.12,
-          "avg_value_5d_eok": 12232.6,
-          "vol_surge": 1.46,
-          "value_surge": 1.94,
-          "close_5d_return": 6.65,
-          "risk_score": 6.81
+          "marcap": 17324322324000,
+          "last_close": 732000,
+          "last_change_pct": -3.68,
+          "avg_abs_change_5d": 4.84,
+          "avg_value_5d_eok": 2550.7,
+          "vol_surge": 1.11,
+          "value_surge": 1.51,
+          "close_5d_return": 6.4,
+          "risk_score": 6.07
         }
       ]
     },
     {
-      "keyword": "중국 HCBOT과의 휴머노이드 로봇 기술 협력",
+      "keyword": "CPO",
       "risen_members": [
         {
-          "ticker": "048770",
-          "name": "TPC로보틱스",
+          "ticker": "223310",
+          "name": "사토시홀딩스",
           "change_pct": 29.96,
-          "specific_signal": "중국 HCBOT과의 휴머노이드 로봇 기술 협력",
+          "specific_signal": "엔비디아 인셉션 프로그램 가입 및 자회사 광통신 기술(차세대 CPO) 인정",
+          "confidence": "high"
+        },
+        {
+          "ticker": "412350",
+          "name": "레이저쎌",
+          "change_pct": 29.95,
+          "specific_signal": "레이저 본딩 글로벌 CPO 제조사 양산용 첫 수주",
           "confidence": "high"
         }
       ],
       "candidates": [
         {
-          "code": "277810",
-          "name": "레인보우로보틱스",
+          "code": "039030",
+          "name": "이오테크닉스",
           "market": "KOSDAQ",
-          "marcap": 16315280578000,
-          "last_close": 841000,
-          "last_change_pct": -4.21,
-          "avg_abs_change_5d": 6.17,
-          "avg_value_5d_eok": 3826.9,
-          "vol_surge": 2.87,
-          "value_surge": 3.67,
-          "close_5d_return": 7.27,
-          "risk_score": 20.27
+          "marcap": 5445241100000,
+          "last_close": 442000,
+          "last_change_pct": -7.72,
+          "avg_abs_change_5d": 7.83,
+          "avg_value_5d_eok": 680.9,
+          "vol_surge": 1.71,
+          "value_surge": 1.63,
+          "close_5d_return": -11.78,
+          "risk_score": 13.41
         },
         {
-          "code": "454910",
-          "name": "두산로보틱스",
+          "code": "131290",
+          "name": "티에스이",
+          "market": "KOSDAQ",
+          "marcap": 2007649363500,
+          "last_close": 181500,
+          "last_change_pct": -4.52,
+          "avg_abs_change_5d": 3.27,
+          "avg_value_5d_eok": 215.2,
+          "vol_surge": 1.15,
+          "value_surge": 1.26,
+          "close_5d_return": 3.18,
+          "risk_score": 3.99
+        }
+      ]
+    },
+    {
+      "keyword": "안정화",
+      "risen_members": [
+        {
+          "ticker": "020560",
+          "name": "아시아나항공",
+          "change_pct": 16.94,
+          "specific_signal": "대한항공·아시아나항공 합병 확정 발표",
+          "confidence": "high"
+        },
+        {
+          "ticker": "033240",
+          "name": "자화전자",
+          "change_pct": 16.53,
+          "specific_signal": "고배율 줌 및 손떨림 보정(이미지 안정화) 기술 부각으로 전장(자동차)용 카메라 부품 성장 기대",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "388790",
+          "name": "라이콤",
+          "market": "KOSDAQ",
+          "marcap": 150009384000,
+          "last_close": 4900,
+          "last_change_pct": -10.26,
+          "avg_abs_change_5d": 9.54,
+          "avg_value_5d_eok": 60.4,
+          "vol_surge": 1.09,
+          "value_surge": 1.03,
+          "close_5d_return": -16.95,
+          "risk_score": 10.43
+        },
+        {
+          "code": "003490",
+          "name": "대한항공",
           "market": "KOSPI",
-          "marcap": 6922773864000,
-          "last_close": 106800,
-          "last_change_pct": 4.09,
-          "avg_abs_change_5d": 2.77,
-          "avg_value_5d_eok": 1500.5,
-          "vol_surge": 1.84,
-          "value_surge": 1.87,
-          "close_5d_return": 5.74,
-          "risk_score": 5.67
+          "marcap": 9592148219050,
+          "last_close": 26050,
+          "last_change_pct": -4.58,
+          "avg_abs_change_5d": 4.5,
+          "avg_value_5d_eok": 593.3,
+          "vol_surge": 1.28,
+          "value_surge": 1.31,
+          "close_5d_return": 1.17,
+          "risk_score": 5.91
+        }
+      ]
+    },
+    {
+      "keyword": "라인업",
+      "risen_members": [
+        {
+          "ticker": "190510",
+          "name": "나무가",
+          "change_pct": 20.54,
+          "specific_signal": "로봇 비전솔루션 라인업 확대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "418420",
+          "name": "라온텍",
+          "change_pct": 29.95,
+          "specific_signal": "SID 2026에서 마이크로 디스플레이 라인업 공개",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "240810",
+          "name": "원익IPS",
+          "market": "KOSDAQ",
+          "marcap": 5629923444700,
+          "last_close": 114700,
+          "last_change_pct": -9.97,
+          "avg_abs_change_5d": 7.22,
+          "avg_value_5d_eok": 1165.3,
+          "vol_surge": 1.43,
+          "value_surge": 1.5,
+          "close_5d_return": -19.0,
+          "risk_score": 10.36
+        },
+        {
+          "code": "083930",
+          "name": "아바코",
+          "market": "KOSDAQ",
+          "marcap": 207095983390,
+          "last_close": 14110,
+          "last_change_pct": -7.41,
+          "avg_abs_change_5d": 4.22,
+          "avg_value_5d_eok": 39.8,
+          "vol_surge": 1.04,
+          "value_surge": 0.96,
+          "close_5d_return": -5.81,
+          "risk_score": 4.38
+        }
+      ]
+    },
+    {
+      "keyword": "외국인",
+      "risen_members": [
+        {
+          "ticker": "031330",
+          "name": "에스에이엠티",
+          "change_pct": 30.0,
+          "specific_signal": "코스닥 내 로봇주·반도체 관련 종목 동시 급등(일부 종목 상한가·이격도·상대강도 과열 표출)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "052400",
+          "name": "코나아이",
+          "change_pct": 14.01,
+          "specific_signal": "외국인 전용 'NOL World 카드' 출시 및 인천공항 현장 교부·우리은행 제휴",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "035600",
+          "name": "KG이니시스",
+          "market": "KOSDAQ",
+          "marcap": 288494923980,
+          "last_close": 10470,
+          "last_change_pct": -1.6,
+          "avg_abs_change_5d": 2.14,
+          "avg_value_5d_eok": 12.5,
+          "vol_surge": 1.0,
+          "value_surge": 0.93,
+          "close_5d_return": -3.41,
+          "risk_score": 2.15
+        },
+        {
+          "code": "064260",
+          "name": "다날",
+          "market": "KOSDAQ",
+          "marcap": 503798743620,
+          "last_close": 6660,
+          "last_change_pct": -7.11,
+          "avg_abs_change_5d": 2.9,
+          "avg_value_5d_eok": 182.8,
+          "vol_surge": 0.57,
+          "value_surge": 0.51,
+          "close_5d_return": -9.02,
+          "risk_score": 1.64
+        }
+      ]
+    },
+    {
+      "keyword": "1분기 깜짝 실적 및 로봇 사업 확장 가시화",
+      "risen_members": [
+        {
+          "ticker": "066570",
+          "name": "LG전자",
+          "change_pct": 10.83,
+          "specific_signal": "1분기 깜짝 실적 및 로봇 사업 확장 가시화",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "011070",
+          "name": "LG이노텍",
+          "market": "KOSPI",
+          "marcap": 17324322324000,
+          "last_close": 732000,
+          "last_change_pct": -3.68,
+          "avg_abs_change_5d": 4.84,
+          "avg_value_5d_eok": 2550.7,
+          "vol_surge": 1.11,
+          "value_surge": 1.51,
+          "close_5d_return": 6.4,
+          "risk_score": 6.07
+        },
+        {
+          "code": "051910",
+          "name": "LG화학",
+          "market": "KOSPI",
+          "marcap": 26401536282000,
+          "last_close": 374000,
+          "last_change_pct": -4.71,
+          "avg_abs_change_5d": 3.18,
+          "avg_value_5d_eok": 1941.2,
+          "vol_surge": 1.44,
+          "value_surge": 1.41,
+          "close_5d_return": -11.69,
+          "risk_score": 4.59
         }
       ]
     },
@@ -1124,85 +1215,421 @@
           "code": "081150",
           "name": "티플랙스",
           "market": "KOSDAQ",
-          "marcap": 116245645580,
-          "last_close": 4790,
-          "last_change_pct": 11.53,
-          "avg_abs_change_5d": 10.47,
-          "avg_value_5d_eok": 403.3,
-          "vol_surge": 25.61,
-          "value_surge": 31.94,
-          "close_5d_return": 35.31,
-          "risk_score": 402.1
+          "marcap": 99864474230,
+          "last_close": 4115,
+          "last_change_pct": -14.09,
+          "avg_abs_change_5d": 12.85,
+          "avg_value_5d_eok": 433.5,
+          "vol_surge": 28.71,
+          "value_surge": 35.57,
+          "close_5d_return": -10.54,
+          "risk_score": 368.86
         },
         {
           "code": "058430",
           "name": "포스코스틸리온",
           "market": "KOSPI",
-          "marcap": 441600000000,
-          "last_close": 7360,
-          "last_change_pct": 1.38,
-          "avg_abs_change_5d": 3.51,
-          "avg_value_5d_eok": 262.7,
-          "vol_surge": 0.63,
-          "value_surge": 0.6,
-          "close_5d_return": -11.0,
-          "risk_score": 2.23
+          "marcap": 421200000000,
+          "last_close": 7020,
+          "last_change_pct": -4.62,
+          "avg_abs_change_5d": 4.04,
+          "avg_value_5d_eok": 174.9,
+          "vol_surge": 0.41,
+          "value_surge": 0.37,
+          "close_5d_return": -9.18,
+          "risk_score": 1.66
         }
       ]
     },
     {
-      "keyword": "기대감",
+      "keyword": "1분기 영업이익 흑자전환",
       "risen_members": [
         {
-          "ticker": "000650",
-          "name": "천일고속",
+          "ticker": "090460",
+          "name": "비에이치",
+          "change_pct": 24.38,
+          "specific_signal": "1분기 영업이익 흑자전환",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "009150",
+          "name": "삼성전기",
+          "market": "KOSPI",
+          "marcap": 75440632960000,
+          "last_close": 1010000,
+          "last_change_pct": -1.37,
+          "avg_abs_change_5d": 3.45,
+          "avg_value_5d_eok": 12269.5,
+          "vol_surge": 1.61,
+          "value_surge": 1.95,
+          "close_5d_return": 12.22,
+          "risk_score": 6.92
+        },
+        {
+          "code": "011070",
+          "name": "LG이노텍",
+          "market": "KOSPI",
+          "marcap": 17324322324000,
+          "last_close": 732000,
+          "last_change_pct": -3.68,
+          "avg_abs_change_5d": 4.84,
+          "avg_value_5d_eok": 2550.7,
+          "vol_surge": 1.11,
+          "value_surge": 1.51,
+          "close_5d_return": 6.4,
+          "risk_score": 6.07
+        }
+      ]
+    },
+    {
+      "keyword": "1분기 영업이익 514% 급증·브라질 법인 고수익성 지",
+      "risen_members": [
+        {
+          "ticker": "067310",
+          "name": "하나마이크론",
+          "change_pct": 18.61,
+          "specific_signal": "1분기 영업이익 514% 급증·브라질 법인 고수익성 지속 및 SK하이닉스와 협력 강화 소식",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "036930",
+          "name": "주성엔지니어링",
+          "market": "KOSDAQ",
+          "marcap": 6516653164200,
+          "last_close": 140200,
+          "last_change_pct": -16.55,
+          "avg_abs_change_5d": 9.39,
+          "avg_value_5d_eok": 2733.4,
+          "vol_surge": 0.58,
+          "value_surge": 0.79,
+          "close_5d_return": -14.41,
+          "risk_score": 5.47
+        },
+        {
+          "code": "036540",
+          "name": "SFA반도체",
+          "market": "KOSDAQ",
+          "marcap": 1416003208830,
+          "last_close": 8610,
+          "last_change_pct": 3.99,
+          "avg_abs_change_5d": 2.61,
+          "avg_value_5d_eok": 843.1,
+          "vol_surge": 1.01,
+          "value_surge": 0.96,
+          "close_5d_return": 2.14,
+          "risk_score": 2.76
+        }
+      ]
+    },
+    {
+      "keyword": "1분기 영업이익 141억원(전년比 68% 증가)·분기 ",
+      "risen_members": [
+        {
+          "ticker": "194700",
+          "name": "노바렉스",
+          "change_pct": 14.23,
+          "specific_signal": "1분기 영업이익 141억원(전년比 68% 증가)·분기 최대 실적 및 글로벌 수출(글로벌 확장 본격화) 발표",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "200130",
+          "name": "콜마비앤에이치",
+          "market": "KOSDAQ",
+          "marcap": 341808783960,
+          "last_close": 11620,
+          "last_change_pct": -1.36,
+          "avg_abs_change_5d": 3.79,
+          "avg_value_5d_eok": 20.9,
+          "vol_surge": 2.76,
+          "value_surge": 2.81,
+          "close_5d_return": 4.68,
+          "risk_score": 11.45
+        },
+        {
+          "code": "161890",
+          "name": "한국콜마",
+          "market": "KOSPI",
+          "marcap": 2292052976700,
+          "last_close": 97100,
+          "last_change_pct": -3.67,
+          "avg_abs_change_5d": 3.36,
+          "avg_value_5d_eok": 386.2,
+          "vol_surge": 1.55,
+          "value_surge": 1.73,
+          "close_5d_return": -2.8,
+          "risk_score": 5.22
+        }
+      ]
+    },
+    {
+      "keyword": "EPO(에리트로포이에틴) 수출 확대 및 CDMO용 블록",
+      "risen_members": [
+        {
+          "ticker": "222110",
+          "name": "팬젠",
+          "change_pct": 11.67,
+          "specific_signal": "EPO(에리트로포이에틴) 수출 확대 및 CDMO용 블록버스터급 세포주 3종 개발 공개",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "298380",
+          "name": "에이비엘바이오",
+          "market": "KOSDAQ",
+          "marcap": 6679304335900,
+          "last_close": 119300,
+          "last_change_pct": -5.02,
+          "avg_abs_change_5d": 2.95,
+          "avg_value_5d_eok": 742.5,
+          "vol_surge": 0.88,
+          "value_surge": 0.76,
+          "close_5d_return": -6.58,
+          "risk_score": 2.58
+        },
+        {
+          "code": "145020",
+          "name": "휴젤",
+          "market": "KOSDAQ",
+          "marcap": 3475889322500,
+          "last_close": 282500,
+          "last_change_pct": -1.05,
+          "avg_abs_change_5d": 2.15,
+          "avg_value_5d_eok": 201.8,
+          "vol_surge": 1.13,
+          "value_surge": 1.19,
+          "close_5d_return": -4.24,
+          "risk_score": 2.42
+        }
+      ]
+    },
+    {
+      "keyword": "매수세",
+      "risen_members": [
+        {
+          "ticker": "001740",
+          "name": "SK네트웍스",
+          "change_pct": 10.38,
+          "specific_signal": "1분기 영업이익 102% 증가",
+          "confidence": "high"
+        },
+        {
+          "ticker": "004545",
+          "name": "깨끗한나라우",
+          "change_pct": 7.41,
+          "specific_signal": "전체 코스피 지수 상승에 따른 우선주 매수세",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "065440",
+          "name": "이루온",
+          "change_pct": 20.13,
+          "specific_signal": "투자경고 및 투자주의 지정 후 단기 변동성 확대",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "499790",
+          "name": "GS피앤엘",
+          "change_pct": 12.84,
+          "specific_signal": "1분기 영업익 58.8% 증가",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "402340",
+          "name": "SK스퀘어",
+          "market": "KOSPI",
+          "marcap": 144890307828000,
+          "last_close": 1098000,
+          "last_change_pct": -6.23,
+          "avg_abs_change_5d": 5.35,
+          "avg_value_5d_eok": 12401.9,
+          "vol_surge": 1.46,
+          "value_surge": 1.89,
+          "close_5d_return": -7.5,
+          "risk_score": 7.83
+        }
+      ]
+    },
+    {
+      "keyword": "데이터센터",
+      "risen_members": [
+        {
+          "ticker": "079190",
+          "name": "케스피온",
+          "change_pct": 29.99,
+          "specific_signal": "AI 서버·전기차용 핵심 자성소재 '페라이트' 수요 기대감에 따른 테마성 급등",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "189330",
+          "name": "씨이랩",
+          "change_pct": 16.92,
+          "specific_signal": "호남권 AI 데이터센터 구축 MOU 체결",
+          "confidence": "high"
+        },
+        {
+          "ticker": "223310",
+          "name": "사토시홀딩스",
           "change_pct": 29.96,
-          "specific_signal": "서울고속터미널 60층 재개발 기대감",
+          "specific_signal": "엔비디아 인셉션 프로그램 가입 및 자회사 광통신 기술(차세대 CPO) 인정",
           "confidence": "high"
         },
         {
-          "ticker": "012330",
-          "name": "현대모비스",
-          "change_pct": 18.43,
-          "specific_signal": "현대차 그룹 로보틱스 사업 기대감",
-          "confidence": "medium"
-        },
+          "ticker": "270520",
+          "name": "앱튼",
+          "change_pct": 29.97,
+          "specific_signal": "온디바이스 AI 기반 스마트 데이터센터 사업 본격화 발표",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
         {
-          "ticker": "066575",
-          "name": "LG전자우",
-          "change_pct": 14.42,
-          "specific_signal": "LG전자와 엔비디아의 협력 기대",
+          "code": "030200",
+          "name": "KT",
+          "market": "KOSPI",
+          "marcap": 14793672909500,
+          "last_close": 58700,
+          "last_change_pct": -4.71,
+          "avg_abs_change_5d": 2.46,
+          "avg_value_5d_eok": 347.4,
+          "vol_surge": 1.29,
+          "value_surge": 1.25,
+          "close_5d_return": -0.17,
+          "risk_score": 3.16
+        }
+      ]
+    },
+    {
+      "keyword": "영업익",
+      "risen_members": [
+        {
+          "ticker": "042520",
+          "name": "한스바이오메드",
+          "change_pct": 21.3,
+          "specific_signal": "셀르디엠 효과 본격화 및 영업익 전년比 538% 증가",
           "confidence": "high"
         },
         {
-          "ticker": "084670",
-          "name": "동양고속",
-          "change_pct": 29.94,
-          "specific_signal": "서울고속터미널 60층 재개발 기대감",
+          "ticker": "069640",
+          "name": "한세엠케이",
+          "change_pct": 29.98,
+          "specific_signal": "모이몰른 대규모 강남역 대형 미디어 캠페인(오프라인 광고 집행) 및 계열사 1Q 영업익 흑자 전환 공시(그룹 실적 개선 기대)",
           "confidence": "medium"
         },
         {
-          "ticker": "307950",
-          "name": "현대오토에버",
-          "change_pct": 13.66,
-          "specific_signal": "현대차그룹의 로봇 사업 기대감",
+          "ticker": "493280",
+          "name": "아이엠바이오로직스",
+          "change_pct": 20.9,
+          "specific_signal": "1분기 영업익·순이익 달성 및 IMB-101 마일스톤 인식",
+          "confidence": "high"
+        },
+        {
+          "ticker": "499790",
+          "name": "GS피앤엘",
+          "change_pct": 12.84,
+          "specific_signal": "1분기 영업익 58.8% 증가",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "016450",
+          "name": "한세예스24홀딩스",
+          "market": "KOSPI",
+          "marcap": 175200000000,
+          "last_close": 4380,
+          "last_change_pct": 0.46,
+          "avg_abs_change_5d": 1.09,
+          "avg_value_5d_eok": 1.6,
+          "vol_surge": 0.82,
+          "value_surge": 0.78,
+          "close_5d_return": -1.46,
+          "risk_score": 0.89
+        }
+      ]
+    },
+    {
+      "keyword": "자동화",
+      "risen_members": [
+        {
+          "ticker": "008490",
+          "name": "서흥",
+          "change_pct": 10.86,
+          "specific_signal": "1분기 영업이익 84% 급증(영업레버리지) + 로봇주 동반강세로 인한 수급 유입(자동화 설비 수주 기대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "031330",
+          "name": "에스에이엠티",
+          "change_pct": 30.0,
+          "specific_signal": "코스닥 내 로봇주·반도체 관련 종목 동시 급등(일부 종목 상한가·이격도·상대강도 과열 표출)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "190510",
+          "name": "나무가",
+          "change_pct": 20.54,
+          "specific_signal": "로봇 비전솔루션 라인업 확대",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "475400",
+          "name": "씨메스로보틱스",
+          "market": "KOSDAQ",
+          "marcap": 372667165400,
+          "last_close": 31700,
+          "last_change_pct": -0.47,
+          "avg_abs_change_5d": 4.19,
+          "avg_value_5d_eok": 100.6,
+          "vol_surge": 2.29,
+          "value_surge": 2.22,
+          "close_5d_return": -8.51,
+          "risk_score": 9.58
+        }
+      ]
+    },
+    {
+      "keyword": "이미지",
+      "risen_members": [
+        {
+          "ticker": "033240",
+          "name": "자화전자",
+          "change_pct": 16.53,
+          "specific_signal": "고배율 줌 및 손떨림 보정(이미지 안정화) 기술 부각으로 전장(자동차)용 카메라 부품 성장 기대",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "900140",
+          "name": "엘브이엠씨홀딩스",
+          "change_pct": 9.82,
+          "specific_signal": "대한민국 최고의 경영대상 수상",
           "confidence": "medium"
         }
       ],
       "candidates": [
         {
-          "code": "005380",
-          "name": "현대차",
-          "market": "KOSPI",
-          "marcap": 145787529392000,
-          "last_close": 712000,
-          "last_change_pct": 0.28,
-          "avg_abs_change_5d": 4.55,
-          "avg_value_5d_eok": 24919.5,
-          "vol_surge": 3.11,
-          "value_surge": 3.79,
-          "close_5d_return": 16.15,
-          "risk_score": 18.71
+          "code": "388790",
+          "name": "라이콤",
+          "market": "KOSDAQ",
+          "marcap": 150009384000,
+          "last_close": 4900,
+          "last_change_pct": -10.26,
+          "avg_abs_change_5d": 9.54,
+          "avg_value_5d_eok": 60.4,
+          "vol_surge": 1.09,
+          "value_surge": 1.03,
+          "close_5d_return": -16.95,
+          "risk_score": 10.43
         }
       ]
     },
@@ -1229,50 +1656,176 @@
           "code": "018880",
           "name": "한온시스템",
           "market": "KOSPI",
-          "marcap": 5131312760000,
-          "last_close": 5000,
-          "last_change_pct": -0.79,
-          "avg_abs_change_5d": 7.17,
-          "avg_value_5d_eok": 3052.8,
-          "vol_surge": 1.77,
-          "value_surge": 2.0,
-          "close_5d_return": 4.82,
-          "risk_score": 13.91
+          "marcap": 5182625887600,
+          "last_close": 5050,
+          "last_change_pct": 1.0,
+          "avg_abs_change_5d": 6.84,
+          "avg_value_5d_eok": 3414.9,
+          "vol_surge": 1.92,
+          "value_surge": 2.16,
+          "close_5d_return": -11.87,
+          "risk_score": 13.16
         }
       ]
     },
     {
-      "keyword": "ECM",
+      "keyword": "로보틱스",
       "risen_members": [
         {
-          "ticker": "042520",
-          "name": "한스바이오메드",
-          "change_pct": 21.3,
-          "specific_signal": "ECM 스킨부스터 '셀르디엠' 싱가포르 품목허가 및 영업이익 급증",
+          "ticker": "012330",
+          "name": "현대모비스",
+          "change_pct": 18.43,
+          "specific_signal": "현대차 그룹 로보틱스 사업 기대감",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "307950",
+          "name": "현대오토에버",
+          "change_pct": 13.66,
+          "specific_signal": "현대차그룹의 로봇 사업 기대감",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "005380",
+          "name": "현대차",
+          "market": "KOSPI",
+          "marcap": 143330436200000,
+          "last_close": 700000,
+          "last_change_pct": -1.69,
+          "avg_abs_change_5d": 3.45,
+          "avg_value_5d_eok": 24830.2,
+          "vol_surge": 2.44,
+          "value_surge": 2.98,
+          "close_5d_return": 8.36,
+          "risk_score": 9.83
+        }
+      ]
+    },
+    {
+      "keyword": "부족에",
+      "risen_members": [
+        {
+          "ticker": "069260",
+          "name": "TKG휴켐스",
+          "change_pct": 12.86,
+          "specific_signal": "우레탄(폴리우레탄) 공급 부족에 따른 수익성 개선 및 1분기 영업이익(152억) 개선 공시",
           "confidence": "high"
         },
         {
-          "ticker": "462510",
-          "name": "라메디텍",
-          "change_pct": 29.81,
-          "specific_signal": "인체조직은행 식약처 허가",
+          "ticker": "093370",
+          "name": "후성",
+          "change_pct": 13.22,
+          "specific_signal": "리튬 공급 부족에 따른 가격 상승 기대감",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "010060",
+          "name": "OCI홀딩스",
+          "market": "KOSPI",
+          "marcap": 5433037512000,
+          "last_close": 291000,
+          "last_change_pct": -20.16,
+          "avg_abs_change_5d": 6.83,
+          "avg_value_5d_eok": 1606.4,
+          "vol_surge": 0.92,
+          "value_surge": 0.89,
+          "close_5d_return": -8.92,
+          "risk_score": 6.29
+        }
+      ]
+    },
+    {
+      "keyword": "기대감에",
+      "risen_members": [
+        {
+          "ticker": "003550",
+          "name": "LG",
+          "change_pct": 7.69,
+          "specific_signal": "LG전자 상한가 및 로봇사업 밸류체인 기대감에 따른 지주사(그룹주) 동반 랠리",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "079190",
+          "name": "케스피온",
+          "change_pct": 29.99,
+          "specific_signal": "AI 서버·전기차용 핵심 자성소재 '페라이트' 수요 기대감에 따른 테마성 급등",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "011070",
+          "name": "LG이노텍",
+          "market": "KOSPI",
+          "marcap": 17324322324000,
+          "last_close": 732000,
+          "last_change_pct": -3.68,
+          "avg_abs_change_5d": 4.84,
+          "avg_value_5d_eok": 2550.7,
+          "vol_surge": 1.11,
+          "value_surge": 1.51,
+          "close_5d_return": 6.4,
+          "risk_score": 6.07
+        }
+      ]
+    },
+    {
+      "keyword": "달바글로벌 1분기 영업이익 451억원, 전년 대비 50",
+      "risen_members": [
+        {
+          "ticker": "483650",
+          "name": "달바글로벌",
+          "change_pct": 13.5,
+          "specific_signal": "달바글로벌 1분기 영업이익 451억원, 전년 대비 50% 증가 및 해외 매출 85% 급증",
           "confidence": "high"
         }
       ],
       "candidates": [
         {
-          "code": "145020",
-          "name": "휴젤",
+          "code": "161890",
+          "name": "한국콜마",
+          "market": "KOSPI",
+          "marcap": 2292052976700,
+          "last_close": 97100,
+          "last_change_pct": -3.67,
+          "avg_abs_change_5d": 3.36,
+          "avg_value_5d_eok": 386.2,
+          "vol_surge": 1.55,
+          "value_surge": 1.73,
+          "close_5d_return": -2.8,
+          "risk_score": 5.22
+        }
+      ]
+    },
+    {
+      "keyword": "중국 HCBOT과의 휴머노이드 로봇 기술 협력",
+      "risen_members": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "change_pct": 29.96,
+          "specific_signal": "중국 HCBOT과의 휴머노이드 로봇 기술 협력",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "277810",
+          "name": "레인보우로보틱스",
           "market": "KOSDAQ",
-          "marcap": 3512801421500,
-          "last_close": 285500,
-          "last_change_pct": 2.7,
-          "avg_abs_change_5d": 4.41,
-          "avg_value_5d_eok": 304.2,
-          "vol_surge": 2.17,
-          "value_surge": 2.39,
-          "close_5d_return": -2.06,
-          "risk_score": 9.57
+          "marcap": 15713884980000,
+          "last_close": 810000,
+          "last_change_pct": -3.69,
+          "avg_abs_change_5d": 4.42,
+          "avg_value_5d_eok": 3332.9,
+          "vol_surge": 1.96,
+          "value_surge": 2.43,
+          "close_5d_return": -6.36,
+          "risk_score": 8.66
         }
       ]
     },
@@ -1292,15 +1845,99 @@
           "code": "259960",
           "name": "크래프톤",
           "market": "KOSPI",
-          "marcap": 13914340746000,
-          "last_close": 293500,
-          "last_change_pct": 4.45,
-          "avg_abs_change_5d": 2.7,
-          "avg_value_5d_eok": 608.1,
-          "vol_surge": 1.13,
-          "value_surge": 1.18,
-          "close_5d_return": 7.51,
-          "risk_score": 3.51
+          "marcap": 13226920164000,
+          "last_close": 279000,
+          "last_change_pct": -4.94,
+          "avg_abs_change_5d": 3.46,
+          "avg_value_5d_eok": 626.7,
+          "vol_surge": 1.17,
+          "value_surge": 1.21,
+          "close_5d_return": -1.93,
+          "risk_score": 4.04
+        }
+      ]
+    },
+    {
+      "keyword": "서울바이오시스의 2026년 1분기 흑자 전환",
+      "risen_members": [
+        {
+          "ticker": "092190",
+          "name": "서울바이오시스",
+          "change_pct": 29.94,
+          "specific_signal": "서울바이오시스의 2026년 1분기 흑자 전환",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "046890",
+          "name": "서울반도체",
+          "market": "KOSDAQ",
+          "marcap": 939883048000,
+          "last_close": 16120,
+          "last_change_pct": -11.82,
+          "avg_abs_change_5d": 6.2,
+          "avg_value_5d_eok": 662.1,
+          "vol_surge": 1.1,
+          "value_surge": 1.24,
+          "close_5d_return": -5.51,
+          "risk_score": 6.84
+        }
+      ]
+    },
+    {
+      "keyword": "에이팩트와 메모리 웨이퍼 테스트 협력",
+      "risen_members": [
+        {
+          "ticker": "080220",
+          "name": "제주반도체",
+          "change_pct": 28.35,
+          "specific_signal": "에이팩트와 메모리 웨이퍼 테스트 협력",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "200470",
+          "name": "에이팩트",
+          "market": "KOSDAQ",
+          "marcap": 348640025390,
+          "last_close": 8230,
+          "last_change_pct": -6.58,
+          "avg_abs_change_5d": 5.15,
+          "avg_value_5d_eok": 77.3,
+          "vol_surge": 0.61,
+          "value_surge": 0.61,
+          "close_5d_return": -18.35,
+          "risk_score": 3.14
+        }
+      ]
+    },
+    {
+      "keyword": "1분기 매출 전년대비 36% 증가 및 NGS 기반 정밀",
+      "risen_members": [
+        {
+          "ticker": "354200",
+          "name": "엔젠바이오",
+          "change_pct": 13.04,
+          "specific_signal": "1분기 매출 전년대비 36% 증가 및 NGS 기반 정밀진단 사업 성장세(회사 실적공시·보도)",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "096530",
+          "name": "씨젠",
+          "market": "KOSDAQ",
+          "marcap": 1621617113700,
+          "last_close": 31050,
+          "last_change_pct": -2.97,
+          "avg_abs_change_5d": 6.94,
+          "avg_value_5d_eok": 363.6,
+          "vol_surge": 3.13,
+          "value_surge": 3.58,
+          "close_5d_return": 9.91,
+          "risk_score": 26.01
         }
       ]
     }
