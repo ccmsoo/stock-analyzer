@@ -6767,19 +6767,29 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "f66b47b0c2a3",
-      "7211e4a8717a",
-      "a29d18723a2c",
-      "f1f21f6e8fe3",
-      "b83078b55b7f",
+      "8800b3cd0db2",
+      "12d0f34b0595",
+      "0efb18d749f7",
       "3270f6d72abb",
-      "bd2bed16e0ac",
-      "ed823d562832",
-      "4bce25fa233a",
-      "54b38c7ceff0",
+      "b83078b55b7f",
       "f456094a1330",
+      "4bce25fa233a",
+      "ed823d562832",
+      "a29d18723a2c",
+      "54b38c7ceff0",
+      "6d2aab0abeee",
+      "deaaf6d325c1",
+      "09438848786b",
+      "821e07819165",
+      "f66b47b0c2a3",
+      "bd2bed16e0ac",
+      "a4506365c9f3",
       "dccae380221a",
-      "7d0d1a535cf2"
+      "f1f21f6e8fe3",
+      "8812e64fb5d3",
+      "7d0d1a535cf2",
+      "7211e4a8717a",
+      "eea70d0274dc"
     ],
     "069640": [
       "f07174791096",
@@ -7440,6 +7450,199 @@
         }
       ],
       "detected_at": "2026-05-16T00:02:20"
+    },
+    {
+      "keyword": "식품의약품안전처",
+      "matched_owners": [
+        {
+          "ticker": "003060",
+          "name": "에이프로젠바이오로직스",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "007460",
+          "name": "에이프로젠",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "462510",
+          "name": "라메디텍",
+          "cluster": "biotech_policy_beneficiary"
+        }
+      ],
+      "clusters": [
+        "biotech_policy_beneficiary",
+        "osteoarthritis_drug"
+      ],
+      "new_articles": [
+        {
+          "title": "‘수익성 저하’ 종근당, 떨어진 자본효율 끌어올릴 비책은 [5대 제약사...",
+          "link": "http://www.fntimes.com/html/view.php?ud=202605170229051803dd55077bc2_18",
+          "source": "한국금융신문",
+          "date": "2026.05.17 23:55",
+          "origin": "search:식품의약품안전처"
+        },
+        {
+          "title": "AI 의료기기, 병원 문턱 넘었지만 보험 적용은 '제자리'",
+          "link": "https://www.insnews.co.kr/news/articleView.html?idxno=90778",
+          "source": "한국보험신문",
+          "date": "2026.05.17 23:53",
+          "origin": "search:식품의약품안전처"
+        }
+      ],
+      "detected_at": "2026-05-18T00:07:31"
+    },
+    {
+      "keyword": "한국미래소재",
+      "matched_owners": [
+        {
+          "ticker": "000500",
+          "name": "가온전선",
+          "cluster": "sustainable_materials_policy"
+        }
+      ],
+      "clusters": [
+        "sustainable_materials_policy"
+      ],
+      "new_articles": [
+        {
+          "title": "[파워인터뷰] 이경희 대교협 사무총장 \"'각자도생'은 공멸… '공유·협력...",
+          "link": "https://news.unn.net/news/articleView.html?idxno=592513",
+          "source": "한국대학신문",
+          "date": "2026.05.17 23:23",
+          "origin": "search:한국미래소재"
+        }
+      ],
+      "detected_at": "2026-05-18T00:07:56"
+    },
+    {
+      "keyword": "한국화학연구원",
+      "matched_owners": [
+        {
+          "ticker": "322000",
+          "name": "HD현대에너지솔루션",
+          "cluster": "solar_energy_policy"
+        }
+      ],
+      "clusters": [
+        "solar_energy_policy"
+      ],
+      "new_articles": [
+        {
+          "title": "[DCM] 반도체 호황 덕에 크레딧 미소짓는 SK 계열사",
+          "link": "http://www.fntimes.com/html/view.php?ud=202605170141509679dd55077bc2_18",
+          "source": "한국금융신문",
+          "date": "2026.05.17 23:54",
+          "origin": "search:한국화학연구원"
+        }
+      ],
+      "detected_at": "2026-05-18T00:08:09"
+    },
+    {
+      "keyword": "기후에너지환경부",
+      "matched_owners": [
+        {
+          "ticker": "322000",
+          "name": "HD현대에너지솔루션",
+          "cluster": "solar_energy_policy"
+        }
+      ],
+      "clusters": [
+        "solar_energy_policy"
+      ],
+      "new_articles": [
+        {
+          "title": "부품값에 전기료 부담까지…울산 PC방업계 '시름'",
+          "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1056993",
+          "source": "경상일보",
+          "date": "2026.05.17 23:56",
+          "origin": "search:기후에너지환경부"
+        }
+      ],
+      "detected_at": "2026-05-18T00:08:12"
+    },
+    {
+      "keyword": "스페이스X",
+      "matched_owners": [
+        {
+          "ticker": "322000",
+          "name": "HD현대에너지솔루션",
+          "cluster": "solar_energy_policy"
+        }
+      ],
+      "clusters": [
+        "solar_energy_policy"
+      ],
+      "new_articles": [
+        {
+          "title": "[중국증시 주간 포인트] ①푸틴 방중, APEC 고위관리회의, 中 4월 생산∙...",
+          "link": "https://www.newspim.com/news/view/20260517000236",
+          "source": "뉴스핌",
+          "date": "2026.05.17 23:52",
+          "origin": "search:스페이스X"
+        }
+      ],
+      "detected_at": "2026-05-18T00:08:17"
+    },
+    {
+      "keyword": "한국에너지공단",
+      "matched_owners": [
+        {
+          "ticker": "322000",
+          "name": "HD현대에너지솔루션",
+          "cluster": "solar_energy_policy"
+        }
+      ],
+      "clusters": [
+        "solar_energy_policy"
+      ],
+      "new_articles": [
+        {
+          "title": "[ESG리더스] 장민영 IBK기업은행장, 정책금융에 ESG 입히다…3년 연속 글...",
+          "link": "https://www.greened.kr/news/articleView.html?idxno=340683",
+          "source": "녹색경제신문",
+          "date": "2026.05.17 23:52",
+          "origin": "search:한국에너지공단"
+        }
+      ],
+      "detected_at": "2026-05-18T00:08:19"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "오늘의 금값시세(5월 18일자) 금값 90만원 움직임 \"2026년 전망은\"",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3584506",
+          "source": "국제뉴스",
+          "date": "2026.05.17 23:58",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "[기자수첩] ‘입틀막ʼ 주주와 ‘장밋빛ʼ 삼천당",
+          "link": "http://www.fntimes.com/html/view.php?ud=202605170258402065dd55077bc2_18",
+          "source": "한국금융신문",
+          "date": "2026.05.17 23:54",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "오늘 금시세(금값) 얼마?…시장은 美·이란 전쟁 변수 주시",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=575096",
+          "source": "CBC뉴스",
+          "date": "2026.05.17 23:52",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-05-18T00:08:28"
     }
   ]
 }
