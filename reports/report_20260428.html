@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>일일 분석 — 20260428</title>
+<style>
+  :root { --bg:#0b0d10; --fg:#e6e6e6; --muted:#8a929b; --card:#151a20; --border:#23272e;
+           --hi:#2dd4bf; --new:#3b82f6; --cont:#a78bfa; --unclear:#f59e0b;
+           --conf-high:#22c55e; --conf-med:#eab308; --conf-low:#ef4444; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font: 14px/1.55 -apple-system, "Pretendard", sans-serif; margin: 0; padding: 24px 32px; }
+  h1 { margin: 0 0 4px; font-size: 22px; }
+  h2 { margin: 28px 0 12px; font-size: 16px; color: var(--hi); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { margin: 16px 0 8px; font-size: 14px; color: var(--muted); }
+  .meta { color: var(--muted); margin-bottom: 18px; }
+  nav.tabs { display:flex; gap:6px; margin: 16px 0 10px; }
+  nav.tabs button { background: var(--card); color: var(--fg); border: 1px solid var(--border); padding: 6px 12px; cursor: pointer; border-radius: 6px; font-size: 13px; }
+  nav.tabs button.active { background: var(--hi); color:#000; border-color: var(--hi); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+  .card.new { border-left: 3px solid var(--new); }
+  .card.continuation { border-left: 3px solid var(--cont); }
+  .card.unclear { border-left: 3px solid var(--unclear); }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap: 8px; }
+  .name { font-weight: 600; }
+  .ticker { color: var(--muted); font-size: 12px; font-family: ui-monospace, monospace; }
+  .pct { font-family: ui-monospace, monospace; font-weight: 600; color: #fb7185; }
+  .signal { margin: 6px 0; color: var(--hi); }
+  .keywords span { display: inline-block; background:#1e2530; border:1px solid var(--border); border-radius: 4px; padding: 1px 6px; margin: 2px 4px 0 0; font-size: 12px; color: var(--muted); font-family: ui-monospace, monospace; }
+  .conf { font-size: 11px; padding: 1px 6px; border-radius: 999px; font-weight: 600; }
+  .conf.high { background: rgba(34,197,94,.15); color: var(--conf-high); }
+  .conf.medium { background: rgba(234,179,8,.15); color: var(--conf-med); }
+  .conf.low { background: rgba(239,68,68,.15); color: var(--conf-low); }
+  details summary { cursor:pointer; color: var(--muted); font-size: 12px; margin-top: 8px; }
+  details ul { padding-left: 16px; margin: 6px 0 0; }
+  details a { color: var(--fg); }
+  .reasoning { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .theme-group { margin: 18px 0; }
+  .theme-title { font-weight: 600; color: var(--fg); margin-bottom: 6px; font-size: 14px; }
+  .theme-title small { color: var(--muted); font-weight: 400; }
+  .section { display: none; }
+  .section.active { display: block; }
+</style>
+</head>
+<body>
+<h1>📊 20260428 일일 분석</h1>
+<div class="meta">
+  KOSPI 상승 10 · KOSDAQ 상승 10 · 신규 16 · 연속 0 · 불명 4
+</div>
+<nav class="tabs">
+  <button class="active" data-tab="status">상태별</button>
+  <button data-tab="theme">테마별</button>
+  <button data-tab="all">전체</button>
+</nav>
+
+<section id="tab-status" class="section active">
+<h2>🆕 신규 시그널 (오늘 매칭됨) <small style="color:var(--muted)">(16)</small></h2>
+<div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">알루코</span> <span class="ticker">001780 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/원자재</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 호르무즈 해협 봉쇄 영향으로 인한 중동발 알루미늄 공급 차질·글로벌 알루미늄 프리미엄 급등(공급 부족 추정치 약 200만톤)</div>
+  <div class="reasoning">4월22일 다수 기사에서 미국-이란 갈등·호르무즈 봉쇄 우려로 알루미늄 공급 차질 가능성과 프리미엄 상승을 지적하며 알루미늄 관련주들이 동반 급등했다. 알루코의 급등은 이 같은 원자재 수급 리스크(테마성 수급)에 대한 투자자의 베팅 및 추격매수·수급 집중(거래량 급증)에 따른 것으로 보인다. 회사별 공시성 호재는 보이지 않는다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.22 (D-6일)</div>
+  
+  <div class="keywords"><span>원자재 수급</span><span>중동 지정학 리스크</span><span>알루미늄 프리미엄 급등</span><span>호르무즈 해협 봉쇄</span><span>글로벌 알루미늄 공급 부족 200만t</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=001780&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016036618&office_id=001&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 중동사태 장기화 우려에 알루미늄 관련주도 상승마감(종합)</a> <small style="color:var(--muted)">[2026.04.22 16:00] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003420477&office_id=030&code=001780&page=&sm=" target="_blank" rel="noopener">[ET특징주] 중동 사태에 알루미늄 공급난 우려 계속… 관련주 일제히....</a> <small style="color:var(--muted)">[2026.04.22 13:38] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001140088&office_id=417&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 미국-이란 전쟁에 알루미늄주 급등…삼아알미늄 28%↑</a> <small style="color:var(--muted)">[2026.04.22 11:01] 동행미디어 시대 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005278118&office_id=015&code=001780&page=&sm=" target="_blank" rel="noopener">美·이란 2차 종전협상 '안갯속'…알루미늄株 동반 급등</a> <small style="color:var(--muted)">[2026.04.22 10:52] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016035331&office_id=001&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 중동 사태에 알루미늄 공급 충격 지속…관련주 급등</a> <small style="color:var(--muted)">[2026.04.22 10:06] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=001780&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">문배철강</span> <span class="ticker">008420 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지(슬래브·철판) 발표 및 중국의 조강 생산량 감산에 따른 글로벌·국내 공급제약 기대</div>
+  <div class="reasoning">28일 다수의 종목태그 기사들이 이란의 철강 수출 금지 보도와 중국의 조강 감산 소식을 동일한 원인으로 지목하며 철강업종 일제 급등을 보도했다. 공급 축소 기대가 국내 유통가격 상승(열연·철근 등)과 실적 개선 기대를 불러와 문배철강을 포함한 중·소형 철강주에 매수세가 쏠렸다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>수급 불균형</span><span>지정학 리스크</span><span>중국 조강 감산</span><span>이란 철강 수출 금지(슬래브·철판)</span><span>국내 열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 9건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=008420&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=008420&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=008420&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=008420&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=008420&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=008420&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=008420&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=008420&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=008420&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">아주스틸</span> <span class="ticker">139990 · KOSPI</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지와 중국의 조강 감산에 따른 글로벌 공급 축소 기대</div>
+  <div class="reasoning">D-0(2026.04.28) 보도에서 이란의 철강 수출 금지 소식과 중국의 조강 생산량 감소가 동시에 제시되며 철강 전반의 공급 우려가 부각됐다. 국내 철강 유통가격 상승 기대와 업종 동반 강세로 아주스틸 등 중·소형 철강주에 매수세가 몰려 상한가를 기록한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 조강 감산</span><span>이란 철강 수출 금지</span><span>열연 유통가격 상승</span><span>슬래브·철판 공급제한</span></div>
+  <details><summary>📰 관련 뉴스 14건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=139990&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=139990&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=139990&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=139990&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004615565&office_id=011&code=139990&page=&sm=" target="_blank" rel="noopener">코스피, 이틀 연속 최고치 마감…장중 최초로 6700선 넘겨 [마켓시그...</a> <small style="color:var(--muted)">[2026.04.28 16:11] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507177&office_id=374&code=139990&page=&sm=" target="_blank" rel="noopener">1주 400만 원 황제주 등장…코스피 장중 6700선 넘었다</a> <small style="color:var(--muted)">[2026.04.28 15:07] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=139990&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004615496&office_id=011&code=139990&page=&sm=" target="_blank" rel="noopener">철강 쏟아내던 中 생산 줄이자…韓 철강기업 주가 10% 급등 [줍줍리...</a> <small style="color:var(--muted)">[2026.04.28 14:24] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=139990&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=139990&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=139990&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=139990&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008915334&office_id=421&code=139990&page=&sm=" target="_blank" rel="noopener">"이란, 철강 슬래브·철판 수출 금지"…아주스틸 상한가[핫종목]</a> <small style="color:var(--muted)">[2026.04.28 09:53] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000105152&office_id=050&code=139990&page=&sm=" target="_blank" rel="noopener">동국제강그룹 재무 흔든 아주스틸</a> <small style="color:var(--muted)">[2026.04.21 04:02] 한경비즈니스 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">넥스틸</span> <span class="ticker">092790 · KOSPI</span></div>
+    <span class="pct">+29.89%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/정책(철강 공급축소)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 발표 및 중국의 조강 생산 감산에 따른 글로벌 공급 축소로 국내 철강 제품 가격 상승 기대 (열연·냉연 가격 인상 통보), 여기에 4월21일 기업가치 제고 계획 공시가 투자심리 보완</div>
+  <div class="reasoning">4월28일 이란의 일시적 수출금지 보도와 중국의 조강 감산 소식이 맞물리며 철강 업종 전반에 수급 개선·가격 반등 기대를 촉발했고, 넥스틸도 이 영향으로 동반 상한가를 기록했다. 추가로 4월21일 회사의 '기업가치 제고 계획' 공시는 매수 심리에 보탬이 된 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 공급축소</span><span>수급 개선</span><span>제품 가격 인상</span><span>이란 철강 수출 금지(슬래브·철판)</span><span>중국 조강 감산</span></div>
+  <details><summary>📰 관련 뉴스 6건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=092790&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=092790&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=092790&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507201&office_id=374&code=092790&page=&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피 장중 6700선 터치…코스닥 하락 전환</a> <small style="color:var(--muted)">[2026.04.28 16:43] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=092790&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613063&office_id=011&code=092790&page=&sm=" target="_blank" rel="noopener">기업 공시 [4월 21일]</a> <small style="color:var(--muted)">[2026.04.21 16:48] 서울경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">포스코스틸리온</span> <span class="ticker">058430 · KOSPI</span></div>
+    <span class="pct">+29.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">철강</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 소식 및 IRGC의 미국 내 철강·알루미늄 공장 공격 보도로 인한 공급 우려</div>
+  <div class="reasoning">D-day 장중 다수 매체가 미국‑이란 협상 교착과 이란 측의 수출 금지·공장 공격 보도를 전하며 철강 공급 불안 우려가 부각됐다. 공급 리스크로 철강 제품 가격 상승 기대가 커지면서 포스코스틸리온을 포함한 중·소형 철강주에 테마성 매수세가 집중되어 급등을 초래했다고 판단한다. (참고로 4월24일 데이터센터 자재 공급 공시는 중장기적 실적 모멘텀으로 보조적 요인에 그침)</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>지정학 리스크</span><span>철강 공급 차질</span><span>이란 철강 수출 금지</span><span>IRGC 공장 공격</span><span>ALCOSTA 데이터센터 적용</span><span>열연·냉연 가격 인상</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=058430&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507177&office_id=374&code=058430&page=&sm=" target="_blank" rel="noopener">1주 400만 원 황제주 등장…코스피 장중 6700선 넘었다</a> <small style="color:var(--muted)">[2026.04.28 15:07] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=058430&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=058430&page=2&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=058430&page=2&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350244&office_id=008&code=058430&page=2&sm=" target="_blank" rel="noopener">이란의 미국 공장 공격 소식…철강株 장초반 강세</a> <small style="color:var(--muted)">[2026.04.28 09:18] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639077&office_id=081&code=058430&page=2&sm=" target="_blank" rel="noopener">[마감시황] 코스피, 6615.03으로 마감…반도체 강세에 2.15% ...</a> <small style="color:var(--muted)">[2026.04.27 16:40] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016041168&office_id=001&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터에 자재 공급</a> <small style="color:var(--muted)">[2026.04.24 13:40] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003084149&office_id=119&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터에 고기능 강재 공급</a> <small style="color:var(--muted)">[2026.04.24 10:15] 데일리안 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001159422&office_id=366&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터 프로젝트에 자재 공급</a> <small style="color:var(--muted)">[2026.04.24 09:54] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005754251&office_id=277&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 데이터센터에 도금강판 공급</a> <small style="color:var(--muted)">[2026.04.24 09:35] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613369&office_id=011&code=058430&page=2&sm=" target="_blank" rel="noopener">오늘의 메모[4월 23일]</a> <small style="color:var(--muted)">[2026.04.22 10:33] 서울경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">부국철강</span> <span class="ticker">026940 · KOSPI</span></div>
+    <span class="pct">+26.18%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지(5월 한달) 보도 및 중국의 조강 감산으로 인한 글로벌 공급 축소로 국내 철강 유통가격·마진 개선 기대</div>
+  <div class="reasoning">28일 다수 언론이 이란의 철강 수출 금지(영국 로이터 보도)와 중국의 조강 생산 감소를 보도하며 철강업종 전반의 수급 개선 기대를 부각시켰다. 수입 재고 감소·유통가격 상승 전망이 중소형 철강주에 대한 매수심리를 촉발해 부국철강이 동반 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 조강 감산</span><span>중동 지정학 리스크</span><span>이란 철강 수출 금지</span><span>열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 9건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005672760&office_id=009&code=026940&page=&sm=" target="_blank" rel="noopener">'K자 코스피' 대형주 34% 오를때 소형주 14% 그쳐</a> <small style="color:var(--muted)">[2026.04.28 18:00] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=026940&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=026940&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=026940&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=026940&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=026940&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=026940&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635248&office_id=081&code=026940&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]주성코퍼레이션 29.92% 상한가 금일 증시 상승률 1위...</a> <small style="color:var(--muted)">[2026.04.14 16:49] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=026940&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">TCC스틸</span> <span class="ticker">002710 · KOSPI</span></div>
+    <span class="pct">+19.70%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지 및 중국의 조강 감산으로 인한 글로벌 공급 축소(열연 등 유통가격 상승 기대)</div>
+  <div class="reasoning">28일 보도된 이란의 철강 수출 금지(로이터 보도)와 중국의 조강 생산 감소 소식이 국내 철강주 전반에 수급 개선 기대를 불러와 동반 급등을 촉발했습니다. TCC스틸은 같은 기사에서 급등 종목으로 언급되며, 열연·철근 등 유통가격 상승과 수입 감소로 인한 반사이익 기대가 매수세를 유인한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>수급(공급축소)</span><span>중국 조강 감산</span><span>반덤핑·수입 관세</span><span>열연 유통가격 상승</span><span>재고 소진</span><span>이란 철강 수출 금지</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=002710&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=002710&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507201&office_id=374&code=002710&page=&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피 장중 6700선 터치…코스닥 하락 전환</a> <small style="color:var(--muted)">[2026.04.28 16:43] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=002710&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">휴스틸</span> <span class="ticker">005010 · KOSPI</span></div>
+    <span class="pct">+17.22%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 5월 철강(슬래브·철판) 수출 금지 및 중국의 조강 생산 감산으로 인한 글로벌 공급 축소→국내 철강 유통가격 및 수익성 개선 기대</div>
+  <div class="reasoning">4월 28일 보도를 기점으로 이란의 한시적 수출 금지(로이터 보도 인용)와 중국의 조강 생산 감소 소식이 동반되며 글로벌 공급 우려가 부각되었다. 수입 감소와 유통가격 상승 전망이 철강 업종 전반에 투자 심리를 자극해 휴스틸을 포함한 관련주들이 동반 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>글로벌 철강 공급 축소</span><span>이란 철강 수출 금지</span><span>중국 조강 감산</span><span>국내 열연·철근 유통가격 상승</span><span>구조용강관 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=005010&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=005010&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=005010&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265546&office_id=018&code=005010&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 홍보 간담회 개최</a> <small style="color:var(--muted)">[2026.04.24 16:27] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">하이스틸</span> <span class="ticker">071090 · KOSPI</span></div>
+    <span class="pct">+15.16%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급·섹터(철강)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국의 철강 감산(조강 생산 감소)에 따른 글로벌 공급 축소 기대 및 국내 철강사들의 제품 가격 인상 기대(구조용강관 수요 확대 관련 홍보·현장 견학)</div>
+  <div class="reasoning">당일(4/28) 발표된 기사에서 중국의 철강 감산과 국내 제품 가격 인상 기대가 철강 섹터 전반의 동반 강세를 촉발했고, 하이스틸은 강관업종으로서 수혜 기대가 직·간접적으로 부각되었다. 4/24의 구조용강관 홍보 간담회(함안공장 견학) 등 수요 확대 인식 제고 활동도 투자자 관심을 더해 거래량과 급등을 확대시킨 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>중국 철강 감산</span><span>철강 제품 가격 인상</span><span>구조용강관 적용 확대</span><span>구조용강관 홍보 간담회</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=071090&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003084364&office_id=119&code=071090&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 적용 확대 위해 수요 업계와 소통</a> <small style="color:var(--muted)">[2026.04.24 16:53] 데일리안 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265546&office_id=018&code=071090&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 홍보 간담회 개최</a> <small style="color:var(--muted)">[2026.04.24 16:27] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=071090&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">세아메카닉스</span> <span class="ticker">396300 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 어닝 서프라이즈(매출 336억·영업익 16.5~17억 흑자전환) 및 수주잔고 6,118억 공개</div>
+  <div class="reasoning">당일 공시된 1분기 잠정실적(매출 71.5% 증가·영업흑자 전환)이 시장 기대를 상회하면서 주가를 급등시킨 것으로 판단된다. 더불어 기사에 언급된 대규모 수주잔고(6,118억)와 산업통상자원부 과제 선정·공정 자동화 계획 등이 향후 실적 지속성에 대한 기대를 높여 거래량과 상승폭을 확대했다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>제조 자동화</span><span>수주잔고 6,118억</span><span>1분기 매출 336억·영업익 16억</span><span>월드클래스 플러스 선정</span><span>협동로봇 도입</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268219&office_id=018&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 매출 336억…전년대비 71.5%↑</a> <small style="color:var(--muted)">[2026.04.28 11:42] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083555&office_id=293&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 영업익 17억원…전년比 흑자전환</a> <small style="color:var(--muted)">[2026.04.28 09:29] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350245&office_id=008&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 매출 71% '급증'·영업익 16.5억원 "어닝 ...</a> <small style="color:var(--muted)">[2026.04.28 09:19] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002636252&office_id=016&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 영업익 17억…흑자전환</a> <small style="color:var(--muted)">[2026.04.28 09:06] 헤럴드경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">대호특수강</span> <span class="ticker">021040 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급(국제 공급 축소)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 및 중국의 조강 생산 감산으로 인한 공급 축소 기대</div>
+  <div class="reasoning">4월 28일 다수 보도에서 이란의 철강 수출 금지와 중국의 조강 감산 소식이 전해지며 국내 철강업종에 대한 공급 축소·가격 반등 기대가 확산됐습니다. 수급 개선 기대로 열연·철근 등 유통가격 상승 전망과 재고 가치 개선 기대가 동반되며 대호특수강을 포함한 철강 종목들이 일제히 급등했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>국제 철강 공급 축소</span><span>중국 조강 감산</span><span>중동 지정학 리스크</span><span>이란 슬래브·철판 수출금지</span><span>열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 5건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=021040&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=021040&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=021040&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=021040&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=021040&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">나우IB</span> <span class="ticker">293580 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급·IB/VC(밸류업·GP 선정)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 성장금융 K-Growth 펀드 GP(소형 리그) 지원 후보·Co-GP 참여(나우IB캐피탈-호라이즌 연합) — GP 선정 기대에 따른 AUM·운용보수 확대 기대</div>
+  <div class="reasoning">최근 기사에서 해당 계열(IB/VC)들이 성장금융 K-Growth 펀드 GP 경쟁에 적극 참여한 사실이 보도되었고, 같은 기간 업계 전반의 밸류업·주주환원 기조가 강조되며 밸류에이션 리레이팅(수급 유입) 기대를 자극했습니다. 특히 4/20 기사에 나우IB캐피탈이 소형 리그 Co-GP로 출사표를 던진 점이 단기적 투자심리 개선으로 연결된 것으로 판단됩니다. 다만 GP 선정이 확정된 것은 아니어서 기대 선반영 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.20 (D-7일)</div>
+  
+  <div class="keywords"><span>K-Growth GP 선정</span><span>밸류업·주주환원(자사주·배당)</span><span>AUM(운용자산) 확대</span><span>Co-GP(공동운용) 소형리그 지원</span><span>임원 자사주 매입</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280212&office_id=015&code=293580&page=&sm=" target="_blank" rel="noopener">큐캐피탈, 임원 주식 매입…주가 부양 나선 상장 PEF·VC</a> <small style="color:var(--muted)">[2026.04.27 17:28] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083105&office_id=293&code=293580&page=&sm=" target="_blank" rel="noopener">성장금융 K-Growth 펀드, GP 37곳 접수…경쟁률 4.1대1</a> <small style="color:var(--muted)">[2026.04.20 18:28] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006258739&office_id=018&code=293580&page=&sm=" target="_blank" rel="noopener">[마켓인]‘흑자 전환’ 메가존클라우드, IPO 실사 채비…지배구조 재....</a> <small style="color:var(--muted)">[2026.04.16 17:09] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">대호특수강우</span> <span class="ticker">021045 · KOSDAQ</span></div>
+    <span class="pct">+29.89%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국 조강 생산 감소·미국 반덤핑 관세 영향으로 국내 열연·철근 유통가격 상승 기대</div>
+  <div class="reasoning">28일 보도에서 제강 수요 증가와 중국 조강 생산 감소, 미국의 반덤핑 관세 영향을 근거로 철강 섹터가 동반 급등했고 기사에 대호특수강우가 가격제한선까지 올랐다고 직접 명시되어 있다. 중국산 수입 감소와 유통가격 상승, 중동 지정학 리스크가 국내 제강업체의 이익 개선 기대를 촉발해 주가 급등을 유발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>반덤핑 관세</span><span>중동 지정학 리스크</span><span>중국 조강 생산 감소</span><span>열연 유통가격 상승</span><span>수입재 관세 영향</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=021045&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=021045&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">디케이앤디</span> <span class="ticker">263020 · KOSDAQ</span></div>
+    <span class="pct">+29.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">신사업/수주(로봇·첨단소재)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 휴머노이드 기업 대상 '로봇 스킨' 초도 매출(파트너십·공급 논의 확대)</div>
+  <div class="reasoning">최근 보도에서 디케이앤디가 실리콘 기반 인조피혁을 활용한 '로봇 스킨'으로 글로벌 휴머노이드 업체에 매출을 발생시켰고, 여러 글로벌 기업과 장기 파트너십 확대를 논의 중이라는 구체적 내용이 나왔습니다. 해당 소식이 향후 고부가가치 신사업 전환 가능성을 부각시키며 단기 수급과 기대심리를 급격히 끌어올린 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>피지컬 AI</span><span>실리콘 기반 인조피혁</span><span>로봇 스킨 초도 공급</span><span>글로벌 파트너십 확대(차세대 모델)</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280602&office_id=015&code=263020&page=&sm=" target="_blank" rel="noopener">로봇 스킨으로 사업 확장…디케이앤디, 휴머노이드 글로벌 기업과 협...</a> <small style="color:var(--muted)">[2026.04.28 11:28] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003420150&office_id=030&code=263020&page=&sm=" target="_blank" rel="noopener">[人사이트] 최원빈 디케이앤디 경영총괄 “전통 인조가죽 넘어 '로봇.....</a> <small style="color:var(--muted)">[2026.04.21 16:01] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005277473&office_id=015&code=263020&page=&sm=" target="_blank" rel="noopener">디케이앤디, 2025년 실적 증가…로봇·첨단 소재 기업 전환 본격화</a> <small style="color:var(--muted)">[2026.04.21 09:01] 한국경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">금강철강</span> <span class="ticker">053260 · KOSDAQ</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국의 대규모 철강 감산 지속(조강 생산량 감소) 및 이란의 철강(슬래브·철판) 수출 금지 보도로 인한 글로벌 공급 축소 기대(국내 제품가격 인상 통보 포함)</div>
+  <div class="reasoning">당일 다수 보도에서 중국의 철강 감산과 이란의 슬래브·철판 수출 금지 소식이 동시에 전해지며 철강 섹터 전반에 공급 축소 기대가 강화됐다. 국내 주요사들의 제품 가격 인상 통보(열연·냉연 t당 인상)도 더해져 금강철강을 포함한 중소형 철강주에 매수세가 집중되어 급등했다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 철강 감산</span><span>이란 철강 수출금지</span><span>열연·냉연 가격 인상</span><span>조강 생산량 감소</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=053260&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=053260&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=053260&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=053260&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=053260&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=053260&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008915334&office_id=421&code=053260&page=&sm=" target="_blank" rel="noopener">"이란, 철강 슬래브·철판 수출 금지"…아주스틸 상한가[핫종목]</a> <small style="color:var(--muted)">[2026.04.28 09:53] 뉴스1 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한주라이트메탈</span> <span class="ticker">198940 · KOSDAQ</span></div>
+    <span class="pct">+19.75%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">자동차/모빌리티</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 자동차 부품사와 기술협력 파트너십 추진(NDA 체결·향후 MOU 검토) — EMS 기반 반응고 공정 검증</div>
+  <div class="reasoning">당일 보도된 글로벌 자동차 부품사와의 기술협력 추진(NDA 체결·MOU 검토) 뉴스가 투자심리를 자극해 주가 급등을 유발한 것으로 판단된다. 추가로 4월 24일의 주권매매거래 정지(신주권 변경 관련)는 유동성·공급 측면의 변동성을 높여 상승을 증폭시켰을 가능성이 있다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>자동차/모빌리티</span><span>글로벌 기술협력</span><span>MOU·NDA 추진</span><span>전자기교반(EMS) 기반 반응고 공정</span><span>초경량 알루미늄 구조 부품</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013914674&office_id=003&code=198940&page=&sm=" target="_blank" rel="noopener">한주라이트메탈 "독일 ZF와 기술 협력 파트너십 추진"</a> <small style="color:var(--muted)">[2026.04.28 14:29] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265597&office_id=018&code=198940&page=&sm=" target="_blank" rel="noopener">거래소 "한주라이트메탈 주권매매거래 정지"</a> <small style="color:var(--muted)">[2026.04.24 17:24] 이데일리 · stock_news</small></li></ul></details>
+</div></div>
+<h2>❓ 이유 불명 (원인 미상 — 추적 필요) <small style="color:var(--muted)">(4)</small></h2>
+<div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">송원산업</span> <span class="ticker">004430 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/단기 테마성</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거를 찾을 수 없습니다. 급등(+30%)과 대량거래(7.0백만주)는 보통 기관·외국인 쏠림, 프로그램·차익거래 또는 소문성·테마성 매매에 의해 발생하는 전형적 패턴으로 판단됩니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(기관·외국인)</span><span>프로그램매매/단기차익</span><span>테마성 급등</span><span>대규모 블록딜</span><span>자사주 매입·소각</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">한주에이알티</span> <span class="ticker">058450 · KOSDAQ</span></div>
+    <span class="pct">+29.97%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거가 없다. 거래량 급증과 큰 상승률을 감안할 때 개별 종목에 대한 단기적 수급(개인 중심의 매수, 저유동성에서의 대량거래 또는 단타성 매매)이 원인일 가능성이 높다. 근거 기사 부재로 외부 이벤트(공시·계약·정책) 여부는 확인되지 않아 신뢰도는 낮다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(개인·기관·외국인)</span><span>저유동성</span><span>대량거래 급증</span><span>단타·프로그램매매</span><span>시간외 단일가 연동</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">솔디펜스</span> <span class="ticker">215090 · KOSDAQ</span></div>
+    <span class="pct">+16.05%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">제공된 기사는 개별 호재나 공시가 아닌 장중 시장개요로, 해당 종목의 급등 원인을 설명한 본문 근거가 없다. 거래량이 크게 늘어난 점과 코스닥 소형주 내 순환매·차익매물 언급으로 볼 때 개별 공시 없이 수급·테마성 매매로 급등한 것으로 추정된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>headline_only_generic</code> — 제목만 일반 시황·랭킹</div><div>기사 1건 · 본문 1건 · origin stock_news:1 · 최신기사 2026-04-28 10:17 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>수급(개인투자자)</span><span>코스닥 소형주 순환매</span><span>프로그램매매 차익거래</span><span>급등 상위종목 리스트</span><span>장중 거래량 급증</span></div>
+  <details><summary>📰 관련 뉴스 1건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639301&office_id=081&code=215090&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1,213.78로 1.01% 하락…외...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">리튬포어스</span> <span class="ticker">073570 · KOSDAQ</span></div>
+    <span class="pct">+15.31%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 관련 기사(종목태그·검색 모두)가 전혀 없어 뉴스 기반의 명확한 호재가 확인되지 않습니다. 거래량이 대폭 증가한 가운데 주가가 급등한 점으로 보아 공시 없이 개인매수·투기성 수급 또는 소셜·커뮤니티 기반의 테마성 매매에 따른 단기 급등일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(개인·기관)</span><span>커뮤니티·소셜 바이럴</span><span>무공시 급등</span><span>고거래량 동반 급등</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div>
+
+</section>
+
+<section id="tab-theme" class="section">
+<h2>🎯 테마별 그룹</h2>
+<div class="theme-group"><div class="theme-title">수급 <small>(3종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">한주에이알티</span> <span class="ticker">058450 · KOSDAQ</span></div>
+    <span class="pct">+29.97%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거가 없다. 거래량 급증과 큰 상승률을 감안할 때 개별 종목에 대한 단기적 수급(개인 중심의 매수, 저유동성에서의 대량거래 또는 단타성 매매)이 원인일 가능성이 높다. 근거 기사 부재로 외부 이벤트(공시·계약·정책) 여부는 확인되지 않아 신뢰도는 낮다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(개인·기관·외국인)</span><span>저유동성</span><span>대량거래 급증</span><span>단타·프로그램매매</span><span>시간외 단일가 연동</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">솔디펜스</span> <span class="ticker">215090 · KOSDAQ</span></div>
+    <span class="pct">+16.05%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">제공된 기사는 개별 호재나 공시가 아닌 장중 시장개요로, 해당 종목의 급등 원인을 설명한 본문 근거가 없다. 거래량이 크게 늘어난 점과 코스닥 소형주 내 순환매·차익매물 언급으로 볼 때 개별 공시 없이 수급·테마성 매매로 급등한 것으로 추정된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>headline_only_generic</code> — 제목만 일반 시황·랭킹</div><div>기사 1건 · 본문 1건 · origin stock_news:1 · 최신기사 2026-04-28 10:17 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>수급(개인투자자)</span><span>코스닥 소형주 순환매</span><span>프로그램매매 차익거래</span><span>급등 상위종목 리스트</span><span>장중 거래량 급증</span></div>
+  <details><summary>📰 관련 뉴스 1건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639301&office_id=081&code=215090&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1,213.78로 1.01% 하락…외...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">리튬포어스</span> <span class="ticker">073570 · KOSDAQ</span></div>
+    <span class="pct">+15.31%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 관련 기사(종목태그·검색 모두)가 전혀 없어 뉴스 기반의 명확한 호재가 확인되지 않습니다. 거래량이 대폭 증가한 가운데 주가가 급등한 점으로 보아 공시 없이 개인매수·투기성 수급 또는 소셜·커뮤니티 기반의 테마성 매매에 따른 단기 급등일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(개인·기관)</span><span>커뮤니티·소셜 바이럴</span><span>무공시 급등</span><span>고거래량 동반 급등</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">수급/단기 테마성 <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">송원산업</span> <span class="ticker">004430 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/단기 테마성</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거를 찾을 수 없습니다. 급등(+30%)과 대량거래(7.0백만주)는 보통 기관·외국인 쏠림, 프로그램·차익거래 또는 소문성·테마성 매매에 의해 발생하는 전형적 패턴으로 판단됩니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(기관·외국인)</span><span>프로그램매매/단기차익</span><span>테마성 급등</span><span>대규모 블록딜</span><span>자사주 매입·소각</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">호르무즈 해협 봉쇄 영향으로 인한 중동발 알루미늄 공급 차질·글로벌 알루미늄 프리미엄 급등(공급 부족 추정치 약 200만톤) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">알루코</span> <span class="ticker">001780 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/원자재</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 호르무즈 해협 봉쇄 영향으로 인한 중동발 알루미늄 공급 차질·글로벌 알루미늄 프리미엄 급등(공급 부족 추정치 약 200만톤)</div>
+  <div class="reasoning">4월22일 다수 기사에서 미국-이란 갈등·호르무즈 봉쇄 우려로 알루미늄 공급 차질 가능성과 프리미엄 상승을 지적하며 알루미늄 관련주들이 동반 급등했다. 알루코의 급등은 이 같은 원자재 수급 리스크(테마성 수급)에 대한 투자자의 베팅 및 추격매수·수급 집중(거래량 급증)에 따른 것으로 보인다. 회사별 공시성 호재는 보이지 않는다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.22 (D-6일)</div>
+  
+  <div class="keywords"><span>원자재 수급</span><span>중동 지정학 리스크</span><span>알루미늄 프리미엄 급등</span><span>호르무즈 해협 봉쇄</span><span>글로벌 알루미늄 공급 부족 200만t</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=001780&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016036618&office_id=001&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 중동사태 장기화 우려에 알루미늄 관련주도 상승마감(종합)</a> <small style="color:var(--muted)">[2026.04.22 16:00] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003420477&office_id=030&code=001780&page=&sm=" target="_blank" rel="noopener">[ET특징주] 중동 사태에 알루미늄 공급난 우려 계속… 관련주 일제히....</a> <small style="color:var(--muted)">[2026.04.22 13:38] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001140088&office_id=417&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 미국-이란 전쟁에 알루미늄주 급등…삼아알미늄 28%↑</a> <small style="color:var(--muted)">[2026.04.22 11:01] 동행미디어 시대 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005278118&office_id=015&code=001780&page=&sm=" target="_blank" rel="noopener">美·이란 2차 종전협상 '안갯속'…알루미늄株 동반 급등</a> <small style="color:var(--muted)">[2026.04.22 10:52] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016035331&office_id=001&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 중동 사태에 알루미늄 공급 충격 지속…관련주 급등</a> <small style="color:var(--muted)">[2026.04.22 10:06] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=001780&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">이란의 철강 수출 금지(슬래브·철판) 발표 및 중국의 조강 생산량 감산에 따른 글로벌·국내 공급제약 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">문배철강</span> <span class="ticker">008420 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지(슬래브·철판) 발표 및 중국의 조강 생산량 감산에 따른 글로벌·국내 공급제약 기대</div>
+  <div class="reasoning">28일 다수의 종목태그 기사들이 이란의 철강 수출 금지 보도와 중국의 조강 감산 소식을 동일한 원인으로 지목하며 철강업종 일제 급등을 보도했다. 공급 축소 기대가 국내 유통가격 상승(열연·철근 등)과 실적 개선 기대를 불러와 문배철강을 포함한 중·소형 철강주에 매수세가 쏠렸다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>수급 불균형</span><span>지정학 리스크</span><span>중국 조강 감산</span><span>이란 철강 수출 금지(슬래브·철판)</span><span>국내 열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 9건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=008420&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=008420&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=008420&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=008420&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=008420&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=008420&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=008420&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=008420&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=008420&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">이란의 철강(슬래브·철판) 수출 금지와 중국의 조강 감산에 따른 글로벌 공급 축소 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">아주스틸</span> <span class="ticker">139990 · KOSPI</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지와 중국의 조강 감산에 따른 글로벌 공급 축소 기대</div>
+  <div class="reasoning">D-0(2026.04.28) 보도에서 이란의 철강 수출 금지 소식과 중국의 조강 생산량 감소가 동시에 제시되며 철강 전반의 공급 우려가 부각됐다. 국내 철강 유통가격 상승 기대와 업종 동반 강세로 아주스틸 등 중·소형 철강주에 매수세가 몰려 상한가를 기록한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 조강 감산</span><span>이란 철강 수출 금지</span><span>열연 유통가격 상승</span><span>슬래브·철판 공급제한</span></div>
+  <details><summary>📰 관련 뉴스 14건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=139990&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=139990&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=139990&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=139990&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004615565&office_id=011&code=139990&page=&sm=" target="_blank" rel="noopener">코스피, 이틀 연속 최고치 마감…장중 최초로 6700선 넘겨 [마켓시그...</a> <small style="color:var(--muted)">[2026.04.28 16:11] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507177&office_id=374&code=139990&page=&sm=" target="_blank" rel="noopener">1주 400만 원 황제주 등장…코스피 장중 6700선 넘었다</a> <small style="color:var(--muted)">[2026.04.28 15:07] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=139990&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004615496&office_id=011&code=139990&page=&sm=" target="_blank" rel="noopener">철강 쏟아내던 中 생산 줄이자…韓 철강기업 주가 10% 급등 [줍줍리...</a> <small style="color:var(--muted)">[2026.04.28 14:24] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=139990&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=139990&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=139990&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=139990&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008915334&office_id=421&code=139990&page=&sm=" target="_blank" rel="noopener">"이란, 철강 슬래브·철판 수출 금지"…아주스틸 상한가[핫종목]</a> <small style="color:var(--muted)">[2026.04.28 09:53] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000105152&office_id=050&code=139990&page=&sm=" target="_blank" rel="noopener">동국제강그룹 재무 흔든 아주스틸</a> <small style="color:var(--muted)">[2026.04.21 04:02] 한경비즈니스 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">이란의 철강(슬래브·철판) 수출 금지 발표 및 중국의 조강 생산 감산에 따른 글로벌 공급 축소로 국내 철강 제품 가격 상승 기대 (열연·냉연 가격 인상 통보), 여기에 4월21일 기업가치 제고 계획 공시가 투자심리 보완 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">넥스틸</span> <span class="ticker">092790 · KOSPI</span></div>
+    <span class="pct">+29.89%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/정책(철강 공급축소)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 발표 및 중국의 조강 생산 감산에 따른 글로벌 공급 축소로 국내 철강 제품 가격 상승 기대 (열연·냉연 가격 인상 통보), 여기에 4월21일 기업가치 제고 계획 공시가 투자심리 보완</div>
+  <div class="reasoning">4월28일 이란의 일시적 수출금지 보도와 중국의 조강 감산 소식이 맞물리며 철강 업종 전반에 수급 개선·가격 반등 기대를 촉발했고, 넥스틸도 이 영향으로 동반 상한가를 기록했다. 추가로 4월21일 회사의 '기업가치 제고 계획' 공시는 매수 심리에 보탬이 된 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 공급축소</span><span>수급 개선</span><span>제품 가격 인상</span><span>이란 철강 수출 금지(슬래브·철판)</span><span>중국 조강 감산</span></div>
+  <details><summary>📰 관련 뉴스 6건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=092790&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=092790&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=092790&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507201&office_id=374&code=092790&page=&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피 장중 6700선 터치…코스닥 하락 전환</a> <small style="color:var(--muted)">[2026.04.28 16:43] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=092790&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613063&office_id=011&code=092790&page=&sm=" target="_blank" rel="noopener">기업 공시 [4월 21일]</a> <small style="color:var(--muted)">[2026.04.21 16:48] 서울경제 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">이란의 철강(슬래브·철판) 수출 금지 소식 및 IRGC의 미국 내 철강·알루미늄 공장 공격 보도로 인한 공급 우려 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">포스코스틸리온</span> <span class="ticker">058430 · KOSPI</span></div>
+    <span class="pct">+29.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">철강</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 소식 및 IRGC의 미국 내 철강·알루미늄 공장 공격 보도로 인한 공급 우려</div>
+  <div class="reasoning">D-day 장중 다수 매체가 미국‑이란 협상 교착과 이란 측의 수출 금지·공장 공격 보도를 전하며 철강 공급 불안 우려가 부각됐다. 공급 리스크로 철강 제품 가격 상승 기대가 커지면서 포스코스틸리온을 포함한 중·소형 철강주에 테마성 매수세가 집중되어 급등을 초래했다고 판단한다. (참고로 4월24일 데이터센터 자재 공급 공시는 중장기적 실적 모멘텀으로 보조적 요인에 그침)</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>지정학 리스크</span><span>철강 공급 차질</span><span>이란 철강 수출 금지</span><span>IRGC 공장 공격</span><span>ALCOSTA 데이터센터 적용</span><span>열연·냉연 가격 인상</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=058430&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507177&office_id=374&code=058430&page=&sm=" target="_blank" rel="noopener">1주 400만 원 황제주 등장…코스피 장중 6700선 넘었다</a> <small style="color:var(--muted)">[2026.04.28 15:07] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=058430&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=058430&page=2&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=058430&page=2&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350244&office_id=008&code=058430&page=2&sm=" target="_blank" rel="noopener">이란의 미국 공장 공격 소식…철강株 장초반 강세</a> <small style="color:var(--muted)">[2026.04.28 09:18] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639077&office_id=081&code=058430&page=2&sm=" target="_blank" rel="noopener">[마감시황] 코스피, 6615.03으로 마감…반도체 강세에 2.15% ...</a> <small style="color:var(--muted)">[2026.04.27 16:40] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016041168&office_id=001&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터에 자재 공급</a> <small style="color:var(--muted)">[2026.04.24 13:40] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003084149&office_id=119&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터에 고기능 강재 공급</a> <small style="color:var(--muted)">[2026.04.24 10:15] 데일리안 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001159422&office_id=366&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터 프로젝트에 자재 공급</a> <small style="color:var(--muted)">[2026.04.24 09:54] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005754251&office_id=277&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 데이터센터에 도금강판 공급</a> <small style="color:var(--muted)">[2026.04.24 09:35] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613369&office_id=011&code=058430&page=2&sm=" target="_blank" rel="noopener">오늘의 메모[4월 23일]</a> <small style="color:var(--muted)">[2026.04.22 10:33] 서울경제 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">이란의 철강 수출 금지(5월 한달) 보도 및 중국의 조강 감산으로 인한 글로벌 공급 축소로 국내 철강 유통가격·마진 개선 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">부국철강</span> <span class="ticker">026940 · KOSPI</span></div>
+    <span class="pct">+26.18%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지(5월 한달) 보도 및 중국의 조강 감산으로 인한 글로벌 공급 축소로 국내 철강 유통가격·마진 개선 기대</div>
+  <div class="reasoning">28일 다수 언론이 이란의 철강 수출 금지(영국 로이터 보도)와 중국의 조강 생산 감소를 보도하며 철강업종 전반의 수급 개선 기대를 부각시켰다. 수입 재고 감소·유통가격 상승 전망이 중소형 철강주에 대한 매수심리를 촉발해 부국철강이 동반 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 조강 감산</span><span>중동 지정학 리스크</span><span>이란 철강 수출 금지</span><span>열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 9건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005672760&office_id=009&code=026940&page=&sm=" target="_blank" rel="noopener">'K자 코스피' 대형주 34% 오를때 소형주 14% 그쳐</a> <small style="color:var(--muted)">[2026.04.28 18:00] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=026940&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=026940&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=026940&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=026940&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=026940&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=026940&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635248&office_id=081&code=026940&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]주성코퍼레이션 29.92% 상한가 금일 증시 상승률 1위...</a> <small style="color:var(--muted)">[2026.04.14 16:49] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=026940&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">이란의 철강 수출 금지 및 중국의 조강 감산으로 인한 글로벌 공급 축소(열연 등 유통가격 상승 기대) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">TCC스틸</span> <span class="ticker">002710 · KOSPI</span></div>
+    <span class="pct">+19.70%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지 및 중국의 조강 감산으로 인한 글로벌 공급 축소(열연 등 유통가격 상승 기대)</div>
+  <div class="reasoning">28일 보도된 이란의 철강 수출 금지(로이터 보도)와 중국의 조강 생산 감소 소식이 국내 철강주 전반에 수급 개선 기대를 불러와 동반 급등을 촉발했습니다. TCC스틸은 같은 기사에서 급등 종목으로 언급되며, 열연·철근 등 유통가격 상승과 수입 감소로 인한 반사이익 기대가 매수세를 유인한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>수급(공급축소)</span><span>중국 조강 감산</span><span>반덤핑·수입 관세</span><span>열연 유통가격 상승</span><span>재고 소진</span><span>이란 철강 수출 금지</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=002710&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=002710&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507201&office_id=374&code=002710&page=&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피 장중 6700선 터치…코스닥 하락 전환</a> <small style="color:var(--muted)">[2026.04.28 16:43] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=002710&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">이란의 5월 철강(슬래브·철판) 수출 금지 및 중국의 조강 생산 감산으로 인한 글로벌 공급 축소→국내 철강 유통가격 및 수익성 개선 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">휴스틸</span> <span class="ticker">005010 · KOSPI</span></div>
+    <span class="pct">+17.22%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 5월 철강(슬래브·철판) 수출 금지 및 중국의 조강 생산 감산으로 인한 글로벌 공급 축소→국내 철강 유통가격 및 수익성 개선 기대</div>
+  <div class="reasoning">4월 28일 보도를 기점으로 이란의 한시적 수출 금지(로이터 보도 인용)와 중국의 조강 생산 감소 소식이 동반되며 글로벌 공급 우려가 부각되었다. 수입 감소와 유통가격 상승 전망이 철강 업종 전반에 투자 심리를 자극해 휴스틸을 포함한 관련주들이 동반 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>글로벌 철강 공급 축소</span><span>이란 철강 수출 금지</span><span>중국 조강 감산</span><span>국내 열연·철근 유통가격 상승</span><span>구조용강관 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=005010&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=005010&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=005010&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265546&office_id=018&code=005010&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 홍보 간담회 개최</a> <small style="color:var(--muted)">[2026.04.24 16:27] 이데일리 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">중국의 철강 감산(조강 생산 감소)에 따른 글로벌 공급 축소 기대 및 국내 철강사들의 제품 가격 인상 기대(구조용강관 수요 확대 관련 홍보·현장 견학) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">하이스틸</span> <span class="ticker">071090 · KOSPI</span></div>
+    <span class="pct">+15.16%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급·섹터(철강)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국의 철강 감산(조강 생산 감소)에 따른 글로벌 공급 축소 기대 및 국내 철강사들의 제품 가격 인상 기대(구조용강관 수요 확대 관련 홍보·현장 견학)</div>
+  <div class="reasoning">당일(4/28) 발표된 기사에서 중국의 철강 감산과 국내 제품 가격 인상 기대가 철강 섹터 전반의 동반 강세를 촉발했고, 하이스틸은 강관업종으로서 수혜 기대가 직·간접적으로 부각되었다. 4/24의 구조용강관 홍보 간담회(함안공장 견학) 등 수요 확대 인식 제고 활동도 투자자 관심을 더해 거래량과 급등을 확대시킨 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>중국 철강 감산</span><span>철강 제품 가격 인상</span><span>구조용강관 적용 확대</span><span>구조용강관 홍보 간담회</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=071090&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003084364&office_id=119&code=071090&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 적용 확대 위해 수요 업계와 소통</a> <small style="color:var(--muted)">[2026.04.24 16:53] 데일리안 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265546&office_id=018&code=071090&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 홍보 간담회 개최</a> <small style="color:var(--muted)">[2026.04.24 16:27] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=071090&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">1분기 어닝 서프라이즈(매출 336억·영업익 16.5~17억 흑자전환) 및 수주잔고 6,118억 공개 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">세아메카닉스</span> <span class="ticker">396300 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 어닝 서프라이즈(매출 336억·영업익 16.5~17억 흑자전환) 및 수주잔고 6,118억 공개</div>
+  <div class="reasoning">당일 공시된 1분기 잠정실적(매출 71.5% 증가·영업흑자 전환)이 시장 기대를 상회하면서 주가를 급등시킨 것으로 판단된다. 더불어 기사에 언급된 대규모 수주잔고(6,118억)와 산업통상자원부 과제 선정·공정 자동화 계획 등이 향후 실적 지속성에 대한 기대를 높여 거래량과 상승폭을 확대했다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>제조 자동화</span><span>수주잔고 6,118억</span><span>1분기 매출 336억·영업익 16억</span><span>월드클래스 플러스 선정</span><span>협동로봇 도입</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268219&office_id=018&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 매출 336억…전년대비 71.5%↑</a> <small style="color:var(--muted)">[2026.04.28 11:42] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083555&office_id=293&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 영업익 17억원…전년比 흑자전환</a> <small style="color:var(--muted)">[2026.04.28 09:29] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350245&office_id=008&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 매출 71% '급증'·영업익 16.5억원 "어닝 ...</a> <small style="color:var(--muted)">[2026.04.28 09:19] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002636252&office_id=016&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 영업익 17억…흑자전환</a> <small style="color:var(--muted)">[2026.04.28 09:06] 헤럴드경제 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">이란의 철강(슬래브·철판) 수출 금지 및 중국의 조강 생산 감산으로 인한 공급 축소 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">대호특수강</span> <span class="ticker">021040 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급(국제 공급 축소)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 및 중국의 조강 생산 감산으로 인한 공급 축소 기대</div>
+  <div class="reasoning">4월 28일 다수 보도에서 이란의 철강 수출 금지와 중국의 조강 감산 소식이 전해지며 국내 철강업종에 대한 공급 축소·가격 반등 기대가 확산됐습니다. 수급 개선 기대로 열연·철근 등 유통가격 상승 전망과 재고 가치 개선 기대가 동반되며 대호특수강을 포함한 철강 종목들이 일제히 급등했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>국제 철강 공급 축소</span><span>중국 조강 감산</span><span>중동 지정학 리스크</span><span>이란 슬래브·철판 수출금지</span><span>열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 5건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=021040&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=021040&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=021040&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=021040&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=021040&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">성장금융 K-Growth 펀드 GP(소형 리그) 지원 후보·Co-GP 참여(나우IB캐피탈-호라이즌 연합) — GP 선정 기대에 따른 AUM·운용보수 확대 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">나우IB</span> <span class="ticker">293580 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급·IB/VC(밸류업·GP 선정)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 성장금융 K-Growth 펀드 GP(소형 리그) 지원 후보·Co-GP 참여(나우IB캐피탈-호라이즌 연합) — GP 선정 기대에 따른 AUM·운용보수 확대 기대</div>
+  <div class="reasoning">최근 기사에서 해당 계열(IB/VC)들이 성장금융 K-Growth 펀드 GP 경쟁에 적극 참여한 사실이 보도되었고, 같은 기간 업계 전반의 밸류업·주주환원 기조가 강조되며 밸류에이션 리레이팅(수급 유입) 기대를 자극했습니다. 특히 4/20 기사에 나우IB캐피탈이 소형 리그 Co-GP로 출사표를 던진 점이 단기적 투자심리 개선으로 연결된 것으로 판단됩니다. 다만 GP 선정이 확정된 것은 아니어서 기대 선반영 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.20 (D-7일)</div>
+  
+  <div class="keywords"><span>K-Growth GP 선정</span><span>밸류업·주주환원(자사주·배당)</span><span>AUM(운용자산) 확대</span><span>Co-GP(공동운용) 소형리그 지원</span><span>임원 자사주 매입</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280212&office_id=015&code=293580&page=&sm=" target="_blank" rel="noopener">큐캐피탈, 임원 주식 매입…주가 부양 나선 상장 PEF·VC</a> <small style="color:var(--muted)">[2026.04.27 17:28] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083105&office_id=293&code=293580&page=&sm=" target="_blank" rel="noopener">성장금융 K-Growth 펀드, GP 37곳 접수…경쟁률 4.1대1</a> <small style="color:var(--muted)">[2026.04.20 18:28] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006258739&office_id=018&code=293580&page=&sm=" target="_blank" rel="noopener">[마켓인]‘흑자 전환’ 메가존클라우드, IPO 실사 채비…지배구조 재....</a> <small style="color:var(--muted)">[2026.04.16 17:09] 이데일리 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">중국 조강 생산 감소·미국 반덤핑 관세 영향으로 국내 열연·철근 유통가격 상승 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">대호특수강우</span> <span class="ticker">021045 · KOSDAQ</span></div>
+    <span class="pct">+29.89%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국 조강 생산 감소·미국 반덤핑 관세 영향으로 국내 열연·철근 유통가격 상승 기대</div>
+  <div class="reasoning">28일 보도에서 제강 수요 증가와 중국 조강 생산 감소, 미국의 반덤핑 관세 영향을 근거로 철강 섹터가 동반 급등했고 기사에 대호특수강우가 가격제한선까지 올랐다고 직접 명시되어 있다. 중국산 수입 감소와 유통가격 상승, 중동 지정학 리스크가 국내 제강업체의 이익 개선 기대를 촉발해 주가 급등을 유발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>반덤핑 관세</span><span>중동 지정학 리스크</span><span>중국 조강 생산 감소</span><span>열연 유통가격 상승</span><span>수입재 관세 영향</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=021045&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=021045&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">글로벌 휴머노이드 기업 대상 '로봇 스킨' 초도 매출(파트너십·공급 논의 확대) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">디케이앤디</span> <span class="ticker">263020 · KOSDAQ</span></div>
+    <span class="pct">+29.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">신사업/수주(로봇·첨단소재)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 휴머노이드 기업 대상 '로봇 스킨' 초도 매출(파트너십·공급 논의 확대)</div>
+  <div class="reasoning">최근 보도에서 디케이앤디가 실리콘 기반 인조피혁을 활용한 '로봇 스킨'으로 글로벌 휴머노이드 업체에 매출을 발생시켰고, 여러 글로벌 기업과 장기 파트너십 확대를 논의 중이라는 구체적 내용이 나왔습니다. 해당 소식이 향후 고부가가치 신사업 전환 가능성을 부각시키며 단기 수급과 기대심리를 급격히 끌어올린 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>피지컬 AI</span><span>실리콘 기반 인조피혁</span><span>로봇 스킨 초도 공급</span><span>글로벌 파트너십 확대(차세대 모델)</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280602&office_id=015&code=263020&page=&sm=" target="_blank" rel="noopener">로봇 스킨으로 사업 확장…디케이앤디, 휴머노이드 글로벌 기업과 협...</a> <small style="color:var(--muted)">[2026.04.28 11:28] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003420150&office_id=030&code=263020&page=&sm=" target="_blank" rel="noopener">[人사이트] 최원빈 디케이앤디 경영총괄 “전통 인조가죽 넘어 '로봇.....</a> <small style="color:var(--muted)">[2026.04.21 16:01] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005277473&office_id=015&code=263020&page=&sm=" target="_blank" rel="noopener">디케이앤디, 2025년 실적 증가…로봇·첨단 소재 기업 전환 본격화</a> <small style="color:var(--muted)">[2026.04.21 09:01] 한국경제 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">중국의 대규모 철강 감산 지속(조강 생산량 감소) 및 이란의 철강(슬래브·철판) 수출 금지 보도로 인한 글로벌 공급 축소 기대(국내 제품가격 인상 통보 포함) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">금강철강</span> <span class="ticker">053260 · KOSDAQ</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국의 대규모 철강 감산 지속(조강 생산량 감소) 및 이란의 철강(슬래브·철판) 수출 금지 보도로 인한 글로벌 공급 축소 기대(국내 제품가격 인상 통보 포함)</div>
+  <div class="reasoning">당일 다수 보도에서 중국의 철강 감산과 이란의 슬래브·철판 수출 금지 소식이 동시에 전해지며 철강 섹터 전반에 공급 축소 기대가 강화됐다. 국내 주요사들의 제품 가격 인상 통보(열연·냉연 t당 인상)도 더해져 금강철강을 포함한 중소형 철강주에 매수세가 집중되어 급등했다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 철강 감산</span><span>이란 철강 수출금지</span><span>열연·냉연 가격 인상</span><span>조강 생산량 감소</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=053260&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=053260&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=053260&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=053260&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=053260&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=053260&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008915334&office_id=421&code=053260&page=&sm=" target="_blank" rel="noopener">"이란, 철강 슬래브·철판 수출 금지"…아주스틸 상한가[핫종목]</a> <small style="color:var(--muted)">[2026.04.28 09:53] 뉴스1 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">글로벌 자동차 부품사와 기술협력 파트너십 추진(NDA 체결·향후 MOU 검토) — EMS 기반 반응고 공정 검증 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">한주라이트메탈</span> <span class="ticker">198940 · KOSDAQ</span></div>
+    <span class="pct">+19.75%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">자동차/모빌리티</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 자동차 부품사와 기술협력 파트너십 추진(NDA 체결·향후 MOU 검토) — EMS 기반 반응고 공정 검증</div>
+  <div class="reasoning">당일 보도된 글로벌 자동차 부품사와의 기술협력 추진(NDA 체결·MOU 검토) 뉴스가 투자심리를 자극해 주가 급등을 유발한 것으로 판단된다. 추가로 4월 24일의 주권매매거래 정지(신주권 변경 관련)는 유동성·공급 측면의 변동성을 높여 상승을 증폭시켰을 가능성이 있다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>자동차/모빌리티</span><span>글로벌 기술협력</span><span>MOU·NDA 추진</span><span>전자기교반(EMS) 기반 반응고 공정</span><span>초경량 알루미늄 구조 부품</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013914674&office_id=003&code=198940&page=&sm=" target="_blank" rel="noopener">한주라이트메탈 "독일 ZF와 기술 협력 파트너십 추진"</a> <small style="color:var(--muted)">[2026.04.28 14:29] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265597&office_id=018&code=198940&page=&sm=" target="_blank" rel="noopener">거래소 "한주라이트메탈 주권매매거래 정지"</a> <small style="color:var(--muted)">[2026.04.24 17:24] 이데일리 · stock_news</small></li></ul></details>
+</div></div></div>
+
+</section>
+
+<section id="tab-all" class="section">
+<h2>🧾 전체 20개</h2>
+<div class="grid">
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">송원산업</span> <span class="ticker">004430 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/단기 테마성</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거를 찾을 수 없습니다. 급등(+30%)과 대량거래(7.0백만주)는 보통 기관·외국인 쏠림, 프로그램·차익거래 또는 소문성·테마성 매매에 의해 발생하는 전형적 패턴으로 판단됩니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(기관·외국인)</span><span>프로그램매매/단기차익</span><span>테마성 급등</span><span>대규모 블록딜</span><span>자사주 매입·소각</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">알루코</span> <span class="ticker">001780 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/원자재</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 호르무즈 해협 봉쇄 영향으로 인한 중동발 알루미늄 공급 차질·글로벌 알루미늄 프리미엄 급등(공급 부족 추정치 약 200만톤)</div>
+  <div class="reasoning">4월22일 다수 기사에서 미국-이란 갈등·호르무즈 봉쇄 우려로 알루미늄 공급 차질 가능성과 프리미엄 상승을 지적하며 알루미늄 관련주들이 동반 급등했다. 알루코의 급등은 이 같은 원자재 수급 리스크(테마성 수급)에 대한 투자자의 베팅 및 추격매수·수급 집중(거래량 급증)에 따른 것으로 보인다. 회사별 공시성 호재는 보이지 않는다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.22 (D-6일)</div>
+  
+  <div class="keywords"><span>원자재 수급</span><span>중동 지정학 리스크</span><span>알루미늄 프리미엄 급등</span><span>호르무즈 해협 봉쇄</span><span>글로벌 알루미늄 공급 부족 200만t</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=001780&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016036618&office_id=001&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 중동사태 장기화 우려에 알루미늄 관련주도 상승마감(종합)</a> <small style="color:var(--muted)">[2026.04.22 16:00] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003420477&office_id=030&code=001780&page=&sm=" target="_blank" rel="noopener">[ET특징주] 중동 사태에 알루미늄 공급난 우려 계속… 관련주 일제히....</a> <small style="color:var(--muted)">[2026.04.22 13:38] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001140088&office_id=417&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 미국-이란 전쟁에 알루미늄주 급등…삼아알미늄 28%↑</a> <small style="color:var(--muted)">[2026.04.22 11:01] 동행미디어 시대 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005278118&office_id=015&code=001780&page=&sm=" target="_blank" rel="noopener">美·이란 2차 종전협상 '안갯속'…알루미늄株 동반 급등</a> <small style="color:var(--muted)">[2026.04.22 10:52] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016035331&office_id=001&code=001780&page=&sm=" target="_blank" rel="noopener">[특징주] 중동 사태에 알루미늄 공급 충격 지속…관련주 급등</a> <small style="color:var(--muted)">[2026.04.22 10:06] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=001780&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">문배철강</span> <span class="ticker">008420 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지(슬래브·철판) 발표 및 중국의 조강 생산량 감산에 따른 글로벌·국내 공급제약 기대</div>
+  <div class="reasoning">28일 다수의 종목태그 기사들이 이란의 철강 수출 금지 보도와 중국의 조강 감산 소식을 동일한 원인으로 지목하며 철강업종 일제 급등을 보도했다. 공급 축소 기대가 국내 유통가격 상승(열연·철근 등)과 실적 개선 기대를 불러와 문배철강을 포함한 중·소형 철강주에 매수세가 쏠렸다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>수급 불균형</span><span>지정학 리스크</span><span>중국 조강 감산</span><span>이란 철강 수출 금지(슬래브·철판)</span><span>국내 열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 9건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=008420&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=008420&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=008420&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=008420&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=008420&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=008420&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=008420&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=008420&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=008420&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">아주스틸</span> <span class="ticker">139990 · KOSPI</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지와 중국의 조강 감산에 따른 글로벌 공급 축소 기대</div>
+  <div class="reasoning">D-0(2026.04.28) 보도에서 이란의 철강 수출 금지 소식과 중국의 조강 생산량 감소가 동시에 제시되며 철강 전반의 공급 우려가 부각됐다. 국내 철강 유통가격 상승 기대와 업종 동반 강세로 아주스틸 등 중·소형 철강주에 매수세가 몰려 상한가를 기록한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 조강 감산</span><span>이란 철강 수출 금지</span><span>열연 유통가격 상승</span><span>슬래브·철판 공급제한</span></div>
+  <details><summary>📰 관련 뉴스 14건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=139990&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=139990&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=139990&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=139990&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004615565&office_id=011&code=139990&page=&sm=" target="_blank" rel="noopener">코스피, 이틀 연속 최고치 마감…장중 최초로 6700선 넘겨 [마켓시그...</a> <small style="color:var(--muted)">[2026.04.28 16:11] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507177&office_id=374&code=139990&page=&sm=" target="_blank" rel="noopener">1주 400만 원 황제주 등장…코스피 장중 6700선 넘었다</a> <small style="color:var(--muted)">[2026.04.28 15:07] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=139990&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004615496&office_id=011&code=139990&page=&sm=" target="_blank" rel="noopener">철강 쏟아내던 中 생산 줄이자…韓 철강기업 주가 10% 급등 [줍줍리...</a> <small style="color:var(--muted)">[2026.04.28 14:24] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=139990&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=139990&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=139990&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=139990&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008915334&office_id=421&code=139990&page=&sm=" target="_blank" rel="noopener">"이란, 철강 슬래브·철판 수출 금지"…아주스틸 상한가[핫종목]</a> <small style="color:var(--muted)">[2026.04.28 09:53] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000105152&office_id=050&code=139990&page=&sm=" target="_blank" rel="noopener">동국제강그룹 재무 흔든 아주스틸</a> <small style="color:var(--muted)">[2026.04.21 04:02] 한경비즈니스 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">넥스틸</span> <span class="ticker">092790 · KOSPI</span></div>
+    <span class="pct">+29.89%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/정책(철강 공급축소)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 발표 및 중국의 조강 생산 감산에 따른 글로벌 공급 축소로 국내 철강 제품 가격 상승 기대 (열연·냉연 가격 인상 통보), 여기에 4월21일 기업가치 제고 계획 공시가 투자심리 보완</div>
+  <div class="reasoning">4월28일 이란의 일시적 수출금지 보도와 중국의 조강 감산 소식이 맞물리며 철강 업종 전반에 수급 개선·가격 반등 기대를 촉발했고, 넥스틸도 이 영향으로 동반 상한가를 기록했다. 추가로 4월21일 회사의 '기업가치 제고 계획' 공시는 매수 심리에 보탬이 된 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 공급축소</span><span>수급 개선</span><span>제품 가격 인상</span><span>이란 철강 수출 금지(슬래브·철판)</span><span>중국 조강 감산</span></div>
+  <details><summary>📰 관련 뉴스 6건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=092790&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=092790&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=092790&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507201&office_id=374&code=092790&page=&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피 장중 6700선 터치…코스닥 하락 전환</a> <small style="color:var(--muted)">[2026.04.28 16:43] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=092790&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613063&office_id=011&code=092790&page=&sm=" target="_blank" rel="noopener">기업 공시 [4월 21일]</a> <small style="color:var(--muted)">[2026.04.21 16:48] 서울경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">포스코스틸리온</span> <span class="ticker">058430 · KOSPI</span></div>
+    <span class="pct">+29.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">철강</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 소식 및 IRGC의 미국 내 철강·알루미늄 공장 공격 보도로 인한 공급 우려</div>
+  <div class="reasoning">D-day 장중 다수 매체가 미국‑이란 협상 교착과 이란 측의 수출 금지·공장 공격 보도를 전하며 철강 공급 불안 우려가 부각됐다. 공급 리스크로 철강 제품 가격 상승 기대가 커지면서 포스코스틸리온을 포함한 중·소형 철강주에 테마성 매수세가 집중되어 급등을 초래했다고 판단한다. (참고로 4월24일 데이터센터 자재 공급 공시는 중장기적 실적 모멘텀으로 보조적 요인에 그침)</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>지정학 리스크</span><span>철강 공급 차질</span><span>이란 철강 수출 금지</span><span>IRGC 공장 공격</span><span>ALCOSTA 데이터센터 적용</span><span>열연·냉연 가격 인상</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=058430&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507177&office_id=374&code=058430&page=&sm=" target="_blank" rel="noopener">1주 400만 원 황제주 등장…코스피 장중 6700선 넘었다</a> <small style="color:var(--muted)">[2026.04.28 15:07] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=058430&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639300&office_id=081&code=058430&page=2&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6639.30 상승…52주 최고 경신하...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=058430&page=2&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350244&office_id=008&code=058430&page=2&sm=" target="_blank" rel="noopener">이란의 미국 공장 공격 소식…철강株 장초반 강세</a> <small style="color:var(--muted)">[2026.04.28 09:18] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639077&office_id=081&code=058430&page=2&sm=" target="_blank" rel="noopener">[마감시황] 코스피, 6615.03으로 마감…반도체 강세에 2.15% ...</a> <small style="color:var(--muted)">[2026.04.27 16:40] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016041168&office_id=001&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터에 자재 공급</a> <small style="color:var(--muted)">[2026.04.24 13:40] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003084149&office_id=119&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터에 고기능 강재 공급</a> <small style="color:var(--muted)">[2026.04.24 10:15] 데일리안 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001159422&office_id=366&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 하이퍼스케일 데이터센터 프로젝트에 자재 공급</a> <small style="color:var(--muted)">[2026.04.24 09:54] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005754251&office_id=277&code=058430&page=2&sm=" target="_blank" rel="noopener">포스코스틸리온, 호주 데이터센터에 도금강판 공급</a> <small style="color:var(--muted)">[2026.04.24 09:35] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613369&office_id=011&code=058430&page=2&sm=" target="_blank" rel="noopener">오늘의 메모[4월 23일]</a> <small style="color:var(--muted)">[2026.04.22 10:33] 서울경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">부국철강</span> <span class="ticker">026940 · KOSPI</span></div>
+    <span class="pct">+26.18%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지(5월 한달) 보도 및 중국의 조강 감산으로 인한 글로벌 공급 축소로 국내 철강 유통가격·마진 개선 기대</div>
+  <div class="reasoning">28일 다수 언론이 이란의 철강 수출 금지(영국 로이터 보도)와 중국의 조강 생산 감소를 보도하며 철강업종 전반의 수급 개선 기대를 부각시켰다. 수입 재고 감소·유통가격 상승 전망이 중소형 철강주에 대한 매수심리를 촉발해 부국철강이 동반 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 조강 감산</span><span>중동 지정학 리스크</span><span>이란 철강 수출 금지</span><span>열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 9건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005672760&office_id=009&code=026940&page=&sm=" target="_blank" rel="noopener">'K자 코스피' 대형주 34% 오를때 소형주 14% 그쳐</a> <small style="color:var(--muted)">[2026.04.28 18:00] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=026940&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=026940&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=026940&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=026940&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=026940&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913605&office_id=003&code=026940&page=&sm=" target="_blank" rel="noopener">미·이란 협상 교착에 철강株 급등…포스코스틸리온 상한가</a> <small style="color:var(--muted)">[2026.04.28 10:07] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635248&office_id=081&code=026940&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]주성코퍼레이션 29.92% 상한가 금일 증시 상승률 1위...</a> <small style="color:var(--muted)">[2026.04.14 16:49] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=026940&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">TCC스틸</span> <span class="ticker">002710 · KOSPI</span></div>
+    <span class="pct">+19.70%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강 수출 금지 및 중국의 조강 감산으로 인한 글로벌 공급 축소(열연 등 유통가격 상승 기대)</div>
+  <div class="reasoning">28일 보도된 이란의 철강 수출 금지(로이터 보도)와 중국의 조강 생산 감소 소식이 국내 철강주 전반에 수급 개선 기대를 불러와 동반 급등을 촉발했습니다. TCC스틸은 같은 기사에서 급등 종목으로 언급되며, 열연·철근 등 유통가격 상승과 수입 감소로 인한 반사이익 기대가 매수세를 유인한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>수급(공급축소)</span><span>중국 조강 감산</span><span>반덤핑·수입 관세</span><span>열연 유통가격 상승</span><span>재고 소진</span><span>이란 철강 수출 금지</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=002710&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=002710&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507201&office_id=374&code=002710&page=&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피 장중 6700선 터치…코스닥 하락 전환</a> <small style="color:var(--muted)">[2026.04.28 16:43] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=002710&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">휴스틸</span> <span class="ticker">005010 · KOSPI</span></div>
+    <span class="pct">+17.22%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 5월 철강(슬래브·철판) 수출 금지 및 중국의 조강 생산 감산으로 인한 글로벌 공급 축소→국내 철강 유통가격 및 수익성 개선 기대</div>
+  <div class="reasoning">4월 28일 보도를 기점으로 이란의 한시적 수출 금지(로이터 보도 인용)와 중국의 조강 생산 감소 소식이 동반되며 글로벌 공급 우려가 부각되었다. 수입 감소와 유통가격 상승 전망이 철강 업종 전반에 투자 심리를 자극해 휴스틸을 포함한 관련주들이 동반 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>글로벌 철강 공급 축소</span><span>이란 철강 수출 금지</span><span>중국 조강 감산</span><span>국내 열연·철근 유통가격 상승</span><span>구조용강관 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=005010&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=005010&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=005010&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265546&office_id=018&code=005010&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 홍보 간담회 개최</a> <small style="color:var(--muted)">[2026.04.24 16:27] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">하이스틸</span> <span class="ticker">071090 · KOSPI</span></div>
+    <span class="pct">+15.16%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급·섹터(철강)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국의 철강 감산(조강 생산 감소)에 따른 글로벌 공급 축소 기대 및 국내 철강사들의 제품 가격 인상 기대(구조용강관 수요 확대 관련 홍보·현장 견학)</div>
+  <div class="reasoning">당일(4/28) 발표된 기사에서 중국의 철강 감산과 국내 제품 가격 인상 기대가 철강 섹터 전반의 동반 강세를 촉발했고, 하이스틸은 강관업종으로서 수혜 기대가 직·간접적으로 부각되었다. 4/24의 구조용강관 홍보 간담회(함안공장 견학) 등 수요 확대 인식 제고 활동도 투자자 관심을 더해 거래량과 급등을 확대시킨 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>중국 철강 감산</span><span>철강 제품 가격 인상</span><span>구조용강관 적용 확대</span><span>구조용강관 홍보 간담회</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=071090&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003084364&office_id=119&code=071090&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 적용 확대 위해 수요 업계와 소통</a> <small style="color:var(--muted)">[2026.04.24 16:53] 데일리안 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265546&office_id=018&code=071090&page=&sm=" target="_blank" rel="noopener">철강협회 강관협의회, 구조용강관 홍보 간담회 개최</a> <small style="color:var(--muted)">[2026.04.24 16:27] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003635144&office_id=081&code=071090&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]금일 코스피 거래량 1위 남선알미늄 거래대금 4,068억...</a> <small style="color:var(--muted)">[2026.04.14 13:07] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">한주에이알티</span> <span class="ticker">058450 · KOSDAQ</span></div>
+    <span class="pct">+29.97%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거가 없다. 거래량 급증과 큰 상승률을 감안할 때 개별 종목에 대한 단기적 수급(개인 중심의 매수, 저유동성에서의 대량거래 또는 단타성 매매)이 원인일 가능성이 높다. 근거 기사 부재로 외부 이벤트(공시·계약·정책) 여부는 확인되지 않아 신뢰도는 낮다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(개인·기관·외국인)</span><span>저유동성</span><span>대량거래 급증</span><span>단타·프로그램매매</span><span>시간외 단일가 연동</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">세아메카닉스</span> <span class="ticker">396300 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 어닝 서프라이즈(매출 336억·영업익 16.5~17억 흑자전환) 및 수주잔고 6,118억 공개</div>
+  <div class="reasoning">당일 공시된 1분기 잠정실적(매출 71.5% 증가·영업흑자 전환)이 시장 기대를 상회하면서 주가를 급등시킨 것으로 판단된다. 더불어 기사에 언급된 대규모 수주잔고(6,118억)와 산업통상자원부 과제 선정·공정 자동화 계획 등이 향후 실적 지속성에 대한 기대를 높여 거래량과 상승폭을 확대했다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>제조 자동화</span><span>수주잔고 6,118억</span><span>1분기 매출 336억·영업익 16억</span><span>월드클래스 플러스 선정</span><span>협동로봇 도입</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268219&office_id=018&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 매출 336억…전년대비 71.5%↑</a> <small style="color:var(--muted)">[2026.04.28 11:42] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083555&office_id=293&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 영업익 17억원…전년比 흑자전환</a> <small style="color:var(--muted)">[2026.04.28 09:29] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350245&office_id=008&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 매출 71% '급증'·영업익 16.5억원 "어닝 ...</a> <small style="color:var(--muted)">[2026.04.28 09:19] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002636252&office_id=016&code=396300&page=&sm=" target="_blank" rel="noopener">세아메카닉스, 1분기 영업익 17억…흑자전환</a> <small style="color:var(--muted)">[2026.04.28 09:06] 헤럴드경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">대호특수강</span> <span class="ticker">021040 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급(국제 공급 축소)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 이란의 철강(슬래브·철판) 수출 금지 및 중국의 조강 생산 감산으로 인한 공급 축소 기대</div>
+  <div class="reasoning">4월 28일 다수 보도에서 이란의 철강 수출 금지와 중국의 조강 감산 소식이 전해지며 국내 철강업종에 대한 공급 축소·가격 반등 기대가 확산됐습니다. 수급 개선 기대로 열연·철근 등 유통가격 상승 전망과 재고 가치 개선 기대가 동반되며 대호특수강을 포함한 철강 종목들이 일제히 급등했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>국제 철강 공급 축소</span><span>중국 조강 감산</span><span>중동 지정학 리스크</span><span>이란 슬래브·철판 수출금지</span><span>열연 유통가격 상승</span></div>
+  <details><summary>📰 관련 뉴스 5건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160486&office_id=366&code=021040&page=&sm=" target="_blank" rel="noopener">이란 철강 수출 금지·中 감산 소식에…철강株 줄줄이 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.28 17:59] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=021040&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=021040&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=021040&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=021040&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">나우IB</span> <span class="ticker">293580 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급·IB/VC(밸류업·GP 선정)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 성장금융 K-Growth 펀드 GP(소형 리그) 지원 후보·Co-GP 참여(나우IB캐피탈-호라이즌 연합) — GP 선정 기대에 따른 AUM·운용보수 확대 기대</div>
+  <div class="reasoning">최근 기사에서 해당 계열(IB/VC)들이 성장금융 K-Growth 펀드 GP 경쟁에 적극 참여한 사실이 보도되었고, 같은 기간 업계 전반의 밸류업·주주환원 기조가 강조되며 밸류에이션 리레이팅(수급 유입) 기대를 자극했습니다. 특히 4/20 기사에 나우IB캐피탈이 소형 리그 Co-GP로 출사표를 던진 점이 단기적 투자심리 개선으로 연결된 것으로 판단됩니다. 다만 GP 선정이 확정된 것은 아니어서 기대 선반영 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.20 (D-7일)</div>
+  
+  <div class="keywords"><span>K-Growth GP 선정</span><span>밸류업·주주환원(자사주·배당)</span><span>AUM(운용자산) 확대</span><span>Co-GP(공동운용) 소형리그 지원</span><span>임원 자사주 매입</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280212&office_id=015&code=293580&page=&sm=" target="_blank" rel="noopener">큐캐피탈, 임원 주식 매입…주가 부양 나선 상장 PEF·VC</a> <small style="color:var(--muted)">[2026.04.27 17:28] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083105&office_id=293&code=293580&page=&sm=" target="_blank" rel="noopener">성장금융 K-Growth 펀드, GP 37곳 접수…경쟁률 4.1대1</a> <small style="color:var(--muted)">[2026.04.20 18:28] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006258739&office_id=018&code=293580&page=&sm=" target="_blank" rel="noopener">[마켓인]‘흑자 전환’ 메가존클라우드, IPO 실사 채비…지배구조 재....</a> <small style="color:var(--muted)">[2026.04.16 17:09] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">대호특수강우</span> <span class="ticker">021045 · KOSDAQ</span></div>
+    <span class="pct">+29.89%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국 조강 생산 감소·미국 반덤핑 관세 영향으로 국내 열연·철근 유통가격 상승 기대</div>
+  <div class="reasoning">28일 보도에서 제강 수요 증가와 중국 조강 생산 감소, 미국의 반덤핑 관세 영향을 근거로 철강 섹터가 동반 급등했고 기사에 대호특수강우가 가격제한선까지 올랐다고 직접 명시되어 있다. 중국산 수입 감소와 유통가격 상승, 중동 지정학 리스크가 국내 제강업체의 이익 개선 기대를 촉발해 주가 급등을 유발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>반덤핑 관세</span><span>중동 지정학 리스크</span><span>중국 조강 생산 감소</span><span>열연 유통가격 상승</span><span>수입재 관세 영향</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=021045&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=021045&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">디케이앤디</span> <span class="ticker">263020 · KOSDAQ</span></div>
+    <span class="pct">+29.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">신사업/수주(로봇·첨단소재)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 휴머노이드 기업 대상 '로봇 스킨' 초도 매출(파트너십·공급 논의 확대)</div>
+  <div class="reasoning">최근 보도에서 디케이앤디가 실리콘 기반 인조피혁을 활용한 '로봇 스킨'으로 글로벌 휴머노이드 업체에 매출을 발생시켰고, 여러 글로벌 기업과 장기 파트너십 확대를 논의 중이라는 구체적 내용이 나왔습니다. 해당 소식이 향후 고부가가치 신사업 전환 가능성을 부각시키며 단기 수급과 기대심리를 급격히 끌어올린 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>피지컬 AI</span><span>실리콘 기반 인조피혁</span><span>로봇 스킨 초도 공급</span><span>글로벌 파트너십 확대(차세대 모델)</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280602&office_id=015&code=263020&page=&sm=" target="_blank" rel="noopener">로봇 스킨으로 사업 확장…디케이앤디, 휴머노이드 글로벌 기업과 협...</a> <small style="color:var(--muted)">[2026.04.28 11:28] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003420150&office_id=030&code=263020&page=&sm=" target="_blank" rel="noopener">[人사이트] 최원빈 디케이앤디 경영총괄 “전통 인조가죽 넘어 '로봇.....</a> <small style="color:var(--muted)">[2026.04.21 16:01] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005277473&office_id=015&code=263020&page=&sm=" target="_blank" rel="noopener">디케이앤디, 2025년 실적 증가…로봇·첨단 소재 기업 전환 본격화</a> <small style="color:var(--muted)">[2026.04.21 09:01] 한국경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">금강철강</span> <span class="ticker">053260 · KOSDAQ</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 중국의 대규모 철강 감산 지속(조강 생산량 감소) 및 이란의 철강(슬래브·철판) 수출 금지 보도로 인한 글로벌 공급 축소 기대(국내 제품가격 인상 통보 포함)</div>
+  <div class="reasoning">당일 다수 보도에서 중국의 철강 감산과 이란의 슬래브·철판 수출 금지 소식이 동시에 전해지며 철강 섹터 전반에 공급 축소 기대가 강화됐다. 국내 주요사들의 제품 가격 인상 통보(열연·냉연 t당 인상)도 더해져 금강철강을 포함한 중소형 철강주에 매수세가 집중되어 급등했다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>철강 수급</span><span>중국 철강 감산</span><span>이란 철강 수출금지</span><span>열연·냉연 가격 인상</span><span>조강 생산량 감소</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005280833&office_id=015&code=053260&page=&sm=" target="_blank" rel="noopener">이란 수출금지에…달아오른 철강주</a> <small style="color:var(--muted)">[2026.04.28 17:43] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917071&office_id=421&code=053260&page=&sm=" target="_blank" rel="noopener">中 철강 감산·리튬가 상승 전망에 철강주 잇단 상한가[핫종목](종합)</a> <small style="color:var(--muted)">[2026.04.28 17:20] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350672&office_id=008&code=053260&page=&sm=" target="_blank" rel="noopener">"제강 수요 증가로 수익 개선 기대감"…불장에 달궈진 철강株</a> <small style="color:var(--muted)">[2026.04.28 17:16] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001250447&office_id=215&code=053260&page=&sm=" target="_blank" rel="noopener">증시 선두서 이끈다…K-철강, 무더기 '상한가'</a> <small style="color:var(--muted)">[2026.04.28 14:27] 한국경제TV · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003422455&office_id=030&code=053260&page=&sm=" target="_blank" rel="noopener">[ET특징주] 미국-이란 종전협상 교착… 철강株 급등</a> <small style="color:var(--muted)">[2026.04.28 14:04] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350411&office_id=008&code=053260&page=&sm=" target="_blank" rel="noopener">제강 수요 폭발 기대감…철강株 '불기둥'</a> <small style="color:var(--muted)">[2026.04.28 11:48] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008915334&office_id=421&code=053260&page=&sm=" target="_blank" rel="noopener">"이란, 철강 슬래브·철판 수출 금지"…아주스틸 상한가[핫종목]</a> <small style="color:var(--muted)">[2026.04.28 09:53] 뉴스1 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한주라이트메탈</span> <span class="ticker">198940 · KOSDAQ</span></div>
+    <span class="pct">+19.75%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">자동차/모빌리티</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 자동차 부품사와 기술협력 파트너십 추진(NDA 체결·향후 MOU 검토) — EMS 기반 반응고 공정 검증</div>
+  <div class="reasoning">당일 보도된 글로벌 자동차 부품사와의 기술협력 추진(NDA 체결·MOU 검토) 뉴스가 투자심리를 자극해 주가 급등을 유발한 것으로 판단된다. 추가로 4월 24일의 주권매매거래 정지(신주권 변경 관련)는 유동성·공급 측면의 변동성을 높여 상승을 증폭시켰을 가능성이 있다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>자동차/모빌리티</span><span>글로벌 기술협력</span><span>MOU·NDA 추진</span><span>전자기교반(EMS) 기반 반응고 공정</span><span>초경량 알루미늄 구조 부품</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013914674&office_id=003&code=198940&page=&sm=" target="_blank" rel="noopener">한주라이트메탈 "독일 ZF와 기술 협력 파트너십 추진"</a> <small style="color:var(--muted)">[2026.04.28 14:29] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265597&office_id=018&code=198940&page=&sm=" target="_blank" rel="noopener">거래소 "한주라이트메탈 주권매매거래 정지"</a> <small style="color:var(--muted)">[2026.04.24 17:24] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">솔디펜스</span> <span class="ticker">215090 · KOSDAQ</span></div>
+    <span class="pct">+16.05%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">제공된 기사는 개별 호재나 공시가 아닌 장중 시장개요로, 해당 종목의 급등 원인을 설명한 본문 근거가 없다. 거래량이 크게 늘어난 점과 코스닥 소형주 내 순환매·차익매물 언급으로 볼 때 개별 공시 없이 수급·테마성 매매로 급등한 것으로 추정된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>headline_only_generic</code> — 제목만 일반 시황·랭킹</div><div>기사 1건 · 본문 1건 · origin stock_news:1 · 최신기사 2026-04-28 10:17 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>수급(개인투자자)</span><span>코스닥 소형주 순환매</span><span>프로그램매매 차익거래</span><span>급등 상위종목 리스트</span><span>장중 거래량 급증</span></div>
+  <details><summary>📰 관련 뉴스 1건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639301&office_id=081&code=215090&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1,213.78로 1.01% 하락…외...</a> <small style="color:var(--muted)">[2026.04.28 10:17] 서울신문 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">리튬포어스</span> <span class="ticker">073570 · KOSDAQ</span></div>
+    <span class="pct">+15.31%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 관련 기사(종목태그·검색 모두)가 전혀 없어 뉴스 기반의 명확한 호재가 확인되지 않습니다. 거래량이 대폭 증가한 가운데 주가가 급등한 점으로 보아 공시 없이 개인매수·투기성 수급 또는 소셜·커뮤니티 기반의 테마성 매매에 따른 단기 급등일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(개인·기관)</span><span>커뮤니티·소셜 바이럴</span><span>무공시 급등</span><span>고거래량 동반 급등</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+</div>
+</section>
+
+<script>
+document.querySelectorAll('nav.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav.tabs button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('tab-' + b.dataset.tab).classList.add('active');
+}));
+</script>
+</body>
+</html>

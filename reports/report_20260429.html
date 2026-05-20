@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>일일 분석 — 20260429</title>
+<style>
+  :root { --bg:#0b0d10; --fg:#e6e6e6; --muted:#8a929b; --card:#151a20; --border:#23272e;
+           --hi:#2dd4bf; --new:#3b82f6; --cont:#a78bfa; --unclear:#f59e0b;
+           --conf-high:#22c55e; --conf-med:#eab308; --conf-low:#ef4444; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font: 14px/1.55 -apple-system, "Pretendard", sans-serif; margin: 0; padding: 24px 32px; }
+  h1 { margin: 0 0 4px; font-size: 22px; }
+  h2 { margin: 28px 0 12px; font-size: 16px; color: var(--hi); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { margin: 16px 0 8px; font-size: 14px; color: var(--muted); }
+  .meta { color: var(--muted); margin-bottom: 18px; }
+  nav.tabs { display:flex; gap:6px; margin: 16px 0 10px; }
+  nav.tabs button { background: var(--card); color: var(--fg); border: 1px solid var(--border); padding: 6px 12px; cursor: pointer; border-radius: 6px; font-size: 13px; }
+  nav.tabs button.active { background: var(--hi); color:#000; border-color: var(--hi); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+  .card.new { border-left: 3px solid var(--new); }
+  .card.continuation { border-left: 3px solid var(--cont); }
+  .card.unclear { border-left: 3px solid var(--unclear); }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap: 8px; }
+  .name { font-weight: 600; }
+  .ticker { color: var(--muted); font-size: 12px; font-family: ui-monospace, monospace; }
+  .pct { font-family: ui-monospace, monospace; font-weight: 600; color: #fb7185; }
+  .signal { margin: 6px 0; color: var(--hi); }
+  .keywords span { display: inline-block; background:#1e2530; border:1px solid var(--border); border-radius: 4px; padding: 1px 6px; margin: 2px 4px 0 0; font-size: 12px; color: var(--muted); font-family: ui-monospace, monospace; }
+  .conf { font-size: 11px; padding: 1px 6px; border-radius: 999px; font-weight: 600; }
+  .conf.high { background: rgba(34,197,94,.15); color: var(--conf-high); }
+  .conf.medium { background: rgba(234,179,8,.15); color: var(--conf-med); }
+  .conf.low { background: rgba(239,68,68,.15); color: var(--conf-low); }
+  details summary { cursor:pointer; color: var(--muted); font-size: 12px; margin-top: 8px; }
+  details ul { padding-left: 16px; margin: 6px 0 0; }
+  details a { color: var(--fg); }
+  .reasoning { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .theme-group { margin: 18px 0; }
+  .theme-title { font-weight: 600; color: var(--fg); margin-bottom: 6px; font-size: 14px; }
+  .theme-title small { color: var(--muted); font-weight: 400; }
+  .section { display: none; }
+  .section.active { display: block; }
+</style>
+</head>
+<body>
+<h1>📊 20260429 일일 분석</h1>
+<div class="meta">
+  KOSPI 상승 10 · KOSDAQ 상승 10 · 신규 10 · 연속 0 · 불명 10
+</div>
+<nav class="tabs">
+  <button class="active" data-tab="status">상태별</button>
+  <button data-tab="theme">테마별</button>
+  <button data-tab="all">전체</button>
+</nav>
+
+<section id="tab-status" class="section active">
+<h2>🆕 신규 시그널 (오늘 매칭됨) <small style="color:var(--muted)">(10)</small></h2>
+<div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">잇츠한불</span> <span class="ticker">226320 · KOSPI</span></div>
+    <span class="pct">+16.25%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 화장품 섹터 순환매 — 아모레퍼시픽 1Q 호실적(2026.04.29) 및 K-뷰티 수출 호조·외국인 관광객 쇼핑 기대감에 따른 소형 화장품주 매수</div>
+  <div class="reasoning">아모레퍼시픽의 1분기 호실적 보도(29일)와 미국·유럽 수출 호조·외국인 관광객 쇼핑 기대감이 맞물리며 화장품 섹터로 수급이 이동했다. 잇츠한불은 면세점·관광객 매출 비중이 높아 이러한 섹터 순환매의 수혜를 받아 단기 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>K-뷰티 수출 호조</span><span>화장품 섹터 순환매</span><span>외국인 관광객 쇼핑</span><span>올리브영 입점 매출 증가</span><span>대형사 1Q 호조</span></div>
+  <details><summary>📰 관련 뉴스 6건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639662&office_id=081&code=226320&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6622.18로 약세…외국인 순매도에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507321&office_id=374&code=226320&page=&sm=" target="_blank" rel="noopener">[이 시각 시황] UAE, 다음달 1일 OPEC·OPEC+ 전격 탈퇴</a> <small style="color:var(--muted)">[2026.04.29 09:33] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268828&office_id=018&code=226320&page=&sm=" target="_blank" rel="noopener">아모레퍼시픽, 1Q 호실적에 4%대↑…화장품주 ‘불기둥’[특징주]</a> <small style="color:var(--muted)">[2026.04.29 09:18] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005671147&office_id=009&code=226320&page=&sm=" target="_blank" rel="noopener">K뷰티 글로벌 인기에… 화장품株 잘나가네</a> <small style="color:var(--muted)">[2026.04.24 17:53] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001159421&office_id=366&code=226320&page=&sm=" target="_blank" rel="noopener">[특징주] 미국·유럽 수출 호조에 화장품株 일제히 강세</a> <small style="color:var(--muted)">[2026.04.24 09:49] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265046&office_id=018&code=226320&page=&sm=" target="_blank" rel="noopener">불장 다음 주자는 화장품주?…순환매 속 줄줄이 급등[특징주]</a> <small style="color:var(--muted)">[2026.04.24 09:28] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">LS네트웍스</span> <span class="ticker">000680 · KOSPI</span></div>
+    <span class="pct">+14.04%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수주/그룹주(계열사 호재 파급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 LS일렉트릭의 미국 빅테크 하이퍼스케일 데이터센터 전력 인프라 배전 솔루션 약 3,190억원(2.2억달러) 수주 및 LS에코에너지의 희토류·HVDC 관련 가치 재평가에 따른 그룹주 동반 강세</div>
+  <div class="reasoning">LS네트웍스 자체 공시성 호재는 없으나, 4월29일 LS일렉트릭의 대형 미국 데이터센터 배전 솔루션 수주 소식과 LS에코에너지의 희토류/HVDC 재평가 전망이 그룹 전반의 투자심리를 개선시켜 동일 계열주로서 동반 급등으로 연결된 것으로 판단됩니다. 4월23일 코스피 상승에 따른 증권·그룹주 랠리도 부분적 배경으로 작용했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>데이터센터 전력인프라</span><span>미국 빅테크 수주</span><span>희토류 공급망</span><span>HVDC 케이블</span><span>계열사 수주 파급</span><span>그룹 밸류에이션 재평가</span></div>
+  <details><summary>📰 관련 뉴스 5건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673053&office_id=009&code=000680&page=&sm=" target="_blank" rel="noopener">LS일렉트릭, 美 빅테크 데이터센터 전력 인프라 계약 체결 소식에 5%...</a> <small style="color:var(--muted)">[2026.04.29 12:50] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000105187&office_id=024&code=000680&page=&sm=" target="_blank" rel="noopener">LS에코에너지 16% ‘불기둥’ 왜?…“단순 전선회사 아니다”[오늘, ...</a> <small style="color:var(--muted)">[2026.04.29 10:34] 매경이코노미 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016039445&office_id=001&code=000680&page=&sm=" target="_blank" rel="noopener">[특징주] 증권주, '코스피 사흘째 최고가 경신' 속 혼조 마감(종합)</a> <small style="color:var(--muted)">[2026.04.23 16:26] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000506154&office_id=374&code=000680&page=&sm=" target="_blank" rel="noopener">증권주, '코스피 연일 최고가 경신' 속 상승세</a> <small style="color:var(--muted)">[2026.04.23 09:49] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016037595&office_id=001&code=000680&page=&sm=" target="_blank" rel="noopener">[특징주] 증권주, '코스피 연일 최고가 경신' 속 상승세</a> <small style="color:var(--muted)">[2026.04.23 09:38] 연합뉴스 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">제일일렉트릭</span> <span class="ticker">199820 · KOSDAQ</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">전력 인프라 (수급/테마)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 데이터센터 전력수요 급증 기대로 북미 데이터센터向 배전솔루션 대형 수주 소식(3190억 규모) 및 해외 실적 서프라이즈에 따른 섹터 동반 강세</div>
+  <div class="reasoning">미국 블룸에너지의 1분기 실적 및 AI 데이터센터 수요 급증 뉴스, 그리고 북미 대상 배전솔루션 대형 계약 공시가 4월29일 전력·전력설비 섹터에 자극을 주며 제일일렉트릭도 섹터 동반 매수(테마성 급등)를 기록했다. 개별 회사의 수주 공시는 확인되지 않아 개별 호재라기보다는 섹터 스필오버로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>전력 인프라</span><span>배전솔루션 3190억원</span><span>데이터센터 전력수요 급증</span><span>북미 수주 기대</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673353&office_id=009&code=199820&page=&sm=" target="_blank" rel="noopener">[MK 시그널] 美블룸에너지 'AI붐' 증명 … 국내 전력株도 일제히 ...</a> <small style="color:var(--muted)">[2026.04.29 17:48] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673053&office_id=009&code=199820&page=&sm=" target="_blank" rel="noopener">LS일렉트릭, 美 빅테크 데이터센터 전력 인프라 계약 체결 소식에 5%...</a> <small style="color:var(--muted)">[2026.04.29 12:50] 매일경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">비나텍</span> <span class="ticker">126340 · KOSDAQ</span></div>
+    <span class="pct">+29.98%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/기업공시</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 보통주 추가상장(주식배당) 공시 — 추가상장(주식배당)으로 인한 유통주식수 변화</div>
+  <div class="reasoning">네이버 금융 태깅 기사(서울경제 '오늘의 메모')에 비나텍이 '주식배당'으로 보통주 추가상장 대상에 포함되었다고 명시되어 있어, 추가상장(배당) 일정 공시가 단기 매수 심리를 자극한 것으로 판단됩니다. 해당 공시는 하루 전(4/15) 공지되어 4/16(추정) 거래일에 수급 집중으로 급등한 것으로 보입니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.15 (D-1일)</div>
+  
+  <div class="keywords"><span>추가상장</span><span>주식배당</span><span>유통주식수 증가</span><span>배당비율 공시</span></div>
+  <details><summary>📰 관련 뉴스 1건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004610929&office_id=011&code=126340&page=&sm=" target="_blank" rel="noopener">오늘의 메모[4월 16일]</a> <small style="color:var(--muted)">[2026.04.15 10:46] 서울경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">폴라리스AI</span> <span class="ticker">039980 · KOSDAQ</span></div>
+    <span class="pct">+29.96%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">AI·로봇</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 휴머노이드 로봇사와 공식 파트너십 체결 — 국내 시장 총괄·유통권 확보</div>
+  <div class="reasoning">당일 아침 보도에서 폴라리스AI가 글로벌 휴머노이드 로봇사와 공식 파트너십을 맺고 국내 시장 총괄 및 유통 채널을 맡는다고 발표한 점이 직접적 매수 재료로 작용했다. 발표 내용이 사업 진출(유통·플랫폼 이식)과 기술 연계(엣지 AI·NPU 이식) 가능성을 구체적으로 제시해 투자심리를 자극하며 급등과 거래량 증가를 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>엣지 AI</span><span>로봇 상용화</span><span>글로벌 휴머노이드 파트너십</span><span>국내 총판 계약</span><span>온디바이스 NPU 이식</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=039980&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268827&office_id=018&code=039980&page=&sm=" target="_blank" rel="noopener">폴라리스AI, 상한가…中 유비테크 휴머노이드 로봇 한국 시장 총괄[특....</a> <small style="color:var(--muted)">[2026.04.29 09:17] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">오로라</span> <span class="ticker">039830 · KOSDAQ</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 2026년 1분기 연결기준 영업이익 141억9300만원(전년비 +45.9%), 매출 974억5500만원(+22.2%), 당기순이익 72억9900만원(+84.9%) 공시</div>
+  <div class="reasoning">4월 29일 발표된 잠정실적(공시)이 전년 대비 큰 폭의 영업이익·매출 증가를 보여 즉각적인 수급 유입과 재평가 매수로 이어진 것으로 판단됩니다. 이전의 '미국 매출 확대' 및 '부동산 가치 대비 저평가' 분석 기사가 재평가 논리를 뒷받침하며 상승을 증폭시켰습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>팜팔스 美매출</span><span>투자부동산 매각</span><span>차입금 축소</span><span>분기 실적 소통 강화</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507421&office_id=374&code=039830&page=&sm=" target="_blank" rel="noopener">[직설] 국내 증권시장 시가총액 사상 첫 600조 원 넘어섰다…우리 증...</a> <small style="color:var(--muted)">[2026.04.29 14:00] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268924&office_id=018&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업이익 142억원…전년比 45.9%↑</a> <small style="color:var(--muted)">[2026.04.29 10:39] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013916211&office_id=003&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업이익 142억…전년比 45.9%↑</a> <small style="color:var(--muted)">[2026.04.29 09:47] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002636995&office_id=016&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업익 142억…전년비 45.9% ↑</a> <small style="color:var(--muted)">[2026.04.29 09:42] 헤럴드경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083494&office_id=293&code=039830&page=&sm=" target="_blank" rel="noopener">[저평가 리포트] 강남 사옥보다 싼 시총…오로라월드 밸류업 '시험대.....</a> <small style="color:var(--muted)">[2026.04.27 14:03] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005753475&office_id=277&code=039830&page=&sm=" target="_blank" rel="noopener">[단독] '영원히 늙지 않는 아이돌'에게 꽂혔다…70억 투자 몰린 이유</a> <small style="color:var(--muted)">[2026.04.23 05:49] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005751435&office_id=277&code=039830&page=2&sm=" target="_blank" rel="noopener">"美서 매출 터졌다" 난리인데…'PER 5배' 말 안 되는 저평가 이 ...</a> <small style="color:var(--muted)">[2026.04.19 10:49] 아시아경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">와이씨켐</span> <span class="ticker">112290 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 액면분할(1주당 가액 1000원→500원)로 인한 변경상장·거래정지 해제에 따른 거래 재개 및 유동성 확대</div>
+  <div class="reasoning">장중 상한가는 지난달 결정된 액면분할로 인해 주권 매매가 정지됐다가 4월29일 거래가 재개되면서 발생한 직접적인 수급(매수 집중) 효과가 주된 원인이다. 보도 내용에 거래정지 해제와 유통주식수 확대(1011만주→2022만주)가 명시돼 있어 기업공시성 이벤트가 즉각적인 급등을 유발했으며, '유리 기판' 등 반도체 소재 테마는 보조적 모멘텀으로 작용했을 가능성이 있다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>액면분할</span><span>거래정지 해제</span><span>유동성 확대</span><span>유통주식수 확대</span><span>유리 기판 양산</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160579&office_id=366&code=112290&page=&sm=" target="_blank" rel="noopener">[특징주] 와이씨켐, 액면분할 후 거래 정지 해제로 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.29 09:39] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=112290&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350883&office_id=008&code=112290&page=&sm=" target="_blank" rel="noopener">액면분할 후 거래 재개한 와이씨켐, 상한가</a> <small style="color:var(--muted)">[2026.04.29 09:20] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505886&office_id=374&code=112290&page=&sm=" target="_blank" rel="noopener">[이 시각 시황] 리튬 가격 상승에 관련주 강세</a> <small style="color:var(--muted)">[2026.04.22 09:32] SBS Biz · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">피앤씨테크</span> <span class="ticker">237750 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">지배구조·기업결합(M&A/합병)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 자회사 엠티씨코리아의 무증자 흡수합병 결정(경영효율화) 및 광명전기 보유지분 구조를 에이치케이홀딩스에 장외매각해 간접지배로 전환한 지배구조 재편</div>
+  <div class="reasoning">4월 21일 공시로 자회사 흡수합병(무증자)을 결정했다는 점이 명확한 호재로 인식됐고, 같은 날 보도된 광명전기 관련 지분 구조 변경(간접지배 전환) 기사는 경영권 분쟁 해법·지배력 안정 기대를 높여 수급을 자극한 것으로 판단된다. 이러한 기업행위는 주가에 즉각적 재평가를 유도해 급등을 촉발했을 가능성이 높다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.21 (D-8일)</div>
+  
+  <div class="keywords"><span>M&A/흡수합병</span><span>지배구조 분쟁</span><span>무증자 합병</span><span>광명전기 지분 간접지배</span><span>상호주 의결권 제한</span></div>
+  <details><summary>📰 관련 뉴스 8건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=237750&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083564&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]⑤ 회사 주식 1주도 없는 경영진…표 대결 쉽지않....</a> <small style="color:var(--muted)">[2026.04.28 09:54] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083482&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]④ 경영진 vs 피앤씨테크, 6월 임시주총 격돌 [...</a> <small style="color:var(--muted)">[2026.04.27 10:54] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083346&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]③ 엠에이치건설 인수 후 경영진 물갈이, 회사는.....</a> <small style="color:var(--muted)">[2026.04.24 09:08] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083272&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]② 최대주주 4번 교체…인수자 자금조달 실패 반.....</a> <small style="color:var(--muted)">[2026.04.23 08:57] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613063&office_id=011&code=237750&page=&sm=" target="_blank" rel="noopener">기업 공시 [4월 21일]</a> <small style="color:var(--muted)">[2026.04.21 16:48] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005277703&office_id=015&code=237750&page=&sm=" target="_blank" rel="noopener">피앤씨테크, 엠티씨코리아 흡수합병 결정</a> <small style="color:var(--muted)">[2026.04.21 15:56] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001158428&office_id=366&code=237750&page=2&sm=" target="_blank" rel="noopener">‘의결권 묶인’ 피앤씨테크… 광명전기 ‘간접지배’ 자구책</a> <small style="color:var(--muted)">[2026.04.21 10:01] 조선비즈 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">나노엔텍</span> <span class="ticker">039860 · KOSDAQ</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">바이오</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 탑티어 제약사 대상 EVE-HT A26 및 EVE-HT FL 구매주문(PO) 공급 계약</div>
+  <div class="reasoning">당일(4/29) 공시에 해당하는 보도에서 나노엔텍이 글로벌 탑티어 제약사에 세포 대량 분석 자동화 로봇(EVE-HT A26)과 고처리량 형광 분석장비(EVE-HT FL)의 구매주문(PO)을 확보했다고 밝힘. 상대가 현장에서 이미 장비를 운용 중인 레퍼런스 보유 고객이라는 점과 설치가 5월 초로 예정된 점이 향후 추가 수주·레퍼런스 확대 기대를 키워 단기 급등을 촉발한 것으로 판단됨.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>바이오</span><span>글로벌 파트너십</span><span>세포 분석 자동화</span><span>EVE-HT A26</span><span>EVE-HT FL</span><span>구매주문(PO)</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268859&office_id=018&code=039860&page=&sm=" target="_blank" rel="noopener">나노엔텍, 세포 대량 분석 자동화 로봇 글로벌 시장 첫 공급</a> <small style="color:var(--muted)">[2026.04.29 09:44] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001023237&office_id=031&code=039860&page=&sm=" target="_blank" rel="noopener">와이제이링크·이렘, 최대주주 지분 보호예수 해제</a> <small style="color:var(--muted)">[2026.04.20 09:49] 아이뉴스24 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006261626&office_id=018&code=039860&page=&sm=" target="_blank" rel="noopener">나노엔텍, 美 AACR 2026 참가…”글로벌 빅파마 신규 파트너십 확...</a> <small style="color:var(--muted)">[2026.04.20 09:37] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">에스투더블유</span> <span class="ticker">488280 · KOSDAQ</span></div>
+    <span class="pct">+25.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">사이버보안</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 텔레픽스와 위성(우주) 데이터·다크웹 등 사이버 데이터 융합한 안보 인텔리전스 MOU(공동 R&D·공공·방위기관 대상)</div>
+  <div class="reasoning">여러 매체가 4월28일 S2W의 텔레픽스와의 업무협약(MOU)을 보도하며 회사의 사업영역이 사이버에서 위성(우주) 데이터까지 확장된다는 구체적 내용을 공개했다. 공시성(공식 MOU) 뉴스가 다수 노출되며 안보·공공 수요 확장 기대가 즉각적인 매수로 연결된 것으로 보인다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>사이버보안</span><span>우주(위성) 데이터</span><span>AI 인텔리전스</span><span>다크웹 위협 데이터</span><span>이종도메인 교차분석</span><span>공공·방위기관 수요</span></div>
+  <details><summary>📰 관련 뉴스 19건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001112609&office_id=144&code=488280&page=&sm=" target="_blank" rel="noopener">에스투더블유, 텔레픽스와 안보 인텔리전스 고도화 위한 MOU 체결</a> <small style="color:var(--muted)">[2026.04.28 23:26] 스포츠경향 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002420605&office_id=092&code=488280&page=&sm=" target="_blank" rel="noopener">"사이버와 우주 연계"...S2W, 텔레픽스와 MOU</a> <small style="color:var(--muted)">[2026.04.28 20:52] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000037400&office_id=584&code=488280&page=&sm=" target="_blank" rel="noopener">[사이언스게시판] KIST, AI 전환(AIX) 선포…'만들고 활용하는...</a> <small style="color:var(--muted)">[2026.04.28 18:07] 동아사이언스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005672533&office_id=009&code=488280&page=&sm=" target="_blank" rel="noopener">다크웹 보고 위성도 본다…S2W, 텔레픽스와 안보 AI 협력</a> <small style="color:var(--muted)">[2026.04.28 14:27] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005514351&office_id=014&code=488280&page=&sm=" target="_blank" rel="noopener">"우주까지 포괄하는 보안 체계" S2W, 텔레픽스와 맞손</a> <small style="color:var(--muted)">[2026.04.28 11:20] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016046971&office_id=001&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스, S2W, 위성·다크웹 결합 안보 AI 협력</a> <small style="color:var(--muted)">[2026.04.28 11:07] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160262&office_id=366&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스·S2W, 우주·사이버 데이터 결합한 안보 인텔리전스 협력</a> <small style="color:var(--muted)">[2026.04.28 10:58] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268157&office_id=018&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스, S2W와 안보 인텔리전스 기술 협력</a> <small style="color:var(--muted)">[2026.04.28 10:40] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350291&office_id=008&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스·S2W, 위성·다크웹 데이터 결합…안보 인텔리전스 구축한다</a> <small style="color:var(--muted)">[2026.04.28 10:00] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913262&office_id=003&code=488280&page=&sm=" target="_blank" rel="noopener">에스투더블유-텔레픽스, 안보 인텔리전스 고도화 MOU</a> <small style="color:var(--muted)">[2026.04.28 08:36] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003421713&office_id=030&code=488280&page=2&sm=" target="_blank" rel="noopener">[단독] SK, AI 연합군 'K-AI 얼라이언스' 그룹서 직접 챙긴다</a> <small style="color:var(--muted)">[2026.04.26 17:01] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005279403&office_id=015&code=488280&page=2&sm=" target="_blank" rel="noopener">네오사피엔스·디토닉…AI 스타트업 'IPO 노크'</a> <small style="color:var(--muted)">[2026.04.24 17:49] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505357&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 리뷰] 조선·엔진주 뜨겁네…STX엔진 상한가</a> <small style="color:var(--muted)">[2026.04.20 07:53] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005346080&office_id=008&code=488280&page=2&sm=" target="_blank" rel="noopener">미토스가 깨운 해킹 트라우마…한주간 50% 껑충, 보안주 '널뛰기'</a> <small style="color:var(--muted)">[2026.04.19 10:30] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505136&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 종전 협상 신중론…코스피 6200선 반납</a> <small style="color:var(--muted)">[2026.04.17 16:51] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005345610&office_id=008&code=488280&page=2&sm=" target="_blank" rel="noopener">사이버보안주, 오늘은 급락…'미토스 쇼크' 급등 부담</a> <small style="color:var(--muted)">[2026.04.17 10:03] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001110400&office_id=144&code=488280&page=2&sm=" target="_blank" rel="noopener">에스투더블유, ‘AI 시대 보안 전략 세미나’ 성료</a> <small style="color:var(--muted)">[2026.04.17 00:24] 스포츠경향 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000504916&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피, 33거래일만에 6200선 탈환</a> <small style="color:var(--muted)">[2026.04.16 16:56] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016024403&office_id=001&code=488280&page=2&sm=" target="_blank" rel="noopener">[테크스냅] S2W, 'AI 시대 보안 전략 세미나' 성료</a> <small style="color:var(--muted)">[2026.04.16 09:10] 연합뉴스 · stock_news</small></li></ul></details>
+</div></div>
+<h2>❓ 이유 불명 (원인 미상 — 추적 필요) <small style="color:var(--muted)">(10)</small></h2>
+<div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">선도전기</span> <span class="ticker">007610 · KOSPI</span></div>
+    <span class="pct">+116.67%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 원인 불명(14일 내 공시·기사 없음) — 수급·테마성 급등 가능성</div>
+  <div class="reasoning">종목 태그·일반 뉴스가 최근 14일 내 전혀 확인되지 않아 특정 호재성 공시나 계약·실적 발표로 판단할 근거가 없음. 급격한 거래량 동반 +116.67% 상승은 소수 대량 매수·개인 매수집중·루머성 매매 또는 시간외/블록·프로그램 매매에 따른 수급성 급등일 가능성이 높음.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급 집중(개인·외국인)</span><span>테마성 급등(루머)</span><span>공시/지분변동</span><span>대주주 지분율 변화</span><span>블록딜·시간외거래</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">대원전선</span> <span class="ticker">006340 · KOSPI</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/시장론</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 거래량 급증에 따른 단기적 대규모 매수(프로그램·개인·블록딜성 유입)으로 인한 급등</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 없는 상태에서 거래량과 가격이 동반 급증했으므로 공시·실적 등의 명확한 호재보다는 단기적 수급 이벤트가 원인으로 보입니다. 특히 대규모 거래·프로그램 매수나 특정 주체의 집중 매수(또는 쇼트커버링)가 급격한 상승을 촉발한 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>지수/ETF 편입</span><span>기관·외국인 매수</span><span>거래량 급증(블록딜/프로그램매매)</span><span>전선·케이블 수주공시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">대원전선우</span> <span class="ticker">006345 · KOSPI</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 단기 수급(우선주 프리미엄 확대·개인/기관 매수 집중)에 따른 테마성 급등(명확한 공시·계약 등 본질적 뉴스 부재)</div>
+  <div class="reasoning">14일 창 내에 종목 태그 기사나 일반 뉴스가 전혀 없어 외부 공시·계약·실적 같은 명확한 호재 근거가 부재합니다. 높은 거래량과 급등률을 고려하면 개별 수급(우선주 프리미엄 확대, 개인·기관의 단기 매수 집중)이나 테마성·차익성 매매가 원인일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급 급변(외국인·기관)</span><span>우선주 프리미엄 확대</span><span>배당·현금배당 공시</span><span>M&A·인수합병 루머</span><span>시간외 단일가 급등</span><span>전선업체 수주·공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">LS에코에너지</span> <span class="ticker">229640 · KOSPI</span></div>
+    <span class="pct">+25.03%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">재생에너지</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 창구에서 관련 기사(종목 태그·일반 검색)가 전혀 확인되지 않아 특정 호재성 공시나 기사가 가격 급등의 직접적 원인으로 확인되지 않습니다. 따라서 이번 급등은 개별 수급(기관·외인 순매수 혹은 대형 거래), 단기 테마성 매수 또는 장중 유포된 루머/시황에 따른 반응일 가능성이 큽니다. 추적할 공시·거래원장·기관 순매수 현황이 확인되면 원인 재분류가 필요합니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>재생에너지</span><span>정책(탄소중립·REC)</span><span>수급(기관·외인 매수)</span><span>ESS 공급계약</span><span>REC 가격 상승</span><span>바이오가스 발전 허가</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">롯데케미칼</span> <span class="ticker">011170 · KOSPI</span></div>
+    <span class="pct">+24.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내에 종목 태그·일반 뉴스가 전혀 확인되지 않아 특정 공시·계약·정책 등 명확한 트리거를 식별할 수 없습니다. 따라서 이날의 +24.87% 급등은 대량매수에 따른 단기 수급 쏠림 또는 기술적 반등(거래량 급증 동반) 가능성이 크며, 석유화학 업황(나프타·원재료 스프레드) 변동 또는 동종업종 재평가가 복합적으로 작용했을 가능성도 배제할 수 없습니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(대량매수)</span><span>석유화학</span><span>나프타 가격</span><span>폴리프로필렌 수요</span><span>공장 가동률</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">이수화학</span> <span class="ticker">005950 · KOSPI</span></div>
+    <span class="pct">+20.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">석유화학/정유</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 국제유가(브렌트·WTI) 급등(호르무즈 해협 봉쇄 장기화·UAE의 OPEC 탈퇴 보도)에 따른 정유·화학 업종 초강세 — 석유화학 제품 판매가격 상승 기대(섹터 재평가)</div>
+  <div class="reasoning">4월29일 장에서 WTI·브렌트 급등을 배경으로 정유·화학 업종이 동반 급등했고, 같은 날 다수 기사에서 이수화학이 섹터 랠리에 편승해 큰 폭 상승한 것으로 언급됐다. 해당 기간에 이수화학 자체 공시·실적·수주성 뉴스는 없어, 주가 상승은 국제유가 쇼크에 따른 섹터성 수혜(판매가격·마진 개선 기대)로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>theme_only_supply</code> — 수급/테마성만</div><div>기사 10건 · 본문 10건 · origin stock_news:10 · 최신기사 2026-04-29 16:53 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>국제유가 급등</span><span>석유화학 섹터 랠리</span><span>호르무즈 해협 봉쇄</span><span>UAE OPEC 탈퇴</span><span>제품 판매가격 상승 기대</span></div>
+  <details><summary>📰 관련 뉴스 10건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008919549&office_id=421&code=005950&page=&sm=" target="_blank" rel="noopener">코스피 3일 연속 사상 최고…반도체 숨고르고 정유·화학 급등</a> <small style="color:var(--muted)">[2026.04.29 16:53] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917870&office_id=421&code=005950&page=&sm=" target="_blank" rel="noopener">롯데정밀화학, 실적 개선에 8% 강세…롯데케미칼 13%↑[핫종목]</a> <small style="color:var(--muted)">[2026.04.29 09:48] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268853&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">국제유가 상승세에 정유주↑…SK이노 52주 신고가[특징주]</a> <small style="color:var(--muted)">[2026.04.29 09:37] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005671698&office_id=009&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 특별 전시회 ‘스테이징’ 개최… 김태동, 이요...</a> <small style="color:var(--muted)">[2026.04.27 10:02] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006267371&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 특별 전시회 '스테이징' 개최</a> <small style="color:var(--muted)">[2026.04.27 09:56] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006258710&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">'출범 30주년' 이수그룹, "2030년 그룹 시총 25조 달성 목표"</a> <small style="color:var(--muted)">[2026.04.16 16:42] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005750557&office_id=277&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 창립 30주년 맞아 미래 비전 제시…배터리·AI·바이오 중...</a> <small style="color:var(--muted)">[2026.04.16 14:19] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013891832&office_id=003&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 미래전략 선포…배터리·AI·바이오 등 전략 ...</a> <small style="color:var(--muted)">[2026.04.16 14:15] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002418957&office_id=092&code=005950&page=&sm=" target="_blank" rel="noopener">창립 30주년 이수그룹 "2030년 시총 25조원 달성 목표"</a> <small style="color:var(--muted)">[2026.04.16 14:03] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016024572&office_id=001&code=005950&page=&sm=" target="_blank" rel="noopener">'출범 30주년' 이수그룹, 2030년 매출 6조·시총 25조 목표 ...</a> <small style="color:var(--muted)">[2026.04.16 09:53] 연합뉴스 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">대한유화</span> <span class="ticker">006650 · KOSPI</span></div>
+    <span class="pct">+19.14%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">석유화학</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 없어(태깅·검색 결과 없음) 당일 +19.14% 급등을 설명할 명확한 기사 기반 트리거를 확인할 수 없습니다. 가격 급등은 원자재(원유·나프타)·에틸렌 스프레드 변동, 환율·수급 흐름(블록딜·공매도 커버링) 또는 기술적·테마성 매수에 따른 것으로 추정됩니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>석유화학</span><span>원유/나프타</span><span>원/달러 환율</span><span>에틸렌 스프레드</span><span>크래커 운전률</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">성문전자</span> <span class="ticker">014910 · KOSPI</span></div>
+    <span class="pct">+14.45%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">주어진 14일 뉴스 목록에 해당 종목 관련 기사가 전혀 없어(크롤 데이터에 '관련 뉴스 없음') 이번 급등을 설명할 공개적·직접적 트리거를 확인할 수 없습니다. D-day에 거래량이 대폭 증가한 점을 보면 개인·단기 수급(투자심리·묘한 매수집중)이나 기술적 요인(단기 반등·급락 후 복구)로 급등한 가능성이 높습니다. 공시·계약·정책 같은 명확한 근거가 없으므로 원인 확정은 불가합니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>소형주 변동성</span><span>기술적 반등</span><span>거래량 급증</span><span>공매도 잔고 변화</span><span>장중 급등 지속성</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">KBI메탈</span> <span class="ticker">024840 · KOSDAQ</span></div>
+    <span class="pct">+29.97%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 종목 태그·일반 뉴스가 전혀 없어 명확한 공시·수주·실적 등의 외부 트리거가 확인되지 않습니다. D-day의 큰 거래량 동반 +29.97% 상승은 무공시 대량매수·기술적 급등·개인 매수 쏠림 등 수급성 이벤트 가능성이 크며, 근거 불충분으로 결론은 낮은 신뢰도입니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>기술적 반등</span><span>저평가주</span><span>무공시 급등</span><span>대량거래 발생</span><span>공시(계약·자금조달) 여부</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">홈캐스트</span> <span class="ticker">064240 · KOSDAQ</span></div>
+    <span class="pct">+21.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 종목 태그·일반 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거는 없음. D-day의 대량거래와 급등(+21.92%)은 공시 없이 발생한 수급·테마성 매수(개미 집중 매수, 단기 과열·쇼트 커버링 등) 가능성이 크나 근거가 부족해 확정적 판단은 어려움.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>테마성 급등</span><span>거래대금 급증</span><span>공시 부재</span><span>개미 유입</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div>
+
+</section>
+
+<section id="tab-theme" class="section">
+<h2>🎯 테마별 그룹</h2>
+<div class="theme-group"><div class="theme-title">수급 <small>(4종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">롯데케미칼</span> <span class="ticker">011170 · KOSPI</span></div>
+    <span class="pct">+24.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내에 종목 태그·일반 뉴스가 전혀 확인되지 않아 특정 공시·계약·정책 등 명확한 트리거를 식별할 수 없습니다. 따라서 이날의 +24.87% 급등은 대량매수에 따른 단기 수급 쏠림 또는 기술적 반등(거래량 급증 동반) 가능성이 크며, 석유화학 업황(나프타·원재료 스프레드) 변동 또는 동종업종 재평가가 복합적으로 작용했을 가능성도 배제할 수 없습니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(대량매수)</span><span>석유화학</span><span>나프타 가격</span><span>폴리프로필렌 수요</span><span>공장 가동률</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">성문전자</span> <span class="ticker">014910 · KOSPI</span></div>
+    <span class="pct">+14.45%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">주어진 14일 뉴스 목록에 해당 종목 관련 기사가 전혀 없어(크롤 데이터에 '관련 뉴스 없음') 이번 급등을 설명할 공개적·직접적 트리거를 확인할 수 없습니다. D-day에 거래량이 대폭 증가한 점을 보면 개인·단기 수급(투자심리·묘한 매수집중)이나 기술적 요인(단기 반등·급락 후 복구)로 급등한 가능성이 높습니다. 공시·계약·정책 같은 명확한 근거가 없으므로 원인 확정은 불가합니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>소형주 변동성</span><span>기술적 반등</span><span>거래량 급증</span><span>공매도 잔고 변화</span><span>장중 급등 지속성</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">KBI메탈</span> <span class="ticker">024840 · KOSDAQ</span></div>
+    <span class="pct">+29.97%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 종목 태그·일반 뉴스가 전혀 없어 명확한 공시·수주·실적 등의 외부 트리거가 확인되지 않습니다. D-day의 큰 거래량 동반 +29.97% 상승은 무공시 대량매수·기술적 급등·개인 매수 쏠림 등 수급성 이벤트 가능성이 크며, 근거 불충분으로 결론은 낮은 신뢰도입니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>기술적 반등</span><span>저평가주</span><span>무공시 급등</span><span>대량거래 발생</span><span>공시(계약·자금조달) 여부</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">홈캐스트</span> <span class="ticker">064240 · KOSDAQ</span></div>
+    <span class="pct">+21.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 종목 태그·일반 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거는 없음. D-day의 대량거래와 급등(+21.92%)은 공시 없이 발생한 수급·테마성 매수(개미 집중 매수, 단기 과열·쇼트 커버링 등) 가능성이 크나 근거가 부족해 확정적 판단은 어려움.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>테마성 급등</span><span>거래대금 급증</span><span>공시 부재</span><span>개미 유입</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">원인 불명(14일 내 공시·기사 없음) — 수급·테마성 급등 가능성 <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">선도전기</span> <span class="ticker">007610 · KOSPI</span></div>
+    <span class="pct">+116.67%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 원인 불명(14일 내 공시·기사 없음) — 수급·테마성 급등 가능성</div>
+  <div class="reasoning">종목 태그·일반 뉴스가 최근 14일 내 전혀 확인되지 않아 특정 호재성 공시나 계약·실적 발표로 판단할 근거가 없음. 급격한 거래량 동반 +116.67% 상승은 소수 대량 매수·개인 매수집중·루머성 매매 또는 시간외/블록·프로그램 매매에 따른 수급성 급등일 가능성이 높음.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급 집중(개인·외국인)</span><span>테마성 급등(루머)</span><span>공시/지분변동</span><span>대주주 지분율 변화</span><span>블록딜·시간외거래</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">거래량 급증에 따른 단기적 대규모 매수(프로그램·개인·블록딜성 유입)으로 인한 급등 <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">대원전선</span> <span class="ticker">006340 · KOSPI</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/시장론</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 거래량 급증에 따른 단기적 대규모 매수(프로그램·개인·블록딜성 유입)으로 인한 급등</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 없는 상태에서 거래량과 가격이 동반 급증했으므로 공시·실적 등의 명확한 호재보다는 단기적 수급 이벤트가 원인으로 보입니다. 특히 대규모 거래·프로그램 매수나 특정 주체의 집중 매수(또는 쇼트커버링)가 급격한 상승을 촉발한 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>지수/ETF 편입</span><span>기관·외국인 매수</span><span>거래량 급증(블록딜/프로그램매매)</span><span>전선·케이블 수주공시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">단기 수급(우선주 프리미엄 확대·개인/기관 매수 집중)에 따른 테마성 급등(명확한 공시·계약 등 본질적 뉴스 부재) <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">대원전선우</span> <span class="ticker">006345 · KOSPI</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 단기 수급(우선주 프리미엄 확대·개인/기관 매수 집중)에 따른 테마성 급등(명확한 공시·계약 등 본질적 뉴스 부재)</div>
+  <div class="reasoning">14일 창 내에 종목 태그 기사나 일반 뉴스가 전혀 없어 외부 공시·계약·실적 같은 명확한 호재 근거가 부재합니다. 높은 거래량과 급등률을 고려하면 개별 수급(우선주 프리미엄 확대, 개인·기관의 단기 매수 집중)이나 테마성·차익성 매매가 원인일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급 급변(외국인·기관)</span><span>우선주 프리미엄 확대</span><span>배당·현금배당 공시</span><span>M&A·인수합병 루머</span><span>시간외 단일가 급등</span><span>전선업체 수주·공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">재생에너지 <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">LS에코에너지</span> <span class="ticker">229640 · KOSPI</span></div>
+    <span class="pct">+25.03%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">재생에너지</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 창구에서 관련 기사(종목 태그·일반 검색)가 전혀 확인되지 않아 특정 호재성 공시나 기사가 가격 급등의 직접적 원인으로 확인되지 않습니다. 따라서 이번 급등은 개별 수급(기관·외인 순매수 혹은 대형 거래), 단기 테마성 매수 또는 장중 유포된 루머/시황에 따른 반응일 가능성이 큽니다. 추적할 공시·거래원장·기관 순매수 현황이 확인되면 원인 재분류가 필요합니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>재생에너지</span><span>정책(탄소중립·REC)</span><span>수급(기관·외인 매수)</span><span>ESS 공급계약</span><span>REC 가격 상승</span><span>바이오가스 발전 허가</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">국제유가(브렌트·WTI) 급등(호르무즈 해협 봉쇄 장기화·UAE의 OPEC 탈퇴 보도)에 따른 정유·화학 업종 초강세 — 석유화학 제품 판매가격 상승 기대(섹터 재평가) <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">이수화학</span> <span class="ticker">005950 · KOSPI</span></div>
+    <span class="pct">+20.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">석유화학/정유</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 국제유가(브렌트·WTI) 급등(호르무즈 해협 봉쇄 장기화·UAE의 OPEC 탈퇴 보도)에 따른 정유·화학 업종 초강세 — 석유화학 제품 판매가격 상승 기대(섹터 재평가)</div>
+  <div class="reasoning">4월29일 장에서 WTI·브렌트 급등을 배경으로 정유·화학 업종이 동반 급등했고, 같은 날 다수 기사에서 이수화학이 섹터 랠리에 편승해 큰 폭 상승한 것으로 언급됐다. 해당 기간에 이수화학 자체 공시·실적·수주성 뉴스는 없어, 주가 상승은 국제유가 쇼크에 따른 섹터성 수혜(판매가격·마진 개선 기대)로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>theme_only_supply</code> — 수급/테마성만</div><div>기사 10건 · 본문 10건 · origin stock_news:10 · 최신기사 2026-04-29 16:53 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>국제유가 급등</span><span>석유화학 섹터 랠리</span><span>호르무즈 해협 봉쇄</span><span>UAE OPEC 탈퇴</span><span>제품 판매가격 상승 기대</span></div>
+  <details><summary>📰 관련 뉴스 10건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008919549&office_id=421&code=005950&page=&sm=" target="_blank" rel="noopener">코스피 3일 연속 사상 최고…반도체 숨고르고 정유·화학 급등</a> <small style="color:var(--muted)">[2026.04.29 16:53] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917870&office_id=421&code=005950&page=&sm=" target="_blank" rel="noopener">롯데정밀화학, 실적 개선에 8% 강세…롯데케미칼 13%↑[핫종목]</a> <small style="color:var(--muted)">[2026.04.29 09:48] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268853&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">국제유가 상승세에 정유주↑…SK이노 52주 신고가[특징주]</a> <small style="color:var(--muted)">[2026.04.29 09:37] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005671698&office_id=009&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 특별 전시회 ‘스테이징’ 개최… 김태동, 이요...</a> <small style="color:var(--muted)">[2026.04.27 10:02] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006267371&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 특별 전시회 '스테이징' 개최</a> <small style="color:var(--muted)">[2026.04.27 09:56] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006258710&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">'출범 30주년' 이수그룹, "2030년 그룹 시총 25조 달성 목표"</a> <small style="color:var(--muted)">[2026.04.16 16:42] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005750557&office_id=277&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 창립 30주년 맞아 미래 비전 제시…배터리·AI·바이오 중...</a> <small style="color:var(--muted)">[2026.04.16 14:19] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013891832&office_id=003&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 미래전략 선포…배터리·AI·바이오 등 전략 ...</a> <small style="color:var(--muted)">[2026.04.16 14:15] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002418957&office_id=092&code=005950&page=&sm=" target="_blank" rel="noopener">창립 30주년 이수그룹 "2030년 시총 25조원 달성 목표"</a> <small style="color:var(--muted)">[2026.04.16 14:03] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016024572&office_id=001&code=005950&page=&sm=" target="_blank" rel="noopener">'출범 30주년' 이수그룹, 2030년 매출 6조·시총 25조 목표 ...</a> <small style="color:var(--muted)">[2026.04.16 09:53] 연합뉴스 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">석유화학 <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">대한유화</span> <span class="ticker">006650 · KOSPI</span></div>
+    <span class="pct">+19.14%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">석유화학</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 없어(태깅·검색 결과 없음) 당일 +19.14% 급등을 설명할 명확한 기사 기반 트리거를 확인할 수 없습니다. 가격 급등은 원자재(원유·나프타)·에틸렌 스프레드 변동, 환율·수급 흐름(블록딜·공매도 커버링) 또는 기술적·테마성 매수에 따른 것으로 추정됩니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>석유화학</span><span>원유/나프타</span><span>원/달러 환율</span><span>에틸렌 스프레드</span><span>크래커 운전률</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">화장품 섹터 순환매 — 아모레퍼시픽 1Q 호실적(2026.04.29) 및 K-뷰티 수출 호조·외국인 관광객 쇼핑 기대감에 따른 소형 화장품주 매수 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">잇츠한불</span> <span class="ticker">226320 · KOSPI</span></div>
+    <span class="pct">+16.25%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 화장품 섹터 순환매 — 아모레퍼시픽 1Q 호실적(2026.04.29) 및 K-뷰티 수출 호조·외국인 관광객 쇼핑 기대감에 따른 소형 화장품주 매수</div>
+  <div class="reasoning">아모레퍼시픽의 1분기 호실적 보도(29일)와 미국·유럽 수출 호조·외국인 관광객 쇼핑 기대감이 맞물리며 화장품 섹터로 수급이 이동했다. 잇츠한불은 면세점·관광객 매출 비중이 높아 이러한 섹터 순환매의 수혜를 받아 단기 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>K-뷰티 수출 호조</span><span>화장품 섹터 순환매</span><span>외국인 관광객 쇼핑</span><span>올리브영 입점 매출 증가</span><span>대형사 1Q 호조</span></div>
+  <details><summary>📰 관련 뉴스 6건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639662&office_id=081&code=226320&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6622.18로 약세…외국인 순매도에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507321&office_id=374&code=226320&page=&sm=" target="_blank" rel="noopener">[이 시각 시황] UAE, 다음달 1일 OPEC·OPEC+ 전격 탈퇴</a> <small style="color:var(--muted)">[2026.04.29 09:33] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268828&office_id=018&code=226320&page=&sm=" target="_blank" rel="noopener">아모레퍼시픽, 1Q 호실적에 4%대↑…화장품주 ‘불기둥’[특징주]</a> <small style="color:var(--muted)">[2026.04.29 09:18] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005671147&office_id=009&code=226320&page=&sm=" target="_blank" rel="noopener">K뷰티 글로벌 인기에… 화장품株 잘나가네</a> <small style="color:var(--muted)">[2026.04.24 17:53] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001159421&office_id=366&code=226320&page=&sm=" target="_blank" rel="noopener">[특징주] 미국·유럽 수출 호조에 화장품株 일제히 강세</a> <small style="color:var(--muted)">[2026.04.24 09:49] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265046&office_id=018&code=226320&page=&sm=" target="_blank" rel="noopener">불장 다음 주자는 화장품주?…순환매 속 줄줄이 급등[특징주]</a> <small style="color:var(--muted)">[2026.04.24 09:28] 이데일리 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">LS일렉트릭의 미국 빅테크 하이퍼스케일 데이터센터 전력 인프라 배전 솔루션 약 3,190억원(2.2억달러) 수주 및 LS에코에너지의 희토류·HVDC 관련 가치 재평가에 따른 그룹주 동반 강세 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">LS네트웍스</span> <span class="ticker">000680 · KOSPI</span></div>
+    <span class="pct">+14.04%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수주/그룹주(계열사 호재 파급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 LS일렉트릭의 미국 빅테크 하이퍼스케일 데이터센터 전력 인프라 배전 솔루션 약 3,190억원(2.2억달러) 수주 및 LS에코에너지의 희토류·HVDC 관련 가치 재평가에 따른 그룹주 동반 강세</div>
+  <div class="reasoning">LS네트웍스 자체 공시성 호재는 없으나, 4월29일 LS일렉트릭의 대형 미국 데이터센터 배전 솔루션 수주 소식과 LS에코에너지의 희토류/HVDC 재평가 전망이 그룹 전반의 투자심리를 개선시켜 동일 계열주로서 동반 급등으로 연결된 것으로 판단됩니다. 4월23일 코스피 상승에 따른 증권·그룹주 랠리도 부분적 배경으로 작용했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>데이터센터 전력인프라</span><span>미국 빅테크 수주</span><span>희토류 공급망</span><span>HVDC 케이블</span><span>계열사 수주 파급</span><span>그룹 밸류에이션 재평가</span></div>
+  <details><summary>📰 관련 뉴스 5건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673053&office_id=009&code=000680&page=&sm=" target="_blank" rel="noopener">LS일렉트릭, 美 빅테크 데이터센터 전력 인프라 계약 체결 소식에 5%...</a> <small style="color:var(--muted)">[2026.04.29 12:50] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000105187&office_id=024&code=000680&page=&sm=" target="_blank" rel="noopener">LS에코에너지 16% ‘불기둥’ 왜?…“단순 전선회사 아니다”[오늘, ...</a> <small style="color:var(--muted)">[2026.04.29 10:34] 매경이코노미 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016039445&office_id=001&code=000680&page=&sm=" target="_blank" rel="noopener">[특징주] 증권주, '코스피 사흘째 최고가 경신' 속 혼조 마감(종합)</a> <small style="color:var(--muted)">[2026.04.23 16:26] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000506154&office_id=374&code=000680&page=&sm=" target="_blank" rel="noopener">증권주, '코스피 연일 최고가 경신' 속 상승세</a> <small style="color:var(--muted)">[2026.04.23 09:49] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016037595&office_id=001&code=000680&page=&sm=" target="_blank" rel="noopener">[특징주] 증권주, '코스피 연일 최고가 경신' 속 상승세</a> <small style="color:var(--muted)">[2026.04.23 09:38] 연합뉴스 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">AI 데이터센터 전력수요 급증 기대로 북미 데이터센터向 배전솔루션 대형 수주 소식(3190억 규모) 및 해외 실적 서프라이즈에 따른 섹터 동반 강세 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">제일일렉트릭</span> <span class="ticker">199820 · KOSDAQ</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">전력 인프라 (수급/테마)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 데이터센터 전력수요 급증 기대로 북미 데이터센터向 배전솔루션 대형 수주 소식(3190억 규모) 및 해외 실적 서프라이즈에 따른 섹터 동반 강세</div>
+  <div class="reasoning">미국 블룸에너지의 1분기 실적 및 AI 데이터센터 수요 급증 뉴스, 그리고 북미 대상 배전솔루션 대형 계약 공시가 4월29일 전력·전력설비 섹터에 자극을 주며 제일일렉트릭도 섹터 동반 매수(테마성 급등)를 기록했다. 개별 회사의 수주 공시는 확인되지 않아 개별 호재라기보다는 섹터 스필오버로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>전력 인프라</span><span>배전솔루션 3190억원</span><span>데이터센터 전력수요 급증</span><span>북미 수주 기대</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673353&office_id=009&code=199820&page=&sm=" target="_blank" rel="noopener">[MK 시그널] 美블룸에너지 'AI붐' 증명 … 국내 전력株도 일제히 ...</a> <small style="color:var(--muted)">[2026.04.29 17:48] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673053&office_id=009&code=199820&page=&sm=" target="_blank" rel="noopener">LS일렉트릭, 美 빅테크 데이터센터 전력 인프라 계약 체결 소식에 5%...</a> <small style="color:var(--muted)">[2026.04.29 12:50] 매일경제 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">보통주 추가상장(주식배당) 공시 — 추가상장(주식배당)으로 인한 유통주식수 변화 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">비나텍</span> <span class="ticker">126340 · KOSDAQ</span></div>
+    <span class="pct">+29.98%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/기업공시</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 보통주 추가상장(주식배당) 공시 — 추가상장(주식배당)으로 인한 유통주식수 변화</div>
+  <div class="reasoning">네이버 금융 태깅 기사(서울경제 '오늘의 메모')에 비나텍이 '주식배당'으로 보통주 추가상장 대상에 포함되었다고 명시되어 있어, 추가상장(배당) 일정 공시가 단기 매수 심리를 자극한 것으로 판단됩니다. 해당 공시는 하루 전(4/15) 공지되어 4/16(추정) 거래일에 수급 집중으로 급등한 것으로 보입니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.15 (D-1일)</div>
+  
+  <div class="keywords"><span>추가상장</span><span>주식배당</span><span>유통주식수 증가</span><span>배당비율 공시</span></div>
+  <details><summary>📰 관련 뉴스 1건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004610929&office_id=011&code=126340&page=&sm=" target="_blank" rel="noopener">오늘의 메모[4월 16일]</a> <small style="color:var(--muted)">[2026.04.15 10:46] 서울경제 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">글로벌 휴머노이드 로봇사와 공식 파트너십 체결 — 국내 시장 총괄·유통권 확보 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">폴라리스AI</span> <span class="ticker">039980 · KOSDAQ</span></div>
+    <span class="pct">+29.96%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">AI·로봇</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 휴머노이드 로봇사와 공식 파트너십 체결 — 국내 시장 총괄·유통권 확보</div>
+  <div class="reasoning">당일 아침 보도에서 폴라리스AI가 글로벌 휴머노이드 로봇사와 공식 파트너십을 맺고 국내 시장 총괄 및 유통 채널을 맡는다고 발표한 점이 직접적 매수 재료로 작용했다. 발표 내용이 사업 진출(유통·플랫폼 이식)과 기술 연계(엣지 AI·NPU 이식) 가능성을 구체적으로 제시해 투자심리를 자극하며 급등과 거래량 증가를 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>엣지 AI</span><span>로봇 상용화</span><span>글로벌 휴머노이드 파트너십</span><span>국내 총판 계약</span><span>온디바이스 NPU 이식</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=039980&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268827&office_id=018&code=039980&page=&sm=" target="_blank" rel="noopener">폴라리스AI, 상한가…中 유비테크 휴머노이드 로봇 한국 시장 총괄[특....</a> <small style="color:var(--muted)">[2026.04.29 09:17] 이데일리 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">2026년 1분기 연결기준 영업이익 141억9300만원(전년비 +45.9%), 매출 974억5500만원(+22.2%), 당기순이익 72억9900만원(+84.9%) 공시 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">오로라</span> <span class="ticker">039830 · KOSDAQ</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 2026년 1분기 연결기준 영업이익 141억9300만원(전년비 +45.9%), 매출 974억5500만원(+22.2%), 당기순이익 72억9900만원(+84.9%) 공시</div>
+  <div class="reasoning">4월 29일 발표된 잠정실적(공시)이 전년 대비 큰 폭의 영업이익·매출 증가를 보여 즉각적인 수급 유입과 재평가 매수로 이어진 것으로 판단됩니다. 이전의 '미국 매출 확대' 및 '부동산 가치 대비 저평가' 분석 기사가 재평가 논리를 뒷받침하며 상승을 증폭시켰습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>팜팔스 美매출</span><span>투자부동산 매각</span><span>차입금 축소</span><span>분기 실적 소통 강화</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507421&office_id=374&code=039830&page=&sm=" target="_blank" rel="noopener">[직설] 국내 증권시장 시가총액 사상 첫 600조 원 넘어섰다…우리 증...</a> <small style="color:var(--muted)">[2026.04.29 14:00] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268924&office_id=018&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업이익 142억원…전년比 45.9%↑</a> <small style="color:var(--muted)">[2026.04.29 10:39] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013916211&office_id=003&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업이익 142억…전년比 45.9%↑</a> <small style="color:var(--muted)">[2026.04.29 09:47] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002636995&office_id=016&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업익 142억…전년비 45.9% ↑</a> <small style="color:var(--muted)">[2026.04.29 09:42] 헤럴드경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083494&office_id=293&code=039830&page=&sm=" target="_blank" rel="noopener">[저평가 리포트] 강남 사옥보다 싼 시총…오로라월드 밸류업 '시험대.....</a> <small style="color:var(--muted)">[2026.04.27 14:03] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005753475&office_id=277&code=039830&page=&sm=" target="_blank" rel="noopener">[단독] '영원히 늙지 않는 아이돌'에게 꽂혔다…70억 투자 몰린 이유</a> <small style="color:var(--muted)">[2026.04.23 05:49] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005751435&office_id=277&code=039830&page=2&sm=" target="_blank" rel="noopener">"美서 매출 터졌다" 난리인데…'PER 5배' 말 안 되는 저평가 이 ...</a> <small style="color:var(--muted)">[2026.04.19 10:49] 아시아경제 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">액면분할(1주당 가액 1000원→500원)로 인한 변경상장·거래정지 해제에 따른 거래 재개 및 유동성 확대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">와이씨켐</span> <span class="ticker">112290 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 액면분할(1주당 가액 1000원→500원)로 인한 변경상장·거래정지 해제에 따른 거래 재개 및 유동성 확대</div>
+  <div class="reasoning">장중 상한가는 지난달 결정된 액면분할로 인해 주권 매매가 정지됐다가 4월29일 거래가 재개되면서 발생한 직접적인 수급(매수 집중) 효과가 주된 원인이다. 보도 내용에 거래정지 해제와 유통주식수 확대(1011만주→2022만주)가 명시돼 있어 기업공시성 이벤트가 즉각적인 급등을 유발했으며, '유리 기판' 등 반도체 소재 테마는 보조적 모멘텀으로 작용했을 가능성이 있다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>액면분할</span><span>거래정지 해제</span><span>유동성 확대</span><span>유통주식수 확대</span><span>유리 기판 양산</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160579&office_id=366&code=112290&page=&sm=" target="_blank" rel="noopener">[특징주] 와이씨켐, 액면분할 후 거래 정지 해제로 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.29 09:39] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=112290&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350883&office_id=008&code=112290&page=&sm=" target="_blank" rel="noopener">액면분할 후 거래 재개한 와이씨켐, 상한가</a> <small style="color:var(--muted)">[2026.04.29 09:20] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505886&office_id=374&code=112290&page=&sm=" target="_blank" rel="noopener">[이 시각 시황] 리튬 가격 상승에 관련주 강세</a> <small style="color:var(--muted)">[2026.04.22 09:32] SBS Biz · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">자회사 엠티씨코리아의 무증자 흡수합병 결정(경영효율화) 및 광명전기 보유지분 구조를 에이치케이홀딩스에 장외매각해 간접지배로 전환한 지배구조 재편 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">피앤씨테크</span> <span class="ticker">237750 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">지배구조·기업결합(M&A/합병)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 자회사 엠티씨코리아의 무증자 흡수합병 결정(경영효율화) 및 광명전기 보유지분 구조를 에이치케이홀딩스에 장외매각해 간접지배로 전환한 지배구조 재편</div>
+  <div class="reasoning">4월 21일 공시로 자회사 흡수합병(무증자)을 결정했다는 점이 명확한 호재로 인식됐고, 같은 날 보도된 광명전기 관련 지분 구조 변경(간접지배 전환) 기사는 경영권 분쟁 해법·지배력 안정 기대를 높여 수급을 자극한 것으로 판단된다. 이러한 기업행위는 주가에 즉각적 재평가를 유도해 급등을 촉발했을 가능성이 높다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.21 (D-8일)</div>
+  
+  <div class="keywords"><span>M&A/흡수합병</span><span>지배구조 분쟁</span><span>무증자 합병</span><span>광명전기 지분 간접지배</span><span>상호주 의결권 제한</span></div>
+  <details><summary>📰 관련 뉴스 8건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=237750&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083564&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]⑤ 회사 주식 1주도 없는 경영진…표 대결 쉽지않....</a> <small style="color:var(--muted)">[2026.04.28 09:54] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083482&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]④ 경영진 vs 피앤씨테크, 6월 임시주총 격돌 [...</a> <small style="color:var(--muted)">[2026.04.27 10:54] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083346&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]③ 엠에이치건설 인수 후 경영진 물갈이, 회사는.....</a> <small style="color:var(--muted)">[2026.04.24 09:08] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083272&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]② 최대주주 4번 교체…인수자 자금조달 실패 반.....</a> <small style="color:var(--muted)">[2026.04.23 08:57] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613063&office_id=011&code=237750&page=&sm=" target="_blank" rel="noopener">기업 공시 [4월 21일]</a> <small style="color:var(--muted)">[2026.04.21 16:48] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005277703&office_id=015&code=237750&page=&sm=" target="_blank" rel="noopener">피앤씨테크, 엠티씨코리아 흡수합병 결정</a> <small style="color:var(--muted)">[2026.04.21 15:56] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001158428&office_id=366&code=237750&page=2&sm=" target="_blank" rel="noopener">‘의결권 묶인’ 피앤씨테크… 광명전기 ‘간접지배’ 자구책</a> <small style="color:var(--muted)">[2026.04.21 10:01] 조선비즈 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">글로벌 탑티어 제약사 대상 EVE-HT A26 및 EVE-HT FL 구매주문(PO) 공급 계약 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">나노엔텍</span> <span class="ticker">039860 · KOSDAQ</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">바이오</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 탑티어 제약사 대상 EVE-HT A26 및 EVE-HT FL 구매주문(PO) 공급 계약</div>
+  <div class="reasoning">당일(4/29) 공시에 해당하는 보도에서 나노엔텍이 글로벌 탑티어 제약사에 세포 대량 분석 자동화 로봇(EVE-HT A26)과 고처리량 형광 분석장비(EVE-HT FL)의 구매주문(PO)을 확보했다고 밝힘. 상대가 현장에서 이미 장비를 운용 중인 레퍼런스 보유 고객이라는 점과 설치가 5월 초로 예정된 점이 향후 추가 수주·레퍼런스 확대 기대를 키워 단기 급등을 촉발한 것으로 판단됨.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>바이오</span><span>글로벌 파트너십</span><span>세포 분석 자동화</span><span>EVE-HT A26</span><span>EVE-HT FL</span><span>구매주문(PO)</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268859&office_id=018&code=039860&page=&sm=" target="_blank" rel="noopener">나노엔텍, 세포 대량 분석 자동화 로봇 글로벌 시장 첫 공급</a> <small style="color:var(--muted)">[2026.04.29 09:44] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001023237&office_id=031&code=039860&page=&sm=" target="_blank" rel="noopener">와이제이링크·이렘, 최대주주 지분 보호예수 해제</a> <small style="color:var(--muted)">[2026.04.20 09:49] 아이뉴스24 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006261626&office_id=018&code=039860&page=&sm=" target="_blank" rel="noopener">나노엔텍, 美 AACR 2026 참가…”글로벌 빅파마 신규 파트너십 확...</a> <small style="color:var(--muted)">[2026.04.20 09:37] 이데일리 · stock_news</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">텔레픽스와 위성(우주) 데이터·다크웹 등 사이버 데이터 융합한 안보 인텔리전스 MOU(공동 R&D·공공·방위기관 대상) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">에스투더블유</span> <span class="ticker">488280 · KOSDAQ</span></div>
+    <span class="pct">+25.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">사이버보안</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 텔레픽스와 위성(우주) 데이터·다크웹 등 사이버 데이터 융합한 안보 인텔리전스 MOU(공동 R&D·공공·방위기관 대상)</div>
+  <div class="reasoning">여러 매체가 4월28일 S2W의 텔레픽스와의 업무협약(MOU)을 보도하며 회사의 사업영역이 사이버에서 위성(우주) 데이터까지 확장된다는 구체적 내용을 공개했다. 공시성(공식 MOU) 뉴스가 다수 노출되며 안보·공공 수요 확장 기대가 즉각적인 매수로 연결된 것으로 보인다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>사이버보안</span><span>우주(위성) 데이터</span><span>AI 인텔리전스</span><span>다크웹 위협 데이터</span><span>이종도메인 교차분석</span><span>공공·방위기관 수요</span></div>
+  <details><summary>📰 관련 뉴스 19건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001112609&office_id=144&code=488280&page=&sm=" target="_blank" rel="noopener">에스투더블유, 텔레픽스와 안보 인텔리전스 고도화 위한 MOU 체결</a> <small style="color:var(--muted)">[2026.04.28 23:26] 스포츠경향 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002420605&office_id=092&code=488280&page=&sm=" target="_blank" rel="noopener">"사이버와 우주 연계"...S2W, 텔레픽스와 MOU</a> <small style="color:var(--muted)">[2026.04.28 20:52] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000037400&office_id=584&code=488280&page=&sm=" target="_blank" rel="noopener">[사이언스게시판] KIST, AI 전환(AIX) 선포…'만들고 활용하는...</a> <small style="color:var(--muted)">[2026.04.28 18:07] 동아사이언스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005672533&office_id=009&code=488280&page=&sm=" target="_blank" rel="noopener">다크웹 보고 위성도 본다…S2W, 텔레픽스와 안보 AI 협력</a> <small style="color:var(--muted)">[2026.04.28 14:27] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005514351&office_id=014&code=488280&page=&sm=" target="_blank" rel="noopener">"우주까지 포괄하는 보안 체계" S2W, 텔레픽스와 맞손</a> <small style="color:var(--muted)">[2026.04.28 11:20] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016046971&office_id=001&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스, S2W, 위성·다크웹 결합 안보 AI 협력</a> <small style="color:var(--muted)">[2026.04.28 11:07] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160262&office_id=366&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스·S2W, 우주·사이버 데이터 결합한 안보 인텔리전스 협력</a> <small style="color:var(--muted)">[2026.04.28 10:58] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268157&office_id=018&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스, S2W와 안보 인텔리전스 기술 협력</a> <small style="color:var(--muted)">[2026.04.28 10:40] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350291&office_id=008&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스·S2W, 위성·다크웹 데이터 결합…안보 인텔리전스 구축한다</a> <small style="color:var(--muted)">[2026.04.28 10:00] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913262&office_id=003&code=488280&page=&sm=" target="_blank" rel="noopener">에스투더블유-텔레픽스, 안보 인텔리전스 고도화 MOU</a> <small style="color:var(--muted)">[2026.04.28 08:36] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003421713&office_id=030&code=488280&page=2&sm=" target="_blank" rel="noopener">[단독] SK, AI 연합군 'K-AI 얼라이언스' 그룹서 직접 챙긴다</a> <small style="color:var(--muted)">[2026.04.26 17:01] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005279403&office_id=015&code=488280&page=2&sm=" target="_blank" rel="noopener">네오사피엔스·디토닉…AI 스타트업 'IPO 노크'</a> <small style="color:var(--muted)">[2026.04.24 17:49] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505357&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 리뷰] 조선·엔진주 뜨겁네…STX엔진 상한가</a> <small style="color:var(--muted)">[2026.04.20 07:53] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005346080&office_id=008&code=488280&page=2&sm=" target="_blank" rel="noopener">미토스가 깨운 해킹 트라우마…한주간 50% 껑충, 보안주 '널뛰기'</a> <small style="color:var(--muted)">[2026.04.19 10:30] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505136&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 종전 협상 신중론…코스피 6200선 반납</a> <small style="color:var(--muted)">[2026.04.17 16:51] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005345610&office_id=008&code=488280&page=2&sm=" target="_blank" rel="noopener">사이버보안주, 오늘은 급락…'미토스 쇼크' 급등 부담</a> <small style="color:var(--muted)">[2026.04.17 10:03] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001110400&office_id=144&code=488280&page=2&sm=" target="_blank" rel="noopener">에스투더블유, ‘AI 시대 보안 전략 세미나’ 성료</a> <small style="color:var(--muted)">[2026.04.17 00:24] 스포츠경향 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000504916&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피, 33거래일만에 6200선 탈환</a> <small style="color:var(--muted)">[2026.04.16 16:56] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016024403&office_id=001&code=488280&page=2&sm=" target="_blank" rel="noopener">[테크스냅] S2W, 'AI 시대 보안 전략 세미나' 성료</a> <small style="color:var(--muted)">[2026.04.16 09:10] 연합뉴스 · stock_news</small></li></ul></details>
+</div></div></div>
+
+</section>
+
+<section id="tab-all" class="section">
+<h2>🧾 전체 20개</h2>
+<div class="grid">
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">선도전기</span> <span class="ticker">007610 · KOSPI</span></div>
+    <span class="pct">+116.67%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 원인 불명(14일 내 공시·기사 없음) — 수급·테마성 급등 가능성</div>
+  <div class="reasoning">종목 태그·일반 뉴스가 최근 14일 내 전혀 확인되지 않아 특정 호재성 공시나 계약·실적 발표로 판단할 근거가 없음. 급격한 거래량 동반 +116.67% 상승은 소수 대량 매수·개인 매수집중·루머성 매매 또는 시간외/블록·프로그램 매매에 따른 수급성 급등일 가능성이 높음.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급 집중(개인·외국인)</span><span>테마성 급등(루머)</span><span>공시/지분변동</span><span>대주주 지분율 변화</span><span>블록딜·시간외거래</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">대원전선</span> <span class="ticker">006340 · KOSPI</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/시장론</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 거래량 급증에 따른 단기적 대규모 매수(프로그램·개인·블록딜성 유입)으로 인한 급등</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 없는 상태에서 거래량과 가격이 동반 급증했으므로 공시·실적 등의 명확한 호재보다는 단기적 수급 이벤트가 원인으로 보입니다. 특히 대규모 거래·프로그램 매수나 특정 주체의 집중 매수(또는 쇼트커버링)가 급격한 상승을 촉발한 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>지수/ETF 편입</span><span>기관·외국인 매수</span><span>거래량 급증(블록딜/프로그램매매)</span><span>전선·케이블 수주공시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">대원전선우</span> <span class="ticker">006345 · KOSPI</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 단기 수급(우선주 프리미엄 확대·개인/기관 매수 집중)에 따른 테마성 급등(명확한 공시·계약 등 본질적 뉴스 부재)</div>
+  <div class="reasoning">14일 창 내에 종목 태그 기사나 일반 뉴스가 전혀 없어 외부 공시·계약·실적 같은 명확한 호재 근거가 부재합니다. 높은 거래량과 급등률을 고려하면 개별 수급(우선주 프리미엄 확대, 개인·기관의 단기 매수 집중)이나 테마성·차익성 매매가 원인일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급 급변(외국인·기관)</span><span>우선주 프리미엄 확대</span><span>배당·현금배당 공시</span><span>M&A·인수합병 루머</span><span>시간외 단일가 급등</span><span>전선업체 수주·공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">LS에코에너지</span> <span class="ticker">229640 · KOSPI</span></div>
+    <span class="pct">+25.03%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">재생에너지</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 창구에서 관련 기사(종목 태그·일반 검색)가 전혀 확인되지 않아 특정 호재성 공시나 기사가 가격 급등의 직접적 원인으로 확인되지 않습니다. 따라서 이번 급등은 개별 수급(기관·외인 순매수 혹은 대형 거래), 단기 테마성 매수 또는 장중 유포된 루머/시황에 따른 반응일 가능성이 큽니다. 추적할 공시·거래원장·기관 순매수 현황이 확인되면 원인 재분류가 필요합니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>재생에너지</span><span>정책(탄소중립·REC)</span><span>수급(기관·외인 매수)</span><span>ESS 공급계약</span><span>REC 가격 상승</span><span>바이오가스 발전 허가</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">롯데케미칼</span> <span class="ticker">011170 · KOSPI</span></div>
+    <span class="pct">+24.87%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내에 종목 태그·일반 뉴스가 전혀 확인되지 않아 특정 공시·계약·정책 등 명확한 트리거를 식별할 수 없습니다. 따라서 이날의 +24.87% 급등은 대량매수에 따른 단기 수급 쏠림 또는 기술적 반등(거래량 급증 동반) 가능성이 크며, 석유화학 업황(나프타·원재료 스프레드) 변동 또는 동종업종 재평가가 복합적으로 작용했을 가능성도 배제할 수 없습니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급(대량매수)</span><span>석유화학</span><span>나프타 가격</span><span>폴리프로필렌 수요</span><span>공장 가동률</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">이수화학</span> <span class="ticker">005950 · KOSPI</span></div>
+    <span class="pct">+20.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">석유화학/정유</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 국제유가(브렌트·WTI) 급등(호르무즈 해협 봉쇄 장기화·UAE의 OPEC 탈퇴 보도)에 따른 정유·화학 업종 초강세 — 석유화학 제품 판매가격 상승 기대(섹터 재평가)</div>
+  <div class="reasoning">4월29일 장에서 WTI·브렌트 급등을 배경으로 정유·화학 업종이 동반 급등했고, 같은 날 다수 기사에서 이수화학이 섹터 랠리에 편승해 큰 폭 상승한 것으로 언급됐다. 해당 기간에 이수화학 자체 공시·실적·수주성 뉴스는 없어, 주가 상승은 국제유가 쇼크에 따른 섹터성 수혜(판매가격·마진 개선 기대)로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>theme_only_supply</code> — 수급/테마성만</div><div>기사 10건 · 본문 10건 · origin stock_news:10 · 최신기사 2026-04-29 16:53 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>국제유가 급등</span><span>석유화학 섹터 랠리</span><span>호르무즈 해협 봉쇄</span><span>UAE OPEC 탈퇴</span><span>제품 판매가격 상승 기대</span></div>
+  <details><summary>📰 관련 뉴스 10건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008919549&office_id=421&code=005950&page=&sm=" target="_blank" rel="noopener">코스피 3일 연속 사상 최고…반도체 숨고르고 정유·화학 급등</a> <small style="color:var(--muted)">[2026.04.29 16:53] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0008917870&office_id=421&code=005950&page=&sm=" target="_blank" rel="noopener">롯데정밀화학, 실적 개선에 8% 강세…롯데케미칼 13%↑[핫종목]</a> <small style="color:var(--muted)">[2026.04.29 09:48] 뉴스1 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268853&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">국제유가 상승세에 정유주↑…SK이노 52주 신고가[특징주]</a> <small style="color:var(--muted)">[2026.04.29 09:37] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005671698&office_id=009&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 특별 전시회 ‘스테이징’ 개최… 김태동, 이요...</a> <small style="color:var(--muted)">[2026.04.27 10:02] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006267371&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 특별 전시회 '스테이징' 개최</a> <small style="color:var(--muted)">[2026.04.27 09:56] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006258710&office_id=018&code=005950&page=&sm=" target="_blank" rel="noopener">'출범 30주년' 이수그룹, "2030년 그룹 시총 25조 달성 목표"</a> <small style="color:var(--muted)">[2026.04.16 16:42] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005750557&office_id=277&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 창립 30주년 맞아 미래 비전 제시…배터리·AI·바이오 중...</a> <small style="color:var(--muted)">[2026.04.16 14:19] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013891832&office_id=003&code=005950&page=&sm=" target="_blank" rel="noopener">이수그룹, 출범 30주년 미래전략 선포…배터리·AI·바이오 등 전략 ...</a> <small style="color:var(--muted)">[2026.04.16 14:15] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002418957&office_id=092&code=005950&page=&sm=" target="_blank" rel="noopener">창립 30주년 이수그룹 "2030년 시총 25조원 달성 목표"</a> <small style="color:var(--muted)">[2026.04.16 14:03] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016024572&office_id=001&code=005950&page=&sm=" target="_blank" rel="noopener">'출범 30주년' 이수그룹, 2030년 매출 6조·시총 25조 목표 ...</a> <small style="color:var(--muted)">[2026.04.16 09:53] 연합뉴스 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">대한유화</span> <span class="ticker">006650 · KOSPI</span></div>
+    <span class="pct">+19.14%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">석유화학</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 관련 뉴스가 전혀 없어(태깅·검색 결과 없음) 당일 +19.14% 급등을 설명할 명확한 기사 기반 트리거를 확인할 수 없습니다. 가격 급등은 원자재(원유·나프타)·에틸렌 스프레드 변동, 환율·수급 흐름(블록딜·공매도 커버링) 또는 기술적·테마성 매수에 따른 것으로 추정됩니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>석유화학</span><span>원유/나프타</span><span>원/달러 환율</span><span>에틸렌 스프레드</span><span>크래커 운전률</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">잇츠한불</span> <span class="ticker">226320 · KOSPI</span></div>
+    <span class="pct">+16.25%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 화장품 섹터 순환매 — 아모레퍼시픽 1Q 호실적(2026.04.29) 및 K-뷰티 수출 호조·외국인 관광객 쇼핑 기대감에 따른 소형 화장품주 매수</div>
+  <div class="reasoning">아모레퍼시픽의 1분기 호실적 보도(29일)와 미국·유럽 수출 호조·외국인 관광객 쇼핑 기대감이 맞물리며 화장품 섹터로 수급이 이동했다. 잇츠한불은 면세점·관광객 매출 비중이 높아 이러한 섹터 순환매의 수혜를 받아 단기 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>K-뷰티 수출 호조</span><span>화장품 섹터 순환매</span><span>외국인 관광객 쇼핑</span><span>올리브영 입점 매출 증가</span><span>대형사 1Q 호조</span></div>
+  <details><summary>📰 관련 뉴스 6건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639662&office_id=081&code=226320&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스피, 장 초반 6622.18로 약세…외국인 순매도에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507321&office_id=374&code=226320&page=&sm=" target="_blank" rel="noopener">[이 시각 시황] UAE, 다음달 1일 OPEC·OPEC+ 전격 탈퇴</a> <small style="color:var(--muted)">[2026.04.29 09:33] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268828&office_id=018&code=226320&page=&sm=" target="_blank" rel="noopener">아모레퍼시픽, 1Q 호실적에 4%대↑…화장품주 ‘불기둥’[특징주]</a> <small style="color:var(--muted)">[2026.04.29 09:18] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005671147&office_id=009&code=226320&page=&sm=" target="_blank" rel="noopener">K뷰티 글로벌 인기에… 화장품株 잘나가네</a> <small style="color:var(--muted)">[2026.04.24 17:53] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001159421&office_id=366&code=226320&page=&sm=" target="_blank" rel="noopener">[특징주] 미국·유럽 수출 호조에 화장품株 일제히 강세</a> <small style="color:var(--muted)">[2026.04.24 09:49] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006265046&office_id=018&code=226320&page=&sm=" target="_blank" rel="noopener">불장 다음 주자는 화장품주?…순환매 속 줄줄이 급등[특징주]</a> <small style="color:var(--muted)">[2026.04.24 09:28] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">성문전자</span> <span class="ticker">014910 · KOSPI</span></div>
+    <span class="pct">+14.45%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">주어진 14일 뉴스 목록에 해당 종목 관련 기사가 전혀 없어(크롤 데이터에 '관련 뉴스 없음') 이번 급등을 설명할 공개적·직접적 트리거를 확인할 수 없습니다. D-day에 거래량이 대폭 증가한 점을 보면 개인·단기 수급(투자심리·묘한 매수집중)이나 기술적 요인(단기 반등·급락 후 복구)로 급등한 가능성이 높습니다. 공시·계약·정책 같은 명확한 근거가 없으므로 원인 확정은 불가합니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>소형주 변동성</span><span>기술적 반등</span><span>거래량 급증</span><span>공매도 잔고 변화</span><span>장중 급등 지속성</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">LS네트웍스</span> <span class="ticker">000680 · KOSPI</span></div>
+    <span class="pct">+14.04%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수주/그룹주(계열사 호재 파급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 LS일렉트릭의 미국 빅테크 하이퍼스케일 데이터센터 전력 인프라 배전 솔루션 약 3,190억원(2.2억달러) 수주 및 LS에코에너지의 희토류·HVDC 관련 가치 재평가에 따른 그룹주 동반 강세</div>
+  <div class="reasoning">LS네트웍스 자체 공시성 호재는 없으나, 4월29일 LS일렉트릭의 대형 미국 데이터센터 배전 솔루션 수주 소식과 LS에코에너지의 희토류/HVDC 재평가 전망이 그룹 전반의 투자심리를 개선시켜 동일 계열주로서 동반 급등으로 연결된 것으로 판단됩니다. 4월23일 코스피 상승에 따른 증권·그룹주 랠리도 부분적 배경으로 작용했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>데이터센터 전력인프라</span><span>미국 빅테크 수주</span><span>희토류 공급망</span><span>HVDC 케이블</span><span>계열사 수주 파급</span><span>그룹 밸류에이션 재평가</span></div>
+  <details><summary>📰 관련 뉴스 5건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673053&office_id=009&code=000680&page=&sm=" target="_blank" rel="noopener">LS일렉트릭, 美 빅테크 데이터센터 전력 인프라 계약 체결 소식에 5%...</a> <small style="color:var(--muted)">[2026.04.29 12:50] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000105187&office_id=024&code=000680&page=&sm=" target="_blank" rel="noopener">LS에코에너지 16% ‘불기둥’ 왜?…“단순 전선회사 아니다”[오늘, ...</a> <small style="color:var(--muted)">[2026.04.29 10:34] 매경이코노미 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016039445&office_id=001&code=000680&page=&sm=" target="_blank" rel="noopener">[특징주] 증권주, '코스피 사흘째 최고가 경신' 속 혼조 마감(종합)</a> <small style="color:var(--muted)">[2026.04.23 16:26] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000506154&office_id=374&code=000680&page=&sm=" target="_blank" rel="noopener">증권주, '코스피 연일 최고가 경신' 속 상승세</a> <small style="color:var(--muted)">[2026.04.23 09:49] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016037595&office_id=001&code=000680&page=&sm=" target="_blank" rel="noopener">[특징주] 증권주, '코스피 연일 최고가 경신' 속 상승세</a> <small style="color:var(--muted)">[2026.04.23 09:38] 연합뉴스 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">제일일렉트릭</span> <span class="ticker">199820 · KOSDAQ</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">전력 인프라 (수급/테마)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 데이터센터 전력수요 급증 기대로 북미 데이터센터向 배전솔루션 대형 수주 소식(3190억 규모) 및 해외 실적 서프라이즈에 따른 섹터 동반 강세</div>
+  <div class="reasoning">미국 블룸에너지의 1분기 실적 및 AI 데이터센터 수요 급증 뉴스, 그리고 북미 대상 배전솔루션 대형 계약 공시가 4월29일 전력·전력설비 섹터에 자극을 주며 제일일렉트릭도 섹터 동반 매수(테마성 급등)를 기록했다. 개별 회사의 수주 공시는 확인되지 않아 개별 호재라기보다는 섹터 스필오버로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>전력 인프라</span><span>배전솔루션 3190억원</span><span>데이터센터 전력수요 급증</span><span>북미 수주 기대</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673353&office_id=009&code=199820&page=&sm=" target="_blank" rel="noopener">[MK 시그널] 美블룸에너지 'AI붐' 증명 … 국내 전력株도 일제히 ...</a> <small style="color:var(--muted)">[2026.04.29 17:48] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005673053&office_id=009&code=199820&page=&sm=" target="_blank" rel="noopener">LS일렉트릭, 美 빅테크 데이터센터 전력 인프라 계약 체결 소식에 5%...</a> <small style="color:var(--muted)">[2026.04.29 12:50] 매일경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">비나텍</span> <span class="ticker">126340 · KOSDAQ</span></div>
+    <span class="pct">+29.98%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/기업공시</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 보통주 추가상장(주식배당) 공시 — 추가상장(주식배당)으로 인한 유통주식수 변화</div>
+  <div class="reasoning">네이버 금융 태깅 기사(서울경제 '오늘의 메모')에 비나텍이 '주식배당'으로 보통주 추가상장 대상에 포함되었다고 명시되어 있어, 추가상장(배당) 일정 공시가 단기 매수 심리를 자극한 것으로 판단됩니다. 해당 공시는 하루 전(4/15) 공지되어 4/16(추정) 거래일에 수급 집중으로 급등한 것으로 보입니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.15 (D-1일)</div>
+  
+  <div class="keywords"><span>추가상장</span><span>주식배당</span><span>유통주식수 증가</span><span>배당비율 공시</span></div>
+  <details><summary>📰 관련 뉴스 1건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004610929&office_id=011&code=126340&page=&sm=" target="_blank" rel="noopener">오늘의 메모[4월 16일]</a> <small style="color:var(--muted)">[2026.04.15 10:46] 서울경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">KBI메탈</span> <span class="ticker">024840 · KOSDAQ</span></div>
+    <span class="pct">+29.97%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 종목 태그·일반 뉴스가 전혀 없어 명확한 공시·수주·실적 등의 외부 트리거가 확인되지 않습니다. D-day의 큰 거래량 동반 +29.97% 상승은 무공시 대량매수·기술적 급등·개인 매수 쏠림 등 수급성 이벤트 가능성이 크며, 근거 불충분으로 결론은 낮은 신뢰도입니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>기술적 반등</span><span>저평가주</span><span>무공시 급등</span><span>대량거래 발생</span><span>공시(계약·자금조달) 여부</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">폴라리스AI</span> <span class="ticker">039980 · KOSDAQ</span></div>
+    <span class="pct">+29.96%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">AI·로봇</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 휴머노이드 로봇사와 공식 파트너십 체결 — 국내 시장 총괄·유통권 확보</div>
+  <div class="reasoning">당일 아침 보도에서 폴라리스AI가 글로벌 휴머노이드 로봇사와 공식 파트너십을 맺고 국내 시장 총괄 및 유통 채널을 맡는다고 발표한 점이 직접적 매수 재료로 작용했다. 발표 내용이 사업 진출(유통·플랫폼 이식)과 기술 연계(엣지 AI·NPU 이식) 가능성을 구체적으로 제시해 투자심리를 자극하며 급등과 거래량 증가를 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>엣지 AI</span><span>로봇 상용화</span><span>글로벌 휴머노이드 파트너십</span><span>국내 총판 계약</span><span>온디바이스 NPU 이식</span></div>
+  <details><summary>📰 관련 뉴스 2건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=039980&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268827&office_id=018&code=039980&page=&sm=" target="_blank" rel="noopener">폴라리스AI, 상한가…中 유비테크 휴머노이드 로봇 한국 시장 총괄[특....</a> <small style="color:var(--muted)">[2026.04.29 09:17] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">오로라</span> <span class="ticker">039830 · KOSDAQ</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 2026년 1분기 연결기준 영업이익 141억9300만원(전년비 +45.9%), 매출 974억5500만원(+22.2%), 당기순이익 72억9900만원(+84.9%) 공시</div>
+  <div class="reasoning">4월 29일 발표된 잠정실적(공시)이 전년 대비 큰 폭의 영업이익·매출 증가를 보여 즉각적인 수급 유입과 재평가 매수로 이어진 것으로 판단됩니다. 이전의 '미국 매출 확대' 및 '부동산 가치 대비 저평가' 분석 기사가 재평가 논리를 뒷받침하며 상승을 증폭시켰습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>팜팔스 美매출</span><span>투자부동산 매각</span><span>차입금 축소</span><span>분기 실적 소통 강화</span></div>
+  <details><summary>📰 관련 뉴스 7건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000507421&office_id=374&code=039830&page=&sm=" target="_blank" rel="noopener">[직설] 국내 증권시장 시가총액 사상 첫 600조 원 넘어섰다…우리 증...</a> <small style="color:var(--muted)">[2026.04.29 14:00] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268924&office_id=018&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업이익 142억원…전년比 45.9%↑</a> <small style="color:var(--muted)">[2026.04.29 10:39] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013916211&office_id=003&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업이익 142억…전년比 45.9%↑</a> <small style="color:var(--muted)">[2026.04.29 09:47] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002636995&office_id=016&code=039830&page=&sm=" target="_blank" rel="noopener">오로라, 1분기 영업익 142억…전년비 45.9% ↑</a> <small style="color:var(--muted)">[2026.04.29 09:42] 헤럴드경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083494&office_id=293&code=039830&page=&sm=" target="_blank" rel="noopener">[저평가 리포트] 강남 사옥보다 싼 시총…오로라월드 밸류업 '시험대.....</a> <small style="color:var(--muted)">[2026.04.27 14:03] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005753475&office_id=277&code=039830&page=&sm=" target="_blank" rel="noopener">[단독] '영원히 늙지 않는 아이돌'에게 꽂혔다…70억 투자 몰린 이유</a> <small style="color:var(--muted)">[2026.04.23 05:49] 아시아경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005751435&office_id=277&code=039830&page=2&sm=" target="_blank" rel="noopener">"美서 매출 터졌다" 난리인데…'PER 5배' 말 안 되는 저평가 이 ...</a> <small style="color:var(--muted)">[2026.04.19 10:49] 아시아경제 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">와이씨켐</span> <span class="ticker">112290 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 액면분할(1주당 가액 1000원→500원)로 인한 변경상장·거래정지 해제에 따른 거래 재개 및 유동성 확대</div>
+  <div class="reasoning">장중 상한가는 지난달 결정된 액면분할로 인해 주권 매매가 정지됐다가 4월29일 거래가 재개되면서 발생한 직접적인 수급(매수 집중) 효과가 주된 원인이다. 보도 내용에 거래정지 해제와 유통주식수 확대(1011만주→2022만주)가 명시돼 있어 기업공시성 이벤트가 즉각적인 급등을 유발했으며, '유리 기판' 등 반도체 소재 테마는 보조적 모멘텀으로 작용했을 가능성이 있다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>액면분할</span><span>거래정지 해제</span><span>유동성 확대</span><span>유통주식수 확대</span><span>유리 기판 양산</span></div>
+  <details><summary>📰 관련 뉴스 4건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160579&office_id=366&code=112290&page=&sm=" target="_blank" rel="noopener">[특징주] 와이씨켐, 액면분할 후 거래 정지 해제로 ‘상한가’</a> <small style="color:var(--muted)">[2026.04.29 09:39] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=112290&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350883&office_id=008&code=112290&page=&sm=" target="_blank" rel="noopener">액면분할 후 거래 재개한 와이씨켐, 상한가</a> <small style="color:var(--muted)">[2026.04.29 09:20] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505886&office_id=374&code=112290&page=&sm=" target="_blank" rel="noopener">[이 시각 시황] 리튬 가격 상승에 관련주 강세</a> <small style="color:var(--muted)">[2026.04.22 09:32] SBS Biz · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">피앤씨테크</span> <span class="ticker">237750 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">지배구조·기업결합(M&A/합병)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 자회사 엠티씨코리아의 무증자 흡수합병 결정(경영효율화) 및 광명전기 보유지분 구조를 에이치케이홀딩스에 장외매각해 간접지배로 전환한 지배구조 재편</div>
+  <div class="reasoning">4월 21일 공시로 자회사 흡수합병(무증자)을 결정했다는 점이 명확한 호재로 인식됐고, 같은 날 보도된 광명전기 관련 지분 구조 변경(간접지배 전환) 기사는 경영권 분쟁 해법·지배력 안정 기대를 높여 수급을 자극한 것으로 판단된다. 이러한 기업행위는 주가에 즉각적 재평가를 유도해 급등을 촉발했을 가능성이 높다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.21 (D-8일)</div>
+  
+  <div class="keywords"><span>M&A/흡수합병</span><span>지배구조 분쟁</span><span>무증자 합병</span><span>광명전기 지분 간접지배</span><span>상호주 의결권 제한</span></div>
+  <details><summary>📰 관련 뉴스 8건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003639663&office_id=081&code=237750&page=&sm=" target="_blank" rel="noopener">[서울데이터랩] 코스닥, 장 초반 1220.28 상승…외국인 순매수에 ...</a> <small style="color:var(--muted)">[2026.04.29 09:38] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083564&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]⑤ 회사 주식 1주도 없는 경영진…표 대결 쉽지않....</a> <small style="color:var(--muted)">[2026.04.28 09:54] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083482&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]④ 경영진 vs 피앤씨테크, 6월 임시주총 격돌 [...</a> <small style="color:var(--muted)">[2026.04.27 10:54] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083346&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]③ 엠에이치건설 인수 후 경영진 물갈이, 회사는.....</a> <small style="color:var(--muted)">[2026.04.24 09:08] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000083272&office_id=293&code=237750&page=&sm=" target="_blank" rel="noopener">[풍전등화 광명전기]② 최대주주 4번 교체…인수자 자금조달 실패 반.....</a> <small style="color:var(--muted)">[2026.04.23 08:57] 블로터 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004613063&office_id=011&code=237750&page=&sm=" target="_blank" rel="noopener">기업 공시 [4월 21일]</a> <small style="color:var(--muted)">[2026.04.21 16:48] 서울경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005277703&office_id=015&code=237750&page=&sm=" target="_blank" rel="noopener">피앤씨테크, 엠티씨코리아 흡수합병 결정</a> <small style="color:var(--muted)">[2026.04.21 15:56] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001158428&office_id=366&code=237750&page=2&sm=" target="_blank" rel="noopener">‘의결권 묶인’ 피앤씨테크… 광명전기 ‘간접지배’ 자구책</a> <small style="color:var(--muted)">[2026.04.21 10:01] 조선비즈 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">나노엔텍</span> <span class="ticker">039860 · KOSDAQ</span></div>
+    <span class="pct">+29.86%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">바이오</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 글로벌 탑티어 제약사 대상 EVE-HT A26 및 EVE-HT FL 구매주문(PO) 공급 계약</div>
+  <div class="reasoning">당일(4/29) 공시에 해당하는 보도에서 나노엔텍이 글로벌 탑티어 제약사에 세포 대량 분석 자동화 로봇(EVE-HT A26)과 고처리량 형광 분석장비(EVE-HT FL)의 구매주문(PO)을 확보했다고 밝힘. 상대가 현장에서 이미 장비를 운용 중인 레퍼런스 보유 고객이라는 점과 설치가 5월 초로 예정된 점이 향후 추가 수주·레퍼런스 확대 기대를 키워 단기 급등을 촉발한 것으로 판단됨.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-0일)</div>
+  
+  <div class="keywords"><span>바이오</span><span>글로벌 파트너십</span><span>세포 분석 자동화</span><span>EVE-HT A26</span><span>EVE-HT FL</span><span>구매주문(PO)</span></div>
+  <details><summary>📰 관련 뉴스 3건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268859&office_id=018&code=039860&page=&sm=" target="_blank" rel="noopener">나노엔텍, 세포 대량 분석 자동화 로봇 글로벌 시장 첫 공급</a> <small style="color:var(--muted)">[2026.04.29 09:44] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001023237&office_id=031&code=039860&page=&sm=" target="_blank" rel="noopener">와이제이링크·이렘, 최대주주 지분 보호예수 해제</a> <small style="color:var(--muted)">[2026.04.20 09:49] 아이뉴스24 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006261626&office_id=018&code=039860&page=&sm=" target="_blank" rel="noopener">나노엔텍, 美 AACR 2026 참가…”글로벌 빅파마 신규 파트너십 확...</a> <small style="color:var(--muted)">[2026.04.20 09:37] 이데일리 · stock_news</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">에스투더블유</span> <span class="ticker">488280 · KOSDAQ</span></div>
+    <span class="pct">+25.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">사이버보안</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 텔레픽스와 위성(우주) 데이터·다크웹 등 사이버 데이터 융합한 안보 인텔리전스 MOU(공동 R&D·공공·방위기관 대상)</div>
+  <div class="reasoning">여러 매체가 4월28일 S2W의 텔레픽스와의 업무협약(MOU)을 보도하며 회사의 사업영역이 사이버에서 위성(우주) 데이터까지 확장된다는 구체적 내용을 공개했다. 공시성(공식 MOU) 뉴스가 다수 노출되며 안보·공공 수요 확장 기대가 즉각적인 매수로 연결된 것으로 보인다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.28 (D-0일)</div>
+  
+  <div class="keywords"><span>사이버보안</span><span>우주(위성) 데이터</span><span>AI 인텔리전스</span><span>다크웹 위협 데이터</span><span>이종도메인 교차분석</span><span>공공·방위기관 수요</span></div>
+  <details><summary>📰 관련 뉴스 19건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001112609&office_id=144&code=488280&page=&sm=" target="_blank" rel="noopener">에스투더블유, 텔레픽스와 안보 인텔리전스 고도화 위한 MOU 체결</a> <small style="color:var(--muted)">[2026.04.28 23:26] 스포츠경향 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002420605&office_id=092&code=488280&page=&sm=" target="_blank" rel="noopener">"사이버와 우주 연계"...S2W, 텔레픽스와 MOU</a> <small style="color:var(--muted)">[2026.04.28 20:52] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000037400&office_id=584&code=488280&page=&sm=" target="_blank" rel="noopener">[사이언스게시판] KIST, AI 전환(AIX) 선포…'만들고 활용하는...</a> <small style="color:var(--muted)">[2026.04.28 18:07] 동아사이언스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005672533&office_id=009&code=488280&page=&sm=" target="_blank" rel="noopener">다크웹 보고 위성도 본다…S2W, 텔레픽스와 안보 AI 협력</a> <small style="color:var(--muted)">[2026.04.28 14:27] 매일경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005514351&office_id=014&code=488280&page=&sm=" target="_blank" rel="noopener">"우주까지 포괄하는 보안 체계" S2W, 텔레픽스와 맞손</a> <small style="color:var(--muted)">[2026.04.28 11:20] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016046971&office_id=001&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스, S2W, 위성·다크웹 결합 안보 AI 협력</a> <small style="color:var(--muted)">[2026.04.28 11:07] 연합뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001160262&office_id=366&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스·S2W, 우주·사이버 데이터 결합한 안보 인텔리전스 협력</a> <small style="color:var(--muted)">[2026.04.28 10:58] 조선비즈 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0006268157&office_id=018&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스, S2W와 안보 인텔리전스 기술 협력</a> <small style="color:var(--muted)">[2026.04.28 10:40] 이데일리 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005350291&office_id=008&code=488280&page=&sm=" target="_blank" rel="noopener">텔레픽스·S2W, 위성·다크웹 데이터 결합…안보 인텔리전스 구축한다</a> <small style="color:var(--muted)">[2026.04.28 10:00] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013913262&office_id=003&code=488280&page=&sm=" target="_blank" rel="noopener">에스투더블유-텔레픽스, 안보 인텔리전스 고도화 MOU</a> <small style="color:var(--muted)">[2026.04.28 08:36] 뉴시스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003421713&office_id=030&code=488280&page=2&sm=" target="_blank" rel="noopener">[단독] SK, AI 연합군 'K-AI 얼라이언스' 그룹서 직접 챙긴다</a> <small style="color:var(--muted)">[2026.04.26 17:01] 전자신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005279403&office_id=015&code=488280&page=2&sm=" target="_blank" rel="noopener">네오사피엔스·디토닉…AI 스타트업 'IPO 노크'</a> <small style="color:var(--muted)">[2026.04.24 17:49] 한국경제 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505357&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 리뷰] 조선·엔진주 뜨겁네…STX엔진 상한가</a> <small style="color:var(--muted)">[2026.04.20 07:53] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005346080&office_id=008&code=488280&page=2&sm=" target="_blank" rel="noopener">미토스가 깨운 해킹 트라우마…한주간 50% 껑충, 보안주 '널뛰기'</a> <small style="color:var(--muted)">[2026.04.19 10:30] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000505136&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 종전 협상 신중론…코스피 6200선 반납</a> <small style="color:var(--muted)">[2026.04.17 16:51] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005345610&office_id=008&code=488280&page=2&sm=" target="_blank" rel="noopener">사이버보안주, 오늘은 급락…'미토스 쇼크' 급등 부담</a> <small style="color:var(--muted)">[2026.04.17 10:03] 머니투데이 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001110400&office_id=144&code=488280&page=2&sm=" target="_blank" rel="noopener">에스투더블유, ‘AI 시대 보안 전략 세미나’ 성료</a> <small style="color:var(--muted)">[2026.04.17 00:24] 스포츠경향 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0000504916&office_id=374&code=488280&page=2&sm=" target="_blank" rel="noopener">[애프터마켓 브리핑] 코스피, 33거래일만에 6200선 탈환</a> <small style="color:var(--muted)">[2026.04.16 16:56] SBS Biz · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0016024403&office_id=001&code=488280&page=2&sm=" target="_blank" rel="noopener">[테크스냅] S2W, 'AI 시대 보안 전략 세미나' 성료</a> <small style="color:var(--muted)">[2026.04.16 09:10] 연합뉴스 · stock_news</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">홈캐스트</span> <span class="ticker">064240 · KOSDAQ</span></div>
+    <span class="pct">+21.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 —</div>
+  <div class="reasoning">최근 14일 내 종목 태그·일반 뉴스가 전혀 확인되지 않아 명확한 뉴스성 트리거는 없음. D-day의 대량거래와 급등(+21.92%)은 공시 없이 발생한 수급·테마성 매수(개미 집중 매수, 단기 과열·쇼트 커버링 등) 가능성이 크나 근거가 부족해 확정적 판단은 어려움.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>no_news_in_window</code> — 윈도우 내 뉴스 없음</div><div>기사 0건 · 본문 0건 · origin (없음) · 최신기사 없음 · trigger_lag 후보 일</div></div>
+  <div class="keywords"><span>수급</span><span>테마성 급등</span><span>거래대금 급증</span><span>공시 부재</span><span>개미 유입</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+</div>
+</section>
+
+<script>
+document.querySelectorAll('nav.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav.tabs button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('tab-' + b.dataset.tab).classList.add('active');
+}));
+</script>
+</body>
+</html>

@@ -1,0 +1,2002 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>일일 분석 — 20260511</title>
+<style>
+  :root { --bg:#0b0d10; --fg:#e6e6e6; --muted:#8a929b; --card:#151a20; --border:#23272e;
+           --hi:#2dd4bf; --new:#3b82f6; --cont:#a78bfa; --unclear:#f59e0b;
+           --conf-high:#22c55e; --conf-med:#eab308; --conf-low:#ef4444; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font: 14px/1.55 -apple-system, "Pretendard", sans-serif; margin: 0; padding: 24px 32px; }
+  h1 { margin: 0 0 4px; font-size: 22px; }
+  h2 { margin: 28px 0 12px; font-size: 16px; color: var(--hi); border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { margin: 16px 0 8px; font-size: 14px; color: var(--muted); }
+  .meta { color: var(--muted); margin-bottom: 18px; }
+  nav.tabs { display:flex; gap:6px; margin: 16px 0 10px; }
+  nav.tabs button { background: var(--card); color: var(--fg); border: 1px solid var(--border); padding: 6px 12px; cursor: pointer; border-radius: 6px; font-size: 13px; }
+  nav.tabs button.active { background: var(--hi); color:#000; border-color: var(--hi); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 12px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+  .card.new { border-left: 3px solid var(--new); }
+  .card.continuation { border-left: 3px solid var(--cont); }
+  .card.unclear { border-left: 3px solid var(--unclear); }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap: 8px; }
+  .name { font-weight: 600; }
+  .ticker { color: var(--muted); font-size: 12px; font-family: ui-monospace, monospace; }
+  .pct { font-family: ui-monospace, monospace; font-weight: 600; color: #fb7185; }
+  .signal { margin: 6px 0; color: var(--hi); }
+  .keywords span { display: inline-block; background:#1e2530; border:1px solid var(--border); border-radius: 4px; padding: 1px 6px; margin: 2px 4px 0 0; font-size: 12px; color: var(--muted); font-family: ui-monospace, monospace; }
+  .conf { font-size: 11px; padding: 1px 6px; border-radius: 999px; font-weight: 600; }
+  .conf.high { background: rgba(34,197,94,.15); color: var(--conf-high); }
+  .conf.medium { background: rgba(234,179,8,.15); color: var(--conf-med); }
+  .conf.low { background: rgba(239,68,68,.15); color: var(--conf-low); }
+  details summary { cursor:pointer; color: var(--muted); font-size: 12px; margin-top: 8px; }
+  details ul { padding-left: 16px; margin: 6px 0 0; }
+  details a { color: var(--fg); }
+  .reasoning { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .theme-group { margin: 18px 0; }
+  .theme-title { font-weight: 600; color: var(--fg); margin-bottom: 6px; font-size: 14px; }
+  .theme-title small { color: var(--muted); font-weight: 400; }
+  .section { display: none; }
+  .section.active { display: block; }
+</style>
+</head>
+<body>
+<h1>📊 20260511 일일 분석</h1>
+<div class="meta">
+  KOSPI 상승 20 · KOSDAQ 상승 20 · 신규 38 · 연속 0 · 불명 2
+</div>
+<nav class="tabs">
+  <button class="active" data-tab="status">상태별</button>
+  <button data-tab="theme">테마별</button>
+  <button data-tab="all">전체</button>
+</nav>
+
+<section id="tab-status" class="section active">
+<h2>🆕 신규 시그널 (오늘 매칭됨) <small style="color:var(--muted)">(38)</small></h2>
+<div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">선도전기</span> <span class="ticker">007610 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">전력기기/전력인프라 (테마성 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 미 블룸에너지의 'AI 붐' 사례 보도로 AI 데이터센터 전력인프라 수요 기대가 국내 전력株에 즉각 반영</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260512, 4일째 등장)</div>
+  
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>전력인프라 수주</span><span>블룸에너지 사례</span><span>변압기·개폐기 공급</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">계양전기우</span> <span class="ticker">012205 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 보스턴다이내믹스 '아틀라스' 영상 등 피지컬AI·로봇 모멘텀과 반도체 대형주 강세에 따른 전력 인프라/데이터센터 전력주로의 순환매 및 우선주 수급 쏠림(우선주 특유의 과열)</div>
+  <div class="reasoning">11일 코스피 대형 반도체주 강세가 지수 급등을 주도했고, 보스턴다이내믹스의 '아틀라스' 영상 등 피지컬AI·로봇 관련 기대감이 현대차 계열 및 전력/전장 관련 소형주로 순환매를 촉발했다. 기사들에서 계양전기우의 상한가·우선주 수급 쏠림·이격도 과열이 직접적으로 반복 보고되어 수급·테마성 매수가 핵심 원인으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>피지컬AI</span><span>데이터센터 전력 인프라</span><span>반도체 업황 회복</span><span>보스턴다이내믹스 아틀라스 영상</span><span>우선주 수급 쏠림</span><span>이격도 과열</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한솔테크닉스</span> <span class="ticker">004710 · KOSPI</span></div>
+    <span class="pct">+29.96%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/그룹 M&A(지배구조 변화)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 한솔그룹의 M&A·지배력 강화 기대(그룹 차원의 신사업 확장·재편 보도)</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260507, 3일째 등장)</div>
+  
+  
+  <div class="keywords"><span>M&A</span><span>지배구조 개편</span><span>계열사 흡수합병</span><span>신사업 투자처 공개</span><span>지분율 변동공시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">경인전자</span> <span class="ticker">009140 · KOSPI</span></div>
+    <span class="pct">+29.81%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 중소형 전자부품주로의 단기 수급 집중(반도체 밸류체인·전력기기 순환매에 따른 테마성 매수)</div>
+  <div class="reasoning">당일 다수 기사와 거래소 마감시황이 반도체 대형주 강세에 따른 업종·테마성 순환매로 중소형 전자부품·전력기기 종목에 수급이 집중됐다고 설명하고 있으며, 경인전자는 그 흐름 속에서 상단에 포함되어 급등했다. 별도 공시·계약·실적 관련 본문 근거는 없고 가격 움직임이 시장·수급성 요인에 의해 발생한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체 밸류체인</span><span>AI 데이터센터</span><span>전력기기 수요</span><span>중소형 전자부품 순환매</span><span>레버리지 ETN 자금유입</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한온시스템</span> <span class="ticker">018880 · KOSPI</span></div>
+    <span class="pct">+20.13%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">자동차 전동화 (EV)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 유럽 전동화 가속화로 EV용 열관리(thermal management) 시스템 수요 확대 기대 — 시장(언론) 중심의 EV 업황 기대감이 주가 급등의 직접적 촉발</div>
+  <div class="reasoning">D-day 당일 다수의 종목 태그 기사들이 'EV 업황 기대감'을 직접 언급하며 한온시스템을 52주 신고가로 보도했고, 한국타이어 그룹 실적 기사에서도 전동화 수요 확대가 부품사 실적 개선으로 연결된다는 내용이 함께 제시됐다. 회사의 개별 공시나 수주공고는 없으므로 언론·테마성 수급(시장 기대감)이 주가를 밀어올린 것으로 판단한다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>전동화</span><span>유럽 전기차 전환</span><span>EV용 열관리 시스템 수주</span><span>히트펌프·배터리 열관리</span><span>OEM 신차용 공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">광전자</span> <span class="ticker">017900 · KOSPI</span></div>
+    <span class="pct">+17.75%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체(장비·부품) 테마성 수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 '도핑 제어' 기술·공정 개선 기대에 따른 장비·부품 수요 확대(업종 모멘텀)</div>
+  <div class="reasoning">최근 복수의 종목태그 기사들이 반도체·부품주 강세를 지목했고(특히 5/6의 '도핑 제어 기술' 보도), 업종 모멘텀이 광전자의 대량거래를 촉발한 것으로 보인다. 회사 고유의 공시나 계약성 뉴스는 없어 단기적인 테마·수급(투심) 중심의 급등으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>반도체 장비·부품</span><span>반도체 공정개선</span><span>도핑 제어 기술 상용화</span><span>WFE 수요 확대</span><span>부품 공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한솔홀딩스</span> <span class="ticker">004150 · KOSPI</span></div>
+    <span class="pct">+12.77%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">M&A</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 사업 전환을 위해 4,000억 원 규모 M&A 집행(한솔그룹의 대규모 인수·투자 집행)</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>M&A</span><span>반도체 전환</span><span>오픈이노베이션</span><span>4</span><span>000억 M&A</span><span>인수 대상(반도체 소재/장비)</span><span>벤처스튜디오 투자</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">두산퓨얼셀</span> <span class="ticker">336260 · KOSPI</span></div>
+    <span class="pct">+12.05%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수소·연료전지</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 608억 규모 연료전지 시스템 공급계약(공시) 및 SOFC 상용화 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260506, 3일째 등장)</div>
+  
+  
+  <div class="keywords"><span>수소 연료전지</span><span>SOFC 상용화</span><span>연료전지 시스템 공급계약 608억</span><span>수주 납품 일정</span><span>그룹 내 수주 연계</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">경인양행</span> <span class="ticker">012610 · KOSPI</span></div>
+    <span class="pct">+12.04%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">화학·소재</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 화학·첨단소재 업황 랠리(2차전지·디스플레이용 소재 수요 회복)로 인한 동반 상승</div>
+  <div class="reasoning">최근 1~2주 보도는 경인양행 고유의 공시·수주 성과가 아니라 화학·첨단소재 섹터의 동반 랠리(2차전지·OLED/디스플레이 소재 수요 기대 및 코스피 상승)에 따라 중소형 소재주로 매수세가 유입된 점을 직접적으로 지적하고 있다. 복수 기사에서 경인양행이 업종 강세의 수혜 종목으로 거론돼 단기 급등은 섹터·수급·기술적 재평가에 의한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>화학업종 랠리</span><span>2차전지 소재 수요</span><span>OLED·디스플레이 소재 공급망</span><span>디스플레이용 소재 수주</span><span>인천 중소형주 수혜</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">주성코퍼레이션</span> <span class="ticker">109070 · KOSPI</span></div>
+    <span class="pct">+11.64%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체·부품주</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 파인·주성그룹 승계 관련 보도 및 오르비텍 M&A 재구성 논의로 인한 지분·인수 관련 기대감</div>
+  <div class="reasoning">05.07자 기사에서 그룹 승계·M&A 재구성 소식이 제기되며 투자자들의 재무구조/지배구조 개선 기대를 자극했고, 이후 05.11의 반도체·부품주 전반 강세와 맞물려 매수세가 확대된 것으로 보입니다. 공시성 호재는 확인되지 않아 단기적인 테마·수급 중심의 급등 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>반도체·부품주</span><span>기업승계</span><span>인수합병 재구성</span><span>승계 관련 지분 거래</span><span>수급·거래상위 강세</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">SK하이닉스</span> <span class="ticker">000660 · KOSPI</span></div>
+    <span class="pct">+11.51%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 AI 수요 급증에 따른 메모리(HBM·D램) 공급부족·가격 상승 기대(메모리 슈퍼사이클)</div>
+  <div class="reasoning">당일(5월11일) 국내외 뉴스가 AI 데이터센터 수요 증가로 인한 메모리 공급 부족·HBM 수요 급증과 ‘메모리 슈퍼사이클’ 기대를 집중 보도했고, 이 영향으로 대형 메모리주들이 동반 급등하며 지수 상승을 견인했다. 추가로 삼성전자 노사(성과급) 이슈가 설비투자 억제(=Capex discipline) 기대를 자극해 공급 증가 속도 둔화 가능성이 부각된 점도 상승 압력으로 작용했다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>메모리 수급(공급부족)</span><span>메모리 슈퍼사이클</span><span>HBM 수요 급증</span><span>D램 가격 상승</span><span>Capex Discipline(설비투자 축소 가능성)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">DB하이텍</span> <span class="ticker">000990 · KOSPI</span></div>
+    <span class="pct">+11.06%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 서버·데이터센터용 메모리(HBM) 및 시스템반도체 수요 기대에 따른 반도체 업종 동반 랠리(기관 순매수·상대강도·이격도 과열)</div>
+  <div class="reasoning">당일(11일) 증시에서 삼성전자·SK하이닉스 중심의 반도체 대형주 급등과 기관 매수 집중이 업종 전반으로 확산되며 DB하이텍에도 수급 및 모멘텀성 매수가 유입된 것으로 보인다. 제공된 기사들에는 DB하이텍의 개별 공시·계약·실적 호재는 없고 거래소의 투자주의 지정 등은 급등의 결과로 파악되어, 이번 등락은 업종·수급(기술적·모멘텀) 요인이 핵심이다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>AI 데이터센터</span><span>HBM 수요 확대</span><span>시스템반도체 파운드리</span><span>기관 순매수</span><span>투자주의종목 지정</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">LG이노텍</span> <span class="ticker">011070 · KOSPI</span></div>
+    <span class="pct">+10.26%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 서버용 FC-BGA(플립칩 BGA) 기판 매출 급증 및 스마트폰 고사양 카메라 모듈 수요 회복</div>
+  <div class="reasoning">국내 증시의 AI·반도체 랠리 속에서 기관 매수와 업황 개선 전망이 LG이노텍의 주가를 끌어올린 것으로 보인다. 보도들은 1분기 실적(역대 1분기 매출 기록)과 함께 FC-BGA 매출 증가, 고사양 카메라 모듈 및 전장 부문 성장 기대를 근거로 제시하고 있어 종목 고유의 실적 개선 기대가 가격을 밀어올렸다고 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 서버 투자</span><span>반도체 패키징(FC-BGA)</span><span>스마트폰 고사양 카메라 모듈</span><span>FC-BGA 매출 급증</span><span>고사양 카메라 모듈 수요</span><span>기관 순매수</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">삼아알미늄</span> <span class="ticker">006110 · KOSPI</span></div>
+    <span class="pct">+8.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/원자재(비철금속) & 시장감시(수급·수급리스크)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 한국거래소의 투자경고 지정 및 매매거래정지(예고) 공시·언급(시장감시에 따른 거래정지 리스크)</div>
+  <div class="reasoning">한국거래소 공시(및 관련 보도)가 삼아알미늄을 투자경고·매매거래정지 예고 명단에 올린 것이 직·간접적 촉매로 작용했습니다. 여기에 4월 LME 알루미늄 급등(수급 우려)과 2차전지 양극박 수요 회복 기대(사모펀드 엑시트 보도로 관심 확대)가 결합되며 단기 매수세가 집중된 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>투자경고·매매정지 리스크</span><span>LME 알루미늄 4월 급등(수급 우려)</span><span>2차전지 양극박 수요 회복</span><span>사모펀드 대규모 엑시트(회수)</span></div>
+  <details><summary>📰 관련 뉴스 13건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005517359&office_id=014&code=006110&page=&sm=" target="_blank" rel="noopener">증시 '과열 신호' 커졌다… 투자경고종목 한달새 50% 증가</a> <small style="color:var(--muted)">[2026.05.05 18:40] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005517244&office_id=014&code=006110&page=&sm=" target="_blank" rel="noopener">'증시 과열 경보음' 커졌다...투자경고 종목 50% 급증</a> <small style="color:var(--muted)">[2026.05.05 13:54] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001161797&office_id=366&code=006110&page=&sm=" target="_blank" rel="noopener">JKL인베, 삼아알미늄 투자금 700억 회수… 2차전지 양극박株 올라타...</a> <small style="color:var(--muted)">[2026.05.04 16:01] 조선비즈 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450782" target="_blank" rel="noopener">필옵틱스, 독보적 광학기술 앞세워 차세대 디스플레이·이차전지 공정 ...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="http://www.fnnews.com/news/202605051838401718" target="_blank" rel="noopener">증시 '과열 신호' 커졌다… 투자경고종목 한달새 50% 증가</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="http://www.fnnews.com/news/202605050829166640" target="_blank" rel="noopener">'증시 과열 경보음' 커졌다...투자경고 종목 50% 급증</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450513" target="_blank" rel="noopener">품질 우위 집중관리 나선 서원, 미국·중국 시장 공략 가속화</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://biz.chosun.com/stock/market_trend/2026/05/04/UWOG7SMMMFAKXP4KAKJEXI4KMA/?utm_source=naver&utm_medium=original&utm_campaign=biz" target="_blank" rel="noopener">JKL인베,삼아알미늄투자금 700억 회수… 2차전지 양극박株 올라타 2배...</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450353" target="_blank" rel="noopener">경기 침체에도 끄떡없는 파워넷의 비결… 테크 신사업 집중 육성 통했다</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://www.newstnt.com/news/articleView.html?idxno=701917" target="_blank" rel="noopener">[공시] KBI메탈·두산테스나·미래에셋벤처투자·삼아알미늄·주성엔지...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스티앤티 · search:삼아알미늄</small></li><li><a href="https://www.topstarnews.net/news/articleView.html?idxno=16057656" target="_blank" rel="noopener">삼아알미늄, 투자경고→매매거래 정지 예고</a> <small style="color:var(--muted)">[2026.05.07 00:00] 톱스타뉴스 · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451885" target="_blank" rel="noopener">[이격도과열 종목] 선도전기 민테크 큐로홀딩스 한울반도체 주가 더 뜨...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://www.pointdaily.co.kr/news/articleView.html?idxno=304323" target="_blank" rel="noopener">거래소, 아진엑스텍 등 4종목 투자경고종목 지정</a> <small style="color:var(--muted)">[2026.05.07 00:00] 포인트데일리 · search:삼아알미늄</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">현대모비스</span> <span class="ticker">012330 · KOSPI</span></div>
+    <span class="pct">+8.64%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">M&A / 구조조정</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 램프사업부 매각 진행 및 일부 노조(김천지회)와의 고용승계 합의서 체결로 매각 불확실성 완화</div>
+  <div class="reasoning">복수 보도에서 램프사업부 매각 관련 협의·합의 내용(김천지회와의 합의서 체결, OP모빌리티와의 인수협상 언급)이 전해지며 매각 실행 가능성이 높아졌다는 해석이 나왔고, 11일의 광범위한 대형주 랠리와 맞물려 현대모비스의 주가가 급등한 것으로 보인다. 다만 보도엔 노노 갈등과 미확정 고용조건 등 불확실성도 있어 상승은 매각 기대감에 따른 재평가적 성격이 강합니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-4일)</div>
+  
+  <div class="keywords"><span>사업부 매각</span><span>노사갈등</span><span>램프사업부 인수협상 OP모빌리티</span><span>고용승계 합의서</span><span>우선협상대상자</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">TYM</span> <span class="ticker">002900 · KOSPI</span></div>
+    <span class="pct">+8.42%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 350억원 발표(전년比 131% 증가) — 어닝 서프라이즈</div>
+  <div class="reasoning">여러 매체의 종목태그 기사(2026.05.11)에서 1분기 영업이익 350억원, 전년 대비 131% 증가를 보도하여(명확한 호재성 공시·보도) 투자 심리가 개선된 것으로 보입니다. 거래량 증가와 함께 단기 긍정 반응이 발생해 D-day에 급등한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>농기계 수요</span><span>원가율 개선</span><span>1분기 영업이익 350억</span><span>영업이익 전년比 131%↑</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">삼성물산우B</span> <span class="ticker">02826K · KOSPI</span></div>
+    <span class="pct">+8.16%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급(개인투자자 매수·테마성 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 동학개미 중심의 우선주 집중 매수로 인한 단기 수급 급등(대형주 대체매수·우선주 프리미엄 확대)</div>
+  <div class="reasoning">한국경제(2026.05.11) 기사에서 개인투자자들이 몰리며 최고가를 기록했다고 보도되어, 별도 공시·실적·수주 등의 펀더멘탈 호재 없이 수급(개인 매수)이 가격 급등의 직접적 원인으로 판단됩니다. 기사 제목에 '삼성전자 못 사서 몰렸다'는 취지가 있어 대형주 대체매수(우선주로의 쏠림) 가능성도 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-3일)</div>
+  
+  <div class="keywords"><span>개인(동학개미) 매수</span><span>우선주 프리미엄 확대</span><span>대형주 대체매수</span><span>단기 수급 과열</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">SK스퀘어</span> <span class="ticker">402340 · KOSPI</span></div>
+    <span class="pct">+8.11%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체·수급(대형주 쏠림)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 HBM(고대역폭 메모리) 수요 증가 및 메모리 업황 회복에 따른 반도체 대형주 급등 → 시가총액 쏠림으로 지주·그룹주(대형) 동반 상승</div>
+  <div class="reasoning">당일(5월 11일) 코스피·반도체 대장주(SK하이닉스·삼성전자) 급등이 지수를 끌어올리며 시가총액 상위 그룹주들이 동반 강세를 보였고, 관련 보도에서 HBM 수요·메모리 가격 회복과 미국 반도체주 강세를 배경으로 지목하고 있음. SK스퀘어는 별도 공시성 호재 없이 그룹·대형주 수급·지수 효과에 연동해 상승한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>대형주 시총 쏠림</span><span>HBM 수요 증가</span><span>메모리 가격 회복</span><span>프로그램매수(사이드카)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">민테크</span> <span class="ticker">452200 · KOSDAQ</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/테마(반도체·로봇 관련 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 배터리 진단 기술 성장성 부각에 따른 테마성 매수(반도체·로봇·전력기기 순환매) 및 투자경고(투자유의) 지정 예고에 따른 변동성 확대</div>
+  <div class="reasoning">복수의 기사에서 민테크가 반도체·로봇·전력기기 등 중소형 테마성 매수 대상에 포함되며 장중·종가 급등(상한가 포함)했고 거래량이 확대된 점이 직접적 원인으로 보입니다. 또한 한국거래소의 '투자유의종목/투자경고 지정 예고' 보도가 병행되어 단기 과열 심리를 더욱 자극해 가격 급등과 높은 거래량을 초래했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체 밸류체인</span><span>로봇·AI 인프라</span><span>배터리 진단 기술 성장성</span><span>투자유의종목 지정 예고(거래소 공시)</span><span>이격도 과열·단기 수급 쏠림</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한울반도체</span> <span class="ticker">320000 · KOSDAQ</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 액면병합(주식병합) 실시 및 거래정지 해제 → 액면병합 후 첫 거래일 상한가</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>액면병합</span><span>거래정지 해제</span><span>유통주식수 감소</span><span>첫 거래일 상한가</span><span>수급개선</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">큐로홀딩스</span> <span class="ticker">051780 · KOSDAQ</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">policy</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 공정거래위원회 공시대상기업집단(자산 5조원 이상) 신규 편입 공시(큐로홀딩스 계열 QCP그룹 명기)</div>
+  <div class="reasoning">공정위가 4월29일 발표한 공시대상기업집단 지정에서 QCP그룹(전 큐로홀딩스)이 신규 편입된 사실은 해당 그룹·계열사에 공시·규제 의무 확대라는 구조적 변화 신호로 해석된다. 이후 코스닥 내 소형주·액면병합 관련 단기 매수 심리와 거래재개 흐름이 5월 중 소형주 랠리를 촉발하면서 5/11 큐로홀딩스의 급등을 증폭시킨 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-12일)</div>
+  
+  <div class="keywords"><span>공정거래위원회 지정</span><span>대기업집단 편입</span><span>QCP그룹 전환 공시</span><span>공시의무·내부거래 규제 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">미래반도체</span> <span class="ticker">254490 · KOSDAQ</span></div>
+    <span class="pct">+29.98%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 장비주 동반 강세(삼전닉스·오로스테크놀로지 랠리)로 인한 장비 섹터 수혜 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260504, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>반도체 장비</span><span>메모리 AI 수요</span><span>장비주 수주 증가</span><span>D램 서버 수요</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">이노인스트루먼트</span> <span class="ticker">215790 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/테마(광통신·통신장비)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 데이터센터·5G 네트워크 투자 확대로 인한 광네트워크(OTDR·광융착접속기 등) 장비 수요 기대에 따른 테마성 수급 유입</div>
+  <div class="reasoning">당일(2026.05.11) 다수 보도가 삼성·SK하이닉스 강세와 AI 데이터센터·통신인프라 투자 기대가 중소 광통신·통신장비주로 확산되며 수급이 몰렸다고 전함. 이노인스트루먼트는 광계측 장비(OTDR, 광융착접속기 등) 업체로 분류돼 개별 공시 없이도 섹터성 매수의 수혜를 받은 것으로 판단됨.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>광통신 인프라</span><span>5G 네트워크 투자</span><span>OTDR·광융착접속기 수요</span><span>광네트워크 품질검사 장비</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003642619&office_id=081&code=215790&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스닥 거래상위 종목 강세...대한광통신·코스모로보...</a> <small style="color:var(--muted)">[2026.05.11 13:22] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013922122&office_id=003&code=215790&page=&sm=" target="_blank" rel="noopener">지난달에만 4배 뛰었다…수익률 상위 휩쓴 테마주</a> <small style="color:var(--muted)">[2026.05.02 08:00] 뉴시스 · stock_news</small></li><li><a href="http://www.econonews.co.kr/news/articleView.html?idxno=437959" target="_blank" rel="noopener">[상한가 종목] 경인전자-코스모로보틱스 이어 미래반도체-한울반도체 등...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 이코노뉴스 · search:이노인스트루먼트</small></li><li><a href="https://www.ggilbo.com/news/articleView.html?idxno=1157393" target="_blank" rel="noopener">[주식마감] 반도체株 또 불기둥... 미래반도체·한울반도체 나란히 '上'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 금강일보 · search:이노인스트루먼트</small></li><li><a href="https://www.etoday.co.kr/news/view/2583403" target="_blank" rel="noopener">[급등락주 짚어보기] ‘코스닥 입성’ 코스모로보틱스 '따따블'…코스피...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 이투데이 · search:이노인스트루먼트</small></li><li><a href="https://www.newsworks.co.kr/news/articleView.html?idxno=840392" target="_blank" rel="noopener">[20일 특징주] 코스모로보틱스, 코스닥 데뷔 첫날 '따따블' 달성</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웍스 · search:이노인스트루먼트</small></li><li><a href="http://www.newswell.co.kr/news/articleView.html?idxno=18591" target="_blank" rel="noopener">8천피? 코스피 전망 1만피 찍고 '1만2천피' 나왔다 [뉴스톡 웰스톡]</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웰 · search:이노인스트루먼트</small></li><li><a href="http://www.choicenews.co.kr/news/articleView.html?idxno=165081" target="_blank" rel="noopener">코스닥...로보티즈 · 원익IPS · 펩트론 · 대한광통신 '껑충'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 초이스경제 · search:이노인스트루먼트</small></li><li><a href="http://www.fieldnews.kr/news/articleView.html?idxno=28486" target="_blank" rel="noopener">[마감 시황] 개미가 끌어올린 코스피, 8000선으로 순항 중</a> <small style="color:var(--muted)">[2026.05.07 00:00] 필드뉴스 · search:이노인스트루먼트</small></li><li><a href="https://www.ggilbo.com/news/articleView.html?idxno=1157275" target="_blank" rel="noopener">이노인스트루먼트주가, 상한가.... 무슨 회사길래?</a> <small style="color:var(--muted)">[2026.05.07 00:00] 금강일보 · search:이노인스트루먼트</small></li><li><a href="https://www.seoul.co.kr/news/economy/securities/2026/05/11/20260511500107?wlog_tag3=naver" target="_blank" rel="noopener">[서울데이터랩]코스닥 거래상위 종목 강세...대한광통신·코스모로보틱...</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:이노인스트루먼트</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451744" target="_blank" rel="noopener">AI 데이터센터 물량 터졌다…대한광통신, '광섬유 수직계열화'로 승부수</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:이노인스트루먼트</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">피델릭스</span> <span class="ticker">032580 · KOSDAQ</span></div>
+    <span class="pct">+29.94%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 업황 개선·AI 서버 수요 확산에 따른 메모리 팹리스·오토모티브용 저전력·고신뢰성 메모리 수요 기대</div>
+  <div class="reasoning">미국 반도체 지수 급등과 삼성전자·SK하이닉스 신고가에 따른 업종적 수급 재평가가 2026.05.11 단기 랠리를 촉발했으며, 다수 기사에서 피델릭스가 메모리 팹리스라는 사업 특성으로 동반 급등 종목으로 언급됐다. 기업 공시나 계약성 뉴스는 없고, 업종·테마성(반도체·AI·모바일/오토모티브 메모리) 수급이 직접적 트리거로 작용한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>메모리 팹리스</span><span>오토모티브 메모리</span><span>저전력 고신뢰성 메모리</span><span>PSRAM 모바일 DDR</span><span>시리얼 NOR 플래시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">티플랙스</span> <span class="ticker">081150 · KOSDAQ</span></div>
+    <span class="pct">+29.94%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 김영국 회장 장내 매수로 보유지분 10.46%→11.34%(총 21만3990주 추가 취득, 4/29~5/7 취득단가 3,587~3,713원)</div>
+  <div class="reasoning">회사 최대주주(회장)의 5거래일에 걸친 대량 장내매수가 공시되어 책임경영·지배력 강화 신호로 해석되었고, 개인·단기 수급이 몰린 장에서 매수 심리를 자극해 급등을 촉발했다. 여기에 같은 기간 반도체 밸류체인·특수강 관련 순환매가 강하게 유입되며 상승이 증폭됐다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-4일)</div>
+  
+  <div class="keywords"><span>지배구조·수급</span><span>반도체 밸류체인</span><span>장내 매수 지분 확대</span><span>스테인리스 특수강 공급</span><span>산업용 소재 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">에스비비테크</span> <span class="ticker">389500 · KOSDAQ</span></div>
+    <span class="pct">+25.70%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">로봇·휴머노이드</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 하모닉 감속기 공급 보도(로봇용 감속기 수주/공급 언급)</div>
+  <div class="reasoning">최근 매체에서 '하모닉 감속기 공급' 보도와 대표 인터뷰(로봇관절 핵심부품 매출 목표)가 동시 노출되며 실물 수주 기대감이 확산됐습니다. 또한 휴머노이드 테마 ETF 상장·보스턴다이나믹스 상장 기대 등 섹터 모멘텀이 동반되어 급등을 촉발한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.08 (D-3일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>로봇용 감속기(하모닉)</span><span>로봇 부품 수주</span><span>하모닉 감속기 공급 계약</span><span>로봇 관절 모듈 매출 가시화</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">대한광통신</span> <span class="ticker">010170 · KOSDAQ</span></div>
+    <span class="pct">+25.06%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">데이터센터/통신인프라</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 미국 인캡아메리카 지분 90% 인수 완료로 북미 전력·광통신 인프라 진입(인수 공시)</div>
+  <div class="reasoning">회사가 5월 6일 북미 업체 인수 완료를 공시하면서 북미 시장 진출과 AI 데이터센터 관련 전력·광통신 인프라 공급 가능성이 부각되었다. 이후 미국 데이터센터 납품 기사(5/8)와 AI 데이터센터 수요 확산 보도가 겹치며 투자 심리가 확대되어 대량 매수로 주가가 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>광통신 인프라</span><span>지분 90% 인수 완료</span><span>미국 데이터센터 납품</span><span>광케이블 쇼티지</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">뷰티스킨</span> <span class="ticker">406820 · KOSDAQ</span></div>
+    <span class="pct">+24.10%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 업계 대장주의 역대 분기 실적(어닝 서프라이즈) 발표로 화장품주 전반에 매수세 유입</div>
+  <div class="reasoning">에이피알의 5월 8일 역대 분기 실적 관련 보도가 화장품 섹터 전반의 강세를 촉발했고, 이후 5월 11일에도 관련 업종 강세 기사가 이어지며 소형주로 수급이 파급된 것으로 판단됩니다. 뷰티스킨은 별도 공시·실적·수주성 호재가 없으므로 섹터 모멘텀에 따른 동반 급등으로 해석됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.08 (D-3일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>K-뷰티 강세</span><span>수출 증가</span><span>오프라인 매출 회복</span><span>OEM·ODM 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">유니트론텍</span> <span class="ticker">142210 · KOSDAQ</span></div>
+    <span class="pct">+21.60%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 유통(디스트리뷰션) 사업 수익성 부각 — 유통 마진 확대 및 재고운영 개선</div>
+  <div class="reasoning">네이버 태그 기사(더스쿠프, 2026.05.01)가 유니트론텍의 '반도체 유통으로 수익을 내는 구조'를 집중 조명하며 투자심리를 자극한 것으로 보입니다. 별도의 공시(계약·실적·정책)는 확인되지 않아 언론 보도가 매수 집중을 촉발한 테마성 상승으로 판단됩니다. 거래량 급증과 동반된 급등 특성으로 인해 확정적 호재보다는 미디어 노출 기반 수급 유입 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.01 (D-13일)</div>
+  
+  <div class="keywords"><span>반도체 유통</span><span>디스트리뷰션 마진</span><span>유통 마진 확대</span><span>재고회전율 개선</span><span>유통 계약 확보</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">지오엘리먼트</span> <span class="ticker">311320 · KOSDAQ</span></div>
+    <span class="pct">+20.85%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 173% 상승(반도체 업황 회복에 따른 장비·소재 출하 증가)</div>
+  <div class="reasoning">회사 공시에 태그된 기사에서 1분기 영업이익이 173% 급증했다고 보도되어 직접적 호재로 작용한 것으로 보입니다. 반도체 업황 개선이 매출·이익에 즉시 반영된 실적 서프라이즈가 매수 심리를 자극해 급등한 것으로 판단합니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-3일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>어닝 서프라이즈</span><span>1분기 영업이익 173% 증가</span><span>장비·소재 출하 증가</span><span>파운드리 수요 회복</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한국가구</span> <span class="ticker">004590 · KOSDAQ</span></div>
+    <span class="pct">+20.18%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 KRX 투자주의종목 지정(소수계좌 매수집중에 따른 투자주의 지정)</div>
+  <div class="reasoning">한국거래소가 '소수계좌의 매수 집중'을 근거로 해당 종목을 투자주의종목으로 지정한 공시가 핵심 트리거입니다. 동기간 여러 매체가 상대강도·이격도 과열 종목군으로 한국가구를 지목한 점과 거래량 급증이 맞물려 단기 급등을 촉발한 것으로 보입니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>소수계좌 매수집중</span><span>투자주의종목 지정</span><span>상대강도 과열</span><span>이격도 과열</span><span>저PBR 가치주 재평가</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">가온그룹</span> <span class="ticker">078890 · KOSDAQ</span></div>
+    <span class="pct">+19.43%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적/통신장비(광통신)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 어닝 서프라이즈(영업익 113억, 전년比 2450.8%↑) 및 광통신 기반 Wi‑Fi7 공급 확대 발표</div>
+  <div class="reasoning">공시성 실적 발표에서 1분기 영업이익이 대폭 개선됐고(113억원, 전년대비 크게 증가) 관련 기사들이 광통신 기반의 Wi‑Fi7 공급 확대를 명시해 수주·매출 성장 기대가 부각되었다. 이러한 실적 개선과 구체적 제품(광모듈·광통신 기반 Wi‑Fi7) 수요 확대 언급이 단기 급등을 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>광통신</span><span>Wi‑Fi7</span><span>어닝 서프라이즈</span><span>Wi‑Fi7 광모듈 공급확대</span><span>1분기 영업이익 113억</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">에이치브이엠</span> <span class="ticker">295310 · KOSDAQ</span></div>
+    <span class="pct">+18.02%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">우주·방위(국방·우주 산업)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 매경이코노미 기사에서 '우주 전쟁' 수혜주로 언급된 데 따른 테마 성(언론) 부각</div>
+  <div class="reasoning">해당 종목이 언론 기사(네이버 태그)에 '우주 전쟁' 수혜주로 분류되며 테마성 매수세가 유입된 것으로 보입니다. 공시·수주·실적 등의 명확한 호재는 확인되지 않아 매체 보도에 따른 수급·테마성 급등으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.05 (D-9일)</div>
+  
+  <div class="keywords"><span>우주·방위(국방·우주)</span><span>위성·발사체</span><span>군사위성 탑재체</span><span>우주 감시(SSA) 센서</span><span>방산 수주</span><span>국방 R&D 예산</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">주성엔지니어링</span> <span class="ticker">036930 · KOSDAQ</span></div>
+    <span class="pct">+17.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 메모리 대형주(Samsung·SK하이닉스) 급등에 따른 반도체 장비주(수급·모멘텀) 동반 신고가 및 단기 과열</div>
+  <div class="reasoning">여러 매체가 이날 삼성전자·SK하이닉스 등 메모리 대형주의 강한 랠리가 지수·업종을 견인했고, 그 영향으로 반도체 장비주(주성엔지니어링 포함)가 동반 급등했다고 보도했습니다. 한국거래소의 '투자경고·매매거래정지 예고' 공시는 상승의 결과로 단기 과열을 보여주는 규제적 신호로 해석됩니다. 회사 고유의 공시·계약성 뉴스는 확인되지 않아 상승은 주로 업종·수급성 모멘텀에 기인한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>메모리 랠리</span><span>AI 데이터센터 투자</span><span>반도체 장비 수급</span><span>거래소 투자경고·매매정지</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">인바디</span> <span class="ticker">041830 · KOSDAQ</span></div>
+    <span class="pct">+17.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 130억(전년比 +86%) 발표 및 애널리스트 목표가 상향·비만치료 시장 수요 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>비만 치료 확산</span><span>의료기기(체성분)</span><span>1Q 영업이익 130억(전년比 86%↑)</span><span>체성분 데이터 플랫폼·비만치료 연계</span><span>애널리스트 목표가 상향(5.5만)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">와이엠씨</span> <span class="ticker">155650 · KOSDAQ</span></div>
+    <span class="pct">+17.34%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체(전력반도체·디스플레이 부품)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 SiC(실리콘카바이드) 부품(식각 공정용 링·캐소드) 신규 양산·충남 당진 신규 생산라인 본격가동</div>
+  <div class="reasoning">사측이 SiC 부품(식각 공정용 링·캐소드)의 올해 본격 양산 돌입과 충남 당진 신규 생산라인 가동을 언급하며 중장기 매출 확대 기대를 제시한 보도가 확인됐다. 여기에 OLED/디스플레이·반도체 장비·부품 업종의 동반 강세(섹터 모멘텀)가 매수심리를 촉발해 단기 급등으로 이어진 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-1일)</div>
+  
+  <div class="keywords"><span>SiC 전력반도체</span><span>OLED 투자재개</span><span>SiC 링·캐소드 양산</span><span>충남 당진 신규 생산라인</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">빛과전자</span> <span class="ticker">069540 · KOSDAQ</span></div>
+    <span class="pct">+16.73%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">광통신/데이터센터</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 국제인공지능대전 참가로 '데이터센터용 차세대 광통신 솔루션' 전시(제품·기술 홍보)</div>
+  <div class="reasoning">회사 측이 2026.05.06 국제인공지능대전에서 데이터센터용 차세대 광통신 솔루션을 출품·홍보했다는 보도가 나왔고, 이후(05.11) 코스닥 강세 종목으로 언급되며 투자심리가 급등한 것으로 보인다. 구체적 수주 공시나 계약 자료는 없으나 AI·데이터센터 인프라 수요 기대와 전시 활동을 연결해 단기 매수세가 유입된 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>데이터센터</span><span>광통신</span><span>국제인공지능대전</span><span>데이터센터용 차세대 광통신 솔루션</span><span>광모듈 수주·POC</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">펨트론</span> <span class="ticker">168360 · KOSDAQ</span></div>
+    <span class="pct">+16.36%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 HBM(고대역폭메모리) 생산 확대 기대에 따른 반도체 검사장비(머신비전·후공정 검사장비) 수요 재조명</div>
+  <div class="reasoning">5월 7일 전후 다수 기사들이 HBM·AI 서버 메모리 수요 회복과 반도체 후공정·검사장비 수혜를 연결해 보도하며 펨트론을 검사장비 수혜주로 직접 거론했다. 종목 태깅(장내 공시·추가상장 안내 포함)과 함께 섹터 중심의 매수세 유입이 거래량 확대와 함께 주가 급등을 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-1일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>HBM(고대역폭메모리)</span><span>검사장비(머신비전)</span><span>후공정 패키징 검사</span><span>AI 서버 메모리 수요</span></div>
+  <details><summary>📰 관련 뉴스 11건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004618267&office_id=011&code=168360&page=&sm=" target="_blank" rel="noopener">오늘의 메모[5월 8일]</a> <small style="color:var(--muted)">[2026.05.07 11:08] 서울경제 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451332" target="_blank" rel="noopener">심텍, 글로벌 반도체 PCB 시장 정조준… 독보적 기술력으로 승부</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.sedaily.com/article/20041170?ref=naver" target="_blank" rel="noopener">오늘의 메모[5월 8일]</a> <small style="color:var(--muted)">[]  · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450987" target="_blank" rel="noopener">광통신·네트워크·솔더 아우르는 기술력… 빛샘전자, 글로벌 영토 넓힌...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450716" target="_blank" rel="noopener">씨앤지하이테크, CCSS 장비 및 에칭가스 국산화로 성장 동력 확보</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450676" target="_blank" rel="noopener">삼성전자 P5에 THC 반입…워트, HBM 시장 공략 속도 낸다</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450483" target="_blank" rel="noopener">2차전지 장비 명가 에이프로, 전기차·자율주행으로 사업 다각화</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450409" target="_blank" rel="noopener">에이프로, 8인치 GaN 전력반도체 본격 양산… 차세대 반도체 '게임 체인...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451840" target="_blank" rel="noopener">배터리 속 불량 15분 만에 잡는다... 민테크, EIS 기술로 글로벌 평정</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451834" target="_blank" rel="noopener">삼성전자 출신 초격차 유통 미래반도체…세계 유일 AS센터로 신뢰 굳혔...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451818" target="_blank" rel="noopener">반도체 넘어 이차전지까지…한울반도체, 머신비전 기술로 검사 자동화 ...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li></ul></details>
+</div></div>
+<h2>❓ 이유 불명 (원인 미상 — 추적 필요) <small style="color:var(--muted)">(2)</small></h2>
+<div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">아이티센씨티에스</span> <span class="ticker">031820 · KOSPI</span></div>
+    <span class="pct">+15.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급 (AI·클라우드/IT서비스 테마)</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 AI 인프라·클라우드·디지털전환(DX) 투자 기대감에 따른 IT서비스 섹터 순환매(업종·정책 기대감 기반 매수)</div>
+  <div class="reasoning">당일 및 직전 기간에 걸쳐 AI·클라우드·DX 관련 업종 강세를 알리는 기사들이 다수 보도되며 아이티센씨티에스를 수혜주로 직접 언급한 매체들이 확인된다. 회사의 자체 공시나 수주·실적성 호재는 없고, 주가 상승은 업종·수급·정책 기대감에 따른 테마성 자금 유입으로 해석된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>theme_only_supply</code> — 수급/테마성만</div><div>기사 12건 · 본문 12건 · origin stock_news:2, search:아이티센씨티에스:10 · 최신기사 2026-05-11 16:57 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>AI 인프라 투자</span><span>클라우드 전환(DX)</span><span>IT서비스 순환매</span><span>공공·금융 클라우드 수주</span><span>AI 데이터센터 확충</span><span>디지털 전환 컨설팅 수요</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002422190&office_id=092&code=031820&page=&sm=" target="_blank" rel="noopener">[ZD SW 투데이] 맨텍솔루션, AI엑스포서 차세대 PaaS 선봬 外</a> <small style="color:var(--muted)">[2026.05.11 16:57] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003426155&office_id=030&code=031820&page=&sm=" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.11 14:11] 전자신문 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451259" target="_blank" rel="noopener">현대오토에버, 자율주행·커넥티비티 날개 달고 '퀀텀 점프' 예고</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.newsworks.co.kr/news/articleView.html?idxno=840416" target="_blank" rel="noopener">[#클라우드 월드]아이티센'프라이빗 시네마 데이'·메가존-EY한영 '금...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웍스 · search:아이티센씨티에스</small></li><li><a href="https://zdnet.co.kr/view/?no=20260511095326" target="_blank" rel="noopener">[ZD SW 투데이] 맨텍솔루션, AI엑스포서 차세대 PaaS 선봬 外</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451890" target="_blank" rel="noopener">[상대강도과열 종목] 코스모로보틱스 민테크 미래반도체 피델릭스 경인...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451885" target="_blank" rel="noopener">[이격도과열 종목] 선도전기 민테크 큐로홀딩스 한울반도체 주가 더 뜨...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.etnews.com/20260511000315" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451805" target="_blank" rel="noopener">정책 기대감에 매수세 폭발…IT서비스주 카카오페이·코나아이 주가 신...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.datanet.co.kr/news/articleView.html?idxno=211513" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00] 데이터넷 · search:아이티센씨티에스</small></li><li><a href="https://www.smarttoday.co.kr/ko-kr/articles/107354" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 ‘프라이빗 시네마 데이’ 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00] 스마트투데이 · search:아이티센씨티에스</small></li><li><a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=664408" target="_blank" rel="noopener">아이티센그룹, '프라이빗 시네마 데이' 개최...여성 임직원 소통 지원</a> <small style="color:var(--muted)">[2026.05.07 00:00] 디지털투데이 · search:아이티센씨티에스</small></li></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">대구백화점</span> <span class="ticker">006370 · KOSPI</span></div>
+    <span class="pct">+9.38%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">오프라인 유통/지역 상권</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 unknown</div>
+  <div class="reasoning">제공된 최근 14일 뉴스에는 회사의 공시·실적·수주·정책 관련 직접적 정보가 없고, 대부분은 지역 행사(동성로 축제·팝업스토어)나 타사(대구 신세계백화점)의 전시·역사 기사에 불과합니다. 따라서 이날 급등(+9.38%)을 설명할 명확한 기업 고유의 트리거는 확인되지 않아 테마성·수급·기술적 변동일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>weak_name_link</code> — 종목명-기사 연결 약함</div><div>기사 10건 · 본문 10건 · origin search:대구백화점:10 · 최신기사 2026-05-07 00:00 · trigger_lag 후보 4일</div></div>
+  <div class="keywords"><span>지역 소비·상권 회복</span><span>오프라인 유통 회복</span><span>지역 축제·이벤트</span><span>바디프랜드 헬스케어 로봇 전시</span><span>음식물처리기 팝업스토어</span><span>동성로 축제 체험부스</span></div>
+  <details><summary>📰 관련 뉴스 10건</summary><ul><li><a href="https://www.idaegu.co.kr/news/articleView.html?idxno=547705" target="_blank" rel="noopener">바디프랜드 '헬스케어로봇' 전시·체험</a> <small style="color:var(--muted)">[2026.05.07 00:00] 대구신문 · search:대구백화점</small></li><li><a href="https://www.yeongnam.com/web/view.php?key=20260511021393255" target="_blank" rel="noopener">[Y르포] 46년 지나도 생생한 역사의 흔적…광주 5·18 사적지를 가다</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:대구백화점</small></li><li><a href="https://www.hidomin.com/news/articleView.html?idxno=704872" target="_blank" rel="noopener">"여름 전 음식물처리기 장만하세요"</a> <small style="color:var(--muted)">[2026.05.07 00:00] 경북도민일보 · search:대구백화점</small></li><li><a href="https://www.namdonews.com/news/articleView.html?idxno=910097" target="_blank" rel="noopener">[사설]5·18 46주년, '광주 밖 5·18' 재조명해야</a> <small style="color:var(--muted)">[2026.05.07 00:00] 남도일보 · search:대구백화점</small></li><li><a href="https://www.veritas-a.com/news/articleView.html?idxno=609301" target="_blank" rel="noopener">구미대 동성로축제 체험부스 인기 최고</a> <small style="color:var(--muted)">[2026.05.07 00:00] 베리타스알파 · search:대구백화점</small></li><li><a href="https://www.gukjenews.com/news/articleView.html?idxno=3578278" target="_blank" rel="noopener">구미대, 동성로축제서 체험부스 운영…시민 참여 '북적'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 국제뉴스 · search:대구백화점</small></li><li><a href="https://www.dkilbo.com/news/articleView.html?idxno=544113" target="_blank" rel="noopener">구미대, 동성로축제 체험부스 인기 최고</a> <small style="color:var(--muted)">[2026.05.06 00:00] 대경일보 · search:대구백화점</small></li><li><a href="https://www.hidomin.com/news/articleView.html?idxno=704700" target="_blank" rel="noopener">구미대, 동성로축제 체험부스 큰 호응</a> <small style="color:var(--muted)">[2026.05.06 00:00] 경북도민일보 · search:대구백화점</small></li><li><a href="https://daily.hankooki.com/news/articleView.html?idxno=1365461" target="_blank" rel="noopener">구미대, 동성로축제서 체험부스 운영</a> <small style="color:var(--muted)">[2026.05.06 00:00] 데일리한국 · search:대구백화점</small></li><li><a href="https://www.kbmaeil.com/article/20260510500572" target="_blank" rel="noopener">김부겸, 서문시장·동성로 찾아 “정치 싸움 말고대구경제 살리자” ...</a> <small style="color:var(--muted)">[2026.05.06 00:00] 경북매일신문 · search:대구백화점</small></li></ul></details>
+</div></div>
+
+</section>
+
+<section id="tab-theme" class="section">
+<h2>🎯 테마별 그룹</h2>
+<div class="theme-group"><div class="theme-title">미 블룸에너지의 'AI 붐' 사례 보도로 AI 데이터센터 전력인프라 수요 기대가 국내 전력株에 즉각 반영 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">선도전기</span> <span class="ticker">007610 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">전력기기/전력인프라 (테마성 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 미 블룸에너지의 'AI 붐' 사례 보도로 AI 데이터센터 전력인프라 수요 기대가 국내 전력株에 즉각 반영</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260512, 4일째 등장)</div>
+  
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>전력인프라 수주</span><span>블룸에너지 사례</span><span>변압기·개폐기 공급</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">보스턴다이내믹스 '아틀라스' 영상 등 피지컬AI·로봇 모멘텀과 반도체 대형주 강세에 따른 전력 인프라/데이터센터 전력주로의 순환매 및 우선주 수급 쏠림(우선주 특유의 과열) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">계양전기우</span> <span class="ticker">012205 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 보스턴다이내믹스 '아틀라스' 영상 등 피지컬AI·로봇 모멘텀과 반도체 대형주 강세에 따른 전력 인프라/데이터센터 전력주로의 순환매 및 우선주 수급 쏠림(우선주 특유의 과열)</div>
+  <div class="reasoning">11일 코스피 대형 반도체주 강세가 지수 급등을 주도했고, 보스턴다이내믹스의 '아틀라스' 영상 등 피지컬AI·로봇 관련 기대감이 현대차 계열 및 전력/전장 관련 소형주로 순환매를 촉발했다. 기사들에서 계양전기우의 상한가·우선주 수급 쏠림·이격도 과열이 직접적으로 반복 보고되어 수급·테마성 매수가 핵심 원인으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>피지컬AI</span><span>데이터센터 전력 인프라</span><span>반도체 업황 회복</span><span>보스턴다이내믹스 아틀라스 영상</span><span>우선주 수급 쏠림</span><span>이격도 과열</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">한솔그룹의 M&A·지배력 강화 기대(그룹 차원의 신사업 확장·재편 보도) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">한솔테크닉스</span> <span class="ticker">004710 · KOSPI</span></div>
+    <span class="pct">+29.96%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/그룹 M&A(지배구조 변화)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 한솔그룹의 M&A·지배력 강화 기대(그룹 차원의 신사업 확장·재편 보도)</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260507, 3일째 등장)</div>
+  
+  
+  <div class="keywords"><span>M&A</span><span>지배구조 개편</span><span>계열사 흡수합병</span><span>신사업 투자처 공개</span><span>지분율 변동공시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">중소형 전자부품주로의 단기 수급 집중(반도체 밸류체인·전력기기 순환매에 따른 테마성 매수) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">경인전자</span> <span class="ticker">009140 · KOSPI</span></div>
+    <span class="pct">+29.81%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 중소형 전자부품주로의 단기 수급 집중(반도체 밸류체인·전력기기 순환매에 따른 테마성 매수)</div>
+  <div class="reasoning">당일 다수 기사와 거래소 마감시황이 반도체 대형주 강세에 따른 업종·테마성 순환매로 중소형 전자부품·전력기기 종목에 수급이 집중됐다고 설명하고 있으며, 경인전자는 그 흐름 속에서 상단에 포함되어 급등했다. 별도 공시·계약·실적 관련 본문 근거는 없고 가격 움직임이 시장·수급성 요인에 의해 발생한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체 밸류체인</span><span>AI 데이터센터</span><span>전력기기 수요</span><span>중소형 전자부품 순환매</span><span>레버리지 ETN 자금유입</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">유럽 전동화 가속화로 EV용 열관리(thermal management) 시스템 수요 확대 기대 — 시장(언론) 중심의 EV 업황 기대감이 주가 급등의 직접적 촉발 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">한온시스템</span> <span class="ticker">018880 · KOSPI</span></div>
+    <span class="pct">+20.13%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">자동차 전동화 (EV)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 유럽 전동화 가속화로 EV용 열관리(thermal management) 시스템 수요 확대 기대 — 시장(언론) 중심의 EV 업황 기대감이 주가 급등의 직접적 촉발</div>
+  <div class="reasoning">D-day 당일 다수의 종목 태그 기사들이 'EV 업황 기대감'을 직접 언급하며 한온시스템을 52주 신고가로 보도했고, 한국타이어 그룹 실적 기사에서도 전동화 수요 확대가 부품사 실적 개선으로 연결된다는 내용이 함께 제시됐다. 회사의 개별 공시나 수주공고는 없으므로 언론·테마성 수급(시장 기대감)이 주가를 밀어올린 것으로 판단한다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>전동화</span><span>유럽 전기차 전환</span><span>EV용 열관리 시스템 수주</span><span>히트펌프·배터리 열관리</span><span>OEM 신차용 공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">반도체 '도핑 제어' 기술·공정 개선 기대에 따른 장비·부품 수요 확대(업종 모멘텀) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">광전자</span> <span class="ticker">017900 · KOSPI</span></div>
+    <span class="pct">+17.75%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체(장비·부품) 테마성 수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 '도핑 제어' 기술·공정 개선 기대에 따른 장비·부품 수요 확대(업종 모멘텀)</div>
+  <div class="reasoning">최근 복수의 종목태그 기사들이 반도체·부품주 강세를 지목했고(특히 5/6의 '도핑 제어 기술' 보도), 업종 모멘텀이 광전자의 대량거래를 촉발한 것으로 보인다. 회사 고유의 공시나 계약성 뉴스는 없어 단기적인 테마·수급(투심) 중심의 급등으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>반도체 장비·부품</span><span>반도체 공정개선</span><span>도핑 제어 기술 상용화</span><span>WFE 수요 확대</span><span>부품 공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">AI 인프라·클라우드·디지털전환(DX) 투자 기대감에 따른 IT서비스 섹터 순환매(업종·정책 기대감 기반 매수) <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">아이티센씨티에스</span> <span class="ticker">031820 · KOSPI</span></div>
+    <span class="pct">+15.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급 (AI·클라우드/IT서비스 테마)</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 AI 인프라·클라우드·디지털전환(DX) 투자 기대감에 따른 IT서비스 섹터 순환매(업종·정책 기대감 기반 매수)</div>
+  <div class="reasoning">당일 및 직전 기간에 걸쳐 AI·클라우드·DX 관련 업종 강세를 알리는 기사들이 다수 보도되며 아이티센씨티에스를 수혜주로 직접 언급한 매체들이 확인된다. 회사의 자체 공시나 수주·실적성 호재는 없고, 주가 상승은 업종·수급·정책 기대감에 따른 테마성 자금 유입으로 해석된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>theme_only_supply</code> — 수급/테마성만</div><div>기사 12건 · 본문 12건 · origin stock_news:2, search:아이티센씨티에스:10 · 최신기사 2026-05-11 16:57 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>AI 인프라 투자</span><span>클라우드 전환(DX)</span><span>IT서비스 순환매</span><span>공공·금융 클라우드 수주</span><span>AI 데이터센터 확충</span><span>디지털 전환 컨설팅 수요</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002422190&office_id=092&code=031820&page=&sm=" target="_blank" rel="noopener">[ZD SW 투데이] 맨텍솔루션, AI엑스포서 차세대 PaaS 선봬 外</a> <small style="color:var(--muted)">[2026.05.11 16:57] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003426155&office_id=030&code=031820&page=&sm=" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.11 14:11] 전자신문 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451259" target="_blank" rel="noopener">현대오토에버, 자율주행·커넥티비티 날개 달고 '퀀텀 점프' 예고</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.newsworks.co.kr/news/articleView.html?idxno=840416" target="_blank" rel="noopener">[#클라우드 월드]아이티센'프라이빗 시네마 데이'·메가존-EY한영 '금...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웍스 · search:아이티센씨티에스</small></li><li><a href="https://zdnet.co.kr/view/?no=20260511095326" target="_blank" rel="noopener">[ZD SW 투데이] 맨텍솔루션, AI엑스포서 차세대 PaaS 선봬 外</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451890" target="_blank" rel="noopener">[상대강도과열 종목] 코스모로보틱스 민테크 미래반도체 피델릭스 경인...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451885" target="_blank" rel="noopener">[이격도과열 종목] 선도전기 민테크 큐로홀딩스 한울반도체 주가 더 뜨...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.etnews.com/20260511000315" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451805" target="_blank" rel="noopener">정책 기대감에 매수세 폭발…IT서비스주 카카오페이·코나아이 주가 신...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.datanet.co.kr/news/articleView.html?idxno=211513" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00] 데이터넷 · search:아이티센씨티에스</small></li><li><a href="https://www.smarttoday.co.kr/ko-kr/articles/107354" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 ‘프라이빗 시네마 데이’ 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00] 스마트투데이 · search:아이티센씨티에스</small></li><li><a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=664408" target="_blank" rel="noopener">아이티센그룹, '프라이빗 시네마 데이' 개최...여성 임직원 소통 지원</a> <small style="color:var(--muted)">[2026.05.07 00:00] 디지털투데이 · search:아이티센씨티에스</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">반도체 사업 전환을 위해 4,000억 원 규모 M&A 집행(한솔그룹의 대규모 인수·투자 집행) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">한솔홀딩스</span> <span class="ticker">004150 · KOSPI</span></div>
+    <span class="pct">+12.77%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">M&A</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 사업 전환을 위해 4,000억 원 규모 M&A 집행(한솔그룹의 대규모 인수·투자 집행)</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>M&A</span><span>반도체 전환</span><span>오픈이노베이션</span><span>4</span><span>000억 M&A</span><span>인수 대상(반도체 소재/장비)</span><span>벤처스튜디오 투자</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">608억 규모 연료전지 시스템 공급계약(공시) 및 SOFC 상용화 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">두산퓨얼셀</span> <span class="ticker">336260 · KOSPI</span></div>
+    <span class="pct">+12.05%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수소·연료전지</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 608억 규모 연료전지 시스템 공급계약(공시) 및 SOFC 상용화 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260506, 3일째 등장)</div>
+  
+  
+  <div class="keywords"><span>수소 연료전지</span><span>SOFC 상용화</span><span>연료전지 시스템 공급계약 608억</span><span>수주 납품 일정</span><span>그룹 내 수주 연계</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">화학·첨단소재 업황 랠리(2차전지·디스플레이용 소재 수요 회복)로 인한 동반 상승 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">경인양행</span> <span class="ticker">012610 · KOSPI</span></div>
+    <span class="pct">+12.04%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">화학·소재</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 화학·첨단소재 업황 랠리(2차전지·디스플레이용 소재 수요 회복)로 인한 동반 상승</div>
+  <div class="reasoning">최근 1~2주 보도는 경인양행 고유의 공시·수주 성과가 아니라 화학·첨단소재 섹터의 동반 랠리(2차전지·OLED/디스플레이 소재 수요 기대 및 코스피 상승)에 따라 중소형 소재주로 매수세가 유입된 점을 직접적으로 지적하고 있다. 복수 기사에서 경인양행이 업종 강세의 수혜 종목으로 거론돼 단기 급등은 섹터·수급·기술적 재평가에 의한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>화학업종 랠리</span><span>2차전지 소재 수요</span><span>OLED·디스플레이 소재 공급망</span><span>디스플레이용 소재 수주</span><span>인천 중소형주 수혜</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">파인·주성그룹 승계 관련 보도 및 오르비텍 M&A 재구성 논의로 인한 지분·인수 관련 기대감 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">주성코퍼레이션</span> <span class="ticker">109070 · KOSPI</span></div>
+    <span class="pct">+11.64%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체·부품주</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 파인·주성그룹 승계 관련 보도 및 오르비텍 M&A 재구성 논의로 인한 지분·인수 관련 기대감</div>
+  <div class="reasoning">05.07자 기사에서 그룹 승계·M&A 재구성 소식이 제기되며 투자자들의 재무구조/지배구조 개선 기대를 자극했고, 이후 05.11의 반도체·부품주 전반 강세와 맞물려 매수세가 확대된 것으로 보입니다. 공시성 호재는 확인되지 않아 단기적인 테마·수급 중심의 급등 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>반도체·부품주</span><span>기업승계</span><span>인수합병 재구성</span><span>승계 관련 지분 거래</span><span>수급·거래상위 강세</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">AI 수요 급증에 따른 메모리(HBM·D램) 공급부족·가격 상승 기대(메모리 슈퍼사이클) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">SK하이닉스</span> <span class="ticker">000660 · KOSPI</span></div>
+    <span class="pct">+11.51%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 AI 수요 급증에 따른 메모리(HBM·D램) 공급부족·가격 상승 기대(메모리 슈퍼사이클)</div>
+  <div class="reasoning">당일(5월11일) 국내외 뉴스가 AI 데이터센터 수요 증가로 인한 메모리 공급 부족·HBM 수요 급증과 ‘메모리 슈퍼사이클’ 기대를 집중 보도했고, 이 영향으로 대형 메모리주들이 동반 급등하며 지수 상승을 견인했다. 추가로 삼성전자 노사(성과급) 이슈가 설비투자 억제(=Capex discipline) 기대를 자극해 공급 증가 속도 둔화 가능성이 부각된 점도 상승 압력으로 작용했다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>메모리 수급(공급부족)</span><span>메모리 슈퍼사이클</span><span>HBM 수요 급증</span><span>D램 가격 상승</span><span>Capex Discipline(설비투자 축소 가능성)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">AI 서버·데이터센터용 메모리(HBM) 및 시스템반도체 수요 기대에 따른 반도체 업종 동반 랠리(기관 순매수·상대강도·이격도 과열) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">DB하이텍</span> <span class="ticker">000990 · KOSPI</span></div>
+    <span class="pct">+11.06%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 서버·데이터센터용 메모리(HBM) 및 시스템반도체 수요 기대에 따른 반도체 업종 동반 랠리(기관 순매수·상대강도·이격도 과열)</div>
+  <div class="reasoning">당일(11일) 증시에서 삼성전자·SK하이닉스 중심의 반도체 대형주 급등과 기관 매수 집중이 업종 전반으로 확산되며 DB하이텍에도 수급 및 모멘텀성 매수가 유입된 것으로 보인다. 제공된 기사들에는 DB하이텍의 개별 공시·계약·실적 호재는 없고 거래소의 투자주의 지정 등은 급등의 결과로 파악되어, 이번 등락은 업종·수급(기술적·모멘텀) 요인이 핵심이다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>AI 데이터센터</span><span>HBM 수요 확대</span><span>시스템반도체 파운드리</span><span>기관 순매수</span><span>투자주의종목 지정</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">AI 서버용 FC-BGA(플립칩 BGA) 기판 매출 급증 및 스마트폰 고사양 카메라 모듈 수요 회복 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">LG이노텍</span> <span class="ticker">011070 · KOSPI</span></div>
+    <span class="pct">+10.26%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 서버용 FC-BGA(플립칩 BGA) 기판 매출 급증 및 스마트폰 고사양 카메라 모듈 수요 회복</div>
+  <div class="reasoning">국내 증시의 AI·반도체 랠리 속에서 기관 매수와 업황 개선 전망이 LG이노텍의 주가를 끌어올린 것으로 보인다. 보도들은 1분기 실적(역대 1분기 매출 기록)과 함께 FC-BGA 매출 증가, 고사양 카메라 모듈 및 전장 부문 성장 기대를 근거로 제시하고 있어 종목 고유의 실적 개선 기대가 가격을 밀어올렸다고 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 서버 투자</span><span>반도체 패키징(FC-BGA)</span><span>스마트폰 고사양 카메라 모듈</span><span>FC-BGA 매출 급증</span><span>고사양 카메라 모듈 수요</span><span>기관 순매수</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">unknown <small>(1종목)</small></div><div class="grid"><div class="card unclear">
+  <div class="row">
+    <div><span class="name">대구백화점</span> <span class="ticker">006370 · KOSPI</span></div>
+    <span class="pct">+9.38%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">오프라인 유통/지역 상권</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 unknown</div>
+  <div class="reasoning">제공된 최근 14일 뉴스에는 회사의 공시·실적·수주·정책 관련 직접적 정보가 없고, 대부분은 지역 행사(동성로 축제·팝업스토어)나 타사(대구 신세계백화점)의 전시·역사 기사에 불과합니다. 따라서 이날 급등(+9.38%)을 설명할 명확한 기업 고유의 트리거는 확인되지 않아 테마성·수급·기술적 변동일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>weak_name_link</code> — 종목명-기사 연결 약함</div><div>기사 10건 · 본문 10건 · origin search:대구백화점:10 · 최신기사 2026-05-07 00:00 · trigger_lag 후보 4일</div></div>
+  <div class="keywords"><span>지역 소비·상권 회복</span><span>오프라인 유통 회복</span><span>지역 축제·이벤트</span><span>바디프랜드 헬스케어 로봇 전시</span><span>음식물처리기 팝업스토어</span><span>동성로 축제 체험부스</span></div>
+  <details><summary>📰 관련 뉴스 10건</summary><ul><li><a href="https://www.idaegu.co.kr/news/articleView.html?idxno=547705" target="_blank" rel="noopener">바디프랜드 '헬스케어로봇' 전시·체험</a> <small style="color:var(--muted)">[2026.05.07 00:00] 대구신문 · search:대구백화점</small></li><li><a href="https://www.yeongnam.com/web/view.php?key=20260511021393255" target="_blank" rel="noopener">[Y르포] 46년 지나도 생생한 역사의 흔적…광주 5·18 사적지를 가다</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:대구백화점</small></li><li><a href="https://www.hidomin.com/news/articleView.html?idxno=704872" target="_blank" rel="noopener">"여름 전 음식물처리기 장만하세요"</a> <small style="color:var(--muted)">[2026.05.07 00:00] 경북도민일보 · search:대구백화점</small></li><li><a href="https://www.namdonews.com/news/articleView.html?idxno=910097" target="_blank" rel="noopener">[사설]5·18 46주년, '광주 밖 5·18' 재조명해야</a> <small style="color:var(--muted)">[2026.05.07 00:00] 남도일보 · search:대구백화점</small></li><li><a href="https://www.veritas-a.com/news/articleView.html?idxno=609301" target="_blank" rel="noopener">구미대 동성로축제 체험부스 인기 최고</a> <small style="color:var(--muted)">[2026.05.07 00:00] 베리타스알파 · search:대구백화점</small></li><li><a href="https://www.gukjenews.com/news/articleView.html?idxno=3578278" target="_blank" rel="noopener">구미대, 동성로축제서 체험부스 운영…시민 참여 '북적'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 국제뉴스 · search:대구백화점</small></li><li><a href="https://www.dkilbo.com/news/articleView.html?idxno=544113" target="_blank" rel="noopener">구미대, 동성로축제 체험부스 인기 최고</a> <small style="color:var(--muted)">[2026.05.06 00:00] 대경일보 · search:대구백화점</small></li><li><a href="https://www.hidomin.com/news/articleView.html?idxno=704700" target="_blank" rel="noopener">구미대, 동성로축제 체험부스 큰 호응</a> <small style="color:var(--muted)">[2026.05.06 00:00] 경북도민일보 · search:대구백화점</small></li><li><a href="https://daily.hankooki.com/news/articleView.html?idxno=1365461" target="_blank" rel="noopener">구미대, 동성로축제서 체험부스 운영</a> <small style="color:var(--muted)">[2026.05.06 00:00] 데일리한국 · search:대구백화점</small></li><li><a href="https://www.kbmaeil.com/article/20260510500572" target="_blank" rel="noopener">김부겸, 서문시장·동성로 찾아 “정치 싸움 말고대구경제 살리자” ...</a> <small style="color:var(--muted)">[2026.05.06 00:00] 경북매일신문 · search:대구백화점</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">한국거래소의 투자경고 지정 및 매매거래정지(예고) 공시·언급(시장감시에 따른 거래정지 리스크) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">삼아알미늄</span> <span class="ticker">006110 · KOSPI</span></div>
+    <span class="pct">+8.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/원자재(비철금속) & 시장감시(수급·수급리스크)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 한국거래소의 투자경고 지정 및 매매거래정지(예고) 공시·언급(시장감시에 따른 거래정지 리스크)</div>
+  <div class="reasoning">한국거래소 공시(및 관련 보도)가 삼아알미늄을 투자경고·매매거래정지 예고 명단에 올린 것이 직·간접적 촉매로 작용했습니다. 여기에 4월 LME 알루미늄 급등(수급 우려)과 2차전지 양극박 수요 회복 기대(사모펀드 엑시트 보도로 관심 확대)가 결합되며 단기 매수세가 집중된 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>투자경고·매매정지 리스크</span><span>LME 알루미늄 4월 급등(수급 우려)</span><span>2차전지 양극박 수요 회복</span><span>사모펀드 대규모 엑시트(회수)</span></div>
+  <details><summary>📰 관련 뉴스 13건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005517359&office_id=014&code=006110&page=&sm=" target="_blank" rel="noopener">증시 '과열 신호' 커졌다… 투자경고종목 한달새 50% 증가</a> <small style="color:var(--muted)">[2026.05.05 18:40] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005517244&office_id=014&code=006110&page=&sm=" target="_blank" rel="noopener">'증시 과열 경보음' 커졌다...투자경고 종목 50% 급증</a> <small style="color:var(--muted)">[2026.05.05 13:54] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001161797&office_id=366&code=006110&page=&sm=" target="_blank" rel="noopener">JKL인베, 삼아알미늄 투자금 700억 회수… 2차전지 양극박株 올라타...</a> <small style="color:var(--muted)">[2026.05.04 16:01] 조선비즈 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450782" target="_blank" rel="noopener">필옵틱스, 독보적 광학기술 앞세워 차세대 디스플레이·이차전지 공정 ...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="http://www.fnnews.com/news/202605051838401718" target="_blank" rel="noopener">증시 '과열 신호' 커졌다… 투자경고종목 한달새 50% 증가</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="http://www.fnnews.com/news/202605050829166640" target="_blank" rel="noopener">'증시 과열 경보음' 커졌다...투자경고 종목 50% 급증</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450513" target="_blank" rel="noopener">품질 우위 집중관리 나선 서원, 미국·중국 시장 공략 가속화</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://biz.chosun.com/stock/market_trend/2026/05/04/UWOG7SMMMFAKXP4KAKJEXI4KMA/?utm_source=naver&utm_medium=original&utm_campaign=biz" target="_blank" rel="noopener">JKL인베,삼아알미늄투자금 700억 회수… 2차전지 양극박株 올라타 2배...</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450353" target="_blank" rel="noopener">경기 침체에도 끄떡없는 파워넷의 비결… 테크 신사업 집중 육성 통했다</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://www.newstnt.com/news/articleView.html?idxno=701917" target="_blank" rel="noopener">[공시] KBI메탈·두산테스나·미래에셋벤처투자·삼아알미늄·주성엔지...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스티앤티 · search:삼아알미늄</small></li><li><a href="https://www.topstarnews.net/news/articleView.html?idxno=16057656" target="_blank" rel="noopener">삼아알미늄, 투자경고→매매거래 정지 예고</a> <small style="color:var(--muted)">[2026.05.07 00:00] 톱스타뉴스 · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451885" target="_blank" rel="noopener">[이격도과열 종목] 선도전기 민테크 큐로홀딩스 한울반도체 주가 더 뜨...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://www.pointdaily.co.kr/news/articleView.html?idxno=304323" target="_blank" rel="noopener">거래소, 아진엑스텍 등 4종목 투자경고종목 지정</a> <small style="color:var(--muted)">[2026.05.07 00:00] 포인트데일리 · search:삼아알미늄</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">램프사업부 매각 진행 및 일부 노조(김천지회)와의 고용승계 합의서 체결로 매각 불확실성 완화 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">현대모비스</span> <span class="ticker">012330 · KOSPI</span></div>
+    <span class="pct">+8.64%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">M&A / 구조조정</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 램프사업부 매각 진행 및 일부 노조(김천지회)와의 고용승계 합의서 체결로 매각 불확실성 완화</div>
+  <div class="reasoning">복수 보도에서 램프사업부 매각 관련 협의·합의 내용(김천지회와의 합의서 체결, OP모빌리티와의 인수협상 언급)이 전해지며 매각 실행 가능성이 높아졌다는 해석이 나왔고, 11일의 광범위한 대형주 랠리와 맞물려 현대모비스의 주가가 급등한 것으로 보인다. 다만 보도엔 노노 갈등과 미확정 고용조건 등 불확실성도 있어 상승은 매각 기대감에 따른 재평가적 성격이 강합니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-4일)</div>
+  
+  <div class="keywords"><span>사업부 매각</span><span>노사갈등</span><span>램프사업부 인수협상 OP모빌리티</span><span>고용승계 합의서</span><span>우선협상대상자</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">1분기 영업이익 350억원 발표(전년比 131% 증가) — 어닝 서프라이즈 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">TYM</span> <span class="ticker">002900 · KOSPI</span></div>
+    <span class="pct">+8.42%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 350억원 발표(전년比 131% 증가) — 어닝 서프라이즈</div>
+  <div class="reasoning">여러 매체의 종목태그 기사(2026.05.11)에서 1분기 영업이익 350억원, 전년 대비 131% 증가를 보도하여(명확한 호재성 공시·보도) 투자 심리가 개선된 것으로 보입니다. 거래량 증가와 함께 단기 긍정 반응이 발생해 D-day에 급등한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>농기계 수요</span><span>원가율 개선</span><span>1분기 영업이익 350억</span><span>영업이익 전년比 131%↑</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">동학개미 중심의 우선주 집중 매수로 인한 단기 수급 급등(대형주 대체매수·우선주 프리미엄 확대) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">삼성물산우B</span> <span class="ticker">02826K · KOSPI</span></div>
+    <span class="pct">+8.16%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급(개인투자자 매수·테마성 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 동학개미 중심의 우선주 집중 매수로 인한 단기 수급 급등(대형주 대체매수·우선주 프리미엄 확대)</div>
+  <div class="reasoning">한국경제(2026.05.11) 기사에서 개인투자자들이 몰리며 최고가를 기록했다고 보도되어, 별도 공시·실적·수주 등의 펀더멘탈 호재 없이 수급(개인 매수)이 가격 급등의 직접적 원인으로 판단됩니다. 기사 제목에 '삼성전자 못 사서 몰렸다'는 취지가 있어 대형주 대체매수(우선주로의 쏠림) 가능성도 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-3일)</div>
+  
+  <div class="keywords"><span>개인(동학개미) 매수</span><span>우선주 프리미엄 확대</span><span>대형주 대체매수</span><span>단기 수급 과열</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">HBM(고대역폭 메모리) 수요 증가 및 메모리 업황 회복에 따른 반도체 대형주 급등 → 시가총액 쏠림으로 지주·그룹주(대형) 동반 상승 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">SK스퀘어</span> <span class="ticker">402340 · KOSPI</span></div>
+    <span class="pct">+8.11%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체·수급(대형주 쏠림)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 HBM(고대역폭 메모리) 수요 증가 및 메모리 업황 회복에 따른 반도체 대형주 급등 → 시가총액 쏠림으로 지주·그룹주(대형) 동반 상승</div>
+  <div class="reasoning">당일(5월 11일) 코스피·반도체 대장주(SK하이닉스·삼성전자) 급등이 지수를 끌어올리며 시가총액 상위 그룹주들이 동반 강세를 보였고, 관련 보도에서 HBM 수요·메모리 가격 회복과 미국 반도체주 강세를 배경으로 지목하고 있음. SK스퀘어는 별도 공시성 호재 없이 그룹·대형주 수급·지수 효과에 연동해 상승한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>대형주 시총 쏠림</span><span>HBM 수요 증가</span><span>메모리 가격 회복</span><span>프로그램매수(사이드카)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">배터리 진단 기술 성장성 부각에 따른 테마성 매수(반도체·로봇·전력기기 순환매) 및 투자경고(투자유의) 지정 예고에 따른 변동성 확대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">민테크</span> <span class="ticker">452200 · KOSDAQ</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/테마(반도체·로봇 관련 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 배터리 진단 기술 성장성 부각에 따른 테마성 매수(반도체·로봇·전력기기 순환매) 및 투자경고(투자유의) 지정 예고에 따른 변동성 확대</div>
+  <div class="reasoning">복수의 기사에서 민테크가 반도체·로봇·전력기기 등 중소형 테마성 매수 대상에 포함되며 장중·종가 급등(상한가 포함)했고 거래량이 확대된 점이 직접적 원인으로 보입니다. 또한 한국거래소의 '투자유의종목/투자경고 지정 예고' 보도가 병행되어 단기 과열 심리를 더욱 자극해 가격 급등과 높은 거래량을 초래했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체 밸류체인</span><span>로봇·AI 인프라</span><span>배터리 진단 기술 성장성</span><span>투자유의종목 지정 예고(거래소 공시)</span><span>이격도 과열·단기 수급 쏠림</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">액면병합(주식병합) 실시 및 거래정지 해제 → 액면병합 후 첫 거래일 상한가 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">한울반도체</span> <span class="ticker">320000 · KOSDAQ</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 액면병합(주식병합) 실시 및 거래정지 해제 → 액면병합 후 첫 거래일 상한가</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>액면병합</span><span>거래정지 해제</span><span>유통주식수 감소</span><span>첫 거래일 상한가</span><span>수급개선</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">공정거래위원회 공시대상기업집단(자산 5조원 이상) 신규 편입 공시(큐로홀딩스 계열 QCP그룹 명기) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">큐로홀딩스</span> <span class="ticker">051780 · KOSDAQ</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">policy</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 공정거래위원회 공시대상기업집단(자산 5조원 이상) 신규 편입 공시(큐로홀딩스 계열 QCP그룹 명기)</div>
+  <div class="reasoning">공정위가 4월29일 발표한 공시대상기업집단 지정에서 QCP그룹(전 큐로홀딩스)이 신규 편입된 사실은 해당 그룹·계열사에 공시·규제 의무 확대라는 구조적 변화 신호로 해석된다. 이후 코스닥 내 소형주·액면병합 관련 단기 매수 심리와 거래재개 흐름이 5월 중 소형주 랠리를 촉발하면서 5/11 큐로홀딩스의 급등을 증폭시킨 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-12일)</div>
+  
+  <div class="keywords"><span>공정거래위원회 지정</span><span>대기업집단 편입</span><span>QCP그룹 전환 공시</span><span>공시의무·내부거래 규제 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">반도체 장비주 동반 강세(삼전닉스·오로스테크놀로지 랠리)로 인한 장비 섹터 수혜 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">미래반도체</span> <span class="ticker">254490 · KOSDAQ</span></div>
+    <span class="pct">+29.98%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 장비주 동반 강세(삼전닉스·오로스테크놀로지 랠리)로 인한 장비 섹터 수혜 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260504, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>반도체 장비</span><span>메모리 AI 수요</span><span>장비주 수주 증가</span><span>D램 서버 수요</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">AI 데이터센터·5G 네트워크 투자 확대로 인한 광네트워크(OTDR·광융착접속기 등) 장비 수요 기대에 따른 테마성 수급 유입 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">이노인스트루먼트</span> <span class="ticker">215790 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/테마(광통신·통신장비)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 데이터센터·5G 네트워크 투자 확대로 인한 광네트워크(OTDR·광융착접속기 등) 장비 수요 기대에 따른 테마성 수급 유입</div>
+  <div class="reasoning">당일(2026.05.11) 다수 보도가 삼성·SK하이닉스 강세와 AI 데이터센터·통신인프라 투자 기대가 중소 광통신·통신장비주로 확산되며 수급이 몰렸다고 전함. 이노인스트루먼트는 광계측 장비(OTDR, 광융착접속기 등) 업체로 분류돼 개별 공시 없이도 섹터성 매수의 수혜를 받은 것으로 판단됨.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>광통신 인프라</span><span>5G 네트워크 투자</span><span>OTDR·광융착접속기 수요</span><span>광네트워크 품질검사 장비</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003642619&office_id=081&code=215790&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스닥 거래상위 종목 강세...대한광통신·코스모로보...</a> <small style="color:var(--muted)">[2026.05.11 13:22] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013922122&office_id=003&code=215790&page=&sm=" target="_blank" rel="noopener">지난달에만 4배 뛰었다…수익률 상위 휩쓴 테마주</a> <small style="color:var(--muted)">[2026.05.02 08:00] 뉴시스 · stock_news</small></li><li><a href="http://www.econonews.co.kr/news/articleView.html?idxno=437959" target="_blank" rel="noopener">[상한가 종목] 경인전자-코스모로보틱스 이어 미래반도체-한울반도체 등...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 이코노뉴스 · search:이노인스트루먼트</small></li><li><a href="https://www.ggilbo.com/news/articleView.html?idxno=1157393" target="_blank" rel="noopener">[주식마감] 반도체株 또 불기둥... 미래반도체·한울반도체 나란히 '上'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 금강일보 · search:이노인스트루먼트</small></li><li><a href="https://www.etoday.co.kr/news/view/2583403" target="_blank" rel="noopener">[급등락주 짚어보기] ‘코스닥 입성’ 코스모로보틱스 '따따블'…코스피...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 이투데이 · search:이노인스트루먼트</small></li><li><a href="https://www.newsworks.co.kr/news/articleView.html?idxno=840392" target="_blank" rel="noopener">[20일 특징주] 코스모로보틱스, 코스닥 데뷔 첫날 '따따블' 달성</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웍스 · search:이노인스트루먼트</small></li><li><a href="http://www.newswell.co.kr/news/articleView.html?idxno=18591" target="_blank" rel="noopener">8천피? 코스피 전망 1만피 찍고 '1만2천피' 나왔다 [뉴스톡 웰스톡]</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웰 · search:이노인스트루먼트</small></li><li><a href="http://www.choicenews.co.kr/news/articleView.html?idxno=165081" target="_blank" rel="noopener">코스닥...로보티즈 · 원익IPS · 펩트론 · 대한광통신 '껑충'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 초이스경제 · search:이노인스트루먼트</small></li><li><a href="http://www.fieldnews.kr/news/articleView.html?idxno=28486" target="_blank" rel="noopener">[마감 시황] 개미가 끌어올린 코스피, 8000선으로 순항 중</a> <small style="color:var(--muted)">[2026.05.07 00:00] 필드뉴스 · search:이노인스트루먼트</small></li><li><a href="https://www.ggilbo.com/news/articleView.html?idxno=1157275" target="_blank" rel="noopener">이노인스트루먼트주가, 상한가.... 무슨 회사길래?</a> <small style="color:var(--muted)">[2026.05.07 00:00] 금강일보 · search:이노인스트루먼트</small></li><li><a href="https://www.seoul.co.kr/news/economy/securities/2026/05/11/20260511500107?wlog_tag3=naver" target="_blank" rel="noopener">[서울데이터랩]코스닥 거래상위 종목 강세...대한광통신·코스모로보틱...</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:이노인스트루먼트</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451744" target="_blank" rel="noopener">AI 데이터센터 물량 터졌다…대한광통신, '광섬유 수직계열화'로 승부수</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:이노인스트루먼트</small></li></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">반도체 업황 개선·AI 서버 수요 확산에 따른 메모리 팹리스·오토모티브용 저전력·고신뢰성 메모리 수요 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">피델릭스</span> <span class="ticker">032580 · KOSDAQ</span></div>
+    <span class="pct">+29.94%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 업황 개선·AI 서버 수요 확산에 따른 메모리 팹리스·오토모티브용 저전력·고신뢰성 메모리 수요 기대</div>
+  <div class="reasoning">미국 반도체 지수 급등과 삼성전자·SK하이닉스 신고가에 따른 업종적 수급 재평가가 2026.05.11 단기 랠리를 촉발했으며, 다수 기사에서 피델릭스가 메모리 팹리스라는 사업 특성으로 동반 급등 종목으로 언급됐다. 기업 공시나 계약성 뉴스는 없고, 업종·테마성(반도체·AI·모바일/오토모티브 메모리) 수급이 직접적 트리거로 작용한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>메모리 팹리스</span><span>오토모티브 메모리</span><span>저전력 고신뢰성 메모리</span><span>PSRAM 모바일 DDR</span><span>시리얼 NOR 플래시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">김영국 회장 장내 매수로 보유지분 10.46%→11.34%(총 21만3990주 추가 취득, 4/29~5/7 취득단가 3,587~3,713원) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">티플랙스</span> <span class="ticker">081150 · KOSDAQ</span></div>
+    <span class="pct">+29.94%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 김영국 회장 장내 매수로 보유지분 10.46%→11.34%(총 21만3990주 추가 취득, 4/29~5/7 취득단가 3,587~3,713원)</div>
+  <div class="reasoning">회사 최대주주(회장)의 5거래일에 걸친 대량 장내매수가 공시되어 책임경영·지배력 강화 신호로 해석되었고, 개인·단기 수급이 몰린 장에서 매수 심리를 자극해 급등을 촉발했다. 여기에 같은 기간 반도체 밸류체인·특수강 관련 순환매가 강하게 유입되며 상승이 증폭됐다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-4일)</div>
+  
+  <div class="keywords"><span>지배구조·수급</span><span>반도체 밸류체인</span><span>장내 매수 지분 확대</span><span>스테인리스 특수강 공급</span><span>산업용 소재 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">하모닉 감속기 공급 보도(로봇용 감속기 수주/공급 언급) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">에스비비테크</span> <span class="ticker">389500 · KOSDAQ</span></div>
+    <span class="pct">+25.70%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">로봇·휴머노이드</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 하모닉 감속기 공급 보도(로봇용 감속기 수주/공급 언급)</div>
+  <div class="reasoning">최근 매체에서 '하모닉 감속기 공급' 보도와 대표 인터뷰(로봇관절 핵심부품 매출 목표)가 동시 노출되며 실물 수주 기대감이 확산됐습니다. 또한 휴머노이드 테마 ETF 상장·보스턴다이나믹스 상장 기대 등 섹터 모멘텀이 동반되어 급등을 촉발한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.08 (D-3일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>로봇용 감속기(하모닉)</span><span>로봇 부품 수주</span><span>하모닉 감속기 공급 계약</span><span>로봇 관절 모듈 매출 가시화</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">미국 인캡아메리카 지분 90% 인수 완료로 북미 전력·광통신 인프라 진입(인수 공시) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">대한광통신</span> <span class="ticker">010170 · KOSDAQ</span></div>
+    <span class="pct">+25.06%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">데이터센터/통신인프라</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 미국 인캡아메리카 지분 90% 인수 완료로 북미 전력·광통신 인프라 진입(인수 공시)</div>
+  <div class="reasoning">회사가 5월 6일 북미 업체 인수 완료를 공시하면서 북미 시장 진출과 AI 데이터센터 관련 전력·광통신 인프라 공급 가능성이 부각되었다. 이후 미국 데이터센터 납품 기사(5/8)와 AI 데이터센터 수요 확산 보도가 겹치며 투자 심리가 확대되어 대량 매수로 주가가 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>광통신 인프라</span><span>지분 90% 인수 완료</span><span>미국 데이터센터 납품</span><span>광케이블 쇼티지</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">업계 대장주의 역대 분기 실적(어닝 서프라이즈) 발표로 화장품주 전반에 매수세 유입 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">뷰티스킨</span> <span class="ticker">406820 · KOSDAQ</span></div>
+    <span class="pct">+24.10%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 업계 대장주의 역대 분기 실적(어닝 서프라이즈) 발표로 화장품주 전반에 매수세 유입</div>
+  <div class="reasoning">에이피알의 5월 8일 역대 분기 실적 관련 보도가 화장품 섹터 전반의 강세를 촉발했고, 이후 5월 11일에도 관련 업종 강세 기사가 이어지며 소형주로 수급이 파급된 것으로 판단됩니다. 뷰티스킨은 별도 공시·실적·수주성 호재가 없으므로 섹터 모멘텀에 따른 동반 급등으로 해석됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.08 (D-3일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>K-뷰티 강세</span><span>수출 증가</span><span>오프라인 매출 회복</span><span>OEM·ODM 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">반도체 유통(디스트리뷰션) 사업 수익성 부각 — 유통 마진 확대 및 재고운영 개선 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">유니트론텍</span> <span class="ticker">142210 · KOSDAQ</span></div>
+    <span class="pct">+21.60%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 유통(디스트리뷰션) 사업 수익성 부각 — 유통 마진 확대 및 재고운영 개선</div>
+  <div class="reasoning">네이버 태그 기사(더스쿠프, 2026.05.01)가 유니트론텍의 '반도체 유통으로 수익을 내는 구조'를 집중 조명하며 투자심리를 자극한 것으로 보입니다. 별도의 공시(계약·실적·정책)는 확인되지 않아 언론 보도가 매수 집중을 촉발한 테마성 상승으로 판단됩니다. 거래량 급증과 동반된 급등 특성으로 인해 확정적 호재보다는 미디어 노출 기반 수급 유입 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.01 (D-13일)</div>
+  
+  <div class="keywords"><span>반도체 유통</span><span>디스트리뷰션 마진</span><span>유통 마진 확대</span><span>재고회전율 개선</span><span>유통 계약 확보</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">1분기 영업이익 173% 상승(반도체 업황 회복에 따른 장비·소재 출하 증가) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">지오엘리먼트</span> <span class="ticker">311320 · KOSDAQ</span></div>
+    <span class="pct">+20.85%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 173% 상승(반도체 업황 회복에 따른 장비·소재 출하 증가)</div>
+  <div class="reasoning">회사 공시에 태그된 기사에서 1분기 영업이익이 173% 급증했다고 보도되어 직접적 호재로 작용한 것으로 보입니다. 반도체 업황 개선이 매출·이익에 즉시 반영된 실적 서프라이즈가 매수 심리를 자극해 급등한 것으로 판단합니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-3일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>어닝 서프라이즈</span><span>1분기 영업이익 173% 증가</span><span>장비·소재 출하 증가</span><span>파운드리 수요 회복</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">KRX 투자주의종목 지정(소수계좌 매수집중에 따른 투자주의 지정) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">한국가구</span> <span class="ticker">004590 · KOSDAQ</span></div>
+    <span class="pct">+20.18%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 KRX 투자주의종목 지정(소수계좌 매수집중에 따른 투자주의 지정)</div>
+  <div class="reasoning">한국거래소가 '소수계좌의 매수 집중'을 근거로 해당 종목을 투자주의종목으로 지정한 공시가 핵심 트리거입니다. 동기간 여러 매체가 상대강도·이격도 과열 종목군으로 한국가구를 지목한 점과 거래량 급증이 맞물려 단기 급등을 촉발한 것으로 보입니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>소수계좌 매수집중</span><span>투자주의종목 지정</span><span>상대강도 과열</span><span>이격도 과열</span><span>저PBR 가치주 재평가</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">1분기 어닝 서프라이즈(영업익 113억, 전년比 2450.8%↑) 및 광통신 기반 Wi‑Fi7 공급 확대 발표 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">가온그룹</span> <span class="ticker">078890 · KOSDAQ</span></div>
+    <span class="pct">+19.43%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적/통신장비(광통신)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 어닝 서프라이즈(영업익 113억, 전년比 2450.8%↑) 및 광통신 기반 Wi‑Fi7 공급 확대 발표</div>
+  <div class="reasoning">공시성 실적 발표에서 1분기 영업이익이 대폭 개선됐고(113억원, 전년대비 크게 증가) 관련 기사들이 광통신 기반의 Wi‑Fi7 공급 확대를 명시해 수주·매출 성장 기대가 부각되었다. 이러한 실적 개선과 구체적 제품(광모듈·광통신 기반 Wi‑Fi7) 수요 확대 언급이 단기 급등을 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>광통신</span><span>Wi‑Fi7</span><span>어닝 서프라이즈</span><span>Wi‑Fi7 광모듈 공급확대</span><span>1분기 영업이익 113억</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">매경이코노미 기사에서 '우주 전쟁' 수혜주로 언급된 데 따른 테마 성(언론) 부각 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">에이치브이엠</span> <span class="ticker">295310 · KOSDAQ</span></div>
+    <span class="pct">+18.02%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">우주·방위(국방·우주 산업)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 매경이코노미 기사에서 '우주 전쟁' 수혜주로 언급된 데 따른 테마 성(언론) 부각</div>
+  <div class="reasoning">해당 종목이 언론 기사(네이버 태그)에 '우주 전쟁' 수혜주로 분류되며 테마성 매수세가 유입된 것으로 보입니다. 공시·수주·실적 등의 명확한 호재는 확인되지 않아 매체 보도에 따른 수급·테마성 급등으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.05 (D-9일)</div>
+  
+  <div class="keywords"><span>우주·방위(국방·우주)</span><span>위성·발사체</span><span>군사위성 탑재체</span><span>우주 감시(SSA) 센서</span><span>방산 수주</span><span>국방 R&D 예산</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">메모리 대형주(Samsung·SK하이닉스) 급등에 따른 반도체 장비주(수급·모멘텀) 동반 신고가 및 단기 과열 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">주성엔지니어링</span> <span class="ticker">036930 · KOSDAQ</span></div>
+    <span class="pct">+17.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 메모리 대형주(Samsung·SK하이닉스) 급등에 따른 반도체 장비주(수급·모멘텀) 동반 신고가 및 단기 과열</div>
+  <div class="reasoning">여러 매체가 이날 삼성전자·SK하이닉스 등 메모리 대형주의 강한 랠리가 지수·업종을 견인했고, 그 영향으로 반도체 장비주(주성엔지니어링 포함)가 동반 급등했다고 보도했습니다. 한국거래소의 '투자경고·매매거래정지 예고' 공시는 상승의 결과로 단기 과열을 보여주는 규제적 신호로 해석됩니다. 회사 고유의 공시·계약성 뉴스는 확인되지 않아 상승은 주로 업종·수급성 모멘텀에 기인한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>메모리 랠리</span><span>AI 데이터센터 투자</span><span>반도체 장비 수급</span><span>거래소 투자경고·매매정지</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">1분기 영업이익 130억(전년比 +86%) 발표 및 애널리스트 목표가 상향·비만치료 시장 수요 기대 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">인바디</span> <span class="ticker">041830 · KOSDAQ</span></div>
+    <span class="pct">+17.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 130억(전년比 +86%) 발표 및 애널리스트 목표가 상향·비만치료 시장 수요 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>비만 치료 확산</span><span>의료기기(체성분)</span><span>1Q 영업이익 130억(전년比 86%↑)</span><span>체성분 데이터 플랫폼·비만치료 연계</span><span>애널리스트 목표가 상향(5.5만)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">SiC(실리콘카바이드) 부품(식각 공정용 링·캐소드) 신규 양산·충남 당진 신규 생산라인 본격가동 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">와이엠씨</span> <span class="ticker">155650 · KOSDAQ</span></div>
+    <span class="pct">+17.34%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체(전력반도체·디스플레이 부품)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 SiC(실리콘카바이드) 부품(식각 공정용 링·캐소드) 신규 양산·충남 당진 신규 생산라인 본격가동</div>
+  <div class="reasoning">사측이 SiC 부품(식각 공정용 링·캐소드)의 올해 본격 양산 돌입과 충남 당진 신규 생산라인 가동을 언급하며 중장기 매출 확대 기대를 제시한 보도가 확인됐다. 여기에 OLED/디스플레이·반도체 장비·부품 업종의 동반 강세(섹터 모멘텀)가 매수심리를 촉발해 단기 급등으로 이어진 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-1일)</div>
+  
+  <div class="keywords"><span>SiC 전력반도체</span><span>OLED 투자재개</span><span>SiC 링·캐소드 양산</span><span>충남 당진 신규 생산라인</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">국제인공지능대전 참가로 '데이터센터용 차세대 광통신 솔루션' 전시(제품·기술 홍보) <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">빛과전자</span> <span class="ticker">069540 · KOSDAQ</span></div>
+    <span class="pct">+16.73%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">광통신/데이터센터</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 국제인공지능대전 참가로 '데이터센터용 차세대 광통신 솔루션' 전시(제품·기술 홍보)</div>
+  <div class="reasoning">회사 측이 2026.05.06 국제인공지능대전에서 데이터센터용 차세대 광통신 솔루션을 출품·홍보했다는 보도가 나왔고, 이후(05.11) 코스닥 강세 종목으로 언급되며 투자심리가 급등한 것으로 보인다. 구체적 수주 공시나 계약 자료는 없으나 AI·데이터센터 인프라 수요 기대와 전시 활동을 연결해 단기 매수세가 유입된 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>데이터센터</span><span>광통신</span><span>국제인공지능대전</span><span>데이터센터용 차세대 광통신 솔루션</span><span>광모듈 수주·POC</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div></div></div>
+<div class="theme-group"><div class="theme-title">HBM(고대역폭메모리) 생산 확대 기대에 따른 반도체 검사장비(머신비전·후공정 검사장비) 수요 재조명 <small>(1종목)</small></div><div class="grid"><div class="card new">
+  <div class="row">
+    <div><span class="name">펨트론</span> <span class="ticker">168360 · KOSDAQ</span></div>
+    <span class="pct">+16.36%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 HBM(고대역폭메모리) 생산 확대 기대에 따른 반도체 검사장비(머신비전·후공정 검사장비) 수요 재조명</div>
+  <div class="reasoning">5월 7일 전후 다수 기사들이 HBM·AI 서버 메모리 수요 회복과 반도체 후공정·검사장비 수혜를 연결해 보도하며 펨트론을 검사장비 수혜주로 직접 거론했다. 종목 태깅(장내 공시·추가상장 안내 포함)과 함께 섹터 중심의 매수세 유입이 거래량 확대와 함께 주가 급등을 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-1일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>HBM(고대역폭메모리)</span><span>검사장비(머신비전)</span><span>후공정 패키징 검사</span><span>AI 서버 메모리 수요</span></div>
+  <details><summary>📰 관련 뉴스 11건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004618267&office_id=011&code=168360&page=&sm=" target="_blank" rel="noopener">오늘의 메모[5월 8일]</a> <small style="color:var(--muted)">[2026.05.07 11:08] 서울경제 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451332" target="_blank" rel="noopener">심텍, 글로벌 반도체 PCB 시장 정조준… 독보적 기술력으로 승부</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.sedaily.com/article/20041170?ref=naver" target="_blank" rel="noopener">오늘의 메모[5월 8일]</a> <small style="color:var(--muted)">[]  · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450987" target="_blank" rel="noopener">광통신·네트워크·솔더 아우르는 기술력… 빛샘전자, 글로벌 영토 넓힌...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450716" target="_blank" rel="noopener">씨앤지하이테크, CCSS 장비 및 에칭가스 국산화로 성장 동력 확보</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450676" target="_blank" rel="noopener">삼성전자 P5에 THC 반입…워트, HBM 시장 공략 속도 낸다</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450483" target="_blank" rel="noopener">2차전지 장비 명가 에이프로, 전기차·자율주행으로 사업 다각화</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450409" target="_blank" rel="noopener">에이프로, 8인치 GaN 전력반도체 본격 양산… 차세대 반도체 '게임 체인...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451840" target="_blank" rel="noopener">배터리 속 불량 15분 만에 잡는다... 민테크, EIS 기술로 글로벌 평정</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451834" target="_blank" rel="noopener">삼성전자 출신 초격차 유통 미래반도체…세계 유일 AS센터로 신뢰 굳혔...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451818" target="_blank" rel="noopener">반도체 넘어 이차전지까지…한울반도체, 머신비전 기술로 검사 자동화 ...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li></ul></details>
+</div></div></div>
+
+</section>
+
+<section id="tab-all" class="section">
+<h2>🧾 전체 40개</h2>
+<div class="grid">
+<div class="card new">
+  <div class="row">
+    <div><span class="name">선도전기</span> <span class="ticker">007610 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">전력기기/전력인프라 (테마성 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 미 블룸에너지의 'AI 붐' 사례 보도로 AI 데이터센터 전력인프라 수요 기대가 국내 전력株에 즉각 반영</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260512, 4일째 등장)</div>
+  
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>전력인프라 수주</span><span>블룸에너지 사례</span><span>변압기·개폐기 공급</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">계양전기우</span> <span class="ticker">012205 · KOSPI</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 보스턴다이내믹스 '아틀라스' 영상 등 피지컬AI·로봇 모멘텀과 반도체 대형주 강세에 따른 전력 인프라/데이터센터 전력주로의 순환매 및 우선주 수급 쏠림(우선주 특유의 과열)</div>
+  <div class="reasoning">11일 코스피 대형 반도체주 강세가 지수 급등을 주도했고, 보스턴다이내믹스의 '아틀라스' 영상 등 피지컬AI·로봇 관련 기대감이 현대차 계열 및 전력/전장 관련 소형주로 순환매를 촉발했다. 기사들에서 계양전기우의 상한가·우선주 수급 쏠림·이격도 과열이 직접적으로 반복 보고되어 수급·테마성 매수가 핵심 원인으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>피지컬AI</span><span>데이터센터 전력 인프라</span><span>반도체 업황 회복</span><span>보스턴다이내믹스 아틀라스 영상</span><span>우선주 수급 쏠림</span><span>이격도 과열</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한솔테크닉스</span> <span class="ticker">004710 · KOSPI</span></div>
+    <span class="pct">+29.96%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/그룹 M&A(지배구조 변화)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 한솔그룹의 M&A·지배력 강화 기대(그룹 차원의 신사업 확장·재편 보도)</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260507, 3일째 등장)</div>
+  
+  
+  <div class="keywords"><span>M&A</span><span>지배구조 개편</span><span>계열사 흡수합병</span><span>신사업 투자처 공개</span><span>지분율 변동공시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">경인전자</span> <span class="ticker">009140 · KOSPI</span></div>
+    <span class="pct">+29.81%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 중소형 전자부품주로의 단기 수급 집중(반도체 밸류체인·전력기기 순환매에 따른 테마성 매수)</div>
+  <div class="reasoning">당일 다수 기사와 거래소 마감시황이 반도체 대형주 강세에 따른 업종·테마성 순환매로 중소형 전자부품·전력기기 종목에 수급이 집중됐다고 설명하고 있으며, 경인전자는 그 흐름 속에서 상단에 포함되어 급등했다. 별도 공시·계약·실적 관련 본문 근거는 없고 가격 움직임이 시장·수급성 요인에 의해 발생한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체 밸류체인</span><span>AI 데이터센터</span><span>전력기기 수요</span><span>중소형 전자부품 순환매</span><span>레버리지 ETN 자금유입</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한온시스템</span> <span class="ticker">018880 · KOSPI</span></div>
+    <span class="pct">+20.13%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">자동차 전동화 (EV)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 유럽 전동화 가속화로 EV용 열관리(thermal management) 시스템 수요 확대 기대 — 시장(언론) 중심의 EV 업황 기대감이 주가 급등의 직접적 촉발</div>
+  <div class="reasoning">D-day 당일 다수의 종목 태그 기사들이 'EV 업황 기대감'을 직접 언급하며 한온시스템을 52주 신고가로 보도했고, 한국타이어 그룹 실적 기사에서도 전동화 수요 확대가 부품사 실적 개선으로 연결된다는 내용이 함께 제시됐다. 회사의 개별 공시나 수주공고는 없으므로 언론·테마성 수급(시장 기대감)이 주가를 밀어올린 것으로 판단한다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>전동화</span><span>유럽 전기차 전환</span><span>EV용 열관리 시스템 수주</span><span>히트펌프·배터리 열관리</span><span>OEM 신차용 공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">광전자</span> <span class="ticker">017900 · KOSPI</span></div>
+    <span class="pct">+17.75%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체(장비·부품) 테마성 수급</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 '도핑 제어' 기술·공정 개선 기대에 따른 장비·부품 수요 확대(업종 모멘텀)</div>
+  <div class="reasoning">최근 복수의 종목태그 기사들이 반도체·부품주 강세를 지목했고(특히 5/6의 '도핑 제어 기술' 보도), 업종 모멘텀이 광전자의 대량거래를 촉발한 것으로 보인다. 회사 고유의 공시나 계약성 뉴스는 없어 단기적인 테마·수급(투심) 중심의 급등으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>반도체 장비·부품</span><span>반도체 공정개선</span><span>도핑 제어 기술 상용화</span><span>WFE 수요 확대</span><span>부품 공급계약</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">아이티센씨티에스</span> <span class="ticker">031820 · KOSPI</span></div>
+    <span class="pct">+15.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급 (AI·클라우드/IT서비스 테마)</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 AI 인프라·클라우드·디지털전환(DX) 투자 기대감에 따른 IT서비스 섹터 순환매(업종·정책 기대감 기반 매수)</div>
+  <div class="reasoning">당일 및 직전 기간에 걸쳐 AI·클라우드·DX 관련 업종 강세를 알리는 기사들이 다수 보도되며 아이티센씨티에스를 수혜주로 직접 언급한 매체들이 확인된다. 회사의 자체 공시나 수주·실적성 호재는 없고, 주가 상승은 업종·수급·정책 기대감에 따른 테마성 자금 유입으로 해석된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>theme_only_supply</code> — 수급/테마성만</div><div>기사 12건 · 본문 12건 · origin stock_news:2, search:아이티센씨티에스:10 · 최신기사 2026-05-11 16:57 · trigger_lag 후보 -1일</div></div>
+  <div class="keywords"><span>AI 인프라 투자</span><span>클라우드 전환(DX)</span><span>IT서비스 순환매</span><span>공공·금융 클라우드 수주</span><span>AI 데이터센터 확충</span><span>디지털 전환 컨설팅 수요</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0002422190&office_id=092&code=031820&page=&sm=" target="_blank" rel="noopener">[ZD SW 투데이] 맨텍솔루션, AI엑스포서 차세대 PaaS 선봬 外</a> <small style="color:var(--muted)">[2026.05.11 16:57] 지디넷코리아 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003426155&office_id=030&code=031820&page=&sm=" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.11 14:11] 전자신문 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451259" target="_blank" rel="noopener">현대오토에버, 자율주행·커넥티비티 날개 달고 '퀀텀 점프' 예고</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.newsworks.co.kr/news/articleView.html?idxno=840416" target="_blank" rel="noopener">[#클라우드 월드]아이티센'프라이빗 시네마 데이'·메가존-EY한영 '금...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웍스 · search:아이티센씨티에스</small></li><li><a href="https://zdnet.co.kr/view/?no=20260511095326" target="_blank" rel="noopener">[ZD SW 투데이] 맨텍솔루션, AI엑스포서 차세대 PaaS 선봬 外</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451890" target="_blank" rel="noopener">[상대강도과열 종목] 코스모로보틱스 민테크 미래반도체 피델릭스 경인...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451885" target="_blank" rel="noopener">[이격도과열 종목] 선도전기 민테크 큐로홀딩스 한울반도체 주가 더 뜨...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.etnews.com/20260511000315" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:아이티센씨티에스</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451805" target="_blank" rel="noopener">정책 기대감에 매수세 폭발…IT서비스주 카카오페이·코나아이 주가 신...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:아이티센씨티에스</small></li><li><a href="https://www.datanet.co.kr/news/articleView.html?idxno=211513" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 '프라이빗 시네마 데이' 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00] 데이터넷 · search:아이티센씨티에스</small></li><li><a href="https://www.smarttoday.co.kr/ko-kr/articles/107354" target="_blank" rel="noopener">아이티센그룹, 여성 임직원 대상 ‘프라이빗 시네마 데이’ 개최</a> <small style="color:var(--muted)">[2026.05.07 00:00] 스마트투데이 · search:아이티센씨티에스</small></li><li><a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=664408" target="_blank" rel="noopener">아이티센그룹, '프라이빗 시네마 데이' 개최...여성 임직원 소통 지원</a> <small style="color:var(--muted)">[2026.05.07 00:00] 디지털투데이 · search:아이티센씨티에스</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한솔홀딩스</span> <span class="ticker">004150 · KOSPI</span></div>
+    <span class="pct">+12.77%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">M&A</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 사업 전환을 위해 4,000억 원 규모 M&A 집행(한솔그룹의 대규모 인수·투자 집행)</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>M&A</span><span>반도체 전환</span><span>오픈이노베이션</span><span>4</span><span>000억 M&A</span><span>인수 대상(반도체 소재/장비)</span><span>벤처스튜디오 투자</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">두산퓨얼셀</span> <span class="ticker">336260 · KOSPI</span></div>
+    <span class="pct">+12.05%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수소·연료전지</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 608억 규모 연료전지 시스템 공급계약(공시) 및 SOFC 상용화 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260506, 3일째 등장)</div>
+  
+  
+  <div class="keywords"><span>수소 연료전지</span><span>SOFC 상용화</span><span>연료전지 시스템 공급계약 608억</span><span>수주 납품 일정</span><span>그룹 내 수주 연계</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">경인양행</span> <span class="ticker">012610 · KOSPI</span></div>
+    <span class="pct">+12.04%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">화학·소재</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 화학·첨단소재 업황 랠리(2차전지·디스플레이용 소재 수요 회복)로 인한 동반 상승</div>
+  <div class="reasoning">최근 1~2주 보도는 경인양행 고유의 공시·수주 성과가 아니라 화학·첨단소재 섹터의 동반 랠리(2차전지·OLED/디스플레이 소재 수요 기대 및 코스피 상승)에 따라 중소형 소재주로 매수세가 유입된 점을 직접적으로 지적하고 있다. 복수 기사에서 경인양행이 업종 강세의 수혜 종목으로 거론돼 단기 급등은 섹터·수급·기술적 재평가에 의한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>화학업종 랠리</span><span>2차전지 소재 수요</span><span>OLED·디스플레이 소재 공급망</span><span>디스플레이용 소재 수주</span><span>인천 중소형주 수혜</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">주성코퍼레이션</span> <span class="ticker">109070 · KOSPI</span></div>
+    <span class="pct">+11.64%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체·부품주</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 파인·주성그룹 승계 관련 보도 및 오르비텍 M&A 재구성 논의로 인한 지분·인수 관련 기대감</div>
+  <div class="reasoning">05.07자 기사에서 그룹 승계·M&A 재구성 소식이 제기되며 투자자들의 재무구조/지배구조 개선 기대를 자극했고, 이후 05.11의 반도체·부품주 전반 강세와 맞물려 매수세가 확대된 것으로 보입니다. 공시성 호재는 확인되지 않아 단기적인 테마·수급 중심의 급등 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>반도체·부품주</span><span>기업승계</span><span>인수합병 재구성</span><span>승계 관련 지분 거래</span><span>수급·거래상위 강세</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">SK하이닉스</span> <span class="ticker">000660 · KOSPI</span></div>
+    <span class="pct">+11.51%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 AI 수요 급증에 따른 메모리(HBM·D램) 공급부족·가격 상승 기대(메모리 슈퍼사이클)</div>
+  <div class="reasoning">당일(5월11일) 국내외 뉴스가 AI 데이터센터 수요 증가로 인한 메모리 공급 부족·HBM 수요 급증과 ‘메모리 슈퍼사이클’ 기대를 집중 보도했고, 이 영향으로 대형 메모리주들이 동반 급등하며 지수 상승을 견인했다. 추가로 삼성전자 노사(성과급) 이슈가 설비투자 억제(=Capex discipline) 기대를 자극해 공급 증가 속도 둔화 가능성이 부각된 점도 상승 압력으로 작용했다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>메모리 수급(공급부족)</span><span>메모리 슈퍼사이클</span><span>HBM 수요 급증</span><span>D램 가격 상승</span><span>Capex Discipline(설비투자 축소 가능성)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">DB하이텍</span> <span class="ticker">000990 · KOSPI</span></div>
+    <span class="pct">+11.06%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 서버·데이터센터용 메모리(HBM) 및 시스템반도체 수요 기대에 따른 반도체 업종 동반 랠리(기관 순매수·상대강도·이격도 과열)</div>
+  <div class="reasoning">당일(11일) 증시에서 삼성전자·SK하이닉스 중심의 반도체 대형주 급등과 기관 매수 집중이 업종 전반으로 확산되며 DB하이텍에도 수급 및 모멘텀성 매수가 유입된 것으로 보인다. 제공된 기사들에는 DB하이텍의 개별 공시·계약·실적 호재는 없고 거래소의 투자주의 지정 등은 급등의 결과로 파악되어, 이번 등락은 업종·수급(기술적·모멘텀) 요인이 핵심이다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>AI 데이터센터</span><span>HBM 수요 확대</span><span>시스템반도체 파운드리</span><span>기관 순매수</span><span>투자주의종목 지정</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">LG이노텍</span> <span class="ticker">011070 · KOSPI</span></div>
+    <span class="pct">+10.26%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 서버용 FC-BGA(플립칩 BGA) 기판 매출 급증 및 스마트폰 고사양 카메라 모듈 수요 회복</div>
+  <div class="reasoning">국내 증시의 AI·반도체 랠리 속에서 기관 매수와 업황 개선 전망이 LG이노텍의 주가를 끌어올린 것으로 보인다. 보도들은 1분기 실적(역대 1분기 매출 기록)과 함께 FC-BGA 매출 증가, 고사양 카메라 모듈 및 전장 부문 성장 기대를 근거로 제시하고 있어 종목 고유의 실적 개선 기대가 가격을 밀어올렸다고 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 서버 투자</span><span>반도체 패키징(FC-BGA)</span><span>스마트폰 고사양 카메라 모듈</span><span>FC-BGA 매출 급증</span><span>고사양 카메라 모듈 수요</span><span>기관 순매수</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card unclear">
+  <div class="row">
+    <div><span class="name">대구백화점</span> <span class="ticker">006370 · KOSPI</span></div>
+    <span class="pct">+9.38%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">오프라인 유통/지역 상권</span>
+    <span class="conf low">low</span>
+  </div>
+  <div class="signal">🎯 unknown</div>
+  <div class="reasoning">제공된 최근 14일 뉴스에는 회사의 공시·실적·수주·정책 관련 직접적 정보가 없고, 대부분은 지역 행사(동성로 축제·팝업스토어)나 타사(대구 신세계백화점)의 전시·역사 기사에 불과합니다. 따라서 이날 급등(+9.38%)을 설명할 명확한 기업 고유의 트리거는 확인되지 않아 테마성·수급·기술적 변동일 가능성이 큽니다.</div>
+  
+  <div class="unknown-diag" style="margin-top:6px; padding:6px 8px; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); border-radius:6px; font-size:12px; color:var(--muted)"><div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>weak_name_link</code> — 종목명-기사 연결 약함</div><div>기사 10건 · 본문 10건 · origin search:대구백화점:10 · 최신기사 2026-05-07 00:00 · trigger_lag 후보 4일</div></div>
+  <div class="keywords"><span>지역 소비·상권 회복</span><span>오프라인 유통 회복</span><span>지역 축제·이벤트</span><span>바디프랜드 헬스케어 로봇 전시</span><span>음식물처리기 팝업스토어</span><span>동성로 축제 체험부스</span></div>
+  <details><summary>📰 관련 뉴스 10건</summary><ul><li><a href="https://www.idaegu.co.kr/news/articleView.html?idxno=547705" target="_blank" rel="noopener">바디프랜드 '헬스케어로봇' 전시·체험</a> <small style="color:var(--muted)">[2026.05.07 00:00] 대구신문 · search:대구백화점</small></li><li><a href="https://www.yeongnam.com/web/view.php?key=20260511021393255" target="_blank" rel="noopener">[Y르포] 46년 지나도 생생한 역사의 흔적…광주 5·18 사적지를 가다</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:대구백화점</small></li><li><a href="https://www.hidomin.com/news/articleView.html?idxno=704872" target="_blank" rel="noopener">"여름 전 음식물처리기 장만하세요"</a> <small style="color:var(--muted)">[2026.05.07 00:00] 경북도민일보 · search:대구백화점</small></li><li><a href="https://www.namdonews.com/news/articleView.html?idxno=910097" target="_blank" rel="noopener">[사설]5·18 46주년, '광주 밖 5·18' 재조명해야</a> <small style="color:var(--muted)">[2026.05.07 00:00] 남도일보 · search:대구백화점</small></li><li><a href="https://www.veritas-a.com/news/articleView.html?idxno=609301" target="_blank" rel="noopener">구미대 동성로축제 체험부스 인기 최고</a> <small style="color:var(--muted)">[2026.05.07 00:00] 베리타스알파 · search:대구백화점</small></li><li><a href="https://www.gukjenews.com/news/articleView.html?idxno=3578278" target="_blank" rel="noopener">구미대, 동성로축제서 체험부스 운영…시민 참여 '북적'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 국제뉴스 · search:대구백화점</small></li><li><a href="https://www.dkilbo.com/news/articleView.html?idxno=544113" target="_blank" rel="noopener">구미대, 동성로축제 체험부스 인기 최고</a> <small style="color:var(--muted)">[2026.05.06 00:00] 대경일보 · search:대구백화점</small></li><li><a href="https://www.hidomin.com/news/articleView.html?idxno=704700" target="_blank" rel="noopener">구미대, 동성로축제 체험부스 큰 호응</a> <small style="color:var(--muted)">[2026.05.06 00:00] 경북도민일보 · search:대구백화점</small></li><li><a href="https://daily.hankooki.com/news/articleView.html?idxno=1365461" target="_blank" rel="noopener">구미대, 동성로축제서 체험부스 운영</a> <small style="color:var(--muted)">[2026.05.06 00:00] 데일리한국 · search:대구백화점</small></li><li><a href="https://www.kbmaeil.com/article/20260510500572" target="_blank" rel="noopener">김부겸, 서문시장·동성로 찾아 “정치 싸움 말고대구경제 살리자” ...</a> <small style="color:var(--muted)">[2026.05.06 00:00] 경북매일신문 · search:대구백화점</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">삼아알미늄</span> <span class="ticker">006110 · KOSPI</span></div>
+    <span class="pct">+8.78%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/원자재(비철금속) & 시장감시(수급·수급리스크)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 한국거래소의 투자경고 지정 및 매매거래정지(예고) 공시·언급(시장감시에 따른 거래정지 리스크)</div>
+  <div class="reasoning">한국거래소 공시(및 관련 보도)가 삼아알미늄을 투자경고·매매거래정지 예고 명단에 올린 것이 직·간접적 촉매로 작용했습니다. 여기에 4월 LME 알루미늄 급등(수급 우려)과 2차전지 양극박 수요 회복 기대(사모펀드 엑시트 보도로 관심 확대)가 결합되며 단기 매수세가 집중된 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>투자경고·매매정지 리스크</span><span>LME 알루미늄 4월 급등(수급 우려)</span><span>2차전지 양극박 수요 회복</span><span>사모펀드 대규모 엑시트(회수)</span></div>
+  <details><summary>📰 관련 뉴스 13건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005517359&office_id=014&code=006110&page=&sm=" target="_blank" rel="noopener">증시 '과열 신호' 커졌다… 투자경고종목 한달새 50% 증가</a> <small style="color:var(--muted)">[2026.05.05 18:40] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0005517244&office_id=014&code=006110&page=&sm=" target="_blank" rel="noopener">'증시 과열 경보음' 커졌다...투자경고 종목 50% 급증</a> <small style="color:var(--muted)">[2026.05.05 13:54] 파이낸셜뉴스 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0001161797&office_id=366&code=006110&page=&sm=" target="_blank" rel="noopener">JKL인베, 삼아알미늄 투자금 700억 회수… 2차전지 양극박株 올라타...</a> <small style="color:var(--muted)">[2026.05.04 16:01] 조선비즈 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450782" target="_blank" rel="noopener">필옵틱스, 독보적 광학기술 앞세워 차세대 디스플레이·이차전지 공정 ...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="http://www.fnnews.com/news/202605051838401718" target="_blank" rel="noopener">증시 '과열 신호' 커졌다… 투자경고종목 한달새 50% 증가</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="http://www.fnnews.com/news/202605050829166640" target="_blank" rel="noopener">'증시 과열 경보음' 커졌다...투자경고 종목 50% 급증</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450513" target="_blank" rel="noopener">품질 우위 집중관리 나선 서원, 미국·중국 시장 공략 가속화</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://biz.chosun.com/stock/market_trend/2026/05/04/UWOG7SMMMFAKXP4KAKJEXI4KMA/?utm_source=naver&utm_medium=original&utm_campaign=biz" target="_blank" rel="noopener">JKL인베,삼아알미늄투자금 700억 회수… 2차전지 양극박株 올라타 2배...</a> <small style="color:var(--muted)">[]  · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450353" target="_blank" rel="noopener">경기 침체에도 끄떡없는 파워넷의 비결… 테크 신사업 집중 육성 통했다</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://www.newstnt.com/news/articleView.html?idxno=701917" target="_blank" rel="noopener">[공시] KBI메탈·두산테스나·미래에셋벤처투자·삼아알미늄·주성엔지...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스티앤티 · search:삼아알미늄</small></li><li><a href="https://www.topstarnews.net/news/articleView.html?idxno=16057656" target="_blank" rel="noopener">삼아알미늄, 투자경고→매매거래 정지 예고</a> <small style="color:var(--muted)">[2026.05.07 00:00] 톱스타뉴스 · search:삼아알미늄</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451885" target="_blank" rel="noopener">[이격도과열 종목] 선도전기 민테크 큐로홀딩스 한울반도체 주가 더 뜨...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:삼아알미늄</small></li><li><a href="https://www.pointdaily.co.kr/news/articleView.html?idxno=304323" target="_blank" rel="noopener">거래소, 아진엑스텍 등 4종목 투자경고종목 지정</a> <small style="color:var(--muted)">[2026.05.07 00:00] 포인트데일리 · search:삼아알미늄</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">현대모비스</span> <span class="ticker">012330 · KOSPI</span></div>
+    <span class="pct">+8.64%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">M&A / 구조조정</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 램프사업부 매각 진행 및 일부 노조(김천지회)와의 고용승계 합의서 체결로 매각 불확실성 완화</div>
+  <div class="reasoning">복수 보도에서 램프사업부 매각 관련 협의·합의 내용(김천지회와의 합의서 체결, OP모빌리티와의 인수협상 언급)이 전해지며 매각 실행 가능성이 높아졌다는 해석이 나왔고, 11일의 광범위한 대형주 랠리와 맞물려 현대모비스의 주가가 급등한 것으로 보인다. 다만 보도엔 노노 갈등과 미확정 고용조건 등 불확실성도 있어 상승은 매각 기대감에 따른 재평가적 성격이 강합니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-4일)</div>
+  
+  <div class="keywords"><span>사업부 매각</span><span>노사갈등</span><span>램프사업부 인수협상 OP모빌리티</span><span>고용승계 합의서</span><span>우선협상대상자</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">TYM</span> <span class="ticker">002900 · KOSPI</span></div>
+    <span class="pct">+8.42%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 350억원 발표(전년比 131% 증가) — 어닝 서프라이즈</div>
+  <div class="reasoning">여러 매체의 종목태그 기사(2026.05.11)에서 1분기 영업이익 350억원, 전년 대비 131% 증가를 보도하여(명확한 호재성 공시·보도) 투자 심리가 개선된 것으로 보입니다. 거래량 증가와 함께 단기 긍정 반응이 발생해 D-day에 급등한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>농기계 수요</span><span>원가율 개선</span><span>1분기 영업이익 350억</span><span>영업이익 전년比 131%↑</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">삼성물산우B</span> <span class="ticker">02826K · KOSPI</span></div>
+    <span class="pct">+8.16%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급(개인투자자 매수·테마성 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 동학개미 중심의 우선주 집중 매수로 인한 단기 수급 급등(대형주 대체매수·우선주 프리미엄 확대)</div>
+  <div class="reasoning">한국경제(2026.05.11) 기사에서 개인투자자들이 몰리며 최고가를 기록했다고 보도되어, 별도 공시·실적·수주 등의 펀더멘탈 호재 없이 수급(개인 매수)이 가격 급등의 직접적 원인으로 판단됩니다. 기사 제목에 '삼성전자 못 사서 몰렸다'는 취지가 있어 대형주 대체매수(우선주로의 쏠림) 가능성도 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-3일)</div>
+  
+  <div class="keywords"><span>개인(동학개미) 매수</span><span>우선주 프리미엄 확대</span><span>대형주 대체매수</span><span>단기 수급 과열</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">SK스퀘어</span> <span class="ticker">402340 · KOSPI</span></div>
+    <span class="pct">+8.11%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체·수급(대형주 쏠림)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 HBM(고대역폭 메모리) 수요 증가 및 메모리 업황 회복에 따른 반도체 대형주 급등 → 시가총액 쏠림으로 지주·그룹주(대형) 동반 상승</div>
+  <div class="reasoning">당일(5월 11일) 코스피·반도체 대장주(SK하이닉스·삼성전자) 급등이 지수를 끌어올리며 시가총액 상위 그룹주들이 동반 강세를 보였고, 관련 보도에서 HBM 수요·메모리 가격 회복과 미국 반도체주 강세를 배경으로 지목하고 있음. SK스퀘어는 별도 공시성 호재 없이 그룹·대형주 수급·지수 효과에 연동해 상승한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>대형주 시총 쏠림</span><span>HBM 수요 증가</span><span>메모리 가격 회복</span><span>프로그램매수(사이드카)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">민테크</span> <span class="ticker">452200 · KOSDAQ</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/테마(반도체·로봇 관련 수급)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 배터리 진단 기술 성장성 부각에 따른 테마성 매수(반도체·로봇·전력기기 순환매) 및 투자경고(투자유의) 지정 예고에 따른 변동성 확대</div>
+  <div class="reasoning">복수의 기사에서 민테크가 반도체·로봇·전력기기 등 중소형 테마성 매수 대상에 포함되며 장중·종가 급등(상한가 포함)했고 거래량이 확대된 점이 직접적 원인으로 보입니다. 또한 한국거래소의 '투자유의종목/투자경고 지정 예고' 보도가 병행되어 단기 과열 심리를 더욱 자극해 가격 급등과 높은 거래량을 초래했습니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체 밸류체인</span><span>로봇·AI 인프라</span><span>배터리 진단 기술 성장성</span><span>투자유의종목 지정 예고(거래소 공시)</span><span>이격도 과열·단기 수급 쏠림</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한울반도체</span> <span class="ticker">320000 · KOSDAQ</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 액면병합(주식병합) 실시 및 거래정지 해제 → 액면병합 후 첫 거래일 상한가</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>액면병합</span><span>거래정지 해제</span><span>유통주식수 감소</span><span>첫 거래일 상한가</span><span>수급개선</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">큐로홀딩스</span> <span class="ticker">051780 · KOSDAQ</span></div>
+    <span class="pct">+29.99%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">policy</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 공정거래위원회 공시대상기업집단(자산 5조원 이상) 신규 편입 공시(큐로홀딩스 계열 QCP그룹 명기)</div>
+  <div class="reasoning">공정위가 4월29일 발표한 공시대상기업집단 지정에서 QCP그룹(전 큐로홀딩스)이 신규 편입된 사실은 해당 그룹·계열사에 공시·규제 의무 확대라는 구조적 변화 신호로 해석된다. 이후 코스닥 내 소형주·액면병합 관련 단기 매수 심리와 거래재개 흐름이 5월 중 소형주 랠리를 촉발하면서 5/11 큐로홀딩스의 급등을 증폭시킨 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.04.29 (D-12일)</div>
+  
+  <div class="keywords"><span>공정거래위원회 지정</span><span>대기업집단 편입</span><span>QCP그룹 전환 공시</span><span>공시의무·내부거래 규제 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">미래반도체</span> <span class="ticker">254490 · KOSDAQ</span></div>
+    <span class="pct">+29.98%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 장비주 동반 강세(삼전닉스·오로스테크놀로지 랠리)로 인한 장비 섹터 수혜 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260504, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>반도체 장비</span><span>메모리 AI 수요</span><span>장비주 수주 증가</span><span>D램 서버 수요</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">이노인스트루먼트</span> <span class="ticker">215790 · KOSDAQ</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급/테마(광통신·통신장비)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 AI 데이터센터·5G 네트워크 투자 확대로 인한 광네트워크(OTDR·광융착접속기 등) 장비 수요 기대에 따른 테마성 수급 유입</div>
+  <div class="reasoning">당일(2026.05.11) 다수 보도가 삼성·SK하이닉스 강세와 AI 데이터센터·통신인프라 투자 기대가 중소 광통신·통신장비주로 확산되며 수급이 몰렸다고 전함. 이노인스트루먼트는 광계측 장비(OTDR, 광융착접속기 등) 업체로 분류돼 개별 공시 없이도 섹터성 매수의 수혜를 받은 것으로 판단됨.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>광통신 인프라</span><span>5G 네트워크 투자</span><span>OTDR·광융착접속기 수요</span><span>광네트워크 품질검사 장비</span></div>
+  <details><summary>📰 관련 뉴스 12건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0003642619&office_id=081&code=215790&page=&sm=" target="_blank" rel="noopener">[서울데이터랩]코스닥 거래상위 종목 강세...대한광통신·코스모로보...</a> <small style="color:var(--muted)">[2026.05.11 13:22] 서울신문 · stock_news</small></li><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0013922122&office_id=003&code=215790&page=&sm=" target="_blank" rel="noopener">지난달에만 4배 뛰었다…수익률 상위 휩쓴 테마주</a> <small style="color:var(--muted)">[2026.05.02 08:00] 뉴시스 · stock_news</small></li><li><a href="http://www.econonews.co.kr/news/articleView.html?idxno=437959" target="_blank" rel="noopener">[상한가 종목] 경인전자-코스모로보틱스 이어 미래반도체-한울반도체 등...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 이코노뉴스 · search:이노인스트루먼트</small></li><li><a href="https://www.ggilbo.com/news/articleView.html?idxno=1157393" target="_blank" rel="noopener">[주식마감] 반도체株 또 불기둥... 미래반도체·한울반도체 나란히 '上'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 금강일보 · search:이노인스트루먼트</small></li><li><a href="https://www.etoday.co.kr/news/view/2583403" target="_blank" rel="noopener">[급등락주 짚어보기] ‘코스닥 입성’ 코스모로보틱스 '따따블'…코스피...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 이투데이 · search:이노인스트루먼트</small></li><li><a href="https://www.newsworks.co.kr/news/articleView.html?idxno=840392" target="_blank" rel="noopener">[20일 특징주] 코스모로보틱스, 코스닥 데뷔 첫날 '따따블' 달성</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웍스 · search:이노인스트루먼트</small></li><li><a href="http://www.newswell.co.kr/news/articleView.html?idxno=18591" target="_blank" rel="noopener">8천피? 코스피 전망 1만피 찍고 '1만2천피' 나왔다 [뉴스톡 웰스톡]</a> <small style="color:var(--muted)">[2026.05.07 00:00] 뉴스웰 · search:이노인스트루먼트</small></li><li><a href="http://www.choicenews.co.kr/news/articleView.html?idxno=165081" target="_blank" rel="noopener">코스닥...로보티즈 · 원익IPS · 펩트론 · 대한광통신 '껑충'</a> <small style="color:var(--muted)">[2026.05.07 00:00] 초이스경제 · search:이노인스트루먼트</small></li><li><a href="http://www.fieldnews.kr/news/articleView.html?idxno=28486" target="_blank" rel="noopener">[마감 시황] 개미가 끌어올린 코스피, 8000선으로 순항 중</a> <small style="color:var(--muted)">[2026.05.07 00:00] 필드뉴스 · search:이노인스트루먼트</small></li><li><a href="https://www.ggilbo.com/news/articleView.html?idxno=1157275" target="_blank" rel="noopener">이노인스트루먼트주가, 상한가.... 무슨 회사길래?</a> <small style="color:var(--muted)">[2026.05.07 00:00] 금강일보 · search:이노인스트루먼트</small></li><li><a href="https://www.seoul.co.kr/news/economy/securities/2026/05/11/20260511500107?wlog_tag3=naver" target="_blank" rel="noopener">[서울데이터랩]코스닥 거래상위 종목 강세...대한광통신·코스모로보틱...</a> <small style="color:var(--muted)">[2026.05.07 00:00]  · search:이노인스트루먼트</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451744" target="_blank" rel="noopener">AI 데이터센터 물량 터졌다…대한광통신, '광섬유 수직계열화'로 승부수</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:이노인스트루먼트</small></li></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">피델릭스</span> <span class="ticker">032580 · KOSDAQ</span></div>
+    <span class="pct">+29.94%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 업황 개선·AI 서버 수요 확산에 따른 메모리 팹리스·오토모티브용 저전력·고신뢰성 메모리 수요 기대</div>
+  <div class="reasoning">미국 반도체 지수 급등과 삼성전자·SK하이닉스 신고가에 따른 업종적 수급 재평가가 2026.05.11 단기 랠리를 촉발했으며, 다수 기사에서 피델릭스가 메모리 팹리스라는 사업 특성으로 동반 급등 종목으로 언급됐다. 기업 공시나 계약성 뉴스는 없고, 업종·테마성(반도체·AI·모바일/오토모티브 메모리) 수급이 직접적 트리거로 작용한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>메모리 팹리스</span><span>오토모티브 메모리</span><span>저전력 고신뢰성 메모리</span><span>PSRAM 모바일 DDR</span><span>시리얼 NOR 플래시</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">티플랙스</span> <span class="ticker">081150 · KOSDAQ</span></div>
+    <span class="pct">+29.94%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 김영국 회장 장내 매수로 보유지분 10.46%→11.34%(총 21만3990주 추가 취득, 4/29~5/7 취득단가 3,587~3,713원)</div>
+  <div class="reasoning">회사 최대주주(회장)의 5거래일에 걸친 대량 장내매수가 공시되어 책임경영·지배력 강화 신호로 해석되었고, 개인·단기 수급이 몰린 장에서 매수 심리를 자극해 급등을 촉발했다. 여기에 같은 기간 반도체 밸류체인·특수강 관련 순환매가 강하게 유입되며 상승이 증폭됐다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-4일)</div>
+  
+  <div class="keywords"><span>지배구조·수급</span><span>반도체 밸류체인</span><span>장내 매수 지분 확대</span><span>스테인리스 특수강 공급</span><span>산업용 소재 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">에스비비테크</span> <span class="ticker">389500 · KOSDAQ</span></div>
+    <span class="pct">+25.70%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">로봇·휴머노이드</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 하모닉 감속기 공급 보도(로봇용 감속기 수주/공급 언급)</div>
+  <div class="reasoning">최근 매체에서 '하모닉 감속기 공급' 보도와 대표 인터뷰(로봇관절 핵심부품 매출 목표)가 동시 노출되며 실물 수주 기대감이 확산됐습니다. 또한 휴머노이드 테마 ETF 상장·보스턴다이나믹스 상장 기대 등 섹터 모멘텀이 동반되어 급등을 촉발한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.08 (D-3일)</div>
+  
+  <div class="keywords"><span>휴머노이드</span><span>로봇용 감속기(하모닉)</span><span>로봇 부품 수주</span><span>하모닉 감속기 공급 계약</span><span>로봇 관절 모듈 매출 가시화</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">대한광통신</span> <span class="ticker">010170 · KOSDAQ</span></div>
+    <span class="pct">+25.06%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">데이터센터/통신인프라</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 미국 인캡아메리카 지분 90% 인수 완료로 북미 전력·광통신 인프라 진입(인수 공시)</div>
+  <div class="reasoning">회사가 5월 6일 북미 업체 인수 완료를 공시하면서 북미 시장 진출과 AI 데이터센터 관련 전력·광통신 인프라 공급 가능성이 부각되었다. 이후 미국 데이터센터 납품 기사(5/8)와 AI 데이터센터 수요 확산 보도가 겹치며 투자 심리가 확대되어 대량 매수로 주가가 급등한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>AI 데이터센터</span><span>광통신 인프라</span><span>지분 90% 인수 완료</span><span>미국 데이터센터 납품</span><span>광케이블 쇼티지</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">뷰티스킨</span> <span class="ticker">406820 · KOSDAQ</span></div>
+    <span class="pct">+24.10%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 업계 대장주의 역대 분기 실적(어닝 서프라이즈) 발표로 화장품주 전반에 매수세 유입</div>
+  <div class="reasoning">에이피알의 5월 8일 역대 분기 실적 관련 보도가 화장품 섹터 전반의 강세를 촉발했고, 이후 5월 11일에도 관련 업종 강세 기사가 이어지며 소형주로 수급이 파급된 것으로 판단됩니다. 뷰티스킨은 별도 공시·실적·수주성 호재가 없으므로 섹터 모멘텀에 따른 동반 급등으로 해석됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.08 (D-3일)</div>
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>K-뷰티 강세</span><span>수출 증가</span><span>오프라인 매출 회복</span><span>OEM·ODM 수요 확대</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">유니트론텍</span> <span class="ticker">142210 · KOSDAQ</span></div>
+    <span class="pct">+21.60%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 반도체 유통(디스트리뷰션) 사업 수익성 부각 — 유통 마진 확대 및 재고운영 개선</div>
+  <div class="reasoning">네이버 태그 기사(더스쿠프, 2026.05.01)가 유니트론텍의 '반도체 유통으로 수익을 내는 구조'를 집중 조명하며 투자심리를 자극한 것으로 보입니다. 별도의 공시(계약·실적·정책)는 확인되지 않아 언론 보도가 매수 집중을 촉발한 테마성 상승으로 판단됩니다. 거래량 급증과 동반된 급등 특성으로 인해 확정적 호재보다는 미디어 노출 기반 수급 유입 가능성이 큽니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.01 (D-13일)</div>
+  
+  <div class="keywords"><span>반도체 유통</span><span>디스트리뷰션 마진</span><span>유통 마진 확대</span><span>재고회전율 개선</span><span>유통 계약 확보</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">지오엘리먼트</span> <span class="ticker">311320 · KOSDAQ</span></div>
+    <span class="pct">+20.85%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 173% 상승(반도체 업황 회복에 따른 장비·소재 출하 증가)</div>
+  <div class="reasoning">회사 공시에 태그된 기사에서 1분기 영업이익이 173% 급증했다고 보도되어 직접적 호재로 작용한 것으로 보입니다. 반도체 업황 개선이 매출·이익에 즉시 반영된 실적 서프라이즈가 매수 심리를 자극해 급등한 것으로 판단합니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-3일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>어닝 서프라이즈</span><span>1분기 영업이익 173% 증가</span><span>장비·소재 출하 증가</span><span>파운드리 수요 회복</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">한국가구</span> <span class="ticker">004590 · KOSDAQ</span></div>
+    <span class="pct">+20.18%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">수급</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 KRX 투자주의종목 지정(소수계좌 매수집중에 따른 투자주의 지정)</div>
+  <div class="reasoning">한국거래소가 '소수계좌의 매수 집중'을 근거로 해당 종목을 투자주의종목으로 지정한 공시가 핵심 트리거입니다. 동기간 여러 매체가 상대강도·이격도 과열 종목군으로 한국가구를 지목한 점과 거래량 급증이 맞물려 단기 급등을 촉발한 것으로 보입니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>소수계좌 매수집중</span><span>투자주의종목 지정</span><span>상대강도 과열</span><span>이격도 과열</span><span>저PBR 가치주 재평가</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">가온그룹</span> <span class="ticker">078890 · KOSDAQ</span></div>
+    <span class="pct">+19.43%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적/통신장비(광통신)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 어닝 서프라이즈(영업익 113억, 전년比 2450.8%↑) 및 광통신 기반 Wi‑Fi7 공급 확대 발표</div>
+  <div class="reasoning">공시성 실적 발표에서 1분기 영업이익이 대폭 개선됐고(113억원, 전년대비 크게 증가) 관련 기사들이 광통신 기반의 Wi‑Fi7 공급 확대를 명시해 수주·매출 성장 기대가 부각되었다. 이러한 실적 개선과 구체적 제품(광모듈·광통신 기반 Wi‑Fi7) 수요 확대 언급이 단기 급등을 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-7일)</div>
+  
+  <div class="keywords"><span>광통신</span><span>Wi‑Fi7</span><span>어닝 서프라이즈</span><span>Wi‑Fi7 광모듈 공급확대</span><span>1분기 영업이익 113억</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">에이치브이엠</span> <span class="ticker">295310 · KOSDAQ</span></div>
+    <span class="pct">+18.02%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">우주·방위(국방·우주 산업)</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 매경이코노미 기사에서 '우주 전쟁' 수혜주로 언급된 데 따른 테마 성(언론) 부각</div>
+  <div class="reasoning">해당 종목이 언론 기사(네이버 태그)에 '우주 전쟁' 수혜주로 분류되며 테마성 매수세가 유입된 것으로 보입니다. 공시·수주·실적 등의 명확한 호재는 확인되지 않아 매체 보도에 따른 수급·테마성 급등으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.05 (D-9일)</div>
+  
+  <div class="keywords"><span>우주·방위(국방·우주)</span><span>위성·발사체</span><span>군사위성 탑재체</span><span>우주 감시(SSA) 센서</span><span>방산 수주</span><span>국방 R&D 예산</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">주성엔지니어링</span> <span class="ticker">036930 · KOSDAQ</span></div>
+    <span class="pct">+17.93%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 메모리 대형주(Samsung·SK하이닉스) 급등에 따른 반도체 장비주(수급·모멘텀) 동반 신고가 및 단기 과열</div>
+  <div class="reasoning">여러 매체가 이날 삼성전자·SK하이닉스 등 메모리 대형주의 강한 랠리가 지수·업종을 견인했고, 그 영향으로 반도체 장비주(주성엔지니어링 포함)가 동반 급등했다고 보도했습니다. 한국거래소의 '투자경고·매매거래정지 예고' 공시는 상승의 결과로 단기 과열을 보여주는 규제적 신호로 해석됩니다. 회사 고유의 공시·계약성 뉴스는 확인되지 않아 상승은 주로 업종·수급성 모멘텀에 기인한 것으로 판단됩니다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.11 (D-0일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>메모리 랠리</span><span>AI 데이터센터 투자</span><span>반도체 장비 수급</span><span>거래소 투자경고·매매정지</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">인바디</span> <span class="ticker">041830 · KOSDAQ</span></div>
+    <span class="pct">+17.92%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">실적</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 1분기 영업이익 130억(전년比 +86%) 발표 및 애널리스트 목표가 상향·비만치료 시장 수요 기대</div>
+  <div class="reasoning">이전 분석 재사용 (최초 20260508, 2일째 등장)</div>
+  
+  
+  <div class="keywords"><span>어닝 서프라이즈</span><span>비만 치료 확산</span><span>의료기기(체성분)</span><span>1Q 영업이익 130억(전년比 86%↑)</span><span>체성분 데이터 플랫폼·비만치료 연계</span><span>애널리스트 목표가 상향(5.5만)</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">와이엠씨</span> <span class="ticker">155650 · KOSDAQ</span></div>
+    <span class="pct">+17.34%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체(전력반도체·디스플레이 부품)</span>
+    <span class="conf high">high</span>
+  </div>
+  <div class="signal">🎯 SiC(실리콘카바이드) 부품(식각 공정용 링·캐소드) 신규 양산·충남 당진 신규 생산라인 본격가동</div>
+  <div class="reasoning">사측이 SiC 부품(식각 공정용 링·캐소드)의 올해 본격 양산 돌입과 충남 당진 신규 생산라인 가동을 언급하며 중장기 매출 확대 기대를 제시한 보도가 확인됐다. 여기에 OLED/디스플레이·반도체 장비·부품 업종의 동반 강세(섹터 모멘텀)가 매수심리를 촉발해 단기 급등으로 이어진 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-1일)</div>
+  
+  <div class="keywords"><span>SiC 전력반도체</span><span>OLED 투자재개</span><span>SiC 링·캐소드 양산</span><span>충남 당진 신규 생산라인</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">빛과전자</span> <span class="ticker">069540 · KOSDAQ</span></div>
+    <span class="pct">+16.73%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">광통신/데이터센터</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 국제인공지능대전 참가로 '데이터센터용 차세대 광통신 솔루션' 전시(제품·기술 홍보)</div>
+  <div class="reasoning">회사 측이 2026.05.06 국제인공지능대전에서 데이터센터용 차세대 광통신 솔루션을 출품·홍보했다는 보도가 나왔고, 이후(05.11) 코스닥 강세 종목으로 언급되며 투자심리가 급등한 것으로 보인다. 구체적 수주 공시나 계약 자료는 없으나 AI·데이터센터 인프라 수요 기대와 전시 활동을 연결해 단기 매수세가 유입된 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.06 (D-5일)</div>
+  
+  <div class="keywords"><span>데이터센터</span><span>광통신</span><span>국제인공지능대전</span><span>데이터센터용 차세대 광통신 솔루션</span><span>광모듈 수주·POC</span></div>
+  <details><summary>📰 관련 뉴스 0건</summary><ul></ul></details>
+</div>
+<div class="card new">
+  <div class="row">
+    <div><span class="name">펨트론</span> <span class="ticker">168360 · KOSDAQ</span></div>
+    <span class="pct">+16.36%</span>
+  </div>
+  <div class="row" style="margin-top:4px">
+    <span style="color:var(--muted); font-size:12px">반도체</span>
+    <span class="conf medium">medium</span>
+  </div>
+  <div class="signal">🎯 HBM(고대역폭메모리) 생산 확대 기대에 따른 반도체 검사장비(머신비전·후공정 검사장비) 수요 재조명</div>
+  <div class="reasoning">5월 7일 전후 다수 기사들이 HBM·AI 서버 메모리 수요 회복과 반도체 후공정·검사장비 수혜를 연결해 보도하며 펨트론을 검사장비 수혜주로 직접 거론했다. 종목 태깅(장내 공시·추가상장 안내 포함)과 함께 섹터 중심의 매수세 유입이 거래량 확대와 함께 주가 급등을 촉발한 것으로 판단된다.</div>
+  <div class="reasoning">📅 트리거: 2026.05.07 (D-1일)</div>
+  
+  <div class="keywords"><span>반도체</span><span>HBM(고대역폭메모리)</span><span>검사장비(머신비전)</span><span>후공정 패키징 검사</span><span>AI 서버 메모리 수요</span></div>
+  <details><summary>📰 관련 뉴스 11건</summary><ul><li><a href="https://finance.naver.com/item/news_read.naver?article_id=0004618267&office_id=011&code=168360&page=&sm=" target="_blank" rel="noopener">오늘의 메모[5월 8일]</a> <small style="color:var(--muted)">[2026.05.07 11:08] 서울경제 · stock_news</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451332" target="_blank" rel="noopener">심텍, 글로벌 반도체 PCB 시장 정조준… 독보적 기술력으로 승부</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.sedaily.com/article/20041170?ref=naver" target="_blank" rel="noopener">오늘의 메모[5월 8일]</a> <small style="color:var(--muted)">[]  · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450987" target="_blank" rel="noopener">광통신·네트워크·솔더 아우르는 기술력… 빛샘전자, 글로벌 영토 넓힌...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450716" target="_blank" rel="noopener">씨앤지하이테크, CCSS 장비 및 에칭가스 국산화로 성장 동력 확보</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450676" target="_blank" rel="noopener">삼성전자 P5에 THC 반입…워트, HBM 시장 공략 속도 낸다</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450483" target="_blank" rel="noopener">2차전지 장비 명가 에이프로, 전기차·자율주행으로 사업 다각화</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=450409" target="_blank" rel="noopener">에이프로, 8인치 GaN 전력반도체 본격 양산… 차세대 반도체 '게임 체인...</a> <small style="color:var(--muted)">[] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451840" target="_blank" rel="noopener">배터리 속 불량 15분 만에 잡는다... 민테크, EIS 기술로 글로벌 평정</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451834" target="_blank" rel="noopener">삼성전자 출신 초격차 유통 미래반도체…세계 유일 AS센터로 신뢰 굳혔...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li><li><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=451818" target="_blank" rel="noopener">반도체 넘어 이차전지까지…한울반도체, 머신비전 기술로 검사 자동화 ...</a> <small style="color:var(--muted)">[2026.05.07 00:00] 핀포인트뉴스 · search:펨트론</small></li></ul></details>
+</div>
+</div>
+</section>
+
+<script>
+document.querySelectorAll('nav.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav.tabs button').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('tab-' + b.dataset.tab).classList.add('active');
+}));
+</script>
+</body>
+</html>
