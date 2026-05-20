@@ -101,21 +101,25 @@
       "name": "성문전자",
       "market": "KOSPI",
       "first_seen": "20260512",
-      "last_seen": "20260519",
-      "consecutive_days": 3,
-      "main_theme": "수급/기술적(단기 수급·거래량)",
-      "specific_signal": "거래량 급증에 따른 단기 쇼트커버·이격도 과열성 매수(시장전반 일시적 반등 연동)",
+      "last_seen": "20260520",
+      "consecutive_days": 4,
+      "main_theme": "수급/기술적(단기 순환매·이격도 과열)",
+      "specific_signal": "이격도 과열에 따른 단기 투기성 매수(상한가·거래량 급증) — 특징주·순환매성 급등",
       "trigger_type": "technical",
       "confidence": "low",
       "watch_keywords": [
-        "수급 급변",
-        "공매도 동향",
-        "거래량 급증",
+        "단기 순환매",
         "이격도 과열",
-        "투자경고 이슈"
+        "외국인·프로그램 매매",
+        "상한가 동반종목",
+        "거래량 급증"
       ],
-      "related_stocks": [],
-      "reasoning": "제공된 뉴스 중 성문전자 관련한 개별 호재성 공시나 실적·수주 기사는 확인되지 않음. D-day 전후 기사들은 코스피 전반 뉴스, 공매도 브리핑·거래정지·이격도 관련 보도 등으로 수급·시장 모멘텀에 의해 거래량이 늘며 단기 급등이 발생한 것으로 추정됨. 사전 명확한 기업별 트리거가 없어 결론 신뢰도는 낮음.",
+      "related_stocks": [
+        "광전자",
+        "마키나락스",
+        "아이진"
+      ],
+      "reasoning": "관련 뉴스들은 개별 호재성 공시나 실적·수주 기사 없이 '상한가·급등락주'·'투기성 매수'·'이격도 과열'로 묶어 보도되고 있으며, 거래량이 크게 증가한 점으로 보아 특정 재료보다는 단기 수급·심리(개미·테마성 순환매)가 즉각적인 가격 상승 원인으로 판단됨. 또한 동일 시점에 광전자·마키나락스 등 유사 급등 종목들이 동반 보도되어 순환매 흐름이 강했던 것으로 보임.",
       "history": [
         {
           "date": "20260512",
@@ -128,6 +132,10 @@
         {
           "date": "20260519",
           "change_pct": 5.25
+        },
+        {
+          "date": "20260520",
+          "change_pct": 29.94
         }
       ]
     },
@@ -135,8 +143,8 @@
       "name": "성문전자우",
       "market": "KOSPI",
       "first_seen": "20260512",
-      "last_seen": "20260513",
-      "consecutive_days": 2,
+      "last_seen": "20260520",
+      "consecutive_days": 3,
       "main_theme": "테마성",
       "specific_signal": "이격도과열 및 급등락주 관련 테마",
       "trigger_type": "rumor",
@@ -149,7 +157,7 @@
         "테크니컬 트레이딩"
       ],
       "related_stocks": [],
-      "reasoning": "성문전자우의 급등은 특이한 뉴스나 공시의 직접적 영향을 받았다기보다는, 최근 주식 시장에서 '로봇주' 등의 특정 테마성 테크니컬 트레이딩의 영향을 받은 것으로 보입니다. '이격도과열 종목'으로 함께 언급되며 투자자들의 관심을 얻은 결과일 가능성이 높습니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260512, 3일째 등장)",
       "history": [
         {
           "date": "20260512",
@@ -158,10 +166,12 @@
         {
           "date": "20260513",
           "change_pct": 29.91
+        },
+        {
+          "date": "20260520",
+          "change_pct": 29.83
         }
-      ],
-      "cluster_tag": "momentum_speculation",
-      "cluster_tag_orig": "thematic_speculation"
+      ]
     },
     "012205": {
       "name": "계양전기우",
@@ -220,8 +230,8 @@
       "name": "녹십자홀딩스2우",
       "market": "KOSPI",
       "first_seen": "20260512",
-      "last_seen": "20260513",
-      "consecutive_days": 2,
+      "last_seen": "20260520",
+      "consecutive_days": 3,
       "main_theme": "바이오",
       "specific_signal": "자회사 메이드사이언티픽의 세포치료제 상업화 이슈",
       "trigger_type": "rumor",
@@ -234,7 +244,7 @@
         "시장 기대"
       ],
       "related_stocks": [],
-      "reasoning": "녹십자홀딩스2우의 급등은 자회사 메이드사이언티픽이 세포치료제 상업화 관련 이사회 강화를 발표한 것과 관련이 있을 가능성이 있다. 이는 바이오테크 업계에서 중요한 진전으로 시장의 긍정적인 기대를 반영한 것으로 보인다.",
+      "reasoning": "이전 분석 재사용 (최초 20260512, 3일째 등장)",
       "history": [
         {
           "date": "20260512",
@@ -243,17 +253,19 @@
         {
           "date": "20260513",
           "change_pct": 16.8
+        },
+        {
+          "date": "20260520",
+          "change_pct": 17.35
         }
-      ],
-      "cluster_tag": "cell_therapy",
-      "cluster_tag_orig": "cell_therapy_commercialization"
+      ]
     },
     "005250": {
       "name": "녹십자홀딩스",
       "market": "KOSPI",
       "first_seen": "20260512",
-      "last_seen": "20260513",
-      "consecutive_days": 2,
+      "last_seen": "20260520",
+      "consecutive_days": 3,
       "main_theme": "바이오",
       "specific_signal": "아티바 NK세포치료제 임상 3상 진입 및 3억 달러 조달",
       "trigger_type": "contract",
@@ -268,7 +280,7 @@
       "related_stocks": [
         "GC녹십자"
       ],
-      "reasoning": "넥서비스의 미국 관계사 아티바가 NK세포치료제의 임상 3상에 진입하고 3억 달러의 대규모 자금을 조달했다는 소식이 주요한 상승 트리거로 작용한 것으로 보인다. 이는 회사의 성장 가능성과 글로벌 시장 진출에 대한 기대를 높이며 투자를 이끌어낸 것으로 보인다.",
+      "reasoning": "이전 분석 재사용 (최초 20260512, 3일째 등장)",
       "history": [
         {
           "date": "20260512",
@@ -277,35 +289,12 @@
         {
           "date": "20260513",
           "change_pct": 14.39
+        },
+        {
+          "date": "20260520",
+          "change_pct": 4.53
         }
-      ],
-      "cluster_tag": "cell_therapy",
-      "cluster_tag_orig": "nk_cell_therapy",
-      "deep_keywords": {
-        "products": [
-          "코로나19 자가진단키트",
-          "한타바이러스 백신"
-        ],
-        "partners": [
-          "녹십자웰빙",
-          "수젠텍",
-          "GC녹십자",
-          "신풍제약",
-          "그린생명과학",
-          "녹십자엠에스"
-        ],
-        "places": [
-          "서아프리카 섬나라 카보베르데"
-        ],
-        "events": [
-          "52주 신고가",
-          "1만8천10원까지 올라",
-          "1만6천380원에 거래"
-        ],
-        "people": [
-          "이민영 기자"
-        ]
-      }
+      ]
     },
     "066570": {
       "name": "LG전자",
@@ -667,8 +656,8 @@
       "name": "코스모로보틱스",
       "market": "KOSDAQ",
       "first_seen": "20260512",
-      "last_seen": "20260519",
-      "consecutive_days": 4,
+      "last_seen": "20260520",
+      "consecutive_days": 5,
       "main_theme": "수급",
       "specific_signal": "코스모로보틱스 상장 이틀째 상한가 달성",
       "trigger_type": "technical",
@@ -681,7 +670,7 @@
         "주가 상승"
       ],
       "related_stocks": [],
-      "reasoning": "이전 분석 재사용 (최초 20260512, 4일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260512, 5일째 등장)",
       "history": [
         {
           "date": "20260512",
@@ -698,6 +687,10 @@
         {
           "date": "20260519",
           "change_pct": 29.95
+        },
+        {
+          "date": "20260520",
+          "change_pct": 15.64
         }
       ]
     },
@@ -1008,8 +1001,8 @@
       "name": "녹십자엠에스",
       "market": "KOSDAQ",
       "first_seen": "20260512",
-      "last_seen": "20260519",
-      "consecutive_days": 2,
+      "last_seen": "20260520",
+      "consecutive_days": 3,
       "main_theme": "바이오",
       "specific_signal": "크루즈선 '한타바이러스' 감염 발생에 대한 진단·백신 역량 부각",
       "trigger_type": "rumor",
@@ -1024,7 +1017,7 @@
         "녹십자",
         "셀트리온"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260512, 2일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260512, 3일째 등장)",
       "history": [
         {
           "date": "20260512",
@@ -1033,6 +1026,10 @@
         {
           "date": "20260519",
           "change_pct": 18.97
+        },
+        {
+          "date": "20260520",
+          "change_pct": 28.19
         }
       ]
     },
@@ -1177,31 +1174,34 @@
       "name": "수젠텍",
       "market": "KOSDAQ",
       "first_seen": "20260512",
-      "last_seen": "20260512",
-      "consecutive_days": 1,
+      "last_seen": "20260520",
+      "consecutive_days": 2,
       "main_theme": "바이오",
-      "specific_signal": "한타바이러스 확산 우려 및 WHO 경고",
+      "specific_signal": "한타바이러스·호흡기 질환 확산 우려로 진단키트 수요 기대감 재부각",
       "trigger_type": "rumor",
-      "confidence": "high",
+      "confidence": "medium",
       "watch_keywords": [
-        "바이오",
+        "감염병 확산",
+        "진단키트 수요",
         "한타바이러스",
-        "WHO 경고",
-        "감염병 진단키트",
-        "주가 급등"
+        "분자진단 플랫폼 재부각",
+        "미·유럽 확산 우려"
       ],
       "related_stocks": [
-        "녹십자엠에스"
+        "녹십자엠에스",
+        "진원생명과학"
       ],
-      "reasoning": "최근 수젠텍의 주가 급등은 한타바이러스 추가 확진과 관련한 우려가 커지면서, WHO가 해당 바이러스의 잠복기가 최대 8주가 될 수 있다는 경고를 했기 때문으로 보인다. 이로 인해 감염병 진단키트를 생산하는 수젠텍에 대한 관심이 증가하며 주가에 긍정적으로 작용한 것으로 판단된다.",
+      "reasoning": "최근(5/19) 감염병 확산 우려 관련 기사들과 5/13의 한타바이러스 보도가 진단키트·분자진단 업체에 대한 수요 기대를 불러와 관련주 동반 급등을 유발함. 수젠텍은 진단 플랫폼 보유 기업으로서 이런 감염병 리스크 재부각 시 단기적으로 투자자 관심 및 매수세가 집중된 것으로 보임.",
       "history": [
         {
           "date": "20260512",
           "change_pct": 16.53
+        },
+        {
+          "date": "20260520",
+          "change_pct": 15.08
         }
-      ],
-      "cluster_tag": "hantavirus_diagnostics",
-      "cluster_tag_orig": "hantavirus_related_bio"
+      ]
     },
     "356680": {
       "name": "엑스게이트",
@@ -1871,8 +1871,8 @@
       "name": "현대오토에버",
       "market": "KOSPI",
       "first_seen": "20260513",
-      "last_seen": "20260513",
-      "consecutive_days": 1,
+      "last_seen": "20260520",
+      "consecutive_days": 2,
       "main_theme": "로보틱스",
       "specific_signal": "현대차그룹의 로봇 사업 기대감",
       "trigger_type": "rumor",
@@ -1888,15 +1888,17 @@
         "현대차",
         "현대모비스"
       ],
-      "reasoning": "현대차의 주가 급등이 로보틱스 사업에 대한 기대감에서 비롯되었고, 이와 함께 현대오토에버도 그룹 내 IT 서비스 시총 1위로 부상하며 동반 상승한 것으로 보입니다. 현대차 그룹의 로봇 및 IT 중심 사업이 시장의 주목을 받은 것으로 추정됩니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260513, 2일째 등장)",
       "history": [
         {
           "date": "20260513",
           "change_pct": 13.66
+        },
+        {
+          "date": "20260520",
+          "change_pct": 4.1
         }
-      ],
-      "cluster_tag": "humanoid_robotics",
-      "cluster_tag_orig": "robotics_growth"
+      ]
     },
     "032800": {
       "name": "판타지오",
@@ -2219,8 +2221,8 @@
       "name": "알엔티엑스",
       "market": "KOSDAQ",
       "first_seen": "20260513",
-      "last_seen": "20260513",
-      "consecutive_days": 1,
+      "last_seen": "20260520",
+      "consecutive_days": 2,
       "main_theme": "정책",
       "specific_signal": "국민배당금 관련 가짜뉴스 해명",
       "trigger_type": "rumor",
@@ -2233,14 +2235,17 @@
         "시장 혼란"
       ],
       "related_stocks": [],
-      "reasoning": "알엔티엑스의 급등은 '국민배당금 가짜뉴스'에 대한 반응으로 인한 것으로 보입니다. 해당 뉴스는 시장에 혼란을 야기했으나 이후 긍정적인 반응이 나타나면서 주가가 급등했습니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260513, 2일째 등장)",
       "history": [
         {
           "date": "20260513",
           "change_pct": 29.93
+        },
+        {
+          "date": "20260520",
+          "change_pct": 17.92
         }
-      ],
-      "cluster_tag": "policy_rumor_response"
+      ]
     },
     "011080": {
       "name": "형지I&C",
@@ -2539,22 +2544,31 @@
       "name": "신풍",
       "market": "KOSPI",
       "first_seen": "20260514",
-      "last_seen": "20260514",
-      "consecutive_days": 1,
-      "main_theme": "unknown",
-      "specific_signal": "",
-      "trigger_type": "unknown",
-      "confidence": "low",
+      "last_seen": "20260520",
+      "consecutive_days": 2,
+      "main_theme": "바이오·제약(섹터 모멘텀)",
+      "specific_signal": "상장 제약·바이오업체 1분기 영업이익률 전반적 개선(업계 레벨 재평가 가능)",
+      "trigger_type": "earnings",
+      "confidence": "medium",
       "watch_keywords": [
-        "신풍",
-        "주가 급등 이유"
+        "제약·바이오 실적 개선",
+        "임상·허가 소식",
+        "1Q 영업이익률 개선",
+        "제약주 재평가"
       ],
-      "related_stocks": [],
-      "reasoning": "신풍(002870) 관련 뉴스 중 주가 급등에 직접적 영향을 미친 트리거를 찾을 수 없습니다. 대부분의 뉴스가 건강검진 또는 기타 비관련 산업 소식들로 구성되어 있어, 직접적인 가격 상승 원인을 명확히 파악하기 어렵습니다.",
+      "related_stocks": [
+        "동아에스티",
+        "제일약품"
+      ],
+      "reasoning": "직접적인 회사 공시나 계약 기사는 확인되지 않으며, 동일 기간에 나온 주요 관련 보도는 '상장 제약바이오 1Q 영업이익률 개선'과 같은 업계 전반의 실적 개선 기사뿐이다. 종목명이 지명(地名)으로도 자주 노출되어 혼동성 수급이 발생했을 가능성도 있어, 소속 섹터 실적 뉴스와 테마성 매매가 겹쳐 단기 상승이 나타난 것으로 추정한다.",
       "history": [
         {
           "date": "20260514",
           "change_pct": 20.23
+        },
+        {
+          "date": "20260520",
+          "change_pct": 5.27
         }
       ]
     },
@@ -4676,8 +4690,8 @@
       "name": "진원생명과학",
       "market": "KOSPI",
       "first_seen": "20260518",
-      "last_seen": "20260519",
-      "consecutive_days": 2,
+      "last_seen": "20260520",
+      "consecutive_days": 3,
       "main_theme": "수급/재무구조",
       "specific_signal": "구조조정 속도 가속화 및 51억 원 규모 CB 납입 완료(공시·보도)",
       "trigger_type": "disclosure",
@@ -4690,7 +4704,7 @@
         "재무구조 개선"
       ],
       "related_stocks": [],
-      "reasoning": "이전 분석 재사용 (최초 20260518, 2일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260518, 3일째 등장)",
       "history": [
         {
           "date": "20260518",
@@ -4699,6 +4713,10 @@
         {
           "date": "20260519",
           "change_pct": 29.97
+        },
+        {
+          "date": "20260520",
+          "change_pct": 19.62
         }
       ]
     },
@@ -4826,8 +4844,8 @@
       "name": "세기상사",
       "market": "KOSPI",
       "first_seen": "20260518",
-      "last_seen": "20260518",
-      "consecutive_days": 1,
+      "last_seen": "20260520",
+      "consecutive_days": 2,
       "main_theme": "수급/시장심리(미디어·테마성 모멘텀)",
       "specific_signal": "금일(5/18)·전일 보도된 '상승 종목 30선' 미디어 편입으로 인한 단기 매수 유입(언론 노출 기반 주목도 확대)",
       "trigger_type": "rumor",
@@ -4839,11 +4857,15 @@
         "거래대금 확대"
       ],
       "related_stocks": [],
-      "reasoning": "직접적인 공시·실적·수주성 호재는 확인되지 않으며, 전일(5/17) EBN의 '18일 상승 종목 30選'에 포함되었다는 언론 노출이 단기 투자심리를 자극해 D-day에 거래와 주가가 급증한 것으로 보입니다. 다른 관련 뉴스는 회사 고유 이슈와의 연결성이 약해 수급·미디어 모멘텀이 주요 원인으로 판단됩니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260518, 2일째 등장)",
       "history": [
         {
           "date": "20260518",
           "change_pct": 8.7
+        },
+        {
+          "date": "20260520",
+          "change_pct": 8.01
         }
       ]
     },
@@ -4937,8 +4959,8 @@
       "name": "이수화학",
       "market": "KOSPI",
       "first_seen": "20260518",
-      "last_seen": "20260519",
-      "consecutive_days": 2,
+      "last_seen": "20260520",
+      "consecutive_days": 3,
       "main_theme": "실적",
       "specific_signal": "1분기 영업이익 254억 원(전년 대비 대폭 증가) 발표",
       "trigger_type": "earnings",
@@ -4953,7 +4975,7 @@
         "OCI홀딩스",
         "후성"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260518, 2일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260518, 3일째 등장)",
       "history": [
         {
           "date": "20260518",
@@ -4962,6 +4984,10 @@
         {
           "date": "20260519",
           "change_pct": 13.07
+        },
+        {
+          "date": "20260520",
+          "change_pct": 15.41
         }
       ]
     },
@@ -5170,8 +5196,8 @@
       "name": "티에스이",
       "market": "KOSDAQ",
       "first_seen": "20260518",
-      "last_seen": "20260518",
-      "consecutive_days": 1,
+      "last_seen": "20260520",
+      "consecutive_days": 2,
       "main_theme": "반도체 장비/부품",
       "specific_signal": "1분기 호실적(어닝 서프라이즈) 발표 및 중국 허페이 법인 기반 수주·매출 기대",
       "trigger_type": "earnings",
@@ -5187,11 +5213,15 @@
         "주성엔지니어링",
         "에스에이엠티"
       ],
-      "reasoning": "5월17일 다수 기사에서 1분기 호실적을 근거로 주가 급등이 보도됐고, 동시에 허페이 법인 등 중국 시장 공략을 통한 추가 성장 모멘텀을 언급해 매수 심리를 자극한 것으로 보입니다. 관련 기사들이 D-1에 집중되어 있어 D-day의 큰 상승은 이익 개선 기대와 중국 사업 확장 소식의 결합 효과로 해석됩니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260518, 2일째 등장)",
       "history": [
         {
           "date": "20260518",
           "change_pct": 22.87
+        },
+        {
+          "date": "20260520",
+          "change_pct": 12.86
         }
       ]
     },
@@ -5464,8 +5494,8 @@
       "name": "티웨이홀딩스",
       "market": "KOSPI",
       "first_seen": "20260519",
-      "last_seen": "20260519",
-      "consecutive_days": 1,
+      "last_seen": "20260520",
+      "consecutive_days": 2,
       "main_theme": "정책/규제(항공사 허가·면허)",
       "specific_signal": "항공사 변경면허(트리니티항공 국내 변경면허 발급) — 지배구조·브랜드·운영 재편 기대",
       "trigger_type": "disclosure",
@@ -5481,11 +5511,15 @@
         "제주항공",
         "진에어"
       ],
-      "reasoning": "티웨이항공 계열의 '트리니티항공'에 대해 국내 변경면허가 발급되었다는 보도가 5/18에 나왔고, 티웨이홀딩스가 2대주주라는 점에서 지배구조·사업 재편 기대가 즉각적으로 반영되어 주가가 급등(상한가)한 것으로 판단된다. 관련 뉴스가 회사·시장 기사들(상한가 보도 포함)로 이어져 투자심리를 자극했다.",
+      "reasoning": "이전 분석 재사용 (최초 20260519, 2일째 등장)",
       "history": [
         {
           "date": "20260519",
           "change_pct": 29.96
+        },
+        {
+          "date": "20260520",
+          "change_pct": 29.87
         }
       ]
     },
@@ -6042,6 +6076,728 @@
           "change_pct": 13.22
         }
       ]
+    },
+    "017900": {
+      "name": "광전자",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수급/테마성(시장성매매)",
+      "specific_signal": "소형 반도체·광학부품주에 대한 투기성 매수(급등락주 쏠림) — 보도에 따른 동반 상한가·개미 쏠림",
+      "trigger_type": "rumor",
+      "confidence": "low",
+      "watch_keywords": [
+        "반도체 부품",
+        "광센서·광학부품",
+        "투기성 매수유입",
+        "급등락주 쏠림",
+        "프로그램 매매 영향"
+      ],
+      "related_stocks": [
+        "성문전자",
+        "마키나락스"
+      ],
+      "reasoning": "제공된 뉴스에 회사의 공시·실적·수주 등 직접적 호재는 보이지 않고, 5/19일 다수 매체가 '광전자 상한가'·'급등락주 쏠림'을 보도했음. 이는 특정 정보보다는 소형주·부품주에 대한 투기성 매수와 프로그램·수급 요인에 따른 급등으로 판단됨.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 29.96
+        }
+      ]
+    },
+    "001820": {
+      "name": "삼화콘덴서",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "전자부품(MLCC) 수급·업황",
+      "specific_signal": "MLCC 수요 회복 기대 — AI 데이터센터 수요 확대에 따른 업황 반등 관측(언론 보도 및 투자심리 확산)",
+      "trigger_type": "rumor",
+      "confidence": "medium",
+      "watch_keywords": [
+        "MLCC",
+        "AI 데이터센터",
+        "MLCC 업황 반등",
+        "수급 급등 VI",
+        "52주 신고가"
+      ],
+      "related_stocks": [
+        "삼성전기",
+        "대덕전자"
+      ],
+      "reasoning": "주요 언론(네이버 태그 기사 포함)이 MLCC 업황 반등 기대감(특히 AI 수요 확대)을 지목하며 관련주에 매수심리가 몰린 점이 즉각적인 주가 급등의 직접적 촉발로 보입니다. 별도 공시·실적·수주 소식은 확인되지 않아 업황 기대감·수급(개인·프로그램) 중심의 테마성 급등으로 판단됩니다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 23.0
+        }
+      ]
+    },
+    "058650": {
+      "name": "세아홀딩스",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수급/주주환원",
+      "specific_signal": "300억원 규모 자기주식 공개매수(주당 160,000원) 및 취득 주식 전량 소각 발표",
+      "trigger_type": "disclosure",
+      "confidence": "high",
+      "watch_keywords": [
+        "주주환원",
+        "자기주식 소각",
+        "지배구조 개선",
+        "주당 16만원 공개매수",
+        "300억원 공개매수"
+      ],
+      "related_stocks": [
+        "세아제강",
+        "세아베스틸"
+      ],
+      "reasoning": "회사 측의 공개매수 및 소각 공시는 주당 가치 제고와 주주환원 강화라는 명확한 호재로 즉각적인 매수세를 유발하였다. 다수의 종목 태그 기사들이 공시를 보도한 당일(및 익일 아침)에 주가가 급등한 점이 이를 뒷받침한다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 10.89
+        }
+      ]
+    },
+    "007810": {
+      "name": "코리아써키트",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "반도체(패키지·서브스트레이트) / AI 인프라",
+      "specific_signal": "고다층 기판을 통한 AI 서버용 CXL·HBM 후속 인터커넥트 공급 기대",
+      "trigger_type": "rumor",
+      "confidence": "medium",
+      "watch_keywords": [
+        "AI 데이터센터",
+        "고성능 서버 인터커넥트",
+        "패키지 서브스트레이트",
+        "고다층 기판",
+        "CXL 인터포저",
+        "HBM 후속 수요"
+      ],
+      "related_stocks": [
+        "이수페타시스",
+        "삼성전기",
+        "광전자"
+      ],
+      "reasoning": "5월19일 복수 매체가 '고다층 기판'과 'CXL' 연계를 언급하며 코리아써키트를 AI 서버용 고다층 기판 수혜주로 지목했고, 5월7일 AI 인프라 관련 상승 사례 보도가 사전 모멘텀을 제공해 D-day 전날 관련 루머·테마가 확산된 것으로 보인다. 명확한 공시나 계약 근거는 없어 보이므로 시장 추정(루머) 성격이 강함.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 10.77
+        }
+      ]
+    },
+    "161000": {
+      "name": "애경케미칼",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "2차전지",
+      "specific_signal": "CIBF(중국 배터리 박람회)에서 차세대 배터리 소재 및 고성능 배터리 솔루션 공개",
+      "trigger_type": "disclosure",
+      "confidence": "medium",
+      "watch_keywords": [
+        "2차전지",
+        "CIBF(China Battery Fair)",
+        "K-배터리 소재",
+        "차세대 배터리 소재 공개",
+        "고성능 배터리 솔루션",
+        "가소제 담합 조사"
+      ],
+      "related_stocks": [
+        "한화솔루션",
+        "LG화학"
+      ],
+      "reasoning": "5월18일 다수 보도가 애경케미칼이 CIBF와 중국 박람회에서 차세대 배터리 소재를 대거 공개하고 기술력을 선보였다는 내용을 전해 투자심리를 자극한 것으로 보인다. D-day(+8.77%)는 이러한 제품·기술 공개가 시장의 실적/수주 기대를 높이며 며칠 후 반영된 사례로 판단된다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 8.77
+        }
+      ]
+    },
+    "009150": {
+      "name": "삼성전기",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "반도체",
+      "specific_signal": "AI용 실리콘 커패시터 대규모(1.5조원) 미국 빅테크 공급계약(첫 공급·대량공급)",
+      "trigger_type": "contract",
+      "confidence": "high",
+      "watch_keywords": [
+        "AI 반도체",
+        "미국 빅테크 수요",
+        "실리콘 커패시터",
+        "1.5조 공급계약",
+        "대량공급 첫납품"
+      ],
+      "related_stocks": [
+        "LG이노텍",
+        "삼성전자"
+      ],
+      "reasoning": "당일 다수의 종목 태그 기사들이 삼성전기가 미국 빅테크 고객에 AI 반도체용 실리콘 커패시터 공급계약(약 1.5조원)을 체결했다고 보도했음. 대규모 수주 공시는 직접적 매수 재료로 작용해 D-day에 7.5% 급등을 유발한 것으로 판단됨.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 7.5
+        }
+      ]
+    },
+    "329180": {
+      "name": "HD현대중공업",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "정책/방산·수주",
+      "specific_signal": "해군총장 캐나다 방문 중 '방산협력 지원' 언급(해외 방산협력 우호 신호)",
+      "trigger_type": "policy",
+      "confidence": "medium",
+      "watch_keywords": [
+        "방산협력",
+        "해군 함정 수주",
+        "조선·해양 수주공시",
+        "해외 군수 협력",
+        "로봇 자동화 솔루션",
+        "K-피지컬 AI"
+      ],
+      "related_stocks": [
+        "한화에어로스페이스",
+        "현대로보틱스"
+      ],
+      "reasoning": "직접적인 기업 공시성 호재는 확인되지 않으나, 5월19일 보도된 '해군총장 캐나다 방문... 방산협력 지원' 언급과 국내 방산·조선업 수주 기대가 결합돼 방산·조선주로 수급이 쏠린 것으로 보입니다. 동일기간에 삼성 노사·미국 국채금리 등으로 코스피 전반이 흔들리는 가운데 방산·수주 관련 스토리가 상대적 매수대상으로 작용해 HD현대중공업 주가가 반등한 것으로 추정됩니다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 6.35
+        }
+      ]
+    },
+    "082740": {
+      "name": "한화엔진",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수주·계약 (산업 수주)",
+      "specific_signal": "선박용 엔진 3,542억 원 규모 공급계약(한화오션向)",
+      "trigger_type": "contract",
+      "confidence": "high",
+      "watch_keywords": [
+        "선박용 엔진 수주",
+        "데이터센터 전력 수요",
+        "선박용 엔진 3,542억",
+        "엔진 가동률·수익성 개선"
+      ],
+      "related_stocks": [
+        "한화오션",
+        "HD현대중공업"
+      ],
+      "reasoning": "5월 13일 공개된 3,542억 원 규모의 선박용 엔진 공급계약 공시는 명확한 매출·수주 가시성을 제공해 호재로 작용했고, 이후 관련 산업(조선·해양·전력) 수요 기대와 데이터센터용 전력 솔루션 전환 논의가 맞물리며 매수세가 이어진 것으로 보인다. 단기 등락일(5/20)엔 시장 전반의 수급 이슈 속에서도 해당 수주·사업전환 스토리가 투자심리를 지지했다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 4.98
+        }
+      ]
+    },
+    "001755": {
+      "name": "한양증권우",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수급/증권주(금융)",
+      "specific_signal": "증권업종 내 거래대금 급증에 따른 브로커리지 실적 기대감 확대",
+      "trigger_type": "technical",
+      "confidence": "low",
+      "watch_keywords": [
+        "증권업종 수급",
+        "거래대금 급증",
+        "브로커리지 실적 기대",
+        "리테일 수수료 개선"
+      ],
+      "related_stocks": [
+        "키움증권",
+        "삼성증권",
+        "현대차증권"
+      ],
+      "reasoning": "최근 관련 기사들은 업종 차원에서 '거래대금 폭발'과 일부 대형 증권사에 대한 실적 기대를 언급하고 있으나 한양증권우에 대한 개별 공시나 뉴스 트리거는 없다. 소액 거래량 속에서 업종·수급 영향이나 차익매물 소화 과정에서 단기 기술적 반등이 발생한 것으로 보이며, 명확한 호재 확인은 되지 않는다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 4.97
+        }
+      ]
+    },
+    "007815": {
+      "name": "코리아써우",
+      "market": "KOSPI",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수급/테마성(반도체 연관)",
+      "specific_signal": "직접적 공시·기사 트리거 부재 — 반도체/AI 반도체 유통·부품 관련 일반기사와의 연계 가능성",
+      "trigger_type": "unknown",
+      "confidence": "low",
+      "watch_keywords": [
+        "반도체 장비/부품",
+        "AI 반도체 공급망",
+        "패키지기판 수요",
+        "IT 유통 계약",
+        "거래대금 급증"
+      ],
+      "related_stocks": [],
+      "reasoning": "제공된 최근 14일 뉴스에 코리아써우를 직접 태깅한 기사(origin=stock_news)가 없고, 검색 결과들은 대덕전자·에스에이엠티 등 반도체·AI 관련 일반기사여서 종목과의 직접 연결 근거가 약합니다. 따라서 이날 소폭 상승(+4.09%)은 특정 공시·실적·수주 등 명확한 트리거보다는 단기 수급·테마성(반도체·AI 관련 뉴스 전반에 동조) 또는 시장 매수에 따른 움직임으로 판단됩니다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 4.09
+        }
+      ]
+    },
+    "477850": {
+      "name": "마키나락스",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수급/상장(IPO 데뷔)",
+      "specific_signal": "코스닥 상장 첫날 '따따블' 급등·시가총액 1조원 돌파(상장 데뷔로 인한 수급 쏠림)",
+      "trigger_type": "disclosure",
+      "confidence": "high",
+      "watch_keywords": [
+        "IPO 데뷔 상한가",
+        "공모가 대비 급등",
+        "시가총액 1조 돌파",
+        "신규상장 수급쏠림"
+      ],
+      "related_stocks": [
+        "코스모로보틱스",
+        "아이진"
+      ],
+      "reasoning": "당일 다수 기사들이 '코스닥 입성 첫날 따따블(공모가 대비 급등)'을 보도했으며, 이는 공모주(신규상장)에 대한 쏠림 매수로 유통물량 대비 수요가 폭증하면서 가격이 급등한 전형적인 상장 데뷔 수급 이벤트로 판단됨. 별도의 사업·실적(공시) 호재나 계약성 뉴스가 보이지 않아 가격 상승은 상장(IPO)으로 인한 단기 수급 현상으로 설명 가능함.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 300.0
+        }
+      ]
+    },
+    "066980": {
+      "name": "한성크린텍",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "반도체",
+      "specific_signal": "삼성전자·DB하이텍 대상 반도체 수처리 EPC 310억 규모 수주 (연이은 수주·수주 잔고 증가)",
+      "trigger_type": "contract",
+      "confidence": "high",
+      "watch_keywords": [
+        "반도체 인프라",
+        "EPC 수주",
+        "반도체 수처리 EPC 310억",
+        "삼성·DB하이텍 공급",
+        "수주 잔고"
+      ],
+      "related_stocks": [
+        "성문전자",
+        "광전자"
+      ],
+      "reasoning": "5월19일 보도된 삼성전자·DB하이텍 대상 반도체 수처리 EPC 310억 수주 소식이 직접적인 호재로 작용해 다음 거래일(5/20)에 급등·상한가로 이어졌습니다. 관련 보도들이 연이어 나오며 대규모 수주와 ‘역대급 수주 잔고’ 메시지가 투자심리를 자극했고 거래량이 급증했습니다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 29.99
+        }
+      ]
+    },
+    "121850": {
+      "name": "코이즈",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수급/투기성(테마성 단기 랠리)",
+      "specific_signal": "상한가·신규상장군·동반급등에 따른 투기성 매수(대량거래·종목묶음 매집)",
+      "trigger_type": "rumor",
+      "confidence": "low",
+      "watch_keywords": [
+        "수급 과열",
+        "상한가 연속",
+        "신규상장군 동반급등",
+        "매집 의심 대량거래"
+      ],
+      "related_stocks": [
+        "광전자",
+        "마키나락스",
+        "성문전자"
+      ],
+      "reasoning": "제공된 기사들은 코이즈 자체의 호재성 공시나 실적 뉴스가 아닌 '상한가 종목', '신규 상장주' 등 장중·장마감 성격의 보도들로 구성되어 있어, 개별 기업 이슈보다 단기 투기적 수급(동시 급등·대량매수)으로 급등한 것으로 판단됩니다. 뚜렷한 사업적 트리거나 공시가 없어 원인은 시장매수·테마 매집으로 추정됩니다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 29.98
+        }
+      ]
+    },
+    "225430": {
+      "name": "케이엠제약",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "소비재·구강케어(FMCG)",
+      "specific_signal": "한울바이오와 차세대 가글 공동개발 MOU(05.19) 및 '뽀로로 치약' 중국·베트남 공급 확대(05.13)",
+      "trigger_type": "contract",
+      "confidence": "medium",
+      "watch_keywords": [
+        "구강 케어",
+        "해외 공급 확대",
+        "차세대 가글 공동개발",
+        "뽀로로 치약 중국·베트남 공급"
+      ],
+      "related_stocks": [
+        "한울바이오"
+      ],
+      "reasoning": "당일 공시성 기사(한울바이오와의 가글 공동개발 MOU)가 D-day에 보도되며 투자심리를 자극했고, 앞서 발표된 뽀로로 치약의 해외 공급 확대(중국·베트남)가 수출 성장 기대를 더해 단기 급등을 촉발한 것으로 보인다. 뉴스들이 직접적 제품·수출·개발 협력 내용을 담고 있어 주가에 즉각 반영된 사례임.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 29.98
+        }
+      ]
+    },
+    "126730": {
+      "name": "코칩",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "전자부품/부품업체 수급(수주·공급계약)",
+      "specific_signal": "대형(약 1.6조원) 실리콘 캐패시터·MLCC 공급계약(협업) 관련 호재로 인한 수혜 기대",
+      "trigger_type": "contract",
+      "confidence": "medium",
+      "watch_keywords": [
+        "전자부품 공급계약",
+        "대형 수주(1.6조 규모)",
+        "실리콘 캐패시터 협업",
+        "MLCC 공급협업",
+        "상한가·투기성 매수"
+      ],
+      "related_stocks": [
+        "광전자",
+        "성문전자"
+      ],
+      "reasoning": "당일·전일 보도에서 삼성전기 등에서 약 1.6조원 규모의 실리콘 캐패시터(및 MLCC 관련) 글로벌 공급 계약 소식이 부각되며 부품 협력 가능성이 높게 점쳐진 종목들에 수급이 쏠렸음. 코칩은 해당 계약·협업 수혜 기대감과 투기성 매수세가 결합되며 상한가 급등한 것으로 보임.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 29.9
+        }
+      ]
+    },
+    "215790": {
+      "name": "이노인스트루먼트",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수급/투기성 테마성 급등",
+      "specific_signal": "개별 종목 중심의 투기성·테마성 매수로 인한 상한가·거래량 급증 (명확한 공시·계약 없이 투자자 매매 집중)",
+      "trigger_type": "rumor",
+      "confidence": "low",
+      "watch_keywords": [
+        "테마성 투기매수",
+        "수급 급변",
+        "거래량 급증",
+        "상한가 연속"
+      ],
+      "related_stocks": [
+        "코칩",
+        "아이진",
+        "코이즈"
+      ],
+      "reasoning": "제공된 모든 종목 태그 기사들은 단순 시황·급등락 목록 보고에 그치고, 회사의 공시·실적·수주 등 직접적 호재는 확인되지 않습니다. 다수 매체가 '투기성 매수'·'상한가'·'거래량 급증'을 지적하고 있어, 외부 호재 없이 수급·테마성 매매에 의한 급등으로 보는 것이 합리적입니다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 29.8
+        }
+      ]
+    },
+    "185490": {
+      "name": "아이진",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "바이오",
+      "specific_signal": "mRNA 기반 한타바이러스 백신 개발: 정부과제(한타바이러스 백신 국산화) 선정",
+      "trigger_type": "policy",
+      "confidence": "high",
+      "watch_keywords": [
+        "mRNA 백신",
+        "한타바이러스",
+        "정부과제 선정",
+        "백신 국산화",
+        "임상시험 계획"
+      ],
+      "related_stocks": [
+        "코칩",
+        "코이즈"
+      ],
+      "reasoning": "5월20일자 복수의 종목 태그 기사들이 ‘아이진이 mRNA 기반 한타바이러스 백신 개발을 위해 정부 과제에 선정되었다’고 보도했고, 이 발표가 당일 투자 심리를 자극해 급등과 거래대금 급증으로 연결된 것으로 판단된다. 관련 보도가 동일일 다수 노출되고 정부 지원·국산화 기대가 명확해 직접적 트리거로 보기 적절하다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 29.79
+        }
+      ]
+    },
+    "159910": {
+      "name": "에코글로우",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "실적/사업전환",
+      "specific_signal": "1분기 별도 기준 영업흑자 전환(공시·보도) 및 강남 역삼동 토지·건물 96억원 양수 결정",
+      "trigger_type": "earnings",
+      "confidence": "medium",
+      "watch_keywords": [
+        "K-뷰티 전환",
+        "영업흑자 전환",
+        "역삼동 토지·건물 양수 96억",
+        "무차입 경영",
+        "제품 포트폴리오(프렙) 신시장"
+      ],
+      "related_stocks": [
+        "마녀공장",
+        "메디앙스"
+      ],
+      "reasoning": "5월 중순에 발표된 1분기 영업흑자 전환 공시(및 별도 실적 보도)와 96억원 규모의 역삼동 토지·건물 양수 결정이 재무·자산 개선의 구체적 신호로 해석되어 매수세를 유발한 것으로 보입니다. 이후 K-뷰티 집중 전환(제품 포트폴리오 변화) 관련 긍정적 기사들이 이어지며 투자심리가 강화되어 D-day에 급등이 발생한 것으로 판단합니다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 16.8
+        }
+      ]
+    },
+    "081180": {
+      "name": "쎄크",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "방산/검사장비",
+      "specific_signal": "한화에어로스페이스 대상 93억 규모 비파괴검사시스템 공급계약(수주잔고 200억 돌파)",
+      "trigger_type": "contract",
+      "confidence": "high",
+      "watch_keywords": [
+        "방산 수주",
+        "비파괴검사시스템 93억",
+        "수주잔고 200억 돌파",
+        "HBM 검사장비",
+        "기관 IR HBM·방산"
+      ],
+      "related_stocks": [
+        "지아이에스",
+        "삼성전기"
+      ],
+      "reasoning": "5월 13일 다수 공시로 93억원 규모의 방산 비파괴검사시스템 공급계약과 수주잔고 확대가 확인되었고, 이후(5/19) IR·리서치 보도가 겹치며 매수 심리가 재점화되어 급등을 유발한 것으로 보임. 공시성 계약(명확한 매출·수주 확대)이 직접적 호재 역할을 한 사례다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 15.04
+        }
+      ]
+    },
+    "381620": {
+      "name": "제닉스로보틱스",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "산업 자동화/로봇",
+      "specific_signal": "대기업(報: LG) 산업 자동화 투자 확대 보도 — 산업용 로봇·AMR 수요 기대감",
+      "trigger_type": "policy",
+      "confidence": "medium",
+      "watch_keywords": [
+        "산업 자동화",
+        "AMR(자율이동로봇)",
+        "LG 산업자동화 투자",
+        "로봇 풀라인업(직각좌표·AMR)",
+        "로봇 IPO·투자 유입"
+      ],
+      "related_stocks": [
+        "로보스타",
+        "빅웨이브로보틱스"
+      ],
+      "reasoning": "직접적인 공시나 계약 기사는 확인되지 않으나 5월 15일 보도로 대기업의 산업 자동화 투자 확대 소식이 전해지면서 산업용 로봇·AMR 관련주에 수급이 유입된 것으로 보인다. 제닉스로보틱스는 산업용 로봇 라인업과 AMR 관련 뉴스에 함께 거론되어 테마성 매수로 급등한 것으로 판단된다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 14.79
+        }
+      ]
+    },
+    "062970": {
+      "name": "한국첨단소재",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "소재 / 기능성소재",
+      "specific_signal": "업계 행사·보도에서의 '신사업(기능성소재) 전환' 언급으로 인한 기대감(리더십 서밋·지방 기술심포지움 보도)",
+      "trigger_type": "rumor",
+      "confidence": "low",
+      "watch_keywords": [
+        "기능성소재",
+        "소재 국산화",
+        "리더십 서밋 기능성소재",
+        "신사업 전환",
+        "전북TP 심포지움"
+      ],
+      "related_stocks": [
+        "롯데케미칼",
+        "한화솔루션"
+      ],
+      "reasoning": "직접적으로 해당 종목을 태깅한 공시·실적·수주 뉴스는 없고, 5/19일자 검색 뉴스들에서 지방·업계 포럼과 ‘기능성소재·신사업’ 전개 관련 보도가 다수 확인된다. 시장 전반의 소재 섹터 기대감 혹은 테마성 자금 유입이 해당 소형주에 단기 급등을 유발한 것으로 판단된다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 12.5
+        }
+      ]
+    },
+    "043260": {
+      "name": "성호전자",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "수주·수급(데이터센터 전원·광통신 장비)",
+      "specific_signal": "최대주주·부회장 장내매수(지분 추가 매입) 및 에이텀과 데이터센터용 SMPS 개발 MOU, 광통신 장비 수주 모멘텀(코닝·엔비디아 관련 수주 기사)",
+      "trigger_type": "contract",
+      "confidence": "high",
+      "watch_keywords": [
+        "데이터센터 전원공급",
+        "광통신 장비 수주",
+        "최대주주 장내매수",
+        "데이터센터용 SMPS MOU",
+        "코닝 엔비디아 연관 수주"
+      ],
+      "related_stocks": [
+        "에이텀",
+        "우리로"
+      ],
+      "reasoning": "장중 강한 상승은 5월20일 보도된 최대주주·부회장의 장내매수(지분 추가 매입) 소식과 같은 날 공개된 에이텀과의 데이터센터용 SMPS 개발 MOU, 그리고 전일 보도된 광통신 장비 수주 관련 기사들이 동시에 겹치며 수급 개선(대주주 매수)과 실질적 사업 모멘텀(수주·MOU)이 결합된 것으로 판단됩니다. 특히 대주주 직접 매수 공시·보도가 즉각적 신뢰를 주어 매수세가 몰린 것으로 보입니다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 11.61
+        }
+      ]
+    },
+    "069540": {
+      "name": "빛과전자",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "광통신/데이터센터 수요(수급)",
+      "specific_signal": "100% 자회사 흡수합병 결정(지배구조 단순화) — 병행된 전환사채 발행 및 데이터센터용 차세대 광통신 전시 이력",
+      "trigger_type": "disclosure",
+      "confidence": "high",
+      "watch_keywords": [
+        "광통신",
+        "AI 데이터센터",
+        "자회사 흡수합병",
+        "전환사채 80억원",
+        "데이터센터용 차세대 광모듈"
+      ],
+      "related_stocks": [
+        "대한광통신",
+        "이노인스트루먼트"
+      ],
+      "reasoning": "D-day 직전(5/20) 발표된 100% 자회사 흡수합병 공시는 지배구조·사업연계성 개선 기대를 불러주었고, 5/15의 80억원 전환사채 결정은 자금 조달·성장 투자 의지를 뒷받침한다. 또한 5/6의 '데이터센터용 차세대 광통신' 전시 내용이 AI 데이터센터 수요 확대로 연결되며 투자 심리를 자극해 급등으로 이어진 것으로 보인다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 11.5
+        }
+      ]
+    },
+    "491000": {
+      "name": "리브스메드",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "바이오·의료기기",
+      "specific_signal": "수술로봇 출시 임박(제품명 '스타크') 및 지식재산권(IP) 누적 1,000건 확보로 특허 방어력 강화",
+      "trigger_type": "disclosure",
+      "confidence": "high",
+      "watch_keywords": [
+        "의료로봇",
+        "지식재산권(IP)",
+        "수술로봇 스타크 출시",
+        "특허 1,000건 확보",
+        "복강경 수술 비용효율성"
+      ],
+      "related_stocks": [
+        "메디아나",
+        "오스템임플란트"
+      ],
+      "reasoning": "D-day 당일 다수의 종목 태그 기사들이 'IP 1000건 돌파'와 '수술로봇 스타크 공개 임박'을 직접 보도하며 주가를 끌어올린 것으로 보인다. 회사의 특허 확보와 제품 출시(또는 출시 임박) 소식은 실물 제품화 기대를 키우며 투자심리를 자극해 급등을 발생시켰다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 11.31
+        }
+      ]
+    },
+    "445090": {
+      "name": "에이직랜드",
+      "market": "KOSDAQ",
+      "first_seen": "20260520",
+      "last_seen": "20260520",
+      "consecutive_days": 1,
+      "main_theme": "반도체 (시스템·AI 반도체 설계 및 장비·소재 수요)",
+      "specific_signal": "1분기 연결 매출 540억원(전년比 +242%)—창사 이래 분기 최대 및 AI 메모리 설계 프로젝트 집중(설계 수요 몰림)",
+      "trigger_type": "earnings",
+      "confidence": "high",
+      "watch_keywords": [
+        "AI 메모리",
+        "시스템반도체 설계",
+        "1분기 매출 540억",
+        "뉴로모픽 상용화",
+        "설계 서비스 수주"
+      ],
+      "related_stocks": [
+        "주성엔지니어링",
+        "MDS인텔리전스"
+      ],
+      "reasoning": "5월 중순 발표된 1분기 실적(매출 급증)이 직간접적 호재로 작용했고, 이후 보도(5.18)에서 'AI 메모리 설계 몰림' 등 사업 쪽 성장 스토리가 반복 노출되며 매수세가 강화된 것으로 보인다. D-day(5.20) 상승은 실적 발표의 확실한 매출 성장 수치와 AI 메모리·뉴로모픽 설계 관련 기대감이 결합된 영향으로 해석된다.",
+      "history": [
+        {
+          "date": "20260520",
+          "change_pct": 10.9
+        }
+      ]
     }
   },
   "seen_articles": {
@@ -6113,60 +6869,83 @@
       "374f0ae805ea"
     ],
     "014910": [
-      "f8cc0829cb9b",
-      "1112c1f81b9a",
-      "ad8445fc2432",
-      "1e72837f0083",
-      "97f6d93ce57d",
-      "075384e897cc",
-      "bb27633235e4",
-      "e30fffd38a9b",
-      "2b4479b570d0",
-      "cdcab19dcff1",
-      "636b3ef07eb9",
-      "158100a67445",
-      "63cf0c11dd13",
-      "8fc7776025b9",
-      "8ff9158b5fce",
-      "32261260bb84",
-      "756ba58aadad",
-      "be6e8ba2c688",
-      "17969061567e",
-      "4bce25fa233a",
-      "08c0d8528d8a",
-      "55350120a9d1",
-      "e1b07f630298",
-      "8acc5ed422b8",
-      "7c1513c50348",
-      "4155ec7fe25b",
-      "ee6a1f932e9e",
-      "7e5937954d24",
       "769e77b49a8d",
       "120357f5a559",
-      "e48861f245eb",
-      "f5211eff47bc",
+      "34a85b9680eb",
+      "7c1513c50348",
+      "d69915d4674c",
+      "cdcab19dcff1",
+      "17969061567e",
+      "8fc7776025b9",
+      "158100a67445",
+      "32261260bb84",
       "7e5a70a6cb4d",
+      "7e5937954d24",
+      "f79b1fdf710d",
+      "63cf0c11dd13",
+      "636b3ef07eb9",
       "9d8b460bd382",
+      "1184b120a19b",
+      "756ba58aadad",
+      "be6e8ba2c688",
+      "8acc5ed422b8",
+      "93844b47f584",
+      "e48861f245eb",
+      "075384e897cc",
       "85c36518ac99",
-      "1184b120a19b"
+      "01d7dae26501",
+      "7dc65be5bbf5",
+      "97f6d93ce57d",
+      "8ff9158b5fce",
+      "bb27633235e4",
+      "e1b07f630298",
+      "f5211eff47bc",
+      "93e1abbec275",
+      "e30fffd38a9b",
+      "3912e3ad4cd8",
+      "1112c1f81b9a",
+      "1e72837f0083",
+      "f8cc0829cb9b",
+      "4facde8cf0c4",
+      "55350120a9d1",
+      "9e93fa02d8ca",
+      "08c0d8528d8a",
+      "4155ec7fe25b",
+      "ee6a1f932e9e",
+      "ad8445fc2432",
+      "4bce25fa233a",
+      "2b4479b570d0",
+      "08dae2fe3252"
     ],
     "014915": [
-      "20f812708b29",
       "120357f5a559",
-      "7e5a70a6cb4d",
-      "8ff9158b5fce",
-      "158100a67445",
-      "e48861f245eb",
-      "be6e8ba2c688",
-      "5173de51eed6",
-      "7e5937954d24",
+      "34a85b9680eb",
+      "d69915d4674c",
       "8fc7776025b9",
-      "4bce25fa233a",
-      "4155ec7fe25b",
-      "f5211eff47bc",
+      "158100a67445",
+      "7e5a70a6cb4d",
+      "f79b1fdf710d",
+      "7e5937954d24",
+      "275d3fb63a70",
       "636b3ef07eb9",
+      "be6e8ba2c688",
+      "93844b47f584",
+      "e48861f245eb",
+      "7dc65be5bbf5",
+      "8ff9158b5fce",
       "e1b07f630298",
-      "275d3fb63a70"
+      "bb27633235e4",
+      "20f812708b29",
+      "f5211eff47bc",
+      "93e1abbec275",
+      "3912e3ad4cd8",
+      "4facde8cf0c4",
+      "9e93fa02d8ca",
+      "5173de51eed6",
+      "4155ec7fe25b",
+      "4bce25fa233a",
+      "2b4479b570d0",
+      "08dae2fe3252"
     ],
     "012205": [
       "7e5a70a6cb4d",
@@ -6213,60 +6992,79 @@
       "3b0308fca327"
     ],
     "005257": [
-      "ff9dd1ca6557",
-      "25cefa23a085",
-      "8ff9158b5fce",
+      "d6970087c6df",
+      "6dd50e3d71c9",
+      "6f2f12b4e6fd",
+      "e6bb07c60bd9",
       "5f6bf3d0f093",
       "7e5937954d24",
-      "4bce25fa233a",
-      "d6970087c6df",
-      "37decf076066",
-      "f04f0bd887da",
+      "ff9dd1ca6557",
+      "25cefa23a085",
+      "7c5b2ac999cb",
+      "8ff9158b5fce",
       "e1b07f630298",
+      "d0bdbc66fd73",
       "85a7ee01db50",
-      "e6bb07c60bd9"
+      "c2664b0b402d",
+      "c55664780793",
+      "f04f0bd887da",
+      "3dd51c88b9ff",
+      "4bce25fa233a",
+      "37decf076066"
     ],
     "005250": [
-      "9896412b6c76",
-      "386cd7503fc4",
-      "5d7f1997271c",
-      "5138b5580a2a",
-      "bcd61ba8f9e7",
-      "3f66241c5203",
-      "cbc30ebb5c24",
-      "f4790664a642",
-      "f964bb44354b",
-      "6bdfb6a9998d",
-      "32c7ece1f1d8",
-      "7f026df34d44",
-      "08c0d8528d8a",
+      "e7db94ec02fa",
+      "6f2f12b4e6fd",
       "2e985b8ec421",
-      "0e7617d042ec",
-      "54211d43d1ed",
-      "b0de16633fc8",
-      "ff9dd1ca6557",
-      "0343fb618d5e",
-      "c86fdb862bfc",
-      "074ada9eb4cf",
-      "5436e247f1ac",
-      "3754a6570b05",
-      "949ab0d9e0af",
-      "f04f0bd887da",
-      "e75e4b076932",
+      "32c7ece1f1d8",
       "78647e747e9e",
-      "3497beee2572",
-      "229f9700d58a",
-      "deba74b996e4",
-      "4234b3c42cb4",
+      "7f026df34d44",
+      "386cd7503fc4",
+      "074ada9eb4cf",
+      "5138b5580a2a",
+      "ff9dd1ca6557",
+      "f4790664a642",
+      "72f09f3153de",
+      "907098514ae8",
+      "b0de16633fc8",
       "25cefa23a085",
-      "893ab4767c99",
-      "4e409851c07e",
-      "207c9e77f589",
-      "358376b2e21e",
+      "7c5b2ac999cb",
+      "3754a6570b05",
+      "c86fdb862bfc",
+      "cbc30ebb5c24",
       "a28da1cdde55",
-      "677d1ee224a5",
+      "358376b2e21e",
+      "d36c3f996725",
+      "b80266815694",
+      "9896412b6c76",
+      "207c9e77f589",
+      "e75e4b076932",
+      "0343fb618d5e",
+      "deba74b996e4",
+      "5d7f1997271c",
+      "4cfb13538182",
+      "760b2fc05c12",
+      "6bdfb6a9998d",
+      "d0bdbc66fd73",
+      "0e7617d042ec",
       "271a148c69eb",
-      "760b2fc05c12"
+      "54211d43d1ed",
+      "3497beee2572",
+      "c55664780793",
+      "677d1ee224a5",
+      "bcd61ba8f9e7",
+      "229f9700d58a",
+      "4234b3c42cb4",
+      "f04f0bd887da",
+      "3f66241c5203",
+      "f964bb44354b",
+      "5436e247f1ac",
+      "3dd51c88b9ff",
+      "949ab0d9e0af",
+      "08c0d8528d8a",
+      "0995af15c32e",
+      "4e409851c07e",
+      "893ab4767c99"
     ],
     "066570": [
       "1a82773c4d0d",
@@ -6589,46 +7387,56 @@
       "aacb73fe7b1f"
     ],
     "439960": [
-      "cd470557cf57",
-      "7be87356140e",
-      "dde8fdec1fba",
-      "957018a7b8a9",
-      "f80b9681bf8e",
-      "18013b196b02",
-      "3dd51c88b9ff",
-      "6bcb514fbebf",
-      "a76f7a429a75",
-      "b0fac51bd0f5",
-      "704c77f2defa",
-      "8ba88075dd33",
-      "4594f39e0ab0",
-      "71969fa7c525",
-      "77d65e71e913",
-      "bd92385c2402",
-      "ca6ea5efb830",
-      "688bf089b7c9",
-      "ce6ba45325ea",
-      "87a3c0de7b90",
-      "94d6a7547a21",
-      "9b75293205c1",
-      "c662ef64d4bd",
-      "d781db6d87fa",
-      "a6b89d2094bf",
+      "0192a7e03f54",
       "afd9c6f7def7",
       "3e8fdb8115ba",
-      "78d1c901aff5",
+      "e52fe006b864",
+      "f375f4eec372",
+      "1f7f14c6f44c",
+      "9b75293205c1",
+      "2ceac55a046d",
+      "7be87356140e",
+      "7e5a70a6cb4d",
       "8030123366be",
       "0696a93471e0",
-      "15a79aa32283",
-      "cd4e915bc801",
-      "1e6d72fc83d6",
+      "a5f5a3c9ea70",
+      "bd92385c2402",
+      "78d1c901aff5",
       "817d51057d95",
+      "4594f39e0ab0",
       "7d906e3dc2a8",
-      "1f7f14c6f44c",
-      "7e5a70a6cb4d",
       "3f95d2575f6a",
+      "94d6a7547a21",
+      "fc7fe7adf42f",
+      "15a79aa32283",
+      "a76f7a429a75",
+      "77d65e71e913",
+      "249627469953",
+      "cd4e915bc801",
+      "a6b89d2094bf",
+      "ca6ea5efb830",
+      "49da55f96d81",
+      "b0fac51bd0f5",
+      "c662ef64d4bd",
+      "048b80986973",
+      "688bf089b7c9",
+      "f80b9681bf8e",
+      "1e6d72fc83d6",
+      "ce6ba45325ea",
+      "8ba88075dd33",
+      "18013b196b02",
+      "64f3a746aab5",
       "23504046229f",
-      "49da55f96d81"
+      "71969fa7c525",
+      "704c77f2defa",
+      "6bcb514fbebf",
+      "455f18849bb5",
+      "3dd51c88b9ff",
+      "87a3c0de7b90",
+      "d781db6d87fa",
+      "dde8fdec1fba",
+      "cd470557cf57",
+      "957018a7b8a9"
     ],
     "048770": [
       "fc88cabaf3e6",
@@ -6809,43 +7617,53 @@
       "912c45d6455b"
     ],
     "142280": [
-      "ae197b94218f",
-      "68a9c37a73f8",
-      "733c35285078",
-      "a3f482b3fd14",
-      "8a386e5f5ec6",
-      "244df92275b1",
-      "df60c87b593e",
-      "209044928d0a",
-      "760b2fc05c12",
-      "0f8a985370ec",
-      "2f272aee0f31",
       "7de978549bb1",
-      "ce3118f0923c",
-      "a104f92a2f67",
-      "3686fb49c2f0",
-      "553c1277272b",
-      "5436e247f1ac",
-      "44d6fdae2090",
-      "3497beee2572",
+      "c77ab8be04aa",
       "e7db94ec02fa",
-      "f099b4036477",
-      "192857565fa1",
-      "a28da1cdde55",
-      "c5e955e601e6",
-      "358376b2e21e",
-      "7e24e39e09db",
-      "2bb08fbab605",
-      "949ab0d9e0af",
-      "00b763e5e3a5",
-      "e2e82df265db",
-      "349aebfd7019",
-      "f964bb44354b",
-      "3ecaa75d9deb",
-      "0ba65b8c24be",
       "2e985b8ec421",
+      "68a9c37a73f8",
+      "8a386e5f5ec6",
+      "0f8a985370ec",
+      "377931c124c1",
+      "23a63201e627",
+      "209044928d0a",
+      "2f272aee0f31",
+      "00b763e5e3a5",
+      "d906ca235c06",
+      "349aebfd7019",
+      "3fc3f862c9e1",
+      "ce3118f0923c",
+      "7e819c1314e1",
+      "2bb08fbab605",
+      "a28da1cdde55",
+      "358376b2e21e",
+      "0ba65b8c24be",
+      "a104f92a2f67",
+      "7e24e39e09db",
+      "b8769b5e1f36",
+      "244df92275b1",
+      "553c1277272b",
+      "ae197b94218f",
+      "c5e955e601e6",
+      "3686fb49c2f0",
+      "760b2fc05c12",
+      "44d6fdae2090",
+      "a3f482b3fd14",
+      "03968f4e9a44",
+      "747e369ecada",
+      "3497beee2572",
+      "e2e82df265db",
+      "192857565fa1",
+      "f099b4036477",
+      "3ecaa75d9deb",
+      "f964bb44354b",
+      "5436e247f1ac",
       "5a4b209ec1f4",
-      "03968f4e9a44"
+      "949ab0d9e0af",
+      "733c35285078",
+      "df60c87b593e",
+      "898fe0d5e5d5",
+      "08dae2fe3252"
     ],
     "101330": [
       "ee5bc171b27b",
@@ -6897,16 +7715,30 @@
       "f0a6eabd635c"
     ],
     "253840": [
-      "b90796abaeb8",
-      "7843711e7baf",
-      "971e61fe7d8b",
-      "00b763e5e3a5",
-      "f645c93d9000",
-      "c5f2d0411af7",
-      "303eecfacb82",
-      "463c156b4892",
+      "c77ab8be04aa",
+      "377931c124c1",
+      "5f1d4b2e4f88",
       "43581aca654b",
-      "596f5522c019"
+      "00b763e5e3a5",
+      "303eecfacb82",
+      "b90796abaeb8",
+      "3fc3f862c9e1",
+      "7e819c1314e1",
+      "358376b2e21e",
+      "c5f2d0411af7",
+      "127b41344b0f",
+      "971e61fe7d8b",
+      "3686fb49c2f0",
+      "413004fe5dd6",
+      "7843711e7baf",
+      "463c156b4892",
+      "596f5522c019",
+      "f645c93d9000",
+      "dec450fbb08f",
+      "024a90f0d8ac",
+      "949ab0d9e0af",
+      "898fe0d5e5d5",
+      "08dae2fe3252"
     ],
     "356680": [
       "d4fd98b6d16a",
@@ -7350,31 +8182,57 @@
       "4d0d77c1cea8"
     ],
     "307950": [
-      "b1d8e5c1e3bf",
-      "a2d8228875ce",
-      "8f032a253f9e",
-      "0a54855a0196",
-      "4b925ff1ceef",
-      "017b12070be2",
-      "5cfb6f0d0504",
-      "238a36658f34",
-      "d68b028b3307",
-      "f94966ce1247",
-      "6cc1d80bfbf6",
-      "8544dc2ec0ad",
-      "7c75fd8160e7",
-      "127e79817edd",
-      "e149c091fe46",
-      "77f788551f1d",
-      "14b8139ee777",
       "0cd21e2efaca",
-      "3e7ef6cf0f46",
-      "9970b0bf9ba2",
+      "f511bcb67d6e",
+      "72406128f18c",
+      "e149c091fe46",
+      "49bdef7636bf",
+      "77f788551f1d",
       "0167e1ca6331",
-      "52f67ad2aff4",
-      "5919fdc3d321",
+      "385b3b38dadd",
+      "1bfb5369c277",
+      "f94966ce1247",
+      "787e669e5dc1",
+      "3e7ef6cf0f46",
+      "7c75fd8160e7",
+      "d68b028b3307",
+      "0cd885f30d27",
+      "3af023bf2ce8",
+      "a2d8228875ce",
+      "f31bf25fad13",
+      "5cfb6f0d0504",
       "e69caa54893d",
-      "3af023bf2ce8"
+      "2c2afb0bd9f0",
+      "8f032a253f9e",
+      "87473b1ee73d",
+      "5919fdc3d321",
+      "b1d8e5c1e3bf",
+      "ae20becbc4c0",
+      "a7cf7dab9b21",
+      "0a54855a0196",
+      "e629991b91c6",
+      "52f67ad2aff4",
+      "d007a315157b",
+      "e6a3c537d6e5",
+      "0061636cee0a",
+      "bdec1e055b4f",
+      "69852901b7b0",
+      "127e79817edd",
+      "9970b0bf9ba2",
+      "50aa10f3f649",
+      "8544dc2ec0ad",
+      "d8dc38e5cb9e",
+      "4b925ff1ceef",
+      "8a283aaf6843",
+      "7ef261adfa23",
+      "6148f9552d80",
+      "72445d522810",
+      "55dd960c8e64",
+      "6cc1d80bfbf6",
+      "017b12070be2",
+      "238a36658f34",
+      "14b8139ee777",
+      "161db65bcc0c"
     ],
     "032800": [
       "83d8963bfce0",
@@ -7538,18 +8396,30 @@
       "8491057abc0c"
     ],
     "123010": [
-      "8fedf904c2a5",
-      "7e5a70a6cb4d",
-      "5024ca8ad293",
-      "5b066733713c",
-      "1cb8bcc3f794",
-      "0f67e523ae1e",
       "457752fc1dfa",
-      "6401b5485de8",
-      "c14b4185aafc",
-      "597dd344e9cb",
+      "2b2967ab796d",
+      "203b7ae4a3eb",
+      "7e5a70a6cb4d",
+      "1cb8bcc3f794",
+      "98523249aeb1",
+      "d3204f19eba6",
+      "5024ca8ad293",
       "e1b07f630298",
-      "2b2967ab796d"
+      "3452f20d7884",
+      "10a61a1d8fc8",
+      "5b066733713c",
+      "597dd344e9cb",
+      "7be40fc84b65",
+      "c14b4185aafc",
+      "8fedf904c2a5",
+      "e408e5915bf3",
+      "0f67e523ae1e",
+      "dd4d9ccbf73a",
+      "18013b196b02",
+      "6401b5485de8",
+      "76f9325f0688",
+      "c0cd18f16661",
+      "08dae2fe3252"
     ],
     "011080": [
       "81962b5e073a",
@@ -7784,14 +8654,25 @@
       "0885c883df71"
     ],
     "002870": [
-      "ba856bc976d8",
-      "8dfbcb39ee44",
-      "ac01427114ff",
-      "ef081faa0b86",
-      "d6902a65e6ee",
-      "dc5ed77983a8",
-      "460f8a2c35a3",
       "0164bd5e4483",
+      "d7020b748ac7",
+      "8dfbcb39ee44",
+      "1d3004c19577",
+      "36a93b71621d",
+      "ac01427114ff",
+      "aa2d77562f1a",
+      "c288c92d1855",
+      "0155ccacc9a8",
+      "cca750a72962",
+      "dc5ed77983a8",
+      "662f4481e140",
+      "ba856bc976d8",
+      "6a9654199151",
+      "460f8a2c35a3",
+      "d6902a65e6ee",
+      "ef081faa0b86",
+      "81f1a76db7e2",
+      "0995af15c32e",
       "1c28b2e7e3b8",
       "2c886f09bdb7"
     ],
@@ -9013,37 +9894,49 @@
       "30f91b369da2"
     ],
     "011000": [
-      "d0bdbc66fd73",
-      "5b0e6bdc0a3f",
+      "958ade1aebfe",
+      "ecf253fe64f0",
+      "c77ab8be04aa",
+      "83f72d403e33",
+      "3e8fdb8115ba",
       "a50ca877d314",
-      "564fa6dbb6dd",
-      "f80b9681bf8e",
-      "2357dde474ce",
+      "bc81a8f9c6e6",
+      "d93264a0c89d",
+      "d43068ed3958",
+      "377931c124c1",
+      "3aa22193aa2b",
+      "d2642861464b",
       "9367c82b730f",
+      "817d51057d95",
+      "2357dde474ce",
+      "3fc3f862c9e1",
+      "5b0e6bdc0a3f",
+      "7aaf1ecdcabb",
+      "14d6f49383de",
+      "0a2f55a8a211",
+      "1c7412cb11fa",
+      "15a79aa32283",
+      "2c69a0dbad80",
+      "bd8d686c2eb3",
+      "ad0d1a8df8b8",
+      "564fa6dbb6dd",
+      "c7e08b55f719",
+      "d0bdbc66fd73",
+      "37e794f01ddf",
+      "07de2de1648c",
       "b0fac51bd0f5",
-      "ccdfc5a998bf",
+      "c7ce7de89d68",
+      "f80b9681bf8e",
       "35540425c875",
       "71969fa7c525",
-      "2e1edd78df1a",
-      "37e794f01ddf",
-      "ad0d1a8df8b8",
-      "14d6f49383de",
-      "3aa22193aa2b",
       "55350120a9d1",
-      "f543483d2d02",
-      "3e8fdb8115ba",
-      "d43068ed3958",
-      "15a79aa32283",
-      "c7e08b55f719",
-      "817d51057d95",
-      "958ade1aebfe",
-      "0a2f55a8a211",
-      "bc81a8f9c6e6",
-      "bd8d686c2eb3",
-      "ecf253fe64f0",
       "a60d1142904c",
-      "c7ce7de89d68",
-      "07de2de1648c"
+      "ccdfc5a998bf",
+      "9e93fa02d8ca",
+      "08dae2fe3252",
+      "898fe0d5e5d5",
+      "f543483d2d02",
+      "2e1edd78df1a"
     ],
     "010060": [
       "cceac9fe4857",
@@ -9153,9 +10046,9 @@
       "c7ce7de89d68"
     ],
     "002420": [
-      "44d4c5524611",
+      "958ade1aebfe",
       "4bce25fa233a",
-      "958ade1aebfe"
+      "44d4c5524611"
     ],
     "244920": [
       "2f79287df23d",
@@ -9201,21 +10094,31 @@
       "dcdbd7588e65"
     ],
     "005950": [
-      "6458ae1a77bc",
-      "ed823d562832",
-      "425a0cedce36",
-      "897fceebd508",
-      "564fa6dbb6dd",
-      "90e0a19490c4",
-      "fa645f6874e6",
-      "96638f0005ef",
-      "58591696d403",
-      "9bba2126b0ed",
-      "fb8bc7c69522",
-      "9c55bb7df657",
       "ecf253fe64f0",
+      "83f72d403e33",
+      "58591696d403",
+      "90e0a19490c4",
+      "fb8bc7c69522",
+      "7bb0dfd37699",
       "817d51057d95",
-      "c69b6e848933"
+      "c69b6e848933",
+      "425a0cedce36",
+      "6458ae1a77bc",
+      "29bbcfa9ac6a",
+      "96638f0005ef",
+      "b8769b5e1f36",
+      "ed823d562832",
+      "9c55bb7df657",
+      "fa645f6874e6",
+      "2c69a0dbad80",
+      "564fa6dbb6dd",
+      "220839615bc0",
+      "9bba2126b0ed",
+      "897fceebd508",
+      "8ed1533eade0",
+      "9e93fa02d8ca",
+      "1669efa8af66",
+      "08dae2fe3252"
     ],
     "001430": [
       "677e3a400c9d",
@@ -9354,16 +10257,24 @@
       "4c0a90892742"
     ],
     "131290": [
+      "958ade1aebfe",
       "a90c4976b1c0",
       "66c3e54aca52",
-      "8d507bc531a4",
-      "81d14e4ebf28",
-      "958ade1aebfe",
+      "47983dbf3996",
       "4c464bf58496",
-      "b929d9d0006e",
+      "8d507bc531a4",
       "42e9979cf441",
+      "596bb0fc70ba",
+      "81d14e4ebf28",
       "f09ead4e3122",
-      "47983dbf3996"
+      "5f87eabfa657",
+      "b929d9d0006e",
+      "a8dbf44033cf",
+      "d68ba7d108e5",
+      "9eefcde66c04",
+      "0b7d9a809413",
+      "08dae2fe3252",
+      "a5f5a3c9ea70"
     ],
     "321370": [
       "d0bdbc66fd73",
@@ -9530,21 +10441,34 @@
       "dc2c3e1db50d"
     ],
     "004870": [
-      "b0fac51bd0f5",
-      "0a9ab405c4e5",
-      "6dd0d0eb2cd9",
-      "71969fa7c525",
-      "0150f5670d63",
-      "9b72db176f58",
-      "f82b4da8c3bb",
-      "f80b9681bf8e",
-      "9578eaa005be",
+      "34a85b9680eb",
       "3e8fdb8115ba",
-      "aa1094d301ed",
+      "d69915d4674c",
+      "0150f5670d63",
       "8558140d5c98",
-      "15a79aa32283",
+      "f79b1fdf710d",
+      "63af19f514ef",
       "817d51057d95",
-      "14d6f49383de"
+      "9578eaa005be",
+      "f82b4da8c3bb",
+      "14d6f49383de",
+      "93844b47f584",
+      "8f128e536e4a",
+      "15a79aa32283",
+      "7dc65be5bbf5",
+      "9b72db176f58",
+      "93e1abbec275",
+      "b0fac51bd0f5",
+      "3912e3ad4cd8",
+      "f80b9681bf8e",
+      "0a9ab405c4e5",
+      "4facde8cf0c4",
+      "71969fa7c525",
+      "9e93fa02d8ca",
+      "08dae2fe3252",
+      "aa1094d301ed",
+      "6dd0d0eb2cd9",
+      "2c69a0dbad80"
     ],
     "217590": [
       "8a5d67eb410e",
@@ -9910,6 +10834,469 @@
       "d08fb27dcb09",
       "b23ac681b48d",
       "9bac8f1cabbc"
+    ],
+    "017900": [
+      "63cf0c11dd13",
+      "4facde8cf0c4",
+      "7dc65be5bbf5",
+      "2357dde474ce",
+      "167efdc7ccf7",
+      "34a85b9680eb",
+      "d69915d4674c",
+      "9e93fa02d8ca",
+      "93844b47f584",
+      "93e1abbec275",
+      "01d7dae26501",
+      "91153f297e02",
+      "325dcf117704",
+      "f79b1fdf710d"
+    ],
+    "001820": [
+      "7c9b04b5606e",
+      "83424726f820",
+      "196c015d8d28",
+      "d69915d4674c",
+      "9e93fa02d8ca",
+      "93e1abbec275",
+      "16dcfc20c2f2",
+      "fff974670236",
+      "88315aa40867",
+      "9eefcde66c04",
+      "03e1aab2aa17",
+      "e4abcfdbf763"
+    ],
+    "058650": [
+      "53fd6c3b29e2",
+      "83f72d403e33",
+      "6c8c6eefb1d9",
+      "1da0404fcae4",
+      "e1164b13ef31",
+      "3d81385f06b4",
+      "e648f8ecb989",
+      "e6bb7ff00c39",
+      "1848d5bf3dce",
+      "edcc8dd3b408",
+      "e26cacfd8297",
+      "5f5250b0c2b2",
+      "73df5b1c3da0",
+      "3b138164037b",
+      "f86ed39c11bd",
+      "786db2fc049c",
+      "b8ab9a6eb75f",
+      "3d489b0c602a",
+      "39193aaaf717",
+      "94826fc77d39",
+      "ceadd124b0b7",
+      "e5756507b50f",
+      "2c69a0dbad80",
+      "3d19e4b54c11"
+    ],
+    "007810": [
+      "90a1dcffd28c",
+      "e430f13333bc",
+      "dc17a172273f",
+      "03e6803623af",
+      "d6affed56302",
+      "3c07b1fc0292",
+      "a3f295a871ec",
+      "e2cbfc570423",
+      "8c10c8f855f4",
+      "d93264a0c89d",
+      "adb7d8fd7b54",
+      "a8ba6975698e",
+      "60728ab92592",
+      "d68ba7d108e5"
+    ],
+    "161000": [
+      "8e0dcda11511",
+      "422fed5d265a",
+      "610adccaedb6",
+      "4b1698f1e938",
+      "d3d25e722114",
+      "698dfb416eea",
+      "e53458b5a8cf",
+      "ebe10177cec2",
+      "22a232235a82",
+      "db5c96ea521e",
+      "9eefcde66c04",
+      "55000d119652",
+      "2e2f711b615c",
+      "950f7400e486",
+      "15ac4dd10e6a",
+      "2e04ee2090ed",
+      "d3871219cd0e",
+      "18697720f973",
+      "71af980cf8d4",
+      "42d1736699e1",
+      "aa698c38d968",
+      "a419d63d3a9b",
+      "e5a179100f62",
+      "f64a1cce87c1",
+      "6b0d2f482c47"
+    ],
+    "009150": [
+      "cc4b1b4fa286",
+      "04b76263bb63",
+      "44cb0fa675c9",
+      "0acdb47bb554",
+      "2e89131ca1d0",
+      "19ff9fe63b10",
+      "b226cb779cde",
+      "720b6b03b7dc",
+      "1a9881693303",
+      "06a73ab949be",
+      "cfd98f02d6da",
+      "9a313da4807a",
+      "b61a3c73d443",
+      "130d0264c372",
+      "0714622621f7",
+      "8bad61b94ab8",
+      "b29a10c007dd",
+      "6db6e8e1464d",
+      "7beee1b237e8",
+      "15e1d28b4be5",
+      "afc41ecc4c83",
+      "a08b96857977",
+      "b022f44026cc",
+      "3fea484783f9"
+    ],
+    "329180": [
+      "04b76263bb63",
+      "53c4cf350002",
+      "19ff9fe63b10",
+      "b226cb779cde",
+      "22054c9c7cd8",
+      "504d61d650e8",
+      "3cb53fd7ad11",
+      "29e0d923fdfa",
+      "63ade4e10b6b",
+      "27be3ab5e712",
+      "7d21d432c549",
+      "43c2dc8b1b5f",
+      "e68827c95d2f",
+      "0714622621f7",
+      "f45ddf863573",
+      "e2594a20334f",
+      "14998ce5fdf5",
+      "1165d06149eb",
+      "cff97f8d7b0f",
+      "c21e3c1b4ecf",
+      "95fe0fb56974",
+      "3adfc5d17be0",
+      "4f4642e557ca",
+      "f8e9d3e9e4ac",
+      "a9ab58fb962c",
+      "349480211c5b"
+    ],
+    "082740": [
+      "1a114e06cec8",
+      "a48980d8fd39",
+      "e7a734832ccd",
+      "a627ae95d1f6",
+      "512f13d34129",
+      "a025382ec483",
+      "113dd0663d9d",
+      "a6619ab54b5e",
+      "89e8054a653c",
+      "90a1dcffd28c",
+      "83424726f820",
+      "b2c871a3aa6c",
+      "895d96e67998",
+      "6430b1810201",
+      "7ad75498441f",
+      "99bf27a29f6a",
+      "f5e0dafd001b",
+      "7eb2d18e840a",
+      "6ec69af8b35a",
+      "e1e92ff8016b",
+      "3e0cfff2c85f",
+      "fff974670236",
+      "9b4d44bee6ad",
+      "6500b2263d22",
+      "cab2e09e6009",
+      "00512f1abcbf"
+    ],
+    "001755": [
+      "4bce25fa233a",
+      "1672fef43ecd",
+      "577878ef5fec"
+    ],
+    "007815": [
+      "4bce25fa233a",
+      "8730a357860b",
+      "499df7698707"
+    ],
+    "477850": [
+      "4facde8cf0c4",
+      "9a22ce8591b1",
+      "26c4b3a2432a",
+      "965944f4dd67",
+      "e52fe006b864",
+      "a78b2f5c8854",
+      "5f87eabfa657",
+      "2ceac55a046d",
+      "f79b1fdf710d",
+      "53429a9a059e"
+    ],
+    "066980": [
+      "232a5fcb2d31",
+      "26b1c351640a",
+      "c67d6f8d9522",
+      "7e7aa4943c85",
+      "b18ae7c2946f",
+      "0605da5eca0d",
+      "93844b47f584",
+      "d1730a62cf5b",
+      "7dc65be5bbf5",
+      "8b1c78f5d472",
+      "249627469953",
+      "72990bd3b6f2",
+      "3912e3ad4cd8",
+      "64f3a746aab5",
+      "4facde8cf0c4",
+      "ff93343f7a15",
+      "d83e83f289a8",
+      "53fde65f0574",
+      "ce28f6e9e48b",
+      "08dae2fe3252",
+      "fe3ad434714d",
+      "ac368bd0c185",
+      "f79b1fdf710d"
+    ],
+    "121850": [
+      "64f3a746aab5",
+      "4facde8cf0c4",
+      "7dc65be5bbf5",
+      "34a85b9680eb",
+      "26b1c351640a",
+      "01449770d3bd",
+      "93844b47f584",
+      "ee701c7e88f1",
+      "01d7dae26501",
+      "3912e3ad4cd8",
+      "f79b1fdf710d"
+    ],
+    "225430": [
+      "64f3a746aab5",
+      "c7e5ce2a4cb2",
+      "4facde8cf0c4",
+      "7dc65be5bbf5",
+      "378e62d24ece",
+      "34a85b9680eb",
+      "26b1c351640a",
+      "173d423c5927",
+      "93844b47f584",
+      "f6527980661c",
+      "3912e3ad4cd8",
+      "6b0db365c01a",
+      "d6cc6b150155",
+      "5b0dfaf451ee",
+      "f79b1fdf710d"
+    ],
+    "126730": [
+      "64f3a746aab5",
+      "4facde8cf0c4",
+      "7dc65be5bbf5",
+      "249627469953",
+      "bcd3ee5b9973",
+      "26b1c351640a",
+      "a49bcd061518",
+      "93844b47f584",
+      "01d7dae26501",
+      "3912e3ad4cd8",
+      "f79b1fdf710d"
+    ],
+    "215790": [
+      "4facde8cf0c4",
+      "2d83e7c84c07",
+      "7dc65be5bbf5",
+      "34a85b9680eb",
+      "249627469953",
+      "dc6856e5e40d",
+      "93844b47f584",
+      "c8e2210e0cab",
+      "63231ea26a72",
+      "3912e3ad4cd8",
+      "0dced860a2a0",
+      "f79b1fdf710d"
+    ],
+    "185490": [
+      "46d125022bd3",
+      "4facde8cf0c4",
+      "7dc65be5bbf5",
+      "34a85b9680eb",
+      "bb5a0a8aa30c",
+      "57fb0c4b6910",
+      "9fc1346e1f33",
+      "14843d2b5fc3",
+      "e52fe006b864",
+      "249627469953",
+      "47a02aed38ca",
+      "93844b47f584",
+      "495b0f25f381",
+      "f79b1fdf710d",
+      "79ddef268acb",
+      "0dced860a2a0",
+      "08dae2fe3252"
+    ],
+    "159910": [
+      "8e4b31bfa6c7",
+      "d3aa620b3ce3",
+      "3377f2dc5117",
+      "82824ac51eb2",
+      "073b386e35dd",
+      "5c221c28c70c",
+      "5568a490ef66",
+      "b0cd06b71ede",
+      "0cd6c5e6053b",
+      "e6bc512b33ff",
+      "2ac0b5b3411a",
+      "69f0bad302e0",
+      "e1fcdd499761",
+      "c6f89562af73",
+      "cea35586fb97",
+      "8de7781477c9",
+      "6fdb48703356",
+      "04a13041fca4",
+      "b067741728a7",
+      "78f9eabad91b",
+      "ddaff1f97161",
+      "9f43906fe003",
+      "7630706b0a3e",
+      "20281967461d",
+      "02b1a3f585ef",
+      "4bce25fa233a"
+    ],
+    "081180": [
+      "c8d7d8b8cd78",
+      "5b8e7e5ad50e",
+      "ec51d0dac82f",
+      "c2675030415c",
+      "1ae4f92fd6dc",
+      "40cf37b7fa76",
+      "388a59bf79e5",
+      "63036754d78b",
+      "adb7d8fd7b54",
+      "d65adaf5006c",
+      "744ab1677082",
+      "099c4caabcbe",
+      "babbc638ab7c",
+      "992212367ecc",
+      "c558f2f0762f",
+      "722bfbf10904",
+      "072b76c12667"
+    ],
+    "381620": [
+      "89658edda40e",
+      "1a6e0a7482d5",
+      "59096eae31d8",
+      "60e249600055",
+      "25d646df79d8",
+      "18326e2499ad",
+      "8acc5ed422b8",
+      "9bac8f1cabbc",
+      "6d94cc2b2744",
+      "2f4b211ee4b1"
+    ],
+    "062970": [
+      "c2d89dbca9b4",
+      "bc636cf1bddc",
+      "5297bbfdd852",
+      "0918a65b11c0",
+      "626448fcb56d",
+      "f67fafec0a4c",
+      "1b552d24928e",
+      "38c49ad92dc2",
+      "95ace5c3db03",
+      "0137420364cc",
+      "c7fd3a21a05d",
+      "38bc15afe026",
+      "97eff9a638b0",
+      "8ea3110382e0",
+      "e673ce45144a",
+      "63231ea26a72"
+    ],
+    "043260": [
+      "99d7beb3e11b",
+      "8036308fbf76",
+      "24c00ca304e7",
+      "a5f5a3c9ea70",
+      "0aec555c26bf",
+      "83424726f820",
+      "cba8f5b44f6c",
+      "249627469953",
+      "a7cf7dab9b21",
+      "5f87eabfa657",
+      "abc0b70033ee",
+      "7205ed64a97a",
+      "bec8b5158592",
+      "8945747217fd",
+      "91c842fbe5d8",
+      "23eb454a7212",
+      "5984fbaadaf0",
+      "240076f52af3",
+      "b267b6f84fd3",
+      "c7fd3a21a05d",
+      "4bce25fa233a",
+      "e6b39013cd6b"
+    ],
+    "069540": [
+      "c705bc44f694",
+      "a5f5a3c9ea70",
+      "dc6856e5e40d",
+      "249627469953",
+      "a4a43b4bc893",
+      "83424726f820",
+      "f4726090929c",
+      "81f630a09597",
+      "29262b678e98",
+      "d7af009e84ef",
+      "3103e6fcc338",
+      "c4125c8f2978",
+      "85b1836c2419",
+      "c14b4185aafc",
+      "63231ea26a72",
+      "2806bb8a0a20",
+      "fe95167047d1"
+    ],
+    "491000": [
+      "daa258044235",
+      "05af4470fe3a",
+      "0939c37d6476",
+      "df4d821d06f4",
+      "5ec3bf30e78b",
+      "287954c126e8",
+      "0df8a93f202d",
+      "5f1d4b2e4f88",
+      "09da2344ac55",
+      "195544187041",
+      "3fc3f862c9e1",
+      "a1e8618db9b2",
+      "3224bdebfe32",
+      "1d8f0ef66642",
+      "f99b43a2dcfa",
+      "27f5d826e8ad",
+      "efcb620fc903",
+      "458f3d1811e6",
+      "07891a1bf2be",
+      "a635dc85b435",
+      "4bce25fa233a",
+      "828fba46d583"
+    ],
+    "445090": [
+      "12971aec8772",
+      "4c464bf58496",
+      "7e67f9e6f2ac",
+      "b41498dff8d2",
+      "a8dbf44033cf",
+      "ab548af2f1c8",
+      "3fa0bb9d8ade",
+      "270e256e1ed8",
+      "2114a1df71dc",
+      "9eefcde66c04",
+      "265b1146ee4f",
+      "fecea20cc6bb",
+      "32ad5a7de1e6"
     ]
   },
   "live_alerts": [
