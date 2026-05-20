@@ -23,6 +23,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Use assistant home as landing page
+        run: |
+          if [ -f reports/home.html ]; then
+            cp reports/home.html reports/index.html
+          fi
+
       - name: Publish reports to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
