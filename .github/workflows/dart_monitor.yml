@@ -1,0 +1,50 @@
+name: DART 공시 모니터
+
+"on":
+  schedule:
+    # 매 15분 — 장중 + 장 마감 후 공시 즉시 캐치
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  dart:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run DART monitor
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TZ: Asia/Seoul
+        run: python -u -m tools.dart_monitor --days 2
+
+      - name: Commit alerts.json if changed
+        run: |
+          git config user.name "dart-bot"
+          git config user.email "dart@stockanalyzer"
+          git add reports/alerts.json || true
+          if git diff --staged --quiet; then
+            echo "신규 매칭 없음"
+          else
+            git commit -m "dart: $(date -u +%Y%m%d-%H%M)"
+            git pull --rebase origin main || true
+            git push
+          fi
