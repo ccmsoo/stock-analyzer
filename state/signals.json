@@ -10235,29 +10235,37 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "8800b3cd0db2",
-      "12d0f34b0595",
-      "0efb18d749f7",
-      "3270f6d72abb",
       "b83078b55b7f",
+      "deaaf6d325c1",
+      "c4ab137a192c",
       "f456094a1330",
       "4bce25fa233a",
-      "ed823d562832",
       "a29d18723a2c",
-      "54b38c7ceff0",
-      "6d2aab0abeee",
-      "deaaf6d325c1",
-      "09438848786b",
-      "821e07819165",
+      "ed823d562832",
+      "a4506365c9f3",
+      "12d0f34b0595",
+      "05802f992f2a",
+      "f1f21f6e8fe3",
       "f66b47b0c2a3",
       "bd2bed16e0ac",
-      "a4506365c9f3",
-      "dccae380221a",
-      "f1f21f6e8fe3",
       "8812e64fb5d3",
-      "7d0d1a535cf2",
+      "6d2aab0abeee",
+      "874d7f2b57a7",
+      "b2c6c4448248",
+      "dccae380221a",
+      "0de2ad04dbb1",
+      "ec8aca2109f1",
       "7211e4a8717a",
-      "eea70d0274dc"
+      "3270f6d72abb",
+      "eea70d0274dc",
+      "09438848786b",
+      "7d0d1a535cf2",
+      "5dd15f627228",
+      "0efb18d749f7",
+      "4cc27e9436ef",
+      "821e07819165",
+      "8800b3cd0db2",
+      "54b38c7ceff0"
     ],
     "069640": [
       "c7e143f1f455",
@@ -13267,6 +13275,110 @@
         }
       ],
       "detected_at": "2026-05-18T00:08:28"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "오늘의 금값시세(5월 22일자) 금값 하락세 \"달러↑, 인플레이션 우려\"",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3589201",
+          "source": "국제뉴스",
+          "date": "2026.05.21 23:39",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-05-22T00:37:08"
+    },
+    {
+      "keyword": "엔비디아",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "극적 타결에 코스피 8.4%↑…역대 최대 상승폭",
+          "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008574124&plink=ORI&cooper=NAVER",
+          "source": "",
+          "date": "2026.05.21 23:58",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "“6개월 뒤 세상 아무도 몰라… AI 투자 신중해야”",
+          "link": "https://www.chosun.com/economy/money/2026/05/22/WSBS76FDDZDDHPLSEZ5KUSAASU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "source": "",
+          "date": "2026.05.21 23:56",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "후퇴 없는엔비디아… 12분기 연속 최대 매출",
+          "link": "https://www.chosun.com/economy/tech_it/2026/05/22/O5MEZOYGO5HVLKVNYAU4ULXULE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "source": "",
+          "date": "2026.05.21 23:55",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "“국산 AI 반도체 핵심 경쟁력은 전력 효율”",
+          "link": "https://www.chosun.com/economy/economy_general/2026/05/22/O2I5WOBG3FADDLOZVMRDNMLIDI/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "source": "",
+          "date": "2026.05.21 23:55",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "“하루당 1조원씩 벌었다”…엔비디아, 12분기 연속 매출 신기록",
+          "link": "https://www.kmib.co.kr/article/view.asp?arcid=1779352313&code=11151400&cp=nv",
+          "source": "",
+          "date": "2026.05.21 23:46",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[사설] 삼성반도체, 이래서 글로벌 우위 지킬 수 있나",
+          "link": "https://www.chosun.com/opinion/editorial/2026/05/22/7MGXBDLHOBFWDPWVG4VWGRAACY/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "source": "",
+          "date": "2026.05.21 23:43",
+          "origin": "search:엔비디아"
+        }
+      ],
+      "detected_at": "2026-05-22T00:37:26"
+    },
+    {
+      "keyword": "한국데이터통신",
+      "matched_owners": [
+        {
+          "ticker": "189330",
+          "name": "씨이랩",
+          "cluster": "ai_infrastructure"
+        }
+      ],
+      "clusters": [
+        "ai_infrastructure"
+      ],
+      "new_articles": [
+        {
+          "title": "베일벗은 스페이스X, 19조 적자속 기업가치 3000조",
+          "link": "https://www.donga.com/news/Economy/article/all/20260521/133971176/2",
+          "source": "",
+          "date": "2026.05.21 23:54",
+          "origin": "search:한국데이터통신"
+        }
+      ],
+      "detected_at": "2026-05-22T00:37:38"
     }
   ]
 }
