@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-05-21T11:34:07",
-  "total": 27,
-  "new_today": 0,
+  "generated_at": "2026-05-21T15:37:02",
+  "total": 28,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "187870",
+      "name": "디바이스",
+      "sosok": "",
+      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
+      "submitter": "디바이스",
+      "submitted_at": "2026.05.21",
+      "time": "14:59",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000273",
+      "rcp_no": "20260521000273",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 23000,
+      "today_change_pct": 2.54,
+      "signal_last_seen": "20260513",
+      "signal_confidence": "high",
+      "signal_main_theme": "바이오",
+      "matched_at": "2026-05-21T15:37:02"
+    },
     {
       "ticker": "032800",
       "name": "판타지오",
