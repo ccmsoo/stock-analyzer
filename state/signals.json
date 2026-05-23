@@ -11074,37 +11074,41 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "b83078b55b7f",
-      "deaaf6d325c1",
-      "c4ab137a192c",
-      "f456094a1330",
-      "4bce25fa233a",
-      "a29d18723a2c",
-      "ed823d562832",
-      "a4506365c9f3",
-      "12d0f34b0595",
-      "05802f992f2a",
-      "f1f21f6e8fe3",
-      "f66b47b0c2a3",
-      "bd2bed16e0ac",
-      "8812e64fb5d3",
-      "6d2aab0abeee",
-      "874d7f2b57a7",
-      "b2c6c4448248",
-      "dccae380221a",
-      "0de2ad04dbb1",
-      "ec8aca2109f1",
       "7211e4a8717a",
+      "ec8aca2109f1",
+      "9885b3b8119e",
       "3270f6d72abb",
-      "eea70d0274dc",
+      "bd2bed16e0ac",
       "09438848786b",
-      "7d0d1a535cf2",
-      "5dd15f627228",
-      "0efb18d749f7",
-      "4cc27e9436ef",
-      "821e07819165",
       "8800b3cd0db2",
-      "54b38c7ceff0"
+      "eea70d0274dc",
+      "874d7f2b57a7",
+      "05802f992f2a",
+      "0efb18d749f7",
+      "8812e64fb5d3",
+      "821e07819165",
+      "0de2ad04dbb1",
+      "ed823d562832",
+      "12d0f34b0595",
+      "4bce25fa233a",
+      "7d0d1a535cf2",
+      "a52e9bb6ea5a",
+      "8c4063f3f9bf",
+      "a4506365c9f3",
+      "f66b47b0c2a3",
+      "54b38c7ceff0",
+      "b83078b55b7f",
+      "54d21b25b5de",
+      "4cc27e9436ef",
+      "5dd15f627228",
+      "f456094a1330",
+      "dccae380221a",
+      "deaaf6d325c1",
+      "6d2aab0abeee",
+      "c4ab137a192c",
+      "b2c6c4448248",
+      "f1f21f6e8fe3",
+      "a29d18723a2c"
     ],
     "069640": [
       "c7e143f1f455",
@@ -14739,6 +14743,98 @@
         }
       ],
       "detected_at": "2026-05-22T00:37:38"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "[재계 이슈] 미래에셋, 증권 업계 최초 '분기 순익 1조' 달성 | '한국판...",
+          "link": "https://economychosun.com/site/data/html_dir/2026/05/18/2026051800022.html",
+          "source": "이코노미조선",
+          "date": "2026.05.23 23:53",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-05-24T00:43:22"
+    },
+    {
+      "keyword": "메릴랜드주 정부",
+      "matched_owners": [
+        {
+          "ticker": "950220",
+          "name": "네오이뮨텍",
+          "cluster": "rare_disease_therapies"
+        }
+      ],
+      "clusters": [
+        "rare_disease_therapies"
+      ],
+      "new_articles": [
+        {
+          "title": "폴리마켓·칼시, 연방 법원으로 도망치려다 '덜미'...결국주 정부불법...",
+          "link": "http://coinreaders.com/238213",
+          "source": "코인리더스",
+          "date": "2026.05.23 23:49",
+          "origin": "search:메릴랜드주 정부"
+        }
+      ],
+      "detected_at": "2026-05-24T00:43:33"
+    },
+    {
+      "keyword": "엔비디아",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "[636호] Photo news | 9년 만의 방중 트럼프 “환상적 미래 만들 것” 시...",
+          "link": "https://economychosun.com/site/data/html_dir/2026/05/18/2026051800017.html",
+          "source": "이코노미조선",
+          "date": "2026.05.23 23:53",
+          "origin": "search:엔비디아"
+        }
+      ],
+      "detected_at": "2026-05-24T00:43:47"
+    },
+    {
+      "keyword": "한국데이터통신",
+      "matched_owners": [
+        {
+          "ticker": "189330",
+          "name": "씨이랩",
+          "cluster": "ai_infrastructure"
+        }
+      ],
+      "clusters": [
+        "ai_infrastructure"
+      ],
+      "new_articles": [
+        {
+          "title": "[양욱의 밀리터리 밸런스 <46> AI가 바꾸는 전쟁의 구조] 이란 전쟁이 韓...",
+          "link": "https://economychosun.com/site/data/html_dir/2026/05/18/2026051800032.html",
+          "source": "이코노미조선",
+          "date": "2026.05.23 23:52",
+          "origin": "search:한국데이터통신"
+        }
+      ],
+      "detected_at": "2026-05-24T00:44:00"
     }
   ]
 }
