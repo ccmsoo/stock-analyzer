@@ -11984,41 +11984,42 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "7211e4a8717a",
-      "ec8aca2109f1",
-      "9885b3b8119e",
-      "3270f6d72abb",
-      "bd2bed16e0ac",
-      "09438848786b",
-      "8800b3cd0db2",
-      "eea70d0274dc",
-      "874d7f2b57a7",
-      "05802f992f2a",
-      "0efb18d749f7",
-      "8812e64fb5d3",
-      "821e07819165",
-      "0de2ad04dbb1",
-      "ed823d562832",
-      "12d0f34b0595",
-      "4bce25fa233a",
-      "7d0d1a535cf2",
-      "a52e9bb6ea5a",
-      "8c4063f3f9bf",
-      "a4506365c9f3",
-      "f66b47b0c2a3",
       "54b38c7ceff0",
-      "b83078b55b7f",
-      "54d21b25b5de",
-      "4cc27e9436ef",
-      "5dd15f627228",
-      "f456094a1330",
-      "dccae380221a",
-      "deaaf6d325c1",
-      "6d2aab0abeee",
-      "c4ab137a192c",
-      "b2c6c4448248",
       "f1f21f6e8fe3",
-      "a29d18723a2c"
+      "05802f992f2a",
+      "7d0d1a535cf2",
+      "f66b47b0c2a3",
+      "c4ab137a192c",
+      "a4506365c9f3",
+      "821e07819165",
+      "8800b3cd0db2",
+      "b2c6c4448248",
+      "54d21b25b5de",
+      "0de2ad04dbb1",
+      "b83078b55b7f",
+      "dccae380221a",
+      "a52e9bb6ea5a",
+      "ed823d562832",
+      "7211e4a8717a",
+      "3270f6d72abb",
+      "09438848786b",
+      "deaaf6d325c1",
+      "ec8aca2109f1",
+      "874d7f2b57a7",
+      "6d2aab0abeee",
+      "4cc27e9436ef",
+      "12d0f34b0595",
+      "5dd15f627228",
+      "a29d18723a2c",
+      "db830b6f7d3e",
+      "9885b3b8119e",
+      "f456094a1330",
+      "bd2bed16e0ac",
+      "eea70d0274dc",
+      "0efb18d749f7",
+      "8c4063f3f9bf",
+      "4bce25fa233a",
+      "8812e64fb5d3"
     ],
     "069640": [
       "c7e143f1f455",
@@ -16264,6 +16265,29 @@
         }
       ],
       "detected_at": "2026-05-24T00:44:00"
+    },
+    {
+      "keyword": "글로벌 거대제약사",
+      "matched_owners": [
+        {
+          "ticker": "007460",
+          "name": "에이프로젠",
+          "cluster": "osteoarthritis_drug"
+        }
+      ],
+      "clusters": [
+        "osteoarthritis_drug"
+      ],
+      "new_articles": [
+        {
+          "title": "2026 FIFA 북중미 월드컵네이버에서 대한민국을",
+          "link": "https://naver.me/GKIbrJVG",
+          "source": "",
+          "date": "",
+          "origin": "search:글로벌 거대제약사"
+        }
+      ],
+      "detected_at": "2026-05-28T12:57:46"
     }
   ]
 }
