@@ -13618,42 +13618,53 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "54b38c7ceff0",
-      "f1f21f6e8fe3",
-      "05802f992f2a",
-      "7d0d1a535cf2",
-      "f66b47b0c2a3",
-      "c4ab137a192c",
-      "a4506365c9f3",
-      "821e07819165",
+      "e100dfb9a5de",
+      "75667c15dd6a",
+      "5dd15f627228",
+      "4bce25fa233a",
+      "7211e4a8717a",
       "8800b3cd0db2",
+      "7b018a0351e9",
+      "a4506365c9f3",
+      "f236de2cf79b",
+      "dccae380221a",
+      "ec8aca2109f1",
+      "54b38c7ceff0",
+      "4535de65ff5c",
+      "a29d18723a2c",
+      "05802f992f2a",
+      "1de2cdf0d203",
+      "eea70d0274dc",
+      "f1f21f6e8fe3",
+      "c4ab137a192c",
+      "b83078b55b7f",
+      "1735e98dcc19",
+      "a52e9bb6ea5a",
+      "09438848786b",
+      "9885b3b8119e",
+      "deaaf6d325c1",
+      "f456094a1330",
+      "12d0f34b0595",
+      "7d0d1a535cf2",
+      "0efb18d749f7",
+      "f66b47b0c2a3",
+      "bd2bed16e0ac",
+      "821e07819165",
+      "3270f6d72abb",
+      "874d7f2b57a7",
+      "ed823d562832",
+      "7c517e42b1f5",
       "b2c6c4448248",
       "54d21b25b5de",
-      "0de2ad04dbb1",
-      "b83078b55b7f",
-      "dccae380221a",
-      "a52e9bb6ea5a",
-      "ed823d562832",
-      "7211e4a8717a",
-      "3270f6d72abb",
-      "09438848786b",
-      "deaaf6d325c1",
-      "ec8aca2109f1",
-      "874d7f2b57a7",
-      "6d2aab0abeee",
       "4cc27e9436ef",
-      "12d0f34b0595",
-      "5dd15f627228",
-      "a29d18723a2c",
       "db830b6f7d3e",
-      "9885b3b8119e",
-      "f456094a1330",
-      "bd2bed16e0ac",
-      "eea70d0274dc",
-      "0efb18d749f7",
-      "8c4063f3f9bf",
-      "4bce25fa233a",
-      "8812e64fb5d3"
+      "0de2ad04dbb1",
+      "8812e64fb5d3",
+      "f815ac4f4f9f",
+      "c3ab9bf33ca2",
+      "3307c434e2f9",
+      "6d2aab0abeee",
+      "8c4063f3f9bf"
     ],
     "069640": [
       "c7e143f1f455",
@@ -19306,6 +19317,174 @@
         }
       ],
       "detected_at": "2026-05-28T12:57:46"
+    },
+    {
+      "keyword": "식품의약품안전처",
+      "matched_owners": [
+        {
+          "ticker": "003060",
+          "name": "에이프로젠바이오로직스",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "007460",
+          "name": "에이프로젠",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "462510",
+          "name": "라메디텍",
+          "cluster": "biotech_policy_beneficiary"
+        }
+      ],
+      "clusters": [
+        "biotech_policy_beneficiary",
+        "osteoarthritis_drug"
+      ],
+      "new_articles": [
+        {
+          "title": "메디톡스, '2026 서울 약사학술제 팜엑스포' 참가 성료…\"락티플랜 경쟁...",
+          "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=200487",
+          "source": "더퍼스트",
+          "date": "2026.06.01 23:58",
+          "origin": "search:식품의약품안전처"
+        },
+        {
+          "title": "K뷰티 창업 4년새 2배로, ‘메가 브랜드’도 속속 탄생",
+          "link": "https://www.donga.com/news/Economy/article/all/20260601/134032095/2",
+          "source": "",
+          "date": "2026.06.01 23:48",
+          "origin": "search:식품의약품안전처"
+        }
+      ],
+      "detected_at": "2026-06-02T00:44:20"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "지난달 코스피 28% 뛸때 코스닥은 10% 하락",
+          "link": "https://www.chosun.com/economy/money/2026/06/02/WLSIZMQZXRC6RE7PLQK72VNYWE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "source": "",
+          "date": "2026.06.01 23:53",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "소외된 은행주, 하반기 금리 인상이 반등 신호탄 될까",
+          "link": "https://www.chosun.com/economy/money/2026/06/02/ZB5G3IJAW5AW5BT7PQFAADDA5E/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "source": "",
+          "date": "2026.06.01 23:53",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "[사설] 수출·증시 활황에도 경기 냉랭…반도체 독주의 그늘",
+          "link": "https://www.hankyung.com/article/2026060114721",
+          "source": "",
+          "date": "2026.06.01 23:49",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-06-02T00:44:32"
+    },
+    {
+      "keyword": "디지털 트윈 플랫폼",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "네이버, 드론 기업 '유비파이'에 투자…피지컬 AI 사업 속도 낸다",
+          "link": "https://www.it-b.co.kr/news/articleView.html?idxno=88441",
+          "source": "아이티비즈",
+          "date": "2026.06.01 23:52",
+          "origin": "search:디지털 트윈 플랫폼"
+        },
+        {
+          "title": "SK텔레콤, 엔비디아 AI 도구 활용… 하이닉스 공장디지털 트윈구현",
+          "link": "https://www.chosun.com/economy/tech_it/2026/06/02/N54XFWWFPFGGTKUSO7343RE6X4/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "source": "",
+          "date": "2026.06.01 23:51",
+          "origin": "search:디지털 트윈 플랫폼"
+        }
+      ],
+      "detected_at": "2026-06-02T00:44:49"
+    },
+    {
+      "keyword": "글로벌 모빌리티 기업",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "택시-렌터카 다투는 새 뒤로 밀리는 ‘K-로보택시’[IT팀의 테크워치]",
+          "link": "https://www.donga.com/news/Economy/article/all/20260601/134032069/2",
+          "source": "",
+          "date": "2026.06.01 23:48",
+          "origin": "search:글로벌 모빌리티 기업"
+        }
+      ],
+      "detected_at": "2026-06-02T00:44:52"
+    },
+    {
+      "keyword": "엔비디아",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "젠슨 황 \"한국에 투자도 고려…HBM은 SK와 긴밀히 협력\"",
+          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1372691",
+          "source": "데일리한국",
+          "date": "2026.06.01 23:59",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "美, 中기업 해외 자회사에도 첨단 반도체 수출 금지",
+          "link": "https://www.chosun.com/economy/tech_it/2026/06/02/AG5EMBBQL5F5RGYAO4QF3OKTYU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "source": "",
+          "date": "2026.06.01 23:50",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "“PC 속으로 들어간 AI, 기업 업무성과 좌우한다”",
+          "link": "https://www.donga.com/news/Economy/article/all/20260601/134032074/2",
+          "source": "",
+          "date": "2026.06.01 23:48",
+          "origin": "search:엔비디아"
+        }
+      ],
+      "detected_at": "2026-06-02T00:44:54"
     }
   ]
 }
