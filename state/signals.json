@@ -14347,53 +14347,67 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "e100dfb9a5de",
-      "75667c15dd6a",
-      "5dd15f627228",
-      "4bce25fa233a",
-      "7211e4a8717a",
-      "8800b3cd0db2",
-      "7b018a0351e9",
-      "a4506365c9f3",
-      "f236de2cf79b",
-      "dccae380221a",
+      "4a790ba500a5",
       "ec8aca2109f1",
-      "54b38c7ceff0",
+      "12d0f34b0595",
+      "f66b47b0c2a3",
       "4535de65ff5c",
-      "a29d18723a2c",
-      "05802f992f2a",
-      "1de2cdf0d203",
+      "7c517e42b1f5",
       "eea70d0274dc",
-      "f1f21f6e8fe3",
-      "c4ab137a192c",
-      "b83078b55b7f",
-      "1735e98dcc19",
+      "b37752d4057a",
+      "a4506365c9f3",
+      "54b38c7ceff0",
+      "f5305af2a8b5",
+      "ce7818d84c14",
+      "32ed44b6154d",
+      "8a118b22007f",
+      "18ba73271e09",
+      "8800b3cd0db2",
+      "bd2bed16e0ac",
+      "6d2aab0abeee",
       "a52e9bb6ea5a",
+      "05802f992f2a",
+      "75667c15dd6a",
+      "dc07c6c78e30",
+      "ed823d562832",
+      "f815ac4f4f9f",
+      "d95dbb159ff4",
+      "821e07819165",
+      "874d7f2b57a7",
+      "fb73c5826167",
       "09438848786b",
+      "e100dfb9a5de",
+      "4cc27e9436ef",
+      "b2c6c4448248",
+      "c3ab9bf33ca2",
+      "93d55afb640c",
+      "db830b6f7d3e",
+      "992c191bb1bd",
+      "5dd15f627228",
+      "0efb18d749f7",
+      "c4ab137a192c",
+      "f236de2cf79b",
+      "8812e64fb5d3",
+      "7b018a0351e9",
+      "4bce25fa233a",
+      "1de2cdf0d203",
+      "7211e4a8717a",
+      "3270f6d72abb",
+      "54d21b25b5de",
       "9885b3b8119e",
+      "7d0d1a535cf2",
+      "3307c434e2f9",
+      "8c4063f3f9bf",
+      "1735e98dcc19",
+      "b83078b55b7f",
+      "dccae380221a",
       "deaaf6d325c1",
       "f456094a1330",
-      "12d0f34b0595",
-      "7d0d1a535cf2",
-      "0efb18d749f7",
-      "f66b47b0c2a3",
-      "bd2bed16e0ac",
-      "821e07819165",
-      "3270f6d72abb",
-      "874d7f2b57a7",
-      "ed823d562832",
-      "7c517e42b1f5",
-      "b2c6c4448248",
-      "54d21b25b5de",
-      "4cc27e9436ef",
-      "db830b6f7d3e",
+      "271cfa1aa9df",
       "0de2ad04dbb1",
-      "8812e64fb5d3",
-      "f815ac4f4f9f",
-      "c3ab9bf33ca2",
-      "3307c434e2f9",
-      "6d2aab0abeee",
-      "8c4063f3f9bf"
+      "a29d18723a2c",
+      "f1f21f6e8fe3",
+      "e0cc2c5afd37"
     ],
     "069640": [
       "c7e143f1f455",
@@ -20863,6 +20877,184 @@
         }
       ],
       "detected_at": "2026-06-02T00:44:54"
+    },
+    {
+      "keyword": "고성능 로봇",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "위험물 판독부터 연료 절감까지…항공업계, AI 전방위 확산",
+          "link": "https://www.traveltimes.co.kr/news/articleView.html?idxno=415933",
+          "source": "여행신문",
+          "date": "2026.06.03 23:57",
+          "origin": "search:고성능 로봇"
+        },
+        {
+          "title": "[김대호 진단] 노벨경제학상 석학의 경고 \"생산성 패러독스\"",
+          "link": "https://www.g-enews.com/view.php?ud=202605311624578664906806b77b_1",
+          "source": "글로벌이코노믹",
+          "date": "2026.06.03 23:41",
+          "origin": "search:고성능 로봇"
+        }
+      ],
+      "detected_at": "2026-06-04T00:19:12"
+    },
+    {
+      "keyword": "LG 클로이드",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "[심층분석] '뇌'와 '몸'의 결합 가속…엔비디아 아이작이 촉발한 글로벌...",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78581",
+          "source": "더페어",
+          "date": "2026.06.03 23:41",
+          "origin": "search:LG 클로이드"
+        }
+      ],
+      "detected_at": "2026-06-04T00:19:15"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "오늘의 금값시세(6월 4일자) 금값 \"이번주 요동치나\"",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3599568",
+          "source": "국제뉴스",
+          "date": "2026.06.03 23:47",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "삼천당제약, 30만원선 공방전 전개…증시 변동성 확대 속 시장 방향성에...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=579264",
+          "source": "CBC뉴스",
+          "date": "2026.06.03 23:41",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-06-04T00:19:17"
+    },
+    {
+      "keyword": "글로벌 모빌리티 기업",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "[선택 6·3]‘시민주권정부’ 구축…초광역 통합 성공모델 만든다",
+          "link": "http://www.kjdaily.com/article.php?aid=1780498880679833002",
+          "source": "광주매일신문",
+          "date": "2026.06.03 23:51",
+          "origin": "search:글로벌 모빌리티 기업"
+        },
+        {
+          "title": "[화제의 당선자-임문영 광주 광산을 국회의원]전략공천으로 첫 도전에 ...",
+          "link": "http://www.kjdaily.com/article.php?aid=1780498382679830002",
+          "source": "광주매일신문",
+          "date": "2026.06.03 23:41",
+          "origin": "search:글로벌 모빌리티 기업"
+        }
+      ],
+      "detected_at": "2026-06-04T00:19:42"
+    },
+    {
+      "keyword": "엔비디아",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "美 트럼프, 올해 1~3월에만 3천억 원 규모의 증권 거래…3700건 넘어 [KDF...",
+          "link": "http://www.kdfnews.com/news/articleView.html?idxno=183842",
+          "source": "한국면세뉴스",
+          "date": "2026.06.03 23:51",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[도청도설] AI계급시대 오나",
+          "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1700&key=20260604.22018001003",
+          "source": "",
+          "date": "2026.06.03 23:44",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "대만 찾은 최태원 “5년 내 웨이퍼 생산 2배로”",
+          "link": "https://www.joongang.co.kr/article/25433688",
+          "source": "",
+          "date": "2026.06.03 23:42",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "돈을 몰고다니는 사나이, 젠슨 황",
+          "link": "https://www.joongang.co.kr/article/25433687",
+          "source": "",
+          "date": "2026.06.03 23:42",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "'젠슨 황 방한' 카운트다운…오늘(4일) 증시 반도체·로봇 대형주 독주...",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78583",
+          "source": "더페어",
+          "date": "2026.06.03 23:41",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "엔비디아, '베라 루빈' 양산 돌입···삼전·닉스, 호실적 이어간다",
+          "link": "https://www.ziksir.com/news/articleView.html?idxno=135622",
+          "source": "",
+          "date": "2026.06.03 23:41",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "알파벳, 주식 발행 규모 850억 달러로 상향…역대 최대 자기자본 조달",
+          "link": "https://www.newspim.com/news/view/20260603000610",
+          "source": "뉴스핌",
+          "date": "2026.06.03 23:31",
+          "origin": "search:엔비디아"
+        }
+      ],
+      "detected_at": "2026-06-04T00:19:44"
     }
   ]
 }
