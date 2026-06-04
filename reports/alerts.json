@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-04T18:09:05",
-  "total": 82,
-  "new_today": 3,
+  "generated_at": "2026-06-04T21:16:32",
+  "total": 84,
+  "new_today": 2,
   "alerts": [
+    {
+      "ticker": "483650",
+      "name": "달바글로벌",
+      "sosok": "",
+      "report_name": "[기재정정]주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitter": "달바글로벌",
+      "submitted_at": "2026.06.05",
+      "time": "18:28",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260604000657",
+      "rcp_no": "20260604000657",
+      "category": "자본정책_호재",
+      "score": 70,
+      "current_price": 198100,
+      "today_change_pct": 5.71,
+      "signal_last_seen": "20260512",
+      "signal_confidence": "high",
+      "signal_main_theme": "실적",
+      "matched_at": "2026-06-04T21:16:31"
+    },
     {
       "ticker": "483650",
       "name": "달바글로벌",
@@ -97,6 +116,25 @@
       "signal_confidence": "high",
       "signal_main_theme": "로봇/피지컬 AI",
       "matched_at": "2026-06-04T14:18:59"
+    },
+    {
+      "ticker": "388790",
+      "name": "라이콤",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "라이콤",
+      "submitted_at": "2026.06.04",
+      "time": "10:20",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260604900159",
+      "rcp_no": "20260604900159",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 4910,
+      "today_change_pct": 29.89,
+      "signal_last_seen": "20260604",
+      "signal_confidence": "high",
+      "signal_main_theme": "데이터센터/광통신 장비 (AI 인프라·통신 소부장)",
+      "matched_at": "2026-06-04T21:16:32"
     },
     {
       "ticker": "062970",
