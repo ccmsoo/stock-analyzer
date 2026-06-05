@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-05T09:19:44",
-  "total": 84,
-  "new_today": 0,
+  "generated_at": "2026-06-05T13:54:08",
+  "total": 86,
+  "new_today": 2,
   "alerts": [
     {
       "ticker": "483650",
@@ -21,6 +21,44 @@
       "signal_confidence": "high",
       "signal_main_theme": "실적",
       "matched_at": "2026-06-04T21:16:31"
+    },
+    {
+      "ticker": "095610",
+      "name": "테스",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결(자율공시)",
+      "submitter": "테스",
+      "submitted_at": "2026.06.05",
+      "time": "11:14",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260605900283",
+      "rcp_no": "20260605900283",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 143000,
+      "today_change_pct": 5.22,
+      "signal_last_seen": "20260604",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체(장비·소부장)",
+      "matched_at": "2026-06-05T13:54:08"
+    },
+    {
+      "ticker": "052400",
+      "name": "코나아이",
+      "sosok": "",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitter": "코나아이",
+      "submitted_at": "2026.06.05",
+      "time": "10:27",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260605000102",
+      "rcp_no": "20260605000102",
+      "category": "자본정책_호재",
+      "score": 70,
+      "current_price": 50600,
+      "today_change_pct": 1.0,
+      "signal_last_seen": "20260515",
+      "signal_confidence": "high",
+      "signal_main_theme": "핀테크·결제 서비스",
+      "matched_at": "2026-06-05T13:54:08"
     },
     {
       "ticker": "483650",
