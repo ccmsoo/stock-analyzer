@@ -15138,67 +15138,82 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "4a790ba500a5",
-      "ec8aca2109f1",
-      "12d0f34b0595",
-      "f66b47b0c2a3",
-      "4535de65ff5c",
-      "7c517e42b1f5",
-      "eea70d0274dc",
-      "b37752d4057a",
-      "a4506365c9f3",
-      "54b38c7ceff0",
-      "f5305af2a8b5",
-      "ce7818d84c14",
-      "32ed44b6154d",
-      "8a118b22007f",
-      "18ba73271e09",
-      "8800b3cd0db2",
-      "bd2bed16e0ac",
-      "6d2aab0abeee",
       "a52e9bb6ea5a",
-      "05802f992f2a",
-      "75667c15dd6a",
-      "dc07c6c78e30",
-      "ed823d562832",
-      "f815ac4f4f9f",
-      "d95dbb159ff4",
-      "821e07819165",
-      "874d7f2b57a7",
-      "fb73c5826167",
-      "09438848786b",
-      "e100dfb9a5de",
-      "4cc27e9436ef",
-      "b2c6c4448248",
-      "c3ab9bf33ca2",
-      "93d55afb640c",
-      "db830b6f7d3e",
-      "992c191bb1bd",
       "5dd15f627228",
-      "0efb18d749f7",
-      "c4ab137a192c",
-      "f236de2cf79b",
-      "8812e64fb5d3",
-      "7b018a0351e9",
-      "4bce25fa233a",
-      "1de2cdf0d203",
-      "7211e4a8717a",
-      "3270f6d72abb",
-      "54d21b25b5de",
-      "9885b3b8119e",
-      "7d0d1a535cf2",
-      "3307c434e2f9",
-      "8c4063f3f9bf",
-      "1735e98dcc19",
+      "3c837a87b1d8",
       "b83078b55b7f",
       "dccae380221a",
-      "deaaf6d325c1",
-      "f456094a1330",
+      "54b38c7ceff0",
+      "2d48247d4b57",
+      "c3ab9bf33ca2",
+      "b2c6c4448248",
+      "6bb2b76c3b82",
+      "12d0f34b0595",
+      "32ed44b6154d",
+      "ed823d562832",
       "271cfa1aa9df",
+      "e0cc2c5afd37",
+      "e100dfb9a5de",
+      "bd2bed16e0ac",
+      "992c191bb1bd",
+      "8c4063f3f9bf",
+      "b37752d4057a",
+      "18ba73271e09",
+      "6609b0147f3b",
+      "874d7f2b57a7",
+      "93d55afb640c",
+      "1735e98dcc19",
+      "f456094a1330",
+      "4cc27e9436ef",
+      "eea70d0274dc",
+      "4535de65ff5c",
+      "3307c434e2f9",
+      "f66b47b0c2a3",
+      "dc07c6c78e30",
+      "8a118b22007f",
+      "7c517e42b1f5",
+      "d95dbb159ff4",
+      "a4506365c9f3",
+      "550f2e709757",
+      "7d0d1a535cf2",
+      "75667c15dd6a",
+      "fb73c5826167",
+      "05802f992f2a",
       "0de2ad04dbb1",
-      "a29d18723a2c",
+      "09438848786b",
+      "233a3e5ca932",
+      "0c28389a39ac",
+      "71e122d70adc",
+      "54d21b25b5de",
+      "4bce25fa233a",
+      "0efb18d749f7",
+      "3270f6d72abb",
+      "fdcbe33ec6a1",
+      "c4ab137a192c",
+      "4a790ba500a5",
+      "f5305af2a8b5",
       "f1f21f6e8fe3",
-      "e0cc2c5afd37"
+      "821e07819165",
+      "deaaf6d325c1",
+      "7211e4a8717a",
+      "8800b3cd0db2",
+      "a29d18723a2c",
+      "4afdc016364e",
+      "f8a41eed29bf",
+      "db830b6f7d3e",
+      "6d2aab0abeee",
+      "7b018a0351e9",
+      "682ae68bd253",
+      "b81f65946abb",
+      "f815ac4f4f9f",
+      "ce7818d84c14",
+      "f236de2cf79b",
+      "2a7ade1e887d",
+      "8812e64fb5d3",
+      "1de2cdf0d203",
+      "9885b3b8119e",
+      "ec8aca2109f1",
+      "db48acadb058"
     ],
     "069640": [
       "c7e143f1f455",
@@ -22521,6 +22536,175 @@
         }
       ],
       "detected_at": "2026-06-04T00:19:44"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "오늘의 금값시세(6월 7일자) 금값 하락세 \"미국 고용지표 금리인상 전망...",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3601758",
+          "source": "국제뉴스",
+          "date": "2026.06.06 23:47",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "주간 금시세 0.42% 하락…미 연준 금리인상 전망 강화",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78834",
+          "source": "더페어",
+          "date": "2026.06.06 23:41",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "투자자보호연합회 \"삼성 성과급 주주총회 승인 받아라\"…거래소공공화...",
+          "link": "http://www.fieldnews.kr/news/articleView.html?idxno=29104",
+          "source": "필드뉴스",
+          "date": "2026.06.06 23:31",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-06-07T00:19:28"
+    },
+    {
+      "keyword": "글로벌 모빌리티 기업",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "벤츠코리아,모빌리티혁신 기술 보유 스타트업 발굴한다",
+          "link": "http://www.newsbrite.net/news/articleView.html?idxno=198485",
+          "source": "뉴스브라이트",
+          "date": "2026.06.06 23:39",
+          "origin": "search:글로벌 모빌리티 기업"
+        }
+      ],
+      "detected_at": "2026-06-07T00:19:52"
+    },
+    {
+      "keyword": "엔비디아",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "\"한국은 투자 국가\" 젠슨 황, 최태원-구광모-이해진과 홍대서 회동 뒷 이...",
+          "link": "https://www.nbntv.co.kr/news/articleView.html?idxno=4022127",
+          "source": "내외경제tv",
+          "date": "2026.06.06 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "네이버NAVER 주가, 조정은 기회일까…AI 플랫폼 가치 재평가 기대감, 8일...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=580107",
+          "source": "CBC뉴스",
+          "date": "2026.06.06 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "예능 출연에 시구까지...젠슨 황, 한국서 '광폭 행보'",
+          "link": "https://www.ytn.co.kr/_ln/0102_202606070012368269",
+          "source": "",
+          "date": "2026.06.06 23:53",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "'젠슨 황 시구' 두산 유니폼 93번 의미는? 박정원 회장 시타",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3601610",
+          "source": "국제뉴스",
+          "date": "2026.06.06 23:51",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "'피지컬 AI' 올라탄 현대차, ETF 시장 새 주인공 됐다",
+          "link": "https://www.theguru.co.kr/news/article.html?no=102704",
+          "source": "더구루",
+          "date": "2026.06.06 23:43",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "쏠퀴즈 정답 6월 7일",
+          "link": "https://www.bntnews.co.kr/article/view/bnt202606060106",
+          "source": "bnt뉴스",
+          "date": "2026.06.06 23:43",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[비즈토크<상>] 젠슨 황 '쇼맨십' 활활…현장 안전은 '아슬아슬'",
+          "link": "https://news.tf.co.kr/read/economy/2329929.htm",
+          "source": "",
+          "date": "2026.06.06 23:42",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[김대호 진단] 뉴욕증시 느닷없는 반도체 발작(Tantrum) \"4가지 불길한 ...",
+          "link": "https://www.g-enews.com/view.php?ud=202606062056297978906806b77b_1",
+          "source": "글로벌이코노믹",
+          "date": "2026.06.06 23:41",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "NC소프트, 젠슨 황 회동 기대감 촉각?…게임 넘어 AI·로봇 협력 가능성...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=580097",
+          "source": "CBC뉴스",
+          "date": "2026.06.06 23:41",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "두산로보틱스, AI 로봇 시대 수혜주 부각…협동로봇 시장 확대 기대감 ...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=580100",
+          "source": "CBC뉴스",
+          "date": "2026.06.06 23:41",
+          "origin": "search:엔비디아"
+        }
+      ],
+      "detected_at": "2026-06-07T00:19:54"
+    },
+    {
+      "keyword": "인체의약품",
+      "matched_owners": [
+        {
+          "ticker": "060590",
+          "name": "씨티씨바이오",
+          "cluster": "earnings_surprise"
+        }
+      ],
+      "clusters": [
+        "earnings_surprise"
+      ],
+      "new_articles": [
+        {
+          "title": "“뒤꿈치 반들반들해진다” 윤미라, 발 관리법 공개",
+          "link": "https://health.chosun.com/site/data/html_dir/2026/06/05/2026060502318.html",
+          "source": "",
+          "date": "2026.06.06 23:43",
+          "origin": "search:인체의약품"
+        }
+      ],
+      "detected_at": "2026-06-07T00:19:58"
     }
   ]
 }
