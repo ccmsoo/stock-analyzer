@@ -15138,82 +15138,95 @@
       "885bbb10409c"
     ],
     "live_radar": [
-      "a52e9bb6ea5a",
-      "5dd15f627228",
-      "3c837a87b1d8",
-      "b83078b55b7f",
-      "dccae380221a",
-      "54b38c7ceff0",
-      "2d48247d4b57",
-      "c3ab9bf33ca2",
-      "b2c6c4448248",
-      "6bb2b76c3b82",
-      "12d0f34b0595",
-      "32ed44b6154d",
-      "ed823d562832",
-      "271cfa1aa9df",
-      "e0cc2c5afd37",
-      "e100dfb9a5de",
-      "bd2bed16e0ac",
       "992c191bb1bd",
-      "8c4063f3f9bf",
-      "b37752d4057a",
-      "18ba73271e09",
-      "6609b0147f3b",
-      "874d7f2b57a7",
-      "93d55afb640c",
-      "1735e98dcc19",
-      "f456094a1330",
-      "4cc27e9436ef",
-      "eea70d0274dc",
-      "4535de65ff5c",
-      "3307c434e2f9",
-      "f66b47b0c2a3",
-      "dc07c6c78e30",
-      "8a118b22007f",
-      "7c517e42b1f5",
-      "d95dbb159ff4",
-      "a4506365c9f3",
+      "a52e9bb6ea5a",
       "550f2e709757",
-      "7d0d1a535cf2",
+      "b83078b55b7f",
+      "f1f21f6e8fe3",
+      "a29d18723a2c",
+      "c4ab137a192c",
+      "e100dfb9a5de",
+      "1735e98dcc19",
+      "847a13c2def4",
+      "682ae68bd253",
+      "4a790ba500a5",
+      "f456094a1330",
+      "e501ad97e8a0",
+      "5dd15f627228",
+      "0de2ad04dbb1",
+      "0c28389a39ac",
+      "3270f6d72abb",
+      "821e07819165",
+      "6d2aab0abeee",
+      "dc07c6c78e30",
+      "f815ac4f4f9f",
+      "1de2cdf0d203",
+      "93d55afb640c",
+      "64c122baac21",
+      "c3ab9bf33ca2",
+      "2d48247d4b57",
+      "8c4063f3f9bf",
+      "32ed44b6154d",
+      "9545141d9e60",
+      "7211e4a8717a",
+      "f8a41eed29bf",
+      "4cc27e9436ef",
+      "ec8aca2109f1",
+      "7c517e42b1f5",
+      "4afdc016364e",
+      "db830b6f7d3e",
+      "6bb2b76c3b82",
+      "4bce25fa233a",
+      "05802f992f2a",
+      "0efb18d749f7",
+      "12d0f34b0595",
+      "4535de65ff5c",
+      "200d882e245c",
+      "2a7ade1e887d",
+      "271cfa1aa9df",
+      "3307c434e2f9",
+      "9317d768b263",
+      "3c837a87b1d8",
+      "233a3e5ca932",
+      "b81f65946abb",
+      "9a8297623792",
+      "4d3f36cc6c13",
+      "8812e64fb5d3",
+      "54d21b25b5de",
+      "deaaf6d325c1",
+      "f236de2cf79b",
+      "71e122d70adc",
+      "e0cc2c5afd37",
+      "a4506365c9f3",
+      "7b018a0351e9",
       "75667c15dd6a",
       "fb73c5826167",
-      "05802f992f2a",
-      "0de2ad04dbb1",
       "09438848786b",
-      "233a3e5ca932",
-      "0c28389a39ac",
-      "71e122d70adc",
-      "54d21b25b5de",
-      "4bce25fa233a",
-      "0efb18d749f7",
-      "3270f6d72abb",
-      "fdcbe33ec6a1",
-      "c4ab137a192c",
-      "4a790ba500a5",
-      "f5305af2a8b5",
-      "f1f21f6e8fe3",
-      "821e07819165",
-      "deaaf6d325c1",
-      "7211e4a8717a",
-      "8800b3cd0db2",
-      "a29d18723a2c",
-      "4afdc016364e",
-      "f8a41eed29bf",
-      "db830b6f7d3e",
-      "6d2aab0abeee",
-      "7b018a0351e9",
-      "682ae68bd253",
-      "b81f65946abb",
-      "f815ac4f4f9f",
-      "ce7818d84c14",
-      "f236de2cf79b",
-      "2a7ade1e887d",
-      "8812e64fb5d3",
-      "1de2cdf0d203",
+      "db48acadb058",
+      "874d7f2b57a7",
+      "a9a9128d095c",
+      "8a118b22007f",
+      "eea70d0274dc",
+      "ed823d562832",
+      "2d828d67efba",
+      "dccae380221a",
       "9885b3b8119e",
-      "ec8aca2109f1",
-      "db48acadb058"
+      "7d0d1a535cf2",
+      "b2c6c4448248",
+      "b37752d4057a",
+      "6609b0147f3b",
+      "ce7818d84c14",
+      "18ba73271e09",
+      "d95dbb159ff4",
+      "8b00ca96e468",
+      "bd2bed16e0ac",
+      "f5305af2a8b5",
+      "3374ffc7faef",
+      "8800b3cd0db2",
+      "5e333e726b1b",
+      "f66b47b0c2a3",
+      "fdcbe33ec6a1",
+      "54b38c7ceff0"
     ],
     "069640": [
       "c7e143f1f455",
@@ -22705,6 +22718,161 @@
         }
       ],
       "detected_at": "2026-06-07T00:19:58"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "한전, 전남 무안-신안군 154㎸ 송전망 연결…'햇빛소득마을' 기반 다져",
+          "link": "https://daily.hankooki.com/news/articleView.html?idxno=1374166",
+          "source": "데일리한국",
+          "date": "2026.06.07 23:18",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-06-08T00:02:38"
+    },
+    {
+      "keyword": "디지털 트윈 플랫폼",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "협력 발표 앞두고 '깐부 회동' 시종일관 화기애애……'AI 동맹' 굳건함 ...",
+          "link": "https://news.tf.co.kr/read/economy/2330197.htm",
+          "source": "",
+          "date": "2026.06.07 23:59",
+          "origin": "search:디지털 트윈 플랫폼"
+        },
+        {
+          "title": "지구상 가장 고급스러운 SUV… 12기통 ‘롤스로이스 컬리넌’ 타보니",
+          "link": "https://www.donga.com/news/Economy/article/all/20260607/134066753/1",
+          "source": "",
+          "date": "2026.06.07 23:56",
+          "origin": "search:디지털 트윈 플랫폼"
+        },
+        {
+          "title": "'회장님들이 줄 서는 남자' 젠슨 황, 8일 AI 동맹 릴레이",
+          "link": "https://www.newscj.com/news/articleView.html?idxno=3407397",
+          "source": "천지일보",
+          "date": "2026.06.07 23:22",
+          "origin": "search:디지털 트윈 플랫폼"
+        }
+      ],
+      "detected_at": "2026-06-08T00:02:59"
+    },
+    {
+      "keyword": "엔비디아",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "[하반기 증시 전망] '8500선 돌파' 열쇠 쥔 K-반도체…HBM·파운드리 실...",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78857",
+          "source": "더페어",
+          "date": "2026.06.07 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "한국·미국 증시 동반 급락…젠슨 황 방한 효과는 언제 반영될까, 월요...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=580167",
+          "source": "CBC뉴스",
+          "date": "2026.06.07 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "젠슨 황 \"화사 음악 사랑해…무척 매력적\"",
+          "link": "https://www.newsis.com/view/NISX20260607_0003659122",
+          "source": "",
+          "date": "2026.06.07 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "우리기술, 1만4200원까지 밀렸다…월요일 반등 신호 나올까",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=580137",
+          "source": "CBC뉴스",
+          "date": "2026.06.07 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[시황 분석] '9천피' 목전서 숨고르기 들어간 코스피…글로벌 기술주 과...",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=78856",
+          "source": "더페어",
+          "date": "2026.06.07 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "젠슨 황 형님, 시구도 GPU급?",
+          "link": "https://sports.khan.co.kr/article/202606080000006?pt=nv",
+          "source": "",
+          "date": "2026.06.07 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "휴림로봇, 로봇주 강세에도 답답한 흐름…시장에서는 엇갈린 시선, 월요...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=580166",
+          "source": "CBC뉴스",
+          "date": "2026.06.07 23:57",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "젠슨 황, 두산 키움전 시구...두산로보틱스 등 눈길",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=580162",
+          "source": "CBC뉴스",
+          "date": "2026.06.07 23:57",
+          "origin": "search:엔비디아"
+        }
+      ],
+      "detected_at": "2026-06-08T00:03:02"
+    },
+    {
+      "keyword": "모래시계",
+      "matched_owners": [
+        {
+          "ticker": "452260",
+          "name": "한화갤러리아",
+          "cluster": "realestate_redevelopment"
+        }
+      ],
+      "clusters": [
+        "realestate_redevelopment"
+      ],
+      "new_articles": [
+        {
+          "title": "레이베이, 낭만을 복원한 서사…리본으로 묶어낸 취약함의 연대",
+          "link": "https://www.newsis.com/view/NISX20260607_0003659434",
+          "source": "",
+          "date": "2026.06.07 23:28",
+          "origin": "search:모래시계"
+        }
+      ],
+      "detected_at": "2026-06-08T00:03:12"
     }
   ]
 }
