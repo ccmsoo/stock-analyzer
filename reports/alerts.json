@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-08T08:46:32",
-  "total": 97,
-  "new_today": 0,
+  "generated_at": "2026-06-08T11:47:11",
+  "total": 98,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "329180",
+      "name": "HD현대중공업",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결(자율공시)",
+      "submitter": "HD현대중공업",
+      "submitted_at": "2026.06.08",
+      "time": "10:56",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260608800378",
+      "rcp_no": "20260608800378",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 632000,
+      "today_change_pct": 4.82,
+      "signal_last_seen": "20260520",
+      "signal_confidence": "medium",
+      "signal_main_theme": "정책/방산·수주",
+      "matched_at": "2026-06-08T11:47:11"
+    },
     {
       "ticker": "483650",
       "name": "달바글로벌",
