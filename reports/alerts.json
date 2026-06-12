@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-12T07:28:39",
-  "total": 124,
-  "new_today": 0,
+  "generated_at": "2026-06-12T09:01:42",
+  "total": 125,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "042700",
+      "name": "한미반도체",
+      "sosok": "",
+      "report_name": "타법인주식및출자증권취득결정",
+      "submitter": "한미반도체",
+      "submitted_at": "2026.06.12",
+      "time": "09:01",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260612800119",
+      "rcp_no": "20260612800119",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 313500,
+      "today_change_pct": 7.73,
+      "signal_last_seen": "20260604",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체",
+      "matched_at": "2026-06-12T09:01:42"
+    },
     {
       "ticker": "066980",
       "name": "한성크린텍",
