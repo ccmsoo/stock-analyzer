@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-16T09:10:45",
-  "total": 139,
-  "new_today": 0,
+  "generated_at": "2026-06-16T14:30:32",
+  "total": 140,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "192650",
+      "name": "드림텍",
+      "sosok": "",
+      "report_name": "신규시설투자등(자율공시)",
+      "submitter": "드림텍",
+      "submitted_at": "2026.06.16",
+      "time": "14:16",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260616800376",
+      "rcp_no": "20260616800376",
+      "category": "투자/시설",
+      "score": 70,
+      "current_price": 6230,
+      "today_change_pct": 1.42,
+      "signal_last_seen": "20260612",
+      "signal_confidence": "medium",
+      "signal_main_theme": "수급·사업구조 개선(제조·생산 기지 재편)",
+      "matched_at": "2026-06-16T14:30:32"
+    },
     {
       "ticker": "340360",
       "name": "다보링크",
