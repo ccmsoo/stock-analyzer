@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-16T19:27:14",
-  "total": 145,
-  "new_today": 5,
+  "generated_at": "2026-06-17T00:27:15",
+  "total": 148,
+  "new_today": 3,
   "alerts": [
     {
       "ticker": "012450",
@@ -61,6 +61,25 @@
       "matched_at": "2026-06-16T19:27:12"
     },
     {
+      "ticker": "137080",
+      "name": "나래나노텍",
+      "sosok": "",
+      "report_name": "주식소각결정",
+      "submitter": "나래나노텍",
+      "submitted_at": "2026.06.16",
+      "time": "14:53",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260616900419",
+      "rcp_no": "20260616900419",
+      "category": "자본정책_호재",
+      "score": 70,
+      "current_price": 5150,
+      "today_change_pct": 14.32,
+      "signal_last_seen": "20260616",
+      "signal_confidence": "high",
+      "signal_main_theme": "수급/기업행동",
+      "matched_at": "2026-06-17T00:27:14"
+    },
+    {
       "ticker": "425420",
       "name": "티에프이",
       "sosok": "",
@@ -99,6 +118,25 @@
       "matched_at": "2026-06-16T19:27:14"
     },
     {
+      "ticker": "137080",
+      "name": "나래나노텍",
+      "sosok": "",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitter": "나래나노텍",
+      "submitted_at": "2026.06.16",
+      "time": "14:34",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260616000124",
+      "rcp_no": "20260616000124",
+      "category": "자본정책_호재",
+      "score": 70,
+      "current_price": 5150,
+      "today_change_pct": 14.32,
+      "signal_last_seen": "20260616",
+      "signal_confidence": "high",
+      "signal_main_theme": "수급/기업행동",
+      "matched_at": "2026-06-17T00:27:14"
+    },
+    {
       "ticker": "192650",
       "name": "드림텍",
       "sosok": "",
@@ -116,6 +154,25 @@
       "signal_confidence": "medium",
       "signal_main_theme": "수급·사업구조 개선(제조·생산 기지 재편)",
       "matched_at": "2026-06-16T14:30:32"
+    },
+    {
+      "ticker": "001520",
+      "name": "동양",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "동양",
+      "submitted_at": "2026.06.16",
+      "time": "11:57",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260616800284",
+      "rcp_no": "20260616800284",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 624,
+      "today_change_pct": 11.83,
+      "signal_last_seen": "20260616",
+      "signal_confidence": "high",
+      "signal_main_theme": "수주/건설(데이터센터·AI 인프라)",
+      "matched_at": "2026-06-17T00:27:15"
     },
     {
       "ticker": "340360",
