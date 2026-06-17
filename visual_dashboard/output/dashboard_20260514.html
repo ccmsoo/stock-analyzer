@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>뉴스 x 차트 통합 대시보드</title>
+<style>
+  :root {
+    --bg:#0f1115; --panel:#171a20; --panel2:#1e232b; --fg:#eef1f5; --muted:#9da7b3;
+    --line:#2b313b; --good:#37c978; --watch:#6ea8fe; --wait:#f5b84c; --bad:#ff6b66;
+    --cyan:#4fd1c5; --purple:#b794f4;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  header { padding:24px 28px 16px; border-bottom:1px solid var(--line); background:#12151a; position:sticky; top:0; z-index:4; }
+  h1 { margin:0; font-size:22px; letter-spacing:0; }
+  h2 { font-size:16px; margin:26px 0 12px; color:var(--cyan); }
+  .meta { color:var(--muted); margin-top:4px; }
+  main { padding:22px 28px 36px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:16px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .kpi b { display:block; font-size:22px; }
+  .kpi span { color:var(--muted); font-size:12px; }
+  .toolbar { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 4px; }
+  button, input { background:var(--panel); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:7px 10px; font:inherit; }
+  button { cursor:pointer; }
+  button.active { background:var(--cyan); color:#071012; border-color:var(--cyan); }
+  input { min-width:240px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(370px,1fr)); gap:12px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px; }
+  .card.strong_watch { border-left:4px solid var(--good); }
+  .card.wait_pullback { border-left:4px solid var(--wait); }
+  .card.theme_watch { border-left:4px solid var(--watch); }
+  .card.need_chart { border-left:4px solid var(--purple); }
+  .card.avoid { border-left:4px solid var(--bad); opacity:.78; }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .name { font-weight:700; }
+  .sub, .muted { color:var(--muted); }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .pct { color:#ff7b86; font-weight:700; }
+  .badge { display:inline-block; border:1px solid var(--line); background:var(--panel2); border-radius:999px; padding:2px 8px; font-size:12px; margin:6px 4px 0 0; }
+  .signal { color:var(--cyan); margin-top:8px; font-weight:600; }
+  .note { margin-top:8px; color:#dce3eb; }
+  .reason { margin-top:8px; color:var(--muted); font-size:12px; max-height:58px; overflow:hidden; }
+  .bars { display:grid; grid-template-columns:80px 1fr 44px; gap:8px; align-items:center; margin-top:10px; font-size:12px; color:var(--muted); }
+  .bar { height:7px; background:#262b34; border-radius:999px; overflow:hidden; }
+  .bar i { display:block; height:100%; background:linear-gradient(90deg,var(--cyan),var(--good)); }
+  .matrix { display:grid; grid-template-columns:repeat(2,minmax(260px,1fr)); gap:12px; }
+  .quad { min-height:132px; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .quad h3 { margin:0 0 8px; font-size:14px; }
+  .pill { display:inline-flex; align-items:center; gap:6px; border-radius:6px; background:var(--panel2); border:1px solid var(--line); padding:4px 7px; margin:3px; font-size:12px; }
+  .theme-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:10px; }
+  .theme-box { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  th, td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; font-size:13px; }
+  th { color:var(--muted); font-size:12px; font-weight:600; }
+  tr:last-child td { border-bottom:0; }
+  .hide { display:none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>뉴스 x 차트 통합 대시보드</h1>
+  <div class="meta">20260514 · 종목 40개 · 차트 분석 38개 · 생성 2026-05-15T18:38:04</div>
+  <div class="kpis">
+    <div class="kpi"><b>15</b><span>핵심 후보</span></div>
+<div class="kpi"><b>13</b><span>눌림 대기</span></div>
+<div class="kpi"><b>3</b><span>수급 관찰</span></div>
+<div class="kpi"><b>2</b><span>차트 필요</span></div>
+<div class="kpi"><b>7</b><span>보류</span></div>
+  </div>
+  <div class="toolbar">
+    <button class="active" data-filter="all">전체</button>
+    <button data-filter="strong_watch">핵심 후보</button>
+    <button data-filter="wait_pullback">눌림 대기</button>
+    <button data-filter="theme_watch">수급 관찰</button>
+    <button data-filter="need_chart">차트 필요</button>
+    <button data-filter="avoid">보류</button>
+    <input id="search" placeholder="종목명, 테마, 키워드 검색">
+  </div>
+</header>
+<main>
+  <h2>뉴스 × 차트 매트릭스</h2>
+  <section class="matrix"><div class="quad"><h3>핵심 후보 <span class="muted">(14)</span></h3><div class="muted">뉴스 강함 + 차트 확인</div><div><span class="pill"><b>비에이치</b><span class="muted mono">98</span></span><span class="pill"><b>나무가</b><span class="muted mono">98</span></span><span class="pill"><b>경동나비엔</b><span class="muted mono">96</span></span><span class="pill"><b>HD현대에너지솔루션</b><span class="muted mono">95</span></span><span class="pill"><b>에스에너지</b><span class="muted mono">94</span></span><span class="pill"><b>제이투케이바이오</b><span class="muted mono">94</span></span><span class="pill"><b>한국공항</b><span class="muted mono">93</span></span><span class="pill"><b>코아시아씨엠</b><span class="muted mono">92</span></span><span class="pill"><b>후성</b><span class="muted mono">90</span></span><span class="pill"><b>대우건설</b><span class="muted mono">90</span></span><span class="pill"><b>GS피앤엘</b><span class="muted mono">89</span></span><span class="pill"><b>지엔코</b><span class="muted mono">88</span></span></div></div><div class="quad"><h3>눌림 대기 <span class="muted">(13)</span></h3><div class="muted">뉴스 강함 + 과열</div><div><span class="pill"><b>LG씨엔에스</b><span class="muted mono">70</span></span><span class="pill"><b>라메디텍</b><span class="muted mono">69</span></span><span class="pill"><b>라온텍</b><span class="muted mono">69</span></span><span class="pill"><b>SK네트웍스</b><span class="muted mono">66</span></span><span class="pill"><b>안국약품</b><span class="muted mono">64</span></span><span class="pill"><b>소룩스</b><span class="muted mono">63</span></span><span class="pill"><b>삼아알미늄</b><span class="muted mono">53</span></span><span class="pill"><b>삼진제약</b><span class="muted mono">49</span></span><span class="pill"><b>제주반도체</b><span class="muted mono">48</span></span><span class="pill"><b>LG전자우</b><span class="muted mono">46</span></span><span class="pill"><b>TPC로보틱스</b><span class="muted mono">40</span></span><span class="pill"><b>천일고속</b><span class="muted mono">36</span></span></div></div><div class="quad"><h3>수급 관찰 <span class="muted">(6)</span></h3><div class="muted">차트 강함 + 뉴스 약함</div><div><span class="pill"><b>메이슨캐피탈</b><span class="muted mono">73</span></span><span class="pill"><b>차백신연구소</b><span class="muted mono">44</span></span><span class="pill"><b>한양디지텍</b><span class="muted mono">52</span></span><span class="pill"><b>신풍</b><span class="muted mono">43</span></span><span class="pill"><b>선진</b><span class="muted mono">42</span></span><span class="pill"><b>카카오페이</b><span class="muted mono">42</span></span></div></div><div class="quad"><h3>제외/보류 <span class="muted">(5)</span></h3><div class="muted">신호 약함</div><div><span class="pill"><b>한스바이오메드</b><span class="muted mono">68</span></span><span class="pill"><b>아이엠바이오로직스</b><span class="muted mono">68</span></span><span class="pill"><b>노루페인트우</b><span class="muted mono">48</span></span><span class="pill"><b>동양고속</b><span class="muted mono">24</span></span><span class="pill"><b>LG전자</b><span class="muted mono">17</span></span></div></div><div class="quad"><h3>차트 필요 <span class="muted">(2)</span></h3><div class="muted">뉴스 강함 + 차트 미분석</div><div><span class="pill"><b>폴레드</b><span class="muted mono">54</span></span><span class="pill"><b>코스모로보틱스</b><span class="muted mono">49</span></span></div></div></section>
+  <h2>테마 요약</h2>
+  <section class="theme-list"><div class="theme-box"><div class="row"><b>실적</b><span class="mono">86</span></div><div class="muted">9종목 · 비에이치, 경동나비엔, 제이투케이바이오, 한국공항, 코아시아씨엠, GS피앤엘</div></div><div class="theme-box"><div class="row"><b>바이오</b><span class="mono">60</span></div><div class="muted">6종목 · 라메디텍, 소룩스, 삼진제약, 차백신연구소, 한스바이오메드, 아이엠바이오로직스</div></div><div class="theme-box"><div class="row"><b>정책</b><span class="mono">76</span></div><div class="muted">3종목 · HD현대에너지솔루션, 후성, 선진</div></div><div class="theme-box"><div class="row"><b>반도체</b><span class="mono">43</span></div><div class="muted">3종목 · 제주반도체, 한양디지텍, 피델릭스</div></div><div class="theme-box"><div class="row"><b>로봇/자동화</b><span class="mono">98</span></div><div class="muted">1종목 · 나무가</div></div><div class="theme-box"><div class="row"><b>수주</b><span class="mono">94</span></div><div class="muted">1종목 · 에스에너지</div></div><div class="theme-box"><div class="row"><b>정비사업/분양(건설)</b><span class="mono">90</span></div><div class="muted">1종목 · 대우건설</div></div><div class="theme-box"><div class="row"><b>공시</b><span class="mono">88</span></div><div class="muted">1종목 · 지엔코</div></div><div class="theme-box"><div class="row"><b>공시/법원결정</b><span class="mono">88</span></div><div class="muted">1종목 · 제이케이시냅스</div></div><div class="theme-box"><div class="row"><b>수급/테마성(코스닥 소형주 순환매)</b><span class="mono">73</span></div><div class="muted">1종목 · 메이슨캐피탈</div></div><div class="theme-box"><div class="row"><b>IT서비스 (엔터프라이즈 AI)</b><span class="mono">70</span></div><div class="muted">1종목 · LG씨엔에스</div></div><div class="theme-box"><div class="row"><b>디스플레이</b><span class="mono">69</span></div><div class="muted">1종목 · 라온텍</div></div><div class="theme-box"><div class="row"><b>공모주/수급</b><span class="mono">54</span></div><div class="muted">1종목 · 폴레드</div></div><div class="theme-box"><div class="row"><b>비철금속(알루미늄)</b><span class="mono">53</span></div><div class="muted">1종목 · 삼아알미늄</div></div><div class="theme-box"><div class="row"><b>로봇 / IPO(새내기주) 수급</b><span class="mono">49</span></div><div class="muted">1종목 · 코스모로보틱스</div></div><div class="theme-box"><div class="row"><b>수급</b><span class="mono">48</span></div><div class="muted">1종목 · 노루페인트우</div></div><div class="theme-box"><div class="row"><b>실적·수급(전통가전 + AI·로봇 기대)</b><span class="mono">46</span></div><div class="muted">1종목 · LG전자우</div></div><div class="theme-box"><div class="row"><b>수급(단기 테마성·순환매)</b><span class="mono">43</span></div><div class="muted">1종목 · 신풍</div></div><div class="theme-box"><div class="row"><b>policy</b><span class="mono">42</span></div><div class="muted">1종목 · 카카오페이</div></div><div class="theme-box"><div class="row"><b>로봇/휴머노이드 테마</b><span class="mono">40</span></div><div class="muted">1종목 · TPC로보틱스</div></div><div class="theme-box"><div class="row"><b>수급·자산가치(재개발 기대)</b><span class="mono">36</span></div><div class="muted">1종목 · 천일고속</div></div><div class="theme-box"><div class="row"><b>부동산/재개발</b><span class="mono">24</span></div><div class="muted">1종목 · 동양고속</div></div><div class="theme-box"><div class="row"><b>수급/테마(지수재편·로봇)</b><span class="mono">17</span></div><div class="muted">1종목 · LG전자</div></div></section>
+  <h2>종목 카드</h2>
+  <section class="grid" id="cards"><article class="card strong_watch" data-signal="strong_watch" data-search="비에이치 090460 실적 1분기 영업이익 흑자전환(영업익 107억) 및 기관·애널리스트의 목표가 상향(하반기 이익 가파른 개선 전망) 애플 공급망, fpcb(연성회로기판), 어닝 서프라이즈, 폴더블 스마트폰 혼합 asp 상승, 무선충전 모듈 공급 확대 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">비에이치</span> <span class="sub mono">090460 · KOSPI</span></div>
+    <span class="pct mono">+24.38%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">1분기 영업이익 흑자전환(영업익 107억) 및 기관·애널리스트의 목표가 상향(하반기 이익 가파른 개선 전망)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:97%"></i></span><span class="mono">97</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 54.8 · 거래량 2.6x · 20일 이격 14.9%</div>
+  <div class="reason">5월 4일 공시로 1분기 영업이익이 흑자전환(약 107억원)했고, 이후 5월 6일 DB증권의 목표가 상향 보고서가 나오며 펀더멘털 개선 기대가 구체화됐다. 이후 14일(시장-wide Apple 공급망·FPCB 수요 확대 흐름)에 개인·기관 매수로 관련 수혜주로 집중 유입되며 D-day에 급등한 것으로 판단된다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="나무가 190510 로봇/자동화 로봇용 3d 비전 솔루션 라인업 확대 및 로봇 전용 생산라인 가동(다음 달 목표), poc 완료 기반 고객사와 초기 개발 협업(글로벌 완성차 로봇 플랫폼 협력사 선정 이력 언급) 로봇, 3d 센싱/비전, 로봇용 3d 카메라 모듈, 로봇 전용 생산라인 가동, 글로벌 완성차 로봇 플랫폼 협력사 선정 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">나무가</span> <span class="sub mono">190510 · KOSDAQ</span></div>
+    <span class="pct mono">+20.54%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">로봇용 3D 비전 솔루션 라인업 확대 및 로봇 전용 생산라인 가동(다음 달 목표), PoC 완료 기반 고객사와 초기 개발 협업(글로벌 완성차 로봇 플랫폼 협력사 선정 이력 언급)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 71.3 · 거래량 16.4x · 20일 이격 16.5%</div>
+  <div class="reason">당일(05.14) 회사 관련(stock_news) 기사에서 회사가 로봇의 &#x27;머리&#x27;에 탑재되는 3D 비전 솔루션 라인업을 확대하고 다음 달 가동을 목표로 로봇 전용 라인 셋업을 진행 중이며 PoC를 완료해 고객사와 초기 협업을 본격화한다고 공표한 점이 직접적 트리거로 판단됩니다. 향후 고부가가치 제품의 양산 전개 기대(라인 가동·글로벌 완성차 플랫폼 협력 이력)가 주가 급등을 설명합니다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="경동나비엔 009450 실적 2026년 1분기 연결 영업이익 61.7% 증가(638억 원) 공시 및 북미 중심 해외매출 확대로 수익성 개선, 동시에 &#x27;제습 환기청정기 매직플러스&#x27; 전시(통합 공기질 솔루션)·공기열보일러(히트펌프) 국내 도입 예고 hvac 플랫폼, 히트펌프(공기열보일러), 북미 판매 확대, 제습 환기청정기 매직플러스, 1q 영업이익 61.7% (638억) strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">경동나비엔</span> <span class="sub mono">009450 · KOSPI</span></div>
+    <span class="pct mono">+11.98%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">2026년 1분기 연결 영업이익 61.7% 증가(638억 원) 공시 및 북미 중심 해외매출 확대로 수익성 개선, 동시에 &#x27;제습 환기청정기 매직플러스&#x27; 전시(통합 공기질 솔루션)·공기열보일러(히트펌프) 국내 도입 예고</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:92%"></i></span><span class="mono">92</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:96%"></i></span><span class="mono">96</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 65.2 · 거래량 4.1x · 20일 이격 8.2%</div>
+  <div class="reason">동일일(2026.05.13) 다수의 공시·보도가 1Q 영업이익(61.7% 증가)과 북미 중심의 해외 성장, 환율 효과·비용 절감 등으로 수익성이 크게 개선됐음을 전했으며, 동시에 HVAC 전시회에서 신제품·통합 공기질 솔루션을 선보여 사업 구조 전환 기대가 높아졌다. 이러한 확실한 실적개선 공시와 사업 포트폴리오 확장(히트펌프·제습 환기청정기) 소식이 주가 급등의 직접적 트리거로 판단된다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="hd현대에너지솔루션 322000 정책 태양광 인버터 산업 발전 협의체(한전·기후부 주도) 발족 및 한전의 &#x27;보안 강화형 차세대 태양광 인버터&#x27; 개발·투자 계획(국산화·실증·테스트베드·정책 지원 포함) 재생에너지 정책, 태양광 인버터 국산화, 보안 강화형 차세대 인버터 개발, 한전 실증 테스트베드, 베란다 태양광 보급사업, 추경 6000억 에너지 전환 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">HD현대에너지솔루션</span> <span class="sub mono">322000 · KOSPI</span></div>
+    <span class="pct mono">+15.09%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">태양광 인버터 산업 발전 협의체(한전·기후부 주도) 발족 및 한전의 &#x27;보안 강화형 차세대 태양광 인버터&#x27; 개발·투자 계획(국산화·실증·테스트베드·정책 지원 포함)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:89%"></i></span><span class="mono">89</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:95%"></i></span><span class="mono">95</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 70.2 · 거래량 2.3x · 20일 이격 25.5%</div>
+  <div class="reason">5월 8일 정부·한전 주도의 &#x27;태양광 인버터 산업 발전 협의체&#x27; 출범에 HD현대에너지솔루션이 참여한 사실이 복수 보도로 확인됐다. 한전의 차세대 인버터 개발·실증 및 정부의 에너지 전환 추경(예산) 언급은 인버터·태양광 국산화 기대를 자극해 관련주 수요를 촉발한 것으로 보인다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="에스에너지 095910 수주 중동 20mw mou 중 1차 3mw 본계약 체결(사막 특화 hjt 이중접합 모듈) 및 국내 수상태양광 월계지구 약 11억원 수주 태양광 수주, 중동 사막특화 시장, hjt 이중접합 모듈, 20mw mou·3mw 본계약, 수상태양광 월계지구 11억원 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">에스에너지</span> <span class="sub mono">095910 · KOSDAQ</span></div>
+    <span class="pct mono">+23.63%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">중동 20MW MOU 중 1차 3MW 본계약 체결(사막 특화 HJT 이중접합 모듈) 및 국내 수상태양광 월계지구 약 11억원 수주</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:88%"></i></span><span class="mono">88</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:94%"></i></span><span class="mono">94</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 64.8 · 거래량 3.5x · 20일 이격 16.0%</div>
+  <div class="reason">회사 발표(5/7)로 중동 파트너사와의 20MW MOU에서 1차 물량 3MW를 본계약으로 확정했고, 국내 공공 수상태양광 약 11억원 수주도 확보했다. 고효율·고온 특화인 HJT 기술과 해외 실수주 가시성이 확인되면서 5/14 태양광 테마 강세 및 개인 매수 속에 급등을 유발한 것으로 보인다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="제이투케이바이오 420570 실적 1분기 연결 영업이익 19.1억(전년比 476%↑), 매출 111.2억(53.1%↑) 공시 — 기존 odm 매출 확대·신규 유명 브랜드 oem 수주·pdrn·펩타이드 등 고부가 원료 수요 증가 및 피부임상센터 매출 기여 k-뷰티 수요 회복, 기능성·고효능 원료 수요, pdrn·펩타이드 원료, 피부임상센터 매출 확대, 신규 oem 수주(국내 유명 브랜드) strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">제이투케이바이오</span> <span class="sub mono">420570 · KOSDAQ</span></div>
+    <span class="pct mono">+19.47%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">1분기 연결 영업이익 19.1억(전년比 476%↑), 매출 111.2억(53.1%↑) 공시 — 기존 ODM 매출 확대·신규 유명 브랜드 OEM 수주·PDRN·펩타이드 등 고부가 원료 수요 증가 및 피부임상센터 매출 기여</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:90%"></i></span><span class="mono">90</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:94%"></i></span><span class="mono">94</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 67.9 · 거래량 61.2x · 20일 이격 13.2%</div>
+  <div class="reason">당일(5/14) 회사 공시·복수 보도에서 1분기 영업이익과 매출이 대폭 개선되었다고 명확히 밝혔고, 개선 원인으로 신규 OEM 수주와 고부가 원료 판매 확대·임상센터 기여를 구체적으로 제시해 즉각적인 투자심리 개선을 초래했다. 여기에 탈모·기능성 화장품 관련 테마 관심이 맞물리며 매수세가 집중된 것으로 판단된다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="한국공항 005430 실적 2026년 1분기 연결기준 영업이익 196억8600만원(전년비 +35.5%), 매출 1779억7600만원(+13.5%), 당기순이익 159억1200만원(+39.0%) 공시 어닝 서프라이즈, 여객 회복, 1분기 영업이익 +35.5%, 건설현장 특별점검, 공항 통합 논의 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">한국공항</span> <span class="sub mono">005430 · KOSPI</span></div>
+    <span class="pct mono">+18.11%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">2026년 1분기 연결기준 영업이익 196억8600만원(전년비 +35.5%), 매출 1779억7600만원(+13.5%), 당기순이익 159억1200만원(+39.0%) 공시</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:87%"></i></span><span class="mono">87</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:93%"></i></span><span class="mono">93</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 volume_breakout · RSI 79.8 · 거래량 6.2x · 20일 이격 19.4%</div>
+  <div class="reason">당일(5월14일) 공시된 1분기 실적이 매출·영업이익·순이익 모두 전년 대비 의미 있게 개선되었다는 직접적 호재가 주가 급등의 핵심 트리거로 판단됩니다. 네이버 태그 기사(종목 공시)로 확인된 점도 상승을 촉발한 신뢰성 높은 신호입니다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="코아시아씨엠 196450 실적 2026년 1분기 연결 영업이익 96% 증가(18억)·5분기 연속 흑자 및 삼성 스마트폰(갤럭시 s/a) 대상 고화소 카메라모듈 안정 공급 스마트폰 카메라 수요, 피지컬 ai(로보틱스), 1분기 영업이익 +96%, 삼성 갤럭시 고화소 모듈 공급, 렌즈·카메라모듈 수직계열화 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">코아시아씨엠</span> <span class="sub mono">196450 · KOSDAQ</span></div>
+    <span class="pct mono">+30.00%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">2026년 1분기 연결 영업이익 96% 증가(18억)·5분기 연속 흑자 및 삼성 스마트폰(갤럭시 S/A) 대상 고화소 카메라모듈 안정 공급</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:85%"></i></span><span class="mono">85</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:92%"></i></span><span class="mono">92</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 ma20_recovery · RSI 65.1 · 거래량 11.4x · 20일 이격 12.4%</div>
+  <div class="reason">회사 공시(및 다수 보도)를 통해 1분기 영업이익이 전년동기 대비 96% 증가하고 5분기 연속 흑자를 기록한 점이 확인됐다. 동시에 삼성향 고화소·프리미엄 카메라모듈 공급과 피지컬 AI(로보틱스·전장·3D카메라) 신제품 개발 가시화로 업종·테마 매수세가 집중되며 급등을 촉발한 것으로 판단된다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="후성 093370 정책 국민성장펀드(첨단전략산업기금) 통한 165억원 저리대출 승인 → 반도체 공정용 불화수소(불산) 가스 생산지원 국민성장펀드, 반도체 소재, 저리대출 165억원, 불화수소(불산) 가스 생산 확대, 리튬 가격 급등 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">후성</span> <span class="sub mono">093370 · KOSPI</span></div>
+    <span class="pct mono">+13.22%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">국민성장펀드(첨단전략산업기금) 통한 165억원 저리대출 승인 → 반도체 공정용 불화수소(불산) 가스 생산지원</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:78%"></i></span><span class="mono">78</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:90%"></i></span><span class="mono">90</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 46.9 · 거래량 0.4x · 20일 이격 3.0%</div>
+  <div class="reason">5월 3일 보도된 국민성장펀드 심의 결과에서 후성은 울산 소재 반도체 공정용 불화수소가스 생산기업으로서 지역 중소·중견기업 간소화 절차를 적용받아 첨단전략산업기금 165억원의 저리대출을 승인받았다. 해당 정책금융 지원 소식이 종목의 ‘정책 호재’로 인식된 가운데 5월 13~14일 화학·반도체 소재 업종의 동반 강세(업종 재평가·테마성 매수)가 매수세를 증폭시켜 당일 급등을 촉발한 것으로 보인다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="대우건설 047040 정비사업/분양(건설) 한남2구역 재정비계획 변경 가결(서울시) — 1311가구 사업 확정 및 대우건설 시공 예정 재개발·재건축, 도시정비계획 변경, 한남2구역 재정비계획, 광명 하안주공 시공사 선정 입찰, 동래 푸르지오 분양 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">대우건설</span> <span class="sub mono">047040 · KOSPI</span></div>
+    <span class="pct mono">+12.61%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">한남2구역 재정비계획 변경 가결(서울시) — 1311가구 사업 확정 및 대우건설 시공 예정</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:78%"></i></span><span class="mono">78</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:90%"></i></span><span class="mono">90</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 50.1 · 거래량 0.5x · 20일 이격 1.6%</div>
+  <div class="reason">서울시의 한남2구역 재정비계획 변경이 가결되면서 1311가구 대형 재개발 사업이 공론화되고, 기사에서 해당 단지 시공을 대우건설이 맡는다고 명시되어 대우건설의 향후 수주·분양 실적 가시성이 높아졌습니다. 동일 시점에 광명 하안주공 등 대형 재건축·분양 관련 속도전 뉴스가 이어지며 업종 수급·매수심리를 자극한 것으로 보입니다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="gs피앤엘 499790 실적 2026년 1분기 실적 컨센서스 상회(매출 +38%, 영업이익 +59%) 및 증권사 목표가 상향(하나증권 목표가 6.9만→7.2만) 실적 서프라이즈, 호텔·레저 경기 개선, 한일령(한중·한일 관광 회복), 1분기 매출·영업이익 컨센서스 상회, 목표가 상향(증권사 리포트), 제주 서관 리뉴얼 영향 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">GS피앤엘</span> <span class="sub mono">499790 · KOSPI</span></div>
+    <span class="pct mono">+12.84%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">2026년 1분기 실적 컨센서스 상회(매출 +38%, 영업이익 +59%) 및 증권사 목표가 상향(하나증권 목표가 6.9만→7.2만)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:78%"></i></span><span class="mono">78</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:89%"></i></span><span class="mono">89</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 58.2 · 거래량 1.0x · 20일 이격 4.3%</div>
+  <div class="reason">공시성 1분기 실적(매출 1,304억·영업익 242억)이 컨센서스(영업익 192억)를 크게 상회했고, 하나증권의 목표주가 상향 및 투자의견 유지 리포트가 즉각적으로 매수심리를 자극했기 때문에 주가가 급등한 것으로 보인다. 추가로 그랜드·웨스틴 등 호텔별 OCC·ADR 개선과 한일 관광 회복 기대가 구조적 업황 호전 신호로 작용했다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="지엔코 065060 공시 제3자배정 유상증자 35억원(출자전환 통한 채무상계·재무구조 개선), 주당 2,845원에 보통주 123만226주 발행, 최대주주·계열사 참여 유상증자, 재무구조 개선, 패션·리테일 팝업, 제3자배정 35억원, 주당 2,845원 123만주 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">지엔코</span> <span class="sub mono">065060 · KOSDAQ</span></div>
+    <span class="pct mono">+20.34%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">제3자배정 유상증자 35억원(출자전환 통한 채무상계·재무구조 개선), 주당 2,845원에 보통주 123만226주 발행, 최대주주·계열사 참여</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:75%"></i></span><span class="mono">75</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:88%"></i></span><span class="mono">88</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 ma20_recovery · RSI 61.9 · 거래량 15.9x · 20일 이격 10.6%</div>
+  <div class="reason">장중 대규모·명확한 공시(제3자배정 유상증자)가 지난 7일 제출되었고, 주요주주와 계열사가 참여해 재무구조 개선(출자전환) 목적이 명시되어 있어 주주 안정성·자금여력 개선 기대가 부각되며 매수로 이어진 것으로 보인다. 여기에 같은 기간 패션·의류 소형주에 대한 순환매(팝업 등 브랜드 활동을 반영한 수요 회복 기대)도 단기 수급을 강화한 것으로 판단된다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="제이케이시냅스 060230 공시/법원결정 채권자 제기 파산신청에 대한 대전회생법원의 기각(메디콕스 제기 파산신청 기각·변제공탁으로 채권 소멸 판단) 법원 판결, 회생·파산 리스크, 파산신청 기각, 변제공탁 소멸, 보통주 추가상장 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">제이케이시냅스</span> <span class="sub mono">060230 · KOSDAQ</span></div>
+    <span class="pct mono">+17.46%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">채권자 제기 파산신청에 대한 대전회생법원의 기각(메디콕스 제기 파산신청 기각·변제공탁으로 채권 소멸 판단)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:75%"></i></span><span class="mono">75</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:88%"></i></span><span class="mono">88</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 46.2 · 거래량 10.5x · 20일 이격 3.5%</div>
+  <div class="reason">대전회생법원이 채권자(메디콕스)가 제기한 파산신청을 기각했다는 공시는 채무불이행 우려를 해소하는 명확한 호재로 작용합니다. 해당 결정은 재무·법적 리스크가 낮아졌다는 신호로 투자자들의 단기 매수와 단기 급등을 유발한 것으로 판단됩니다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="아시아나항공 020560 실적 2026년 1분기 실적 공시(별도) — 영업손실 1,013억원·당기순손실 2,377억원 발표, 유가 헷지 관련 파생이익 850억원으로 적자 일부 상쇄·통합 준비비 반영 및 2분기 노선(유럽·미주·일본) 확대 계획 실적공시, m&amp;a 통합(통합 출범), 항공여객 수요 회복, 유가 헷지 850억, 벨리카고 확대 strong_watch 핵심 후보">
+  <div class="row">
+    <div><span class="name">아시아나항공</span> <span class="sub mono">020560 · KOSPI</span></div>
+    <span class="pct mono">+16.94%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">핵심 후보</span>
+    <span class="badge">risk low</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">2026년 1분기 실적 공시(별도) — 영업손실 1,013억원·당기순손실 2,377억원 발표, 유가 헷지 관련 파생이익 850억원으로 적자 일부 상쇄·통합 준비비 반영 및 2분기 노선(유럽·미주·일본) 확대 계획</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:76%"></i></span><span class="mono">76</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:90%"></i></span><span class="mono">90</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:82%"></i></span><span class="mono">82</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 volume_breakout · RSI 69.6 · 거래량 36.9x · 20일 이격 10.7%</div>
+  <div class="reason">D-day에 다수 매체가 회사 공시(1분기 실적)를 보도했으며, 시장은 적자 발표 자체보다는 유가 헷지로 인한 850억 원 이익과 대한항공과의 통합(통합 출범 일정·통합 준비비 반영)·2분기 노선 확대 계획을 긍정적으로 해석해 급등한 것으로 보인다. 인천공항 주차권 감사 기사는 관련 이슈로 보이지만 가격 급등의 직접 트리거로 보기엔 연결성이 약하다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="메이슨캐피탈 021880 수급/테마성(코스닥 소형주 순환매) 코스닥 동전주·소형주에 대한 단기 순환매(상한가 매수 집중) 코스닥 소형주 순환매, 동전주(1000원 미만) 퇴출 규정, 상한가 매수 집중, 단기 모멘텀·작전성 매수 strong_watch 수급 관찰">
+  <div class="row">
+    <div><span class="name">메이슨캐피탈</span> <span class="sub mono">021880 · KOSDAQ</span></div>
+    <span class="pct mono">+29.52%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk low</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">코스닥 동전주·소형주에 대한 단기 순환매(상한가 매수 집중)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:64%"></i></span><span class="mono">64</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:85%"></i></span><span class="mono">85</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:73%"></i></span><span class="mono">73</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 ma20_recovery · RSI 58.2 · 거래량 12.7x · 20일 이격 14.6%</div>
+  <div class="reason">여러 매체의 당일 시황·상한가 목록에서 메이슨캐피탈이 이름을 올린 것 외에 회사 고유의 공시·실적·계약성 뉴스는 확인되지 않습니다. 따라서 개별 펀더멘털 요인보다는 코스닥 소형주·동전주 중심의 단기 순환매(모멘텀·작전성 매수)가 즉각적 상승 원인으로 판단됩니다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="lg씨엔에스 064400 it서비스 (엔터프라이즈 ai) sap 협업 기반 그룹사 대상 fde 인력 파견·기업용 챗gpt(엔터프라이즈 ai) 사업 수주/도입 기대 엔터프라이즈 ai, 챗gpt 엔터프라이즈, ai 파트너십, fde 인력 파견, 기업용 ai 수주/도입 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">LG씨엔에스</span> <span class="sub mono">064400 · KOSPI</span></div>
+    <span class="pct mono">+17.14%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">SAP 협업 기반 그룹사 대상 FDE 인력 파견·기업용 챗GPT(엔터프라이즈 AI) 사업 수주/도입 기대</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:91%"></i></span><span class="mono">91</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:70%"></i></span><span class="mono">70</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. RSI 83.3. 20일선 이격 25.2%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 volume_breakout · RSI 83.3 · 거래량 11.8x · 20일 이격 25.2%</div>
+  <div class="reason">D-day 당일 다수의 보도가 LG씨엔에스가 SAP와 AI 협업을 추진하고 그룹사에 FDE 인력을 파견한다는 내용을 집중 보도하면서 엔터프라이즈용 챗GPT·AI 서비스 수혜 기대가 확산되어 급등한 것으로 판단된다. 동종업체(오픈AI·SAP 제휴 관련) 뉴스와 함께 IT서비스 섹터에 대한 테마성 매수도 거래량 증가로 이어졌다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="라메디텍 462510 바이오 식약처 인체조직은행 허가 취득으로 인체유래 ecm(세포외기질) 소재의 취급·가공·품질관리·유통 기반 확보 및 자사 레이저 dds와의 융합 솔루션 추진 재생의료, 인체조직은행 허가, ecm(세포외기질), 레이저 dds 융합 솔루션, 인체유래 ecm 유통 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">라메디텍</span> <span class="sub mono">462510 · KOSDAQ</span></div>
+    <span class="pct mono">+29.81%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">식약처 인체조직은행 허가 취득으로 인체유래 ECM(세포외기질) 소재의 취급·가공·품질관리·유통 기반 확보 및 자사 레이저 DDS와의 융합 솔루션 추진</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:86%"></i></span><span class="mono">86</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:69%"></i></span><span class="mono">69</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 20.6%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 68.6 · 거래량 39.2x · 20일 이격 20.6%</div>
+  <div class="reason">회사와 다수 매체가 5월14일 식약처 인체조직은행 허가 취득을 공시(보도)했으며, 이는 ECM 기반 재생의료 소재 사업 진입을 위해 필수적인 인프라 확보라는 점에서 성장성(신사업 모멘텀)을 보여준다. 투자자들이 허가 취득과 레이저 DDS와의 시너지 가능성을 단기적 호재로 해석하면서 급등·상한가 매수세가 유입된 것으로 판단된다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="라온텍 418420 디스플레이 세계적 전시회 sid 2026 참가 및 마이크로디스플레이(lcos·oledos·ledos) 풀 라인업 공개, ar 얼라이언스 활동(레이저 광원·실리콘 포토닉스 연계) 디스플레이, ar/xr, 0.13인치 lcos p13, oledos/ledos 시제품, 실리콘 포토닉스(레이저 광원) wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">라온텍</span> <span class="sub mono">418420 · KOSDAQ</span></div>
+    <span class="pct mono">+29.95%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">세계적 전시회 SID 2026 참가 및 마이크로디스플레이(LCoS·OLEDoS·LEDoS) 풀 라인업 공개, AR 얼라이언스 활동(레이저 광원·실리콘 포토닉스 연계)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:89%"></i></span><span class="mono">89</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:69%"></i></span><span class="mono">69</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 47.3%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 70.8 · 거래량 4.7x · 20일 이격 47.3%</div>
+  <div class="reason">회사·언론 공시(및 보도)를 통해 SID 2026 참가와 0.13인치 LCoS 등 구체 제품 라인업 공개가 확인되며 AR/XR·AI 디스플레이 수혜 기대가 부각됐다. 5월 중반의 기술·반도체·디스플레이 랠리와 개인 순매수·테마성 자금 유입이 결합해 라온텍에 단기 쏠림이 발생한 것으로 보인다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="sk네트웍스 001740 실적 1분기 영업이익 334억원(전년比 +102%)·당기순이익 427억원 흑자전환 + ai 투자 평가이익 반영 및 ai 협업(업스테이지 등) 확대 ai 투자평가이익, ai 오픈생태계 협업, 포트폴리오 효율화, 영업이익 334억원, 순이익 427억원 흑자전환 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">SK네트웍스</span> <span class="sub mono">001740 · KOSPI</span></div>
+    <span class="pct mono">+29.93%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">1분기 영업이익 334억원(전년比 +102%)·당기순이익 427억원 흑자전환 + AI 투자 평가이익 반영 및 AI 협업(업스테이지 등) 확대</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:81%"></i></span><span class="mono">81</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:66%"></i></span><span class="mono">66</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. RSI 80.2. 20일선 이격 31.1%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 volume_breakout · RSI 80.2 · 거래량 5.9x · 20일 이격 31.1%</div>
+  <div class="reason">당일(5/14) 공개된 1분기 실적(영업이익 급증·순이익 흑자전환)과 회사가 밝힌 AI 투자평가이익 및 AI 협업 확대 계획이 직접적 호재로 작용해 매수세가 집중된 것으로 보인다. 다수의 종목태그 기사와 특징주 보도가 상한가까지 연출한 점에서 실적 발표가 표면적 및 본질적 트리거로 판단된다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="안국약품 001540 실적 1분기 연결 영업이익 160억원(전년비 +173%) — 분기 실적이 지난해 연간 영업이익(98억원)을 이미 초과 어닝 서프라이즈, 순환기 치료제 성장, h&amp;b 채널 다각화, 페바로젯 112억 매출, 정제 제형 제조업무 정지 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">안국약품</span> <span class="sub mono">001540 · KOSDAQ</span></div>
+    <span class="pct mono">+29.94%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">1분기 연결 영업이익 160억원(전년비 +173%) — 분기 실적이 지난해 연간 영업이익(98억원)을 이미 초과</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:79%"></i></span><span class="mono">79</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:64%"></i></span><span class="mono">64</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. RSI 80.7. 20일선 이격 24.4%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 volume_breakout · RSI 80.7 · 거래량 93.8x · 20일 이격 24.4%</div>
+  <div class="reason">14일 공개된 분기보고서에서 안국약품이 1분기 연결 기준 영업이익 160억원으로 전년대비 큰 폭 개선하고 지난해 연간 영업이익을 분기만에 초과했다는 &#x27;어닝 서프라이즈&#x27;가 직전 거래일 대비 주가를 상한가로 밀어올린 것으로 판단된다. 제품별(페바로젯 등) 매출 성장과 H&amp;B 채널 확대로 매출구조가 개선된 점이 투자심리를 자극했고, 5월 8일의 정제 제형 제조업무 정지 공시는 있었으나 이날은 실적호조가 시장 반응을 주도했다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="소룩스 290690 바이오 ar1001 글로벌 독점 판권 47억달러(약 7조원) 라이선스 계약(아리바이오-푸싱제약) — 아리바이오와의 합병 연결 기대에 따른 가치 재평가 바이오 라이선스 계약, m&amp;a/합병, 임상3상 톱라인 발표, ar1001 47억달러 판권계약, 250억 cb 발행, 합병 기일 2026.06.05 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">소룩스</span> <span class="sub mono">290690 · KOSDAQ</span></div>
+    <span class="pct mono">+30.00%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">AR1001 글로벌 독점 판권 47억달러(약 7조원) 라이선스 계약(아리바이오-푸싱제약) — 아리바이오와의 합병 연결 기대에 따른 가치 재평가</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:76%"></i></span><span class="mono">76</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:63%"></i></span><span class="mono">63</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 63.5 · 거래량 2.1x · 20일 이격 16.6%</div>
+  <div class="reason">아리바이오가 5월14일 AR1001의 대규모(약 47억달러) 글로벌 판권 계약을 체결했다는 보도가 나오면서, 아리바이오와의 합병을 추진 중인 소룩스의 합병 후 기업가치가 크게 높아질 수 있다는 기대가 투자심리를 자극했습니다. 여기에 합병 전 재무 보강용으로 소룩스의 250억 CB 발행 공시가 병행되며 &#x27;합병 연계 실익&#x27;이 보다 현실화될 수 있다는 해석이 더해졌습니다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="삼아알미늄 006110 비철금속(알루미늄) 중동 지정학 리스크에 따른 알루미늄 공급차질 우려·lme 알루미늄 선물 급등이 알루미늄 관련주 수급 집중을 촉발 비철금속(알루미늄), lme 알루미늄 선물 급등, 중동 지정학 리스크, 양극박(2차전지) 수요, 투자경고·과열 증가 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">삼아알미늄</span> <span class="sub mono">006110 · KOSPI</span></div>
+    <span class="pct mono">+18.74%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">중동 지정학 리스크에 따른 알루미늄 공급차질 우려·LME 알루미늄 선물 급등이 알루미늄 관련주 수급 집중을 촉발</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:90%"></i></span><span class="mono">90</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:64%"></i></span><span class="mono">64</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:53%"></i></span><span class="mono">53</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 40.1%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 74.9 · 거래량 1.7x · 20일 이격 40.1%</div>
+  <div class="reason">5/14 장에서 알루미늄 관련주 전반의 동반 강세와 함께 삼아알미늄이 52주 신고가를 기록한 점이 복수 기사로 확인된다. 보도들은 중동 사태에 따른 공급 우려와 LME 알루미늄 선물 가격 급등(전월 대비 큰 폭 상승)을 배경으로 개인·수급 자금이 알루미늄주에 몰렸음을 지목하고 있어 단기 급등은 원자재·수급(모멘텀) 요인으로 해석된다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="삼진제약 005500 바이오 ar1001(경구용 알츠하이머 신약) 글로벌 판권 기술수출(최대 약 7조원) — 해당 물질의 국내 판권·제조권을 보유하고 아리바이오 지분을 보유하고 있다는 점이 주가 과열 요인으로 작용 바이오, 기술수출, 알츠하이머, ar1001(경구형 알츠하이머 신약), 국내 판권·제조권 보유, 선급금 2100억·최대 7조원 계약 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">삼진제약</span> <span class="sub mono">005500 · KOSPI</span></div>
+    <span class="pct mono">+29.89%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">AR1001(경구용 알츠하이머 신약) 글로벌 판권 기술수출(최대 약 7조원) — 해당 물질의 국내 판권·제조권을 보유하고 아리바이오 지분을 보유하고 있다는 점이 주가 과열 요인으로 작용</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:79%"></i></span><span class="mono">79</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:49%"></i></span><span class="mono">49</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. RSI 81.5. 20일선 이격 23.4%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 volume_breakout · RSI 81.5 · 거래량 24.6x · 20일 이격 23.4%</div>
+  <div class="reason">아리바이오가 AR1001의 글로벌 독점 판권을 중국 푸싱에 기술수출(선급금·마일스톤 포함 최대 약 7조원)했다는 보도가 당일 나오며, 삼진제약은 이 약의 국내 임상·제조·판매 독점권을 이미 확보하고 있고 아리바이오 지분(약 5.9%)도 보유하고 있어 상용화 기대와 지분가치 재평가가 동시에 부각됐다. 해당 사실이 직·간접적으로 수익/밸류업 가능성을 시사해 대규모 매수로 이어진 것으로 판단된다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="제주반도체 080220 반도체 1분기 어닝 서프라이즈(매출·영업이익 급증) 및 d램 가격 급등(슈퍼사이클) 확인 d램 슈퍼사이클, 메모리 팹리스, 1분기 어닝 서프라이즈, d램 가격 48% 전망, lpddr 웨이퍼 테스트 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">제주반도체</span> <span class="sub mono">080220 · KOSDAQ</span></div>
+    <span class="pct mono">+28.35%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">1분기 어닝 서프라이즈(매출·영업이익 급증) 및 D램 가격 급등(슈퍼사이클) 확인</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:77%"></i></span><span class="mono">77</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:48%"></i></span><span class="mono">48</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 43.2%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 77.3 · 거래량 2.5x · 20일 이격 43.2%</div>
+  <div class="reason">제공된 14일자 보도에서 1분기 매출이 전년비 273% 증가한 1,805억, 영업이익 671억(이익률 37%)으로 &#x27;어닝 서프라이즈&#x27;를 발표했고 기사에서 D램 가격 급등(기사 내 100% 이상 상승·2분기 48% 전망)을 근거로 메모리 수요·가격 호조(슈퍼사이클)를 지적하고 있어 실적 개선 기대가 즉각적으로 주가에 반영된 것으로 판단된다. 같은 날 발표된 웨이퍼 테스트(에이팩트와의 협력) 소식도 생산·검사 체계 확대 관점에서 추가적 호재로 작용했을 가능성이 높다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="lg전자우 066575 실적·수급(전통가전 + ai·로봇 기대) 1분기 실적 서프라이즈(연결 영업이익 약 1.6737조) 및 현대차 n 레이싱 시뮬레이터용 &#x27;올레드 프로&#x27; 공급 협업(로봇·전장·b2b 사업 확장 신호) ai 가전, 로봇 사업(액추에이터·밸류체인), 전장·ai 데이터센터 냉각 솔루션, 현대 n 레이싱 시뮬레이터 공급, 1분기 영업이익 1.67조 서프라이즈 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">LG전자우</span> <span class="sub mono">066575 · KOSPI</span></div>
+    <span class="pct mono">+14.42%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">1분기 실적 서프라이즈(연결 영업이익 약 1.6737조) 및 현대차 N 레이싱 시뮬레이터용 &#x27;올레드 프로&#x27; 공급 협업(로봇·전장·B2B 사업 확장 신호)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:75%"></i></span><span class="mono">75</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. RSI 85.9. 20일선 이격 35.4%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 85.9 · 거래량 4.0x · 20일 이격 35.4%</div>
+  <div class="reason">D-day 전후 보도들은 1분기 깜짝 실적(영업이익 1.67조 수준)과 함께 AI 가전·로봇·전장 사업의 가시성이 부각된 점을 배경으로 제시하고 있다. 여기에 현대차와의 레이싱 시뮬레이터 협업 등 구체적 B2B 거래 소식이 투자심리를 자극하며 보통주 급등에 따른 우선주(배당 매력)로의 자금 이동과 단기 수급이 결합되어 우선주 급등을 만들었다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="차백신연구소 261780 바이오 단일계좌·수급성 매수에 따른 테마성 급등 (투자주의종목 지정) 바이오, 수급 급등(테마성), 단일계좌 순매수, 투자주의종목 지정, 28억 계열사 cb 취득 wait_pullback 수급 관찰">
+  <div class="row">
+    <div><span class="name">차백신연구소</span> <span class="sub mono">261780 · KOSDAQ</span></div>
+    <span class="pct mono">+29.95%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk high</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">단일계좌·수급성 매수에 따른 테마성 급등 (투자주의종목 지정)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:66%"></i></span><span class="mono">66</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:72%"></i></span><span class="mono">72</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:44%"></i></span><span class="mono">44</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 54.4 · 거래량 1.9x · 20일 이격 6.5%</div>
+  <div class="reason">직접적 트리거는 5월13일 보도로 확인되는 &#x27;단일계좌 순매수&#x27;와 이에 따른 투자주의종목 지정 등 비정상적 수급(테마성·단기 매수)이며, 5월14일 D-day 장초반 상한가 형성은 이 수급 요인이 주된 원인으로 보인다. 한편 5월4일 계열사 CB(약 28억원) 취득 공시는 전략적 연계성을 제공하지만 D-day 직전의 새 공시는 없어 본 재료는 보조적 설명에 그친다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="tpc로보틱스 048770 로봇/휴머노이드 테마 중국 hcbot과 액추에이터 기술이전·공동개발·공동생산을 골자로 한 전략적 협력 계약(휴머노이드용 액추에이터) 휴머노이드, 피지컬 ai, 액추에이터 기술이전, 국내 생산 체계 구축, 로봇 부품 국산화 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">TPC로보틱스</span> <span class="sub mono">048770 · KOSDAQ</span></div>
+    <span class="pct mono">+29.96%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">중국 HCBOT과 액추에이터 기술이전·공동개발·공동생산을 골자로 한 전략적 협력 계약(휴머노이드용 액추에이터)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:61%"></i></span><span class="mono">61</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:40%"></i></span><span class="mono">40</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. RSI 91.6. 20일선 이격 117.1%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 91.6 · 거래량 1.1x · 20일 이격 117.1%</div>
+  <div class="reason">5월 6일 회사 공시성 보도(기술이전·공동개발·공동생산 계약)는 TPC로보틱스의 핵심부품(액추에이터) 경쟁력과 향후 양산·국내 생산 가능성을 구체화한 호재이다. 여기에 4월 말 엔비디아-두산 로보틱스 뉴스로 촉발된 로봇 섹터 랠리가 지속되며 투자심리가 과열돼 해당 공시가 증폭되어 상한가로 이어진 것으로 판단된다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="천일고속 000650 수급·자산가치(재개발 기대) 서울고속버스터미널 재개발 기대(보유지분 약 16%에 따른 자산가치 상승 기대) 재개발 기대(서울고속터미널), 자산주(부동산) 프리미엄, 서울고속터미널 지분 16%보유, 저유통주식·유동성 부족, 개인 순매수 유입 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">천일고속</span> <span class="sub mono">000650 · KOSPI</span></div>
+    <span class="pct mono">+29.96%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">서울고속버스터미널 재개발 기대(보유지분 약 16%에 따른 자산가치 상승 기대)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:88%"></i></span><span class="mono">88</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:65%"></i></span><span class="mono">65</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:36%"></i></span><span class="mono">36</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 40.8%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 ma20_recovery · RSI 73.7 · 거래량 15.8x · 20일 이격 40.8%</div>
+  <div class="reason">최근 신세계 호실적(시장 보도)로 서울고속터미널 재개발 기대감이 재점화되며 천일고속의 터미널 지분 가치가 부각된 것이 핵심적 원인이다. 낮은 유통주식비중(대주주 지분 과다)과 개인 중심의 강한 매수·시장 전반의 랠리가 맞물려 단기 상한가로 이어졌다.</div>
+</article>
+<article class="card theme_watch" data-signal="theme_watch" data-search="한양디지텍 078350 반도체 ai 서버·hbm·ddr5 메모리 수요 기대에 따른 중소형 반도체·장비주 동반 신고가 랠리 반도체, ai 서버, hbm 메모리 수요, ddr5 투자 확대, 중소형 장비 수혜 theme_watch 수급 관찰">
+  <div class="row">
+    <div><span class="name">한양디지텍</span> <span class="sub mono">078350 · KOSDAQ</span></div>
+    <span class="pct mono">+25.18%</span>
+  </div>
+  <div>
+    <span class="badge">theme_watch</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk low</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="signal">AI 서버·HBM·DDR5 메모리 수요 기대에 따른 중소형 반도체·장비주 동반 신고가 랠리</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:16%"></i></span><span class="mono">16</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:97%"></i></span><span class="mono">97</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:52%"></i></span><span class="mono">52</span></div>
+  <div class="note">차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 64.2 · 거래량 2.5x · 20일 이격 15.7%</div>
+  <div class="reason">제공된 기사들은 삼성전자·SK하이닉스 등 대형 반도체주의 강세와 AI/HBM 수요 기대가 중소형 반도체·장비주로 확산되면서 한양디지텍이 동반 급등했다고 설명한다. 그러나 리스트된 기사들에는 한양디지텍의 개별 공시·수주·실적 등 직접적 호재 근거가 없으므로 종목 급등은 업종·테마성 수급·러닝으로 판단된다.</div>
+</article>
+<article class="card theme_watch" data-signal="theme_watch" data-search="신풍 002870 수급(단기 테마성·순환매) 개인 매수·순환매에 따른 단기 수급유입(장중 급등 종목 집계에 포함되며 거래량 급증) 개인 순매수, 순환매(소형주), 제약업종 강세, 거래량 급증, ebn 상위 급등 종목 theme_watch 수급 관찰">
+  <div class="row">
+    <div><span class="name">신풍</span> <span class="sub mono">002870 · KOSPI</span></div>
+    <span class="pct mono">+20.23%</span>
+  </div>
+  <div>
+    <span class="badge">theme_watch</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk low</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="signal">개인 매수·순환매에 따른 단기 수급유입(장중 급등 종목 집계에 포함되며 거래량 급증)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:16%"></i></span><span class="mono">16</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:76%"></i></span><span class="mono">76</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:43%"></i></span><span class="mono">43</span></div>
+  <div class="note">차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다.</div>
+  <div class="muted">패턴 ma20_recovery · RSI 61.9 · 거래량 29.2x · 20일 이격 10.5%</div>
+  <div class="reason">동일일(2026.05.13) EBN 등 시황 기사에서 신풍이 상위 급등 종목으로 집계되며 거래량이 급증했다는 보도가 있으나, 14일 내 회사 공시·수주·실적·정책성 기사 등 직접적 호재는 확인되지 않는다. 따라서 개별 기업의 본질적 모멘텀보다 개인 중심의 순환매·수급 유입 또는 장중 리포트·랠리 성격의 테마 매수가 원인으로 추정된다.</div>
+</article>
+<article class="card theme_watch" data-signal="theme_watch" data-search="선진 136490 정책  확장적 재정정책, 코스피·수급 개선, 축산·사료 수요 회복, 가공육 oem 수주, 해외 수출 확대 theme_watch 수급 관찰">
+  <div class="row">
+    <div><span class="name">선진</span> <span class="sub mono">136490 · KOSPI</span></div>
+    <span class="pct mono">+14.29%</span>
+  </div>
+  <div>
+    <span class="badge">theme_watch</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk low</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="signal">정책</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:18%"></i></span><span class="mono">18</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:72%"></i></span><span class="mono">72</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:42%"></i></span><span class="mono">42</span></div>
+  <div class="note">차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다.</div>
+  <div class="muted">패턴 ma20_recovery · RSI 61.9 · 거래량 5.8x · 20일 이격 7.0%</div>
+  <div class="reason">제공된 14일 내 기사들은 정부의 거시경제·재정정책 및 코스피·수급 관련 일반 보도로, 해당 기업(선진)에 대한 직접적 공시·수주·실적·신사업 등 근거가 전혀 없습니다. 따라서 이날의 급등(+14.29%)은 제공된 뉴스와 직접 연결되는 명확한 트리거가 확인되지 않아 테마성·기술적 급등 또는 비공개·개별 이슈(미공개 공시 등)에 따른 것으로 판단됩니다.</div>
+</article>
+<article class="card need_chart" data-signal="need_chart" data-search="폴레드 487580 공모주/수급 상장(ipo) 첫날 공모가 대비 4배(따따블) 달성 — 청약 경쟁률 3,169.86:1·청약증거금 약 5.2조원 등 공모 청약 열기와 유통물량 부족에 따른 급등 공모주(ipo), 따따블(공모가 4배), 청약 경쟁률 3, 169.86대1, 청약증거금 약 5.2조원, 유통물량 부족(수급), 단기 과열·투기성 매수 need_chart 차트 필요">
+  <div class="row">
+    <div><span class="name">폴레드</span> <span class="sub mono">487580 · KOSDAQ</span></div>
+    <span class="pct mono">+300.00%</span>
+  </div>
+  <div>
+    <span class="badge">need_chart</span>
+    <span class="badge">차트 필요</span>
+    <span class="badge">risk missing</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">상장(IPO) 첫날 공모가 대비 4배(따따블) 달성 — 청약 경쟁률 3,169.86:1·청약증거금 약 5.2조원 등 공모 청약 열기와 유통물량 부족에 따른 급등</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:0%"></i></span><span class="mono">-</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:54%"></i></span><span class="mono">54</span></div>
+  <div class="note">차트 분석을 먼저 실행한 뒤 판단합니다.</div>
+  <div class="muted">패턴 - · RSI - · 거래량 -x · 20일 이격 -%</div>
+  <div class="reason">공모 청약에서 나타난 기록적 경쟁률과 대규모 증거금 유입(약 5.2조원), 상장 첫날 공모가 대비 4배(따따블) 달성이라는 명확한 상장 이벤트가 단기적 매수 집중과 유통물량 부족을 초래해 가격을 급등시켰습니다. 보도 여러 건이 동일한 설명(청약 경쟁률·따따블·상장 첫날 상한가)을 반복해 수급적 원인이 주된 트리거로 확인됩니다.</div>
+</article>
+<article class="card need_chart" data-signal="need_chart" data-search="코스모로보틱스 439960 로봇 / ipo(새내기주) 수급 재활 웨어러블 로봇(영유아 보행보조 임상) 중심의 신규상장·공모주 흥행으로 인한 수급 집중 로봇, ipo(새내기주), 개인투자 수급 집중, 재활 웨어러블 로봇, 영유아 보행보조 임상, 투자경고 지정 예고 need_chart 차트 필요">
+  <div class="row">
+    <div><span class="name">코스모로보틱스</span> <span class="sub mono">439960 · KOSDAQ</span></div>
+    <span class="pct mono">+29.96%</span>
+  </div>
+  <div>
+    <span class="badge">need_chart</span>
+    <span class="badge">차트 필요</span>
+    <span class="badge">risk missing</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">재활 웨어러블 로봇(영유아 보행보조 임상) 중심의 신규상장·공모주 흥행으로 인한 수급 집중</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:88%"></i></span><span class="mono">88</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:0%"></i></span><span class="mono">-</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:49%"></i></span><span class="mono">49</span></div>
+  <div class="note">차트 분석을 먼저 실행한 뒤 판단합니다.</div>
+  <div class="muted">패턴 - · RSI - · 거래량 -x · 20일 이격 -%</div>
+  <div class="reason">상장(IPO) 직후 공모 흥행과 청약 증거금·수요 대비 낮은 유통물량으로 인해 개인 중심의 매수·수급 쏠림이 발생했고, 웨어러블 재활로봇(영유아 임상 등)이라는 구체적 사업 모멘텀으로 투자심리가 집중되어 연속 상한가로 이어졌습니다. 거래대금·거래량 폭증과 같은 기술적(수급) 요인이 D-day 급등의 직접 원인으로 파악됩니다. 한국거래소의 투자경고(지정 예고)도 변동성을 키우는 추가 요인으로 작용했습니다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="한스바이오메드 042520 바이오 ecm 기반 스킨부스터 &#x27;셀르디엠&#x27;의 매출 급증(28기 상반기 매출·영업익 개선) 및 싱가포르 품목허가·대형 유통 채널 통한 국내 독점 유통권(하반기 유통 본격화) 기대 바이오, 미용·에스테틱, 해외 규제·허가, ecm 스킨부스터, hsa(싱가포르) 품목허가, 국내 독점 유통권·대형 유통 협업 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">한스바이오메드</span> <span class="sub mono">042520 · KOSDAQ</span></div>
+    <span class="pct mono">+21.30%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">ECM 기반 스킨부스터 &#x27;셀르디엠&#x27;의 매출 급증(28기 상반기 매출·영업익 개선) 및 싱가포르 품목허가·대형 유통 채널 통한 국내 독점 유통권(하반기 유통 본격화) 기대</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:50%"></i></span><span class="mono">50</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:68%"></i></span><span class="mono">68</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 2.4배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 39.4 · 거래량 2.4x · 20일 이격 -6.7%</div>
+  <div class="reason">회사 공시·보도(2026.05.14 실적 발표)가 당일 주요 트리거로 작용했다. 발표는 셀르디엠 매출(연결 기준 상반기 매출 및 제품별 실적) 증가와 싱가포르 품목허가, 하반기 대형 유통 채널을 통한 판매 확대 기대를 명시해 단기 강세를 유발했다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="아이엠바이오로직스 493280 바이오 imb-101 글로벌 임상2상 첫 환자 투약 완료로 파트너사에 따라 발생한 500만 달러 규모의 기술이전(마일스톤) 수익 인식 및 이를 반영한 분기 흑자(영업익·당기순익) 공시 바이오, 공모주/ipo, 임상2상 첫 환자투약, 기술이전 마일스톤 500만 달러, 현금성자산 1270억원 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">아이엠바이오로직스</span> <span class="sub mono">493280 · KOSDAQ</span></div>
+    <span class="pct mono">+20.90%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">IMB-101 글로벌 임상2상 첫 환자 투약 완료로 파트너사에 따라 발생한 500만 달러 규모의 기술이전(마일스톤) 수익 인식 및 이를 반영한 분기 흑자(영업익·당기순익) 공시</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:50%"></i></span><span class="mono">50</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:68%"></i></span><span class="mono">68</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 3.3배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 38.7 · 거래량 3.3x · 20일 이격 -11.6%</div>
+  <div class="reason">회사 공시에 따르면 글로벌 파트너(네비게이터 메디신)의 IMB-101 임상2상에서 첫 환자 투약이 완료되며 500만 달러 마일스톤을 인식해 1분기 흑자 전환을 공시했다. 투자자들은 이 같은 기술이전 마일스톤과 상장 뒤 확보된 1270억원대 현금성 자산을 재무적 안전장치로 보고 매수에 나선 것으로 판단된다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="노루페인트우 090355 수급 이름 유사성(태풍 &#x27;노루&#x27;)에 따른 개인 투자자 중심의 테마성 매수(이름 기반 바이럴·과거 2017 사례 부각) 개인 순매수, 심리적 비이성 매매, 건자재/도료 업종, 태풍 &#x27;노루&#x27; 이름 유사성, 2017 노루 사례 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">노루페인트우</span> <span class="sub mono">090355 · KOSPI</span></div>
+    <span class="pct mono">+12.28%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">이름 유사성(태풍 &#x27;노루&#x27;)에 따른 개인 투자자 중심의 테마성 매수(이름 기반 바이럴·과거 2017 사례 부각)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:64%"></i></span><span class="mono">64</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:50%"></i></span><span class="mono">50</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:48%"></i></span><span class="mono">48</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 14.9배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 35.9 · 거래량 14.9x · 20일 이격 -5.6%</div>
+  <div class="reason">최근 보도들에서 ‘태풍 노루’와 이름이 같다는 심리적 요인을 언급하며 과거(2017) 사례를 재조명했고, 장 초반(5/14) 호가·급등 상위에 노루페인트우가 반복적으로 노출되어 개인 매수·바이럴이 유입된 것으로 보인다. 업종·시장 강세와 개인 순매수도 배경으로 작용해 가격이 급등한 것으로 판단된다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="카카오페이 377300 policy 경찰의 신용정보법 위반 혐의 수사 착수(중국 알리페이에 고객 개인정보 대량 국외 이전 의혹) 데이터프라이버시, 신용정보법 수사, 결제플랫폼 경쟁, 중국 알리페이 정보 이전, 금감원 현장검사 avoid 수급 관찰">
+  <div class="row">
+    <div><span class="name">카카오페이</span> <span class="sub mono">377300 · KOSPI</span></div>
+    <span class="pct mono">+13.11%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk low</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="signal">경찰의 신용정보법 위반 혐의 수사 착수(중국 알리페이에 고객 개인정보 대량 국외 이전 의혹)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:18%"></i></span><span class="mono">18</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:71%"></i></span><span class="mono">71</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:42%"></i></span><span class="mono">42</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 1.3배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 51.4 · 거래량 1.3x · 20일 이격 2.2%</div>
+  <div class="reason">D-day에 나온 핵심 뉴스들은 오히려 경찰 수사와 개인정보 유출 의혹(알리페이로의 대량 정보 이전)으로 부정적이다. 따라서 이날의 13%대 급등은 기사 내용상 명확한 호재가 없어, 단기 수급·테마성 매매(공포-반등·숏커버링·투자주의 지정에 따른 변동성) 가능성이 크다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="피델릭스 032580 반도체 중국 메모리 시장 회복 기대(중국 반도체 수요 회복) 기반의 단기 테마성 매수 + 한국거래소의 투자경고·매매거래정지 예고(공시) 반도체, 중국 반도체 성장, 한국거래소 투자경고·매매거래정지 예고, 중국 메모리 시장 회복 기대, 단기 테마성 과열 avoid 눌림 대기">
+  <div class="row">
+    <div><span class="name">피델릭스</span> <span class="sub mono">032580 · KOSDAQ</span></div>
+    <span class="pct mono">+20.40%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">중국 메모리 시장 회복 기대(중국 반도체 수요 회복) 기반의 단기 테마성 매수 + 한국거래소의 투자경고·매매거래정지 예고(공시)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:74%"></i></span><span class="mono">74</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:64%"></i></span><span class="mono">64</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:28%"></i></span><span class="mono">28</span></div>
+  <div class="note">상한가/갭/과이격 조합입니다. 신규 진입보다 다음 봉 매물 소화를 먼저 봅니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 99.5 · 거래량 14.2x · 20일 이격 143.2%</div>
+  <div class="reason">단기 급등은 중국 메모리 시장 회복 및 AI/HBM 수요 기대 등 반도체(메모리) 테마성 자금 유입이 1차적 촉매였고, 같은 기간(2026.05.13) 한국거래소가 피델릭스를 투자경고·매매거래정지 예고 대상으로 공시하면서 매매·관심 집중과 변동성이 증폭되어 상한가로 이어진 것으로 판단한다. 회사 고유의 계약·실적·기술적 호재성 공시는 기사군에서 확인되지 않는다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="동양고속 084670 부동산/재개발 서울고속버스터미널(서울고터) 재개발 기대감 — 신세계 호실적을 계기로 개발사업 재점화 가능성 부각 재개발, 리테일 실적 호조, 서울고속버스터미널 재개발, 터미널 자산가치 상승, 운송주 순환매 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">동양고속</span> <span class="sub mono">084670 · KOSPI</span></div>
+    <span class="pct mono">+29.94%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">서울고속버스터미널(서울고터) 재개발 기대감 — 신세계 호실적을 계기로 개발사업 재점화 가능성 부각</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:66%"></i></span><span class="mono">66</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:65%"></i></span><span class="mono">65</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:24%"></i></span><span class="mono">24</span></div>
+  <div class="note">상한가/갭/과이격 조합입니다. 신규 진입보다 다음 봉 매물 소화를 먼저 봅니다.</div>
+  <div class="muted">패턴 ma20_recovery · RSI 75.1 · 거래량 7.5x · 20일 이격 42.5%</div>
+  <div class="reason">여러 매체(증시 코멘트·특징주 보도)에서 신세계의 호실적을 근거로 &#x27;서울고터 재개발 기대감&#x27;이 재부각됐다고 보도했고, 이 기대감이 운송업체인 동양고속에 대한 투심을 자극해 급등·상한가로 연결된 것으로 판단됩니다. 동일 테마로 천일고속도 동반 급등해 수급 쏠림·테마성 매수가 주요 원인으로 보입니다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="lg전자 066570 수급/테마(지수재편·로봇) 코스피 상위권 재편(톱10 교체)에 따른 수급 기대 및 서비스·물류 로봇 사업 성장 모멘텀 확산 지수 재편, 수급(지수편입), 로봇 테마, 서비스·물류 로봇 매출 가시화, 로봇 플랫폼 상용화 수주, 가전-로봇 융합 제품 출하 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">LG전자</span> <span class="sub mono">066570 · KOSPI</span></div>
+    <span class="pct mono">+13.38%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">코스피 상위권 재편(톱10 교체)에 따른 수급 기대 및 서비스·물류 로봇 사업 성장 모멘텀 확산</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:64%"></i></span><span class="mono">64</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:52%"></i></span><span class="mono">52</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:17%"></i></span><span class="mono">17</span></div>
+  <div class="note">상한가/갭/과이격 조합입니다. 신규 진입보다 다음 봉 매물 소화를 먼저 봅니다.</div>
+  <div class="muted">패턴 trend_continuation · RSI 86.4 · 거래량 2.0x · 20일 이격 49.1%</div>
+  <div class="reason">당일 주요 매체들이 코스피 톱10 재편 소식을 전하면서 지수·수급 관점의 매수 재료가 부각된 점과, 같은 날 로봇 사업을 호재로 지목하는 기사들이 나와 투자심리가 급격히 개선된 점이 겹쳐 급등을 초래한 것으로 보인다. 회사 공시나 실적 개선 직접 근거는 확인되지 않아 뉴스에 따른 테마·수급성 매수라는 해석이 합리적이다.</div>
+</article></section>
+  <h2>점수 테이블</h2>
+  <table>
+  <thead><tr><th>종목</th><th>판정</th><th>종합</th><th>뉴스</th><th>차트</th><th>리스크</th><th>테마</th><th>시그널</th></tr></thead>
+  <tbody><tr data-signal="strong_watch" data-search="비에이치실적1분기 영업이익 흑자전환(영업익 107억) 및 기관·애널리스트의 목표가 상향(하반기 이익 가파른 개선 전망)">
+  <td><b>비에이치</b><div class="muted mono">090460</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">98</td>
+  <td class="mono">98</td>
+  <td class="mono">97</td>
+  <td>low</td>
+  <td>실적</td>
+  <td>1분기 영업이익 흑자전환(영업익 107억) 및 기관·애널리스트의 목표가 상향(하반기 이익 가파른 개선 전망)</td>
+</tr><tr data-signal="strong_watch" data-search="나무가로봇/자동화로봇용 3d 비전 솔루션 라인업 확대 및 로봇 전용 생산라인 가동(다음 달 목표), poc 완료 기반 고객사와 초기 개발 협업(글로벌 완성차 로봇 플랫폼 협력사 선정 이력 언급)">
+  <td><b>나무가</b><div class="muted mono">190510</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">98</td>
+  <td class="mono">98</td>
+  <td class="mono">98</td>
+  <td>low</td>
+  <td>로봇/자동화</td>
+  <td>로봇용 3D 비전 솔루션 라인업 확대 및 로봇 전용 생산라인 가동(다음 달 목표), PoC 완료 기반 고객사와 초기 개발 협업(글로벌 완성차 로봇 플랫폼 협력사 선정 이력 언급)</td>
+</tr><tr data-signal="strong_watch" data-search="경동나비엔실적2026년 1분기 연결 영업이익 61.7% 증가(638억 원) 공시 및 북미 중심 해외매출 확대로 수익성 개선, 동시에 &#x27;제습 환기청정기 매직플러스&#x27; 전시(통합 공기질 솔루션)·공기열보일러(히트펌프) 국내 도입 예고">
+  <td><b>경동나비엔</b><div class="muted mono">009450</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">96</td>
+  <td class="mono">100</td>
+  <td class="mono">92</td>
+  <td>low</td>
+  <td>실적</td>
+  <td>2026년 1분기 연결 영업이익 61.7% 증가(638억 원) 공시 및 북미 중심 해외매출 확대로 수익성 개선, 동시에 &#x27;제습 환기청정기 매직플러스&#x27; 전시(통합 공기질 솔루션)·공기열보일러(히트펌프) 국내 도입 예고</td>
+</tr><tr data-signal="strong_watch" data-search="hd현대에너지솔루션정책태양광 인버터 산업 발전 협의체(한전·기후부 주도) 발족 및 한전의 &#x27;보안 강화형 차세대 태양광 인버터&#x27; 개발·투자 계획(국산화·실증·테스트베드·정책 지원 포함)">
+  <td><b>HD현대에너지솔루션</b><div class="muted mono">322000</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">95</td>
+  <td class="mono">100</td>
+  <td class="mono">89</td>
+  <td>low</td>
+  <td>정책</td>
+  <td>태양광 인버터 산업 발전 협의체(한전·기후부 주도) 발족 및 한전의 &#x27;보안 강화형 차세대 태양광 인버터&#x27; 개발·투자 계획(국산화·실증·테스트베드·정책 지원 포함)</td>
+</tr><tr data-signal="strong_watch" data-search="에스에너지수주중동 20mw mou 중 1차 3mw 본계약 체결(사막 특화 hjt 이중접합 모듈) 및 국내 수상태양광 월계지구 약 11억원 수주">
+  <td><b>에스에너지</b><div class="muted mono">095910</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">94</td>
+  <td class="mono">98</td>
+  <td class="mono">88</td>
+  <td>low</td>
+  <td>수주</td>
+  <td>중동 20MW MOU 중 1차 3MW 본계약 체결(사막 특화 HJT 이중접합 모듈) 및 국내 수상태양광 월계지구 약 11억원 수주</td>
+</tr><tr data-signal="strong_watch" data-search="제이투케이바이오실적1분기 연결 영업이익 19.1억(전년比 476%↑), 매출 111.2억(53.1%↑) 공시 — 기존 odm 매출 확대·신규 유명 브랜드 oem 수주·pdrn·펩타이드 등 고부가 원료 수요 증가 및 피부임상센터 매출 기여">
+  <td><b>제이투케이바이오</b><div class="muted mono">420570</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">94</td>
+  <td class="mono">98</td>
+  <td class="mono">90</td>
+  <td>low</td>
+  <td>실적</td>
+  <td>1분기 연결 영업이익 19.1억(전년比 476%↑), 매출 111.2억(53.1%↑) 공시 — 기존 ODM 매출 확대·신규 유명 브랜드 OEM 수주·PDRN·펩타이드 등 고부가 원료 수요 증가 및 피부임상센터 매출 기여</td>
+</tr><tr data-signal="strong_watch" data-search="한국공항실적2026년 1분기 연결기준 영업이익 196억8600만원(전년비 +35.5%), 매출 1779억7600만원(+13.5%), 당기순이익 159억1200만원(+39.0%) 공시">
+  <td><b>한국공항</b><div class="muted mono">005430</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">93</td>
+  <td class="mono">98</td>
+  <td class="mono">87</td>
+  <td>low</td>
+  <td>실적</td>
+  <td>2026년 1분기 연결기준 영업이익 196억8600만원(전년비 +35.5%), 매출 1779억7600만원(+13.5%), 당기순이익 159억1200만원(+39.0%) 공시</td>
+</tr><tr data-signal="strong_watch" data-search="코아시아씨엠실적2026년 1분기 연결 영업이익 96% 증가(18억)·5분기 연속 흑자 및 삼성 스마트폰(갤럭시 s/a) 대상 고화소 카메라모듈 안정 공급">
+  <td><b>코아시아씨엠</b><div class="muted mono">196450</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">92</td>
+  <td class="mono">98</td>
+  <td class="mono">85</td>
+  <td>low</td>
+  <td>실적</td>
+  <td>2026년 1분기 연결 영업이익 96% 증가(18억)·5분기 연속 흑자 및 삼성 스마트폰(갤럭시 S/A) 대상 고화소 카메라모듈 안정 공급</td>
+</tr><tr data-signal="strong_watch" data-search="후성정책국민성장펀드(첨단전략산업기금) 통한 165억원 저리대출 승인 → 반도체 공정용 불화수소(불산) 가스 생산지원">
+  <td><b>후성</b><div class="muted mono">093370</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">90</td>
+  <td class="mono">100</td>
+  <td class="mono">78</td>
+  <td>low</td>
+  <td>정책</td>
+  <td>국민성장펀드(첨단전략산업기금) 통한 165억원 저리대출 승인 → 반도체 공정용 불화수소(불산) 가스 생산지원</td>
+</tr><tr data-signal="strong_watch" data-search="대우건설정비사업/분양(건설)한남2구역 재정비계획 변경 가결(서울시) — 1311가구 사업 확정 및 대우건설 시공 예정">
+  <td><b>대우건설</b><div class="muted mono">047040</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">90</td>
+  <td class="mono">100</td>
+  <td class="mono">78</td>
+  <td>low</td>
+  <td>정비사업/분양(건설)</td>
+  <td>한남2구역 재정비계획 변경 가결(서울시) — 1311가구 사업 확정 및 대우건설 시공 예정</td>
+</tr><tr data-signal="strong_watch" data-search="gs피앤엘실적2026년 1분기 실적 컨센서스 상회(매출 +38%, 영업이익 +59%) 및 증권사 목표가 상향(하나증권 목표가 6.9만→7.2만)">
+  <td><b>GS피앤엘</b><div class="muted mono">499790</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">89</td>
+  <td class="mono">98</td>
+  <td class="mono">78</td>
+  <td>low</td>
+  <td>실적</td>
+  <td>2026년 1분기 실적 컨센서스 상회(매출 +38%, 영업이익 +59%) 및 증권사 목표가 상향(하나증권 목표가 6.9만→7.2만)</td>
+</tr><tr data-signal="strong_watch" data-search="지엔코공시제3자배정 유상증자 35억원(출자전환 통한 채무상계·재무구조 개선), 주당 2,845원에 보통주 123만226주 발행, 최대주주·계열사 참여">
+  <td><b>지엔코</b><div class="muted mono">065060</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">88</td>
+  <td class="mono">98</td>
+  <td class="mono">75</td>
+  <td>low</td>
+  <td>공시</td>
+  <td>제3자배정 유상증자 35억원(출자전환 통한 채무상계·재무구조 개선), 주당 2,845원에 보통주 123만226주 발행, 최대주주·계열사 참여</td>
+</tr><tr data-signal="strong_watch" data-search="제이케이시냅스공시/법원결정채권자 제기 파산신청에 대한 대전회생법원의 기각(메디콕스 제기 파산신청 기각·변제공탁으로 채권 소멸 판단)">
+  <td><b>제이케이시냅스</b><div class="muted mono">060230</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">88</td>
+  <td class="mono">98</td>
+  <td class="mono">75</td>
+  <td>low</td>
+  <td>공시/법원결정</td>
+  <td>채권자 제기 파산신청에 대한 대전회생법원의 기각(메디콕스 제기 파산신청 기각·변제공탁으로 채권 소멸 판단)</td>
+</tr><tr data-signal="strong_watch" data-search="아시아나항공실적2026년 1분기 실적 공시(별도) — 영업손실 1,013억원·당기순손실 2,377억원 발표, 유가 헷지 관련 파생이익 850억원으로 적자 일부 상쇄·통합 준비비 반영 및 2분기 노선(유럽·미주·일본) 확대 계획">
+  <td><b>아시아나항공</b><div class="muted mono">020560</div></td>
+  <td>strong_watch<div class="muted">핵심 후보</div></td>
+  <td class="mono">82</td>
+  <td class="mono">76</td>
+  <td class="mono">90</td>
+  <td>low</td>
+  <td>실적</td>
+  <td>2026년 1분기 실적 공시(별도) — 영업손실 1,013억원·당기순손실 2,377억원 발표, 유가 헷지 관련 파생이익 850억원으로 적자 일부 상쇄·통합 준비비 반영 및 2분기 노선(유럽·미주·일본) 확대 계획</td>
+</tr><tr data-signal="strong_watch" data-search="메이슨캐피탈수급/테마성(코스닥 소형주 순환매)코스닥 동전주·소형주에 대한 단기 순환매(상한가 매수 집중)">
+  <td><b>메이슨캐피탈</b><div class="muted mono">021880</div></td>
+  <td>strong_watch<div class="muted">수급 관찰</div></td>
+  <td class="mono">73</td>
+  <td class="mono">64</td>
+  <td class="mono">85</td>
+  <td>low</td>
+  <td>수급/테마성(코스닥 소형주 순환매)</td>
+  <td>코스닥 동전주·소형주에 대한 단기 순환매(상한가 매수 집중)</td>
+</tr><tr data-signal="wait_pullback" data-search="lg씨엔에스it서비스 (엔터프라이즈 ai)sap 협업 기반 그룹사 대상 fde 인력 파견·기업용 챗gpt(엔터프라이즈 ai) 사업 수주/도입 기대">
+  <td><b>LG씨엔에스</b><div class="muted mono">064400</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">70</td>
+  <td class="mono">98</td>
+  <td class="mono">91</td>
+  <td>high</td>
+  <td>IT서비스 (엔터프라이즈 AI)</td>
+  <td>SAP 협업 기반 그룹사 대상 FDE 인력 파견·기업용 챗GPT(엔터프라이즈 AI) 사업 수주/도입 기대</td>
+</tr><tr data-signal="wait_pullback" data-search="라메디텍바이오식약처 인체조직은행 허가 취득으로 인체유래 ecm(세포외기질) 소재의 취급·가공·품질관리·유통 기반 확보 및 자사 레이저 dds와의 융합 솔루션 추진">
+  <td><b>라메디텍</b><div class="muted mono">462510</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">69</td>
+  <td class="mono">100</td>
+  <td class="mono">86</td>
+  <td>high</td>
+  <td>바이오</td>
+  <td>식약처 인체조직은행 허가 취득으로 인체유래 ECM(세포외기질) 소재의 취급·가공·품질관리·유통 기반 확보 및 자사 레이저 DDS와의 융합 솔루션 추진</td>
+</tr><tr data-signal="wait_pullback" data-search="라온텍디스플레이세계적 전시회 sid 2026 참가 및 마이크로디스플레이(lcos·oledos·ledos) 풀 라인업 공개, ar 얼라이언스 활동(레이저 광원·실리콘 포토닉스 연계)">
+  <td><b>라온텍</b><div class="muted mono">418420</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">69</td>
+  <td class="mono">98</td>
+  <td class="mono">89</td>
+  <td>high</td>
+  <td>디스플레이</td>
+  <td>세계적 전시회 SID 2026 참가 및 마이크로디스플레이(LCoS·OLEDoS·LEDoS) 풀 라인업 공개, AR 얼라이언스 활동(레이저 광원·실리콘 포토닉스 연계)</td>
+</tr><tr data-signal="wait_pullback" data-search="sk네트웍스실적1분기 영업이익 334억원(전년比 +102%)·당기순이익 427억원 흑자전환 + ai 투자 평가이익 반영 및 ai 협업(업스테이지 등) 확대">
+  <td><b>SK네트웍스</b><div class="muted mono">001740</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">66</td>
+  <td class="mono">100</td>
+  <td class="mono">81</td>
+  <td>high</td>
+  <td>실적</td>
+  <td>1분기 영업이익 334억원(전년比 +102%)·당기순이익 427억원 흑자전환 + AI 투자 평가이익 반영 및 AI 협업(업스테이지 등) 확대</td>
+</tr><tr data-signal="wait_pullback" data-search="안국약품실적1분기 연결 영업이익 160억원(전년비 +173%) — 분기 실적이 지난해 연간 영업이익(98억원)을 이미 초과">
+  <td><b>안국약품</b><div class="muted mono">001540</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">64</td>
+  <td class="mono">98</td>
+  <td class="mono">79</td>
+  <td>high</td>
+  <td>실적</td>
+  <td>1분기 연결 영업이익 160억원(전년비 +173%) — 분기 실적이 지난해 연간 영업이익(98억원)을 이미 초과</td>
+</tr><tr data-signal="wait_pullback" data-search="소룩스바이오ar1001 글로벌 독점 판권 47억달러(약 7조원) 라이선스 계약(아리바이오-푸싱제약) — 아리바이오와의 합병 연결 기대에 따른 가치 재평가">
+  <td><b>소룩스</b><div class="muted mono">290690</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">63</td>
+  <td class="mono">98</td>
+  <td class="mono">76</td>
+  <td>high</td>
+  <td>바이오</td>
+  <td>AR1001 글로벌 독점 판권 47억달러(약 7조원) 라이선스 계약(아리바이오-푸싱제약) — 아리바이오와의 합병 연결 기대에 따른 가치 재평가</td>
+</tr><tr data-signal="wait_pullback" data-search="삼아알미늄비철금속(알루미늄)중동 지정학 리스크에 따른 알루미늄 공급차질 우려·lme 알루미늄 선물 급등이 알루미늄 관련주 수급 집중을 촉발">
+  <td><b>삼아알미늄</b><div class="muted mono">006110</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">53</td>
+  <td class="mono">90</td>
+  <td class="mono">64</td>
+  <td>high</td>
+  <td>비철금속(알루미늄)</td>
+  <td>중동 지정학 리스크에 따른 알루미늄 공급차질 우려·LME 알루미늄 선물 급등이 알루미늄 관련주 수급 집중을 촉발</td>
+</tr><tr data-signal="wait_pullback" data-search="삼진제약바이오ar1001(경구용 알츠하이머 신약) 글로벌 판권 기술수출(최대 약 7조원) — 해당 물질의 국내 판권·제조권을 보유하고 아리바이오 지분을 보유하고 있다는 점이 주가 과열 요인으로 작용">
+  <td><b>삼진제약</b><div class="muted mono">005500</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">49</td>
+  <td class="mono">100</td>
+  <td class="mono">79</td>
+  <td>extreme</td>
+  <td>바이오</td>
+  <td>AR1001(경구용 알츠하이머 신약) 글로벌 판권 기술수출(최대 약 7조원) — 해당 물질의 국내 판권·제조권을 보유하고 아리바이오 지분을 보유하고 있다는 점이 주가 과열 요인으로 작용</td>
+</tr><tr data-signal="wait_pullback" data-search="제주반도체반도체1분기 어닝 서프라이즈(매출·영업이익 급증) 및 d램 가격 급등(슈퍼사이클) 확인">
+  <td><b>제주반도체</b><div class="muted mono">080220</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">48</td>
+  <td class="mono">100</td>
+  <td class="mono">77</td>
+  <td>extreme</td>
+  <td>반도체</td>
+  <td>1분기 어닝 서프라이즈(매출·영업이익 급증) 및 D램 가격 급등(슈퍼사이클) 확인</td>
+</tr><tr data-signal="wait_pullback" data-search="lg전자우실적·수급(전통가전 + ai·로봇 기대)1분기 실적 서프라이즈(연결 영업이익 약 1.6737조) 및 현대차 n 레이싱 시뮬레이터용 &#x27;올레드 프로&#x27; 공급 협업(로봇·전장·b2b 사업 확장 신호)">
+  <td><b>LG전자우</b><div class="muted mono">066575</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">46</td>
+  <td class="mono">98</td>
+  <td class="mono">75</td>
+  <td>extreme</td>
+  <td>실적·수급(전통가전 + AI·로봇 기대)</td>
+  <td>1분기 실적 서프라이즈(연결 영업이익 약 1.6737조) 및 현대차 N 레이싱 시뮬레이터용 &#x27;올레드 프로&#x27; 공급 협업(로봇·전장·B2B 사업 확장 신호)</td>
+</tr><tr data-signal="wait_pullback" data-search="차백신연구소바이오단일계좌·수급성 매수에 따른 테마성 급등 (투자주의종목 지정)">
+  <td><b>차백신연구소</b><div class="muted mono">261780</div></td>
+  <td>wait_pullback<div class="muted">수급 관찰</div></td>
+  <td class="mono">44</td>
+  <td class="mono">66</td>
+  <td class="mono">72</td>
+  <td>high</td>
+  <td>바이오</td>
+  <td>단일계좌·수급성 매수에 따른 테마성 급등 (투자주의종목 지정)</td>
+</tr><tr data-signal="wait_pullback" data-search="tpc로보틱스로봇/휴머노이드 테마중국 hcbot과 액추에이터 기술이전·공동개발·공동생산을 골자로 한 전략적 협력 계약(휴머노이드용 액추에이터)">
+  <td><b>TPC로보틱스</b><div class="muted mono">048770</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">40</td>
+  <td class="mono">100</td>
+  <td class="mono">61</td>
+  <td>extreme</td>
+  <td>로봇/휴머노이드 테마</td>
+  <td>중국 HCBOT과 액추에이터 기술이전·공동개발·공동생산을 골자로 한 전략적 협력 계약(휴머노이드용 액추에이터)</td>
+</tr><tr data-signal="wait_pullback" data-search="천일고속수급·자산가치(재개발 기대)서울고속버스터미널 재개발 기대(보유지분 약 16%에 따른 자산가치 상승 기대)">
+  <td><b>천일고속</b><div class="muted mono">000650</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">36</td>
+  <td class="mono">88</td>
+  <td class="mono">65</td>
+  <td>extreme</td>
+  <td>수급·자산가치(재개발 기대)</td>
+  <td>서울고속버스터미널 재개발 기대(보유지분 약 16%에 따른 자산가치 상승 기대)</td>
+</tr><tr data-signal="theme_watch" data-search="한양디지텍반도체ai 서버·hbm·ddr5 메모리 수요 기대에 따른 중소형 반도체·장비주 동반 신고가 랠리">
+  <td><b>한양디지텍</b><div class="muted mono">078350</div></td>
+  <td>theme_watch<div class="muted">수급 관찰</div></td>
+  <td class="mono">52</td>
+  <td class="mono">16</td>
+  <td class="mono">97</td>
+  <td>low</td>
+  <td>반도체</td>
+  <td>AI 서버·HBM·DDR5 메모리 수요 기대에 따른 중소형 반도체·장비주 동반 신고가 랠리</td>
+</tr><tr data-signal="theme_watch" data-search="신풍수급(단기 테마성·순환매)개인 매수·순환매에 따른 단기 수급유입(장중 급등 종목 집계에 포함되며 거래량 급증)">
+  <td><b>신풍</b><div class="muted mono">002870</div></td>
+  <td>theme_watch<div class="muted">수급 관찰</div></td>
+  <td class="mono">43</td>
+  <td class="mono">16</td>
+  <td class="mono">76</td>
+  <td>low</td>
+  <td>수급(단기 테마성·순환매)</td>
+  <td>개인 매수·순환매에 따른 단기 수급유입(장중 급등 종목 집계에 포함되며 거래량 급증)</td>
+</tr><tr data-signal="theme_watch" data-search="선진정책">
+  <td><b>선진</b><div class="muted mono">136490</div></td>
+  <td>theme_watch<div class="muted">수급 관찰</div></td>
+  <td class="mono">42</td>
+  <td class="mono">18</td>
+  <td class="mono">72</td>
+  <td>low</td>
+  <td>정책</td>
+  <td></td>
+</tr><tr data-signal="need_chart" data-search="폴레드공모주/수급상장(ipo) 첫날 공모가 대비 4배(따따블) 달성 — 청약 경쟁률 3,169.86:1·청약증거금 약 5.2조원 등 공모 청약 열기와 유통물량 부족에 따른 급등">
+  <td><b>폴레드</b><div class="muted mono">487580</div></td>
+  <td>need_chart<div class="muted">차트 필요</div></td>
+  <td class="mono">54</td>
+  <td class="mono">98</td>
+  <td class="mono">-</td>
+  <td>missing</td>
+  <td>공모주/수급</td>
+  <td>상장(IPO) 첫날 공모가 대비 4배(따따블) 달성 — 청약 경쟁률 3,169.86:1·청약증거금 약 5.2조원 등 공모 청약 열기와 유통물량 부족에 따른 급등</td>
+</tr><tr data-signal="need_chart" data-search="코스모로보틱스로봇 / ipo(새내기주) 수급재활 웨어러블 로봇(영유아 보행보조 임상) 중심의 신규상장·공모주 흥행으로 인한 수급 집중">
+  <td><b>코스모로보틱스</b><div class="muted mono">439960</div></td>
+  <td>need_chart<div class="muted">차트 필요</div></td>
+  <td class="mono">49</td>
+  <td class="mono">88</td>
+  <td class="mono">-</td>
+  <td>missing</td>
+  <td>로봇 / IPO(새내기주) 수급</td>
+  <td>재활 웨어러블 로봇(영유아 보행보조 임상) 중심의 신규상장·공모주 흥행으로 인한 수급 집중</td>
+</tr><tr data-signal="avoid" data-search="한스바이오메드바이오ecm 기반 스킨부스터 &#x27;셀르디엠&#x27;의 매출 급증(28기 상반기 매출·영업익 개선) 및 싱가포르 품목허가·대형 유통 채널 통한 국내 독점 유통권(하반기 유통 본격화) 기대">
+  <td><b>한스바이오메드</b><div class="muted mono">042520</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">68</td>
+  <td class="mono">100</td>
+  <td class="mono">50</td>
+  <td>medium</td>
+  <td>바이오</td>
+  <td>ECM 기반 스킨부스터 &#x27;셀르디엠&#x27;의 매출 급증(28기 상반기 매출·영업익 개선) 및 싱가포르 품목허가·대형 유통 채널 통한 국내 독점 유통권(하반기 유통 본격화) 기대</td>
+</tr><tr data-signal="avoid" data-search="아이엠바이오로직스바이오imb-101 글로벌 임상2상 첫 환자 투약 완료로 파트너사에 따라 발생한 500만 달러 규모의 기술이전(마일스톤) 수익 인식 및 이를 반영한 분기 흑자(영업익·당기순익) 공시">
+  <td><b>아이엠바이오로직스</b><div class="muted mono">493280</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">68</td>
+  <td class="mono">100</td>
+  <td class="mono">50</td>
+  <td>medium</td>
+  <td>바이오</td>
+  <td>IMB-101 글로벌 임상2상 첫 환자 투약 완료로 파트너사에 따라 발생한 500만 달러 규모의 기술이전(마일스톤) 수익 인식 및 이를 반영한 분기 흑자(영업익·당기순익) 공시</td>
+</tr><tr data-signal="avoid" data-search="노루페인트우수급이름 유사성(태풍 &#x27;노루&#x27;)에 따른 개인 투자자 중심의 테마성 매수(이름 기반 바이럴·과거 2017 사례 부각)">
+  <td><b>노루페인트우</b><div class="muted mono">090355</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">48</td>
+  <td class="mono">64</td>
+  <td class="mono">50</td>
+  <td>medium</td>
+  <td>수급</td>
+  <td>이름 유사성(태풍 &#x27;노루&#x27;)에 따른 개인 투자자 중심의 테마성 매수(이름 기반 바이럴·과거 2017 사례 부각)</td>
+</tr><tr data-signal="avoid" data-search="카카오페이policy경찰의 신용정보법 위반 혐의 수사 착수(중국 알리페이에 고객 개인정보 대량 국외 이전 의혹)">
+  <td><b>카카오페이</b><div class="muted mono">377300</div></td>
+  <td>avoid<div class="muted">수급 관찰</div></td>
+  <td class="mono">42</td>
+  <td class="mono">18</td>
+  <td class="mono">71</td>
+  <td>low</td>
+  <td>policy</td>
+  <td>경찰의 신용정보법 위반 혐의 수사 착수(중국 알리페이에 고객 개인정보 대량 국외 이전 의혹)</td>
+</tr><tr data-signal="avoid" data-search="피델릭스반도체중국 메모리 시장 회복 기대(중국 반도체 수요 회복) 기반의 단기 테마성 매수 + 한국거래소의 투자경고·매매거래정지 예고(공시)">
+  <td><b>피델릭스</b><div class="muted mono">032580</div></td>
+  <td>avoid<div class="muted">눌림 대기</div></td>
+  <td class="mono">28</td>
+  <td class="mono">74</td>
+  <td class="mono">64</td>
+  <td>extreme</td>
+  <td>반도체</td>
+  <td>중국 메모리 시장 회복 기대(중국 반도체 수요 회복) 기반의 단기 테마성 매수 + 한국거래소의 투자경고·매매거래정지 예고(공시)</td>
+</tr><tr data-signal="avoid" data-search="동양고속부동산/재개발서울고속버스터미널(서울고터) 재개발 기대감 — 신세계 호실적을 계기로 개발사업 재점화 가능성 부각">
+  <td><b>동양고속</b><div class="muted mono">084670</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">24</td>
+  <td class="mono">66</td>
+  <td class="mono">65</td>
+  <td>extreme</td>
+  <td>부동산/재개발</td>
+  <td>서울고속버스터미널(서울고터) 재개발 기대감 — 신세계 호실적을 계기로 개발사업 재점화 가능성 부각</td>
+</tr><tr data-signal="avoid" data-search="lg전자수급/테마(지수재편·로봇)코스피 상위권 재편(톱10 교체)에 따른 수급 기대 및 서비스·물류 로봇 사업 성장 모멘텀 확산">
+  <td><b>LG전자</b><div class="muted mono">066570</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">17</td>
+  <td class="mono">64</td>
+  <td class="mono">52</td>
+  <td>extreme</td>
+  <td>수급/테마(지수재편·로봇)</td>
+  <td>코스피 상위권 재편(톱10 교체)에 따른 수급 기대 및 서비스·물류 로봇 사업 성장 모멘텀 확산</td>
+</tr></tbody>
+</table>
+</main>
+<script id="payload" type="application/json">{"generated_at": "2026-05-15T18:38:04", "date": "20260514", "source_report": "/Users/choiminsoo/Downloads/stock_analyzer/reports/report_20260514.csv", "count": 40, "chart_count": 38, "signal_counts": {"strong_watch": 15, "wait_pullback": 13, "theme_watch": 3, "need_chart": 2, "avoid": 7}, "quadrant_counts": {"핵심 후보": 14, "수급 관찰": 6, "눌림 대기": 13, "차트 필요": 2, "제외/보류": 5}, "risk_counts": {"low": 19, "high": 8, "extreme": 8, "missing": 2, "medium": 3}, "signals": [{"date": "20260514", "ticker": "090460", "name": "비에이치", "market": "KOSPI", "change_pct": 24.38, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "1분기 영업이익 흑자전환(영업익 107억) 및 기관·애널리스트의 목표가 상향(하반기 이익 가파른 개선 전망)", "trigger_type": "earnings", "reasoning": "5월 4일 공시로 1분기 영업이익이 흑자전환(약 107억원)했고, 이후 5월 6일 DB증권의 목표가 상향 보고서가 나오며 펀더멘털 개선 기대가 구체화됐다. 이후 14일(시장-wide Apple 공급망·FPCB 수요 확대 흐름)에 개인·기관 매수로 관련 수혜주로 집중 유입되며 D-day에 급등한 것으로 판단된다.", "related_stocks": "LG이노텍, 인터플렉스, 하이비젼시스템", "watch_keywords": "애플 공급망, FPCB(연성회로기판), 어닝 서프라이즈, 폴더블 스마트폰 혼합 ASP 상승, 무선충전 모듈 공급 확대", "news_count": 13, "news_score": 98, "chart_score": 97, "chart_risk": "low", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 2.61, "value_ratio_20d": 3.09, "rsi14": 54.79, "distance_ma20_pct": 14.93, "high_60d_breakout": true, "combined_score": 98, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "190510", "name": "나무가", "market": "KOSDAQ", "change_pct": 20.54, "status": "new", "confidence": "high", "main_theme": "로봇/자동화", "specific_signal": "로봇용 3D 비전 솔루션 라인업 확대 및 로봇 전용 생산라인 가동(다음 달 목표), PoC 완료 기반 고객사와 초기 개발 협업(글로벌 완성차 로봇 플랫폼 협력사 선정 이력 언급)", "trigger_type": "disclosure", "reasoning": "당일(05.14) 회사 관련(stock_news) 기사에서 회사가 로봇의 '머리'에 탑재되는 3D 비전 솔루션 라인업을 확대하고 다음 달 가동을 목표로 로봇 전용 라인 셋업을 진행 중이며 PoC를 완료해 고객사와 초기 협업을 본격화한다고 공표한 점이 직접적 트리거로 판단됩니다. 향후 고부가가치 제품의 양산 전개 기대(라인 가동·글로벌 완성차 플랫폼 협력 이력)가 주가 급등을 설명합니다.", "related_stocks": "", "watch_keywords": "로봇, 3D 센싱/비전, 로봇용 3D 카메라 모듈, 로봇 전용 생산라인 가동, 글로벌 완성차 로봇 플랫폼 협력사 선정", "news_count": 11, "news_score": 98, "chart_score": 98, "chart_risk": "low", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 거래량은 20일 평균 대비 16.4배입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 16.37, "value_ratio_20d": 19.35, "rsi14": 71.28, "distance_ma20_pct": 16.54, "high_60d_breakout": false, "combined_score": 98, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "009450", "name": "경동나비엔", "market": "KOSPI", "change_pct": 11.98, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "2026년 1분기 연결 영업이익 61.7% 증가(638억 원) 공시 및 북미 중심 해외매출 확대로 수익성 개선, 동시에 '제습 환기청정기 매직플러스' 전시(통합 공기질 솔루션)·공기열보일러(히트펌프) 국내 도입 예고", "trigger_type": "earnings", "reasoning": "동일일(2026.05.13) 다수의 공시·보도가 1Q 영업이익(61.7% 증가)과 북미 중심의 해외 성장, 환율 효과·비용 절감 등으로 수익성이 크게 개선됐음을 전했으며, 동시에 HVAC 전시회에서 신제품·통합 공기질 솔루션을 선보여 사업 구조 전환 기대가 높아졌다. 이러한 확실한 실적개선 공시와 사업 포트폴리오 확장(히트펌프·제습 환기청정기) 소식이 주가 급등의 직접적 트리거로 판단된다.", "related_stocks": "귀뚜라미, 린나이, 신성이엔지", "watch_keywords": "HVAC 플랫폼, 히트펌프(공기열보일러), 북미 판매 확대, 제습 환기청정기 매직플러스, 1Q 영업이익 61.7% (638억)", "news_count": 28, "news_score": 100, "chart_score": 92, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 4.09, "value_ratio_20d": 4.4, "rsi14": 65.24, "distance_ma20_pct": 8.24, "high_60d_breakout": false, "combined_score": 96, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "322000", "name": "HD현대에너지솔루션", "market": "KOSPI", "change_pct": 15.09, "status": "new", "confidence": "high", "main_theme": "정책", "specific_signal": "태양광 인버터 산업 발전 협의체(한전·기후부 주도) 발족 및 한전의 '보안 강화형 차세대 태양광 인버터' 개발·투자 계획(국산화·실증·테스트베드·정책 지원 포함)", "trigger_type": "policy", "reasoning": "5월 8일 정부·한전 주도의 '태양광 인버터 산업 발전 협의체' 출범에 HD현대에너지솔루션이 참여한 사실이 복수 보도로 확인됐다. 한전의 차세대 인버터 개발·실증 및 정부의 에너지 전환 추경(예산) 언급은 인버터·태양광 국산화 기대를 자극해 관련주 수요를 촉발한 것으로 보인다.", "related_stocks": "OCI파워, 한화솔루션, 에스에너지", "watch_keywords": "재생에너지 정책, 태양광 인버터 국산화, 보안 강화형 차세대 인버터 개발, 한전 실증 테스트베드, 베란다 태양광 보급사업, 추경 6000억 에너지 전환", "news_count": 26, "news_score": 100, "chart_score": 89, "chart_risk": "low", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 25.5%라 눌림 확인이 유리합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 2.33, "value_ratio_20d": 2.93, "rsi14": 70.16, "distance_ma20_pct": 25.51, "high_60d_breakout": true, "combined_score": 95, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "095910", "name": "에스에너지", "market": "KOSDAQ", "change_pct": 23.63, "status": "new", "confidence": "high", "main_theme": "수주", "specific_signal": "중동 20MW MOU 중 1차 3MW 본계약 체결(사막 특화 HJT 이중접합 모듈) 및 국내 수상태양광 월계지구 약 11억원 수주", "trigger_type": "contract", "reasoning": "회사 발표(5/7)로 중동 파트너사와의 20MW MOU에서 1차 물량 3MW를 본계약으로 확정했고, 국내 공공 수상태양광 약 11억원 수주도 확보했다. 고효율·고온 특화인 HJT 기술과 해외 실수주 가시성이 확인되면서 5/14 태양광 테마 강세 및 개인 매수 속에 급등을 유발한 것으로 보인다.", "related_stocks": "HD현대에너지솔루션, 한화솔루션, OCI", "watch_keywords": "태양광 수주, 중동 사막특화 시장, HJT 이중접합 모듈, 20MW MOU·3MW 본계약, 수상태양광 월계지구 11억원", "news_count": 13, "news_score": 98, "chart_score": 88, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 3.49, "value_ratio_20d": 3.92, "rsi14": 64.83, "distance_ma20_pct": 16.04, "high_60d_breakout": false, "combined_score": 94, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "420570", "name": "제이투케이바이오", "market": "KOSDAQ", "change_pct": 19.47, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "1분기 연결 영업이익 19.1억(전년比 476%↑), 매출 111.2억(53.1%↑) 공시 — 기존 ODM 매출 확대·신규 유명 브랜드 OEM 수주·PDRN·펩타이드 등 고부가 원료 수요 증가 및 피부임상센터 매출 기여", "trigger_type": "earnings", "reasoning": "당일(5/14) 회사 공시·복수 보도에서 1분기 영업이익과 매출이 대폭 개선되었다고 명확히 밝혔고, 개선 원인으로 신규 OEM 수주와 고부가 원료 판매 확대·임상센터 기여를 구체적으로 제시해 즉각적인 투자심리 개선을 초래했다. 여기에 탈모·기능성 화장품 관련 테마 관심이 맞물리며 매수세가 집중된 것으로 판단된다.", "related_stocks": "에스알바이오텍, 달바글로벌, 에이블씨엔씨", "watch_keywords": "K-뷰티 수요 회복, 기능성·고효능 원료 수요, PDRN·펩타이드 원료, 피부임상센터 매출 확대, 신규 OEM 수주(국내 유명 브랜드)", "news_count": 13, "news_score": 98, "chart_score": 90, "chart_risk": "low", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 61.2배입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 61.16, "value_ratio_20d": 69.31, "rsi14": 67.89, "distance_ma20_pct": 13.21, "high_60d_breakout": true, "combined_score": 94, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "005430", "name": "한국공항", "market": "KOSPI", "change_pct": 18.11, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "2026년 1분기 연결기준 영업이익 196억8600만원(전년비 +35.5%), 매출 1779억7600만원(+13.5%), 당기순이익 159억1200만원(+39.0%) 공시", "trigger_type": "earnings", "reasoning": "당일(5월14일) 공시된 1분기 실적이 매출·영업이익·순이익 모두 전년 대비 의미 있게 개선되었다는 직접적 호재가 주가 급등의 핵심 트리거로 판단됩니다. 네이버 태그 기사(종목 공시)로 확인된 점도 상승을 촉발한 신뢰성 높은 신호입니다.", "related_stocks": "대한항공, 아시아나에어라인(아시아나항공), 제주항공", "watch_keywords": "어닝 서프라이즈, 여객 회복, 1분기 영업이익 +35.5%, 건설현장 특별점검, 공항 통합 논의", "news_count": 12, "news_score": 98, "chart_score": 87, "chart_risk": "low", "chart_pattern": "volume_breakout", "chart_comment": "거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 6.2배입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 6.18, "value_ratio_20d": 7.33, "rsi14": 79.84, "distance_ma20_pct": 19.39, "high_60d_breakout": true, "combined_score": 93, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "196450", "name": "코아시아씨엠", "market": "KOSDAQ", "change_pct": 30.0, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "2026년 1분기 연결 영업이익 96% 증가(18억)·5분기 연속 흑자 및 삼성 스마트폰(갤럭시 S/A) 대상 고화소 카메라모듈 안정 공급", "trigger_type": "earnings", "reasoning": "회사 공시(및 다수 보도)를 통해 1분기 영업이익이 전년동기 대비 96% 증가하고 5분기 연속 흑자를 기록한 점이 확인됐다. 동시에 삼성향 고화소·프리미엄 카메라모듈 공급과 피지컬 AI(로보틱스·전장·3D카메라) 신제품 개발 가시화로 업종·테마 매수세가 집중되며 급등을 촉발한 것으로 판단된다.", "related_stocks": "파워로직스, 파트론, 드림텍", "watch_keywords": "스마트폰 카메라 수요, 피지컬 AI(로보틱스), 1분기 영업이익 +96%, 삼성 갤럭시 고화소 모듈 공급, 렌즈·카메라모듈 수직계열화", "news_count": 13, "news_score": 98, "chart_score": 85, "chart_risk": "low", "chart_pattern": "ma20_recovery", "chart_comment": "20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 11.4배입니다.", "volume_ratio_20d": 11.37, "value_ratio_20d": 12.93, "rsi14": 65.13, "distance_ma20_pct": 12.43, "high_60d_breakout": false, "combined_score": 92, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "093370", "name": "후성", "market": "KOSPI", "change_pct": 13.22, "status": "new", "confidence": "high", "main_theme": "정책", "specific_signal": "국민성장펀드(첨단전략산업기금) 통한 165억원 저리대출 승인 → 반도체 공정용 불화수소(불산) 가스 생산지원", "trigger_type": "policy", "reasoning": "5월 3일 보도된 국민성장펀드 심의 결과에서 후성은 울산 소재 반도체 공정용 불화수소가스 생산기업으로서 지역 중소·중견기업 간소화 절차를 적용받아 첨단전략산업기금 165억원의 저리대출을 승인받았다. 해당 정책금융 지원 소식이 종목의 ‘정책 호재’로 인식된 가운데 5월 13~14일 화학·반도체 소재 업종의 동반 강세(업종 재평가·테마성 매수)가 매수세를 증폭시켜 당일 급등을 촉발한 것으로 보인다.", "related_stocks": "포스코엠텍, 퓨처그라프", "watch_keywords": "국민성장펀드, 반도체 소재, 저리대출 165억원, 불화수소(불산) 가스 생산 확대, 리튬 가격 급등", "news_count": 18, "news_score": 100, "chart_score": 78, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 0.37, "value_ratio_20d": 0.38, "rsi14": 46.88, "distance_ma20_pct": 3.01, "high_60d_breakout": false, "combined_score": 90, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "047040", "name": "대우건설", "market": "KOSPI", "change_pct": 12.61, "status": "new", "confidence": "high", "main_theme": "정비사업/분양(건설)", "specific_signal": "한남2구역 재정비계획 변경 가결(서울시) — 1311가구 사업 확정 및 대우건설 시공 예정", "trigger_type": "policy", "reasoning": "서울시의 한남2구역 재정비계획 변경이 가결되면서 1311가구 대형 재개발 사업이 공론화되고, 기사에서 해당 단지 시공을 대우건설이 맡는다고 명시되어 대우건설의 향후 수주·분양 실적 가시성이 높아졌습니다. 동일 시점에 광명 하안주공 등 대형 재건축·분양 관련 속도전 뉴스가 이어지며 업종 수급·매수심리를 자극한 것으로 보입니다.", "related_stocks": "GS건설, 현대건설, 포스코이앤씨", "watch_keywords": "재개발·재건축, 도시정비계획 변경, 한남2구역 재정비계획, 광명 하안주공 시공사 선정 입찰, 동래 푸르지오 분양", "news_count": 28, "news_score": 100, "chart_score": 78, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 0.51, "value_ratio_20d": 0.53, "rsi14": 50.13, "distance_ma20_pct": 1.59, "high_60d_breakout": false, "combined_score": 90, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "499790", "name": "GS피앤엘", "market": "KOSPI", "change_pct": 12.84, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "2026년 1분기 실적 컨센서스 상회(매출 +38%, 영업이익 +59%) 및 증권사 목표가 상향(하나증권 목표가 6.9만→7.2만)", "trigger_type": "earnings", "reasoning": "공시성 1분기 실적(매출 1,304억·영업익 242억)이 컨센서스(영업익 192억)를 크게 상회했고, 하나증권의 목표주가 상향 및 투자의견 유지 리포트가 즉각적으로 매수심리를 자극했기 때문에 주가가 급등한 것으로 보인다. 추가로 그랜드·웨스틴 등 호텔별 OCC·ADR 개선과 한일 관광 회복 기대가 구조적 업황 호전 신호로 작용했다.", "related_stocks": "호텔신라, 롯데관광개발", "watch_keywords": "실적 서프라이즈, 호텔·레저 경기 개선, 한일령(한중·한일 관광 회복), 1분기 매출·영업이익 컨센서스 상회, 목표가 상향(증권사 리포트), 제주 서관 리뉴얼 영향", "news_count": 14, "news_score": 98, "chart_score": 78, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 0.96, "value_ratio_20d": 0.99, "rsi14": 58.18, "distance_ma20_pct": 4.3, "high_60d_breakout": false, "combined_score": 89, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "065060", "name": "지엔코", "market": "KOSDAQ", "change_pct": 20.34, "status": "new", "confidence": "high", "main_theme": "공시", "specific_signal": "제3자배정 유상증자 35억원(출자전환 통한 채무상계·재무구조 개선), 주당 2,845원에 보통주 123만226주 발행, 최대주주·계열사 참여", "trigger_type": "disclosure", "reasoning": "장중 대규모·명확한 공시(제3자배정 유상증자)가 지난 7일 제출되었고, 주요주주와 계열사가 참여해 재무구조 개선(출자전환) 목적이 명시되어 있어 주주 안정성·자금여력 개선 기대가 부각되며 매수로 이어진 것으로 보인다. 여기에 같은 기간 패션·의류 소형주에 대한 순환매(팝업 등 브랜드 활동을 반영한 수요 회복 기대)도 단기 수급을 강화한 것으로 판단된다.", "related_stocks": "형지글로벌, 젝시믹스", "watch_keywords": "유상증자, 재무구조 개선, 패션·리테일 팝업, 제3자배정 35억원, 주당 2,845원 123만주", "news_count": 11, "news_score": 98, "chart_score": 75, "chart_risk": "low", "chart_pattern": "ma20_recovery", "chart_comment": "20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 15.9배입니다.", "volume_ratio_20d": 15.9, "value_ratio_20d": 17.88, "rsi14": 61.85, "distance_ma20_pct": 10.61, "high_60d_breakout": false, "combined_score": 88, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "060230", "name": "제이케이시냅스", "market": "KOSDAQ", "change_pct": 17.46, "status": "new", "confidence": "high", "main_theme": "공시/법원결정", "specific_signal": "채권자 제기 파산신청에 대한 대전회생법원의 기각(메디콕스 제기 파산신청 기각·변제공탁으로 채권 소멸 판단)", "trigger_type": "disclosure", "reasoning": "대전회생법원이 채권자(메디콕스)가 제기한 파산신청을 기각했다는 공시는 채무불이행 우려를 해소하는 명확한 호재로 작용합니다. 해당 결정은 재무·법적 리스크가 낮아졌다는 신호로 투자자들의 단기 매수와 단기 급등을 유발한 것으로 판단됩니다.", "related_stocks": "레이저쎌, MDS테크", "watch_keywords": "법원 판결, 회생·파산 리스크, 파산신청 기각, 변제공탁 소멸, 보통주 추가상장", "news_count": 13, "news_score": 98, "chart_score": 75, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 거래량은 20일 평균 대비 10.5배입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 10.54, "value_ratio_20d": 11.2, "rsi14": 46.18, "distance_ma20_pct": 3.47, "high_60d_breakout": false, "combined_score": 88, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "020560", "name": "아시아나항공", "market": "KOSPI", "change_pct": 16.94, "status": "new", "confidence": "medium", "main_theme": "실적", "specific_signal": "2026년 1분기 실적 공시(별도) — 영업손실 1,013억원·당기순손실 2,377억원 발표, 유가 헷지 관련 파생이익 850억원으로 적자 일부 상쇄·통합 준비비 반영 및 2분기 노선(유럽·미주·일본) 확대 계획", "trigger_type": "disclosure", "reasoning": "D-day에 다수 매체가 회사 공시(1분기 실적)를 보도했으며, 시장은 적자 발표 자체보다는 유가 헷지로 인한 850억 원 이익과 대한항공과의 통합(통합 출범 일정·통합 준비비 반영)·2분기 노선 확대 계획을 긍정적으로 해석해 급등한 것으로 보인다. 인천공항 주차권 감사 기사는 관련 이슈로 보이지만 가격 급등의 직접 트리거로 보기엔 연결성이 약하다.", "related_stocks": "대한항공, 인천국제공항공사, 에어제타", "watch_keywords": "실적공시, M&A 통합(통합 출범), 항공여객 수요 회복, 유가 헷지 850억, 벨리카고 확대", "news_count": 28, "news_score": 76, "chart_score": 90, "chart_risk": "low", "chart_pattern": "volume_breakout", "chart_comment": "거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 36.9배입니다.", "volume_ratio_20d": 36.9, "value_ratio_20d": 41.25, "rsi14": 69.57, "distance_ma20_pct": 10.7, "high_60d_breakout": true, "combined_score": 82, "trade_signal": "strong_watch", "quadrant": "핵심 후보", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "021880", "name": "메이슨캐피탈", "market": "KOSDAQ", "change_pct": 29.52, "status": "new", "confidence": "medium", "main_theme": "수급/테마성(코스닥 소형주 순환매)", "specific_signal": "코스닥 동전주·소형주에 대한 단기 순환매(상한가 매수 집중)", "trigger_type": "technical", "reasoning": "여러 매체의 당일 시황·상한가 목록에서 메이슨캐피탈이 이름을 올린 것 외에 회사 고유의 공시·실적·계약성 뉴스는 확인되지 않습니다. 따라서 개별 펀더멘털 요인보다는 코스닥 소형주·동전주 중심의 단기 순환매(모멘텀·작전성 매수)가 즉각적 상승 원인으로 판단됩니다.", "related_stocks": "코스모로보틱스, 폴레드, TPC로보틱스", "watch_keywords": "코스닥 소형주 순환매, 동전주(1000원 미만) 퇴출 규정, 상한가 매수 집중, 단기 모멘텀·작전성 매수", "news_count": 11, "news_score": 64, "chart_score": 85, "chart_risk": "low", "chart_pattern": "ma20_recovery", "chart_comment": "20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 12.7배입니다.", "volume_ratio_20d": 12.69, "value_ratio_20d": 16.11, "rsi14": 58.18, "distance_ma20_pct": 14.64, "high_60d_breakout": false, "combined_score": 73, "trade_signal": "strong_watch", "quadrant": "수급 관찰", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260514", "ticker": "064400", "name": "LG씨엔에스", "market": "KOSPI", "change_pct": 17.14, "status": "new", "confidence": "high", "main_theme": "IT서비스 (엔터프라이즈 AI)", "specific_signal": "SAP 협업 기반 그룹사 대상 FDE 인력 파견·기업용 챗GPT(엔터프라이즈 AI) 사업 수주/도입 기대", "trigger_type": "contract", "reasoning": "D-day 당일 다수의 보도가 LG씨엔에스가 SAP와 AI 협업을 추진하고 그룹사에 FDE 인력을 파견한다는 내용을 집중 보도하면서 엔터프라이즈용 챗GPT·AI 서비스 수혜 기대가 확산되어 급등한 것으로 판단된다. 동종업체(오픈AI·SAP 제휴 관련) 뉴스와 함께 IT서비스 섹터에 대한 테마성 매수도 거래량 증가로 이어졌다.", "related_stocks": "SK㈜ C&C, 삼성SDS, 더존비즈온", "watch_keywords": "엔터프라이즈 AI, 챗GPT 엔터프라이즈, AI 파트너십, FDE 인력 파견, 기업용 AI 수주/도입", "news_count": 0, "news_score": 98, "chart_score": 91, "chart_risk": "high", "chart_pattern": "volume_breakout", "chart_comment": "거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 11.8배입니다. RSI 83.3로 추격 매수는 부담스럽습니다. 20일선 이격 25.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 11.78, "value_ratio_20d": 14.64, "rsi14": 83.27, "distance_ma20_pct": 25.25, "high_60d_breakout": true, "combined_score": 70, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. RSI 83.3. 20일선 이격 25.2%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "462510", "name": "라메디텍", "market": "KOSDAQ", "change_pct": 29.81, "status": "new", "confidence": "high", "main_theme": "바이오", "specific_signal": "식약처 인체조직은행 허가 취득으로 인체유래 ECM(세포외기질) 소재의 취급·가공·품질관리·유통 기반 확보 및 자사 레이저 DDS와의 융합 솔루션 추진", "trigger_type": "disclosure", "reasoning": "회사와 다수 매체가 5월14일 식약처 인체조직은행 허가 취득을 공시(보도)했으며, 이는 ECM 기반 재생의료 소재 사업 진입을 위해 필수적인 인프라 확보라는 점에서 성장성(신사업 모멘텀)을 보여준다. 투자자들이 허가 취득과 레이저 DDS와의 시너지 가능성을 단기적 호재로 해석하면서 급등·상한가 매수세가 유입된 것으로 판단된다.", "related_stocks": "시지바이오, 차백신연구소", "watch_keywords": "재생의료, 인체조직은행 허가, ECM(세포외기질), 레이저 DDS 융합 솔루션, 인체유래 ECM 유통", "news_count": 15, "news_score": 100, "chart_score": 86, "chart_risk": "high", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 거래량은 20일 평균 대비 39.2배입니다. 20일선 이격 20.6%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 39.19, "value_ratio_20d": 47.57, "rsi14": 68.57, "distance_ma20_pct": 20.55, "high_60d_breakout": false, "combined_score": 69, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 20.6%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "418420", "name": "라온텍", "market": "KOSDAQ", "change_pct": 29.95, "status": "new", "confidence": "high", "main_theme": "디스플레이", "specific_signal": "세계적 전시회 SID 2026 참가 및 마이크로디스플레이(LCoS·OLEDoS·LEDoS) 풀 라인업 공개, AR 얼라이언스 활동(레이저 광원·실리콘 포토닉스 연계)", "trigger_type": "disclosure", "reasoning": "회사·언론 공시(및 보도)를 통해 SID 2026 참가와 0.13인치 LCoS 등 구체 제품 라인업 공개가 확인되며 AR/XR·AI 디스플레이 수혜 기대가 부각됐다. 5월 중반의 기술·반도체·디스플레이 랠리와 개인 순매수·테마성 자금 유입이 결합해 라온텍에 단기 쏠림이 발생한 것으로 보인다.", "related_stocks": "사피엔반도체, 에이치엔에스하이텍, 제주반도체", "watch_keywords": "디스플레이, AR/XR, 0.13인치 LCoS P13, OLEDoS/LEDoS 시제품, 실리콘 포토닉스(레이저 광원)", "news_count": 12, "news_score": 98, "chart_score": 89, "chart_risk": "high", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 47.3%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 4.7, "value_ratio_20d": 6.79, "rsi14": 70.81, "distance_ma20_pct": 47.33, "high_60d_breakout": true, "combined_score": 69, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 47.3%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "001740", "name": "SK네트웍스", "market": "KOSPI", "change_pct": 29.93, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "1분기 영업이익 334억원(전년比 +102%)·당기순이익 427억원 흑자전환 + AI 투자 평가이익 반영 및 AI 협업(업스테이지 등) 확대", "trigger_type": "earnings", "reasoning": "당일(5/14) 공개된 1분기 실적(영업이익 급증·순이익 흑자전환)과 회사가 밝힌 AI 투자평가이익 및 AI 협업 확대 계획이 직접적 호재로 작용해 매수세가 집중된 것으로 보인다. 다수의 종목태그 기사와 특징주 보도가 상한가까지 연출한 점에서 실적 발표가 표면적 및 본질적 트리거로 판단된다.", "related_stocks": "SK스퀘어, SK매직", "watch_keywords": "AI 투자평가이익, AI 오픈생태계 협업, 포트폴리오 효율화, 영업이익 334억원, 순이익 427억원 흑자전환", "news_count": 27, "news_score": 100, "chart_score": 81, "chart_risk": "high", "chart_pattern": "volume_breakout", "chart_comment": "거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 5.9배입니다. RSI 80.2로 추격 매수는 부담스럽습니다. 20일선 이격 31.1%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 5.89, "value_ratio_20d": 7.38, "rsi14": 80.15, "distance_ma20_pct": 31.11, "high_60d_breakout": true, "combined_score": 66, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. RSI 80.2. 20일선 이격 31.1%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "001540", "name": "안국약품", "market": "KOSDAQ", "change_pct": 29.94, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "1분기 연결 영업이익 160억원(전년비 +173%) — 분기 실적이 지난해 연간 영업이익(98억원)을 이미 초과", "trigger_type": "earnings", "reasoning": "14일 공개된 분기보고서에서 안국약품이 1분기 연결 기준 영업이익 160억원으로 전년대비 큰 폭 개선하고 지난해 연간 영업이익을 분기만에 초과했다는 '어닝 서프라이즈'가 직전 거래일 대비 주가를 상한가로 밀어올린 것으로 판단된다. 제품별(페바로젯 등) 매출 성장과 H&B 채널 확대로 매출구조가 개선된 점이 투자심리를 자극했고, 5월 8일의 정제 제형 제조업무 정지 공시는 있었으나 이날은 실적호조가 시장 반응을 주도했다.", "related_stocks": "삼진제약, 차백신연구소", "watch_keywords": "어닝 서프라이즈, 순환기 치료제 성장, H&B 채널 다각화, 페바로젯 112억 매출, 정제 제형 제조업무 정지", "news_count": 14, "news_score": 98, "chart_score": 79, "chart_risk": "high", "chart_pattern": "volume_breakout", "chart_comment": "거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 93.8배입니다. RSI 80.7로 추격 매수는 부담스럽습니다. 20일선 이격 24.4%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 93.84, "value_ratio_20d": 118.71, "rsi14": 80.73, "distance_ma20_pct": 24.45, "high_60d_breakout": true, "combined_score": 64, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. RSI 80.7. 20일선 이격 24.4%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "290690", "name": "소룩스", "market": "KOSDAQ", "change_pct": 30.0, "status": "new", "confidence": "high", "main_theme": "바이오", "specific_signal": "AR1001 글로벌 독점 판권 47억달러(약 7조원) 라이선스 계약(아리바이오-푸싱제약) — 아리바이오와의 합병 연결 기대에 따른 가치 재평가", "trigger_type": "contract", "reasoning": "아리바이오가 5월14일 AR1001의 대규모(약 47억달러) 글로벌 판권 계약을 체결했다는 보도가 나오면서, 아리바이오와의 합병을 추진 중인 소룩스의 합병 후 기업가치가 크게 높아질 수 있다는 기대가 투자심리를 자극했습니다. 여기에 합병 전 재무 보강용으로 소룩스의 250억 CB 발행 공시가 병행되며 '합병 연계 실익'이 보다 현실화될 수 있다는 해석이 더해졌습니다.", "related_stocks": "삼진제약, 안국약품, 차백신연구소", "watch_keywords": "바이오 라이선스 계약, M&A/합병, 임상3상 톱라인 발표, AR1001 47억달러 판권계약, 250억 CB 발행, 합병 기일 2026.06.05", "news_count": 13, "news_score": 98, "chart_score": 76, "chart_risk": "high", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 2.09, "value_ratio_20d": 2.44, "rsi14": 63.53, "distance_ma20_pct": 16.61, "high_60d_breakout": false, "combined_score": 63, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "006110", "name": "삼아알미늄", "market": "KOSPI", "change_pct": 18.74, "status": "new", "confidence": "high", "main_theme": "비철금속(알루미늄)", "specific_signal": "중동 지정학 리스크에 따른 알루미늄 공급차질 우려·LME 알루미늄 선물 급등이 알루미늄 관련주 수급 집중을 촉발", "trigger_type": "technical", "reasoning": "5/14 장에서 알루미늄 관련주 전반의 동반 강세와 함께 삼아알미늄이 52주 신고가를 기록한 점이 복수 기사로 확인된다. 보도들은 중동 사태에 따른 공급 우려와 LME 알루미늄 선물 가격 급등(전월 대비 큰 폭 상승)을 배경으로 개인·수급 자금이 알루미늄주에 몰렸음을 지목하고 있어 단기 급등은 원자재·수급(모멘텀) 요인으로 해석된다.", "related_stocks": "가온전선, 대원전선", "watch_keywords": "비철금속(알루미늄), LME 알루미늄 선물 급등, 중동 지정학 리스크, 양극박(2차전지) 수요, 투자경고·과열 증가", "news_count": 15, "news_score": 90, "chart_score": 64, "chart_risk": "high", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 40.1%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 1.66, "value_ratio_20d": 2.39, "rsi14": 74.9, "distance_ma20_pct": 40.09, "high_60d_breakout": true, "combined_score": 53, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 40.1%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "005500", "name": "삼진제약", "market": "KOSPI", "change_pct": 29.89, "status": "new", "confidence": "high", "main_theme": "바이오", "specific_signal": "AR1001(경구용 알츠하이머 신약) 글로벌 판권 기술수출(최대 약 7조원) — 해당 물질의 국내 판권·제조권을 보유하고 아리바이오 지분을 보유하고 있다는 점이 주가 과열 요인으로 작용", "trigger_type": "contract", "reasoning": "아리바이오가 AR1001의 글로벌 독점 판권을 중국 푸싱에 기술수출(선급금·마일스톤 포함 최대 약 7조원)했다는 보도가 당일 나오며, 삼진제약은 이 약의 국내 임상·제조·판매 독점권을 이미 확보하고 있고 아리바이오 지분(약 5.9%)도 보유하고 있어 상용화 기대와 지분가치 재평가가 동시에 부각됐다. 해당 사실이 직·간접적으로 수익/밸류업 가능성을 시사해 대규모 매수로 이어진 것으로 판단된다.", "related_stocks": "아리바이오, 일동제약", "watch_keywords": "바이오, 기술수출, 알츠하이머, AR1001(경구형 알츠하이머 신약), 국내 판권·제조권 보유, 선급금 2100억·최대 7조원 계약", "news_count": 26, "news_score": 100, "chart_score": 79, "chart_risk": "extreme", "chart_pattern": "volume_breakout", "chart_comment": "거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 24.6배입니다. RSI 81.5로 추격 매수는 부담스럽습니다. 20일선 이격 23.4%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 24.64, "value_ratio_20d": 30.92, "rsi14": 81.47, "distance_ma20_pct": 23.4, "high_60d_breakout": true, "combined_score": 49, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. RSI 81.5. 20일선 이격 23.4%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "080220", "name": "제주반도체", "market": "KOSDAQ", "change_pct": 28.35, "status": "new", "confidence": "high", "main_theme": "반도체", "specific_signal": "1분기 어닝 서프라이즈(매출·영업이익 급증) 및 D램 가격 급등(슈퍼사이클) 확인", "trigger_type": "earnings", "reasoning": "제공된 14일자 보도에서 1분기 매출이 전년비 273% 증가한 1,805억, 영업이익 671억(이익률 37%)으로 '어닝 서프라이즈'를 발표했고 기사에서 D램 가격 급등(기사 내 100% 이상 상승·2분기 48% 전망)을 근거로 메모리 수요·가격 호조(슈퍼사이클)를 지적하고 있어 실적 개선 기대가 즉각적으로 주가에 반영된 것으로 판단된다. 같은 날 발표된 웨이퍼 테스트(에이팩트와의 협력) 소식도 생산·검사 체계 확대 관점에서 추가적 호재로 작용했을 가능성이 높다.", "related_stocks": "SK하이닉스, 에이팩트, 한미반도체", "watch_keywords": "D램 슈퍼사이클, 메모리 팹리스, 1분기 어닝 서프라이즈, D램 가격 48% 전망, LPDDR 웨이퍼 테스트", "news_count": 27, "news_score": 100, "chart_score": 77, "chart_risk": "extreme", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 43.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 2.52, "value_ratio_20d": 3.56, "rsi14": 77.26, "distance_ma20_pct": 43.22, "high_60d_breakout": true, "combined_score": 48, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 43.2%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "066575", "name": "LG전자우", "market": "KOSPI", "change_pct": 14.42, "status": "new", "confidence": "high", "main_theme": "실적·수급(전통가전 + AI·로봇 기대)", "specific_signal": "1분기 실적 서프라이즈(연결 영업이익 약 1.6737조) 및 현대차 N 레이싱 시뮬레이터용 '올레드 프로' 공급 협업(로봇·전장·B2B 사업 확장 신호)", "trigger_type": "earnings", "reasoning": "D-day 전후 보도들은 1분기 깜짝 실적(영업이익 1.67조 수준)과 함께 AI 가전·로봇·전장 사업의 가시성이 부각된 점을 배경으로 제시하고 있다. 여기에 현대차와의 레이싱 시뮬레이터 협업 등 구체적 B2B 거래 소식이 투자심리를 자극하며 보통주 급등에 따른 우선주(배당 매력)로의 자금 이동과 단기 수급이 결합되어 우선주 급등을 만들었다.", "related_stocks": "LG전자, LG씨엔에스", "watch_keywords": "AI 가전, 로봇 사업(액추에이터·밸류체인), 전장·AI 데이터센터 냉각 솔루션, 현대 N 레이싱 시뮬레이터 공급, 1분기 영업이익 1.67조 서프라이즈", "news_count": 10, "news_score": 98, "chart_score": 75, "chart_risk": "extreme", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 85.9로 추격 매수는 부담스럽습니다. 20일선 이격 35.4%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 3.96, "value_ratio_20d": 5.12, "rsi14": 85.87, "distance_ma20_pct": 35.35, "high_60d_breakout": true, "combined_score": 46, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. RSI 85.9. 20일선 이격 35.4%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "261780", "name": "차백신연구소", "market": "KOSDAQ", "change_pct": 29.95, "status": "new", "confidence": "medium", "main_theme": "바이오", "specific_signal": "단일계좌·수급성 매수에 따른 테마성 급등 (투자주의종목 지정)", "trigger_type": "technical", "reasoning": "직접적 트리거는 5월13일 보도로 확인되는 '단일계좌 순매수'와 이에 따른 투자주의종목 지정 등 비정상적 수급(테마성·단기 매수)이며, 5월14일 D-day 장초반 상한가 형성은 이 수급 요인이 주된 원인으로 보인다. 한편 5월4일 계열사 CB(약 28억원) 취득 공시는 전략적 연계성을 제공하지만 D-day 직전의 새 공시는 없어 본 재료는 보조적 설명에 그친다.", "related_stocks": "소룩스, 코스모로보틱스", "watch_keywords": "바이오, 수급 급등(테마성), 단일계좌 순매수, 투자주의종목 지정, 28억 계열사 CB 취득", "news_count": 24, "news_score": 66, "chart_score": 72, "chart_risk": "high", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 1.95, "value_ratio_20d": 1.98, "rsi14": 54.44, "distance_ma20_pct": 6.55, "high_60d_breakout": false, "combined_score": 44, "trade_signal": "wait_pullback", "quadrant": "수급 관찰", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "048770", "name": "TPC로보틱스", "market": "KOSDAQ", "change_pct": 29.96, "status": "new", "confidence": "high", "main_theme": "로봇/휴머노이드 테마", "specific_signal": "중국 HCBOT과 액추에이터 기술이전·공동개발·공동생산을 골자로 한 전략적 협력 계약(휴머노이드용 액추에이터)", "trigger_type": "contract", "reasoning": "5월 6일 회사 공시성 보도(기술이전·공동개발·공동생산 계약)는 TPC로보틱스의 핵심부품(액추에이터) 경쟁력과 향후 양산·국내 생산 가능성을 구체화한 호재이다. 여기에 4월 말 엔비디아-두산 로보틱스 뉴스로 촉발된 로봇 섹터 랠리가 지속되며 투자심리가 과열돼 해당 공시가 증폭되어 상한가로 이어진 것으로 판단된다.", "related_stocks": "두산로보틱스, 코스모로보틱스", "watch_keywords": "휴머노이드, 피지컬 AI, 액추에이터 기술이전, 국내 생산 체계 구축, 로봇 부품 국산화", "news_count": 19, "news_score": 100, "chart_score": 61, "chart_risk": "extreme", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 91.6로 추격 매수는 부담스럽습니다. 20일선 이격 117.1%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 1.13, "value_ratio_20d": 1.96, "rsi14": 91.57, "distance_ma20_pct": 117.07, "high_60d_breakout": true, "combined_score": 40, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. RSI 91.6. 20일선 이격 117.1%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "000650", "name": "천일고속", "market": "KOSPI", "change_pct": 29.96, "status": "new", "confidence": "high", "main_theme": "수급·자산가치(재개발 기대)", "specific_signal": "서울고속버스터미널 재개발 기대(보유지분 약 16%에 따른 자산가치 상승 기대)", "trigger_type": "rumor", "reasoning": "최근 신세계 호실적(시장 보도)로 서울고속터미널 재개발 기대감이 재점화되며 천일고속의 터미널 지분 가치가 부각된 것이 핵심적 원인이다. 낮은 유통주식비중(대주주 지분 과다)과 개인 중심의 강한 매수·시장 전반의 랠리가 맞물려 단기 상한가로 이어졌다.", "related_stocks": "동양고속, SK네트웍스", "watch_keywords": "재개발 기대(서울고속터미널), 자산주(부동산) 프리미엄, 서울고속터미널 지분 16%보유, 저유통주식·유동성 부족, 개인 순매수 유입", "news_count": 0, "news_score": 88, "chart_score": 65, "chart_risk": "extreme", "chart_pattern": "ma20_recovery", "chart_comment": "20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 15.8배입니다. 20일선 이격 40.8%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 15.76, "value_ratio_20d": 22.72, "rsi14": 73.66, "distance_ma20_pct": 40.83, "high_60d_breakout": false, "combined_score": 36, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 40.8%. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260514", "ticker": "078350", "name": "한양디지텍", "market": "KOSDAQ", "change_pct": 25.18, "status": "unclear", "confidence": "low", "main_theme": "반도체", "specific_signal": "AI 서버·HBM·DDR5 메모리 수요 기대에 따른 중소형 반도체·장비주 동반 신고가 랠리", "trigger_type": "unknown", "reasoning": "제공된 기사들은 삼성전자·SK하이닉스 등 대형 반도체주의 강세와 AI/HBM 수요 기대가 중소형 반도체·장비주로 확산되면서 한양디지텍이 동반 급등했다고 설명한다. 그러나 리스트된 기사들에는 한양디지텍의 개별 공시·수주·실적 등 직접적 호재 근거가 없으므로 종목 급등은 업종·테마성 수급·러닝으로 판단된다.", "related_stocks": "라온텍, 제주반도체, 티씨케이", "watch_keywords": "반도체, AI 서버, HBM 메모리 수요, DDR5 투자 확대, 중소형 장비 수혜", "news_count": 10, "news_score": 16, "chart_score": 97, "chart_risk": "low", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 2.54, "value_ratio_20d": 3.0, "rsi14": 64.21, "distance_ma20_pct": 15.74, "high_60d_breakout": true, "combined_score": 52, "trade_signal": "theme_watch", "quadrant": "수급 관찰", "entry_note": "차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다."}, {"date": "20260514", "ticker": "002870", "name": "신풍", "market": "KOSPI", "change_pct": 20.23, "status": "unclear", "confidence": "low", "main_theme": "수급(단기 테마성·순환매)", "specific_signal": "개인 매수·순환매에 따른 단기 수급유입(장중 급등 종목 집계에 포함되며 거래량 급증)", "trigger_type": "unknown", "reasoning": "동일일(2026.05.13) EBN 등 시황 기사에서 신풍이 상위 급등 종목으로 집계되며 거래량이 급증했다는 보도가 있으나, 14일 내 회사 공시·수주·실적·정책성 기사 등 직접적 호재는 확인되지 않는다. 따라서 개별 기업의 본질적 모멘텀보다 개인 중심의 순환매·수급 유입 또는 장중 리포트·랠리 성격의 테마 매수가 원인으로 추정된다.", "related_stocks": "천일고속, 동양고속, 삼진제약", "watch_keywords": "개인 순매수, 순환매(소형주), 제약업종 강세, 거래량 급증, EBN 상위 급등 종목", "news_count": 10, "news_score": 16, "chart_score": 76, "chart_risk": "low", "chart_pattern": "ma20_recovery", "chart_comment": "20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 29.2배입니다.", "volume_ratio_20d": 29.23, "value_ratio_20d": 32.16, "rsi14": 61.86, "distance_ma20_pct": 10.49, "high_60d_breakout": false, "combined_score": 43, "trade_signal": "theme_watch", "quadrant": "수급 관찰", "entry_note": "차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다."}, {"date": "20260514", "ticker": "136490", "name": "선진", "market": "KOSPI", "change_pct": 14.29, "status": "unclear", "confidence": "low", "main_theme": "정책", "specific_signal": "", "trigger_type": "unknown", "reasoning": "제공된 14일 내 기사들은 정부의 거시경제·재정정책 및 코스피·수급 관련 일반 보도로, 해당 기업(선진)에 대한 직접적 공시·수주·실적·신사업 등 근거가 전혀 없습니다. 따라서 이날의 급등(+14.29%)은 제공된 뉴스와 직접 연결되는 명확한 트리거가 확인되지 않아 테마성·기술적 급등 또는 비공개·개별 이슈(미공개 공시 등)에 따른 것으로 판단됩니다.", "related_stocks": "", "watch_keywords": "확장적 재정정책, 코스피·수급 개선, 축산·사료 수요 회복, 가공육 OEM 수주, 해외 수출 확대", "news_count": 20, "news_score": 18, "chart_score": 72, "chart_risk": "low", "chart_pattern": "ma20_recovery", "chart_comment": "20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 5.8배입니다.", "volume_ratio_20d": 5.84, "value_ratio_20d": 6.26, "rsi14": 61.92, "distance_ma20_pct": 6.96, "high_60d_breakout": false, "combined_score": 42, "trade_signal": "theme_watch", "quadrant": "수급 관찰", "entry_note": "차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다."}, {"date": "20260514", "ticker": "487580", "name": "폴레드", "market": "KOSDAQ", "change_pct": 300.0, "status": "new", "confidence": "high", "main_theme": "공모주/수급", "specific_signal": "상장(IPO) 첫날 공모가 대비 4배(따따블) 달성 — 청약 경쟁률 3,169.86:1·청약증거금 약 5.2조원 등 공모 청약 열기와 유통물량 부족에 따른 급등", "trigger_type": "disclosure", "reasoning": "공모 청약에서 나타난 기록적 경쟁률과 대규모 증거금 유입(약 5.2조원), 상장 첫날 공모가 대비 4배(따따블) 달성이라는 명확한 상장 이벤트가 단기적 매수 집중과 유통물량 부족을 초래해 가격을 급등시켰습니다. 보도 여러 건이 동일한 설명(청약 경쟁률·따따블·상장 첫날 상한가)을 반복해 수급적 원인이 주된 트리거로 확인됩니다.", "related_stocks": "코스모로보틱스, TPC로보틱스", "watch_keywords": "공모주(IPO), 따따블(공모가 4배), 청약 경쟁률 3, 169.86대1, 청약증거금 약 5.2조원, 유통물량 부족(수급), 단기 과열·투기성 매수", "news_count": 0, "news_score": 98, "chart_score": null, "chart_risk": "missing", "chart_pattern": "", "chart_comment": "차트 분석 데이터가 아직 없습니다.", "volume_ratio_20d": null, "value_ratio_20d": null, "rsi14": null, "distance_ma20_pct": null, "high_60d_breakout": null, "combined_score": 54, "trade_signal": "need_chart", "quadrant": "차트 필요", "entry_note": "차트 분석을 먼저 실행한 뒤 판단합니다."}, {"date": "20260514", "ticker": "439960", "name": "코스모로보틱스", "market": "KOSDAQ", "change_pct": 29.96, "status": "new", "confidence": "high", "main_theme": "로봇 / IPO(새내기주) 수급", "specific_signal": "재활 웨어러블 로봇(영유아 보행보조 임상) 중심의 신규상장·공모주 흥행으로 인한 수급 집중", "trigger_type": "technical", "reasoning": "상장(IPO) 직후 공모 흥행과 청약 증거금·수요 대비 낮은 유통물량으로 인해 개인 중심의 매수·수급 쏠림이 발생했고, 웨어러블 재활로봇(영유아 임상 등)이라는 구체적 사업 모멘텀으로 투자심리가 집중되어 연속 상한가로 이어졌습니다. 거래대금·거래량 폭증과 같은 기술적(수급) 요인이 D-day 급등의 직접 원인으로 파악됩니다. 한국거래소의 투자경고(지정 예고)도 변동성을 키우는 추가 요인으로 작용했습니다.", "related_stocks": "TPC로보틱스, 폴레드, 라온텍", "watch_keywords": "로봇, IPO(새내기주), 개인투자 수급 집중, 재활 웨어러블 로봇, 영유아 보행보조 임상, 투자경고 지정 예고", "news_count": 10, "news_score": 88, "chart_score": null, "chart_risk": "missing", "chart_pattern": "", "chart_comment": "차트 분석 데이터가 아직 없습니다.", "volume_ratio_20d": null, "value_ratio_20d": null, "rsi14": null, "distance_ma20_pct": null, "high_60d_breakout": null, "combined_score": 49, "trade_signal": "need_chart", "quadrant": "차트 필요", "entry_note": "차트 분석을 먼저 실행한 뒤 판단합니다."}, {"date": "20260514", "ticker": "042520", "name": "한스바이오메드", "market": "KOSDAQ", "change_pct": 21.3, "status": "new", "confidence": "high", "main_theme": "바이오", "specific_signal": "ECM 기반 스킨부스터 '셀르디엠'의 매출 급증(28기 상반기 매출·영업익 개선) 및 싱가포르 품목허가·대형 유통 채널 통한 국내 독점 유통권(하반기 유통 본격화) 기대", "trigger_type": "disclosure", "reasoning": "회사 공시·보도(2026.05.14 실적 발표)가 당일 주요 트리거로 작용했다. 발표는 셀르디엠 매출(연결 기준 상반기 매출 및 제품별 실적) 증가와 싱가포르 품목허가, 하반기 대형 유통 채널을 통한 판매 확대 기대를 명시해 단기 강세를 유발했다.", "related_stocks": "휴젤, 엘앤씨바이오, 파마리서치", "watch_keywords": "바이오, 미용·에스테틱, 해외 규제·허가, ECM 스킨부스터, HSA(싱가포르) 품목허가, 국내 독점 유통권·대형 유통 협업", "news_count": 19, "news_score": 100, "chart_score": 50, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다.", "volume_ratio_20d": 2.4, "value_ratio_20d": 2.35, "rsi14": 39.43, "distance_ma20_pct": -6.67, "high_60d_breakout": false, "combined_score": 68, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 2.4배 유지 여부를 확인합니다."}, {"date": "20260514", "ticker": "493280", "name": "아이엠바이오로직스", "market": "KOSDAQ", "change_pct": 20.9, "status": "new", "confidence": "high", "main_theme": "바이오", "specific_signal": "IMB-101 글로벌 임상2상 첫 환자 투약 완료로 파트너사에 따라 발생한 500만 달러 규모의 기술이전(마일스톤) 수익 인식 및 이를 반영한 분기 흑자(영업익·당기순익) 공시", "trigger_type": "disclosure", "reasoning": "회사 공시에 따르면 글로벌 파트너(네비게이터 메디신)의 IMB-101 임상2상에서 첫 환자 투약이 완료되며 500만 달러 마일스톤을 인식해 1분기 흑자 전환을 공시했다. 투자자들은 이 같은 기술이전 마일스톤과 상장 뒤 확보된 1270억원대 현금성 자산을 재무적 안전장치로 보고 매수에 나선 것으로 판단된다.", "related_stocks": "카나프테라퓨틱스, 리센스메디컬", "watch_keywords": "바이오, 공모주/IPO, 임상2상 첫 환자투약, 기술이전 마일스톤 500만 달러, 현금성자산 1270억원", "news_count": 22, "news_score": 100, "chart_score": 50, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다.", "volume_ratio_20d": 3.27, "value_ratio_20d": 2.8, "rsi14": 38.67, "distance_ma20_pct": -11.59, "high_60d_breakout": false, "combined_score": 68, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 3.3배 유지 여부를 확인합니다."}, {"date": "20260514", "ticker": "090355", "name": "노루페인트우", "market": "KOSPI", "change_pct": 12.28, "status": "new", "confidence": "medium", "main_theme": "수급", "specific_signal": "이름 유사성(태풍 '노루')에 따른 개인 투자자 중심의 테마성 매수(이름 기반 바이럴·과거 2017 사례 부각)", "trigger_type": "rumor", "reasoning": "최근 보도들에서 ‘태풍 노루’와 이름이 같다는 심리적 요인을 언급하며 과거(2017) 사례를 재조명했고, 장 초반(5/14) 호가·급등 상위에 노루페인트우가 반복적으로 노출되어 개인 매수·바이럴이 유입된 것으로 보인다. 업종·시장 강세와 개인 순매수도 배경으로 작용해 가격이 급등한 것으로 판단된다.", "related_stocks": "KCC, LX하우시스, 강남제비스코", "watch_keywords": "개인 순매수, 심리적 비이성 매매, 건자재/도료 업종, 태풍 '노루' 이름 유사성, 2017 노루 사례", "news_count": 8, "news_score": 64, "chart_score": 50, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 거래량은 20일 평균 대비 14.9배입니다.", "volume_ratio_20d": 14.9, "value_ratio_20d": 14.34, "rsi14": 35.88, "distance_ma20_pct": -5.59, "high_60d_breakout": false, "combined_score": 48, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 14.9배 유지 여부를 확인합니다."}, {"date": "20260514", "ticker": "377300", "name": "카카오페이", "market": "KOSPI", "change_pct": 13.11, "status": "unclear", "confidence": "low", "main_theme": "policy", "specific_signal": "경찰의 신용정보법 위반 혐의 수사 착수(중국 알리페이에 고객 개인정보 대량 국외 이전 의혹)", "trigger_type": "unknown", "reasoning": "D-day에 나온 핵심 뉴스들은 오히려 경찰 수사와 개인정보 유출 의혹(알리페이로의 대량 정보 이전)으로 부정적이다. 따라서 이날의 13%대 급등은 기사 내용상 명확한 호재가 없어, 단기 수급·테마성 매매(공포-반등·숏커버링·투자주의 지정에 따른 변동성) 가능성이 크다.", "related_stocks": "네이버페이(네이버), 토스(비바리퍼블리카), 쿠팡페이(쿠팡)", "watch_keywords": "데이터프라이버시, 신용정보법 수사, 결제플랫폼 경쟁, 중국 알리페이 정보 이전, 금감원 현장검사", "news_count": 28, "news_score": 18, "chart_score": 71, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다.", "volume_ratio_20d": 1.28, "value_ratio_20d": 1.28, "rsi14": 51.4, "distance_ma20_pct": 2.22, "high_60d_breakout": false, "combined_score": 42, "trade_signal": "avoid", "quadrant": "수급 관찰", "entry_note": "momentum_watch 패턴입니다. 거래량 1.3배 유지 여부를 확인합니다."}, {"date": "20260514", "ticker": "032580", "name": "피델릭스", "market": "KOSDAQ", "change_pct": 20.4, "status": "new", "confidence": "medium", "main_theme": "반도체", "specific_signal": "중국 메모리 시장 회복 기대(중국 반도체 수요 회복) 기반의 단기 테마성 매수 + 한국거래소의 투자경고·매매거래정지 예고(공시)", "trigger_type": "disclosure", "reasoning": "단기 급등은 중국 메모리 시장 회복 및 AI/HBM 수요 기대 등 반도체(메모리) 테마성 자금 유입이 1차적 촉매였고, 같은 기간(2026.05.13) 한국거래소가 피델릭스를 투자경고·매매거래정지 예고 대상으로 공시하면서 매매·관심 집중과 변동성이 증폭되어 상한가로 이어진 것으로 판단한다. 회사 고유의 계약·실적·기술적 호재성 공시는 기사군에서 확인되지 않는다.", "related_stocks": "라온텍, 제주반도체, 한양디지텍", "watch_keywords": "반도체, 중국 반도체 성장, 한국거래소 투자경고·매매거래정지 예고, 중국 메모리 시장 회복 기대, 단기 테마성 과열", "news_count": 13, "news_score": 74, "chart_score": 64, "chart_risk": "extreme", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 14.2배입니다. RSI 99.5로 추격 매수는 부담스럽습니다. 20일선 이격 143.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 14.15, "value_ratio_20d": 22.95, "rsi14": 99.45, "distance_ma20_pct": 143.15, "high_60d_breakout": true, "combined_score": 28, "trade_signal": "avoid", "quadrant": "눌림 대기", "entry_note": "상한가/갭/과이격 조합입니다. 신규 진입보다 다음 봉 매물 소화를 먼저 봅니다."}, {"date": "20260514", "ticker": "084670", "name": "동양고속", "market": "KOSPI", "change_pct": 29.94, "status": "new", "confidence": "medium", "main_theme": "부동산/재개발", "specific_signal": "서울고속버스터미널(서울고터) 재개발 기대감 — 신세계 호실적을 계기로 개발사업 재점화 가능성 부각", "trigger_type": "rumor", "reasoning": "여러 매체(증시 코멘트·특징주 보도)에서 신세계의 호실적을 근거로 '서울고터 재개발 기대감'이 재부각됐다고 보도했고, 이 기대감이 운송업체인 동양고속에 대한 투심을 자극해 급등·상한가로 연결된 것으로 판단됩니다. 동일 테마로 천일고속도 동반 급등해 수급 쏠림·테마성 매수가 주요 원인으로 보입니다.", "related_stocks": "천일고속, SK네트웍스", "watch_keywords": "재개발, 리테일 실적 호조, 서울고속버스터미널 재개발, 터미널 자산가치 상승, 운송주 순환매", "news_count": 16, "news_score": 66, "chart_score": 65, "chart_risk": "extreme", "chart_pattern": "ma20_recovery", "chart_comment": "20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 7.5배입니다. 20일선 이격 42.5%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 7.49, "value_ratio_20d": 10.82, "rsi14": 75.12, "distance_ma20_pct": 42.55, "high_60d_breakout": false, "combined_score": 24, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "상한가/갭/과이격 조합입니다. 신규 진입보다 다음 봉 매물 소화를 먼저 봅니다."}, {"date": "20260514", "ticker": "066570", "name": "LG전자", "market": "KOSPI", "change_pct": 13.38, "status": "new", "confidence": "medium", "main_theme": "수급/테마(지수재편·로봇)", "specific_signal": "코스피 상위권 재편(톱10 교체)에 따른 수급 기대 및 서비스·물류 로봇 사업 성장 모멘텀 확산", "trigger_type": "technical", "reasoning": "당일 주요 매체들이 코스피 톱10 재편 소식을 전하면서 지수·수급 관점의 매수 재료가 부각된 점과, 같은 날 로봇 사업을 호재로 지목하는 기사들이 나와 투자심리가 급격히 개선된 점이 겹쳐 급등을 초래한 것으로 보인다. 회사 공시나 실적 개선 직접 근거는 확인되지 않아 뉴스에 따른 테마·수급성 매수라는 해석이 합리적이다.", "related_stocks": "삼성전기, 삼성전자, 유진로봇", "watch_keywords": "지수 재편, 수급(지수편입), 로봇 테마, 서비스·물류 로봇 매출 가시화, 로봇 플랫폼 상용화 수주, 가전-로봇 융합 제품 출하", "news_count": 0, "news_score": 64, "chart_score": 52, "chart_risk": "extreme", "chart_pattern": "trend_continuation", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 86.4로 추격 매수는 부담스럽습니다. 20일선 이격 49.1%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 1.98, "value_ratio_20d": 2.75, "rsi14": 86.42, "distance_ma20_pct": 49.07, "high_60d_breakout": true, "combined_score": 17, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "상한가/갭/과이격 조합입니다. 신규 진입보다 다음 봉 매물 소화를 먼저 봅니다."}]}</script>
+<script>
+let current = 'all';
+let query = '';
+const buttons = [...document.querySelectorAll('button[data-filter]')];
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  current = btn.dataset.filter;
+  buttons.forEach(b => b.classList.toggle('active', b === btn));
+  applyFilters();
+}));
+document.getElementById('search').addEventListener('input', e => {
+  query = e.target.value.trim().toLowerCase();
+  applyFilters();
+});
+function applyFilters() {
+  document.querySelectorAll('[data-signal]').forEach(el => {
+    const passType = current === 'all' || el.dataset.signal === current;
+    const text = el.dataset.search || el.textContent.toLowerCase();
+    el.classList.toggle('hide', !(passType && (!query || text.includes(query))));
+  });
+}
+</script>
+</body>
+</html>

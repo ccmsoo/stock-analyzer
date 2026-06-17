@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Chart Analysis</title>
+<style>
+  :root { --bg:#101214; --fg:#e8eaed; --muted:#9aa0a6; --card:#181b1f; --line:#2a2f36;
+           --good:#36c275; --warn:#f2b84b; --bad:#ff6961; --info:#66a6ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:24px; background:var(--bg); color:var(--fg);
+          font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  h1 { margin:0 0 4px; font-size:22px; }
+  .meta { color:var(--muted); margin-bottom:18px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px; }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .name { font-weight:700; }
+  .sub { color:var(--muted); font-size:12px; }
+  .pct { color:#ff7b86; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:700; }
+  .score { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .risk-low { color:var(--good); }
+  .risk-medium { color:var(--warn); }
+  .risk-high { color:var(--bad); }
+  .risk-extreme { color:var(--bad); font-weight:700; }
+  .chips span { display:inline-block; border:1px solid var(--line); border-radius:4px; padding:1px 6px;
+                 margin:6px 4px 0 0; color:var(--muted); font-size:12px; }
+  .comment { margin-top:8px; color:#d1d5db; }
+  table { width:100%; margin-top:8px; border-collapse:collapse; color:var(--muted); font-size:12px; }
+  td { border-top:1px solid var(--line); padding:4px 0; }
+  td:last-child { text-align:right; color:var(--fg); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+</style>
+</head>
+<body>
+<h1>급등 종목 차트 분석</h1>
+<div class="meta">분석 40건 · 실패 0건 · 생성 2026-05-15T03:54:52</div>
+
+<div class="grid">
+<article class="card">
+  <div class="row">
+    <div><span class="name">대원전선우</span> <span class="sub">006345 · KOSPI</span></div>
+    <span class="pct">+29.95%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 73</span>
+    <span class="risk-extreme">risk extreme</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 96.1로 추격 매수는 부담스럽습니다. 20일선 이격 159.3%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>16,790 / 972.3억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>4.03x / 8.96x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>96.13 / 159.27%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>16.10% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">SKC</span> <span class="sub">011790 · KOSPI</span></div>
+    <span class="pct">+8.00%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 67</span>
+    <span class="risk-extreme">risk extreme</span>
+  </div>
+  <div class="chips"><span>uptrend</span><span>gap_up</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 80.8로 추격 매수는 부담스럽습니다. 20일선 이격 49.7%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>174,100 / 4798.6억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>4.34x / 6.01x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>80.83 / 49.67%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>14.14% / 2.10% / 46.90%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">HB테크놀러지</span> <span class="sub">078150 · KOSDAQ</span></div>
+    <span class="pct">+12.69%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 64</span>
+    <span class="risk-extreme">risk extreme</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>gap_up</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 11.2배입니다. RSI 88.1로 추격 매수는 부담스럽습니다. 20일선 이격 61.7%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>4,530 / 3072.9억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>11.22x / 17.35x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>88.10 / 61.66%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>16.17% / 37.30% / 45.80%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">아진산업</span> <span class="sub">013310 · KOSDAQ</span></div>
+    <span class="pct">+12.81%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 62</span>
+    <span class="risk-extreme">risk extreme</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>long_upper_shadow</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 11.9배입니다. RSI 87.0로 추격 매수는 부담스럽습니다. 20일선 이격 23.6%라 눌림 확인이 유리합니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>4,270 / 628.9억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>11.91x / 13.77x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>86.96 / 23.58%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>6.61% / 50.00% / 50.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">젠큐릭스</span> <span class="sub">229000 · KOSDAQ</span></div>
+    <span class="pct">+30.00%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 47</span>
+    <span class="risk-extreme">risk extreme</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>strong_close</span><span>20일 신고가</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 51.5%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>3,835 / 53.8억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.58x / 2.28x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>78.60 / 51.45%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>16.95% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">수산세보틱스</span> <span class="sub">017550 · KOSPI</span></div>
+    <span class="pct">+23.92%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 100</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>volume_breakout</span></div>
+  <div class="comment">거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 6.6배입니다. 20일선 이격 20.5%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>3,860 / 2181.1억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>6.59x / 8.14x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>62.05 / 20.47%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>9.63% / 22.80% / 77.20%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">오이솔루션</span> <span class="sub">138080 · KOSDAQ</span></div>
+    <span class="pct">+21.08%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 93</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>20일 신고가</span><span>60일 신고가</span><span>volume_breakout</span></div>
+  <div class="comment">거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 6.2배입니다. 20일선 이격 24.8%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>54,000 / 2927.2억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>6.19x / 7.83x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>64.82 / 24.83%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.67% / 26.20% / 73.80%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">희림</span> <span class="sub">037440 · KOSDAQ</span></div>
+    <span class="pct">+29.97%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 91</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 22.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>7,460 / 751.1억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>3.29x / 3.99x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>70.12 / 22.23%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>8.01% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">툴젠</span> <span class="sub">199800 · KOSDAQ</span></div>
+    <span class="pct">+17.09%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 87</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 36.6%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>118,500 / 129.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.59x / 2.17x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>70.65 / 36.65%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>2.96% / 2.20% / 97.80%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">삼성E&amp;A</span> <span class="sub">028050 · KOSPI</span></div>
+    <span class="pct">+21.51%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 86</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>gap_up</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 22.5%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>64,400 / 8969.1억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>3.34x / 4.19x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>69.11 / 22.49%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>13.21% / 38.70% / 61.30%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">삼성물산</span> <span class="sub">028260 · KOSPI</span></div>
+    <span class="pct">+7.86%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 83</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 80.0로 추격 매수는 부담스럽습니다. 20일선 이격 29.0%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>405,000 / 4952.7억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>2.66x / 3.38x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>80.00 / 29.03%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>4.39% / 1.30% / 98.70%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">마음AI</span> <span class="sub">377480 · KOSDAQ</span></div>
+    <span class="pct">+13.61%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 82</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>uptrend</span><span>long_upper_shadow</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 32.8배입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>17,450 / 473.7억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>32.84x / 36.60x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>70.75 / 10.74%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>4.23% / 50.10% / 49.90%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">덕산테코피아</span> <span class="sub">317330 · KOSDAQ</span></div>
+    <span class="pct">+17.48%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 81</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>gap_up</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 34.9%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>31,250 / 311.4억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>2.19x / 2.95x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>76.32 / 34.89%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>23.87% / 1.70% / 40.70%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">해성디에스</span> <span class="sub">195870 · KOSPI</span></div>
+    <span class="pct">+10.26%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 79</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 81.5로 추격 매수는 부담스럽습니다. 20일선 이격 26.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>86,000 / 508.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.84x / 2.22x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>81.45 / 26.21%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>4.74% / 18.70% / 81.30%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">대덕</span> <span class="sub">008060 · KOSPI</span></div>
+    <span class="pct">+13.02%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 79</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 83.5로 추격 매수는 부담스럽습니다. 20일선 이격 22.7%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>19,100 / 86.2억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>4.00x / 4.90x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>83.50 / 22.69%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>1.24% / 25.20% / 74.80%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">태영건설우</span> <span class="sub">009415 · KOSPI</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 78</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>uptrend</span><span>strong_close</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 거래량은 20일 평균 대비 8.3배입니다. 20일선 이격 33.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>14,370 / 221.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>8.33x / 10.47x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>64.54 / 33.22%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>22.06% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">이연제약</span> <span class="sub">102460 · KOSPI</span></div>
+    <span class="pct">+9.02%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 75</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>long_upper_shadow</span><span>20일 신고가</span><span>60일 신고가</span><span>ma20_recovery</span></div>
+  <div class="comment">20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 28.2배입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>11,240 / 127.6억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>28.19x / 29.68x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>66.57 / 5.70%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>1.75% / 64.70% / 35.30%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">미래산업</span> <span class="sub">025560 · KOSPI</span></div>
+    <span class="pct">+10.57%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 72</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 5.3배입니다. 20일선 이격 21.9%라 눌림 확인이 유리합니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>18,300 / 62.5억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>5.33x / 6.27x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>79.68 / 21.92%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.12% / 40.40% / 59.60%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">테고사이언스</span> <span class="sub">191420 · KOSDAQ</span></div>
+    <span class="pct">+12.44%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 68</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>long_upper_shadow</span><span>20일 신고가</span><span>ma20_recovery</span></div>
+  <div class="comment">20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 13.9배입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>13,200 / 13.7억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>13.87x / 14.47x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>47.92 / 3.72%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.00% / 54.50% / 45.50%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">다원넥스뷰</span> <span class="sub">323350 · KOSDAQ</span></div>
+    <span class="pct">+14.21%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 67</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>strong_close</span><span>20일 신고가</span><span>ma20_recovery</span></div>
+  <div class="comment">20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 20일선 이격 35.6%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>17,200 / 110.3억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>3.40x / 4.56x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>75.14 / 35.61%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.66% / 11.10% / 88.90%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">빛샘전자</span> <span class="sub">072950 · KOSDAQ</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 66</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>uptrend</span><span>strong_close</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 22.7%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>17,060 / 1465.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>3.72x / 4.04x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>32.85 / 22.72%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.53% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">아스플로</span> <span class="sub">159010 · KOSDAQ</span></div>
+    <span class="pct">+17.95%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 66</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 83.4로 추격 매수는 부담스럽습니다. 20일선 이격 54.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>13,800 / 220.7억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>4.40x / 6.41x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>83.43 / 54.24%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>6.84% / 36.00% / 64.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">이랜시스</span> <span class="sub">264850 · KOSDAQ</span></div>
+    <span class="pct">+29.92%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 65</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>strong_close</span><span>20일 신고가</span><span>ma20_recovery</span></div>
+  <div class="comment">20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 61.0배입니다. RSI 82.7로 추격 매수는 부담스럽습니다. 20일선 이격 30.5%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>8,120 / 1616.9억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>61.00x / 79.79x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>82.65 / 30.52%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.64% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">드림씨아이에스</span> <span class="sub">223250 · KOSDAQ</span></div>
+    <span class="pct">+29.80%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 65</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>strong_close</span><span>20일 신고가</span><span>ma20_recovery</span></div>
+  <div class="comment">20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 18.7배입니다. 20일선 이격 25.0%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>6,250 / 97.1억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>18.71x / 23.63x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>78.41 / 25.02%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.42% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">심텍</span> <span class="sub">222800 · KOSDAQ</span></div>
+    <span class="pct">+13.54%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 62</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>gap_up</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 85.7로 추격 매수는 부담스럽습니다. 20일선 이격 31.8%라 눌림 확인이 유리합니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>106,500 / 1961.5억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>2.01x / 2.78x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>85.69 / 31.82%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>9.17% / 40.20% / 59.80%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">전진건설로봇</span> <span class="sub">079900 · KOSPI</span></div>
+    <span class="pct">+9.09%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 59</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>uptrend</span><span>long_upper_shadow</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>68,400 / 785.8억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>3.72x / 3.66x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>50.50 / 1.93%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>9.41% / 59.80% / 37.80%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">진흥기업</span> <span class="sub">002780 · KOSPI</span></div>
+    <span class="pct">+8.30%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 47</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>long_upper_shadow</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 25.3%라 눌림 확인이 유리합니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>1,449 / 273.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.68x / 1.87x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>74.63 / 25.30%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>3.14% / 55.70% / 44.30%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">에쓰씨엔지니어링</span> <span class="sub">023960 · KOSPI</span></div>
+    <span class="pct">+10.31%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 43</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 거래량은 20일 평균 대비 8.0배입니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>1,380 / 20.4억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>7.97x / 8.15x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>44.58 / -0.12%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.00% / 36.50% / 63.50%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">현대에버다임</span> <span class="sub">041440 · KOSDAQ</span></div>
+    <span class="pct">+14.62%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 96</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 20.9배입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>10,430 / 1272.3억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>20.87x / 23.45x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>68.07 / 11.65%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>3.52% / 42.40% / 57.60%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">대한광통신</span> <span class="sub">010170 · KOSDAQ</span></div>
+    <span class="pct">+19.32%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 93</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 32.1%라 눌림 확인이 유리합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>21,800 / 18087.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.93x / 2.56x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>55.29 / 32.14%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>4.71% / 6.20% / 93.80%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">한솔테크닉스</span> <span class="sub">004710 · KOSPI</span></div>
+    <span class="pct">+15.82%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 93</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 24.2%라 눌림 확인이 유리합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>9,150 / 368.8억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.85x / 2.23x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>64.59 / 24.24%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.51% / 11.60% / 88.40%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">SGC에너지</span> <span class="sub">005090 · KOSPI</span></div>
+    <span class="pct">+7.82%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 84</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>60,700 / 126.6억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.11x / 1.16x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>62.89 / 6.27%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.18% / 12.90% / 87.10%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">사조동아원</span> <span class="sub">008040 · KOSPI</span></div>
+    <span class="pct">+7.77%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 79</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>normal</span><span>20일 신고가</span><span>ma20_recovery</span></div>
+  <div class="comment">20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 5.0배입니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>1,124 / 24.4억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>5.00x / 5.46x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>77.65 / 8.60%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>1.15% / 5.60% / 94.40%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">DL이앤씨2우(전환)</span> <span class="sub">37550L · KOSPI</span></div>
+    <span class="pct">+9.17%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 78</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>uptrend</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>60,700 / 13.9억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.05x / 1.10x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>49.79 / 3.81%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>7.73% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">혜인</span> <span class="sub">003010 · KOSPI</span></div>
+    <span class="pct">+14.12%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 77</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 거래량은 20일 평균 대비 6.1배입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>7,920 / 738.7억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>6.06x / 6.36x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>69.77 / 16.68%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>3.75% / 35.30% / 64.70%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">에이비프로바이오</span> <span class="sub">195990 · KOSDAQ</span></div>
+    <span class="pct">+29.93%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 77</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>strong_close</span><span>ma20_recovery</span></div>
+  <div class="comment">20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 9.2배입니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>1,463 / 26.9억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>9.22x / 10.22x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>54.93 / 10.00%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.00% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">아이오케이이엔엠</span> <span class="sub">078860 · KOSDAQ</span></div>
+    <span class="pct">+29.82%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 77</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>strong_close</span><span>ma20_recovery</span></div>
+  <div class="comment">20일선 회복 구간으로 추세 전환 여부를 관찰할 만합니다. 거래량은 20일 평균 대비 13.8배입니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>5,180 / 18.5억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>13.77x / 16.71x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>59.22 / 10.75%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.00% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">서진시스템</span> <span class="sub">178320 · KOSDAQ</span></div>
+    <span class="pct">+14.45%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 70</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 20일선 이격 29.1%라 눌림 확인이 유리합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>68,100 / 3716.4억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.83x / 2.37x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>73.33 / 29.14%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>1.34% / 31.60% / 68.40%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">GS건설</span> <span class="sub">006360 · KOSPI</span></div>
+    <span class="pct">+11.00%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 70</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>uptrend</span><span>gap_up</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>39,350 / 1845.9억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>0.99x / 1.00x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>46.41 / 0.54%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>11.71% / 16.30% / 72.10%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">한국타이어앤테크놀로지</span> <span class="sub">161390 · KOSPI</span></div>
+    <span class="pct">+8.74%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 60</span>
+    <span class="risk-medium">risk medium</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>64,700 / 516.3억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>2.12x / 2.23x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>59.05 / 4.73%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>4.54% / 40.00% / 60.00%</td></tr>
+  </table>
+</article>
+</div>
+</body>
+</html>

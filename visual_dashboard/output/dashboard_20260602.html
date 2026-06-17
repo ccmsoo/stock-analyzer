@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>뉴스 x 차트 통합 대시보드</title>
+<style>
+  :root {
+    --bg:#0f1115; --panel:#171a20; --panel2:#1e232b; --fg:#eef1f5; --muted:#9da7b3;
+    --line:#2b313b; --good:#37c978; --watch:#6ea8fe; --wait:#f5b84c; --bad:#ff6b66;
+    --cyan:#4fd1c5; --purple:#b794f4;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  header { padding:24px 28px 16px; border-bottom:1px solid var(--line); background:#12151a; position:sticky; top:0; z-index:4; }
+  h1 { margin:0; font-size:22px; letter-spacing:0; }
+  h2 { font-size:16px; margin:26px 0 12px; color:var(--cyan); }
+  .meta { color:var(--muted); margin-top:4px; }
+  main { padding:22px 28px 36px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:16px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .kpi b { display:block; font-size:22px; }
+  .kpi span { color:var(--muted); font-size:12px; }
+  .toolbar { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 4px; }
+  button, input { background:var(--panel); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:7px 10px; font:inherit; }
+  button { cursor:pointer; }
+  button.active { background:var(--cyan); color:#071012; border-color:var(--cyan); }
+  input { min-width:240px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(370px,1fr)); gap:12px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px; }
+  .card.strong_watch { border-left:4px solid var(--good); }
+  .card.wait_pullback { border-left:4px solid var(--wait); }
+  .card.theme_watch { border-left:4px solid var(--watch); }
+  .card.need_chart { border-left:4px solid var(--purple); }
+  .card.avoid { border-left:4px solid var(--bad); opacity:.78; }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .name { font-weight:700; }
+  .sub, .muted { color:var(--muted); }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .pct { color:#ff7b86; font-weight:700; }
+  .badge { display:inline-block; border:1px solid var(--line); background:var(--panel2); border-radius:999px; padding:2px 8px; font-size:12px; margin:6px 4px 0 0; }
+  .signal { color:var(--cyan); margin-top:8px; font-weight:600; }
+  .note { margin-top:8px; color:#dce3eb; }
+  .reason { margin-top:8px; color:var(--muted); font-size:12px; max-height:58px; overflow:hidden; }
+  .bars { display:grid; grid-template-columns:80px 1fr 44px; gap:8px; align-items:center; margin-top:10px; font-size:12px; color:var(--muted); }
+  .bar { height:7px; background:#262b34; border-radius:999px; overflow:hidden; }
+  .bar i { display:block; height:100%; background:linear-gradient(90deg,var(--cyan),var(--good)); }
+  .matrix { display:grid; grid-template-columns:repeat(2,minmax(260px,1fr)); gap:12px; }
+  .quad { min-height:132px; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .quad h3 { margin:0 0 8px; font-size:14px; }
+  .pill { display:inline-flex; align-items:center; gap:6px; border-radius:6px; background:var(--panel2); border:1px solid var(--line); padding:4px 7px; margin:3px; font-size:12px; }
+  .theme-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:10px; }
+  .theme-box { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  th, td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; font-size:13px; }
+  th { color:var(--muted); font-size:12px; font-weight:600; }
+  tr:last-child td { border-bottom:0; }
+  .hide { display:none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>뉴스 x 차트 통합 대시보드</h1>
+  <div class="meta">20260602 · 종목 15개 · 차트 분석 15개 · 생성 2026-06-03T14:25:59</div>
+  <div class="kpis">
+    <div class="kpi"><b>2</b><span>핵심 후보</span></div>
+<div class="kpi"><b>5</b><span>눌림 대기</span></div>
+<div class="kpi"><b>1</b><span>수급 관찰</span></div>
+<div class="kpi"><b>0</b><span>차트 필요</span></div>
+<div class="kpi"><b>7</b><span>보류</span></div>
+  </div>
+  <div class="toolbar">
+    <button class="active" data-filter="all">전체</button>
+    <button data-filter="strong_watch">핵심 후보</button>
+    <button data-filter="wait_pullback">눌림 대기</button>
+    <button data-filter="theme_watch">수급 관찰</button>
+    <button data-filter="need_chart">차트 필요</button>
+    <button data-filter="avoid">보류</button>
+    <input id="search" placeholder="종목명, 테마, 키워드 검색">
+  </div>
+</header>
+<main>
+  <h2>뉴스 × 차트 매트릭스</h2>
+  <section class="matrix"><div class="quad"><h3>눌림 대기 <span class="muted">(5)</span></h3><div class="muted">뉴스 강함 + 과열</div><div><span class="pill"><b>가온전선</b><span class="muted mono">47</span></span><span class="pill"><b>동양고속</b><span class="muted mono">45</span></span><span class="pill"><b>천일고속</b><span class="muted mono">45</span></span><span class="pill"><b>형지I&amp;C</b><span class="muted mono">43</span></span><span class="pill"><b>삼아알미늄</b><span class="muted mono">37</span></span></div></div><div class="quad"><h3>수급 관찰 <span class="muted">(3)</span></h3><div class="muted">차트 강함 + 뉴스 약함</div><div><span class="pill"><b>티에스이</b><span class="muted mono">73</span></span><span class="pill"><b>에스에이엠티</b><span class="muted mono">70</span></span><span class="pill"><b>SKAI</b><span class="muted mono">46</span></span></div></div><div class="quad"><h3>제외/보류 <span class="muted">(7)</span></h3><div class="muted">신호 약함</div><div><span class="pill"><b>코아스</b><span class="muted mono">70</span></span><span class="pill"><b>엠케이전자</b><span class="muted mono">69</span></span><span class="pill"><b>자화전자</b><span class="muted mono">65</span></span><span class="pill"><b>신세계인터내셔날</b><span class="muted mono">56</span></span><span class="pill"><b>주성엔지니어링</b><span class="muted mono">55</span></span><span class="pill"><b>선진</b><span class="muted mono">23</span></span><span class="pill"><b>SK네트웍스</b><span class="muted mono">10</span></span></div></div></section>
+  <h2>테마 요약</h2>
+  <section class="theme-list"><div class="theme-box"><div class="row"><b>반도체</b><span class="mono">71</span></div><div class="muted">2종목 · 티에스이, 엠케이전자</div></div><div class="theme-box"><div class="row"><b>정책</b><span class="mono">45</span></div><div class="muted">2종목 · 동양고속, 천일고속</div></div><div class="theme-box"><div class="row"><b>시장평가</b><span class="mono">70</span></div><div class="muted">1종목 · 에스에이엠티</div></div><div class="theme-box"><div class="row"><b>실적</b><span class="mono">70</span></div><div class="muted">1종목 · 코아스</div></div><div class="theme-box"><div class="row"><b>모빌리티(자동차 부품)</b><span class="mono">65</span></div><div class="muted">1종목 · 자화전자</div></div><div class="theme-box"><div class="row"><b>패션·뷰티 (소비)</b><span class="mono">56</span></div><div class="muted">1종목 · 신세계인터내셔날</div></div><div class="theme-box"><div class="row"><b>수급/시장수급</b><span class="mono">55</span></div><div class="muted">1종목 · 주성엔지니어링</div></div><div class="theme-box"><div class="row"><b>수주/계약</b><span class="mono">47</span></div><div class="muted">1종목 · 가온전선</div></div><div class="theme-box"><div class="row"><b>수급/기술적 요인</b><span class="mono">46</span></div><div class="muted">1종목 · SKAI</div></div><div class="theme-box"><div class="row"><b>수급/자금조달</b><span class="mono">43</span></div><div class="muted">1종목 · 형지I&amp;C</div></div><div class="theme-box"><div class="row"><b>원자재/수급</b><span class="mono">37</span></div><div class="muted">1종목 · 삼아알미늄</div></div><div class="theme-box"><div class="row"><b>정책/시장(수급)</b><span class="mono">23</span></div><div class="muted">1종목 · 선진</div></div><div class="theme-box"><div class="row"><b>분석 실패</b><span class="mono">10</span></div><div class="muted">1종목 · SK네트웍스</div></div></section>
+  <h2>종목 카드</h2>
+  <section class="grid" id="cards"><article class="card strong_watch" data-signal="strong_watch" data-search="티에스이 131290 반도체 프로브카드 밸류체인에서 hbm4·dram 향 매출 확대 기대(probe card 수요·제품 믹스 개선) 반도체 장비, 소부장(장비), 프로브카드(hbm4), dram향 침투 확대, etf 자금 유입 strong_watch 수급 관찰">
+  <div class="row">
+    <div><span class="name">티에스이</span> <span class="sub mono">131290 · KOSDAQ</span></div>
+    <span class="pct mono">+3.23%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk low</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">프로브카드 밸류체인에서 HBM4·DRAM 향 매출 확대 기대(Probe Card 수요·제품 믹스 개선)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:64%"></i></span><span class="mono">64</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:84%"></i></span><span class="mono">84</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:73%"></i></span><span class="mono">73</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 58.3 · 거래량 0.9x · 20일 이격 2.8%</div>
+  <div class="reason">메리츠 리포트와 반도체 밸류체인 ETF 편입 소식이 섞여 프로브카드 수혜주라는 기대감이 확산되었기 때문으로 보인다. 특히 샘씨엔에스 리포트에서 티에스이의 국내 IDM·중국 고객사향 DRAM 물량 확대와 HBM4 관련 매출 본격화가 언급되며 수요 성장 시그널이 부각됐다.</div>
+</article>
+<article class="card strong_watch" data-signal="strong_watch" data-search="에스에이엠티 031330 시장평가 ceo스코어 &#x27;고속성장&#x27; 부문 우수기업 선정(매출 10조원 미만 그룹 포함) 기업경영평가, 시장수급, ceo스코어 고속성장 부문, 매출 10조원 미만 우수기업, 네이버 종목 태깅 strong_watch 수급 관찰">
+  <div class="row">
+    <div><span class="name">에스에이엠티</span> <span class="sub mono">031330 · KOSDAQ</span></div>
+    <span class="pct mono">+10.68%</span>
+  </div>
+  <div>
+    <span class="badge">strong_watch</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk low</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">CEO스코어 &#x27;고속성장&#x27; 부문 우수기업 선정(매출 10조원 미만 그룹 포함)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:64%"></i></span><span class="mono">64</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:78%"></i></span><span class="mono">78</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:70%"></i></span><span class="mono">70</span></div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 65.9 · 거래량 0.6x · 20일 이격 24.0%</div>
+  <div class="reason">다수의 언론(stock_news)에서 CEO스코어 대기업 경영평가 결과를 보도하며 에스에이엠티를 &#x27;고속성장&#x27; 부문 우수기업(매출 10조원 미만)으로 언급한 점이 투자심리 자극으로 작용한 것으로 보인다. 14일 내 공시·수주·실적 등 회사 고유의 확정성 있는 호재는 확인되지 않아 매체 노출에 따른 수급·테마성 매매가 주된 원인일 가능성이 높다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="가온전선 000500 수주/계약 미국 법인(lscus)의 ai 데이터센터용 버스덕트 장기 프레임 수주(3년 약 1.2조원·5년 약 4조원 등) 및 북미 대형 빅테크 공급 계약 ai 데이터센터, 전력 인프라, 버스덕트 장기 프레임 계약, 미국 lscus 공장 가동률, 북미 빅테크 수주 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">가온전선</span> <span class="sub mono">000500 · KOSPI</span></div>
+    <span class="pct mono">+4.89%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">미국 법인(LSCUS)의 AI 데이터센터용 버스덕트 장기 프레임 수주(3년 약 1.2조원·5년 약 4조원 등) 및 북미 대형 빅테크 공급 계약</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:47%"></i></span><span class="mono">47</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 33.9 · 거래량 0.7x · 20일 이격 -2.9%</div>
+  <div class="reason">최근 다수 보도를 통해 가온전선의 미국 법인 LSCUS가 구글·아마존·기타 빅테크를 대상으로 대규모·장기 버스덕트 공급 프레임 계약을 확보한 사실이 확인되었다. 해당 수주(프레임 계약)는 향후 수년간 안정적 매출과 고마진 물량 흡수를 의미해 시장에서 즉각적인 재평가(주가 상승)로 연결된 것으로 판단된다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="동양고속 084670 정책 서울고속버스터미널 재개발 공약 부각 — 터미널 지분(0.17%) 보유로 재개발 수혜 기대 재개발, 지방선거(서울시장 공약), 서울고속버스터미널 재개발, 터미널 지분 보유, 백화점 입점 가능성 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">동양고속</span> <span class="sub mono">084670 · KOSPI</span></div>
+    <span class="pct mono">+10.04%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">서울고속버스터미널 재개발 공약 부각 — 터미널 지분(0.17%) 보유로 재개발 수혜 기대</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:35%"></i></span><span class="mono">35</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:45%"></i></span><span class="mono">45</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 54.1 · 거래량 2.7x · 20일 이격 -8.4%</div>
+  <div class="reason">6·3 지방선거를 앞두고 서울시장 후보의 서울고속버스터미널 재개발 공약이 부각되면서 터미널 지분을 보유한 종목들이 재개발 수혜 기대감으로 동반 급등했습니다. 동양고속은 보유 지분(0.17%)이 기사에 명시되며 테마성 매수세를 유발해 당일 큰 폭의 상승을 기록한 것으로 판단됩니다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="천일고속 000650 정책 서울고속버스터미널 재개발 기대(지방선거 공약 부각, 터미널 지분 보유로 인한 재개발 수혜 가능성) 지방선거 공약, 도시재개발, 서울고속버스터미널 재개발, 터미널 지분(16.67%), 백화점 복합개발 입점 기대 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">천일고속</span> <span class="sub mono">000650 · KOSPI</span></div>
+    <span class="pct mono">+9.52%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">서울고속버스터미널 재개발 기대(지방선거 공약 부각, 터미널 지분 보유로 인한 재개발 수혜 가능성)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:35%"></i></span><span class="mono">35</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:45%"></i></span><span class="mono">45</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 56.0 · 거래량 2.6x · 20일 이격 -1.9%</div>
+  <div class="reason">6·3 지방선거를 앞두고 서울시장 후보의 공약 등으로 서울고속버스터미널 재개발 가능성이 부각되면서 터미널 지분을 보유한 관련주에 매수세가 집중된 것으로 보입니다. 천일고속은 터미널 지분(약 16.67%) 보유로 재개발 수혜 기대가 직접적이며, 이 기대감이 단기적으로 주가를 끌어올린 것으로 판단됩니다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="형지i&amp;c 011080 수급/자금조달 정정신고로 유상증자 1차 발행가액 하향(주당 2,030원)·조달금액 대폭 축소(약 130억→56.84억) 및 채무상환 계획 삭제(금융감독원 전자공시) 유상증자 조정, 자금조달 규모 축소, 일본 이토추 협력, k패션 온라인 플랫폼 8월 오픈, 캐리스노트 일본 입점 wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">형지I&amp;C</span> <span class="sub mono">011080 · KOSDAQ</span></div>
+    <span class="pct mono">+5.38%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">정정신고로 유상증자 1차 발행가액 하향(주당 2,030원)·조달금액 대폭 축소(약 130억→56.84억) 및 채무상환 계획 삭제(금융감독원 전자공시)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:43%"></i></span><span class="mono">43</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 36.7 · 거래량 4.0x · 20일 이격 -28.7%</div>
+  <div class="reason">당일 공시로 유상증자 규모가 절반 이상 줄어들었다는 정정신고가 나왔고, 시장은 축소된 조달액이 향후 희석 부담(유상증자에 따른 주식수 증가)을 완화할 것으로 해석하여 수급 측면에서 주가를 지지한 것으로 보인다. 아울러 최근 이토추와의 일본 유통 협력(해외 판로 확대) 보도가 병행되며 성장 스토리도 부각되어 매수 심리가 강화된 것으로 판단된다.</div>
+</article>
+<article class="card wait_pullback" data-signal="wait_pullback" data-search="삼아알미늄 006110 원자재/수급 중동(이란)발 알루미늄 공급차질로 lme 알루미늄 선물가격 급등 → 알루미늄 관련주 수혜 알루미늄 공급차질, 중동 지정학 리스크, lme 알루미늄 가격, 호르무즈 해협 봉쇄, 알루미늄 생산능력(capa) wait_pullback 눌림 대기">
+  <div class="row">
+    <div><span class="name">삼아알미늄</span> <span class="sub mono">006110 · KOSPI</span></div>
+    <span class="pct mono">+4.90%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">눌림 대기</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">중동(이란)발 알루미늄 공급차질로 LME 알루미늄 선물가격 급등 → 알루미늄 관련주 수혜</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:88%"></i></span><span class="mono">88</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:37%"></i></span><span class="mono">37</span></div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 50.0 · 거래량 1.6x · 20일 이격 -2.3%</div>
+  <div class="reason">5월22일 다수의 종목태그 기사에서 &#x27;이란 사태로 중동 제련소 가동중단·호르무즈 봉쇄&#x27; 보도로 알루미늄 공급 우려가 커지며 LME 가격이 상승했고, 같은 날 삼아알미늄이 섹터 동반 급등(약 +16%)했다. 이번 D-day의 소폭 상승(+4.90%)은 이 같은 공급충격 기반의 원자재 가격 강세와 섹터 재평가 또는 단기 차익·공매 커버링의 연장선으로 판단된다.</div>
+</article>
+<article class="card theme_watch" data-signal="theme_watch" data-search="skai 357880 수급/기술적 요인 거래대금 급증에 따른 단기 수급·공매도 청산 가능성 수급, 기술적 반등, 거래대금 급증, 프로그램 매매, 공매도 청산 theme_watch 수급 관찰">
+  <div class="row">
+    <div><span class="name">SKAI</span> <span class="sub mono">357880 · KOSDAQ</span></div>
+    <span class="pct mono">+8.22%</span>
+  </div>
+  <div>
+    <span class="badge">theme_watch</span>
+    <span class="badge">수급 관찰</span>
+    <span class="badge">risk low</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="signal">거래대금 급증에 따른 단기 수급·공매도 청산 가능성</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:16%"></i></span><span class="mono">16</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:82%"></i></span><span class="mono">82</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="note">차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 71.1 · 거래량 2.4x · 20일 이격 34.5%</div>
+  <div class="reason">최근 14일 내 종목 관련 뉴스가 전무하여 뚜렷한 본질적 호재(공시·수주·실적 등)는 확인되지 않습니다. D-day 거래량이 평소 대비 크게 늘어난 가운데 주가가 8%대 상승한 점으로 보아 단기 수급(프로그램·개인·공매도 청산)이나 기술적 반등이 주요 원인으로 판단됩니다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="코아스 071950 실적 1분기 영업이익 3854% 증가(영업이익 18억원) — 생산라인 통폐합·원부자재 비용 절감에 따른 비용구조 개선 실적 개선, 원가 절감, 생산라인 통폐합, 영업이익 18억원, 프로젝트 중심 영업 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">코아스</span> <span class="sub mono">071950 · KOSPI</span></div>
+    <span class="pct mono">+5.59%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">1분기 영업이익 3854% 증가(영업이익 18억원) — 생산라인 통폐합·원부자재 비용 절감에 따른 비용구조 개선</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:57%"></i></span><span class="mono">57</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:70%"></i></span><span class="mono">70</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 0.9배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 67.0 · 거래량 0.9x · 20일 이격 21.8%</div>
+  <div class="reason">동일일 공시(언론 보도)로 1분기 영업이익이 전년 대비 대폭 개선(0.4억원→18억원)했다는 사실이 확인되며 단기적 매수 심리를 자극한 것으로 보입니다. 회사 측 설명에 생산라인 통폐합·원부자재 비용 절감·프로젝트 중심 영업 전환 등으로 비용구조가 개선된 점이 구체적 실적 개선 근거로 제시되어 신뢰도가 높습니다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="엠케이전자 033160 반도체 미래에셋 &#x27;tiger 코스닥액티브 etf&#x27;의 편입(포트폴리오 상위권; 반도체 패키징·본딩와이어 업체로 명시) 반도체 소부장, ai 반도체, 패키징 본딩와이어, tiger 코스닥액티브 etf 편입, etf 자금유입 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">엠케이전자</span> <span class="sub mono">033160 · KOSDAQ</span></div>
+    <span class="pct mono">+12.53%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">미래에셋 &#x27;TIGER 코스닥액티브 ETF&#x27;의 편입(포트폴리오 상위권; 반도체 패키징·본딩와이어 업체로 명시)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:54%"></i></span><span class="mono">54</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:69%"></i></span><span class="mono">69</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 1.2배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 49.1 · 거래량 1.2x · 20일 이격 -11.4%</div>
+  <div class="reason">여러 매체의 종목태그 보도로 엠케이전자가 미래에셋의 신규 &#x27;TIGER 코스닥액티브&#x27; ETF 주요 편입 종목으로 확인되면서 ETF 설정·운용에 따른 매수수요(포트폴리오 편입·공급물량 확보 기대)가 즉각적인 수급 호재로 작용한 것으로 판단됩니다. 관련 보도가 같은 날 다수로 쏟아져 기관·개인 매수 심리를 자극했으며, 반도체 패키징(본딩와이어) 수혜 기대감이 가격 상승을 견인한 것으로 보입니다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="자화전자 033240 모빌리티(자동차 부품) 인도 합작법인 설립 — ev·하이브리드용 저전압·고전압 ptc 히터 현지 생산 및 공급(현지화) 인도 ev 시장, 모빌리티 열관리, ptc 히터 현지생산, 인도 합작법인 설립, 현지 공급망 국산화 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">자화전자</span> <span class="sub mono">033240 · KOSPI</span></div>
+    <span class="pct mono">+6.09%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="signal">인도 합작법인 설립 — EV·하이브리드용 저전압·고전압 PTC 히터 현지 생산 및 공급(현지화)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:98%"></i></span><span class="mono">98</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:65%"></i></span><span class="mono">65</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 1.3배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 46.4 · 거래량 1.3x · 20일 이격 -13.1%</div>
+  <div class="reason">5월29일 발표된 타깃 파트너십(인도 현지 합작법인) 뉴스는 자화전자의 열관리 기술을 인도 EV 공급망에 현지화해 수주·매출 확대 가능성을 직접적으로 시사한다. 합작을 통한 현지 생산은 공급 안정성·납기 개선과 함께 향후 수주 증가 기대를 높여 주가에 긍정적 영향을 줬다고 판단된다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="신세계인터내셔날 031430 패션·뷰티 (소비) 니치 향수 브랜드 딥티크의 여름 한정판 &#x27;썸머 컬렉션&#x27; 출시(향수·헤어·바디·홈 프래그런스 총 12종) 및 가로수길·성수 매장 한정 판매·아티스트 협업 프로모션 럭셔리 향수, 여름 시즌 수요, 썸머 컬렉션 한정판, 가로수길·성수 한정 판매, 디스커버리·소용량 세트 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">신세계인터내셔날</span> <span class="sub mono">031430 · KOSPI</span></div>
+    <span class="pct mono">+3.43%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">니치 향수 브랜드 딥티크의 여름 한정판 &#x27;썸머 컬렉션&#x27; 출시(향수·헤어·바디·홈 프래그런스 총 12종) 및 가로수길·성수 매장 한정 판매·아티스트 협업 프로모션</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:76%"></i></span><span class="mono">76</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:54%"></i></span><span class="mono">54</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:56%"></i></span><span class="mono">56</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 1.4배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 48.9 · 거래량 1.4x · 20일 이격 -3.7%</div>
+  <div class="reason">6월 2일 다수의 종목 태그 기사(신세계인터내셔날 보도자료 기반)가 딥티크 여름 한정판 출시를 집중 보도하면서 향수·뷰티 부문 시즌 상품 출시에 따른 매출 기대로 투자 심리가 개선된 것으로 보인다. 5월 말 이어진 이른 더위·여름 수요 관련 업계 보도와 어뮤즈의 동남아 매장 개설 등 글로벌 확장 소식이 결합해 시즌성 매출 기대를 높였기 때문에 주가 상승으로 연결된 것으로 판단된다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="주성엔지니어링 036930 수급/시장수급 코스닥 내 순환매·개별종목 차별화(개인 순매도 속 외국인·기관 매수 유입)로 인한 수급(거래량) 급증 수급(개인·외국인·기관), 코스닥 순환매, 개별종목 차별화, 개인 순매도, 거래대금 급증 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">주성엔지니어링</span> <span class="sub mono">036930 · KOSDAQ</span></div>
+    <span class="pct mono">+6.15%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="signal">코스닥 내 순환매·개별종목 차별화(개인 순매도 속 외국인·기관 매수 유입)로 인한 수급(거래량) 급증</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:66%"></i></span><span class="mono">66</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:63%"></i></span><span class="mono">63</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:55%"></i></span><span class="mono">55</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 1.3배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 60.0 · 거래량 1.3x · 20일 이격 11.7%</div>
+  <div class="reason">당일(2026.06.02) 다수 기사들이 코스닥이 약세인 가운데 일부 종목만 강세를 보였다고 언급하며 주성엔지니어링을 상승 종목으로 직접 표기했다. 별도 공시·실적·계약성 뉴스는 없고 거래량(3.57M주)도 큰 편인 점을 고려하면 일시적 수급(개인 매도·외국인·기관 매수)의 순환매·기술적 매수로 상승한 것으로 판단된다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="선진 136490 정책/시장(수급) 코스피 8000 돌파 관련 &#x27;자본시장 선진화&#x27; 언급(거래시간 연장·결제주기 단축·주식 토큰화 등) 코스피 8000, 자본시장 선진화, 거래소 인프라 개선, 거래시간 연장, 결제주기 단축, 주식 토큰화 avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">선진</span> <span class="sub mono">136490 · KOSPI</span></div>
+    <span class="pct mono">+4.75%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="signal">코스피 8000 돌파 관련 &#x27;자본시장 선진화&#x27; 언급(거래시간 연장·결제주기 단축·주식 토큰화 등)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:16%"></i></span><span class="mono">16</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:54%"></i></span><span class="mono">54</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:23%"></i></span><span class="mono">23</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 1.1배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 48.9 · 거래량 1.1x · 20일 이격 -4.4%</div>
+  <div class="reason">해당 기사(코스피 8000 돌파·KRX의 자본시장 선진화 발언)는 시장 전체 호조를 설명하는 내용으로, &#x27;선진&#x27;이라는 어휘가 포함되어 종목 태깅된 것으로 보입니다. 개별 기업의 실적·수주·공시 등 직접적 호재가 기사 본문에 없으므로 등락은 시장·수급적 요인(지수 랠리)에 따른 테마성 물량 유입 가능성이 큽니다.</div>
+</article>
+<article class="card avoid" data-signal="avoid" data-search="sk네트웍스 001740 분석 실패 json 파싱 오류: expecting value: line 1 column 1 (char 0)  avoid 제외/보류">
+  <div class="row">
+    <div><span class="name">SK네트웍스</span> <span class="sub mono">001740 · KOSPI</span></div>
+    <span class="pct mono">+8.08%</span>
+  </div>
+  <div>
+    <span class="badge">avoid</span>
+    <span class="badge">제외/보류</span>
+    <span class="badge">risk high</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="signal">JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)</div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:16%"></i></span><span class="mono">16</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:58%"></i></span><span class="mono">58</span></div>
+  <div class="bars"><span>종합</span><span class="bar"><i style="width:10%"></i></span><span class="mono">10</span></div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 0.2배 유지 여부를 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 82.6 · 거래량 0.2x · 20일 이격 48.2%</div>
+  <div class="reason"></div>
+</article></section>
+  <h2>점수 테이블</h2>
+  <table>
+  <thead><tr><th>종목</th><th>판정</th><th>종합</th><th>뉴스</th><th>차트</th><th>리스크</th><th>테마</th><th>시그널</th></tr></thead>
+  <tbody><tr data-signal="strong_watch" data-search="티에스이반도체프로브카드 밸류체인에서 hbm4·dram 향 매출 확대 기대(probe card 수요·제품 믹스 개선)">
+  <td><b>티에스이</b><div class="muted mono">131290</div></td>
+  <td>strong_watch<div class="muted">수급 관찰</div></td>
+  <td class="mono">73</td>
+  <td class="mono">64</td>
+  <td class="mono">84</td>
+  <td>low</td>
+  <td>반도체</td>
+  <td>프로브카드 밸류체인에서 HBM4·DRAM 향 매출 확대 기대(Probe Card 수요·제품 믹스 개선)</td>
+</tr><tr data-signal="strong_watch" data-search="에스에이엠티시장평가ceo스코어 &#x27;고속성장&#x27; 부문 우수기업 선정(매출 10조원 미만 그룹 포함)">
+  <td><b>에스에이엠티</b><div class="muted mono">031330</div></td>
+  <td>strong_watch<div class="muted">수급 관찰</div></td>
+  <td class="mono">70</td>
+  <td class="mono">64</td>
+  <td class="mono">78</td>
+  <td>low</td>
+  <td>시장평가</td>
+  <td>CEO스코어 &#x27;고속성장&#x27; 부문 우수기업 선정(매출 10조원 미만 그룹 포함)</td>
+</tr><tr data-signal="wait_pullback" data-search="가온전선수주/계약미국 법인(lscus)의 ai 데이터센터용 버스덕트 장기 프레임 수주(3년 약 1.2조원·5년 약 4조원 등) 및 북미 대형 빅테크 공급 계약">
+  <td><b>가온전선</b><div class="muted mono">000500</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">47</td>
+  <td class="mono">100</td>
+  <td class="mono">38</td>
+  <td>high</td>
+  <td>수주/계약</td>
+  <td>미국 법인(LSCUS)의 AI 데이터센터용 버스덕트 장기 프레임 수주(3년 약 1.2조원·5년 약 4조원 등) 및 북미 대형 빅테크 공급 계약</td>
+</tr><tr data-signal="wait_pullback" data-search="동양고속정책서울고속버스터미널 재개발 공약 부각 — 터미널 지분(0.17%) 보유로 재개발 수혜 기대">
+  <td><b>동양고속</b><div class="muted mono">084670</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">45</td>
+  <td class="mono">98</td>
+  <td class="mono">35</td>
+  <td>high</td>
+  <td>정책</td>
+  <td>서울고속버스터미널 재개발 공약 부각 — 터미널 지분(0.17%) 보유로 재개발 수혜 기대</td>
+</tr><tr data-signal="wait_pullback" data-search="천일고속정책서울고속버스터미널 재개발 기대(지방선거 공약 부각, 터미널 지분 보유로 인한 재개발 수혜 가능성)">
+  <td><b>천일고속</b><div class="muted mono">000650</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">45</td>
+  <td class="mono">98</td>
+  <td class="mono">35</td>
+  <td>high</td>
+  <td>정책</td>
+  <td>서울고속버스터미널 재개발 기대(지방선거 공약 부각, 터미널 지분 보유로 인한 재개발 수혜 가능성)</td>
+</tr><tr data-signal="wait_pullback" data-search="형지i&amp;c수급/자금조달정정신고로 유상증자 1차 발행가액 하향(주당 2,030원)·조달금액 대폭 축소(약 130억→56.84억) 및 채무상환 계획 삭제(금융감독원 전자공시)">
+  <td><b>형지I&amp;C</b><div class="muted mono">011080</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">43</td>
+  <td class="mono">98</td>
+  <td class="mono">31</td>
+  <td>high</td>
+  <td>수급/자금조달</td>
+  <td>정정신고로 유상증자 1차 발행가액 하향(주당 2,030원)·조달금액 대폭 축소(약 130억→56.84억) 및 채무상환 계획 삭제(금융감독원 전자공시)</td>
+</tr><tr data-signal="wait_pullback" data-search="삼아알미늄원자재/수급중동(이란)발 알루미늄 공급차질로 lme 알루미늄 선물가격 급등 → 알루미늄 관련주 수혜">
+  <td><b>삼아알미늄</b><div class="muted mono">006110</div></td>
+  <td>wait_pullback<div class="muted">눌림 대기</div></td>
+  <td class="mono">37</td>
+  <td class="mono">88</td>
+  <td class="mono">31</td>
+  <td>high</td>
+  <td>원자재/수급</td>
+  <td>중동(이란)발 알루미늄 공급차질로 LME 알루미늄 선물가격 급등 → 알루미늄 관련주 수혜</td>
+</tr><tr data-signal="theme_watch" data-search="skai수급/기술적 요인거래대금 급증에 따른 단기 수급·공매도 청산 가능성">
+  <td><b>SKAI</b><div class="muted mono">357880</div></td>
+  <td>theme_watch<div class="muted">수급 관찰</div></td>
+  <td class="mono">46</td>
+  <td class="mono">16</td>
+  <td class="mono">82</td>
+  <td>low</td>
+  <td>수급/기술적 요인</td>
+  <td>거래대금 급증에 따른 단기 수급·공매도 청산 가능성</td>
+</tr><tr data-signal="avoid" data-search="코아스실적1분기 영업이익 3854% 증가(영업이익 18억원) — 생산라인 통폐합·원부자재 비용 절감에 따른 비용구조 개선">
+  <td><b>코아스</b><div class="muted mono">071950</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">70</td>
+  <td class="mono">98</td>
+  <td class="mono">57</td>
+  <td>medium</td>
+  <td>실적</td>
+  <td>1분기 영업이익 3854% 증가(영업이익 18억원) — 생산라인 통폐합·원부자재 비용 절감에 따른 비용구조 개선</td>
+</tr><tr data-signal="avoid" data-search="엠케이전자반도체미래에셋 &#x27;tiger 코스닥액티브 etf&#x27;의 편입(포트폴리오 상위권; 반도체 패키징·본딩와이어 업체로 명시)">
+  <td><b>엠케이전자</b><div class="muted mono">033160</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">69</td>
+  <td class="mono">100</td>
+  <td class="mono">54</td>
+  <td>medium</td>
+  <td>반도체</td>
+  <td>미래에셋 &#x27;TIGER 코스닥액티브 ETF&#x27;의 편입(포트폴리오 상위권; 반도체 패키징·본딩와이어 업체로 명시)</td>
+</tr><tr data-signal="avoid" data-search="자화전자모빌리티(자동차 부품)인도 합작법인 설립 — ev·하이브리드용 저전압·고전압 ptc 히터 현지 생산 및 공급(현지화)">
+  <td><b>자화전자</b><div class="muted mono">033240</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">65</td>
+  <td class="mono">98</td>
+  <td class="mono">46</td>
+  <td>medium</td>
+  <td>모빌리티(자동차 부품)</td>
+  <td>인도 합작법인 설립 — EV·하이브리드용 저전압·고전압 PTC 히터 현지 생산 및 공급(현지화)</td>
+</tr><tr data-signal="avoid" data-search="신세계인터내셔날패션·뷰티 (소비)니치 향수 브랜드 딥티크의 여름 한정판 &#x27;썸머 컬렉션&#x27; 출시(향수·헤어·바디·홈 프래그런스 총 12종) 및 가로수길·성수 매장 한정 판매·아티스트 협업 프로모션">
+  <td><b>신세계인터내셔날</b><div class="muted mono">031430</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">56</td>
+  <td class="mono">76</td>
+  <td class="mono">54</td>
+  <td>medium</td>
+  <td>패션·뷰티 (소비)</td>
+  <td>니치 향수 브랜드 딥티크의 여름 한정판 &#x27;썸머 컬렉션&#x27; 출시(향수·헤어·바디·홈 프래그런스 총 12종) 및 가로수길·성수 매장 한정 판매·아티스트 협업 프로모션</td>
+</tr><tr data-signal="avoid" data-search="주성엔지니어링수급/시장수급코스닥 내 순환매·개별종목 차별화(개인 순매도 속 외국인·기관 매수 유입)로 인한 수급(거래량) 급증">
+  <td><b>주성엔지니어링</b><div class="muted mono">036930</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">55</td>
+  <td class="mono">66</td>
+  <td class="mono">63</td>
+  <td>medium</td>
+  <td>수급/시장수급</td>
+  <td>코스닥 내 순환매·개별종목 차별화(개인 순매도 속 외국인·기관 매수 유입)로 인한 수급(거래량) 급증</td>
+</tr><tr data-signal="avoid" data-search="선진정책/시장(수급)코스피 8000 돌파 관련 &#x27;자본시장 선진화&#x27; 언급(거래시간 연장·결제주기 단축·주식 토큰화 등)">
+  <td><b>선진</b><div class="muted mono">136490</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">23</td>
+  <td class="mono">16</td>
+  <td class="mono">54</td>
+  <td>medium</td>
+  <td>정책/시장(수급)</td>
+  <td>코스피 8000 돌파 관련 &#x27;자본시장 선진화&#x27; 언급(거래시간 연장·결제주기 단축·주식 토큰화 등)</td>
+</tr><tr data-signal="avoid" data-search="sk네트웍스분석 실패json 파싱 오류: expecting value: line 1 column 1 (char 0)">
+  <td><b>SK네트웍스</b><div class="muted mono">001740</div></td>
+  <td>avoid<div class="muted">제외/보류</div></td>
+  <td class="mono">10</td>
+  <td class="mono">16</td>
+  <td class="mono">58</td>
+  <td>high</td>
+  <td>분석 실패</td>
+  <td>JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)</td>
+</tr></tbody>
+</table>
+</main>
+<script id="payload" type="application/json">{"generated_at": "2026-06-03T14:25:59", "date": "20260602", "source_report": "/Users/choiminsoo/Downloads/stock_analyzer/reports/report_20260602.csv", "count": 15, "chart_count": 15, "signal_counts": {"strong_watch": 2, "wait_pullback": 5, "theme_watch": 1, "avoid": 7}, "quadrant_counts": {"수급 관찰": 3, "눌림 대기": 5, "제외/보류": 7}, "risk_counts": {"low": 3, "high": 6, "medium": 6}, "signals": [{"date": "20260602", "ticker": "131290", "name": "티에스이", "market": "KOSDAQ", "change_pct": 3.23, "status": "new", "confidence": "medium", "main_theme": "반도체", "specific_signal": "프로브카드 밸류체인에서 HBM4·DRAM 향 매출 확대 기대(Probe Card 수요·제품 믹스 개선)", "trigger_type": "rumor", "reasoning": "메리츠 리포트와 반도체 밸류체인 ETF 편입 소식이 섞여 프로브카드 수혜주라는 기대감이 확산되었기 때문으로 보인다. 특히 샘씨엔에스 리포트에서 티에스이의 국내 IDM·중국 고객사향 DRAM 물량 확대와 HBM4 관련 매출 본격화가 언급되며 수요 성장 시그널이 부각됐다.", "related_stocks": "샘씨엔에스, 주성엔지니어링, 리노공업", "watch_keywords": "반도체 장비, 소부장(장비), 프로브카드(HBM4), DRAM향 침투 확대, ETF 자금 유입", "news_count": 3, "news_score": 64, "chart_score": 84, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 0.9, "value_ratio_20d": 0.91, "rsi14": 58.33, "distance_ma20_pct": 2.78, "high_60d_breakout": false, "combined_score": 73, "trade_signal": "strong_watch", "quadrant": "수급 관찰", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260602", "ticker": "031330", "name": "에스에이엠티", "market": "KOSDAQ", "change_pct": 10.68, "status": "new", "confidence": "medium", "main_theme": "시장평가", "specific_signal": "CEO스코어 '고속성장' 부문 우수기업 선정(매출 10조원 미만 그룹 포함)", "trigger_type": "rumor", "reasoning": "다수의 언론(stock_news)에서 CEO스코어 대기업 경영평가 결과를 보도하며 에스에이엠티를 '고속성장' 부문 우수기업(매출 10조원 미만)으로 언급한 점이 투자심리 자극으로 작용한 것으로 보인다. 14일 내 공시·수주·실적 등 회사 고유의 확정성 있는 호재는 확인되지 않아 매체 노출에 따른 수급·테마성 매매가 주된 원인일 가능성이 높다.", "related_stocks": "에이피알, 한화호텔앤드리조트", "watch_keywords": "기업경영평가, 시장수급, CEO스코어 고속성장 부문, 매출 10조원 미만 우수기업, 네이버 종목 태깅", "news_count": 9, "news_score": 64, "chart_score": 78, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 24.0%라 눌림 확인이 유리합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 0.64, "value_ratio_20d": 0.74, "rsi14": 65.86, "distance_ma20_pct": 23.97, "high_60d_breakout": false, "combined_score": 70, "trade_signal": "strong_watch", "quadrant": "수급 관찰", "entry_note": "뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다."}, {"date": "20260602", "ticker": "000500", "name": "가온전선", "market": "KOSPI", "change_pct": 4.89, "status": "new", "confidence": "high", "main_theme": "수주/계약", "specific_signal": "미국 법인(LSCUS)의 AI 데이터센터용 버스덕트 장기 프레임 수주(3년 약 1.2조원·5년 약 4조원 등) 및 북미 대형 빅테크 공급 계약", "trigger_type": "contract", "reasoning": "최근 다수 보도를 통해 가온전선의 미국 법인 LSCUS가 구글·아마존·기타 빅테크를 대상으로 대규모·장기 버스덕트 공급 프레임 계약을 확보한 사실이 확인되었다. 해당 수주(프레임 계약)는 향후 수년간 안정적 매출과 고마진 물량 흡수를 의미해 시장에서 즉각적인 재평가(주가 상승)로 연결된 것으로 판단된다.", "related_stocks": "LS전선, LS일렉트릭", "watch_keywords": "AI 데이터센터, 전력 인프라, 버스덕트 장기 프레임 계약, 미국 LSCUS 공장 가동률, 북미 빅테크 수주", "news_count": 20, "news_score": 100, "chart_score": 38, "chart_risk": "high", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 0.74, "value_ratio_20d": 0.71, "rsi14": 33.91, "distance_ma20_pct": -2.89, "high_60d_breakout": false, "combined_score": 47, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260602", "ticker": "084670", "name": "동양고속", "market": "KOSPI", "change_pct": 10.04, "status": "new", "confidence": "high", "main_theme": "정책", "specific_signal": "서울고속버스터미널 재개발 공약 부각 — 터미널 지분(0.17%) 보유로 재개발 수혜 기대", "trigger_type": "policy", "reasoning": "6·3 지방선거를 앞두고 서울시장 후보의 서울고속버스터미널 재개발 공약이 부각되면서 터미널 지분을 보유한 종목들이 재개발 수혜 기대감으로 동반 급등했습니다. 동양고속은 보유 지분(0.17%)이 기사에 명시되며 테마성 매수세를 유발해 당일 큰 폭의 상승을 기록한 것으로 판단됩니다.", "related_stocks": "천일고속, 신세계", "watch_keywords": "재개발, 지방선거(서울시장 공약), 서울고속버스터미널 재개발, 터미널 지분 보유, 백화점 입점 가능성", "news_count": 6, "news_score": 98, "chart_score": 35, "chart_risk": "high", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 2.68, "value_ratio_20d": 1.95, "rsi14": 54.08, "distance_ma20_pct": -8.42, "high_60d_breakout": false, "combined_score": 45, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260602", "ticker": "000650", "name": "천일고속", "market": "KOSPI", "change_pct": 9.52, "status": "new", "confidence": "high", "main_theme": "정책", "specific_signal": "서울고속버스터미널 재개발 기대(지방선거 공약 부각, 터미널 지분 보유로 인한 재개발 수혜 가능성)", "trigger_type": "policy", "reasoning": "6·3 지방선거를 앞두고 서울시장 후보의 공약 등으로 서울고속버스터미널 재개발 가능성이 부각되면서 터미널 지분을 보유한 관련주에 매수세가 집중된 것으로 보입니다. 천일고속은 터미널 지분(약 16.67%) 보유로 재개발 수혜 기대가 직접적이며, 이 기대감이 단기적으로 주가를 끌어올린 것으로 판단됩니다.", "related_stocks": "동양고속, 신세계", "watch_keywords": "지방선거 공약, 도시재개발, 서울고속버스터미널 재개발, 터미널 지분(16.67%), 백화점 복합개발 입점 기대", "news_count": 5, "news_score": 98, "chart_score": 35, "chart_risk": "high", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 2.6, "value_ratio_20d": 2.0, "rsi14": 55.95, "distance_ma20_pct": -1.91, "high_60d_breakout": false, "combined_score": 45, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260602", "ticker": "011080", "name": "형지I&C", "market": "KOSDAQ", "change_pct": 5.38, "status": "new", "confidence": "high", "main_theme": "수급/자금조달", "specific_signal": "정정신고로 유상증자 1차 발행가액 하향(주당 2,030원)·조달금액 대폭 축소(약 130억→56.84억) 및 채무상환 계획 삭제(금융감독원 전자공시)", "trigger_type": "disclosure", "reasoning": "당일 공시로 유상증자 규모가 절반 이상 줄어들었다는 정정신고가 나왔고, 시장은 축소된 조달액이 향후 희석 부담(유상증자에 따른 주식수 증가)을 완화할 것으로 해석하여 수급 측면에서 주가를 지지한 것으로 보인다. 아울러 최근 이토추와의 일본 유통 협력(해외 판로 확대) 보도가 병행되며 성장 스토리도 부각되어 매수 심리가 강화된 것으로 판단된다.", "related_stocks": "LF, 한세실업", "watch_keywords": "유상증자 조정, 자금조달 규모 축소, 일본 이토추 협력, K패션 온라인 플랫폼 8월 오픈, 캐리스노트 일본 입점", "news_count": 12, "news_score": 98, "chart_score": 31, "chart_risk": "high", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 4.01, "value_ratio_20d": 2.75, "rsi14": 36.68, "distance_ma20_pct": -28.71, "high_60d_breakout": false, "combined_score": 43, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260602", "ticker": "006110", "name": "삼아알미늄", "market": "KOSPI", "change_pct": 4.9, "status": "new", "confidence": "high", "main_theme": "원자재/수급", "specific_signal": "중동(이란)발 알루미늄 공급차질로 LME 알루미늄 선물가격 급등 → 알루미늄 관련주 수혜", "trigger_type": "rumor", "reasoning": "5월22일 다수의 종목태그 기사에서 '이란 사태로 중동 제련소 가동중단·호르무즈 봉쇄' 보도로 알루미늄 공급 우려가 커지며 LME 가격이 상승했고, 같은 날 삼아알미늄이 섹터 동반 급등(약 +16%)했다. 이번 D-day의 소폭 상승(+4.90%)은 이 같은 공급충격 기반의 원자재 가격 강세와 섹터 재평가 또는 단기 차익·공매 커버링의 연장선으로 판단된다.", "related_stocks": "남선알미늄, 조일알미늄", "watch_keywords": "알루미늄 공급차질, 중동 지정학 리스크, LME 알루미늄 가격, 호르무즈 해협 봉쇄, 알루미늄 생산능력(CAPA)", "news_count": 5, "news_score": 88, "chart_score": 31, "chart_risk": "high", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 1.65, "value_ratio_20d": 1.59, "rsi14": 49.95, "distance_ma20_pct": -2.3, "high_60d_breakout": false, "combined_score": 37, "trade_signal": "wait_pullback", "quadrant": "눌림 대기", "entry_note": "재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다."}, {"date": "20260602", "ticker": "357880", "name": "SKAI", "market": "KOSDAQ", "change_pct": 8.22, "status": "unclear", "confidence": "low", "main_theme": "수급/기술적 요인", "specific_signal": "거래대금 급증에 따른 단기 수급·공매도 청산 가능성", "trigger_type": "unknown", "reasoning": "최근 14일 내 종목 관련 뉴스가 전무하여 뚜렷한 본질적 호재(공시·수주·실적 등)는 확인되지 않습니다. D-day 거래량이 평소 대비 크게 늘어난 가운데 주가가 8%대 상승한 점으로 보아 단기 수급(프로그램·개인·공매도 청산)이나 기술적 반등이 주요 원인으로 판단됩니다.", "related_stocks": "", "watch_keywords": "수급, 기술적 반등, 거래대금 급증, 프로그램 매매, 공매도 청산", "news_count": 0, "news_score": 16, "chart_score": 82, "chart_risk": "low", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 34.5%라 눌림 확인이 유리합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 2.39, "value_ratio_20d": 3.18, "rsi14": 71.11, "distance_ma20_pct": 34.55, "high_60d_breakout": false, "combined_score": 46, "trade_signal": "theme_watch", "quadrant": "수급 관찰", "entry_note": "차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다."}, {"date": "20260602", "ticker": "071950", "name": "코아스", "market": "KOSPI", "change_pct": 5.59, "status": "new", "confidence": "high", "main_theme": "실적", "specific_signal": "1분기 영업이익 3854% 증가(영업이익 18억원) — 생산라인 통폐합·원부자재 비용 절감에 따른 비용구조 개선", "trigger_type": "earnings", "reasoning": "동일일 공시(언론 보도)로 1분기 영업이익이 전년 대비 대폭 개선(0.4억원→18억원)했다는 사실이 확인되며 단기적 매수 심리를 자극한 것으로 보입니다. 회사 측 설명에 생산라인 통폐합·원부자재 비용 절감·프로젝트 중심 영업 전환 등으로 비용구조가 개선된 점이 구체적 실적 개선 근거로 제시되어 신뢰도가 높습니다.", "related_stocks": "퍼시스, 한샘", "watch_keywords": "실적 개선, 원가 절감, 생산라인 통폐합, 영업이익 18억원, 프로젝트 중심 영업", "news_count": 1, "news_score": 98, "chart_score": 57, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 21.8%라 눌림 확인이 유리합니다.", "volume_ratio_20d": 0.86, "value_ratio_20d": 1.05, "rsi14": 67.04, "distance_ma20_pct": 21.75, "high_60d_breakout": false, "combined_score": 70, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 0.9배 유지 여부를 확인합니다."}, {"date": "20260602", "ticker": "033160", "name": "엠케이전자", "market": "KOSDAQ", "change_pct": 12.53, "status": "new", "confidence": "high", "main_theme": "반도체", "specific_signal": "미래에셋 'TIGER 코스닥액티브 ETF'의 편입(포트폴리오 상위권; 반도체 패키징·본딩와이어 업체로 명시)", "trigger_type": "disclosure", "reasoning": "여러 매체의 종목태그 보도로 엠케이전자가 미래에셋의 신규 'TIGER 코스닥액티브' ETF 주요 편입 종목으로 확인되면서 ETF 설정·운용에 따른 매수수요(포트폴리오 편입·공급물량 확보 기대)가 즉각적인 수급 호재로 작용한 것으로 판단됩니다. 관련 보도가 같은 날 다수로 쏟아져 기관·개인 매수 심리를 자극했으며, 반도체 패키징(본딩와이어) 수혜 기대감이 가격 상승을 견인한 것으로 보입니다.", "related_stocks": "ISC, 샘씨엔에스", "watch_keywords": "반도체 소부장, AI 반도체, 패키징 본딩와이어, TIGER 코스닥액티브 ETF 편입, ETF 자금유입", "news_count": 19, "news_score": 100, "chart_score": 54, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다.", "volume_ratio_20d": 1.21, "value_ratio_20d": 1.06, "rsi14": 49.14, "distance_ma20_pct": -11.36, "high_60d_breakout": false, "combined_score": 69, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 1.2배 유지 여부를 확인합니다."}, {"date": "20260602", "ticker": "033240", "name": "자화전자", "market": "KOSPI", "change_pct": 6.09, "status": "new", "confidence": "high", "main_theme": "모빌리티(자동차 부품)", "specific_signal": "인도 합작법인 설립 — EV·하이브리드용 저전압·고전압 PTC 히터 현지 생산 및 공급(현지화)", "trigger_type": "contract", "reasoning": "5월29일 발표된 타깃 파트너십(인도 현지 합작법인) 뉴스는 자화전자의 열관리 기술을 인도 EV 공급망에 현지화해 수주·매출 확대 가능성을 직접적으로 시사한다. 합작을 통한 현지 생산은 공급 안정성·납기 개선과 함께 향후 수주 증가 기대를 높여 주가에 긍정적 영향을 줬다고 판단된다.", "related_stocks": "한온시스템, 만도", "watch_keywords": "인도 EV 시장, 모빌리티 열관리, PTC 히터 현지생산, 인도 합작법인 설립, 현지 공급망 국산화", "news_count": 1, "news_score": 98, "chart_score": 46, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다.", "volume_ratio_20d": 1.27, "value_ratio_20d": 1.05, "rsi14": 46.44, "distance_ma20_pct": -13.11, "high_60d_breakout": false, "combined_score": 65, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 1.3배 유지 여부를 확인합니다."}, {"date": "20260602", "ticker": "031430", "name": "신세계인터내셔날", "market": "KOSPI", "change_pct": 3.43, "status": "new", "confidence": "medium", "main_theme": "패션·뷰티 (소비)", "specific_signal": "니치 향수 브랜드 딥티크의 여름 한정판 '썸머 컬렉션' 출시(향수·헤어·바디·홈 프래그런스 총 12종) 및 가로수길·성수 매장 한정 판매·아티스트 협업 프로모션", "trigger_type": "disclosure", "reasoning": "6월 2일 다수의 종목 태그 기사(신세계인터내셔날 보도자료 기반)가 딥티크 여름 한정판 출시를 집중 보도하면서 향수·뷰티 부문 시즌 상품 출시에 따른 매출 기대로 투자 심리가 개선된 것으로 보인다. 5월 말 이어진 이른 더위·여름 수요 관련 업계 보도와 어뮤즈의 동남아 매장 개설 등 글로벌 확장 소식이 결합해 시즌성 매출 기대를 높였기 때문에 주가 상승으로 연결된 것으로 판단된다.", "related_stocks": "아모레퍼시픽, LG생활건강, LF", "watch_keywords": "럭셔리 향수, 여름 시즌 수요, 썸머 컬렉션 한정판, 가로수길·성수 한정 판매, 디스커버리·소용량 세트", "news_count": 20, "news_score": 76, "chart_score": 54, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다.", "volume_ratio_20d": 1.39, "value_ratio_20d": 1.29, "rsi14": 48.85, "distance_ma20_pct": -3.67, "high_60d_breakout": false, "combined_score": 56, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 1.4배 유지 여부를 확인합니다."}, {"date": "20260602", "ticker": "036930", "name": "주성엔지니어링", "market": "KOSDAQ", "change_pct": 6.15, "status": "new", "confidence": "medium", "main_theme": "수급/시장수급", "specific_signal": "코스닥 내 순환매·개별종목 차별화(개인 순매도 속 외국인·기관 매수 유입)로 인한 수급(거래량) 급증", "trigger_type": "technical", "reasoning": "당일(2026.06.02) 다수 기사들이 코스닥이 약세인 가운데 일부 종목만 강세를 보였다고 언급하며 주성엔지니어링을 상승 종목으로 직접 표기했다. 별도 공시·실적·계약성 뉴스는 없고 거래량(3.57M주)도 큰 편인 점을 고려하면 일시적 수급(개인 매도·외국인·기관 매수)의 순환매·기술적 매수로 상승한 것으로 판단된다.", "related_stocks": "코오롱티슈진, 컴퍼니케이", "watch_keywords": "수급(개인·외국인·기관), 코스닥 순환매, 개별종목 차별화, 개인 순매도, 거래대금 급증", "news_count": 20, "news_score": 66, "chart_score": 63, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.", "volume_ratio_20d": 1.34, "value_ratio_20d": 1.42, "rsi14": 59.97, "distance_ma20_pct": 11.72, "high_60d_breakout": false, "combined_score": 55, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 1.3배 유지 여부를 확인합니다."}, {"date": "20260602", "ticker": "136490", "name": "선진", "market": "KOSPI", "change_pct": 4.75, "status": "unclear", "confidence": "low", "main_theme": "정책/시장(수급)", "specific_signal": "코스피 8000 돌파 관련 '자본시장 선진화' 언급(거래시간 연장·결제주기 단축·주식 토큰화 등)", "trigger_type": "unknown", "reasoning": "해당 기사(코스피 8000 돌파·KRX의 자본시장 선진화 발언)는 시장 전체 호조를 설명하는 내용으로, '선진'이라는 어휘가 포함되어 종목 태깅된 것으로 보입니다. 개별 기업의 실적·수주·공시 등 직접적 호재가 기사 본문에 없으므로 등락은 시장·수급적 요인(지수 랠리)에 따른 테마성 물량 유입 가능성이 큽니다.", "related_stocks": "", "watch_keywords": "코스피 8000, 자본시장 선진화, 거래소 인프라 개선, 거래시간 연장, 결제주기 단축, 주식 토큰화", "news_count": 1, "news_score": 16, "chart_score": 54, "chart_risk": "medium", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다.", "volume_ratio_20d": 1.07, "value_ratio_20d": 1.0, "rsi14": 48.9, "distance_ma20_pct": -4.41, "high_60d_breakout": false, "combined_score": 23, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 1.1배 유지 여부를 확인합니다."}, {"date": "20260602", "ticker": "001740", "name": "SK네트웍스", "market": "KOSPI", "change_pct": 8.08, "status": "unclear", "confidence": "low", "main_theme": "분석 실패", "specific_signal": "JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)", "trigger_type": "", "reasoning": "", "related_stocks": "", "watch_keywords": "", "news_count": 11, "news_score": 16, "chart_score": 58, "chart_risk": "high", "chart_pattern": "momentum_watch", "chart_comment": "모멘텀은 있으나 추가 확인이 필요한 자리입니다. RSI 82.6로 추격 매수는 부담스럽습니다. 20일선 이격 48.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.", "volume_ratio_20d": 0.23, "value_ratio_20d": 0.31, "rsi14": 82.56, "distance_ma20_pct": 48.23, "high_60d_breakout": false, "combined_score": 10, "trade_signal": "avoid", "quadrant": "제외/보류", "entry_note": "momentum_watch 패턴입니다. 거래량 0.2배 유지 여부를 확인합니다."}]}</script>
+<script>
+let current = 'all';
+let query = '';
+const buttons = [...document.querySelectorAll('button[data-filter]')];
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  current = btn.dataset.filter;
+  buttons.forEach(b => b.classList.toggle('active', b === btn));
+  applyFilters();
+}));
+document.getElementById('search').addEventListener('input', e => {
+  query = e.target.value.trim().toLowerCase();
+  applyFilters();
+});
+function applyFilters() {
+  document.querySelectorAll('[data-signal]').forEach(el => {
+    const passType = current === 'all' || el.dataset.signal === current;
+    const text = el.dataset.search || el.textContent.toLowerCase();
+    el.classList.toggle('hide', !(passType && (!query || text.includes(query))));
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,725 @@
+{
+  "generated_at": "2026-06-11T17:00:38",
+  "report": "/Users/choiminsoo/Downloads/stock_analyzer/reports/report_20260604.csv",
+  "home": "/Users/choiminsoo/Downloads/stock_analyzer/assistant_home.html",
+  "parts": {
+    "chart": {
+      "paths": {
+        "json": "/Users/choiminsoo/Downloads/stock_analyzer/chart_analysis/output/chart_report_20260604.json",
+        "csv": "/Users/choiminsoo/Downloads/stock_analyzer/chart_analysis/output/chart_report_20260604.csv",
+        "html": "/Users/choiminsoo/Downloads/stock_analyzer/chart_analysis/output/chart_report_20260604.html"
+      },
+      "count": 20,
+      "errors": []
+    },
+    "visual": {
+      "paths": {
+        "json": "/Users/choiminsoo/Downloads/stock_analyzer/visual_dashboard/output/combined_signals_20260604.json",
+        "html": "/Users/choiminsoo/Downloads/stock_analyzer/visual_dashboard/output/dashboard_20260604.html",
+        "latest": "/Users/choiminsoo/Downloads/stock_analyzer/visual_dashboard/output/dashboard.html"
+      },
+      "count": 20
+    },
+    "opportunities": {
+      "paths": {
+        "json": "/Users/choiminsoo/Downloads/stock_analyzer/opportunity_engine/output/opportunities_20260604.json",
+        "html": "/Users/choiminsoo/Downloads/stock_analyzer/opportunity_engine/output/opportunity_board_20260604.html",
+        "latest": "/Users/choiminsoo/Downloads/stock_analyzer/opportunity_engine/output/opportunity_board.html"
+      },
+      "count": 18
+    },
+    "profitability": {
+      "paths": {
+        "backtest_json": "/Users/choiminsoo/Downloads/stock_analyzer/profitability/output/backtest_trades_20260604.json",
+        "backtest_csv": "/Users/choiminsoo/Downloads/stock_analyzer/profitability/output/backtest_trades_20260604.csv",
+        "keyword_perf": "/Users/choiminsoo/Downloads/stock_analyzer/profitability/output/keyword_performance_20260604.json",
+        "dashboard_dated": "/Users/choiminsoo/Downloads/stock_analyzer/profitability/output/profitability_dashboard_20260604.html",
+        "dashboard_latest": "/Users/choiminsoo/Downloads/stock_analyzer/profitability/output/profitability_dashboard.html"
+      },
+      "trade_count": 802,
+      "keyword_count": 2936,
+      "errors": [
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        },
+        {
+          "ticker": null,
+          "error": "missing date"
+        }
+      ]
+    },
+    "home": {
+      "paths": {
+        "json": "/Users/choiminsoo/Downloads/stock_analyzer/stock_assistant/output/unified_dashboard.json",
+        "html": "/Users/choiminsoo/Downloads/stock_analyzer/stock_assistant/output/index.html",
+        "reports_home": "/Users/choiminsoo/Downloads/stock_analyzer/reports/home.html"
+      },
+      "root_home": "/Users/choiminsoo/Downloads/stock_analyzer/assistant_home.html"
+    }
+  }
+}

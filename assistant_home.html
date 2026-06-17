@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Stock Analyzer Home</title>
+<style>
+  :root {
+    --bg:#0d1117; --fg:#edf2f7; --muted:#9da8b5; --panel:#161b22; --panel2:#202734;
+    --line:#2b3442; --green:#35c77b; --blue:#6ea8fe; --yellow:#f4b64a; --red:#ff6f68; --cyan:#54d7d0;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  aside { position:fixed; inset:0 auto 0 0; width:250px; padding:22px 16px; background:#111720; border-right:1px solid var(--line); }
+  main { margin-left:250px; padding:24px 30px 44px; }
+  h1 { margin:0 0 4px; font-size:22px; }
+  h2 { margin:28px 0 12px; font-size:17px; color:var(--cyan); }
+  h3 { margin:0; font-size:15px; }
+  .muted { color:var(--muted); }
+  .nav { display:flex; flex-direction:column; gap:6px; margin-top:20px; }
+  .nav button,.link { width:100%; text-align:left; background:transparent; border:1px solid transparent; color:var(--fg); padding:8px 10px; border-radius:6px; cursor:pointer; text-decoration:none; font:inherit; }
+  .nav button.active,.nav button:hover,.link:hover { background:var(--panel2); border-color:var(--line); }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .kpi b { display:block; font-size:24px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:12px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:14px; }
+  .card.good { border-left:4px solid var(--green); }
+  .card.wait { border-left:4px solid var(--yellow); }
+  .card.watch { border-left:4px solid var(--blue); }
+  .card.bad { opacity:.76; }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .name { font-weight:700; }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .pct { color:#ff848c; font-weight:700; }
+  .badge { display:inline-block; background:var(--panel2); border:1px solid var(--line); border-radius:999px; padding:2px 8px; margin:6px 4px 0 0; font-size:12px; }
+  .signal { color:var(--cyan); margin-top:8px; font-weight:600; }
+  .note { margin-top:8px; color:#dce5ee; }
+  .section { display:none; }
+  .section.active { display:block; }
+  input { width:100%; background:var(--panel); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:8px 10px; margin-top:14px; }
+  .mini-list { display:flex; flex-direction:column; gap:8px; }
+  .list-item { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  a { color:var(--cyan); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .hide { display:none; }
+  @media (max-width: 900px) {
+    aside { position:static; width:auto; border-right:0; border-bottom:1px solid var(--line); }
+    main { margin-left:0; }
+    .nav { flex-direction:row; flex-wrap:wrap; }
+    .nav button,.link { width:auto; }
+  }
+</style>
+</head>
+<body>
+<aside>
+  <h1>Stock Analyzer</h1>
+  <div class="muted">뉴스, 키워드, 차트가 한 화면에 모이는 홈</div>
+  <input id="search" placeholder="검색: 종목/테마/키워드">
+  <nav class="nav">
+    <button class="active" data-tab="overview">홈</button>
+    <button data-tab="signals">뉴스 × 차트</button>
+    <button data-tab="opportunities">기회 카드</button>
+    <button data-tab="life">생활 테마</button>
+    <button data-tab="links">상세 보기</button>
+  </nav>
+  <div class="muted" style="margin-top:18px;font-size:12px">생성 2026-06-11T17:00:38</div>
+</aside>
+<main>
+  <section id="tab-overview" class="section active">
+    
+<div style="background:linear-gradient(135deg,#1a2331,#162028); border:1px solid var(--line);
+            border-radius:12px; padding:16px 20px; margin-bottom:20px;">
+  <div style="display:flex; flex-wrap:wrap; gap:8px 24px; align-items:baseline;">
+    <h2 style="margin:0; color:var(--cyan); font-size:18px;">📊 분석 기준: <span style="color:var(--fg)">20260604</span></h2>
+    <span class="muted" style="font-size:12px;">마지막 빌드: 2026-06-11 17:00:38</span>
+  </div>
+  <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:6px 16px; font-size:13px;">
+    <span>📦 누적 시그널 <b style="color:var(--cyan);">182</b>종목</span>
+    <span>🏷 watch_keywords <b style="color:var(--cyan);">754</b>개</span>
+    <span>🔍 deep_keywords <b style="color:var(--cyan);">102</b>개</span>
+    <span>🟢 high <b>67</b> · 🟡 medium <b>52</b> · 🔴 low <b>63</b></span>
+    <span class="muted">커버 일자: 20260424 ~ 20260604 (18일)</span>
+  </div>
+</div>
+    <h2>오늘의 요약</h2>
+    <div class="kpis"><div class="kpi"><b>1</b><span class="muted">핵심 후보</span></div><div class="kpi"><b>7</b><span class="muted">눌림 대기</span></div><div class="kpi"><b>18</b><span class="muted">기회 카드</span></div><div class="kpi"><b>10</b><span class="muted">생활 테마</span></div><div class="kpi"><b>20</b><span class="muted">차트 결합</span></div></div>
+    
+    <h2>가장 강한 후보</h2>
+    <div class="grid"><article class="card good" data-search="진원생명과학 011000 바이오 고공 공매도 비중(시가총액 대비 공매도 순보유잔고) 및 감염병(에볼라·한타) 테마 재부각 — 짧은 기간 쇼트커버링 가능성 수급·공매도, 감염병(에볼라·한타) 테마, 에볼라 dna 백신 공동개발, 공매도 순보유잔고 3.79%, 대차거래 잔고/쇼트 커버링 strong_watch">
+  <div class="row"><div><span class="name">진원생명과학</span> <span class="muted mono">011000</span></div><span class="pct mono">+13.70%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">medium</span>
+  <div class="signal">고공 공매도 비중(시가총액 대비 공매도 순보유잔고) 및 감염병(에볼라·한타) 테마 재부각 — 짧은 기간 쇼트커버링 가능성</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 70 · 뉴스 64 · 차트 78</div>
+</article><article class="card wait" data-search="kx하이텍 052900 반도체 데이터센터향(essd) 케이스 수요 폭증·공급부족(숏티지) 확인 및 베트남 공장 풀가동으로 인한 capa(증설) 필요성 반도체, ai 데이터센터, essd 케이스 숏티지, 고asp essd, 베트남 공장 풀가동, capa 증설 wait_pullback">
+  <div class="row"><div><span class="name">KX하이텍</span> <span class="muted mono">052900</span></div><span class="pct mono">+9.26%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">high</span>
+  <div class="signal">데이터센터향(eSSD) 케이스 수요 폭증·공급부족(숏티지) 확인 및 베트남 공장 풀가동으로 인한 CAPA(증설) 필요성</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 56 · 뉴스 98 · 차트 61</div>
+</article><article class="card wait" data-search="씨이랩 189330 실적 1분기 수주잔고 약 25.78억(전년比 약 3배)·매출 42% 증가 발표 및 nvidia 파트너십·dgx b300 도입 레퍼런스 공개 피지컬 ai, gpu 인프라, 수주잔고 25억대, dgx b300 레퍼런스, 옴니버스 컴피턴시 wait_pullback">
+  <div class="row"><div><span class="name">씨이랩</span> <span class="muted mono">189330</span></div><span class="pct mono">+10.20%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">medium</span>
+  <div class="signal">1분기 수주잔고 약 25.78억(전년比 약 3배)·매출 42% 증가 발표 및 NVIDIA 파트너십·DGX B300 도입 레퍼런스 공개</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 24.5%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 49 · 뉴스 74 · 차트 74</div>
+</article><article class="card wait" data-search="엠케이전자 033160 반도체 lpddr5x 확산에 따른 본딩와이어 수요 증가(회사 발표) — 동시에 tiger 코스닥액티브 etf 주요 편입 소식에 따른 수급 개선 반도체 소부장, ai pc 확산, lpddr5x 채택 확대, 본딩와이어 수요 증가, tiger 코스닥액티브 편입 wait_pullback">
+  <div class="row"><div><span class="name">엠케이전자</span> <span class="muted mono">033160</span></div><span class="pct mono">+9.15%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">high</span>
+  <div class="signal">LPDDR5X 확산에 따른 본딩와이어 수요 증가(회사 발표) — 동시에 TIGER 코스닥액티브 ETF 주요 편입 소식에 따른 수급 개선</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 48 · 뉴스 100 · 차트 39</div>
+</article><article class="card wait" data-search="에스에이엠티 031330 반도체 소부장 반도체 장비·부품 업종 동반 강세(특히 wfe 투자 사이클 기대감) 및 코스닥 활성화 정책 기대 반도체 소부장, wfe 투자 사이클, 코스닥 활성화 대책, 웨이퍼 팹 제조 장비 수주, 메모리 ai 수요 wait_pullback">
+  <div class="row"><div><span class="name">에스에이엠티</span> <span class="muted mono">031330</span></div><span class="pct mono">+15.92%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">medium</span>
+  <div class="signal">반도체 장비·부품 업종 동반 강세(특히 WFE 투자 사이클 기대감) 및 코스닥 활성화 정책 기대</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 37.7%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 48 · 뉴스 74 · 차트 72</div>
+</article><article class="card wait" data-search="동양고속 084670 정책 서울고속버스터미널 재개발 가속화 기대 (서울시장 선거 결과에 따른 재개발 추진 모멘텀, 해당 터미널 지분 보유로 인한 개발 수혜 기대) 서울시장 당선(오세훈), 재개발 정책 모멘텀, 서울고속버스터미널 재개발, 터미널 지분 0.17%, 터미널 내 백화점 보유 wait_pullback">
+  <div class="row"><div><span class="name">동양고속</span> <span class="muted mono">084670</span></div><span class="pct mono">+6.56%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">high</span>
+  <div class="signal">서울고속버스터미널 재개발 가속화 기대 (서울시장 선거 결과에 따른 재개발 추진 모멘텀, 해당 터미널 지분 보유로 인한 개발 수혜 기대)</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 43 · 뉴스 98 · 차트 31</div>
+</article></div>
+    <h2>상위 기회 카드</h2>
+    <div class="grid"><article class="card good" data-search="고공 공매도 비중(시가총액 대비 공매도 순보유잔고) 및 감염병(에볼라·한타) 테마 재부각 — 짧은 기간 쇼트커버링 가능성 바이오 수급 공매도 감염병(에볼라 한타) 테마 에볼라 dna 백신 공동개발 공매도 순보유잔고 3.79% 대차거래 잔고 쇼트 커버링 진원생명과학">
+  <div class="row"><h3>고공 공매도 비중(시가총액 대비 공매도 순보유잔고) 및 감염병(에볼라·한타) 테마 재부각 — 짧은 기간 쇼트커버링 가능성</h3><span class="mono">87</span></div>
+  <span class="badge">바이오</span><span class="badge">probable</span>
+  <div class="signal">수급, 공매도, 감염병(에볼라, 한타) 테마</div>
+  <div class="note">바이오 테마에서 수급, 공매도, 감염병(에볼라, 한타) 테마가 핵심 매수 포인트입니다. 진원생명과학이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 진원생명과학 73</div>
+</article><article class="card watch" data-search="중국 종합반도체사 대상 154억원(약 1,026만달러) 규모 반도체 검사장비 공급계약(단일계약 매출비 약 30%) 반도체 반도체 후공정 중국 반도체 수요 단일계약 매출비 30% 하반기 매출 인식 대금 70% 선지급 중국 종합반도체사 대상 154억원 026만달러 규모 반도체 검사장비 공급계약 미래산업">
+  <div class="row"><h3>중국 종합반도체사 대상 154억원(약 1,026만달러) 규모 반도체 검사장비 공급계약(단일계약 매출비 약 30%)</h3><span class="mono">85</span></div>
+  <span class="badge">반도체</span><span class="badge">direct</span>
+  <div class="signal">반도체 후공정, 중국 반도체 수요, 단일계약 매출비 30%, 하반기 매출 인식</div>
+  <div class="note">반도체 관련 신호입니다. 현재는 미래산업 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="muted">상위: 미래산업 71</div>
+</article><article class="card watch" data-search="모회사 지분 일부(71만5,564주, 약 200억 원) 장내·시간외 처분 결정으로 유통주식 확대·주주환원 재원 확보 수급/지배구조(지분 처분) 지분 처분 유통주식 확대 주주환원 재원 장내매도 시간외매도 처분 예정일 2026.07.31 모회사 지분 일부 71만5 한선엔지니어링">
+  <div class="row"><h3>모회사 지분 일부(71만5,564주, 약 200억 원) 장내·시간외 처분 결정으로 유통주식 확대·주주환원 재원 확보</h3><span class="mono">80</span></div>
+  <span class="badge">수급/지배구조(지분 처분)</span><span class="badge">direct</span>
+  <div class="signal">지분 처분, 유통주식 확대, 주주환원 재원, 장내매도</div>
+  <div class="note">수급/지배구조(지분 처분) 관련 신호입니다. 현재는 한선엔지니어링 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="muted">상위: 한선엔지니어링 66</div>
+</article><article class="card watch" data-search="ectc(전자패키징 학회) 우수논문상 수상 — 브리지 다이 기반 hic(2.xd/칩렛) 첨단 패키징(구리 기둥·cu pillar 융합) 기술 인정 및 상용화 기대 반도체 반도체 패키징 ai 반도체 2.xd 칩렛 패키징 hic 브리지 다이 cu pillar 코스닥 외국인 수급 ectc 전자패키징 학회 하나마이크론">
+  <div class="row"><h3>ECTC(전자패키징 학회) 우수논문상 수상 — 브리지 다이 기반 HIC(2.xD/칩렛) 첨단 패키징(구리 기둥·Cu pillar 융합) 기술 인정 및 상용화 기대</h3><span class="mono">80</span></div>
+  <span class="badge">반도체</span><span class="badge">direct</span>
+  <div class="signal">반도체 패키징, AI 반도체, 2.xD 칩렛 패키징, HIC 브리지 다이</div>
+  <div class="note">반도체 관련 신호입니다. 현재는 하나마이크론 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="muted">상위: 하나마이크론 66</div>
+</article></div>
+  </section>
+
+  <section id="tab-signals" class="section">
+    <h2>뉴스 × 차트 통합 후보</h2>
+    <div class="grid"><article class="card good" data-search="진원생명과학 011000 바이오 고공 공매도 비중(시가총액 대비 공매도 순보유잔고) 및 감염병(에볼라·한타) 테마 재부각 — 짧은 기간 쇼트커버링 가능성 수급·공매도, 감염병(에볼라·한타) 테마, 에볼라 dna 백신 공동개발, 공매도 순보유잔고 3.79%, 대차거래 잔고/쇼트 커버링 strong_watch">
+  <div class="row"><div><span class="name">진원생명과학</span> <span class="muted mono">011000</span></div><span class="pct mono">+13.70%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">medium</span>
+  <div class="signal">고공 공매도 비중(시가총액 대비 공매도 순보유잔고) 및 감염병(에볼라·한타) 테마 재부각 — 짧은 기간 쇼트커버링 가능성</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 70 · 뉴스 64 · 차트 78</div>
+</article><article class="card wait" data-search="kx하이텍 052900 반도체 데이터센터향(essd) 케이스 수요 폭증·공급부족(숏티지) 확인 및 베트남 공장 풀가동으로 인한 capa(증설) 필요성 반도체, ai 데이터센터, essd 케이스 숏티지, 고asp essd, 베트남 공장 풀가동, capa 증설 wait_pullback">
+  <div class="row"><div><span class="name">KX하이텍</span> <span class="muted mono">052900</span></div><span class="pct mono">+9.26%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">high</span>
+  <div class="signal">데이터센터향(eSSD) 케이스 수요 폭증·공급부족(숏티지) 확인 및 베트남 공장 풀가동으로 인한 CAPA(증설) 필요성</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 56 · 뉴스 98 · 차트 61</div>
+</article><article class="card wait" data-search="씨이랩 189330 실적 1분기 수주잔고 약 25.78억(전년比 약 3배)·매출 42% 증가 발표 및 nvidia 파트너십·dgx b300 도입 레퍼런스 공개 피지컬 ai, gpu 인프라, 수주잔고 25억대, dgx b300 레퍼런스, 옴니버스 컴피턴시 wait_pullback">
+  <div class="row"><div><span class="name">씨이랩</span> <span class="muted mono">189330</span></div><span class="pct mono">+10.20%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">medium</span>
+  <div class="signal">1분기 수주잔고 약 25.78억(전년比 약 3배)·매출 42% 증가 발표 및 NVIDIA 파트너십·DGX B300 도입 레퍼런스 공개</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 24.5%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 49 · 뉴스 74 · 차트 74</div>
+</article><article class="card wait" data-search="엠케이전자 033160 반도체 lpddr5x 확산에 따른 본딩와이어 수요 증가(회사 발표) — 동시에 tiger 코스닥액티브 etf 주요 편입 소식에 따른 수급 개선 반도체 소부장, ai pc 확산, lpddr5x 채택 확대, 본딩와이어 수요 증가, tiger 코스닥액티브 편입 wait_pullback">
+  <div class="row"><div><span class="name">엠케이전자</span> <span class="muted mono">033160</span></div><span class="pct mono">+9.15%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">high</span>
+  <div class="signal">LPDDR5X 확산에 따른 본딩와이어 수요 증가(회사 발표) — 동시에 TIGER 코스닥액티브 ETF 주요 편입 소식에 따른 수급 개선</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 48 · 뉴스 100 · 차트 39</div>
+</article><article class="card wait" data-search="에스에이엠티 031330 반도체 소부장 반도체 장비·부품 업종 동반 강세(특히 wfe 투자 사이클 기대감) 및 코스닥 활성화 정책 기대 반도체 소부장, wfe 투자 사이클, 코스닥 활성화 대책, 웨이퍼 팹 제조 장비 수주, 메모리 ai 수요 wait_pullback">
+  <div class="row"><div><span class="name">에스에이엠티</span> <span class="muted mono">031330</span></div><span class="pct mono">+15.92%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">medium</span>
+  <div class="signal">반도체 장비·부품 업종 동반 강세(특히 WFE 투자 사이클 기대감) 및 코스닥 활성화 정책 기대</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 20일선 이격 37.7%. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 48 · 뉴스 74 · 차트 72</div>
+</article><article class="card wait" data-search="동양고속 084670 정책 서울고속버스터미널 재개발 가속화 기대 (서울시장 선거 결과에 따른 재개발 추진 모멘텀, 해당 터미널 지분 보유로 인한 개발 수혜 기대) 서울시장 당선(오세훈), 재개발 정책 모멘텀, 서울고속버스터미널 재개발, 터미널 지분 0.17%, 터미널 내 백화점 보유 wait_pullback">
+  <div class="row"><div><span class="name">동양고속</span> <span class="muted mono">084670</span></div><span class="pct mono">+6.56%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">high</span>
+  <div class="signal">서울고속버스터미널 재개발 가속화 기대 (서울시장 선거 결과에 따른 재개발 추진 모멘텀, 해당 터미널 지분 보유로 인한 개발 수혜 기대)</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 43 · 뉴스 98 · 차트 31</div>
+</article><article class="card wait" data-search="네패스아크 330860 반도체 반도체 test 설비 대규모 시설투자(667억·생산능력 추가 확보) 전공정 장비, 메모리 업황 개선, test 설비 667억 투자, 생산능력 추가 확보, 자기자본 대비 투자비율 39.55% wait_pullback">
+  <div class="row"><div><span class="name">네패스아크</span> <span class="muted mono">330860</span></div><span class="pct mono">+11.65%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">high</span>
+  <div class="signal">반도체 TEST 설비 대규모 시설투자(667억·생산능력 추가 확보)</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 43 · 뉴스 98 · 차트 31</div>
+</article><article class="card wait" data-search="달바글로벌 483650 수급 임시주총 통해 총 400억원 재원활용(자사주 매입 약 200억원 신탁·잔여분 소각 및 자본준비금 200억원을 이익잉여금 전입해 비과세 배당 재원 확보) + 국민연금 지분 확대(지분율 7.53→10.09% 보도) 주주환원, 수급 안정, 비과세 배당 재원, 자사주 신탁 매입 200억원, 국민연금 지분 10% 확대 wait_pullback">
+  <div class="row"><div><span class="name">달바글로벌</span> <span class="muted mono">483650</span></div><span class="pct mono">+5.71%</span></div>
+  <span class="badge">wait_pullback</span><span class="badge">risk high</span><span class="badge">high</span>
+  <div class="signal">임시주총 통해 총 400억원 재원활용(자사주 매입 약 200억원 신탁·잔여분 소각 및 자본준비금 200억원을 이익잉여금 전입해 비과세 배당 재원 확보) + 국민연금 지분 확대(지분율 7.53→10.09% 보도)</div>
+  <div class="note">재료는 강하지만 현재 자리는 과열입니다. 5일선/전일 저가 부근 눌림 확인이 우선입니다.</div>
+  <div class="muted mono">종합 40 · 뉴스 100 · 차트 23</div>
+</article><article class="card watch" data-search="코리안리 003690 분석 실패 json 파싱 오류: expecting value: line 1 column 1 (char 0)  theme_watch">
+  <div class="row"><div><span class="name">코리안리</span> <span class="muted mono">003690</span></div><span class="pct mono">+3.13%</span></div>
+  <span class="badge">theme_watch</span><span class="badge">risk low</span><span class="badge">low</span>
+  <div class="signal">JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)</div>
+  <div class="note">차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다.</div>
+  <div class="muted mono">종합 47 · 뉴스 16 · 차트 84</div>
+</article><article class="card watch" data-search="주성엔지니어링 036930 수급/테마 14일 내 관련 공시·기사 부재 속 대량거래 기반 단기 수급 집중(개인 매수·공매도 커버 가능성)으로 인한 기술적·테마성 급등 수급, 대량거래, 공매도 커버, 커뮤니티 루머, 신고가·단기과열 theme_watch">
+  <div class="row"><div><span class="name">주성엔지니어링</span> <span class="muted mono">036930</span></div><span class="pct mono">+27.22%</span></div>
+  <span class="badge">theme_watch</span><span class="badge">risk high</span><span class="badge">low</span>
+  <div class="signal">14일 내 관련 공시·기사 부재 속 대량거래 기반 단기 수급 집중(개인 매수·공매도 커버 가능성)으로 인한 기술적·테마성 급등</div>
+  <div class="note">차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다.</div>
+  <div class="muted mono">종합 22 · 뉴스 16 · 차트 85</div>
+</article><article class="card watch" data-search="코아스 071950 수급  수급, 외국인 매수전환, 시장 변동성, 공시:대규모 계약·공시, 단일가·시간외 급등, 블록딜/대량매매 theme_watch">
+  <div class="row"><div><span class="name">코아스</span> <span class="muted mono">071950</span></div><span class="pct mono">+22.20%</span></div>
+  <span class="badge">theme_watch</span><span class="badge">risk high</span><span class="badge">low</span>
+  <div class="signal">수급</div>
+  <div class="note">차트 수급은 강하지만 뉴스 근거가 약합니다. 테마성 급등인지 추가 뉴스 확인이 필요합니다.</div>
+  <div class="muted mono">종합 17 · 뉴스 16 · 차트 74</div>
+</article><article class="card bad" data-search="미래산업 025560 반도체 중국 종합반도체사 대상 154억원(약 1,026만달러) 규모 반도체 검사장비 공급계약(단일계약 매출비 약 30%) 반도체 후공정, 중국 반도체 수요, 단일계약 매출비 30%, 하반기 매출 인식, 대금 70% 선지급 avoid">
+  <div class="row"><div><span class="name">미래산업</span> <span class="muted mono">025560</span></div><span class="pct mono">+12.81%</span></div>
+  <span class="badge">avoid</span><span class="badge">risk medium</span><span class="badge">high</span>
+  <div class="signal">중국 종합반도체사 대상 154억원(약 1,026만달러) 규모 반도체 검사장비 공급계약(단일계약 매출비 약 30%)</div>
+  <div class="note">momentum_watch 패턴입니다. 거래량 0.6배 유지 여부를 확인합니다.</div>
+  <div class="muted mono">종합 71 · 뉴스 100 · 차트 57</div>
+</article></div>
+  </section>
+
+  <section id="tab-opportunities" class="section">
+    <h2>기사 키워드 기회 카드</h2>
+    <div class="grid"><article class="card good" data-search="고공 공매도 비중(시가총액 대비 공매도 순보유잔고) 및 감염병(에볼라·한타) 테마 재부각 — 짧은 기간 쇼트커버링 가능성 바이오 수급 공매도 감염병(에볼라 한타) 테마 에볼라 dna 백신 공동개발 공매도 순보유잔고 3.79% 대차거래 잔고 쇼트 커버링 진원생명과학">
+  <div class="row"><h3>고공 공매도 비중(시가총액 대비 공매도 순보유잔고) 및 감염병(에볼라·한타) 테마 재부각 — 짧은 기간 쇼트커버링 가능성</h3><span class="mono">87</span></div>
+  <span class="badge">바이오</span><span class="badge">probable</span>
+  <div class="signal">수급, 공매도, 감염병(에볼라, 한타) 테마</div>
+  <div class="note">바이오 테마에서 수급, 공매도, 감염병(에볼라, 한타) 테마가 핵심 매수 포인트입니다. 진원생명과학이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 진원생명과학 73</div>
+</article><article class="card watch" data-search="중국 종합반도체사 대상 154억원(약 1,026만달러) 규모 반도체 검사장비 공급계약(단일계약 매출비 약 30%) 반도체 반도체 후공정 중국 반도체 수요 단일계약 매출비 30% 하반기 매출 인식 대금 70% 선지급 중국 종합반도체사 대상 154억원 026만달러 규모 반도체 검사장비 공급계약 미래산업">
+  <div class="row"><h3>중국 종합반도체사 대상 154억원(약 1,026만달러) 규모 반도체 검사장비 공급계약(단일계약 매출비 약 30%)</h3><span class="mono">85</span></div>
+  <span class="badge">반도체</span><span class="badge">direct</span>
+  <div class="signal">반도체 후공정, 중국 반도체 수요, 단일계약 매출비 30%, 하반기 매출 인식</div>
+  <div class="note">반도체 관련 신호입니다. 현재는 미래산업 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="muted">상위: 미래산업 71</div>
+</article><article class="card watch" data-search="모회사 지분 일부(71만5,564주, 약 200억 원) 장내·시간외 처분 결정으로 유통주식 확대·주주환원 재원 확보 수급/지배구조(지분 처분) 지분 처분 유통주식 확대 주주환원 재원 장내매도 시간외매도 처분 예정일 2026.07.31 모회사 지분 일부 71만5 한선엔지니어링">
+  <div class="row"><h3>모회사 지분 일부(71만5,564주, 약 200억 원) 장내·시간외 처분 결정으로 유통주식 확대·주주환원 재원 확보</h3><span class="mono">80</span></div>
+  <span class="badge">수급/지배구조(지분 처분)</span><span class="badge">direct</span>
+  <div class="signal">지분 처분, 유통주식 확대, 주주환원 재원, 장내매도</div>
+  <div class="note">수급/지배구조(지분 처분) 관련 신호입니다. 현재는 한선엔지니어링 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="muted">상위: 한선엔지니어링 66</div>
+</article><article class="card watch" data-search="ectc(전자패키징 학회) 우수논문상 수상 — 브리지 다이 기반 hic(2.xd/칩렛) 첨단 패키징(구리 기둥·cu pillar 융합) 기술 인정 및 상용화 기대 반도체 반도체 패키징 ai 반도체 2.xd 칩렛 패키징 hic 브리지 다이 cu pillar 코스닥 외국인 수급 ectc 전자패키징 학회 하나마이크론">
+  <div class="row"><h3>ECTC(전자패키징 학회) 우수논문상 수상 — 브리지 다이 기반 HIC(2.xD/칩렛) 첨단 패키징(구리 기둥·Cu pillar 융합) 기술 인정 및 상용화 기대</h3><span class="mono">80</span></div>
+  <span class="badge">반도체</span><span class="badge">direct</span>
+  <div class="signal">반도체 패키징, AI 반도체, 2.xD 칩렛 패키징, HIC 브리지 다이</div>
+  <div class="note">반도체 관련 신호입니다. 현재는 하나마이크론 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="muted">상위: 하나마이크론 66</div>
+</article><article class="card watch" data-search="항공사 사명 변경 면허 취득(티웨이항공→&#x27;트리니티항공&#x27;) 및 브랜드 재편 기대(항공·리조트 연계·장거리 노선 확대 시사) 기업 재편·브랜딩 항공 브랜드 재편 항공 리조트 연계사업 사명 변경(트리니티항공) 면허 해외 인허가 진행 장거리 노선 확대 추진 항공사 사명 변경 면허 티웨이항공 티웨이홀딩스">
+  <div class="row"><h3>항공사 사명 변경 면허 취득(티웨이항공→&#x27;트리니티항공&#x27;) 및 브랜드 재편 기대(항공·리조트 연계·장거리 노선 확대 시사)</h3><span class="mono">76</span></div>
+  <span class="badge">기업 재편·브랜딩</span><span class="badge">probable</span>
+  <div class="signal">항공 브랜드 재편, 항공, 리조트 연계사업, 사명 변경(트리니티항공) 면허</div>
+  <div class="note">기업 재편·브랜딩 관련 신호입니다. 현재는 티웨이홀딩스 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="muted">상위: 티웨이홀딩스 62</div>
+</article><article class="card wait" data-search="데이터센터향(essd) 케이스 수요 폭증·공급부족(숏티지) 확인 및 베트남 공장 풀가동으로 인한 capa(증설) 필요성 반도체 반도체 ai 데이터센터 essd 케이스 숏티지 고asp essd 베트남 공장 풀가동 capa 증설 데이터센터향 essd kx하이텍">
+  <div class="row"><h3>데이터센터향(eSSD) 케이스 수요 폭증·공급부족(숏티지) 확인 및 베트남 공장 풀가동으로 인한 CAPA(증설) 필요성</h3><span class="mono">71</span></div>
+  <span class="badge">반도체</span><span class="badge">direct</span>
+  <div class="signal">반도체, AI 데이터센터, eSSD 케이스 숏티지, 고ASP eSSD</div>
+  <div class="note">반도체 재료는 살아 있지만 KX하이텍 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="muted">상위: KX하이텍 57</div>
+</article><article class="card watch" data-search="json 파싱 오류: expecting value: line 1 column 1 (char 0) 분석 실패 json 파싱 오류 expecting value line 1 column 1 char 0 코리안리 코미코 영원무역">
+  <div class="row"><h3>JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)</h3><span class="mono">69</span></div>
+  <span class="badge">분석 실패</span><span class="badge">weak</span>
+  <div class="signal">JSON 파싱 오류, Expecting value, line 1 column 1, char 0</div>
+  <div class="note">차트는 코리안리이 강하지만 기사 키워드와의 연결성은 더 확인해야 합니다.</div>
+  <div class="muted">상위: 코리안리 49, 코미코 34, 영원무역 4</div>
+</article><article class="card wait" data-search="1분기 수주잔고 약 25.78억(전년比 약 3배)·매출 42% 증가 발표 및 nvidia 파트너십·dgx b300 도입 레퍼런스 공개 실적 피지컬 ai gpu 인프라 수주잔고 25억대 dgx b300 레퍼런스 옴니버스 컴피턴시 1분기 수주잔고 약 25 약 3배 매출 42 씨이랩">
+  <div class="row"><h3>1분기 수주잔고 약 25.78억(전년比 약 3배)·매출 42% 증가 발표 및 NVIDIA 파트너십·DGX B300 도입 레퍼런스 공개</h3><span class="mono">65</span></div>
+  <span class="badge">실적</span><span class="badge">probable</span>
+  <div class="signal">피지컬 AI, GPU 인프라, 수주잔고 25억대, DGX B300 레퍼런스</div>
+  <div class="note">실적 재료는 살아 있지만 씨이랩 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="muted">상위: 씨이랩 51</div>
+</article><article class="card wait" data-search="반도체 장비·부품 업종 동반 강세(특히 wfe 투자 사이클 기대감) 및 코스닥 활성화 정책 기대 반도체 소부장 반도체 소부장 wfe 투자 사이클 코스닥 활성화 대책 웨이퍼 팹 제조 장비 수주 메모리 ai 수요 반도체 장비 부품 업종 동반 강세 특히 wfe 투자 사이클 에스에이엠티">
+  <div class="row"><h3>반도체 장비·부품 업종 동반 강세(특히 WFE 투자 사이클 기대감) 및 코스닥 활성화 정책 기대</h3><span class="mono">64</span></div>
+  <span class="badge">반도체 소부장</span><span class="badge">probable</span>
+  <div class="signal">반도체 소부장, WFE 투자 사이클, 코스닥 활성화 대책, 웨이퍼 팹 제조 장비 수주</div>
+  <div class="note">반도체 소부장 재료는 살아 있지만 에스에이엠티 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="muted">상위: 에스에이엠티 50</div>
+</article><article class="card wait" data-search="lpddr5x 확산에 따른 본딩와이어 수요 증가(회사 발표) — 동시에 tiger 코스닥액티브 etf 주요 편입 소식에 따른 수급 개선 반도체 반도체 소부장 ai pc 확산 lpddr5x 채택 확대 본딩와이어 수요 증가 tiger 코스닥액티브 편입 lpddr5x 확산에 따른 본딩와이어 수요 증가 회사 발표 엠케이전자">
+  <div class="row"><h3>LPDDR5X 확산에 따른 본딩와이어 수요 증가(회사 발표) — 동시에 TIGER 코스닥액티브 ETF 주요 편입 소식에 따른 수급 개선</h3><span class="mono">61</span></div>
+  <span class="badge">반도체</span><span class="badge">direct</span>
+  <div class="signal">반도체 소부장, AI PC 확산, LPDDR5X 채택 확대, 본딩와이어 수요 증가</div>
+  <div class="note">반도체 재료는 살아 있지만 엠케이전자 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="muted">상위: 엠케이전자 47</div>
+</article></div>
+  </section>
+
+  <section id="tab-life" class="section">
+    <h2>생활 기사 테마 레이더</h2>
+    <div class="grid"><article class="card good" data-search="폭염/냉방가전 폭염, 열대야, 전력피크 전망이 나오면 냉방가전과 전력 효율 관련 종목이 계절성 수급을 받는 테마입니다. 에어컨 판매 증가 선풍기/써큘레이터 수요 전력 피크 대응 냉방가전 교체 수요 경동나비엔 에스씨디 오텍 파세코 위닉스 신일전자">
+  <div class="row"><h3>폭염/냉방가전</h3><span class="mono">68</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">에어컨 판매 증가, 선풍기/써큘레이터 수요, 전력 피크 대응, 냉방가전 교체 수요</div>
+  <div class="note">폭염/냉방가전 기사 흐름과 에어컨 판매 증가, 선풍기/써큘레이터 수요, 전력 피크 대응 포인트가 감지됐고, 경동나비엔 차트가 가장 먼저 반응 중입니다.</div>
+  <div class="muted">선두: 경동나비엔 · 100 · early_candidate</div>
+</article><article class="card good" data-search="재개발/부동산 가치 재개발, 용적률 완화, 대형 부지 개발, 터미널/역세권 개발 뉴스가 자산가치 보유주로 연결됩니다. 보유 부동산 가치 개발 기대감 용적률 완화 역세권 수혜 한국공항 현대건설 대우건설 천일고속 동양고속 성창기업지주">
+  <div class="row"><h3>재개발/부동산 가치</h3><span class="mono">68</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">보유 부동산 가치, 개발 기대감, 용적률 완화, 역세권 수혜</div>
+  <div class="note">재개발/부동산 가치 기사 흐름과 보유 부동산 가치, 개발 기대감, 용적률 완화 포인트가 감지됐고, 한국공항 차트가 가장 먼저 반응 중입니다.</div>
+  <div class="muted">선두: 한국공항 · 100 · early_candidate</div>
+</article><article class="card good" data-search="ai 데이터센터 ai 투자, 데이터센터 증설, gpu 서버, 냉각, 전력 인프라 뉴스가 반도체/전력/냉각 테마로 확산될 수 있습니다. ai 서버 투자 gpu 공급망 데이터센터 냉각 전력 인프라 증설 유니셈 한미반도체 gst 대덕전자 sk하이닉스 이수페타시스">
+  <div class="row"><h3>AI 데이터센터</h3><span class="mono">56</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">AI 서버 투자, GPU 공급망, 데이터센터 냉각, 전력 인프라 증설</div>
+  <div class="note">AI 데이터센터 기사 흐름과 AI 서버 투자, GPU 공급망, 데이터센터 냉각 포인트가 감지됐고, 유니셈 차트가 가장 먼저 반응 중입니다.</div>
+  <div class="muted">선두: 유니셈 · 79 · early_candidate</div>
+</article><article class="card wait" data-search="감염병/진단키트 코로나, 독감, 변이 바이러스처럼 감염병 이슈가 다시 커질 때 진단키트, 백신, 마스크, 의료기기 수요가 부각되는 테마입니다. 자가진단키트 수요 백신/치료제 기대 검사 수요 증가 방역용품 재고 확충 씨젠 휴마시스 엑세스바이오 수젠텍 랩지노믹스 진매트릭스">
+  <div class="row"><h3>감염병/진단키트</h3><span class="mono">55</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">자가진단키트 수요, 백신/치료제 기대, 검사 수요 증가, 방역용품 재고 확충</div>
+  <div class="note">감염병/진단키트 이슈는 살아 있지만 씨젠은 단기 과열입니다. 눌림 또는 재돌파 확인이 우선입니다.</div>
+  <div class="muted">선두: 씨젠 · 77 · wait_pullback</div>
+</article><article class="card good" data-search="전력망/전력설비 전력수요, 데이터센터, 송전망 확충, 변압기 부족 같은 이슈가 전력기기/전선 테마로 연결됩니다. 전력망 투자 변압기 수요 전선 수주 ai 데이터센터 전력 증설 hd현대일렉트릭 효성중공업 제룡전기 ls electric 가온전선 대한전선">
+  <div class="row"><h3>전력망/전력설비</h3><span class="mono">52</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">전력망 투자, 변압기 수요, 전선 수주, AI 데이터센터 전력 증설</div>
+  <div class="note">전력망/전력설비 기사 흐름과 전력망 투자, 변압기 수요, 전선 수주 포인트가 감지됐고, HD현대일렉트릭 차트가 가장 먼저 반응 중입니다.</div>
+  <div class="muted">선두: HD현대일렉트릭 · 72 · early_candidate</div>
+</article><article class="card watch" data-search="저출산/육아정책 저출산 대책, 출산 지원, 육아휴직 확대, 난임 지원 뉴스가 육아/교육/난임 테마로 연결됩니다. 육아용품 수요 교육/보육 정책 난임 치료 지원 정부 지원 확대 웅진씽크빅 메디앙스 ne능률 깨끗한나라 아가방컴퍼니 제로투세븐">
+  <div class="row"><h3>저출산/육아정책</h3><span class="mono">42</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">육아용품 수요, 교육/보육 정책, 난임 치료 지원, 정부 지원 확대</div>
+  <div class="note">저출산/육아정책 이슈가 감지됐습니다. 현재는 웅진씽크빅이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="muted">선두: 웅진씽크빅 · 54 · weak</div>
+</article><article class="card watch" data-search="미세먼지/공기질 미세먼지, 황사, 대기질 악화 뉴스가 늘면 공기청정기, 마스크, 필터 관련 종목을 점검합니다. 공기청정기 수요 필터 교체 수요 마스크 수요 환경 규제 강화 오공 웰크론 모나리자 크린앤사이언스 케이엠 위닉스">
+  <div class="row"><h3>미세먼지/공기질</h3><span class="mono">36</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">공기청정기 수요, 필터 교체 수요, 마스크 수요, 환경 규제 강화</div>
+  <div class="note">미세먼지/공기질 이슈가 감지됐습니다. 현재는 오공이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="muted">선두: 오공 · 42 · weak</div>
+</article><article class="card watch" data-search="방산/지정학 전쟁, 중동 긴장, 국방 예산, 무기 수출 뉴스가 방산과 드론/전자전 테마로 이어질 수 있습니다. 방산 수출 국방 예산 증가 드론/대공 방어 탄약/미사일 수요 한국항공우주 풍산 한화에어로스페이스 현대로템 퍼스텍">
+  <div class="row"><h3>방산/지정학</h3><span class="mono">35</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">방산 수출, 국방 예산 증가, 드론/대공 방어, 탄약/미사일 수요</div>
+  <div class="note">방산/지정학 이슈가 감지됐습니다. 현재는 한국항공우주이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="muted">선두: 한국항공우주 · 41 · weak</div>
+</article><article class="card watch" data-search="장마/태풍/복구 장마, 태풍, 침수, 복구 이슈가 커질 때 폐기물 처리, 배수, 복구 장비, 농업 피해 관련 종목이 반응할 수 있습니다. 폐기물 처리 수해 복구 배수 설비 농작물 피해 대응 남해화학 자연과환경 와이엔텍 인선이엔티 뉴보텍">
+  <div class="row"><h3>장마/태풍/복구</h3><span class="mono">34</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">폐기물 처리, 수해 복구, 배수 설비, 농작물 피해 대응</div>
+  <div class="note">장마/태풍/복구 이슈가 감지됐습니다. 현재는 남해화학이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="muted">선두: 남해화학 · 38 · weak</div>
+</article><article class="card watch" data-search="봄/야외활동 봄철 야외활동, 자전거, 캠핑, 레저 소비가 살아날 때 반응할 수 있는 계절 소비 테마입니다. 자전거 판매 캠핑/아웃도어 소비 레저 활동 증가 봄철 소비 회복 더네이쳐홀딩스 감성코퍼레이션 알톤 참좋은여행 노랑풍선 삼천리자전거">
+  <div class="row"><h3>봄/야외활동</h3><span class="mono">22</span></div>
+  <span class="badge">기사 1</span><span class="badge">heat 28</span>
+  <div class="signal">자전거 판매, 캠핑/아웃도어 소비, 레저 활동 증가, 봄철 소비 회복</div>
+  <div class="note">봄/야외활동 이슈가 감지됐습니다. 현재는 더네이쳐홀딩스이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="muted">선두: 더네이쳐홀딩스 · 18 · weak</div>
+</article></div>
+  </section>
+
+  <section id="tab-links" class="section">
+    <h2>상세 보기</h2>
+    <div class="mini-list">
+      <div class="list-item"><a href="../profitability/output/profitability_dashboard.html">💼 수익성 검증 대시보드 (NEW)</a><div class="muted">../profitability/output/profitability_dashboard.html</div></div><div class="list-item"><a href="../visual_dashboard/output/dashboard.html">뉴스 × 차트 통합 대시보드</a><div class="muted">../visual_dashboard/output/dashboard.html</div></div><div class="list-item"><a href="../opportunity_engine/output/opportunity_board.html">기사 키워드 기회 보드</a><div class="muted">../opportunity_engine/output/opportunity_board.html</div></div><div class="list-item"><a href="../life_theme_radar/output/life_radar.html">생활 기사 테마 레이더</a><div class="muted">../life_theme_radar/output/life_radar.html</div></div><div class="list-item"><a href="../chart_analysis/output/chart_report_20260514.html">차트 분석 리포트</a><div class="muted">../chart_analysis/output/chart_report_20260514.html</div></div><div class="list-item"><a href="../reports/index.html">기존 누적 시그널 대시보드</a><div class="muted">../reports/index.html</div></div>
+    </div>
+  </section>
+</main>
+<script>
+const buttons = [...document.querySelectorAll('button[data-tab]')];
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  buttons.forEach(b => b.classList.toggle('active', b === btn));
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+}));
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value.trim().toLowerCase();
+  document.querySelectorAll('[data-search]').forEach(el => {
+    el.classList.toggle('hide', q && !el.dataset.search.includes(q));
+  });
+});
+</script>
+</body>
+</html>

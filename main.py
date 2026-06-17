@@ -31,7 +31,7 @@ from collectors.historical_collector import (
     get_top_movers_historical, krx_business_days,
     prefetch_period, top_movers_from_cache,
 )
-from collectors.news_collector import collect_news_for_stocks
+from collectors.news_collector import collect_news_for_stocks, get_article_body
 from collectors.general_news_collector import collect_general_news_for_stocks
 from reporters.report_generator import generate_report
 from state_manager import (
@@ -77,8 +77,80 @@ def _merge_news(stock_news, general_news):
     return merged
 
 
+def _infer_reason_unknown(stock: dict, articles: list, result: dict) -> str:
+    """AI 가 reason_unknown_category 를 채우지 않았을 때 휴리스틱으로 보강.
+
+    카테고리:
+      no_news_in_window       — articles 가 비어 있음
+      lagging_article         — 가장 최근 기사가 D-2 이전
+      weak_name_link          — 종목명이 어떤 제목에도 등장하지 않음
+      headline_only_generic   — 시황·랭킹·코스피/코스닥 일반 헤드라인 다수
+      theme_only_supply       — main_theme 이 '수급' 류로만 채워짐
+      other                   — 위 어느 것도 명확히 해당하지 않음
+    """
+    from datetime import datetime, timedelta
+    if not articles:
+        return 'no_news_in_window'
+    try:
+        d_day = datetime.strptime(stock.get('date') or '', '%Y%m%d')
+    except Exception:
+        d_day = None
+    latest_dt = None
+    for a in articles:
+        try:
+            dt = datetime.strptime(a.get('date', ''), '%Y.%m.%d %H:%M')
+        except Exception:
+            continue
+        if latest_dt is None or dt > latest_dt:
+            latest_dt = dt
+    if d_day and latest_dt and (d_day - latest_dt) > timedelta(days=2):
+        return 'lagging_article'
+    name = stock.get('name') or ''
+    if name and not any(name in (a.get('title') or '') for a in articles):
+        return 'weak_name_link'
+    generic_kw = ['시황', '체크포인트', '브리핑', '데이터랩', '거래상위', '코스피', '코스닥',
+                  '상승률', '하락률', '거래량 급증', '특징주']
+    if articles and sum(1 for a in articles if any(g in (a.get('title') or '') for g in generic_kw)) >= max(1, len(articles)//2):
+        return 'headline_only_generic'
+    theme = (result.get('main_theme') or '').strip()
+    if theme.startswith('수급') or theme == '수급/테마성' or theme == '수급/기술적':
+        return 'theme_only_supply'
+    return 'other'
+
+
+def _fetch_bodies_for_news(news_by_ticker: dict, max_chars: int = 2000, sleep_sec: float = 0.3) -> dict:
+    """Fetch article bodies for all merged news links.
+
+    This is intentionally done after stock/general news are merged so both
+    Naver Finance-tagged articles and regular Naver search articles can carry
+    body evidence into the AI prompt.
+    """
+    import time
+
+    stats = {"attempted": 0, "success": 0, "failed": 0}
+    for ticker, articles in news_by_ticker.items():
+        if not articles:
+            continue
+        print(f"   - [{ticker}] 본문 수집 {len(articles)}건...")
+        for article in articles:
+            link = article.get('link')
+            if not link:
+                stats["failed"] += 1
+                continue
+            stats["attempted"] += 1
+            body = get_article_body(link, max_chars=max_chars)
+            if body and len(body.strip()) >= 100:
+                article['body'] = body.strip()
+                stats["success"] += 1
+            else:
+                article['body'] = ''
+                stats["failed"] += 1
+            time.sleep(sleep_sec)
+    return stats
+
+
 def main(date_str=None, top_n=10, use_general_news=True, historical=False, skip_ai=False,
-         state=None, hist_cache=None):
+         state=None, hist_cache=None, fetch_body=False, body_max_chars=2000):
     if date_str is None:
         date_str = get_latest_business_day()
     print(f"\n📅 분석 기준일: {date_str}{' (HISTORICAL/FDR)' if historical else ''}\n")
@@ -116,11 +188,19 @@ def main(date_str=None, top_n=10, use_general_news=True, historical=False, skip_
     for stock in all_stocks:
         t = stock['ticker']
         combined = _merge_news(stock_news_data.get(t, []), general_news_data.get(t, []))
-        new_articles, dup = filter_new_articles(state, t, combined)
+        new_articles, dup = filter_new_articles(state, t, combined, current_date=date_str)
         merged_news[t] = new_articles
         total_new += len(new_articles)
         total_dup += len(dup)
     print(f"   ✓ 신규 {total_new}건 / 이미 본 적 있음 {total_dup}건")
+
+    if fetch_body:
+        print("\n3️⃣ -2  전체 기사 본문 수집 (종목뉴스 + 일반뉴스)...")
+        stats = _fetch_bodies_for_news(merged_news, max_chars=body_max_chars)
+        print(
+            f"   ✓ 본문 수집 성공 {stats['success']}건 / 실패 {stats['failed']}건 "
+            f"/ 시도 {stats['attempted']}건"
+        )
 
     # 5. 분석: 연속 종목은 캐시 재사용, 신규만 AI 호출
     if skip_ai:
@@ -146,6 +226,7 @@ def main(date_str=None, top_n=10, use_general_news=True, historical=False, skip_
                 'confidence': prev.get('confidence', 'medium'),
                 'trigger_date': '',
                 'trigger_lag_days': 0,
+                'reason_unknown_category': prev.get('reason_unknown_category', ''),
             }
             status_map[t] = 'continuation'
             cont_count += 1
@@ -161,6 +242,7 @@ def main(date_str=None, top_n=10, use_general_news=True, historical=False, skip_
                 'trigger_date': '', 'trigger_lag_days': 0,
                 'reasoning': 'skip_ai=True 모드로 수집만 진행',
                 'related_stocks': [], 'watch_keywords': [], 'confidence': 'low',
+                'reason_unknown_category': 'data_missing',
             }
             print(f"   - [{t}] {stock['name']} 뉴스만 수집 (기사 {len(articles)}건)")
         else:
@@ -173,9 +255,14 @@ def main(date_str=None, top_n=10, use_general_news=True, historical=False, skip_
         if conf == 'low' or trig == 'unknown' or not result.get('specific_signal'):
             status_map[t] = 'unclear'
             unclear_count += 1
+            # AI가 reason_unknown_category 를 안 채웠으면 휴리스틱으로 보강
+            if not result.get('reason_unknown_category'):
+                result['reason_unknown_category'] = _infer_reason_unknown(stock, articles, result)
         else:
             status_map[t] = 'new'
             new_count += 1
+            # 정상 시그널이면 비워두기 (예전 잘못된 값이 들어왔을 수 있어 명시 정리)
+            result['reason_unknown_category'] = ''
 
         record_signal(state, t, stock, result, date_str)
 
@@ -206,7 +293,7 @@ def main(date_str=None, top_n=10, use_general_news=True, historical=False, skip_
 
 
 def run_range(start_date: str, end_date: str, top_n=10, use_general_news=True, skip_ai=False,
-              prefetch_workers=2):
+              prefetch_workers=2, fetch_body=False, body_max_chars=2000):
     """배치 모드: 영업일 범위 일괄 백필.
     - 전체 종목 시세를 한 번에 prefetch → pickle 캐시 → 날짜별 추출 (네이버 rate-limit 회피)
     - state는 누적 공유
@@ -223,7 +310,8 @@ def run_range(start_date: str, end_date: str, top_n=10, use_general_news=True, s
         print(f"\n{'='*60}\n  [{i}/{len(days)}] {d}\n{'='*60}")
         try:
             main(date_str=d, top_n=top_n, use_general_news=use_general_news,
-                 historical=True, skip_ai=skip_ai, state=state, hist_cache=hist_cache)
+                 historical=True, skip_ai=skip_ai, state=state, hist_cache=hist_cache,
+                 fetch_body=fetch_body, body_max_chars=body_max_chars)
         except Exception as e:
             print(f"❌ [{d}] 실패: {e}")
             import traceback
@@ -239,13 +327,19 @@ if __name__ == "__main__":
     parser.add_argument("--no-general-news", action='store_true', help="일반 뉴스 검색 끄기")
     parser.add_argument("--historical", action='store_true', help="과거 일자 (FDR 사용)")
     parser.add_argument("--skip-ai", action='store_true', help="AI 호출 없이 데이터만 수집")
+    parser.add_argument("--fetch-body", action='store_true', help="모든 수집 기사 본문을 가져와 AI 분석에 포함")
+    parser.add_argument("--body-max-chars", type=int, default=2000, help="기사별 본문 최대 글자 수")
     args = parser.parse_args()
 
     if args.start and args.end:
         run_range(args.start, args.end, top_n=args.top,
                   use_general_news=not args.no_general_news,
-                  skip_ai=args.skip_ai)
+                  skip_ai=args.skip_ai,
+                  fetch_body=args.fetch_body,
+                  body_max_chars=args.body_max_chars)
     else:
         main(date_str=args.date, top_n=args.top,
              use_general_news=not args.no_general_news,
-             historical=args.historical, skip_ai=args.skip_ai)
+             historical=args.historical, skip_ai=args.skip_ai,
+             fetch_body=args.fetch_body,
+             body_max_chars=args.body_max_chars)

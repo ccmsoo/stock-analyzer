@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Stock Analyzer Home</title>
+<style>
+  :root {
+    --bg:#0d1117; --fg:#edf2f7; --muted:#9da8b5; --panel:#161b22; --panel2:#202734;
+    --line:#2b3442; --green:#35c77b; --blue:#6ea8fe; --yellow:#f4b64a; --red:#ff6f68; --cyan:#54d7d0;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  aside { position:fixed; inset:0 auto 0 0; width:250px; padding:22px 16px; background:#111720; border-right:1px solid var(--line); }
+  main { margin-left:250px; padding:24px 30px 44px; }
+  h1 { margin:0 0 4px; font-size:22px; }
+  h2 { margin:28px 0 12px; font-size:17px; color:var(--cyan); }
+  h3 { margin:0; font-size:15px; }
+  .muted { color:var(--muted); }
+  .nav { display:flex; flex-direction:column; gap:6px; margin-top:20px; }
+  .nav button,.link { width:100%; text-align:left; background:transparent; border:1px solid transparent; color:var(--fg); padding:8px 10px; border-radius:6px; cursor:pointer; text-decoration:none; font:inherit; }
+  .nav button.active,.nav button:hover,.link:hover { background:var(--panel2); border-color:var(--line); }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .kpi b { display:block; font-size:24px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:12px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:14px; }
+  .card.good { border-left:4px solid var(--green); }
+  .card.wait { border-left:4px solid var(--yellow); }
+  .card.watch { border-left:4px solid var(--blue); }
+  .card.bad { opacity:.76; }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .name { font-weight:700; }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .pct { color:#ff848c; font-weight:700; }
+  .badge { display:inline-block; background:var(--panel2); border:1px solid var(--line); border-radius:999px; padding:2px 8px; margin:6px 4px 0 0; font-size:12px; }
+  .signal { color:var(--cyan); margin-top:8px; font-weight:600; }
+  .note { margin-top:8px; color:#dce5ee; }
+  .section { display:none; }
+  .section.active { display:block; }
+  input { width:100%; background:var(--panel); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:8px 10px; margin-top:14px; }
+  .mini-list { display:flex; flex-direction:column; gap:8px; }
+  .list-item { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  a { color:var(--cyan); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .hide { display:none; }
+  @media (max-width: 900px) {
+    aside { position:static; width:auto; border-right:0; border-bottom:1px solid var(--line); }
+    main { margin-left:0; }
+    .nav { flex-direction:row; flex-wrap:wrap; }
+    .nav button,.link { width:auto; }
+  }
+</style>
+</head>
+<body>
+<aside>
+  <h1>Stock Analyzer</h1>
+  <div class="muted">뉴스, 키워드, 차트가 한 화면에 모이는 홈</div>
+  <input id="search" placeholder="검색: 종목/테마/키워드">
+  <nav class="nav">
+    <button class="active" data-tab="overview">홈</button>
+    <button data-tab="signals">뉴스 × 차트</button>
+    <button data-tab="opportunities">기회 카드</button>
+    <button data-tab="life">생활 테마</button>
+    <button data-tab="links">상세 보기</button>
+  </nav>
+  <div class="muted" style="margin-top:18px;font-size:12px">생성 2026-05-15T03:33:51</div>
+</aside>
+<main>
+  <section id="tab-overview" class="section active">
+    <h2>오늘의 요약</h2>
+    <div class="kpis"><div class="kpi"><b>17</b><span class="muted">핵심 후보</span></div><div class="kpi"><b>13</b><span class="muted">눌림 대기</span></div><div class="kpi"><b>39</b><span class="muted">기회 카드</span></div><div class="kpi"><b>10</b><span class="muted">생활 테마</span></div><div class="kpi"><b>38</b><span class="muted">차트 결합</span></div></div>
+    <h2>가장 강한 후보</h2>
+    <div class="grid"><article class="card good" data-search="비에이치 090460 실적 1분기 영업이익 흑자전환 고부가가치 fpcb, 공급망 경쟁력 strong_watch">
+  <div class="row"><div><span class="name">비에이치</span> <span class="muted mono">090460</span></div><span class="pct mono">+24.38%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">1분기 영업이익 흑자전환</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 98 · 뉴스 98 · 차트 97</div>
+</article><article class="card good" data-search="나무가 190510 로봇 로봇 비전솔루션 라인업 확대 로봇 비전솔루션, 라인업 확대 strong_watch">
+  <div class="row"><div><span class="name">나무가</span> <span class="muted mono">190510</span></div><span class="pct mono">+20.54%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">로봇 비전솔루션 라인업 확대</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 98 · 뉴스 98 · 차트 98</div>
+</article><article class="card good" data-search="아시아나항공 020560 실적 대한항공·아시아나항공 합병 확정 발표 아시아나항공 합병 일정, 대한항공 아시아나 통합 strong_watch">
+  <div class="row"><div><span class="name">아시아나항공</span> <span class="muted mono">020560</span></div><span class="pct mono">+16.94%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">대한항공·아시아나항공 합병 확정 발표</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 96 · 뉴스 100 · 차트 90</div>
+</article><article class="card good" data-search="경동나비엔 009450 실적 1분기 영업이익 638억 원 발표, 전년 대비 62% 증가 북미 시장 성장, 비용 절감 효과, 공기질 솔루션 strong_watch">
+  <div class="row"><div><span class="name">경동나비엔</span> <span class="muted mono">009450</span></div><span class="pct mono">+11.98%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">1분기 영업이익 638억 원 발표, 전년 대비 62% 증가</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 96 · 뉴스 100 · 차트 92</div>
+</article><article class="card good" data-search="에스에너지 095910 태양광 중동 3mw 태양광 hjt 모듈 본계약 체결 hjt 모듈, 중동 태양광 수주 strong_watch">
+  <div class="row"><div><span class="name">에스에너지</span> <span class="muted mono">095910</span></div><span class="pct mono">+23.63%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">중동 3MW 태양광 HJT 모듈 본계약 체결</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 94 · 뉴스 98 · 차트 88</div>
+</article><article class="card good" data-search="제이투케이바이오 420570 실적 1분기 영업이익 전년 대비 476% 증가 k뷰티 수혜, 영업이익 증가 strong_watch">
+  <div class="row"><div><span class="name">제이투케이바이오</span> <span class="muted mono">420570</span></div><span class="pct mono">+19.47%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">1분기 영업이익 전년 대비 476% 증가</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 94 · 뉴스 98 · 차트 90</div>
+</article></div>
+    <h2>상위 기회 카드</h2>
+    <div class="grid"><article class="card good" data-search="1분기 영업이익 흑자전환 실적 고부가가치 fpcb 공급망 경쟁력 1분기 영업이익 흑자전환 비에이치">
+  <div class="row"><h3>1분기 영업이익 흑자전환</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">고부가가치 FPCB, 공급망 경쟁력, 1분기 영업이익 흑자전환</div>
+  <div class="note">실적 테마에서 고부가가치 FPCB, 공급망 경쟁력, 1분기 영업이익 흑자전환가 핵심 매수 포인트입니다. 비에이치이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 비에이치 98</div>
+</article><article class="card good" data-search="한국공항의 1분기 영업이익 급증 실적 영업이익 증가 한국공항 실적 발표 한국공항의 1분기 영업이익 급증 한국공항">
+  <div class="row"><h3>한국공항의 1분기 영업이익 급증</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">영업이익 증가, 한국공항 실적 발표, 한국공항의 1분기 영업이익 급증</div>
+  <div class="note">실적 테마에서 영업이익 증가, 한국공항 실적 발표, 한국공항의 1분기 영업이익 급증가 핵심 매수 포인트입니다. 한국공항이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 한국공항 93</div>
+</article><article class="card good" data-search="대한항공·아시아나항공 합병 확정 발표 실적 아시아나항공 합병 일정 대한항공 아시아나 통합 대한항공 아시아나항공 합병 확정 발표 아시아나항공">
+  <div class="row"><h3>대한항공·아시아나항공 합병 확정 발표</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">아시아나항공 합병 일정, 대한항공 아시아나 통합, 대한항공, 아시아나항공 합병 확정 발표</div>
+  <div class="note">실적 테마에서 아시아나항공 합병 일정, 대한항공 아시아나 통합, 대한항공, 아시아나항공 합병 확정 발표가 핵심 매수 포인트입니다. 아시아나항공이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 아시아나항공 95</div>
+</article><article class="card good" data-search="정부의 태양광 인버터 산업 활성화 협의체 발족 정책 태양광 인버터 협의체 태양광 기술 자립화 에너지 전환 사업 정부의 태양광 인버터 산업 활성화 협의체 발족 hd현대에너지솔루션">
+  <div class="row"><h3>정부의 태양광 인버터 산업 활성화 협의체 발족</h3><span class="mono">100</span></div>
+  <span class="badge">정책</span><span class="badge">direct</span>
+  <div class="signal">태양광 인버터 협의체, 태양광 기술 자립화, 에너지 전환 사업, 정부의 태양광 인버터 산업</div>
+  <div class="note">정책 테마에서 태양광 인버터 협의체, 태양광 기술 자립화, 에너지 전환 사업, 정부의 태양광 인버터 산업가 핵심 매수 포인트입니다. HD현대에너지솔루션이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: HD현대에너지솔루션 94</div>
+</article></div>
+  </section>
+
+  <section id="tab-signals" class="section">
+    <h2>뉴스 × 차트 통합 후보</h2>
+    <div class="grid"><article class="card good" data-search="비에이치 090460 실적 1분기 영업이익 흑자전환 고부가가치 fpcb, 공급망 경쟁력 strong_watch">
+  <div class="row"><div><span class="name">비에이치</span> <span class="muted mono">090460</span></div><span class="pct mono">+24.38%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">1분기 영업이익 흑자전환</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 98 · 뉴스 98 · 차트 97</div>
+</article><article class="card good" data-search="나무가 190510 로봇 로봇 비전솔루션 라인업 확대 로봇 비전솔루션, 라인업 확대 strong_watch">
+  <div class="row"><div><span class="name">나무가</span> <span class="muted mono">190510</span></div><span class="pct mono">+20.54%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">로봇 비전솔루션 라인업 확대</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 98 · 뉴스 98 · 차트 98</div>
+</article><article class="card good" data-search="아시아나항공 020560 실적 대한항공·아시아나항공 합병 확정 발표 아시아나항공 합병 일정, 대한항공 아시아나 통합 strong_watch">
+  <div class="row"><div><span class="name">아시아나항공</span> <span class="muted mono">020560</span></div><span class="pct mono">+16.94%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">대한항공·아시아나항공 합병 확정 발표</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 96 · 뉴스 100 · 차트 90</div>
+</article><article class="card good" data-search="경동나비엔 009450 실적 1분기 영업이익 638억 원 발표, 전년 대비 62% 증가 북미 시장 성장, 비용 절감 효과, 공기질 솔루션 strong_watch">
+  <div class="row"><div><span class="name">경동나비엔</span> <span class="muted mono">009450</span></div><span class="pct mono">+11.98%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">1분기 영업이익 638억 원 발표, 전년 대비 62% 증가</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 96 · 뉴스 100 · 차트 92</div>
+</article><article class="card good" data-search="에스에너지 095910 태양광 중동 3mw 태양광 hjt 모듈 본계약 체결 hjt 모듈, 중동 태양광 수주 strong_watch">
+  <div class="row"><div><span class="name">에스에너지</span> <span class="muted mono">095910</span></div><span class="pct mono">+23.63%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">중동 3MW 태양광 HJT 모듈 본계약 체결</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 94 · 뉴스 98 · 차트 88</div>
+</article><article class="card good" data-search="제이투케이바이오 420570 실적 1분기 영업이익 전년 대비 476% 증가 k뷰티 수혜, 영업이익 증가 strong_watch">
+  <div class="row"><div><span class="name">제이투케이바이오</span> <span class="muted mono">420570</span></div><span class="pct mono">+19.47%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">1분기 영업이익 전년 대비 476% 증가</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 94 · 뉴스 98 · 차트 90</div>
+</article><article class="card good" data-search="한국공항 005430 실적 한국공항의 1분기 영업이익 급증 영업이익 증가, 한국공항 실적 발표 strong_watch">
+  <div class="row"><div><span class="name">한국공항</span> <span class="muted mono">005430</span></div><span class="pct mono">+18.11%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">한국공항의 1분기 영업이익 급증</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 93 · 뉴스 98 · 차트 87</div>
+</article><article class="card good" data-search="코아시아씨엠 196450 실적 1분기 영업이익 96% 증가 발표 1분기 영업이익, 실적 발표 strong_watch">
+  <div class="row"><div><span class="name">코아시아씨엠</span> <span class="muted mono">196450</span></div><span class="pct mono">+30.00%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">1분기 영업이익 96% 증가 발표</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 92 · 뉴스 98 · 차트 85</div>
+</article><article class="card good" data-search="hd현대에너지솔루션 322000 정책 정부의 태양광 인버터 산업 활성화 협의체 발족 태양광 인버터 협의체, 태양광 기술 자립화, 에너지 전환 사업 strong_watch">
+  <div class="row"><div><span class="name">HD현대에너지솔루션</span> <span class="muted mono">322000</span></div><span class="pct mono">+15.09%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">정부의 태양광 인버터 산업 활성화 협의체 발족</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 91 · 뉴스 92 · 차트 89</div>
+</article><article class="card good" data-search="대우건설 047040 부동산, 건설 신축 단지 재개발 및 대단지 분양 착수 광명 하안주공 시공사 선정, 동래 푸르지오 에듀포레 분양 strong_watch">
+  <div class="row"><div><span class="name">대우건설</span> <span class="muted mono">047040</span></div><span class="pct mono">+12.61%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">신축 단지 재개발 및 대단지 분양 착수</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 90 · 뉴스 100 · 차트 78</div>
+</article><article class="card good" data-search="gs피앤엘 499790 실적 1분기 영업익 58.8% 증가 gs피앤엘 실적 발표, 영업이익 증가 추세, 레저업계 호황 strong_watch">
+  <div class="row"><div><span class="name">GS피앤엘</span> <span class="muted mono">499790</span></div><span class="pct mono">+12.84%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">1분기 영업익 58.8% 증가</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 89 · 뉴스 98 · 차트 78</div>
+</article><article class="card good" data-search="지엔코 065060 수급 유상증자 통한 자금 조달 유상증자, 재무구조 개선, 크레오에스지 strong_watch">
+  <div class="row"><div><span class="name">지엔코</span> <span class="muted mono">065060</span></div><span class="pct mono">+20.34%</span></div>
+  <span class="badge">strong_watch</span><span class="badge">risk low</span><span class="badge">high</span>
+  <div class="signal">유상증자 통한 자금 조달</div>
+  <div class="note">뉴스와 수급이 함께 맞습니다. 시초 추격보다 거래량 유지와 전일 고가 돌파 여부를 확인합니다.</div>
+  <div class="muted mono">종합 88 · 뉴스 98 · 차트 75</div>
+</article></div>
+  </section>
+
+  <section id="tab-opportunities" class="section">
+    <h2>기사 키워드 기회 카드</h2>
+    <div class="grid"><article class="card good" data-search="1분기 영업이익 흑자전환 실적 고부가가치 fpcb 공급망 경쟁력 1분기 영업이익 흑자전환 비에이치">
+  <div class="row"><h3>1분기 영업이익 흑자전환</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">고부가가치 FPCB, 공급망 경쟁력, 1분기 영업이익 흑자전환</div>
+  <div class="note">실적 테마에서 고부가가치 FPCB, 공급망 경쟁력, 1분기 영업이익 흑자전환가 핵심 매수 포인트입니다. 비에이치이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 비에이치 98</div>
+</article><article class="card good" data-search="한국공항의 1분기 영업이익 급증 실적 영업이익 증가 한국공항 실적 발표 한국공항의 1분기 영업이익 급증 한국공항">
+  <div class="row"><h3>한국공항의 1분기 영업이익 급증</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">영업이익 증가, 한국공항 실적 발표, 한국공항의 1분기 영업이익 급증</div>
+  <div class="note">실적 테마에서 영업이익 증가, 한국공항 실적 발표, 한국공항의 1분기 영업이익 급증가 핵심 매수 포인트입니다. 한국공항이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 한국공항 93</div>
+</article><article class="card good" data-search="대한항공·아시아나항공 합병 확정 발표 실적 아시아나항공 합병 일정 대한항공 아시아나 통합 대한항공 아시아나항공 합병 확정 발표 아시아나항공">
+  <div class="row"><h3>대한항공·아시아나항공 합병 확정 발표</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">아시아나항공 합병 일정, 대한항공 아시아나 통합, 대한항공, 아시아나항공 합병 확정 발표</div>
+  <div class="note">실적 테마에서 아시아나항공 합병 일정, 대한항공 아시아나 통합, 대한항공, 아시아나항공 합병 확정 발표가 핵심 매수 포인트입니다. 아시아나항공이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 아시아나항공 95</div>
+</article><article class="card good" data-search="정부의 태양광 인버터 산업 활성화 협의체 발족 정책 태양광 인버터 협의체 태양광 기술 자립화 에너지 전환 사업 정부의 태양광 인버터 산업 활성화 협의체 발족 hd현대에너지솔루션">
+  <div class="row"><h3>정부의 태양광 인버터 산업 활성화 협의체 발족</h3><span class="mono">100</span></div>
+  <span class="badge">정책</span><span class="badge">direct</span>
+  <div class="signal">태양광 인버터 협의체, 태양광 기술 자립화, 에너지 전환 사업, 정부의 태양광 인버터 산업</div>
+  <div class="note">정책 테마에서 태양광 인버터 협의체, 태양광 기술 자립화, 에너지 전환 사업, 정부의 태양광 인버터 산업가 핵심 매수 포인트입니다. HD현대에너지솔루션이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: HD현대에너지솔루션 94</div>
+</article><article class="card good" data-search="1분기 영업익 58.8% 증가 실적 gs피앤엘 실적 발표 영업이익 증가 추세 레저업계 호황 1분기 영업익 58 gs피앤엘">
+  <div class="row"><h3>1분기 영업익 58.8% 증가</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">GS피앤엘 실적 발표, 영업이익 증가 추세, 레저업계 호황, 1분기 영업익 58</div>
+  <div class="note">실적 테마에서 GS피앤엘 실적 발표, 영업이익 증가 추세, 레저업계 호황, 1분기 영업익 58가 핵심 매수 포인트입니다. GS피앤엘이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: GS피앤엘 89</div>
+</article><article class="card good" data-search="신축 단지 재개발 및 대단지 분양 착수 부동산, 건설 광명 하안주공 시공사 선정 동래 푸르지오 에듀포레 분양 신축 단지 재개발 및 대단지 분양 착수 대우건설">
+  <div class="row"><h3>신축 단지 재개발 및 대단지 분양 착수</h3><span class="mono">100</span></div>
+  <span class="badge">부동산, 건설</span><span class="badge">direct</span>
+  <div class="signal">광명 하안주공 시공사 선정, 동래 푸르지오 에듀포레 분양, 신축 단지 재개발 및, 대단지 분양 착수</div>
+  <div class="note">부동산, 건설 테마에서 광명 하안주공 시공사 선정, 동래 푸르지오 에듀포레 분양, 신축 단지 재개발 및, 대단지 분양 착수가 핵심 매수 포인트입니다. 대우건설이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 대우건설 89</div>
+</article><article class="card good" data-search="1분기 영업이익 638억 원 발표, 전년 대비 62% 증가 실적 북미 시장 성장 비용 절감 효과 공기질 솔루션 1분기 영업이익 638억 원 전년 대비 62 경동나비엔">
+  <div class="row"><h3>1분기 영업이익 638억 원 발표, 전년 대비 62% 증가</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">북미 시장 성장, 비용 절감 효과, 공기질 솔루션, 1분기 영업이익 638억 원</div>
+  <div class="note">실적 테마에서 북미 시장 성장, 비용 절감 효과, 공기질 솔루션, 1분기 영업이익 638억 원가 핵심 매수 포인트입니다. 경동나비엔이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 경동나비엔 96</div>
+</article><article class="card good" data-search="1분기 영업이익 96% 증가 발표 실적 1분기 영업이익 실적 발표 1분기 영업이익 96 증가 발표 코아시아씨엠">
+  <div class="row"><h3>1분기 영업이익 96% 증가 발표</h3><span class="mono">100</span></div>
+  <span class="badge">실적</span><span class="badge">direct</span>
+  <div class="signal">1분기 영업이익, 실적 발표, 1분기 영업이익 96, 증가 발표</div>
+  <div class="note">실적 테마에서 1분기 영업이익, 실적 발표, 1분기 영업이익 96, 증가 발표가 핵심 매수 포인트입니다. 코아시아씨엠이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 코아시아씨엠 92</div>
+</article><article class="card good" data-search="중동 3mw 태양광 hjt 모듈 본계약 체결 태양광 hjt 모듈 중동 태양광 수주 중동 3mw 태양광 hjt 모듈 본계약 체결 에스에너지">
+  <div class="row"><h3>중동 3MW 태양광 HJT 모듈 본계약 체결</h3><span class="mono">100</span></div>
+  <span class="badge">태양광</span><span class="badge">direct</span>
+  <div class="signal">HJT 모듈, 중동 태양광 수주, 중동 3MW 태양광 HJT, 모듈 본계약 체결</div>
+  <div class="note">태양광 테마에서 HJT 모듈, 중동 태양광 수주, 중동 3MW 태양광 HJT, 모듈 본계약 체결가 핵심 매수 포인트입니다. 에스에너지이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 에스에너지 94</div>
+</article><article class="card good" data-search="로봇 비전솔루션 라인업 확대 로봇 로봇 비전솔루션 라인업 확대 로봇 비전솔루션 라인업 확대 나무가">
+  <div class="row"><h3>로봇 비전솔루션 라인업 확대</h3><span class="mono">100</span></div>
+  <span class="badge">로봇</span><span class="badge">direct</span>
+  <div class="signal">로봇 비전솔루션, 라인업 확대, 로봇 비전솔루션 라인업 확대</div>
+  <div class="note">로봇 테마에서 로봇 비전솔루션, 라인업 확대, 로봇 비전솔루션 라인업 확대가 핵심 매수 포인트입니다. 나무가이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="muted">상위: 나무가 99</div>
+</article></div>
+  </section>
+
+  <section id="tab-life" class="section">
+    <h2>생활 기사 테마 레이더</h2>
+    <div class="grid"><article class="card good" data-search="폭염/냉방가전 폭염, 열대야, 전력피크 전망이 나오면 냉방가전과 전력 효율 관련 종목이 계절성 수급을 받는 테마입니다. 에어컨 판매 증가 선풍기/써큘레이터 수요 전력 피크 대응 냉방가전 교체 수요 경동나비엔 에스씨디 오텍 파세코 위닉스 신일전자">
+  <div class="row"><h3>폭염/냉방가전</h3><span class="mono">55</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">에어컨 판매 증가, 선풍기/써큘레이터 수요, 전력 피크 대응, 냉방가전 교체 수요</div>
+  <div class="note">폭염/냉방가전 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 경동나비엔 · 100 · early_candidate</div>
+</article><article class="card good" data-search="재개발/부동산 가치 재개발, 용적률 완화, 대형 부지 개발, 터미널/역세권 개발 뉴스가 자산가치 보유주로 연결됩니다. 보유 부동산 가치 개발 기대감 용적률 완화 역세권 수혜 한국공항 현대건설 대우건설 천일고속 동양고속 성창기업지주">
+  <div class="row"><h3>재개발/부동산 가치</h3><span class="mono">55</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">보유 부동산 가치, 개발 기대감, 용적률 완화, 역세권 수혜</div>
+  <div class="note">재개발/부동산 가치 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 한국공항 · 100 · early_candidate</div>
+</article><article class="card good" data-search="ai 데이터센터 ai 투자, 데이터센터 증설, gpu 서버, 냉각, 전력 인프라 뉴스가 반도체/전력/냉각 테마로 확산될 수 있습니다. ai 서버 투자 gpu 공급망 데이터센터 냉각 전력 인프라 증설 유니셈 한미반도체 gst 대덕전자 sk하이닉스 이수페타시스">
+  <div class="row"><h3>AI 데이터센터</h3><span class="mono">43</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">AI 서버 투자, GPU 공급망, 데이터센터 냉각, 전력 인프라 증설</div>
+  <div class="note">AI 데이터센터 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 유니셈 · 79 · early_candidate</div>
+</article><article class="card wait" data-search="감염병/진단키트 코로나, 독감, 변이 바이러스처럼 감염병 이슈가 다시 커질 때 진단키트, 백신, 마스크, 의료기기 수요가 부각되는 테마입니다. 자가진단키트 수요 백신/치료제 기대 검사 수요 증가 방역용품 재고 확충 씨젠 휴마시스 엑세스바이오 수젠텍 랩지노믹스 진매트릭스">
+  <div class="row"><h3>감염병/진단키트</h3><span class="mono">42</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">자가진단키트 수요, 백신/치료제 기대, 검사 수요 증가, 방역용품 재고 확충</div>
+  <div class="note">감염병/진단키트 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 씨젠 · 77 · wait_pullback</div>
+</article><article class="card good" data-search="전력망/전력설비 전력수요, 데이터센터, 송전망 확충, 변압기 부족 같은 이슈가 전력기기/전선 테마로 연결됩니다. 전력망 투자 변압기 수요 전선 수주 ai 데이터센터 전력 증설 hd현대일렉트릭 효성중공업 제룡전기 ls electric 가온전선 대한전선">
+  <div class="row"><h3>전력망/전력설비</h3><span class="mono">40</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">전력망 투자, 변압기 수요, 전선 수주, AI 데이터센터 전력 증설</div>
+  <div class="note">전력망/전력설비 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: HD현대일렉트릭 · 72 · early_candidate</div>
+</article><article class="card watch" data-search="저출산/육아정책 저출산 대책, 출산 지원, 육아휴직 확대, 난임 지원 뉴스가 육아/교육/난임 테마로 연결됩니다. 육아용품 수요 교육/보육 정책 난임 치료 지원 정부 지원 확대 웅진씽크빅 메디앙스 ne능률 깨끗한나라 아가방컴퍼니 제로투세븐">
+  <div class="row"><h3>저출산/육아정책</h3><span class="mono">30</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">육아용품 수요, 교육/보육 정책, 난임 치료 지원, 정부 지원 확대</div>
+  <div class="note">저출산/육아정책 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 웅진씽크빅 · 54 · weak</div>
+</article><article class="card watch" data-search="미세먼지/공기질 미세먼지, 황사, 대기질 악화 뉴스가 늘면 공기청정기, 마스크, 필터 관련 종목을 점검합니다. 공기청정기 수요 필터 교체 수요 마스크 수요 환경 규제 강화 오공 웰크론 모나리자 크린앤사이언스 케이엠 위닉스">
+  <div class="row"><h3>미세먼지/공기질</h3><span class="mono">23</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">공기청정기 수요, 필터 교체 수요, 마스크 수요, 환경 규제 강화</div>
+  <div class="note">미세먼지/공기질 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 오공 · 42 · weak</div>
+</article><article class="card watch" data-search="방산/지정학 전쟁, 중동 긴장, 국방 예산, 무기 수출 뉴스가 방산과 드론/전자전 테마로 이어질 수 있습니다. 방산 수출 국방 예산 증가 드론/대공 방어 탄약/미사일 수요 한국항공우주 풍산 한화에어로스페이스 현대로템 퍼스텍">
+  <div class="row"><h3>방산/지정학</h3><span class="mono">23</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">방산 수출, 국방 예산 증가, 드론/대공 방어, 탄약/미사일 수요</div>
+  <div class="note">방산/지정학 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 한국항공우주 · 41 · weak</div>
+</article><article class="card watch" data-search="장마/태풍/복구 장마, 태풍, 침수, 복구 이슈가 커질 때 폐기물 처리, 배수, 복구 장비, 농업 피해 관련 종목이 반응할 수 있습니다. 폐기물 처리 수해 복구 배수 설비 농작물 피해 대응 남해화학 자연과환경 와이엔텍 인선이엔티 뉴보텍">
+  <div class="row"><h3>장마/태풍/복구</h3><span class="mono">21</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">폐기물 처리, 수해 복구, 배수 설비, 농작물 피해 대응</div>
+  <div class="note">장마/태풍/복구 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 남해화학 · 38 · weak</div>
+</article><article class="card watch" data-search="봄/야외활동 봄철 야외활동, 자전거, 캠핑, 레저 소비가 살아날 때 반응할 수 있는 계절 소비 테마입니다. 자전거 판매 캠핑/아웃도어 소비 레저 활동 증가 봄철 소비 회복 더네이쳐홀딩스 감성코퍼레이션 알톤 참좋은여행 노랑풍선 삼천리자전거">
+  <div class="row"><h3>봄/야외활동</h3><span class="mono">10</span></div>
+  <span class="badge">기사 0</span><span class="badge">heat 0</span>
+  <div class="signal">자전거 판매, 캠핑/아웃도어 소비, 레저 활동 증가, 봄철 소비 회복</div>
+  <div class="note">봄/야외활동 관련 기사는 아직 약합니다. 사전 테마로만 관찰합니다.</div>
+  <div class="muted">선두: 더네이쳐홀딩스 · 18 · weak</div>
+</article></div>
+  </section>
+
+  <section id="tab-links" class="section">
+    <h2>상세 보기</h2>
+    <div class="mini-list">
+      <div class="list-item"><a href="../visual_dashboard/output/dashboard.html">뉴스 × 차트 통합 대시보드</a><div class="muted">../visual_dashboard/output/dashboard.html</div></div><div class="list-item"><a href="../opportunity_engine/output/opportunity_board.html">기사 키워드 기회 보드</a><div class="muted">../opportunity_engine/output/opportunity_board.html</div></div><div class="list-item"><a href="../life_theme_radar/output/life_radar.html">생활 기사 테마 레이더</a><div class="muted">../life_theme_radar/output/life_radar.html</div></div><div class="list-item"><a href="../chart_analysis/output/chart_report_20260514.html">차트 분석 리포트</a><div class="muted">../chart_analysis/output/chart_report_20260514.html</div></div><div class="list-item"><a href="../reports/index.html">기존 누적 시그널 대시보드</a><div class="muted">../reports/index.html</div></div>
+    </div>
+  </section>
+</main>
+<script>
+const buttons = [...document.querySelectorAll('button[data-tab]')];
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  buttons.forEach(b => b.classList.toggle('active', b === btn));
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+}));
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value.trim().toLowerCase();
+  document.querySelectorAll('[data-search]').forEach(el => {
+    el.classList.toggle('hide', q && !el.dataset.search.includes(q));
+  });
+});
+</script>
+</body>
+</html>

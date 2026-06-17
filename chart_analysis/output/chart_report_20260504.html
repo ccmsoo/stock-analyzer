@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Chart Analysis</title>
+<style>
+  :root { --bg:#101214; --fg:#e8eaed; --muted:#9aa0a6; --card:#181b1f; --line:#2a2f36;
+           --good:#36c275; --warn:#f2b84b; --bad:#ff6961; --info:#66a6ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:24px; background:var(--bg); color:var(--fg);
+          font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  h1 { margin:0 0 4px; font-size:22px; }
+  .meta { color:var(--muted); margin-bottom:18px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px; }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .name { font-weight:700; }
+  .sub { color:var(--muted); font-size:12px; }
+  .pct { color:#ff7b86; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:700; }
+  .score { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .risk-low { color:var(--good); }
+  .risk-medium { color:var(--warn); }
+  .risk-high { color:var(--bad); }
+  .risk-extreme { color:var(--bad); font-weight:700; }
+  .chips span { display:inline-block; border:1px solid var(--line); border-radius:4px; padding:1px 6px;
+                 margin:6px 4px 0 0; color:var(--muted); font-size:12px; }
+  .comment { margin-top:8px; color:#d1d5db; }
+  table { width:100%; margin-top:8px; border-collapse:collapse; color:var(--muted); font-size:12px; }
+  td { border-top:1px solid var(--line); padding:4px 0; }
+  td:last-child { text-align:right; color:var(--fg); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+</style>
+</head>
+<body>
+<h1>급등 종목 차트 분석</h1>
+<div class="meta">분석 2건 · 실패 0건 · 생성 2026-05-15T03:05:47</div>
+
+<div class="grid">
+<article class="card">
+  <div class="row">
+    <div><span class="name">일진홀딩스</span> <span class="sub">015860 · KOSPI</span></div>
+    <span class="pct">+29.94%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 73</span>
+    <span class="risk-extreme">risk extreme</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>volume_breakout</span></div>
+  <div class="comment">거래량을 동반한 돌파형입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. 거래량은 20일 평균 대비 13.2배입니다. RSI 89.0로 추격 매수는 부담스럽습니다. 20일선 이격 53.5%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>13,410 / 419.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>13.15x / 19.43x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>88.95 / 53.49%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.97% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">대원전선우</span> <span class="sub">006345 · KOSPI</span></div>
+    <span class="pct">+29.98%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 65</span>
+    <span class="risk-extreme">risk extreme</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>20일 신고가</span><span>60일 신고가</span><span>trend_continuation</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 60일 신고가를 건드려 수급 집중 신호가 있습니다. RSI 94.9로 추격 매수는 부담스럽습니다. 20일선 이격 141.3%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>12,920 / 359.4억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>2.14x / 3.97x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>94.88 / 141.26%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>18.01% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+</div>
+</body>
+</html>

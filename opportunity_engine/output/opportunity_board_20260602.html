@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>기사 키워드 기회 보드</title>
+<style>
+  :root {
+    --bg:#0e1116; --fg:#eef2f7; --muted:#9aa5b1; --panel:#171c24; --panel2:#202734;
+    --line:#2d3542; --good:#35c77b; --wait:#f4b64a; --watch:#6ea8fe; --bad:#ff6f68; --cyan:#4ed8d0;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  header { position:sticky; top:0; z-index:5; padding:24px 30px 16px; background:#121720; border-bottom:1px solid var(--line); }
+  h1 { margin:0; font-size:23px; }
+  h2 { margin:0 0 8px; font-size:17px; letter-spacing:0; }
+  .meta, .muted { color:var(--muted); }
+  main { padding:22px 30px 40px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:16px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .kpi b { display:block; font-size:22px; }
+  .toolbar { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; }
+  button, input { background:var(--panel); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:7px 10px; font:inherit; }
+  button { cursor:pointer; }
+  button.active { background:var(--cyan); color:#061213; border-color:var(--cyan); }
+  input { min-width:260px; }
+  .opp { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; margin-bottom:14px; }
+  .opp.top { border-left:4px solid var(--good); }
+  .opp.wait { border-left:4px solid var(--wait); }
+  .row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .score { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:700; }
+  .chips span, .badge { display:inline-block; background:var(--panel2); border:1px solid var(--line); border-radius:999px; padding:2px 8px; margin:5px 4px 0 0; font-size:12px; color:#dbe4ee; }
+  .comment { margin-top:9px; color:#dce4ed; }
+  .stocks { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:10px; margin-top:12px; }
+  .stock { background:#111820; border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .stock.best_candidate { border-left:3px solid var(--good); }
+  .stock.wait_pullback { border-left:3px solid var(--wait); }
+  .stock.chart_only_watch { border-left:3px solid var(--watch); }
+  .stock.pass { opacity:.76; }
+  .name { font-weight:700; }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .pct { color:#ff8189; font-weight:700; }
+  .bars { display:grid; grid-template-columns:74px 1fr 40px; gap:8px; align-items:center; color:var(--muted); font-size:12px; margin-top:7px; }
+  .bar { height:7px; background:#2b3340; border-radius:999px; overflow:hidden; }
+  .bar i { display:block; height:100%; background:linear-gradient(90deg,var(--cyan),var(--good)); }
+  .spark { width:100%; height:118px; margin-top:9px; display:block; border:1px solid #26303d; border-radius:8px; }
+  .note { margin-top:8px; }
+  .hide { display:none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>기사 키워드 기회 보드</h1>
+  <div class="meta">20260602 · 기회 15개 · 차트 결합 15개 · 생성 2026-06-03T14:26:01</div>
+  <div class="kpis"><div class="kpi"><b>2</b><span class="muted">차트 최강 후보</span></div><div class="kpi"><b>5</b><span class="muted">눌림 대기</span></div><div class="kpi"><b>1</b><span class="muted">차트만 강함</span></div><div class="kpi"><b>0</b><span class="muted">차트 필요</span></div><div class="kpi"><b>7</b><span class="muted">보류</span></div></div>
+  <div class="toolbar">
+    <button class="active" data-filter="all">전체</button>
+    <button data-filter="best_candidate">차트 최강 포함</button>
+    <button data-filter="wait_pullback">눌림 대기</button>
+    <button data-filter="chart_only_watch">차트만 강함</button>
+    <input id="search" placeholder="기사 키워드, 테마, 종목 검색">
+  </div>
+</header>
+<main>
+  <section class="opp top" data-verdicts="best_candidate" data-search="프로브카드 밸류체인에서 hbm4·dram 향 매출 확대 기대(probe card 수요·제품 믹스 개선) 반도체 반도체 장비 소부장(장비) 프로브카드(hbm4) dram향 침투 확대 etf 자금 유입 프로브카드 밸류체인에서 hbm4 dram 향 매출 확대 probe card 수요 티에스이">
+  <div class="row">
+    <div>
+      <h2>프로브카드 밸류체인에서 HBM4·DRAM 향 매출 확대 기대(Probe Card 수요·제품 믹스 개선)</h2>
+      <div class="muted">테마 반도체 · 직접성 probable · 관련 종목 1개</div>
+    </div>
+    <div class="score">88</div>
+  </div>
+  <div class="chips"><span>반도체 장비</span><span>소부장(장비)</span><span>프로브카드(HBM4)</span><span>DRAM향 침투 확대</span><span>ETF 자금 유입</span><span>프로브카드 밸류체인에서 HBM4</span><span>DRAM 향 매출 확대</span><span>Probe Card 수요</span><span>rumor</span></div>
+  <div class="comment">반도체 테마에서 반도체 장비, 소부장(장비), 프로브카드(HBM4), DRAM향 침투 확대가 핵심 매수 포인트입니다. 티에스이이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="stocks"><article class="stock best_candidate">
+  <div class="row">
+    <div><span class="name">1. 티에스이</span> <span class="muted mono">131290 · KOSDAQ</span></div>
+    <span class="pct mono">+3.23%</span>
+  </div>
+  <div>
+    <span class="badge">best_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:65%"></i></span><span class="mono">65</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:84%"></i></span><span class="mono">84</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:74%"></i></span><span class="mono">74</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="83.7" width="2" height="12.3" rx="1" /><rect x="12.8" y="88.6" width="2" height="7.4" rx="1" /><rect x="17.6" y="90.2" width="2" height="5.8" rx="1" /><rect x="22.4" y="88.9" width="2" height="7.1" rx="1" /><rect x="27.3" y="84.2" width="2" height="11.8" rx="1" /><rect x="32.1" y="88.6" width="2" height="7.4" rx="1" /><rect x="36.9" y="88.8" width="2" height="7.2" rx="1" /><rect x="41.7" y="91.2" width="2" height="4.8" rx="1" /><rect x="46.5" y="92.2" width="2" height="3.8" rx="1" /><rect x="51.3" y="90.5" width="2" height="5.5" rx="1" /><rect x="56.1" y="93.0" width="2" height="3.0" rx="1" /><rect x="60.9" y="90.6" width="2" height="5.4" rx="1" /><rect x="65.8" y="91.6" width="2" height="4.4" rx="1" /><rect x="70.6" y="92.9" width="2" height="3.1" rx="1" /><rect x="75.4" y="93.2" width="2" height="2.8" rx="1" /><rect x="80.2" y="89.6" width="2" height="6.4" rx="1" /><rect x="85.0" y="92.5" width="2" height="3.5" rx="1" /><rect x="89.8" y="92.7" width="2" height="3.3" rx="1" /><rect x="94.6" y="90.9" width="2" height="5.1" rx="1" /><rect x="99.5" y="90.3" width="2" height="5.7" rx="1" /><rect x="104.3" y="91.4" width="2" height="4.6" rx="1" /><rect x="109.1" y="93.5" width="2" height="2.5" rx="1" /><rect x="113.9" y="94.2" width="2" height="1.8" rx="1" /><rect x="118.7" y="91.7" width="2" height="4.3" rx="1" /><rect x="123.5" y="90.6" width="2" height="5.4" rx="1" /><rect x="128.3" y="92.6" width="2" height="3.4" rx="1" /><rect x="133.2" y="91.4" width="2" height="4.6" rx="1" /><rect x="138.0" y="88.6" width="2" height="7.4" rx="1" /><rect x="142.8" y="86.9" width="2" height="9.1" rx="1" /><rect x="147.6" y="85.8" width="2" height="10.2" rx="1" /><rect x="152.4" y="78.0" width="2" height="18.0" rx="1" /><rect x="157.2" y="89.4" width="2" height="6.6" rx="1" /><rect x="162.0" y="89.5" width="2" height="6.5" rx="1" /><rect x="166.8" y="88.3" width="2" height="7.7" rx="1" /><rect x="171.7" y="92.0" width="2" height="4.0" rx="1" /><rect x="176.5" y="92.8" width="2" height="3.2" rx="1" /><rect x="181.3" y="92.9" width="2" height="3.1" rx="1" /><rect x="186.1" y="91.0" width="2" height="5.0" rx="1" /><rect x="190.9" y="90.5" width="2" height="5.5" rx="1" /><rect x="195.7" y="90.8" width="2" height="5.2" rx="1" /><rect x="200.5" y="88.6" width="2" height="7.4" rx="1" /><rect x="205.4" y="89.8" width="2" height="6.2" rx="1" /><rect x="210.2" y="88.8" width="2" height="7.2" rx="1" /><rect x="215.0" y="91.6" width="2" height="4.4" rx="1" /><rect x="219.8" y="90.3" width="2" height="5.7" rx="1" /><rect x="224.6" y="83.3" width="2" height="12.7" rx="1" /><rect x="229.4" y="87.4" width="2" height="8.6" rx="1" /><rect x="234.2" y="90.8" width="2" height="5.2" rx="1" /><rect x="239.1" y="89.9" width="2" height="6.1" rx="1" /><rect x="243.9" y="79.3" width="2" height="16.7" rx="1" /><rect x="248.7" y="85.5" width="2" height="10.5" rx="1" /><rect x="253.5" y="81.7" width="2" height="14.3" rx="1" /><rect x="258.3" y="86.5" width="2" height="9.5" rx="1" /><rect x="263.1" y="89.0" width="2" height="7.0" rx="1" /><rect x="267.9" y="89.1" width="2" height="6.9" rx="1" /><rect x="272.7" y="85.2" width="2" height="10.8" rx="1" /><rect x="277.6" y="83.3" width="2" height="12.7" rx="1" /><rect x="282.4" y="87.7" width="2" height="8.3" rx="1" /><rect x="287.2" y="88.4" width="2" height="7.6" rx="1" /><rect x="292.0" y="88.2" width="2" height="7.8" rx="1" /></g>
+  <polyline fill="none" stroke="#37c978" stroke-width="2.4" points="8.0,68.4 12.8,72.0 17.6,71.4 22.4,70.7 27.3,66.7 32.1,68.3 36.9,64.8 41.7,64.6 46.5,62.5 51.3,60.4 56.1,61.7 60.9,63.4 65.8,64.3 70.6,61.8 75.4,64.6 80.2,66.6 85.0,65.9 89.8,68.5 94.6,63.0 99.5,65.9 104.3,67.2 109.1,67.8 113.9,66.6 118.7,64.6 123.5,62.9 128.3,63.2 133.2,62.6 138.0,56.5 142.8,53.3 147.6,50.0 152.4,44.1 157.2,47.0 162.0,45.9 166.8,41.6 171.7,43.1 176.5,41.6 181.3,42.6 186.1,39.3 190.9,41.8 195.7,41.8 200.5,42.2 205.4,41.3 210.2,40.9 215.0,39.3 219.8,38.8 224.6,39.9 229.4,33.1 234.2,32.8 239.1,36.5 243.9,18.9 248.7,24.4 253.5,13.0 258.3,17.4 263.1,10.0 267.9,17.0 272.7,24.4 277.6,26.5 282.4,28.7 287.2,29.4 292.0,26.7"/>
+  <line x1="8" y1="26.7" x2="292" y2="26.7" stroke="#37c978" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#37c978" font-size="10">+92.7%</text>
+</svg>
+  <div class="note">뉴스와 차트가 맞습니다. 거래량 유지와 전일 고가 돌파 확인이 핵심입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 58.3 · 거래량 0.9x · 20일 이격 2.8%</div>
+</article></div>
+</section>
+<section class="opp " data-verdicts="pass" data-search="1분기 영업이익 3854% 증가(영업이익 18억원) — 생산라인 통폐합·원부자재 비용 절감에 따른 비용구조 개선 실적 실적 개선 원가 절감 생산라인 통폐합 영업이익 18억원 프로젝트 중심 영업 1분기 영업이익 3854 원부자재 비용 절감에 따른 코아스">
+  <div class="row">
+    <div>
+      <h2>1분기 영업이익 3854% 증가(영업이익 18억원) — 생산라인 통폐합·원부자재 비용 절감에 따른 비용구조 개선</h2>
+      <div class="muted">테마 실적 · 직접성 direct · 관련 종목 1개</div>
+    </div>
+    <div class="score">85</div>
+  </div>
+  <div class="chips"><span>실적 개선</span><span>원가 절감</span><span>생산라인 통폐합</span><span>영업이익 18억원</span><span>프로젝트 중심 영업</span><span>1분기 영업이익 3854</span><span>원부자재 비용 절감에 따른</span><span>earnings</span></div>
+  <div class="comment">실적 관련 신호입니다. 현재는 코아스 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="stocks"><article class="stock pass">
+  <div class="row">
+    <div><span class="name">1. 코아스</span> <span class="muted mono">071950 · KOSPI</span></div>
+    <span class="pct mono">+5.59%</span>
+  </div>
+  <div>
+    <span class="badge">pass</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:99%"></i></span><span class="mono">99</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:57%"></i></span><span class="mono">57</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:71%"></i></span><span class="mono">71</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="91.8" width="2" height="4.2" rx="1" /><rect x="12.8" y="93.6" width="2" height="2.4" rx="1" /><rect x="17.6" y="92.3" width="2" height="3.7" rx="1" /><rect x="22.4" y="90.8" width="2" height="5.2" rx="1" /><rect x="27.3" y="92.9" width="2" height="3.1" rx="1" /><rect x="32.1" y="92.4" width="2" height="3.6" rx="1" /><rect x="36.9" y="92.9" width="2" height="3.1" rx="1" /><rect x="41.7" y="94.5" width="2" height="1.5" rx="1" /><rect x="46.5" y="93.3" width="2" height="2.7" rx="1" /><rect x="51.3" y="94.2" width="2" height="1.8" rx="1" /><rect x="56.1" y="86.7" width="2" height="9.3" rx="1" /><rect x="60.9" y="94.6" width="2" height="1.4" rx="1" /><rect x="65.8" y="90.7" width="2" height="5.3" rx="1" /><rect x="70.6" y="82.2" width="2" height="13.8" rx="1" /><rect x="75.4" y="91.3" width="2" height="4.7" rx="1" /><rect x="80.2" y="90.6" width="2" height="5.4" rx="1" /><rect x="85.0" y="93.9" width="2" height="2.1" rx="1" /><rect x="89.8" y="90.9" width="2" height="5.1" rx="1" /><rect x="94.6" y="91.2" width="2" height="4.8" rx="1" /><rect x="99.5" y="92.3" width="2" height="3.7" rx="1" /><rect x="104.3" y="92.9" width="2" height="3.1" rx="1" /><rect x="109.1" y="91.0" width="2" height="5.0" rx="1" /><rect x="113.9" y="93.3" width="2" height="2.7" rx="1" /><rect x="118.7" y="93.4" width="2" height="2.6" rx="1" /><rect x="123.5" y="94.4" width="2" height="1.6" rx="1" /><rect x="128.3" y="82.0" width="2" height="14.0" rx="1" /><rect x="133.2" y="92.4" width="2" height="3.6" rx="1" /><rect x="138.0" y="93.1" width="2" height="2.9" rx="1" /><rect x="142.8" y="93.5" width="2" height="2.5" rx="1" /><rect x="147.6" y="94.5" width="2" height="1.5" rx="1" /><rect x="152.4" y="93.1" width="2" height="2.9" rx="1" /><rect x="157.2" y="93.5" width="2" height="2.5" rx="1" /><rect x="162.0" y="92.4" width="2" height="3.6" rx="1" /><rect x="166.8" y="94.0" width="2" height="2.0" rx="1" /><rect x="171.7" y="94.2" width="2" height="1.8" rx="1" /><rect x="176.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="181.3" y="91.4" width="2" height="4.6" rx="1" /><rect x="186.1" y="93.8" width="2" height="2.2" rx="1" /><rect x="190.9" y="93.8" width="2" height="2.2" rx="1" /><rect x="195.7" y="89.0" width="2" height="7.0" rx="1" /><rect x="200.5" y="89.8" width="2" height="6.2" rx="1" /><rect x="205.4" y="93.0" width="2" height="3.0" rx="1" /><rect x="210.2" y="90.6" width="2" height="5.4" rx="1" /><rect x="215.0" y="78.0" width="2" height="18.0" rx="1" /><rect x="219.8" y="82.4" width="2" height="13.6" rx="1" /><rect x="224.6" y="91.5" width="2" height="4.5" rx="1" /><rect x="229.4" y="86.2" width="2" height="9.8" rx="1" /><rect x="234.2" y="89.8" width="2" height="6.2" rx="1" /><rect x="239.1" y="92.9" width="2" height="3.1" rx="1" /><rect x="243.9" y="91.5" width="2" height="4.5" rx="1" /><rect x="248.7" y="93.7" width="2" height="2.3" rx="1" /><rect x="253.5" y="94.6" width="2" height="1.4" rx="1" /><rect x="258.3" y="94.8" width="2" height="1.2" rx="1" /><rect x="263.1" y="93.1" width="2" height="2.9" rx="1" /><rect x="267.9" y="84.8" width="2" height="11.2" rx="1" /><rect x="272.7" y="90.4" width="2" height="5.6" rx="1" /><rect x="277.6" y="89.8" width="2" height="6.2" rx="1" /><rect x="282.4" y="89.1" width="2" height="6.9" rx="1" /><rect x="287.2" y="93.1" width="2" height="2.9" rx="1" /><rect x="292.0" y="90.8" width="2" height="5.2" rx="1" /></g>
+  <polyline fill="none" stroke="#6ea8fe" stroke-width="2.4" points="8.0,28.8 12.8,40.6 17.6,24.8 22.4,18.2 27.3,10.0 32.1,30.8 36.9,25.2 41.7,16.6 46.5,28.8 51.3,29.5 56.1,16.3 60.9,24.8 65.8,33.5 70.6,33.3 75.4,39.7 80.2,51.2 85.0,54.5 89.8,63.8 94.6,56.0 99.5,61.4 104.3,61.4 109.1,66.1 113.9,66.4 118.7,63.1 123.5,68.8 128.3,62.1 133.2,58.0 138.0,59.8 142.8,59.7 147.6,58.2 152.4,55.0 157.2,50.6 162.0,58.5 166.8,59.1 171.7,57.0 176.5,56.6 181.3,52.8 186.1,57.4 190.9,58.9 195.7,69.6 200.5,72.0 205.4,71.9 210.2,67.8 215.0,60.7 219.8,59.2 224.6,66.7 229.4,50.7 234.2,60.6 239.1,66.0 243.9,60.5 248.7,56.2 253.5,63.2 258.3,62.8 263.1,51.2 267.9,32.1 272.7,31.8 277.6,17.9 282.4,17.9 287.2,34.1 292.0,26.8"/>
+  <line x1="8" y1="26.8" x2="292" y2="26.8" stroke="#6ea8fe" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#6ea8fe" font-size="10">+1.5%</text>
+</svg>
+  <div class="note">거래량은 평균 대비 0.9배입니다. 다음 봉 방향 확인 전까지 관찰입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 67.0 · 거래량 0.9x · 20일 이격 21.8%</div>
+</article></div>
+</section>
+<section class="opp top" data-verdicts="best_candidate" data-search="ceo스코어 &#x27;고속성장&#x27; 부문 우수기업 선정(매출 10조원 미만 그룹 포함) 시장평가 기업경영평가 시장수급 ceo스코어 고속성장 부문 매출 10조원 미만 우수기업 네이버 종목 태깅 ceo스코어 고속성장 부문 우수기업 선정 에스에이엠티">
+  <div class="row">
+    <div>
+      <h2>CEO스코어 &#x27;고속성장&#x27; 부문 우수기업 선정(매출 10조원 미만 그룹 포함)</h2>
+      <div class="muted">테마 시장평가 · 직접성 probable · 관련 종목 1개</div>
+    </div>
+    <div class="score">85</div>
+  </div>
+  <div class="chips"><span>기업경영평가</span><span>시장수급</span><span>CEO스코어 고속성장 부문</span><span>매출 10조원 미만 우수기업</span><span>네이버 종목 태깅</span><span>CEO스코어</span><span>고속성장</span><span>부문 우수기업 선정</span><span>rumor</span></div>
+  <div class="comment">시장평가 테마에서 기업경영평가, 시장수급, CEO스코어 고속성장 부문, 매출 10조원 미만 우수기업가 핵심 매수 포인트입니다. 에스에이엠티이 뉴스 직접성과 차트 강도가 가장 잘 맞습니다.</div>
+  <div class="stocks"><article class="stock best_candidate">
+  <div class="row">
+    <div><span class="name">1. 에스에이엠티</span> <span class="muted mono">031330 · KOSDAQ</span></div>
+    <span class="pct mono">+10.68%</span>
+  </div>
+  <div>
+    <span class="badge">best_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:65%"></i></span><span class="mono">65</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:78%"></i></span><span class="mono">78</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:71%"></i></span><span class="mono">71</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="94.6" width="2" height="1.4" rx="1" /><rect x="12.8" y="93.7" width="2" height="2.3" rx="1" /><rect x="17.6" y="94.4" width="2" height="1.6" rx="1" /><rect x="22.4" y="94.1" width="2" height="1.9" rx="1" /><rect x="27.3" y="94.9" width="2" height="1.1" rx="1" /><rect x="32.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="36.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="41.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="46.5" y="94.6" width="2" height="1.4" rx="1" /><rect x="51.3" y="94.9" width="2" height="1.1" rx="1" /><rect x="56.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="60.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="65.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="70.6" y="93.7" width="2" height="2.3" rx="1" /><rect x="75.4" y="94.9" width="2" height="1.1" rx="1" /><rect x="80.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="85.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="89.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="94.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="99.5" y="94.9" width="2" height="1.1" rx="1" /><rect x="104.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="118.7" y="93.1" width="2" height="2.9" rx="1" /><rect x="123.5" y="94.8" width="2" height="1.2" rx="1" /><rect x="128.3" y="92.5" width="2" height="3.5" rx="1" /><rect x="133.2" y="94.4" width="2" height="1.6" rx="1" /><rect x="138.0" y="94.3" width="2" height="1.7" rx="1" /><rect x="142.8" y="94.7" width="2" height="1.3" rx="1" /><rect x="147.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="152.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="157.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="162.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="166.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="171.7" y="94.8" width="2" height="1.2" rx="1" /><rect x="176.5" y="94.8" width="2" height="1.2" rx="1" /><rect x="181.3" y="94.9" width="2" height="1.1" rx="1" /><rect x="186.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="190.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="195.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="200.5" y="94.8" width="2" height="1.2" rx="1" /><rect x="205.4" y="92.5" width="2" height="3.5" rx="1" /><rect x="210.2" y="93.8" width="2" height="2.2" rx="1" /><rect x="215.0" y="92.3" width="2" height="3.7" rx="1" /><rect x="219.8" y="92.9" width="2" height="3.1" rx="1" /><rect x="224.6" y="93.2" width="2" height="2.8" rx="1" /><rect x="229.4" y="94.3" width="2" height="1.7" rx="1" /><rect x="234.2" y="90.3" width="2" height="5.7" rx="1" /><rect x="239.1" y="85.0" width="2" height="11.0" rx="1" /><rect x="243.9" y="93.2" width="2" height="2.8" rx="1" /><rect x="248.7" y="78.0" width="2" height="18.0" rx="1" /><rect x="253.5" y="90.1" width="2" height="5.9" rx="1" /><rect x="258.3" y="87.4" width="2" height="8.6" rx="1" /><rect x="263.1" y="92.4" width="2" height="3.6" rx="1" /><rect x="267.9" y="88.6" width="2" height="7.4" rx="1" /><rect x="272.7" y="92.7" width="2" height="3.3" rx="1" /><rect x="277.6" y="92.7" width="2" height="3.3" rx="1" /><rect x="282.4" y="94.0" width="2" height="2.0" rx="1" /><rect x="287.2" y="93.1" width="2" height="2.9" rx="1" /><rect x="292.0" y="93.0" width="2" height="3.0" rx="1" /></g>
+  <polyline fill="none" stroke="#37c978" stroke-width="2.4" points="8.0,70.7 12.8,72.0 17.6,70.2 22.4,69.8 27.3,70.2 32.1,70.3 36.9,70.4 41.7,69.8 46.5,68.4 51.3,68.7 56.1,68.8 60.9,70.0 65.8,69.3 70.6,67.6 75.4,69.1 80.2,69.1 85.0,70.0 89.8,70.5 94.6,69.0 99.5,70.3 104.3,69.8 109.1,69.8 113.9,69.4 118.7,66.5 123.5,66.9 128.3,64.1 133.2,64.7 138.0,63.4 142.8,63.1 147.6,62.9 152.4,62.1 157.2,62.0 162.0,62.2 166.8,61.6 171.7,61.0 176.5,59.5 181.3,59.9 186.1,60.3 190.9,60.7 195.7,61.0 200.5,59.6 205.4,57.3 210.2,56.6 215.0,54.4 219.8,52.1 224.6,52.3 229.4,50.5 234.2,43.6 239.1,29.0 243.9,10.0 248.7,23.1 253.5,29.1 258.3,26.8 263.1,23.3 267.9,11.9 272.7,13.9 277.6,20.0 282.4,23.0 287.2,27.2 292.0,20.3"/>
+  <line x1="8" y1="20.3" x2="292" y2="20.3" stroke="#37c978" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#37c978" font-size="10">+234.1%</text>
+</svg>
+  <div class="note">뉴스와 차트가 맞습니다. 거래량 유지와 전일 고가 돌파 확인이 핵심입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 65.9 · 거래량 0.6x · 20일 이격 24.0%</div>
+</article></div>
+</section>
+<section class="opp " data-verdicts="pass" data-search="미래에셋 &#x27;tiger 코스닥액티브 etf&#x27;의 편입(포트폴리오 상위권; 반도체 패키징·본딩와이어 업체로 명시) 반도체 반도체 소부장 ai 반도체 패키징 본딩와이어 tiger 코스닥액티브 etf 편입 etf 자금유입 미래에셋 tiger 코스닥액티브 etf 의 편입 엠케이전자">
+  <div class="row">
+    <div>
+      <h2>미래에셋 &#x27;TIGER 코스닥액티브 ETF&#x27;의 편입(포트폴리오 상위권; 반도체 패키징·본딩와이어 업체로 명시)</h2>
+      <div class="muted">테마 반도체 · 직접성 direct · 관련 종목 1개</div>
+    </div>
+    <div class="score">84</div>
+  </div>
+  <div class="chips"><span>반도체 소부장</span><span>AI 반도체</span><span>패키징 본딩와이어</span><span>TIGER 코스닥액티브 ETF 편입</span><span>ETF 자금유입</span><span>미래에셋</span><span>TIGER 코스닥액티브 ETF</span><span>의 편입</span><span>disclosure</span></div>
+  <div class="comment">반도체 관련 신호입니다. 현재는 엠케이전자 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="stocks"><article class="stock pass">
+  <div class="row">
+    <div><span class="name">1. 엠케이전자</span> <span class="muted mono">033160 · KOSDAQ</span></div>
+    <span class="pct mono">+12.53%</span>
+  </div>
+  <div>
+    <span class="badge">pass</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:54%"></i></span><span class="mono">54</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:70%"></i></span><span class="mono">70</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="12.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="17.6" y="93.7" width="2" height="2.3" rx="1" /><rect x="22.4" y="80.4" width="2" height="15.6" rx="1" /><rect x="27.3" y="88.2" width="2" height="7.8" rx="1" /><rect x="32.1" y="89.9" width="2" height="6.1" rx="1" /><rect x="36.9" y="89.1" width="2" height="6.9" rx="1" /><rect x="41.7" y="91.3" width="2" height="4.7" rx="1" /><rect x="46.5" y="92.5" width="2" height="3.5" rx="1" /><rect x="51.3" y="78.0" width="2" height="18.0" rx="1" /><rect x="56.1" y="89.7" width="2" height="6.3" rx="1" /><rect x="60.9" y="94.0" width="2" height="2.0" rx="1" /><rect x="65.8" y="91.5" width="2" height="4.5" rx="1" /><rect x="70.6" y="94.0" width="2" height="2.0" rx="1" /><rect x="75.4" y="94.3" width="2" height="1.7" rx="1" /><rect x="80.2" y="94.5" width="2" height="1.5" rx="1" /><rect x="85.0" y="93.9" width="2" height="2.1" rx="1" /><rect x="89.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="94.6" y="91.1" width="2" height="4.9" rx="1" /><rect x="99.5" y="93.6" width="2" height="2.4" rx="1" /><rect x="104.3" y="94.5" width="2" height="1.5" rx="1" /><rect x="109.1" y="94.7" width="2" height="1.3" rx="1" /><rect x="113.9" y="94.2" width="2" height="1.8" rx="1" /><rect x="118.7" y="86.9" width="2" height="9.1" rx="1" /><rect x="123.5" y="94.1" width="2" height="1.9" rx="1" /><rect x="128.3" y="92.3" width="2" height="3.7" rx="1" /><rect x="133.2" y="94.1" width="2" height="1.9" rx="1" /><rect x="138.0" y="85.3" width="2" height="10.7" rx="1" /><rect x="142.8" y="92.5" width="2" height="3.5" rx="1" /><rect x="147.6" y="89.3" width="2" height="6.7" rx="1" /><rect x="152.4" y="94.0" width="2" height="2.0" rx="1" /><rect x="157.2" y="90.2" width="2" height="5.8" rx="1" /><rect x="162.0" y="93.7" width="2" height="2.3" rx="1" /><rect x="166.8" y="93.7" width="2" height="2.3" rx="1" /><rect x="171.7" y="91.7" width="2" height="4.3" rx="1" /><rect x="176.5" y="93.6" width="2" height="2.4" rx="1" /><rect x="181.3" y="94.2" width="2" height="1.8" rx="1" /><rect x="186.1" y="92.9" width="2" height="3.1" rx="1" /><rect x="190.9" y="93.9" width="2" height="2.1" rx="1" /><rect x="195.7" y="94.9" width="2" height="1.1" rx="1" /><rect x="200.5" y="94.8" width="2" height="1.2" rx="1" /><rect x="205.4" y="92.4" width="2" height="3.6" rx="1" /><rect x="210.2" y="94.7" width="2" height="1.3" rx="1" /><rect x="215.0" y="93.8" width="2" height="2.2" rx="1" /><rect x="219.8" y="94.5" width="2" height="1.5" rx="1" /><rect x="224.6" y="93.4" width="2" height="2.6" rx="1" /><rect x="229.4" y="93.7" width="2" height="2.3" rx="1" /><rect x="234.2" y="92.0" width="2" height="4.0" rx="1" /><rect x="239.1" y="93.8" width="2" height="2.2" rx="1" /><rect x="243.9" y="94.0" width="2" height="2.0" rx="1" /><rect x="248.7" y="89.2" width="2" height="6.8" rx="1" /><rect x="253.5" y="93.9" width="2" height="2.1" rx="1" /><rect x="258.3" y="89.1" width="2" height="6.9" rx="1" /><rect x="263.1" y="94.1" width="2" height="1.9" rx="1" /><rect x="267.9" y="94.2" width="2" height="1.8" rx="1" /><rect x="272.7" y="93.7" width="2" height="2.3" rx="1" /><rect x="277.6" y="94.2" width="2" height="1.8" rx="1" /><rect x="282.4" y="90.0" width="2" height="6.0" rx="1" /><rect x="287.2" y="92.5" width="2" height="3.5" rx="1" /><rect x="292.0" y="92.6" width="2" height="3.4" rx="1" /></g>
+  <polyline fill="none" stroke="#6ea8fe" stroke-width="2.4" points="8.0,69.9 12.8,72.0 17.6,68.4 22.4,62.0 27.3,60.6 32.1,58.6 36.9,54.4 41.7,59.9 46.5,58.2 51.3,50.3 56.1,49.4 60.9,53.7 65.8,50.0 70.6,50.8 75.4,53.6 80.2,55.4 85.0,55.2 89.8,56.4 94.6,48.7 99.5,49.9 104.3,49.3 109.1,51.6 113.9,53.8 118.7,43.2 123.5,46.1 128.3,43.2 133.2,46.2 138.0,34.7 142.8,38.4 147.6,34.9 152.4,36.2 157.2,28.3 162.0,28.2 166.8,27.8 171.7,24.3 176.5,23.5 181.3,22.2 186.1,19.2 190.9,24.0 195.7,25.4 200.5,26.4 205.4,27.3 210.2,29.2 215.0,23.9 219.8,25.9 224.6,30.6 229.4,28.6 234.2,21.1 239.1,24.0 243.9,25.9 248.7,15.1 253.5,22.4 258.3,10.5 263.1,10.0 267.9,10.5 272.7,20.0 277.6,21.1 282.4,41.0 287.2,38.9 292.0,32.1"/>
+  <line x1="8" y1="32.1" x2="292" y2="32.1" stroke="#6ea8fe" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#6ea8fe" font-size="10">+160.9%</text>
+</svg>
+  <div class="note">거래량은 평균 대비 1.2배입니다. 다음 봉 방향 확인 전까지 관찰입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 49.1 · 거래량 1.2x · 20일 이격 -11.4%</div>
+</article></div>
+</section>
+<section class="opp " data-verdicts="pass" data-search="인도 합작법인 설립 — ev·하이브리드용 저전압·고전압 ptc 히터 현지 생산 및 공급(현지화) 모빌리티(자동차 부품) 인도 ev 시장 모빌리티 열관리 ptc 히터 현지생산 인도 합작법인 설립 현지 공급망 국산화 하이브리드용 저전압 고전압 ptc 히터 현지 생산 및 공급 자화전자">
+  <div class="row">
+    <div>
+      <h2>인도 합작법인 설립 — EV·하이브리드용 저전압·고전압 PTC 히터 현지 생산 및 공급(현지화)</h2>
+      <div class="muted">테마 모빌리티(자동차 부품) · 직접성 direct · 관련 종목 1개</div>
+    </div>
+    <div class="score">80</div>
+  </div>
+  <div class="chips"><span>인도 EV 시장</span><span>모빌리티 열관리</span><span>PTC 히터 현지생산</span><span>인도 합작법인 설립</span><span>현지 공급망 국산화</span><span>하이브리드용 저전압</span><span>고전압 PTC 히터 현지</span><span>생산 및 공급</span><span>contract</span></div>
+  <div class="comment">모빌리티(자동차 부품) 관련 신호입니다. 현재는 자화전자 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="stocks"><article class="stock pass">
+  <div class="row">
+    <div><span class="name">1. 자화전자</span> <span class="muted mono">033240 · KOSPI</span></div>
+    <span class="pct mono">+6.09%</span>
+  </div>
+  <div>
+    <span class="badge">pass</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:99%"></i></span><span class="mono">99</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:66%"></i></span><span class="mono">66</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="92.2" width="2" height="3.8" rx="1" /><rect x="12.8" y="93.5" width="2" height="2.5" rx="1" /><rect x="17.6" y="92.0" width="2" height="4.0" rx="1" /><rect x="22.4" y="92.5" width="2" height="3.5" rx="1" /><rect x="27.3" y="92.8" width="2" height="3.2" rx="1" /><rect x="32.1" y="94.0" width="2" height="2.0" rx="1" /><rect x="36.9" y="93.3" width="2" height="2.7" rx="1" /><rect x="41.7" y="93.4" width="2" height="2.6" rx="1" /><rect x="46.5" y="93.7" width="2" height="2.3" rx="1" /><rect x="51.3" y="94.1" width="2" height="1.9" rx="1" /><rect x="56.1" y="93.9" width="2" height="2.1" rx="1" /><rect x="60.9" y="94.3" width="2" height="1.7" rx="1" /><rect x="65.8" y="94.7" width="2" height="1.3" rx="1" /><rect x="70.6" y="94.4" width="2" height="1.6" rx="1" /><rect x="75.4" y="94.8" width="2" height="1.2" rx="1" /><rect x="80.2" y="94.6" width="2" height="1.4" rx="1" /><rect x="85.0" y="94.2" width="2" height="1.8" rx="1" /><rect x="89.8" y="94.4" width="2" height="1.6" rx="1" /><rect x="94.6" y="93.5" width="2" height="2.5" rx="1" /><rect x="99.5" y="93.8" width="2" height="2.2" rx="1" /><rect x="104.3" y="94.4" width="2" height="1.6" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="94.9" width="2" height="1.1" rx="1" /><rect x="118.7" y="94.8" width="2" height="1.2" rx="1" /><rect x="123.5" y="94.6" width="2" height="1.4" rx="1" /><rect x="128.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="133.2" y="94.2" width="2" height="1.8" rx="1" /><rect x="138.0" y="94.2" width="2" height="1.8" rx="1" /><rect x="142.8" y="94.3" width="2" height="1.7" rx="1" /><rect x="147.6" y="91.7" width="2" height="4.3" rx="1" /><rect x="152.4" y="89.4" width="2" height="6.6" rx="1" /><rect x="157.2" y="91.5" width="2" height="4.5" rx="1" /><rect x="162.0" y="93.8" width="2" height="2.2" rx="1" /><rect x="166.8" y="90.0" width="2" height="6.0" rx="1" /><rect x="171.7" y="91.2" width="2" height="4.8" rx="1" /><rect x="176.5" y="92.8" width="2" height="3.2" rx="1" /><rect x="181.3" y="91.6" width="2" height="4.4" rx="1" /><rect x="186.1" y="92.9" width="2" height="3.1" rx="1" /><rect x="190.9" y="93.4" width="2" height="2.6" rx="1" /><rect x="195.7" y="93.8" width="2" height="2.2" rx="1" /><rect x="200.5" y="92.8" width="2" height="3.2" rx="1" /><rect x="205.4" y="92.1" width="2" height="3.9" rx="1" /><rect x="210.2" y="93.8" width="2" height="2.2" rx="1" /><rect x="215.0" y="92.1" width="2" height="3.9" rx="1" /><rect x="219.8" y="94.1" width="2" height="1.9" rx="1" /><rect x="224.6" y="92.0" width="2" height="4.0" rx="1" /><rect x="229.4" y="92.7" width="2" height="3.3" rx="1" /><rect x="234.2" y="92.8" width="2" height="3.2" rx="1" /><rect x="239.1" y="78.0" width="2" height="18.0" rx="1" /><rect x="243.9" y="90.8" width="2" height="5.2" rx="1" /><rect x="248.7" y="91.1" width="2" height="4.9" rx="1" /><rect x="253.5" y="92.5" width="2" height="3.5" rx="1" /><rect x="258.3" y="93.5" width="2" height="2.5" rx="1" /><rect x="263.1" y="92.9" width="2" height="3.1" rx="1" /><rect x="267.9" y="92.8" width="2" height="3.2" rx="1" /><rect x="272.7" y="92.9" width="2" height="3.1" rx="1" /><rect x="277.6" y="92.8" width="2" height="3.2" rx="1" /><rect x="282.4" y="92.5" width="2" height="3.5" rx="1" /><rect x="287.2" y="92.6" width="2" height="3.4" rx="1" /><rect x="292.0" y="90.8" width="2" height="5.2" rx="1" /></g>
+  <polyline fill="none" stroke="#6ea8fe" stroke-width="2.4" points="8.0,51.6 12.8,54.5 17.6,41.7 22.4,39.8 27.3,45.7 32.1,51.6 36.9,50.4 41.7,53.5 46.5,53.3 51.3,53.7 56.1,53.8 60.9,57.8 65.8,56.2 70.6,56.4 75.4,59.2 80.2,61.3 85.0,67.1 89.8,72.0 94.6,61.4 99.5,66.7 104.3,66.2 109.1,67.6 113.9,70.9 118.7,65.7 123.5,65.8 128.3,64.3 133.2,67.3 138.0,63.7 142.8,64.6 147.6,56.7 152.4,48.4 157.2,43.0 162.0,43.5 166.8,34.9 171.7,37.7 176.5,32.7 181.3,26.4 186.1,29.7 190.9,26.0 195.7,28.6 200.5,31.1 205.4,34.7 210.2,35.6 215.0,30.6 219.8,33.9 224.6,43.4 229.4,32.6 234.2,30.8 239.1,10.0 243.9,21.1 248.7,32.6 253.5,38.2 258.3,33.0 263.1,26.1 267.9,29.9 272.7,37.7 277.6,44.7 282.4,52.3 287.2,57.4 292.0,51.3"/>
+  <line x1="8" y1="51.3" x2="292" y2="51.3" stroke="#6ea8fe" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#6ea8fe" font-size="10">+0.3%</text>
+</svg>
+  <div class="note">거래량은 평균 대비 1.3배입니다. 다음 봉 방향 확인 전까지 관찰입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 46.4 · 거래량 1.3x · 20일 이격 -13.1%</div>
+</article></div>
+</section>
+<section class="opp " data-verdicts="pass" data-search="코스닥 내 순환매·개별종목 차별화(개인 순매도 속 외국인·기관 매수 유입)로 인한 수급(거래량) 급증 수급/시장수급 수급(개인 외국인 기관) 코스닥 순환매 개별종목 차별화 개인 순매도 거래대금 급증 코스닥 내 순환매 주성엔지니어링">
+  <div class="row">
+    <div>
+      <h2>코스닥 내 순환매·개별종목 차별화(개인 순매도 속 외국인·기관 매수 유입)로 인한 수급(거래량) 급증</h2>
+      <div class="muted">테마 수급/시장수급 · 직접성 probable · 관련 종목 1개</div>
+    </div>
+    <div class="score">73</div>
+  </div>
+  <div class="chips"><span>수급(개인</span><span>외국인</span><span>기관)</span><span>코스닥 순환매</span><span>개별종목 차별화</span><span>개인 순매도</span><span>거래대금 급증</span><span>코스닥 내 순환매</span><span>technical</span></div>
+  <div class="comment">수급/시장수급 관련 신호입니다. 현재는 주성엔지니어링 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="stocks"><article class="stock pass">
+  <div class="row">
+    <div><span class="name">1. 주성엔지니어링</span> <span class="muted mono">036930 · KOSDAQ</span></div>
+    <span class="pct mono">+6.15%</span>
+  </div>
+  <div>
+    <span class="badge">pass</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:71%"></i></span><span class="mono">71</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:63%"></i></span><span class="mono">63</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:59%"></i></span><span class="mono">59</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="92.1" width="2" height="3.9" rx="1" /><rect x="12.8" y="93.0" width="2" height="3.0" rx="1" /><rect x="17.6" y="86.6" width="2" height="9.4" rx="1" /><rect x="22.4" y="92.9" width="2" height="3.1" rx="1" /><rect x="27.3" y="93.7" width="2" height="2.3" rx="1" /><rect x="32.1" y="94.2" width="2" height="1.8" rx="1" /><rect x="36.9" y="94.4" width="2" height="1.6" rx="1" /><rect x="41.7" y="94.4" width="2" height="1.6" rx="1" /><rect x="46.5" y="94.5" width="2" height="1.5" rx="1" /><rect x="51.3" y="94.8" width="2" height="1.2" rx="1" /><rect x="56.1" y="84.9" width="2" height="11.1" rx="1" /><rect x="60.9" y="91.2" width="2" height="4.8" rx="1" /><rect x="65.8" y="84.5" width="2" height="11.5" rx="1" /><rect x="70.6" y="92.6" width="2" height="3.4" rx="1" /><rect x="75.4" y="93.7" width="2" height="2.3" rx="1" /><rect x="80.2" y="94.0" width="2" height="2.0" rx="1" /><rect x="85.0" y="94.0" width="2" height="2.0" rx="1" /><rect x="89.8" y="94.0" width="2" height="2.0" rx="1" /><rect x="94.6" y="94.2" width="2" height="1.8" rx="1" /><rect x="99.5" y="94.0" width="2" height="2.0" rx="1" /><rect x="104.3" y="94.4" width="2" height="1.6" rx="1" /><rect x="109.1" y="94.7" width="2" height="1.3" rx="1" /><rect x="113.9" y="94.4" width="2" height="1.6" rx="1" /><rect x="118.7" y="92.9" width="2" height="3.1" rx="1" /><rect x="123.5" y="94.1" width="2" height="1.9" rx="1" /><rect x="128.3" y="94.6" width="2" height="1.4" rx="1" /><rect x="133.2" y="94.8" width="2" height="1.2" rx="1" /><rect x="138.0" y="94.6" width="2" height="1.4" rx="1" /><rect x="142.8" y="90.8" width="2" height="5.2" rx="1" /><rect x="147.6" y="93.0" width="2" height="3.0" rx="1" /><rect x="152.4" y="94.3" width="2" height="1.7" rx="1" /><rect x="157.2" y="79.0" width="2" height="17.0" rx="1" /><rect x="162.0" y="78.0" width="2" height="18.0" rx="1" /><rect x="166.8" y="81.5" width="2" height="14.5" rx="1" /><rect x="171.7" y="92.8" width="2" height="3.2" rx="1" /><rect x="176.5" y="88.9" width="2" height="7.1" rx="1" /><rect x="181.3" y="93.8" width="2" height="2.2" rx="1" /><rect x="186.1" y="93.6" width="2" height="2.4" rx="1" /><rect x="190.9" y="92.9" width="2" height="3.1" rx="1" /><rect x="195.7" y="94.6" width="2" height="1.4" rx="1" /><rect x="200.5" y="94.6" width="2" height="1.4" rx="1" /><rect x="205.4" y="94.3" width="2" height="1.7" rx="1" /><rect x="210.2" y="93.5" width="2" height="2.5" rx="1" /><rect x="215.0" y="94.0" width="2" height="2.0" rx="1" /><rect x="219.8" y="92.4" width="2" height="3.6" rx="1" /><rect x="224.6" y="93.3" width="2" height="2.7" rx="1" /><rect x="229.4" y="94.0" width="2" height="2.0" rx="1" /><rect x="234.2" y="94.6" width="2" height="1.4" rx="1" /><rect x="239.1" y="89.9" width="2" height="6.1" rx="1" /><rect x="243.9" y="88.2" width="2" height="7.8" rx="1" /><rect x="248.7" y="87.4" width="2" height="8.6" rx="1" /><rect x="253.5" y="84.3" width="2" height="11.7" rx="1" /><rect x="258.3" y="90.4" width="2" height="5.6" rx="1" /><rect x="263.1" y="84.2" width="2" height="11.8" rx="1" /><rect x="267.9" y="88.1" width="2" height="7.9" rx="1" /><rect x="272.7" y="92.4" width="2" height="3.6" rx="1" /><rect x="277.6" y="91.6" width="2" height="4.4" rx="1" /><rect x="282.4" y="91.7" width="2" height="4.3" rx="1" /><rect x="287.2" y="91.4" width="2" height="4.6" rx="1" /><rect x="292.0" y="89.6" width="2" height="6.4" rx="1" /></g>
+  <polyline fill="none" stroke="#6ea8fe" stroke-width="2.4" points="8.0,69.4 12.8,72.0 17.6,68.4 22.4,69.5 27.3,69.8 32.1,69.8 36.9,70.5 41.7,71.6 46.5,70.9 51.3,71.6 56.1,67.4 60.9,67.9 65.8,65.8 70.6,67.1 75.4,68.0 80.2,68.4 85.0,70.5 89.8,71.7 94.6,70.2 99.5,71.7 104.3,71.2 109.1,71.6 113.9,71.8 118.7,69.1 123.5,70.6 128.3,70.8 133.2,70.8 138.0,70.7 142.8,68.2 147.6,67.6 152.4,68.3 157.2,60.8 162.0,51.0 166.8,50.5 171.7,52.0 176.5,49.3 181.3,48.5 186.1,46.9 190.9,48.6 195.7,48.5 200.5,48.3 205.4,48.0 210.2,45.3 215.0,43.9 219.8,35.1 224.6,37.9 229.4,33.6 234.2,33.6 239.1,43.5 243.9,28.6 248.7,30.5 253.5,29.9 258.3,27.5 263.1,13.7 267.9,10.0 272.7,12.0 277.6,19.4 282.4,22.3 287.2,27.4 292.0,23.4"/>
+  <line x1="8" y1="23.4" x2="292" y2="23.4" stroke="#6ea8fe" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#6ea8fe" font-size="10">+193.4%</text>
+</svg>
+  <div class="note">거래량은 평균 대비 1.3배입니다. 다음 봉 방향 확인 전까지 관찰입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 60.0 · 거래량 1.3x · 20일 이격 11.7%</div>
+</article></div>
+</section>
+<section class="opp " data-verdicts="pass" data-search="니치 향수 브랜드 딥티크의 여름 한정판 &#x27;썸머 컬렉션&#x27; 출시(향수·헤어·바디·홈 프래그런스 총 12종) 및 가로수길·성수 매장 한정 판매·아티스트 협업 프로모션 패션·뷰티 (소비) 럭셔리 향수 여름 시즌 수요 썸머 컬렉션 한정판 가로수길 성수 한정 판매 디스커버리 소용량 세트 니치 향수 브랜드 딥티크의 신세계인터내셔날">
+  <div class="row">
+    <div>
+      <h2>니치 향수 브랜드 딥티크의 여름 한정판 &#x27;썸머 컬렉션&#x27; 출시(향수·헤어·바디·홈 프래그런스 총 12종) 및 가로수길·성수 매장 한정 판매·아티스트 협업 프로모션</h2>
+      <div class="muted">테마 패션·뷰티 (소비) · 직접성 probable · 관련 종목 1개</div>
+    </div>
+    <div class="score">72</div>
+  </div>
+  <div class="chips"><span>럭셔리 향수</span><span>여름 시즌 수요</span><span>썸머 컬렉션 한정판</span><span>가로수길</span><span>성수 한정 판매</span><span>디스커버리</span><span>소용량 세트</span><span>니치 향수 브랜드 딥티크의</span><span>disclosure</span></div>
+  <div class="comment">패션·뷰티 (소비) 관련 신호입니다. 현재는 신세계인터내셔날 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="stocks"><article class="stock pass">
+  <div class="row">
+    <div><span class="name">1. 신세계인터내셔날</span> <span class="muted mono">031430 · KOSPI</span></div>
+    <span class="pct mono">+3.43%</span>
+  </div>
+  <div>
+    <span class="badge">pass</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">medium</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:77%"></i></span><span class="mono">77</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:54%"></i></span><span class="mono">54</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:58%"></i></span><span class="mono">58</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="94.6" width="2" height="1.4" rx="1" /><rect x="12.8" y="94.7" width="2" height="1.3" rx="1" /><rect x="17.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="22.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="27.3" y="94.6" width="2" height="1.4" rx="1" /><rect x="32.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="36.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="41.7" y="78.0" width="2" height="18.0" rx="1" /><rect x="46.5" y="91.6" width="2" height="4.4" rx="1" /><rect x="51.3" y="94.9" width="2" height="1.1" rx="1" /><rect x="56.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="60.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="65.8" y="94.4" width="2" height="1.6" rx="1" /><rect x="70.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="75.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="80.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="85.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="89.8" y="94.9" width="2" height="1.1" rx="1" /><rect x="94.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="99.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="104.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="118.7" y="94.8" width="2" height="1.2" rx="1" /><rect x="123.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="128.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="133.2" y="94.5" width="2" height="1.5" rx="1" /><rect x="138.0" y="94.5" width="2" height="1.5" rx="1" /><rect x="142.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="147.6" y="92.1" width="2" height="3.9" rx="1" /><rect x="152.4" y="93.4" width="2" height="2.6" rx="1" /><rect x="157.2" y="94.8" width="2" height="1.2" rx="1" /><rect x="162.0" y="92.3" width="2" height="3.7" rx="1" /><rect x="166.8" y="94.5" width="2" height="1.5" rx="1" /><rect x="171.7" y="94.1" width="2" height="1.9" rx="1" /><rect x="176.5" y="94.8" width="2" height="1.2" rx="1" /><rect x="181.3" y="93.7" width="2" height="2.3" rx="1" /><rect x="186.1" y="94.9" width="2" height="1.1" rx="1" /><rect x="190.9" y="93.7" width="2" height="2.3" rx="1" /><rect x="195.7" y="93.8" width="2" height="2.2" rx="1" /><rect x="200.5" y="94.9" width="2" height="1.1" rx="1" /><rect x="205.4" y="94.1" width="2" height="1.9" rx="1" /><rect x="210.2" y="94.4" width="2" height="1.6" rx="1" /><rect x="215.0" y="94.3" width="2" height="1.7" rx="1" /><rect x="219.8" y="94.9" width="2" height="1.1" rx="1" /><rect x="224.6" y="93.2" width="2" height="2.8" rx="1" /><rect x="229.4" y="80.0" width="2" height="16.0" rx="1" /><rect x="234.2" y="92.0" width="2" height="4.0" rx="1" /><rect x="239.1" y="93.0" width="2" height="3.0" rx="1" /><rect x="243.9" y="94.0" width="2" height="2.0" rx="1" /><rect x="248.7" y="93.5" width="2" height="2.5" rx="1" /><rect x="253.5" y="94.4" width="2" height="1.6" rx="1" /><rect x="258.3" y="94.0" width="2" height="2.0" rx="1" /><rect x="263.1" y="93.4" width="2" height="2.6" rx="1" /><rect x="267.9" y="92.1" width="2" height="3.9" rx="1" /><rect x="272.7" y="93.5" width="2" height="2.5" rx="1" /><rect x="277.6" y="94.0" width="2" height="2.0" rx="1" /><rect x="282.4" y="94.1" width="2" height="1.9" rx="1" /><rect x="287.2" y="93.8" width="2" height="2.2" rx="1" /><rect x="292.0" y="91.9" width="2" height="4.1" rx="1" /></g>
+  <polyline fill="none" stroke="#6ea8fe" stroke-width="2.4" points="8.0,65.2 12.8,69.8 17.6,68.4 22.4,65.8 27.3,60.5 32.1,64.5 36.9,62.5 41.7,60.4 46.5,63.3 51.3,67.5 56.1,65.2 60.9,69.6 65.8,64.8 70.6,64.8 75.4,65.3 80.2,64.5 85.0,67.4 89.8,72.0 94.6,68.0 99.5,72.0 104.3,70.8 109.1,71.0 113.9,71.5 118.7,66.2 123.5,65.0 128.3,62.9 133.2,59.0 138.0,55.3 142.8,56.7 147.6,49.6 152.4,45.5 157.2,47.6 162.0,39.0 166.8,37.4 171.7,37.1 176.5,35.6 181.3,34.4 186.1,36.1 190.9,29.2 195.7,34.6 200.5,34.8 205.4,41.5 210.2,36.6 215.0,35.0 219.8,38.3 224.6,40.6 229.4,13.0 234.2,10.0 239.1,18.6 243.9,27.2 248.7,39.1 253.5,46.4 258.3,33.9 263.1,35.1 267.9,46.9 272.7,48.0 277.6,47.0 282.4,45.2 287.2,48.7 292.0,43.0"/>
+  <line x1="8" y1="43.0" x2="292" y2="43.0" stroke="#6ea8fe" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#6ea8fe" font-size="10">+14.8%</text>
+</svg>
+  <div class="note">거래량은 평균 대비 1.4배입니다. 다음 봉 방향 확인 전까지 관찰입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 48.9 · 거래량 1.4x · 20일 이격 -3.7%</div>
+</article></div>
+</section>
+<section class="opp " data-verdicts="chart_only_watch" data-search="거래대금 급증에 따른 단기 수급·공매도 청산 가능성 수급/기술적 요인 수급 기술적 반등 거래대금 급증 프로그램 매매 공매도 청산 거래대금 급증에 따른 단기 공매도 청산 가능성 skai">
+  <div class="row">
+    <div>
+      <h2>거래대금 급증에 따른 단기 수급·공매도 청산 가능성</h2>
+      <div class="muted">테마 수급/기술적 요인 · 직접성 weak · 관련 종목 1개</div>
+    </div>
+    <div class="score">62</div>
+  </div>
+  <div class="chips"><span>수급</span><span>기술적 반등</span><span>거래대금 급증</span><span>프로그램 매매</span><span>공매도 청산</span><span>거래대금 급증에 따른 단기</span><span>공매도 청산 가능성</span><span>unknown</span></div>
+  <div class="comment">차트는 SKAI이 강하지만 기사 키워드와의 연결성은 더 확인해야 합니다.</div>
+  <div class="stocks"><article class="stock chart_only_watch">
+  <div class="row">
+    <div><span class="name">1. SKAI</span> <span class="muted mono">357880 · KOSDAQ</span></div>
+    <span class="pct mono">+8.22%</span>
+  </div>
+  <div>
+    <span class="badge">chart_only_watch</span>
+    <span class="badge">risk low</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:17%"></i></span><span class="mono">17</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:82%"></i></span><span class="mono">82</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:48%"></i></span><span class="mono">48</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="93.9" width="2" height="2.1" rx="1" /><rect x="12.8" y="94.1" width="2" height="1.9" rx="1" /><rect x="17.6" y="93.1" width="2" height="2.9" rx="1" /><rect x="22.4" y="91.7" width="2" height="4.3" rx="1" /><rect x="27.3" y="85.5" width="2" height="10.5" rx="1" /><rect x="32.1" y="84.5" width="2" height="11.5" rx="1" /><rect x="36.9" y="78.0" width="2" height="18.0" rx="1" /><rect x="41.7" y="89.8" width="2" height="6.2" rx="1" /><rect x="46.5" y="92.8" width="2" height="3.2" rx="1" /><rect x="51.3" y="93.4" width="2" height="2.6" rx="1" /><rect x="56.1" y="93.7" width="2" height="2.3" rx="1" /><rect x="60.9" y="93.5" width="2" height="2.5" rx="1" /><rect x="65.8" y="94.6" width="2" height="1.4" rx="1" /><rect x="70.6" y="93.6" width="2" height="2.4" rx="1" /><rect x="75.4" y="94.9" width="2" height="1.1" rx="1" /><rect x="80.2" y="94.9" width="2" height="1.1" rx="1" /><rect x="85.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="89.8" y="93.1" width="2" height="2.9" rx="1" /><rect x="94.6" y="94.3" width="2" height="1.7" rx="1" /><rect x="99.5" y="94.7" width="2" height="1.3" rx="1" /><rect x="104.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="118.7" y="93.3" width="2" height="2.7" rx="1" /><rect x="123.5" y="88.7" width="2" height="7.3" rx="1" /><rect x="128.3" y="93.8" width="2" height="2.2" rx="1" /><rect x="133.2" y="89.1" width="2" height="6.9" rx="1" /><rect x="138.0" y="93.8" width="2" height="2.2" rx="1" /><rect x="142.8" y="94.7" width="2" height="1.3" rx="1" /><rect x="147.6" y="92.4" width="2" height="3.6" rx="1" /><rect x="152.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="157.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="162.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="166.8" y="94.2" width="2" height="1.8" rx="1" /><rect x="171.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="176.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="181.3" y="94.8" width="2" height="1.2" rx="1" /><rect x="186.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="190.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="195.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="200.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="205.4" y="94.8" width="2" height="1.2" rx="1" /><rect x="210.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="215.0" y="93.3" width="2" height="2.7" rx="1" /><rect x="219.8" y="91.8" width="2" height="4.2" rx="1" /><rect x="224.6" y="93.6" width="2" height="2.4" rx="1" /><rect x="229.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="234.2" y="90.9" width="2" height="5.1" rx="1" /><rect x="239.1" y="94.9" width="2" height="1.1" rx="1" /><rect x="243.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="248.7" y="94.0" width="2" height="2.0" rx="1" /><rect x="253.5" y="94.8" width="2" height="1.2" rx="1" /><rect x="258.3" y="93.5" width="2" height="2.5" rx="1" /><rect x="263.1" y="92.8" width="2" height="3.2" rx="1" /><rect x="267.9" y="92.6" width="2" height="3.4" rx="1" /><rect x="272.7" y="94.7" width="2" height="1.3" rx="1" /><rect x="277.6" y="93.3" width="2" height="2.7" rx="1" /><rect x="282.4" y="93.4" width="2" height="2.6" rx="1" /><rect x="287.2" y="93.9" width="2" height="2.1" rx="1" /><rect x="292.0" y="91.0" width="2" height="5.0" rx="1" /></g>
+  <polyline fill="none" stroke="#37c978" stroke-width="2.4" points="8.0,71.9 12.8,72.0 17.6,67.7 22.4,62.8 27.3,50.1 32.1,29.1 36.9,19.1 41.7,24.5 46.5,26.4 51.3,25.0 56.1,32.0 60.9,36.0 65.8,41.7 70.6,34.3 75.4,41.8 80.2,46.6 85.0,51.6 89.8,60.8 94.6,56.7 99.5,62.1 104.3,61.8 109.1,65.1 113.9,64.6 118.7,47.5 123.5,45.5 128.3,48.7 133.2,44.2 138.0,43.2 142.8,44.5 147.6,43.5 152.4,46.4 157.2,46.3 162.0,47.1 166.8,49.2 171.7,52.9 176.5,54.8 181.3,54.0 186.1,53.8 190.9,55.9 195.7,58.0 200.5,60.4 205.4,58.6 210.2,58.6 215.0,53.1 219.8,46.4 224.6,44.5 229.4,47.0 234.2,44.0 239.1,49.1 243.9,50.9 248.7,41.5 253.5,43.8 258.3,34.8 263.1,27.6 267.9,18.1 272.7,24.5 277.6,18.1 282.4,23.7 287.2,18.5 292.0,10.0"/>
+  <line x1="8" y1="10.0" x2="292" y2="10.0" stroke="#37c978" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#37c978" font-size="10">+124.4%</text>
+</svg>
+  <div class="note">수급은 강하지만 뉴스 직접성이 약합니다. 기사 연결성을 더 확인합니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 71.1 · 거래량 2.4x · 20일 이격 34.5%</div>
+</article></div>
+</section>
+<section class="opp wait" data-verdicts="wait_pullback" data-search="미국 법인(lscus)의 ai 데이터센터용 버스덕트 장기 프레임 수주(3년 약 1.2조원·5년 약 4조원 등) 및 북미 대형 빅테크 공급 계약 수주/계약 ai 데이터센터 전력 인프라 버스덕트 장기 프레임 계약 미국 lscus 공장 가동률 북미 빅테크 수주 미국 법인 lscus 의 ai 데이터센터용 버스덕트 가온전선">
+  <div class="row">
+    <div>
+      <h2>미국 법인(LSCUS)의 AI 데이터센터용 버스덕트 장기 프레임 수주(3년 약 1.2조원·5년 약 4조원 등) 및 북미 대형 빅테크 공급 계약</h2>
+      <div class="muted">테마 수주/계약 · 직접성 direct · 관련 종목 1개</div>
+    </div>
+    <div class="score">60</div>
+  </div>
+  <div class="chips"><span>AI 데이터센터</span><span>전력 인프라</span><span>버스덕트 장기 프레임 계약</span><span>미국 LSCUS 공장 가동률</span><span>북미 빅테크 수주</span><span>미국 법인</span><span>LSCUS</span><span>의 AI 데이터센터용 버스덕트</span><span>contract</span></div>
+  <div class="comment">수주/계약 재료는 살아 있지만 가온전선 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="stocks"><article class="stock wait_pullback">
+  <div class="row">
+    <div><span class="name">1. 가온전선</span> <span class="muted mono">000500 · KOSPI</span></div>
+    <span class="pct mono">+4.89%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="94.8" width="2" height="1.2" rx="1" /><rect x="12.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="17.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="22.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="27.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="32.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="36.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="41.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="46.5" y="93.4" width="2" height="2.6" rx="1" /><rect x="51.3" y="94.6" width="2" height="1.4" rx="1" /><rect x="56.1" y="94.8" width="2" height="1.2" rx="1" /><rect x="60.9" y="94.6" width="2" height="1.4" rx="1" /><rect x="65.8" y="94.6" width="2" height="1.4" rx="1" /><rect x="70.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="75.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="80.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="85.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="89.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="94.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="99.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="104.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="118.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="123.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="128.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="133.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="138.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="142.8" y="86.7" width="2" height="9.3" rx="1" /><rect x="147.6" y="90.6" width="2" height="5.4" rx="1" /><rect x="152.4" y="93.2" width="2" height="2.8" rx="1" /><rect x="157.2" y="94.3" width="2" height="1.7" rx="1" /><rect x="162.0" y="94.6" width="2" height="1.4" rx="1" /><rect x="166.8" y="91.7" width="2" height="4.3" rx="1" /><rect x="171.7" y="89.9" width="2" height="6.1" rx="1" /><rect x="176.5" y="93.5" width="2" height="2.5" rx="1" /><rect x="181.3" y="93.6" width="2" height="2.4" rx="1" /><rect x="186.1" y="93.5" width="2" height="2.5" rx="1" /><rect x="190.9" y="93.1" width="2" height="2.9" rx="1" /><rect x="195.7" y="92.8" width="2" height="3.2" rx="1" /><rect x="200.5" y="91.2" width="2" height="4.8" rx="1" /><rect x="205.4" y="90.2" width="2" height="5.8" rx="1" /><rect x="210.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="215.0" y="89.4" width="2" height="6.6" rx="1" /><rect x="219.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="224.6" y="86.4" width="2" height="9.6" rx="1" /><rect x="229.4" y="89.9" width="2" height="6.1" rx="1" /><rect x="234.2" y="88.8" width="2" height="7.2" rx="1" /><rect x="239.1" y="87.8" width="2" height="8.2" rx="1" /><rect x="243.9" y="78.0" width="2" height="18.0" rx="1" /><rect x="248.7" y="88.4" width="2" height="7.6" rx="1" /><rect x="253.5" y="92.5" width="2" height="3.5" rx="1" /><rect x="258.3" y="91.4" width="2" height="4.6" rx="1" /><rect x="263.1" y="94.0" width="2" height="2.0" rx="1" /><rect x="267.9" y="93.7" width="2" height="2.3" rx="1" /><rect x="272.7" y="94.2" width="2" height="1.8" rx="1" /><rect x="277.6" y="93.6" width="2" height="2.4" rx="1" /><rect x="282.4" y="94.3" width="2" height="1.7" rx="1" /><rect x="287.2" y="92.6" width="2" height="3.4" rx="1" /><rect x="292.0" y="92.4" width="2" height="3.6" rx="1" /></g>
+  <polyline fill="none" stroke="#f5b84c" stroke-width="2.4" points="8.0,71.0 12.8,72.0 17.6,71.6 22.4,71.6 27.3,71.4 32.1,71.2 36.9,71.4 41.7,70.8 46.5,69.8 51.3,69.6 56.1,69.1 60.9,69.2 65.8,69.1 70.6,69.4 75.4,70.3 80.2,69.8 85.0,70.5 89.8,71.4 94.6,70.5 99.5,71.0 104.3,70.5 109.1,70.9 113.9,70.9 118.7,70.2 123.5,70.6 128.3,70.2 133.2,70.7 138.0,70.3 142.8,67.4 147.6,65.4 152.4,64.9 157.2,64.4 162.0,63.8 166.8,60.5 171.7,56.8 176.5,57.7 181.3,55.2 186.1,55.6 190.9,55.6 195.7,52.4 200.5,46.2 205.4,35.9 210.2,35.9 215.0,21.4 219.8,21.4 224.6,10.0 229.4,17.8 234.2,31.7 239.1,39.7 243.9,34.2 248.7,33.2 253.5,38.2 258.3,30.4 263.1,29.7 267.9,28.5 272.7,33.5 277.6,39.3 282.4,41.8 287.2,35.8 292.0,33.4"/>
+  <line x1="8" y1="33.4" x2="292" y2="33.4" stroke="#f5b84c" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#f5b84c" font-size="10">+284.8%</text>
+</svg>
+  <div class="note">재료는 좋지만 현재 가격은 부담스럽습니다. 눌림, 매물 소화, 재돌파를 기다리는 쪽입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 33.9 · 거래량 0.7x · 20일 이격 -2.9%</div>
+</article></div>
+</section>
+<section class="opp wait" data-verdicts="wait_pullback" data-search="서울고속버스터미널 재개발 공약 부각 — 터미널 지분(0.17%) 보유로 재개발 수혜 기대 정책 재개발 지방선거(서울시장 공약) 서울고속버스터미널 재개발 터미널 지분 보유 백화점 입점 가능성 서울고속버스터미널 재개발 공약 부각 터미널 지분 보유로 재개발 수혜 기대 동양고속">
+  <div class="row">
+    <div>
+      <h2>서울고속버스터미널 재개발 공약 부각 — 터미널 지분(0.17%) 보유로 재개발 수혜 기대</h2>
+      <div class="muted">테마 정책 · 직접성 direct · 관련 종목 1개</div>
+    </div>
+    <div class="score">58</div>
+  </div>
+  <div class="chips"><span>재개발</span><span>지방선거(서울시장 공약)</span><span>서울고속버스터미널 재개발</span><span>터미널 지분 보유</span><span>백화점 입점 가능성</span><span>서울고속버스터미널 재개발 공약 부각</span><span>터미널 지분</span><span>보유로 재개발 수혜 기대</span><span>policy</span></div>
+  <div class="comment">정책 재료는 살아 있지만 동양고속 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="stocks"><article class="stock wait_pullback">
+  <div class="row">
+    <div><span class="name">1. 동양고속</span> <span class="muted mono">084670 · KOSPI</span></div>
+    <span class="pct mono">+10.04%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:99%"></i></span><span class="mono">99</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:35%"></i></span><span class="mono">35</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:44%"></i></span><span class="mono">44</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="12.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="17.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="22.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="27.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="32.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="36.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="41.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="46.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="51.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="56.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="60.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="65.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="70.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="75.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="80.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="85.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="89.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="94.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="99.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="104.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="118.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="123.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="128.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="133.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="138.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="142.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="147.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="152.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="157.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="162.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="166.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="171.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="176.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="181.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="186.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="190.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="195.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="200.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="205.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="210.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="215.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="219.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="224.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="229.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="234.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="239.1" y="78.0" width="2" height="18.0" rx="1" /><rect x="243.9" y="83.6" width="2" height="12.4" rx="1" /><rect x="248.7" y="87.2" width="2" height="8.8" rx="1" /><rect x="253.5" y="91.8" width="2" height="4.2" rx="1" /><rect x="258.3" y="94.5" width="2" height="1.5" rx="1" /><rect x="263.1" y="94.1" width="2" height="1.9" rx="1" /><rect x="267.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="272.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="277.6" y="94.3" width="2" height="1.7" rx="1" /><rect x="282.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="287.2" y="94.5" width="2" height="1.5" rx="1" /><rect x="292.0" y="88.8" width="2" height="7.2" rx="1" /></g>
+  <polyline fill="none" stroke="#f5b84c" stroke-width="2.4" points="8.0,51.0 12.8,56.8 17.6,55.1 22.4,52.4 27.3,53.9 32.1,55.6 36.9,57.6 41.7,49.9 46.5,48.1 51.3,51.0 56.1,51.7 60.9,57.5 65.8,54.6 70.6,54.7 75.4,56.4 80.2,58.3 85.0,58.5 89.8,60.8 94.6,55.3 99.5,60.6 104.3,59.5 109.1,58.3 113.9,61.6 118.7,56.4 123.5,58.6 128.3,57.3 133.2,58.5 138.0,58.4 142.8,57.5 147.6,57.1 152.4,58.7 157.2,58.7 162.0,58.8 166.8,59.5 171.7,61.1 176.5,61.3 181.3,60.3 186.1,60.6 190.9,60.6 195.7,63.4 200.5,64.0 205.4,67.2 210.2,68.4 215.0,66.5 219.8,69.0 224.6,72.0 229.4,53.0 234.2,28.3 239.1,10.0 243.9,38.8 248.7,40.9 253.5,42.8 258.3,49.5 263.1,47.5 267.9,53.2 272.7,59.7 277.6,63.4 282.4,66.3 287.2,68.1 292.0,61.3"/>
+  <line x1="8" y1="61.3" x2="292" y2="61.3" stroke="#f5b84c" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#f5b84c" font-size="10">-12.2%</text>
+</svg>
+  <div class="note">재료는 좋지만 현재 가격은 부담스럽습니다. 눌림, 매물 소화, 재돌파를 기다리는 쪽입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 54.1 · 거래량 2.7x · 20일 이격 -8.4%</div>
+</article></div>
+</section>
+<section class="opp wait" data-verdicts="wait_pullback" data-search="서울고속버스터미널 재개발 기대(지방선거 공약 부각, 터미널 지분 보유로 인한 재개발 수혜 가능성) 정책 지방선거 공약 도시재개발 서울고속버스터미널 재개발 터미널 지분(16.67%) 백화점 복합개발 입점 기대 서울고속버스터미널 재개발 기대 지방선거 공약 부각 터미널 지분 보유로 인한 천일고속">
+  <div class="row">
+    <div>
+      <h2>서울고속버스터미널 재개발 기대(지방선거 공약 부각, 터미널 지분 보유로 인한 재개발 수혜 가능성)</h2>
+      <div class="muted">테마 정책 · 직접성 direct · 관련 종목 1개</div>
+    </div>
+    <div class="score">58</div>
+  </div>
+  <div class="chips"><span>지방선거 공약</span><span>도시재개발</span><span>서울고속버스터미널 재개발</span><span>터미널 지분(16.67%)</span><span>백화점 복합개발 입점 기대</span><span>서울고속버스터미널 재개발 기대</span><span>지방선거 공약 부각</span><span>터미널 지분 보유로 인한</span><span>policy</span></div>
+  <div class="comment">정책 재료는 살아 있지만 천일고속 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="stocks"><article class="stock wait_pullback">
+  <div class="row">
+    <div><span class="name">1. 천일고속</span> <span class="muted mono">000650 · KOSPI</span></div>
+    <span class="pct mono">+9.52%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:99%"></i></span><span class="mono">99</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:35%"></i></span><span class="mono">35</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:44%"></i></span><span class="mono">44</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="12.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="17.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="22.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="27.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="32.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="36.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="41.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="46.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="51.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="56.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="60.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="65.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="70.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="75.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="80.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="85.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="89.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="94.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="99.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="104.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="118.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="123.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="128.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="133.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="138.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="142.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="147.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="152.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="157.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="162.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="166.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="171.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="176.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="181.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="186.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="190.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="195.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="200.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="205.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="210.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="215.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="219.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="224.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="229.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="234.2" y="94.8" width="2" height="1.2" rx="1" /><rect x="239.1" y="78.0" width="2" height="18.0" rx="1" /><rect x="243.9" y="88.4" width="2" height="7.6" rx="1" /><rect x="248.7" y="92.2" width="2" height="3.8" rx="1" /><rect x="253.5" y="94.2" width="2" height="1.8" rx="1" /><rect x="258.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="263.1" y="94.8" width="2" height="1.2" rx="1" /><rect x="267.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="272.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="277.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="282.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="287.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="292.0" y="90.9" width="2" height="5.1" rx="1" /></g>
+  <polyline fill="none" stroke="#f5b84c" stroke-width="2.4" points="8.0,44.9 12.8,49.2 17.6,46.7 22.4,44.9 27.3,45.5 32.1,48.7 36.9,51.6 41.7,48.8 46.5,44.5 51.3,47.1 56.1,45.9 60.9,52.4 65.8,52.2 70.6,51.0 75.4,52.6 80.2,53.6 85.0,55.8 89.8,58.6 94.6,56.0 99.5,58.2 104.3,58.4 109.1,56.0 113.9,60.2 118.7,56.0 123.5,56.8 128.3,53.6 133.2,54.0 138.0,54.6 142.8,54.2 147.6,53.2 152.4,53.6 157.2,54.6 162.0,55.2 166.8,56.2 171.7,59.6 176.5,60.2 181.3,59.6 186.1,60.2 190.9,61.0 195.7,61.6 200.5,62.5 205.4,64.9 210.2,66.7 215.0,65.2 219.8,68.5 224.6,72.0 229.4,51.2 234.2,24.1 239.1,10.0 243.9,38.3 248.7,43.9 253.5,49.6 258.3,53.8 263.1,45.3 267.9,50.8 272.7,56.8 277.6,61.2 282.4,64.3 287.2,62.6 292.0,55.0"/>
+  <line x1="8" y1="55.0" x2="292" y2="55.0" stroke="#f5b84c" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#f5b84c" font-size="10">-10.5%</text>
+</svg>
+  <div class="note">재료는 좋지만 현재 가격은 부담스럽습니다. 눌림, 매물 소화, 재돌파를 기다리는 쪽입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 56.0 · 거래량 2.6x · 20일 이격 -1.9%</div>
+</article></div>
+</section>
+<section class="opp wait" data-verdicts="wait_pullback" data-search="정정신고로 유상증자 1차 발행가액 하향(주당 2,030원)·조달금액 대폭 축소(약 130억→56.84억) 및 채무상환 계획 삭제(금융감독원 전자공시) 수급/자금조달 유상증자 조정 자금조달 규모 축소 일본 이토추 협력 k패션 온라인 플랫폼 8월 오픈 캐리스노트 일본 입점 정정신고로 유상증자 1차 발행가액 주당 2 030원 형지i&amp;c">
+  <div class="row">
+    <div>
+      <h2>정정신고로 유상증자 1차 발행가액 하향(주당 2,030원)·조달금액 대폭 축소(약 130억→56.84억) 및 채무상환 계획 삭제(금융감독원 전자공시)</h2>
+      <div class="muted">테마 수급/자금조달 · 직접성 direct · 관련 종목 1개</div>
+    </div>
+    <div class="score">56</div>
+  </div>
+  <div class="chips"><span>유상증자 조정</span><span>자금조달 규모 축소</span><span>일본 이토추 협력</span><span>K패션 온라인 플랫폼 8월 오픈</span><span>캐리스노트 일본 입점</span><span>정정신고로 유상증자 1차 발행가액</span><span>주당 2</span><span>030원</span><span>disclosure</span></div>
+  <div class="comment">수급/자금조달 재료는 살아 있지만 형지I&amp;C 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="stocks"><article class="stock wait_pullback">
+  <div class="row">
+    <div><span class="name">1. 형지I&amp;C</span> <span class="muted mono">011080 · KOSDAQ</span></div>
+    <span class="pct mono">+5.38%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:99%"></i></span><span class="mono">99</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:42%"></i></span><span class="mono">42</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="12.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="17.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="22.4" y="94.9" width="2" height="1.1" rx="1" /><rect x="27.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="32.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="36.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="41.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="46.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="51.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="56.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="60.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="65.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="70.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="75.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="80.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="85.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="89.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="94.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="99.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="104.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="87.0" width="2" height="9.0" rx="1" /><rect x="118.7" y="82.4" width="2" height="13.6" rx="1" /><rect x="123.5" y="83.4" width="2" height="12.6" rx="1" /><rect x="128.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="133.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="138.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="142.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="147.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="152.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="157.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="162.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="166.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="171.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="176.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="181.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="186.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="190.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="195.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="200.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="205.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="210.2" y="90.9" width="2" height="5.1" rx="1" /><rect x="215.0" y="94.9" width="2" height="1.1" rx="1" /><rect x="219.8" y="93.8" width="2" height="2.2" rx="1" /><rect x="224.6" y="94.8" width="2" height="1.2" rx="1" /><rect x="229.4" y="78.0" width="2" height="18.0" rx="1" /><rect x="234.2" y="87.8" width="2" height="8.2" rx="1" /><rect x="239.1" y="94.5" width="2" height="1.5" rx="1" /><rect x="243.9" y="94.8" width="2" height="1.2" rx="1" /><rect x="248.7" y="92.9" width="2" height="3.1" rx="1" /><rect x="253.5" y="94.8" width="2" height="1.2" rx="1" /><rect x="258.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="263.1" y="94.6" width="2" height="1.4" rx="1" /><rect x="267.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="272.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="277.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="282.4" y="82.9" width="2" height="13.1" rx="1" /><rect x="287.2" y="94.4" width="2" height="1.6" rx="1" /><rect x="292.0" y="83.6" width="2" height="12.4" rx="1" /></g>
+  <polyline fill="none" stroke="#f5b84c" stroke-width="2.4" points="8.0,19.7 12.8,25.9 17.6,23.9 22.4,21.6 27.3,22.1 32.1,20.7 36.9,21.7 41.7,22.6 46.5,23.1 51.3,22.6 56.1,20.6 60.9,23.4 65.8,21.7 70.6,21.9 75.4,24.6 80.2,26.8 85.0,26.9 89.8,24.9 94.6,23.6 99.5,27.3 104.3,26.9 109.1,31.8 113.9,10.0 118.7,31.4 123.5,31.6 128.3,31.6 133.2,31.6 138.0,31.6 142.8,31.6 147.6,31.6 152.4,31.6 157.2,31.6 162.0,31.6 166.8,31.6 171.7,31.6 176.5,31.6 181.3,31.6 186.1,31.6 190.9,31.6 195.7,31.6 200.5,31.6 205.4,31.6 210.2,46.8 215.0,46.3 219.8,55.2 224.6,56.7 229.4,42.4 234.2,53.2 239.1,56.4 243.9,60.0 248.7,59.8 253.5,62.2 258.3,62.7 263.1,60.3 267.9,61.5 272.7,65.6 277.6,67.0 282.4,67.5 287.2,72.0 292.0,70.3"/>
+  <line x1="8" y1="70.3" x2="292" y2="70.3" stroke="#f5b84c" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#f5b84c" font-size="10">-59.6%</text>
+</svg>
+  <div class="note">재료는 좋지만 현재 가격은 부담스럽습니다. 눌림, 매물 소화, 재돌파를 기다리는 쪽입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 36.7 · 거래량 4.0x · 20일 이격 -28.7%</div>
+</article></div>
+</section>
+<section class="opp wait" data-verdicts="wait_pullback" data-search="중동(이란)발 알루미늄 공급차질로 lme 알루미늄 선물가격 급등 → 알루미늄 관련주 수혜 원자재/수급 알루미늄 공급차질 중동 지정학 리스크 lme 알루미늄 가격 호르무즈 해협 봉쇄 알루미늄 생산능력(capa) 발 알루미늄 공급차질로 lme 알루미늄 선물가격 급등 알루미늄 관련주 수혜 삼아알미늄">
+  <div class="row">
+    <div>
+      <h2>중동(이란)발 알루미늄 공급차질로 LME 알루미늄 선물가격 급등 → 알루미늄 관련주 수혜</h2>
+      <div class="muted">테마 원자재/수급 · 직접성 probable · 관련 종목 1개</div>
+    </div>
+    <div class="score">51</div>
+  </div>
+  <div class="chips"><span>알루미늄 공급차질</span><span>중동 지정학 리스크</span><span>LME 알루미늄 가격</span><span>호르무즈 해협 봉쇄</span><span>알루미늄 생산능력(CAPA)</span><span>발 알루미늄 공급차질로 LME</span><span>알루미늄 선물가격 급등</span><span>알루미늄 관련주 수혜</span><span>rumor</span></div>
+  <div class="comment">원자재/수급 재료는 살아 있지만 삼아알미늄 모두 단기 과열 가능성이 있습니다. 바로 추격하기보다 눌림 또는 재돌파 확인이 유리합니다.</div>
+  <div class="stocks"><article class="stock wait_pullback">
+  <div class="row">
+    <div><span class="name">1. 삼아알미늄</span> <span class="muted mono">006110 · KOSPI</span></div>
+    <span class="pct mono">+4.90%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">risk high</span>
+    <span class="badge">high</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:89%"></i></span><span class="mono">89</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:37%"></i></span><span class="mono">37</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="94.5" width="2" height="1.5" rx="1" /><rect x="12.8" y="94.3" width="2" height="1.7" rx="1" /><rect x="17.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="22.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="27.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="32.1" y="92.8" width="2" height="3.2" rx="1" /><rect x="36.9" y="92.1" width="2" height="3.9" rx="1" /><rect x="41.7" y="94.5" width="2" height="1.5" rx="1" /><rect x="46.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="51.3" y="93.9" width="2" height="2.1" rx="1" /><rect x="56.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="60.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="65.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="70.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="75.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="80.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="85.0" y="94.4" width="2" height="1.6" rx="1" /><rect x="89.8" y="78.0" width="2" height="18.0" rx="1" /><rect x="94.6" y="90.9" width="2" height="5.1" rx="1" /><rect x="99.5" y="84.8" width="2" height="11.2" rx="1" /><rect x="104.3" y="91.7" width="2" height="4.3" rx="1" /><rect x="109.1" y="84.6" width="2" height="11.4" rx="1" /><rect x="113.9" y="92.6" width="2" height="3.4" rx="1" /><rect x="118.7" y="86.5" width="2" height="9.5" rx="1" /><rect x="123.5" y="87.1" width="2" height="8.9" rx="1" /><rect x="128.3" y="89.2" width="2" height="6.8" rx="1" /><rect x="133.2" y="90.8" width="2" height="5.2" rx="1" /><rect x="138.0" y="93.4" width="2" height="2.6" rx="1" /><rect x="142.8" y="91.9" width="2" height="4.1" rx="1" /><rect x="147.6" y="94.6" width="2" height="1.4" rx="1" /><rect x="152.4" y="94.5" width="2" height="1.5" rx="1" /><rect x="157.2" y="92.2" width="2" height="3.8" rx="1" /><rect x="162.0" y="92.5" width="2" height="3.5" rx="1" /><rect x="166.8" y="85.6" width="2" height="10.4" rx="1" /><rect x="171.7" y="92.8" width="2" height="3.2" rx="1" /><rect x="176.5" y="93.6" width="2" height="2.4" rx="1" /><rect x="181.3" y="94.6" width="2" height="1.4" rx="1" /><rect x="186.1" y="93.5" width="2" height="2.5" rx="1" /><rect x="190.9" y="94.7" width="2" height="1.3" rx="1" /><rect x="195.7" y="93.8" width="2" height="2.2" rx="1" /><rect x="200.5" y="94.7" width="2" height="1.3" rx="1" /><rect x="205.4" y="94.3" width="2" height="1.7" rx="1" /><rect x="210.2" y="94.7" width="2" height="1.3" rx="1" /><rect x="215.0" y="94.4" width="2" height="1.6" rx="1" /><rect x="219.8" y="93.9" width="2" height="2.1" rx="1" /><rect x="224.6" y="93.9" width="2" height="2.1" rx="1" /><rect x="229.4" y="93.5" width="2" height="2.5" rx="1" /><rect x="234.2" y="91.6" width="2" height="4.4" rx="1" /><rect x="239.1" y="94.2" width="2" height="1.8" rx="1" /><rect x="243.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="248.7" y="94.1" width="2" height="1.9" rx="1" /><rect x="253.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="258.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="263.1" y="93.9" width="2" height="2.1" rx="1" /><rect x="267.9" y="94.5" width="2" height="1.5" rx="1" /><rect x="272.7" y="94.7" width="2" height="1.3" rx="1" /><rect x="277.6" y="94.6" width="2" height="1.4" rx="1" /><rect x="282.4" y="94.6" width="2" height="1.4" rx="1" /><rect x="287.2" y="94.4" width="2" height="1.6" rx="1" /><rect x="292.0" y="93.1" width="2" height="2.9" rx="1" /></g>
+  <polyline fill="none" stroke="#f5b84c" stroke-width="2.4" points="8.0,69.2 12.8,70.2 17.6,70.8 22.4,71.3 27.3,69.6 32.1,67.4 36.9,65.0 41.7,66.1 46.5,67.9 51.3,66.8 56.1,68.6 60.9,71.6 65.8,71.7 70.6,71.0 75.4,71.8 80.2,72.0 85.0,70.1 89.8,61.6 94.6,66.9 99.5,67.1 104.3,65.4 109.1,63.6 113.9,65.3 118.7,59.7 123.5,53.5 128.3,47.8 133.2,43.7 138.0,46.5 142.8,50.4 147.6,50.9 152.4,49.8 157.2,46.8 162.0,44.8 166.8,33.0 171.7,37.2 176.5,34.2 181.3,35.3 186.1,31.9 190.9,31.8 195.7,35.3 200.5,37.2 205.4,38.2 210.2,33.7 215.0,31.6 219.8,25.7 224.6,25.7 229.4,24.0 234.2,10.1 239.1,21.1 243.9,21.2 248.7,15.0 253.5,22.2 258.3,22.2 263.1,10.0 267.9,15.0 272.7,23.3 277.6,18.7 282.4,31.7 287.2,29.2 292.0,25.8"/>
+  <line x1="8" y1="25.8" x2="292" y2="25.8" stroke="#f5b84c" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#f5b84c" font-size="10">+148.7%</text>
+</svg>
+  <div class="note">재료는 좋지만 현재 가격은 부담스럽습니다. 눌림, 매물 소화, 재돌파를 기다리는 쪽입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 50.0 · 거래량 1.6x · 20일 이격 -2.3%</div>
+</article></div>
+</section>
+<section class="opp " data-verdicts="pass" data-search="코스피 8000 돌파 관련 &#x27;자본시장 선진화&#x27; 언급(거래시간 연장·결제주기 단축·주식 토큰화 등) 정책/시장(수급) 코스피 8000 자본시장 선진화 거래소 인프라 개선 거래시간 연장 결제주기 단축 주식 토큰화 코스피 8000 돌파 관련 선진">
+  <div class="row">
+    <div>
+      <h2>코스피 8000 돌파 관련 &#x27;자본시장 선진화&#x27; 언급(거래시간 연장·결제주기 단축·주식 토큰화 등)</h2>
+      <div class="muted">테마 정책/시장(수급) · 직접성 weak · 관련 종목 1개</div>
+    </div>
+    <div class="score">41</div>
+  </div>
+  <div class="chips"><span>코스피 8000</span><span>자본시장 선진화</span><span>거래소 인프라 개선</span><span>거래시간 연장</span><span>결제주기 단축</span><span>주식 토큰화</span><span>코스피 8000 돌파 관련</span><span>unknown</span></div>
+  <div class="comment">정책/시장(수급) 관련 신호입니다. 현재는 선진 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="stocks"><article class="stock pass">
+  <div class="row">
+    <div><span class="name">1. 선진</span> <span class="muted mono">136490 · KOSPI</span></div>
+    <span class="pct mono">+4.75%</span>
+  </div>
+  <div>
+    <span class="badge">pass</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:17%"></i></span><span class="mono">17</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:54%"></i></span><span class="mono">54</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:27%"></i></span><span class="mono">27</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="93.3" width="2" height="2.7" rx="1" /><rect x="12.8" y="93.3" width="2" height="2.7" rx="1" /><rect x="17.6" y="92.2" width="2" height="3.8" rx="1" /><rect x="22.4" y="92.7" width="2" height="3.3" rx="1" /><rect x="27.3" y="92.2" width="2" height="3.8" rx="1" /><rect x="32.1" y="92.9" width="2" height="3.1" rx="1" /><rect x="36.9" y="92.5" width="2" height="3.5" rx="1" /><rect x="41.7" y="94.3" width="2" height="1.7" rx="1" /><rect x="46.5" y="92.9" width="2" height="3.1" rx="1" /><rect x="51.3" y="93.1" width="2" height="2.9" rx="1" /><rect x="56.1" y="90.5" width="2" height="5.5" rx="1" /><rect x="60.9" y="93.2" width="2" height="2.8" rx="1" /><rect x="65.8" y="93.5" width="2" height="2.5" rx="1" /><rect x="70.6" y="93.5" width="2" height="2.5" rx="1" /><rect x="75.4" y="94.1" width="2" height="1.9" rx="1" /><rect x="80.2" y="93.7" width="2" height="2.3" rx="1" /><rect x="85.0" y="93.9" width="2" height="2.1" rx="1" /><rect x="89.8" y="93.4" width="2" height="2.6" rx="1" /><rect x="94.6" y="92.9" width="2" height="3.1" rx="1" /><rect x="99.5" y="92.1" width="2" height="3.9" rx="1" /><rect x="104.3" y="94.6" width="2" height="1.4" rx="1" /><rect x="109.1" y="93.1" width="2" height="2.9" rx="1" /><rect x="113.9" y="94.3" width="2" height="1.7" rx="1" /><rect x="118.7" y="93.8" width="2" height="2.2" rx="1" /><rect x="123.5" y="94.1" width="2" height="1.9" rx="1" /><rect x="128.3" y="94.5" width="2" height="1.5" rx="1" /><rect x="133.2" y="93.9" width="2" height="2.1" rx="1" /><rect x="138.0" y="93.6" width="2" height="2.4" rx="1" /><rect x="142.8" y="93.9" width="2" height="2.1" rx="1" /><rect x="147.6" y="93.6" width="2" height="2.4" rx="1" /><rect x="152.4" y="93.4" width="2" height="2.6" rx="1" /><rect x="157.2" y="93.5" width="2" height="2.5" rx="1" /><rect x="162.0" y="93.3" width="2" height="2.7" rx="1" /><rect x="166.8" y="92.8" width="2" height="3.2" rx="1" /><rect x="171.7" y="93.6" width="2" height="2.4" rx="1" /><rect x="176.5" y="94.6" width="2" height="1.4" rx="1" /><rect x="181.3" y="93.7" width="2" height="2.3" rx="1" /><rect x="186.1" y="93.8" width="2" height="2.2" rx="1" /><rect x="190.9" y="90.8" width="2" height="5.2" rx="1" /><rect x="195.7" y="94.5" width="2" height="1.5" rx="1" /><rect x="200.5" y="89.7" width="2" height="6.3" rx="1" /><rect x="205.4" y="90.8" width="2" height="5.2" rx="1" /><rect x="210.2" y="93.5" width="2" height="2.5" rx="1" /><rect x="215.0" y="93.1" width="2" height="2.9" rx="1" /><rect x="219.8" y="89.9" width="2" height="6.1" rx="1" /><rect x="224.6" y="92.8" width="2" height="3.2" rx="1" /><rect x="229.4" y="93.5" width="2" height="2.5" rx="1" /><rect x="234.2" y="78.0" width="2" height="18.0" rx="1" /><rect x="239.1" y="84.6" width="2" height="11.4" rx="1" /><rect x="243.9" y="90.9" width="2" height="5.1" rx="1" /><rect x="248.7" y="89.9" width="2" height="6.1" rx="1" /><rect x="253.5" y="91.0" width="2" height="5.0" rx="1" /><rect x="258.3" y="93.1" width="2" height="2.9" rx="1" /><rect x="263.1" y="94.3" width="2" height="1.7" rx="1" /><rect x="267.9" y="90.0" width="2" height="6.0" rx="1" /><rect x="272.7" y="91.0" width="2" height="5.0" rx="1" /><rect x="277.6" y="92.0" width="2" height="4.0" rx="1" /><rect x="282.4" y="92.7" width="2" height="3.3" rx="1" /><rect x="287.2" y="92.7" width="2" height="3.3" rx="1" /><rect x="292.0" y="90.5" width="2" height="5.5" rx="1" /></g>
+  <polyline fill="none" stroke="#6ea8fe" stroke-width="2.4" points="8.0,25.2 12.8,36.8 17.6,38.7 22.4,34.2 27.3,47.5 32.1,52.0 36.9,58.4 41.7,50.7 46.5,47.5 51.3,45.5 56.1,25.8 60.9,45.5 65.8,42.9 70.6,43.9 75.4,50.4 80.2,49.1 85.0,60.1 89.8,65.2 94.6,47.5 99.5,65.2 104.3,62.0 109.1,63.3 113.9,64.9 118.7,52.0 123.5,62.0 128.3,51.3 133.2,49.1 138.0,46.2 142.8,45.5 147.6,35.8 152.4,33.2 157.2,28.1 162.0,32.6 166.8,39.7 171.7,37.4 176.5,32.3 181.3,29.1 186.1,34.5 190.9,32.3 195.7,38.4 200.5,22.3 205.4,21.0 210.2,27.1 215.0,27.8 219.8,49.4 224.6,53.9 229.4,56.8 234.2,10.0 239.1,11.6 243.9,27.4 248.7,34.9 253.5,48.4 258.3,38.7 263.1,38.4 267.9,52.6 272.7,63.0 277.6,64.2 282.4,64.2 287.2,72.0 292.0,57.1"/>
+  <line x1="8" y1="57.1" x2="292" y2="57.1" stroke="#6ea8fe" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#6ea8fe" font-size="10">-8.9%</text>
+</svg>
+  <div class="note">거래량은 평균 대비 1.1배입니다. 다음 봉 방향 확인 전까지 관찰입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 48.9 · 거래량 1.1x · 20일 이격 -4.4%</div>
+</article></div>
+</section>
+<section class="opp " data-verdicts="pass" data-search="json 파싱 오류: expecting value: line 1 column 1 (char 0) 분석 실패 json 파싱 오류 expecting value line 1 column 1 char 0 sk네트웍스">
+  <div class="row">
+    <div>
+      <h2>JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)</h2>
+      <div class="muted">테마 분석 실패 · 직접성 weak · 관련 종목 1개</div>
+    </div>
+    <div class="score">25</div>
+  </div>
+  <div class="chips"><span>JSON 파싱 오류</span><span>Expecting value</span><span>line 1 column 1</span><span>char 0</span></div>
+  <div class="comment">분석 실패 관련 신호입니다. 현재는 SK네트웍스 순으로 관찰하되 매수 근거가 충분한지 추가 확인이 필요합니다.</div>
+  <div class="stocks"><article class="stock pass">
+  <div class="row">
+    <div><span class="name">1. SK네트웍스</span> <span class="muted mono">001740 · KOSPI</span></div>
+    <span class="pct mono">+8.08%</span>
+  </div>
+  <div>
+    <span class="badge">pass</span>
+    <span class="badge">risk high</span>
+    <span class="badge">low</span>
+  </div>
+  <div class="bars"><span>뉴스</span><span class="bar"><i style="width:17%"></i></span><span class="mono">17</span></div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:58%"></i></span><span class="mono">58</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:13%"></i></span><span class="mono">13</span></div>
+  <svg class="spark" viewBox="0 0 300 118" role="img" aria-label="60일 차트">
+  <rect x="0" y="0" width="300" height="118" rx="8" fill="#11161d"/>
+  <g fill="#303843"><rect x="8.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="12.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="17.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="22.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="27.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="32.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="36.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="41.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="46.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="51.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="56.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="60.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="65.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="70.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="75.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="80.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="85.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="89.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="94.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="99.5" y="94.7" width="2" height="1.3" rx="1" /><rect x="104.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="109.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="113.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="118.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="123.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="128.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="133.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="138.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="142.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="147.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="152.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="157.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="162.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="166.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="171.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="176.5" y="95.0" width="2" height="1.0" rx="1" /><rect x="181.3" y="95.0" width="2" height="1.0" rx="1" /><rect x="186.1" y="95.0" width="2" height="1.0" rx="1" /><rect x="190.9" y="95.0" width="2" height="1.0" rx="1" /><rect x="195.7" y="95.0" width="2" height="1.0" rx="1" /><rect x="200.5" y="93.1" width="2" height="2.9" rx="1" /><rect x="205.4" y="92.5" width="2" height="3.5" rx="1" /><rect x="210.2" y="95.0" width="2" height="1.0" rx="1" /><rect x="215.0" y="95.0" width="2" height="1.0" rx="1" /><rect x="219.8" y="95.0" width="2" height="1.0" rx="1" /><rect x="224.6" y="95.0" width="2" height="1.0" rx="1" /><rect x="229.4" y="95.0" width="2" height="1.0" rx="1" /><rect x="234.2" y="92.0" width="2" height="4.0" rx="1" /><rect x="239.1" y="78.1" width="2" height="17.9" rx="1" /><rect x="243.9" y="84.7" width="2" height="11.3" rx="1" /><rect x="248.7" y="92.3" width="2" height="3.7" rx="1" /><rect x="253.5" y="92.6" width="2" height="3.4" rx="1" /><rect x="258.3" y="93.0" width="2" height="3.0" rx="1" /><rect x="263.1" y="93.6" width="2" height="2.4" rx="1" /><rect x="267.9" y="79.8" width="2" height="16.2" rx="1" /><rect x="272.7" y="78.0" width="2" height="18.0" rx="1" /><rect x="277.6" y="82.0" width="2" height="14.0" rx="1" /><rect x="282.4" y="94.9" width="2" height="1.1" rx="1" /><rect x="287.2" y="94.8" width="2" height="1.2" rx="1" /><rect x="292.0" y="94.8" width="2" height="1.2" rx="1" /></g>
+  <polyline fill="none" stroke="#f5b84c" stroke-width="2.4" points="8.0,69.5 12.8,71.3 17.6,69.3 22.4,68.9 27.3,68.1 32.1,69.0 36.9,69.5 41.7,68.4 46.5,66.7 51.3,67.5 56.1,68.7 60.9,70.4 65.8,69.7 70.6,68.2 75.4,69.3 80.2,68.6 85.0,69.8 89.8,72.0 94.6,66.8 99.5,68.1 104.3,69.7 109.1,70.4 113.9,70.8 118.7,67.9 123.5,69.5 128.3,68.6 133.2,69.4 138.0,67.6 142.8,68.1 147.6,67.4 152.4,68.0 157.2,68.5 162.0,68.5 166.8,68.2 171.7,67.6 176.5,66.1 181.3,66.4 186.1,63.8 190.9,64.0 195.7,64.6 200.5,58.9 205.4,58.2 210.2,57.6 215.0,57.8 219.8,60.0 224.6,61.7 229.4,62.9 234.2,48.7 239.1,42.3 243.9,45.9 248.7,46.3 253.5,49.5 258.3,46.6 263.1,44.8 267.9,25.0 272.7,21.4 277.6,16.7 282.4,22.2 287.2,17.5 292.0,10.0"/>
+  <line x1="8" y1="10.0" x2="292" y2="10.0" stroke="#f5b84c" stroke-opacity=".22" stroke-dasharray="3 4"/>
+  <text x="10" y="16" fill="#9da7b3" font-size="10">60D</text>
+  <text x="290" y="16" text-anchor="end" fill="#f5b84c" font-size="10">+145.0%</text>
+</svg>
+  <div class="note">거래량은 평균 대비 0.2배입니다. 다음 봉 방향 확인 전까지 관찰입니다.</div>
+  <div class="muted">패턴 momentum_watch · RSI 82.6 · 거래량 0.2x · 20일 이격 48.2%</div>
+</article></div>
+</section>
+</main>
+<script>
+let filter = 'all';
+let query = '';
+const buttons = [...document.querySelectorAll('button[data-filter]')];
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  filter = btn.dataset.filter;
+  buttons.forEach(b => b.classList.toggle('active', b === btn));
+  applyFilters();
+}));
+document.getElementById('search').addEventListener('input', e => {
+  query = e.target.value.trim().toLowerCase();
+  applyFilters();
+});
+function applyFilters() {
+  document.querySelectorAll('[data-verdicts]').forEach(card => {
+    const verdicts = card.dataset.verdicts.split(',');
+    const typeOK = filter === 'all' || verdicts.includes(filter);
+    const queryOK = !query || card.dataset.search.includes(query);
+    card.classList.toggle('hide', !(typeOK && queryOK));
+  });
+}
+</script>
+</body>
+</html>

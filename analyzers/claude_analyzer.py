@@ -22,6 +22,8 @@ SYSTEM_PROMPT = """당신은 한국 주식 시장 분석가입니다. 단기 급
    - origin=stock_news → 네이버 금융이 해당 종목에 태깅한 기사 (직접 단서)
    - origin=search:... → 회사명/사업 키워드로 검색한 일반 뉴스 (정책/산업/경쟁사 등 간접 트리거 후보)
    둘 다 활용하되, 일반 뉴스에서 종목과의 연결이 약하면 무리해서 묶지 말 것.
+   기사에 본문 발췌가 포함되어 있으면 제목보다 본문 속 구체 단서(계약 규모, 상대방, 정책명, 임상/승인 단계,
+   실적 수치, 시점)를 우선 근거로 삼을 것. 본문에도 직접 근거가 없으면 억지로 연결하지 말 것.
 2. **흔한 매크로 테마(반도체, AI, 2차전지, 바이오 등)는 1차 분류만 하고, 그보다 지엽적이고 구체적인 서브 테마를 반드시 찾기**
    - 예: '반도체' (X) → 'HBM3E 12단 양산', '실리콘 카바이드(SiC) 전력반도체' (O)
    - 예: '2차전지' (X) → 'LFP 양극재 국산화', '전고체 분리막 공급계약' (O)
@@ -42,10 +44,16 @@ SYSTEM_PROMPT = """당신은 한국 주식 시장 분석가입니다. 단기 급
 def _build_user_prompt(stock, articles):
     """종목 하나에 대한 프롬프트 생성"""
     if articles:
-        article_text = "\n".join([
-            f"- [{a.get('date','')}] ({a.get('origin','stock_news')}) {a['title']} — {a.get('source','')}"
-            for a in articles
-        ])
+        lines = []
+        for a in articles:
+            lines.append(
+                f"- [{a.get('date','')}] ({a.get('origin','stock_news')}) "
+                f"{a['title']} — {a.get('source','')}"
+            )
+            body = (a.get('body') or '').strip()
+            if body:
+                lines.append(f"  본문 발췌: {body[:1200]}")
+        article_text = "\n".join(lines)
     else:
         article_text = "(관련 뉴스 없음)"
 
@@ -56,7 +64,8 @@ def _build_user_prompt(stock, articles):
 종가: {stock['close']:,}원
 거래량: {stock['volume']:,}주
 
-최근 14일 관련 뉴스 (origin=stock_news는 종목 태그 기사, origin=search:...는 일반 뉴스):
+최근 14일 관련 뉴스 (origin=stock_news는 종목 태그 기사, origin=search:...는 일반 뉴스,
+본문 발췌가 있으면 제목보다 본문 근거를 우선):
 {article_text}
 
 다음 JSON 형식으로 응답:

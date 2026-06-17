@@ -9,7 +9,50 @@
 import csv
 import json
 from collections import defaultdict
+from datetime import datetime
 from pathlib import Path
+
+
+REASON_UNKNOWN_LABELS = {
+    'no_news_in_window': '윈도우 내 뉴스 없음',
+    'headline_only_generic': '제목만 일반 시황·랭킹',
+    'lagging_article': '기사 날짜 지연(D-2 이전)',
+    'weak_name_link': '종목명-기사 연결 약함',
+    'theme_only_supply': '수급/테마성만',
+    'data_missing': '수집/본문 누락',
+    'other': '기타',
+    '': '',
+}
+
+
+def _article_diagnostics(articles: list, date_str: str) -> dict:
+    """기사 묶음의 진단 메타 (article_count / origin_dist / latest_date / trigger_lag)."""
+    origin_dist: dict[str, int] = {}
+    latest_dt = None
+    body_count = 0
+    for a in articles:
+        origin_dist[a.get('origin', '?')] = origin_dist.get(a.get('origin', '?'), 0) + 1
+        if len((a.get('body') or '').strip()) >= 100:
+            body_count += 1
+        try:
+            dt = datetime.strptime(a.get('date', ''), '%Y.%m.%d %H:%M')
+        except Exception:
+            continue
+        if latest_dt is None or dt > latest_dt:
+            latest_dt = dt
+    trigger_lag = None
+    try:
+        if latest_dt:
+            trigger_lag = (datetime.strptime(date_str, '%Y%m%d') - latest_dt).days
+    except Exception:
+        pass
+    return {
+        'article_count': len(articles),
+        'body_count': body_count,
+        'origin_dist': origin_dist,
+        'latest_article_date': latest_dt.strftime('%Y-%m-%d %H:%M') if latest_dt else '',
+        'trigger_lag_candidate': trigger_lag if trigger_lag is not None else '',
+    }
 
 
 SECTION_TITLES = {
@@ -19,7 +62,7 @@ SECTION_TITLES = {
 }
 
 
-def _stock_md(stock, articles, analysis):
+def _stock_md(stock, articles, analysis, date_str=''):
     conf = (analysis.get('confidence') or 'low').lower()
     emoji = {'high': '🟢', 'medium': '🟡', 'low': '🔴'}.get(conf, '⚪')
     md = f"""
@@ -32,6 +75,16 @@ def _stock_md(stock, articles, analysis):
 """
     if analysis.get('trigger_date'):
         md += f"- **트리거 일자**: {analysis['trigger_date']} (D-{analysis.get('trigger_lag_days', '?')}일)\n"
+    if analysis.get('reason_unknown_category'):
+        ruc = analysis['reason_unknown_category']
+        md += f"- **이유 불명 카테고리**: `{ruc}` — {REASON_UNKNOWN_LABELS.get(ruc, '')}\n"
+        diag = _article_diagnostics(articles, date_str)
+        md += (
+            f"- **수집 진단**: 기사 {diag['article_count']}건 · 본문 {diag['body_count']}건 · "
+            f"origin {diag['origin_dist']} · "
+            f"최신기사 {diag['latest_article_date'] or '없음'} · "
+            f"trigger_lag 후보 {diag['trigger_lag_candidate']}일\n"
+        )
     md += (
         f"- **추정 근거**: {analysis.get('reasoning', '-')}\n"
         f"- **연관 종목**: {', '.join(analysis.get('related_stocks', [])) or '-'}\n"
@@ -154,7 +207,7 @@ document.querySelectorAll('nav.tabs button').forEach(b => b.addEventListener('cl
 """
 
 
-def _card_html(stock, articles, analysis, status):
+def _card_html(stock, articles, analysis, status, date_str=''):
     conf = (analysis.get('confidence') or 'low').lower()
     signal = analysis.get('specific_signal') or '—'
     theme = analysis.get('main_theme') or '미분류'
@@ -168,6 +221,23 @@ def _card_html(stock, articles, analysis, status):
     if analysis.get('trigger_date'):
         trig_line = f'<div class="reasoning">📅 트리거: {analysis["trigger_date"]} (D-{analysis.get("trigger_lag_days","?")}일)</div>'
 
+    unknown_block = ''
+    ruc = analysis.get('reason_unknown_category') or ''
+    if ruc:
+        diag = _article_diagnostics(articles, date_str)
+        origin_str = ', '.join(f'{k}:{v}' for k, v in diag['origin_dist'].items()) or '(없음)'
+        unknown_block = (
+            f'<div class="unknown-diag" style="margin-top:6px; padding:6px 8px; '
+            f'background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.35); '
+            f'border-radius:6px; font-size:12px; color:var(--muted)">'
+            f'<div style="color:#f59e0b; font-weight:600">❓ 이유 불명: <code>{ruc}</code> '
+            f'— {REASON_UNKNOWN_LABELS.get(ruc, "")}</div>'
+            f'<div>기사 {diag["article_count"]}건 · 본문 {diag["body_count"]}건 · origin {origin_str} · '
+            f'최신기사 {diag["latest_article_date"] or "없음"} · '
+            f'trigger_lag 후보 {diag["trigger_lag_candidate"]}일</div>'
+            f'</div>'
+        )
+
     return f'''<div class="card {status}">
   <div class="row">
     <div><span class="name">{stock["name"]}</span> <span class="ticker">{stock["ticker"]} · {stock["market"]}</span></div>
@@ -180,6 +250,7 @@ def _card_html(stock, articles, analysis, status):
   <div class="signal">🎯 {signal}</div>
   <div class="reasoning">{analysis.get("reasoning","")}</div>
   {trig_line}
+  {unknown_block}
   <div class="keywords">{kws}</div>
   <details><summary>📰 관련 뉴스 {len(articles)}건</summary><ul>{news_items}</ul></details>
 </div>'''
@@ -191,7 +262,7 @@ def _render_html(date_str, movers, news_data, analysis, status_map):
 
     def cards_for(stocks):
         return '\n'.join(
-            _card_html(s, news_data.get(s['ticker'], []), analysis.get(s['ticker'], {}), status_map.get(s['ticker'], 'new'))
+            _card_html(s, news_data.get(s['ticker'], []), analysis.get(s['ticker'], {}), status_map.get(s['ticker'], 'new'), date_str=date_str)
             for s in stocks
         )
 
@@ -243,13 +314,27 @@ def generate_report(date_str, movers, news_data, analysis, status_map, output_di
     md = f"# 📊 한국 주식 일일 분석 리포트\n\n**기준일**: {date_str}\n\n"
     md += "> 🟢 high · 🟡 medium · 🔴 low (분석 신뢰도)\n\n---\n\n"
 
+    # 이유 불명 카테고리 분포 (요약)
+    unclear_stocks = buckets.get('unclear', [])
+    if unclear_stocks:
+        from collections import Counter
+        ruc_counter = Counter(
+            (analysis.get(s['ticker'], {}).get('reason_unknown_category') or 'uncategorized')
+            for s in unclear_stocks
+        )
+        md += "\n## ❓ 이유 불명 카테고리 분포\n\n| 카테고리 | 건수 |\n|---|---:|\n"
+        for k, v in ruc_counter.most_common():
+            label = REASON_UNKNOWN_LABELS.get(k, k)
+            md += f"| `{k}` ({label}) | {v} |\n"
+        md += "\n"
+
     for status in ('new', 'continuation', 'unclear'):
         stocks = buckets[status]
         if not stocks:
             continue
         md += f"\n## {SECTION_TITLES[status]} ({len(stocks)})\n"
         for s in stocks:
-            md += _stock_md(s, news_data.get(s['ticker'], []), analysis.get(s['ticker'], {}))
+            md += _stock_md(s, news_data.get(s['ticker'], []), analysis.get(s['ticker'], {}), date_str=date_str)
 
     # 테마 그룹 추가
     md += "\n\n---\n\n## 🎯 테마별 그룹\n"
@@ -267,9 +352,12 @@ def generate_report(date_str, movers, news_data, analysis, status_map, output_di
             'date', 'market', 'ticker', 'name', 'close', 'change_pct', 'volume',
             'status', 'main_theme', 'specific_signal', 'trigger_type', 'trigger_date', 'trigger_lag_days',
             'confidence', 'reasoning', 'related_stocks', 'watch_keywords', 'news_count',
+            'body_count', 'reason_unknown_category', 'article_origin_dist', 'latest_article_date', 'trigger_lag_candidate',
         ])
         for s in all_stocks:
             a = analysis.get(s['ticker'], {})
+            arts = news_data.get(s['ticker'], [])
+            diag = _article_diagnostics(arts, date_str)
             writer.writerow([
                 date_str, s['market'], s['ticker'], s['name'],
                 s['close'], s['change_pct'], s['volume'],
@@ -280,7 +368,12 @@ def generate_report(date_str, movers, news_data, analysis, status_map, output_di
                 a.get('reasoning', ''),
                 ', '.join(a.get('related_stocks', [])),
                 ', '.join(a.get('watch_keywords', [])),
-                len(news_data.get(s['ticker'], [])),
+                len(arts),
+                diag['body_count'],
+                a.get('reason_unknown_category', ''),
+                '; '.join(f'{k}:{v}' for k, v in diag['origin_dist'].items()),
+                diag['latest_article_date'],
+                diag['trigger_lag_candidate'],
             ])
 
     # ── HTML 일일 페이지 ──

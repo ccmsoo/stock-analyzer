@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>수익성 검증 대시보드 — 20260518</title>
+<style>
+:root {
+  --bg:#0b0d10; --panel:#151a20; --panel2:#1e2530; --line:#23272e;
+  --fg:#e6e6e6; --muted:#8a929b; --cyan:#2dd4bf;
+  --green:#22c55e; --yellow:#eab308; --red:#ef4444; --blue:#3b82f6; --purple:#a78bfa;
+}
+*{box-sizing:border-box;}
+body{margin:0;padding:24px 30px;background:var(--bg);color:var(--fg);
+     font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif;}
+h1{margin:0 0 4px;font-size:22px;}
+h2{margin:28px 0 10px;font-size:17px;color:var(--cyan);border-bottom:1px solid var(--line);padding-bottom:5px;}
+h3{margin:4px 0;font-size:14px;}
+.muted{color:var(--muted);font-size:13px;}
+.banner{background:#3a2a17;border-left:4px solid var(--yellow);padding:10px 14px;
+        border-radius:6px;margin:12px 0 24px;font-size:13px;}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:10px 0 14px;}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px;}
+.kpi b{display:block;font-size:24px;color:var(--cyan);}
+.kpi small{color:var(--muted);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:10px;}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;}
+.card .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.name{font-weight:600;}
+.ticker{color:var(--muted);font-size:12px;font-family:ui-monospace,monospace;margin-left:6px;}
+.score{font-size:22px;font-weight:700;color:var(--cyan);font-family:ui-monospace,monospace;}
+.signal{margin:6px 0;color:var(--cyan);font-size:13px;}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;}
+.metrics{display:flex;gap:10px;font-size:12px;color:var(--muted);margin-top:6px;font-family:ui-monospace,monospace;flex-wrap:wrap;}
+.badge{font-size:11px;background:var(--panel2);border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--muted);}
+.exclusions{margin-top:6px;font-size:12px;color:var(--yellow);}
+.exclusions code{background:#3a2a17;padding:1px 4px;border-radius:3px;margin:1px 2px;font-size:11px;}
+.strategy{margin-top:6px;font-size:12px;border-top:1px solid var(--line);padding-top:6px;color:var(--muted);}
+.strategy b{color:var(--fg);}
+.kwcard .kwstats{margin-top:6px;display:flex;flex-wrap:wrap;gap:10px;font-size:12px;font-family:ui-monospace,monospace;color:var(--muted);}
+.empty{padding:20px;color:var(--muted);font-size:13px;}
+.risk-extreme{border-left:4px solid var(--red);}
+.risk-high{border-left:4px solid #f59e0b;}
+.risk-medium{border-left:4px solid var(--yellow);}
+.risk-low{border-left:4px solid var(--green);}
+.lbl-strong{background:linear-gradient(180deg,#16321c,var(--panel));}
+.lbl-watch{background:linear-gradient(180deg,#1d2a3a,var(--panel));}
+.lbl-neutral{opacity:0.85;}
+.lbl-weak{opacity:0.65;}
+.lbl-avoid{opacity:0.55;}
+.lbl-promising{background:linear-gradient(180deg,#16321c,var(--panel));}
+.lbl-noisy{background:linear-gradient(180deg,#3a1e20,var(--panel));}
+.lbl-unproven{opacity:0.6;}
+table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;}
+table th,table td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;}
+table th{color:var(--muted);font-weight:500;font-size:12px;}
+.return-pos{color:var(--green);}
+.return-neg{color:var(--red);}
+.exit-tp{color:var(--green);font-weight:600;}
+.exit-sl{color:var(--red);font-weight:600;}
+.exit-time{color:var(--muted);}
+</style>
+</head>
+<body>
+<h1>💼 수익성 검증 대시보드</h1>
+<div class="muted">기준일: 20260518 · 생성: 2026-05-18 16:20 · 누적 trade: 540</div>
+<div class="banner">이 대시보드는 매수/매도 추천이 아닙니다. profitability_score 는 관찰 우선순위이며 수익을 보장하지 않습니다. 백테스트는 과거 데이터 기반이며 미래 성과를 보장하지 않습니다. 실제 거래 전 종이매매로 검증하세요.</div>
+
+<div class="kpis">
+  <div class="kpi"><b>20</b><small>오늘 시그널 (20260518)</small></div>
+  <div class="kpi"><b>7</b><small>strong_watch</small></div>
+  <div class="kpi"><b>8</b><small>전략 적격</small></div>
+  <div class="kpi"><b>12</b><small>진입 제외</small></div>
+</div><section><h2>1. 오늘의 관찰 우선 후보</h2><p class="muted">profitability_score 상위. 매수 신호가 아니라 관찰 순위.</p><div class="grid">
+<div class="card lbl-strong risk-low">
+  <div class="row">
+    <div>
+      <span class="name">코리안리</span>
+      <span class="ticker">003690 · KOSPI</span>
+    </div>
+    <span class="score">99</span>
+  </div>
+  <div class="signal">🎯 1분기 당기순이익 급증(2095억원) + 애널리스트 목표가 상향(한화證 매수·목표가 상향)</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">earnings</span>
+    <span class="badge">chart 71</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">strong_watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 72.7</span>
+    <span>거래량 5.9배</span>
+    <span>거래대금 6.8배</span>
+    <span>MA20 +16.6%</span>
+  </div>
+  
+  
+  
+  <div class="strategy">전략: <b class="">data_missing</b> - · 진입 - → 청산 - (-)</div>
+</div>
+<div class="card lbl-strong risk-low">
+  <div class="row">
+    <div>
+      <span class="name">가온전선</span>
+      <span class="ticker">000500 · KOSPI</span>
+    </div>
+    <span class="score">93</span>
+  </div>
+  <div class="signal">🎯 미국 빅테크 AI 데이터센터용 버스덕트(Busduct) 장기(5년) 공급계약 — 초기 2026년 공급 약 500억원, 2030년까지 누적 최대 4조원 규모(프레임 계약)</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">contract</span>
+    <span class="badge">chart 72</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">strong_watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 64.0</span>
+    <span>거래량 4.3배</span>
+    <span>거래대금 5.0배</span>
+    <span>MA20 +24.6%</span>
+  </div>
+  <div class="exclusions">⚠️ 9일 연속</div>
+  
+  
+  <div class="strategy">전략: <b class="">data_missing</b> - · 진입 - → 청산 - (-)</div>
+</div>
+<div class="card lbl-strong risk-low">
+  <div class="row">
+    <div>
+      <span class="name">테이팩스</span>
+      <span class="ticker">055490 · KOSPI</span>
+    </div>
+    <span class="score">89</span>
+  </div>
+  <div class="signal">🎯 배터리 절연용 고기능성 테이프(MLCC UV테이프 포함) 공급능력·수급 집중 부각</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">rumor</span>
+    <span class="badge">chart 100</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">strong_watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 58.0</span>
+    <span>거래량 4.8배</span>
+    <span>거래대금 5.5배</span>
+    <span>MA20 +12.1%</span>
+  </div>
+  
+  
+  
+  <div class="strategy">전략: <b class="">data_missing</b> - · 진입 - → 청산 - (-)</div>
+</div>
+<div class="card lbl-strong risk-low">
+  <div class="row">
+    <div>
+      <span class="name">LS</span>
+      <span class="ticker">006260 · KOSPI</span>
+    </div>
+    <span class="score">89</span>
+  </div>
+  <div class="signal">🎯 가온전선(LS전선 계열) 미국 자회사 LSCUS의 AI 데이터센터용 버스덕트 5년 장기 프레임 공급계약(초기 연 500억, 2030년까지 누적 최대 4조원)</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">contract</span>
+    <span class="badge">chart 88</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">strong_watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 67.1</span>
+    <span>거래량 2.1배</span>
+    <span>거래대금 2.4배</span>
+    <span>MA20 +17.5%</span>
+  </div>
+  
+  
+  
+  <div class="strategy">전략: <b class="">data_missing</b> - · 진입 - → 청산 - (-)</div>
+</div>
+<div class="card lbl-strong risk-low">
+  <div class="row">
+    <div>
+      <span class="name">대덕</span>
+      <span class="ticker">008060 · KOSPI</span>
+    </div>
+    <span class="score">89</span>
+  </div>
+  <div class="signal">🎯 메모리 패키지 기판 공장 증설 공시(신규 시설투자 2,130억원·CAPA 약 30% 확대 기대, FCBGA 추가 투자 가능성 언급)</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">disclosure</span>
+    <span class="badge">chart 84</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">strong_watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 67.9</span>
+    <span>거래량 1.4배</span>
+    <span>거래대금 1.6배</span>
+    <span>MA20 +16.3%</span>
+  </div>
+  
+  
+  
+  <div class="strategy">전략: <b class="">data_missing</b> - · 진입 - → 청산 - (-)</div>
+</div>
+<div class="card lbl-strong risk-low">
+  <div class="row">
+    <div>
+      <span class="name">베셀</span>
+      <span class="ticker">177350 · KOSDAQ</span>
+    </div>
+    <span class="score">87</span>
+  </div>
+  <div class="signal">🎯 자회사(넥스트에어로스페이스) 지분 축소로 연결 실적·경영 독립성 리스크 완화 + 시장의 드론·우주항공 테마성 매수 유입</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">disclosure</span>
+    <span class="badge">chart 77</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">strong_watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 48.6</span>
+    <span>거래량 8.5배</span>
+    <span>거래대금 8.9배</span>
+    <span>MA20 +4.5%</span>
+  </div>
+  
+  
+  
+  <div class="strategy">전략: <b class="">data_missing</b> - · 진입 - → 청산 - (-)</div>
+</div>
+<div class="card lbl-strong risk-low">
+  <div class="row">
+    <div>
+      <span class="name">켄코아에어로스페이스</span>
+      <span class="ticker">274090 · KOSDAQ</span>
+    </div>
+    <span class="score">87</span>
+  </div>
+  <div class="signal">🎯 블랙록의 스페이스X IPO 대규모 투자 검토(최대 $100억) 보도로 촉발된 국내 우주항공·위성·항공부품 테마 수급 몰림</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">rumor</span>
+    <span class="badge">chart 92</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">strong_watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 60.7</span>
+    <span>거래량 7.4배</span>
+    <span>거래대금 8.5배</span>
+    <span>MA20 +15.3%</span>
+  </div>
+  
+  
+  
+  <div class="strategy">전략: <b class="">data_missing</b> - · 진입 - → 청산 - (-)</div>
+</div>
+<div class="card lbl-watch risk-low">
+  <div class="row">
+    <div>
+      <span class="name">메이슨캐피탈</span>
+      <span class="ticker">021880 · KOSDAQ</span>
+    </div>
+    <span class="score">77</span>
+  </div>
+  <div class="signal">🎯 코스닥 동전주·소형주에 대한 단기 순환매(상한가 매수 집중)</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">technical</span>
+    <span class="badge">chart 77</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 54.9</span>
+    <span>거래량 10.6배</span>
+    <span>거래대금 12.8배</span>
+    <span>MA20 +16.1%</span>
+  </div>
+  <div class="exclusions">⚠️ 4일 연속</div>
+  
+  
+  <div class="strategy">전략: <b class="">data_missing</b> - · 진입 - → 청산 - (-)</div>
+</div>
+<div class="card lbl-watch risk-extreme">
+  <div class="row">
+    <div>
+      <span class="name">티에스이</span>
+      <span class="ticker">131290 · KOSDAQ</span>
+    </div>
+    <span class="score">73</span>
+  </div>
+  <div class="signal">🎯 1분기 호실적(매출 1,507억·영업이익 420억·당기순이익 400억) 및 고부가 디램 프로브카드 매출 확대에 따른 구조적 수익성 개선</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">earnings</span>
+    <span class="badge">chart 83</span>
+    <span class="badge risk-extreme">risk extreme</span>
+    <span class="badge">watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 78.3</span>
+    <span>거래량 2.4배</span>
+    <span>거래대금 3.2배</span>
+    <span>MA20 +28.2%</span>
+  </div>
+  <div class="exclusions">⚠️ MA20 이격 과다</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>distance_ma20_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-watch risk-high">
+  <div class="row">
+    <div>
+      <span class="name">현대해상</span>
+      <span class="ticker">001450 · KOSPI</span>
+    </div>
+    <span class="score">69</span>
+  </div>
+  <div class="signal">🎯 2026년 1분기 실적(별도) 호조 — 장기보험 손익 대폭 개선(전년비 +132% 수준) 및 일부 산출기준 변경에 따른 일회성 환입 약 900억원 반영, 지급여력(K-ICS) 200%대 회복</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">disclosure</span>
+    <span class="badge">chart 71</span>
+    <span class="badge risk-high">risk high</span>
+    <span class="badge">watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 80.5</span>
+    <span>거래량 7.0배</span>
+    <span>거래대금 8.6배</span>
+    <span>MA20 +22.8%</span>
+  </div>
+  <div class="exclusions">⚠️ RSI 과열</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code></div>
+  
+  
+</div></div></section><section><h2>2. 진입 제외 후보 (exclusion_reasons)</h2><p class="muted">룰 기반 전략에서 제외된 종목과 제외 사유. 추격은 위험.</p><div class="grid">
+<div class="card lbl-avoid risk-high">
+  <div class="row">
+    <div>
+      <span class="name">진원생명과학</span>
+      <span class="ticker">011000 · KOSPI</span>
+    </div>
+    <span class="score">9</span>
+  </div>
+  <div class="signal">🎯 DNA 백신 플랫폼 가치 재평가(감염병 리스크·WHO 비상사태)로 개인 중심 매수세 집중</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">rumor</span>
+    <span class="badge">chart 55</span>
+    <span class="badge risk-high">risk high</span>
+    <span class="badge">avoid</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 52.2</span>
+    <span>거래량 1.8배</span>
+    <span>거래대금 1.6배</span>
+    <span>MA20 +2.9%</span>
+  </div>
+  <div class="exclusions">⚠️ 3일 연속 · 윗꼬리 과다</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>chart_score_low</code><code>upper_shadow_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-avoid risk-extreme">
+  <div class="row">
+    <div>
+      <span class="name">에스에이엠티</span>
+      <span class="ticker">031330 · KOSDAQ</span>
+    </div>
+    <span class="score">7</span>
+  </div>
+  <div class="signal">🎯 AI 서버·반도체 유통 수혜 기대감에 따른 테마성 매수(단기 RSI·이격도 과열로 상한가까지 직행)</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">technical</span>
+    <span class="badge">chart 53</span>
+    <span class="badge risk-extreme">risk extreme</span>
+    <span class="badge">avoid</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 96.8</span>
+    <span>거래량 1.2배</span>
+    <span>거래대금 2.3배</span>
+    <span>MA20 +113.7%</span>
+  </div>
+  <div class="exclusions">⚠️ RSI 과열 · MA20 이격 과다</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>chart_score_low</code><code>distance_ma20_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-neutral risk-high">
+  <div class="row">
+    <div>
+      <span class="name">미래산업</span>
+      <span class="ticker">025560 · KOSPI</span>
+    </div>
+    <span class="score">61</span>
+  </div>
+  <div class="signal">🎯 중국 Unimos 우한향 반도체 검사 장비 80억원 공급계약(후공정 ATE 관련)</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">contract</span>
+    <span class="badge">chart 74</span>
+    <span class="badge risk-high">risk high</span>
+    <span class="badge">neutral</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 71.7</span>
+    <span>거래량 4.3배</span>
+    <span>거래대금 5.7배</span>
+    <span>MA20 +45.0%</span>
+  </div>
+  <div class="exclusions">⚠️ MA20 이격 과다 · 5일 연속</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>distance_ma20_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-weak risk-low">
+  <div class="row">
+    <div>
+      <span class="name">진도</span>
+      <span class="ticker">088790 · KOSPI</span>
+    </div>
+    <span class="score">38</span>
+  </div>
+  <div class="signal">🎯 코스피 &#x27;종목 장세&#x27;에 따른 개별 재료주·수급 쏠림 (5월18일 급등 종목군에 포함)</div>
+  <div class="meta">
+    <span class="badge">low</span>
+    <span class="badge">unknown</span>
+    <span class="badge">chart 100</span>
+    <span class="badge risk-low">risk low</span>
+    <span class="badge">weak</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 62.6</span>
+    <span>거래량 7.6배</span>
+    <span>거래대금 8.3배</span>
+    <span>MA20 +10.3%</span>
+  </div>
+  
+  <div class="exclusions"><b>제외:</b> <code>confidence_low</code><code>trigger_unknown</code></div>
+  <div class="exclusions" style="background:rgba(245,158,11,.08); border:1px solid rgba(245,158,11,.35); border-radius:6px; padding:4px 6px;"><b>❓ 이유 불명: <code>theme_only_supply</code></b><div style="font-size:11px; color:#a3a3a3; margin-top:2px">기사 10건 · origin search:진도:10 · 최신기사 2026-05-17 23:56 · trigger_lag 0일</div></div>
+  
+</div>
+<div class="card lbl-weak risk-medium">
+  <div class="row">
+    <div>
+      <span class="name">OCI홀딩스</span>
+      <span class="ticker">010060 · KOSPI</span>
+    </div>
+    <span class="score">36</span>
+  </div>
+  <div class="signal">🎯 스페이스X 공급망 편입 기대(비(非)중국 폴리실리콘 공급 수혜) — OCI테라서스와의 다년 공급계약(시장 추정 약 1조원) 가능성 및 폴리실리콘 미국 밸류체인 증설 계획 공개</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">rumor</span>
+    <span class="badge">chart 46</span>
+    <span class="badge risk-medium">risk medium</span>
+    <span class="badge">weak</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 35.0</span>
+    <span>거래량 1.0배</span>
+    <span>거래대금 1.0배</span>
+    <span>MA20 -4.2%</span>
+  </div>
+  
+  <div class="exclusions"><b>제외:</b> <code>chart_score_low</code><code>value_ratio_low</code></div>
+  
+  
+</div>
+<div class="card lbl-neutral risk-medium">
+  <div class="row">
+    <div>
+      <span class="name">비투엔</span>
+      <span class="ticker">307870 · KOSDAQ</span>
+    </div>
+    <span class="score">52</span>
+  </div>
+  <div class="signal">🎯 경영권 매각(스트레지1호조합 대상 SPA·잔금 납입 완료 임박)으로 쌍방울 계열 지분 정리 및 최대주주 변경 마무리 국면</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">disclosure</span>
+    <span class="badge">chart 48</span>
+    <span class="badge risk-medium">risk medium</span>
+    <span class="badge">neutral</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 47.4</span>
+    <span>거래량 1.2배</span>
+    <span>거래대금 1.1배</span>
+    <span>MA20 -0.6%</span>
+  </div>
+  
+  <div class="exclusions"><b>제외:</b> <code>chart_score_low</code><code>value_ratio_low</code></div>
+  
+  
+</div>
+<div class="card lbl-weak risk-high">
+  <div class="row">
+    <div>
+      <span class="name">주성엔지니어링</span>
+      <span class="ticker">036930 · KOSDAQ</span>
+    </div>
+    <span class="score">45</span>
+  </div>
+  <div class="signal">🎯 세계 최초 원자층성장(ALG) 트랜지스터 풀 통합 제조장비 글로벌 기업에 출하(장비 공급/출하 계약 실물 이행)</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">contract</span>
+    <span class="badge">chart 66</span>
+    <span class="badge risk-high">risk high</span>
+    <span class="badge">weak</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 71.0</span>
+    <span>거래량 1.6배</span>
+    <span>거래대금 2.5배</span>
+    <span>MA20 +37.2%</span>
+  </div>
+  <div class="exclusions">⚠️ MA20 이격 과다 · 5일 연속</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>distance_ma20_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-weak risk-extreme">
+  <div class="row">
+    <div>
+      <span class="name">아이로보틱스</span>
+      <span class="ticker">066430 · KOSDAQ</span>
+    </div>
+    <span class="score">43</span>
+  </div>
+  <div class="signal">🎯 신사업 확장 및 이사회 재편</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">rumor</span>
+    <span class="badge">chart 79</span>
+    <span class="badge risk-extreme">risk extreme</span>
+    <span class="badge">weak</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 81.2</span>
+    <span>거래량 23.2배</span>
+    <span>거래대금 37.8배</span>
+    <span>MA20 +73.8%</span>
+  </div>
+  <div class="exclusions">⚠️ RSI 과열 · MA20 이격 과다 · 3일 연속</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>distance_ma20_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-neutral risk-extreme">
+  <div class="row">
+    <div>
+      <span class="name">에이치브이엠</span>
+      <span class="ticker">295310 · KOSDAQ</span>
+    </div>
+    <span class="score">57</span>
+  </div>
+  <div class="signal">🎯 매경이코노미 기사에서 &#x27;우주 전쟁&#x27; 수혜주로 언급된 데 따른 테마 성(언론) 부각</div>
+  <div class="meta">
+    <span class="badge">medium</span>
+    <span class="badge">rumor</span>
+    <span class="badge">chart 87</span>
+    <span class="badge risk-extreme">risk extreme</span>
+    <span class="badge">neutral</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 75.0</span>
+    <span>거래량 5.0배</span>
+    <span>거래대금 6.6배</span>
+    <span>MA20 +33.8%</span>
+  </div>
+  <div class="exclusions">⚠️ MA20 이격 과다</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>distance_ma20_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-neutral risk-extreme">
+  <div class="row">
+    <div>
+      <span class="name">레이저쎌</span>
+      <span class="ticker">412350 · KOSDAQ</span>
+    </div>
+    <span class="score">59</span>
+  </div>
+  <div class="signal">🎯 레이저 본딩 글로벌 CPO 제조사 양산용 첫 수주</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">contract</span>
+    <span class="badge">chart 75</span>
+    <span class="badge risk-extreme">risk extreme</span>
+    <span class="badge">neutral</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 85.0</span>
+    <span>거래량 3.5배</span>
+    <span>거래대금 5.0배</span>
+    <span>MA20 +63.4%</span>
+  </div>
+  <div class="exclusions">⚠️ RSI 과열 · MA20 이격 과다</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>distance_ma20_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-watch risk-extreme">
+  <div class="row">
+    <div>
+      <span class="name">티에스이</span>
+      <span class="ticker">131290 · KOSDAQ</span>
+    </div>
+    <span class="score">73</span>
+  </div>
+  <div class="signal">🎯 1분기 호실적(매출 1,507억·영업이익 420억·당기순이익 400억) 및 고부가 디램 프로브카드 매출 확대에 따른 구조적 수익성 개선</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">earnings</span>
+    <span class="badge">chart 83</span>
+    <span class="badge risk-extreme">risk extreme</span>
+    <span class="badge">watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 78.3</span>
+    <span>거래량 2.4배</span>
+    <span>거래대금 3.2배</span>
+    <span>MA20 +28.2%</span>
+  </div>
+  <div class="exclusions">⚠️ MA20 이격 과다</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code><code>distance_ma20_overheat</code></div>
+  
+  
+</div>
+<div class="card lbl-watch risk-high">
+  <div class="row">
+    <div>
+      <span class="name">현대해상</span>
+      <span class="ticker">001450 · KOSPI</span>
+    </div>
+    <span class="score">69</span>
+  </div>
+  <div class="signal">🎯 2026년 1분기 실적(별도) 호조 — 장기보험 손익 대폭 개선(전년비 +132% 수준) 및 일부 산출기준 변경에 따른 일회성 환입 약 900억원 반영, 지급여력(K-ICS) 200%대 회복</div>
+  <div class="meta">
+    <span class="badge">high</span>
+    <span class="badge">disclosure</span>
+    <span class="badge">chart 71</span>
+    <span class="badge risk-high">risk high</span>
+    <span class="badge">watch</span>
+  </div>
+  <div class="metrics">
+    <span>RSI 80.5</span>
+    <span>거래량 7.0배</span>
+    <span>거래대금 8.6배</span>
+    <span>MA20 +22.8%</span>
+  </div>
+  <div class="exclusions">⚠️ RSI 과열</div>
+  <div class="exclusions"><b>제외:</b> <code>entry_risk_high</code></div>
+  
+  
+</div></div></section><section><h2>3. 전략 백테스트 요약 (누적)</h2><p class="muted">D+1 시가 진입 · -4% 손절 / +8% 익절 / 5일 보유 가정. 종이매매 검증 필요.</p>
+<div class="kpis">
+  <div class="kpi"><b>540</b><small>총 시그널</small></div>
+  <div class="kpi"><b>175</b><small>전략 적격</small></div>
+  <div class="kpi"><b>-2.1%</b><small>평균 전략 수익률</small></div>
+  <div class="kpi"><b>16.6%</b><small>승률</small></div>
+</div>
+<div class="muted" style="margin-top:8px">청산 사유: stop_loss=144 · take_profit=26 · time_exit=5</div>
+<table>
+  <thead><tr><th>최고</th><th>최저</th></tr></thead>
+  <tbody><tr>
+    <td>디아이씨 (092200) 20260512 ·
+        <b class="return-pos">+8.0%</b> · take_profit</td>
+    <td>엘브이엠씨홀딩스 (900140) 20260512 ·
+        <b class="return-neg">-4.0%</b> · stop_loss</td>
+  </tr></tbody>
+</table></section><section><h2>4. 최근 누적 성과 좋은 키워드 (promising)</h2><p class="muted">3회 이상 등장 + 5일 평균 수익 &gt; 3% + 승률 60%+. 데이터 1~2주 누적된 후 의미.</p><div class="grid">
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 무공시 급등</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=4</span>
+    <span>5d 평균 +74.3%</span>
+    <span>5d 승률 100.0%</span>
+    
+  </div>
+  <div class="meta"><small>예: 024840, 058450, 073570, 092220</small></div>
+  <div class="meta"><small>최근: 20260429</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 전력 인프라</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=9</span>
+    <span>5d 평균 +23.7%</span>
+    <span>5d 승률 75.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=3)</span>
+  </div>
+  <div class="meta"><small>예: 000500, 001440, 006260, 012340</small></div>
+  <div class="meta"><small>최근: 20260518</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 기관·외국인 순매수</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=6</span>
+    <span>5d 평균 +22.5%</span>
+    <span>5d 승률 60.0%</span>
+    <span>전략 평균 +8.0% 승률 100.0% (n=1)</span>
+  </div>
+  <div class="meta"><small>예: 000500, 005090, 009155, 036710</small></div>
+  <div class="meta"><small>최근: 20260508</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 AI 서버</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=4</span>
+    <span>5d 평균 +15.7%</span>
+    <span>5d 승률 100.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=1)</span>
+  </div>
+  <div class="meta"><small>예: 031330, 078350, 332570</small></div>
+  <div class="meta"><small>최근: 20260518</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 반도체 밸류체인</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=4</span>
+    <span>5d 평균 +14.1%</span>
+    <span>5d 승률 100.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=1)</span>
+  </div>
+  <div class="meta"><small>예: 009140, 081150, 353200, 452200</small></div>
+  <div class="meta"><small>최근: 20260511</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 외국인 대규모 순매수</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 +8.9%</span>
+    <span>5d 승률 100.0%</span>
+    <span>전략 평균 +0.0% 승률 33.3% (n=3)</span>
+  </div>
+  <div class="meta"><small>예: 000660, 006805, 402340</small></div>
+  <div class="meta"><small>최근: 20260506</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 AI 인프라</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=9</span>
+    <span>5d 평균 +8.7%</span>
+    <span>5d 승률 100.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=4)</span>
+  </div>
+  <div class="meta"><small>예: 006345, 031820, 178320, 189330</small></div>
+  <div class="meta"><small>최근: 20260508</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 피지컬AI</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 +8.6%</span>
+    <span>5d 승률 100.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=1)</span>
+  </div>
+  <div class="meta"><small>예: 012205, 061090, 307180</small></div>
+  <div class="meta"><small>최근: 20260511</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 수급(대량거래)</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 +7.6%</span>
+    <span>5d 승률 66.7%</span>
+    
+  </div>
+  <div class="meta"><small>예: 006340, 047040, 203650</small></div>
+  <div class="meta"><small>최근: 20260430</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 반도체 소부장</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=5</span>
+    <span>5d 평균 +6.5%</span>
+    <span>5d 승률 66.7%</span>
+    <span>전략 평균 +0.0% 승률 33.3% (n=3)</span>
+  </div>
+  <div class="meta"><small>예: 098460, 144960, 172670, 222800</small></div>
+  <div class="meta"><small>최근: 20260513</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 어닝 서프라이즈</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=20</span>
+    <span>5d 평균 +4.5%</span>
+    <span>5d 승률 66.7%</span>
+    <span>전략 평균 -3.4% 승률 12.5% (n=8)</span>
+  </div>
+  <div class="meta"><small>예: 001450, 001540, 002900, 005430</small></div>
+  <div class="meta"><small>최근: 20260518</small></div>
+</div>
+<div class="card kwcard lbl-promising">
+  <div class="row">
+    <h3>🔑 공매도 잔고 변화</h3>
+    <span class="badge">promising</span>
+  </div>
+  <div class="kwstats">
+    <span>n=5</span>
+    <span>5d 평균 +3.5%</span>
+    <span>5d 승률 60.0%</span>
+    
+  </div>
+  <div class="meta"><small>예: 002220, 007610, 014910, 091970</small></div>
+  <div class="meta"><small>최근: 20260430</small></div>
+</div></div></section><section><h2>5. 최근 성과 약한 키워드 (weak / noisy)</h2><p class="muted">반복 등장에도 5일 평균 손실 또는 승률 40% 미만. 같은 키워드 새 시그널은 신중.</p><div class="grid">
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 액면병합</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=4</span>
+    <span>5d 평균 -31.9%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=1)</span>
+  </div>
+  <div class="meta"><small>예: 038530, 115160, 320000</small></div>
+  <div class="meta"><small>최근: 20260512</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 반도체 패키징</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 -21.7%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=1)</span>
+  </div>
+  <div class="meta"><small>예: 011790, 036710, 044990</small></div>
+  <div class="meta"><small>최근: 20260508</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 열연 유통가격 상승</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=5</span>
+    <span>5d 평균 -19.5%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=5)</span>
+  </div>
+  <div class="meta"><small>예: 002710, 021040, 021045, 026940</small></div>
+  <div class="meta"><small>최근: 20260428</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 수급 집중</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=4</span>
+    <span>5d 평균 -18.0%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=3)</span>
+  </div>
+  <div class="meta"><small>예: 013000, 121890, 900100</small></div>
+  <div class="meta"><small>최근: 20260508</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 AI 데이터센터 전력수요</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=4</span>
+    <span>5d 평균 -17.2%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=1)</span>
+  </div>
+  <div class="meta"><small>예: 000500, 033100, 067170, 189860</small></div>
+  <div class="meta"><small>최근: 20260508</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 철강 수급</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=4</span>
+    <span>5d 평균 -16.2%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=4)</span>
+  </div>
+  <div class="meta"><small>예: 021045, 026940, 053260, 139990</small></div>
+  <div class="meta"><small>최근: 20260428</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 중동 지정학 리스크</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=7</span>
+    <span>5d 평균 -15.2%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -2.0% 승률 16.7% (n=6)</span>
+  </div>
+  <div class="meta"><small>예: 001780, 006110, 010820, 021040</small></div>
+  <div class="meta"><small>최근: 20260514</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 코스닥 소형주 순환매</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 -13.8%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=1)</span>
+  </div>
+  <div class="meta"><small>예: 021880, 215090</small></div>
+  <div class="meta"><small>최근: 20260518</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 데이터센터 전력인프라</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 -13.8%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=3)</span>
+  </div>
+  <div class="meta"><small>예: 000680, 033100, 189860</small></div>
+  <div class="meta"><small>최근: 20260504</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 1분기 화장품 수출 31억달러</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 -13.8%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=3)</span>
+  </div>
+  <div class="meta"><small>예: 083660, 406820, 900300</small></div>
+  <div class="meta"><small>최근: 20260427</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 테마성 급등</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 -13.2%</span>
+    <span>5d 승률 0.0%</span>
+    
+  </div>
+  <div class="meta"><small>예: 004430, 064240, 900300</small></div>
+  <div class="meta"><small>최근: 20260429</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 중국 조강 감산</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=7</span>
+    <span>5d 평균 -13.2%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=7)</span>
+  </div>
+  <div class="meta"><small>예: 002710, 005010, 008420, 021040</small></div>
+  <div class="meta"><small>최근: 20260428</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 피지컬 AI</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=7</span>
+    <span>5d 평균 -12.8%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=2)</span>
+  </div>
+  <div class="meta"><small>예: 048770, 263020, 307950, 319400</small></div>
+  <div class="meta"><small>최근: 20260515</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 지정학 리스크</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=3</span>
+    <span>5d 평균 -12.6%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=2)</span>
+  </div>
+  <div class="meta"><small>예: 004800, 008420, 058430</small></div>
+  <div class="meta"><small>최근: 20260506</small></div>
+</div>
+<div class="card kwcard lbl-weak">
+  <div class="row">
+    <h3>🔑 이란 철강 수출 금지</h3>
+    <span class="badge">weak</span>
+  </div>
+  <div class="kwstats">
+    <span>n=5</span>
+    <span>5d 평균 -12.4%</span>
+    <span>5d 승률 0.0%</span>
+    <span>전략 평균 -4.0% 승률 0.0% (n=5)</span>
+  </div>
+  <div class="meta"><small>예: 002710, 005010, 026940, 058430</small></div>
+  <div class="meta"><small>최근: 20260428</small></div>
+</div></div></section><section><h2>6. 데이터 오류 · 누락</h2><p class="muted">OHLCV 부족, fetch 실패, 향후 거래일 미생성 등.</p>
+<table>
+  <thead><tr><th>kind</th><th>date</th><th>ticker</th><th>name</th><th>detail</th></tr></thead>
+  <tbody><tr><td>note</td><td>20260518</td><td>025560</td><td>미래산업</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>055490</td><td>테이팩스</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>001450</td><td>현대해상</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>000500</td><td>가온전선</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>006260</td><td>LS</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>088790</td><td>진도</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>003690</td><td>코리안리</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>011000</td><td>진원생명과학</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>010060</td><td>OCI홀딩스</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>008060</td><td>대덕</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>031330</td><td>에스에이엠티</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>307870</td><td>비투엔</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>036930</td><td>주성엔지니어링</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>021880</td><td>메이슨캐피탈</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>177350</td><td>베셀</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>066430</td><td>아이로보틱스</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>274090</td><td>켄코아에어로스페이스</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>295310</td><td>에이치브이엠</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>412350</td><td>레이저쎌</td><td>no D+1 OHLCV</td></tr><tr><td>note</td><td>20260518</td><td>131290</td><td>티에스이</td><td>no D+1 OHLCV</td></tr></tbody>
+</table></section>
+</body>
+</html>

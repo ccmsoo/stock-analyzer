@@ -71,8 +71,29 @@ def get_previous_signal(state: dict, ticker: str) -> dict | None:
     return state["signals"].get(ticker)
 
 
-def filter_new_articles(state: dict, ticker: str, articles: list) -> tuple[list, list]:
-    """이전에 본 적 없는 기사만 골라냄. (신규, 중복) 튜플 반환."""
+def filter_new_articles(state: dict, ticker: str, articles: list,
+                         current_date: str | None = None) -> tuple[list, list]:
+    """이전에 본 적 없는 기사만 골라냄. (신규, 중복) 튜플 반환.
+
+    같은 영업일 (current_date == signals[ticker].last_seen) 안에서 재실행될 때는
+    dedup 을 건너뛴다 — 첫 번째 실행이 seen_articles 를 가득 채워두면 두 번째 실행
+    에서 모든 기사가 dup 으로 분류되어 news_count=0 → AI 가 강제로 unclear 처리되는
+    버그를 방지. (해당 일에 한해 신규/중복 구분 없이 모두 신규로 본다.)
+    """
+    same_day = False
+    if current_date:
+        prev = state.get("signals", {}).get(ticker)
+        if prev and prev.get("last_seen") == current_date:
+            same_day = True
+
+    if same_day:
+        # 오늘 안에서 재실행이라 dedup 을 건너뛰되 seen_articles 는 갱신
+        seen = set(state["seen_articles"].get(ticker, []))
+        for a in articles:
+            seen.add(article_hash(a.get("title", "")))
+        state["seen_articles"][ticker] = list(seen)
+        return list(articles), []
+
     seen = set(state["seen_articles"].get(ticker, []))
     new_articles, dup_articles = [], []
     for a in articles:
@@ -115,6 +136,13 @@ def record_signal(state: dict, ticker: str, stock: dict, analysis: dict, date_st
         "watch_keywords": analysis.get("watch_keywords", []),
         "related_stocks": analysis.get("related_stocks", []),
         "reasoning": analysis.get("reasoning", ""),
+        "reason_unknown_category": analysis.get("reason_unknown_category", ""),
+        "industry_chain": analysis.get("industry_chain", ""),
+        "chain_position": analysis.get("chain_position", ""),
+        "chain_role": analysis.get("chain_role", ""),
+        "upstream": analysis.get("upstream", []),
+        "downstream": analysis.get("downstream", []),
+        "peer_chain": analysis.get("peer_chain", []),
         "history": history,
     }
 

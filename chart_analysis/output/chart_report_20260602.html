@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Chart Analysis</title>
+<style>
+  :root { --bg:#101214; --fg:#e8eaed; --muted:#9aa0a6; --card:#181b1f; --line:#2a2f36;
+           --good:#36c275; --warn:#f2b84b; --bad:#ff6961; --info:#66a6ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:24px; background:var(--bg); color:var(--fg);
+          font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  h1 { margin:0 0 4px; font-size:22px; }
+  .meta { color:var(--muted); margin-bottom:18px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px; }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .name { font-weight:700; }
+  .sub { color:var(--muted); font-size:12px; }
+  .pct { color:#ff7b86; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:700; }
+  .score { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .risk-low { color:var(--good); }
+  .risk-medium { color:var(--warn); }
+  .risk-high { color:var(--bad); }
+  .risk-extreme { color:var(--bad); font-weight:700; }
+  .chips span { display:inline-block; border:1px solid var(--line); border-radius:4px; padding:1px 6px;
+                 margin:6px 4px 0 0; color:var(--muted); font-size:12px; }
+  .comment { margin-top:8px; color:#d1d5db; }
+  table { width:100%; margin-top:8px; border-collapse:collapse; color:var(--muted); font-size:12px; }
+  td { border-top:1px solid var(--line); padding:4px 0; }
+  td:last-child { text-align:right; color:var(--fg); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+</style>
+</head>
+<body>
+<h1>급등 종목 차트 분석</h1>
+<div class="meta">분석 15건 · 실패 0건 · 생성 2026-06-03T14:25:59</div>
+
+<div class="grid">
+<article class="card">
+  <div class="row">
+    <div><span class="name">SK네트웍스</span> <span class="sub">001740 · KOSPI</span></div>
+    <span class="pct">+8.08%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 58</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. RSI 82.6로 추격 매수는 부담스럽습니다. 20일선 이격 48.2%라 눌림 확인이 유리합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>12,840 / 631.5억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>0.23x / 0.31x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>82.56 / 48.23%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>3.62% / 0.00% / 100.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">가온전선</span> <span class="sub">000500 · KOSPI</span></div>
+    <span class="pct">+4.89%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 38</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>gap_up</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>386,000 / 659.9억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>0.74x / 0.71x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>33.91 / -2.89%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>19.29% / 1.50% / 19.40%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">동양고속</span> <span class="sub">084670 · KOSPI</span></div>
+    <span class="pct">+10.04%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 35</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>long_upper_shadow</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>38,900 / 673.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>2.68x / 1.95x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>54.08 / -8.42%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.00% / 59.00% / 41.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">천일고속</span> <span class="sub">000650 · KOSPI</span></div>
+    <span class="pct">+9.52%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 35</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>long_upper_shadow</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>217,500 / 399.9억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>2.60x / 2.00x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>55.95 / -1.91%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>2.22% / 62.50% / 37.50%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">삼아알미늄</span> <span class="sub">006110 · KOSPI</span></div>
+    <span class="pct">+4.90%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 31</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>long_upper_shadow</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>79,200 / 479.4억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.65x / 1.59x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>49.95 / -2.30%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>1.32% / 53.70% / 46.30%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">형지I&amp;C</span> <span class="sub">011080 · KOSDAQ</span></div>
+    <span class="pct">+5.38%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 31</span>
+    <span class="risk-high">risk high</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>long_upper_shadow</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 윗꼬리가 길어 장중 매물 출회를 확인해야 합니다. 다음 봉의 저가 이탈 여부를 먼저 보는 편이 안전합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>2,350 / 26.1억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>4.01x / 2.75x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>36.68 / -28.71%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>0.00% / 57.20% / 42.80%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">티에스이</span> <span class="sub">131290 · KOSDAQ</span></div>
+    <span class="pct">+3.23%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 84</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>204,500 / 247.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>0.90x / 0.91x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>58.33 / 2.78%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>-0.10% / 11.10% / 88.90%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">SKAI</span> <span class="sub">357880 · KOSDAQ</span></div>
+    <span class="pct">+8.22%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 82</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 34.5%라 눌림 확인이 유리합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>5,790 / 548.2억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>2.39x / 3.18x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>71.11 / 34.55%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>1.68% / 11.40% / 88.60%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">에스에이엠티</span> <span class="sub">031330 · KOSDAQ</span></div>
+    <span class="pct">+10.68%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 78</span>
+    <span class="risk-low">risk low</span>
+  </div>
+  <div class="chips"><span>strong_uptrend</span><span>strong_close</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 24.0%라 눌림 확인이 유리합니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>16,270 / 288.3억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>0.64x / 0.74x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>65.86 / 23.97%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>-0.54% / 10.70% / 89.30%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">주성엔지니어링</span> <span class="sub">036930 · KOSDAQ</span></div>
+    <span class="pct">+6.15%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 63</span>
+    <span class="risk-medium">risk medium</span>
+  </div>
+  <div class="chips"><span>uptrend</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 추세는 양호해 거래량이 유지되는지 확인합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>196,900 / 7037.8억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.34x / 1.42x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>59.97 / 11.72%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>-0.54% / 34.60% / 65.40%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">코아스</span> <span class="sub">071950 · KOSPI</span></div>
+    <span class="pct">+5.59%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 57</span>
+    <span class="risk-medium">risk medium</span>
+  </div>
+  <div class="chips"><span>recovering</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다. 20일선 이격 21.8%라 눌림 확인이 유리합니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>2,095 / 4.3억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>0.86x / 1.05x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>67.04 / 21.75%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>4.08% / 25.60% / 74.40%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">엠케이전자</span> <span class="sub">033160 · KOSDAQ</span></div>
+    <span class="pct">+12.53%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 54</span>
+    <span class="risk-medium">risk medium</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>strong_close</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>25,150 / 353.2억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.21x / 1.06x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>49.14 / -11.36%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>1.57% / 19.40% / 80.60%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">신세계인터내셔날</span> <span class="sub">031430 · KOSPI</span></div>
+    <span class="pct">+3.43%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 54</span>
+    <span class="risk-medium">risk medium</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>14,180 / 43.2억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.39x / 1.29x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>48.85 / -3.67%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>-1.09% / 18.90% / 81.10%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">선진</span> <span class="sub">136490 · KOSPI</span></div>
+    <span class="pct">+4.75%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 54</span>
+    <span class="risk-medium">risk medium</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>normal</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>10,140 / 20.5억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.07x / 1.00x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>48.90 / -4.41%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>2.79% / 6.00% / 94.00%</td></tr>
+  </table>
+</article>
+<article class="card">
+  <div class="row">
+    <div><span class="name">자화전자</span> <span class="sub">033240 · KOSPI</span></div>
+    <span class="pct">+6.09%</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="score">score 46</span>
+    <span class="risk-medium">risk medium</span>
+  </div>
+  <div class="chips"><span>below_ma20</span><span>gap_up</span><span>momentum_watch</span></div>
+  <div class="comment">모멘텀은 있으나 추가 확인이 필요한 자리입니다.</div>
+  <table>
+    <tr><td>종가 / 거래대금</td><td>40,050 / 172.0억</td></tr>
+    <tr><td>거래량 배수 / 거래대금 배수</td><td>1.27x / 1.05x</td></tr>
+    <tr><td>RSI14 / 20일선 이격</td><td>46.44 / -13.11%</td></tr>
+    <tr><td>갭 / 윗꼬리 / 종가위치</td><td>10.86% / 0.00% / 61.30%</td></tr>
+  </table>
+</article>
+</div>
+</body>
+</html>

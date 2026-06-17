@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>생활 기사 테마 레이더</title>
+<style>
+  :root {
+    --bg:#0f1218; --fg:#eef3f8; --muted:#9ea8b5; --panel:#171d26; --panel2:#212936;
+    --line:#2d3745; --good:#38ca7e; --wait:#f4b54b; --watch:#6da9ff; --bad:#ff756d; --cyan:#54d7d0;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.55 -apple-system,BlinkMacSystemFont,"Pretendard",sans-serif; }
+  header { position:sticky; top:0; z-index:4; background:#121822; border-bottom:1px solid var(--line); padding:24px 30px 16px; }
+  h1 { margin:0; font-size:23px; }
+  h2 { margin:0; font-size:18px; }
+  .meta,.muted { color:var(--muted); }
+  main { padding:22px 30px 40px; }
+  .toolbar { display:flex; gap:8px; margin-top:14px; flex-wrap:wrap; }
+  input,button { background:var(--panel); color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:7px 10px; font:inherit; }
+  input { min-width:280px; }
+  button { cursor:pointer; }
+  button.active { background:var(--cyan); color:#061111; border-color:var(--cyan); }
+  .theme { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; margin-bottom:14px; }
+  .theme.hot { border-left:4px solid var(--good); }
+  .theme.warm { border-left:4px solid var(--wait); }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+  .score { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:800; font-size:18px; }
+  .chips span,.badge { display:inline-block; background:var(--panel2); border:1px solid var(--line); border-radius:999px; padding:2px 8px; margin:5px 4px 0 0; font-size:12px; }
+  .comment { margin-top:9px; color:#dce5ee; }
+  .layout { display:grid; grid-template-columns:minmax(280px,.9fr) minmax(360px,1.4fr); gap:12px; margin-top:12px; }
+  .box { background:#111821; border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .article { margin-bottom:8px; padding-bottom:8px; border-bottom:1px solid var(--line); }
+  .article:last-child { margin-bottom:0; padding-bottom:0; border-bottom:0; }
+  a { color:var(--cyan); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .stocks { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:10px; }
+  .stock { background:#101720; border:1px solid var(--line); border-radius:8px; padding:12px; }
+  .stock.early_candidate { border-left:3px solid var(--good); }
+  .stock.wait_pullback { border-left:3px solid var(--wait); }
+  .stock.watch { border-left:3px solid var(--watch); }
+  .stock.weak { opacity:.72; }
+  .name { font-weight:700; }
+  .pct { color:#ff838b; font-weight:700; }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .bars { display:grid; grid-template-columns:72px 1fr 40px; gap:8px; align-items:center; color:var(--muted); font-size:12px; margin-top:7px; }
+  .bar { height:7px; background:#2b3442; border-radius:999px; overflow:hidden; }
+  .bar i { display:block; height:100%; background:linear-gradient(90deg,var(--cyan),var(--good)); }
+  .spark { width:100%; height:118px; margin-top:9px; display:block; border:1px solid #26303d; border-radius:8px; }
+  .hide { display:none; }
+  @media (max-width: 880px) { .layout { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>생활 기사 테마 레이더</h1>
+  <div class="meta">20260515 · 테마 10개 · 생성 2026-05-15T04:24:33 · SAMPLE</div>
+  <div class="toolbar">
+    <button class="active" data-filter="all">전체</button>
+    <button data-filter="hot">강한 테마</button>
+    <button data-filter="early_candidate">초기 후보</button>
+    <button data-filter="wait_pullback">눌림 대기</button>
+    <input id="search" placeholder="테마, 키워드, 종목, 기사 검색">
+  </div>
+</header>
+<main><section class="theme " data-tags="early_candidate,weak" data-search="폭염/냉방가전 폭염, 열대야, 전력피크 전망이 나오면 냉방가전과 전력 효율 관련 종목이 계절성 수급을 받는 테마입니다. 에어컨 판매 증가 선풍기/써큘레이터 수요 전력 피크 대응 냉방가전 교체 수요 폭염 열대야 전력수요 전력피크 냉방 창문형 에어컨 폭염/냉방가전 관련 신호 점검: 폭염 이슈 부각 경동나비엔 에스씨디 오텍 파세코 위닉스 신일전자">
+  <div class="row">
+    <div>
+      <h2>폭염/냉방가전</h2>
+      <div class="muted">폭염, 열대야, 전력피크 전망이 나오면 냉방가전과 전력 효율 관련 종목이 계절성 수급을 받는 테마입니다.</div>
+    </div>
+    <div class="score">68</div>
+  </div>
+  <div class="chips"><span>에어컨 판매 증가</span><span>선풍기/써큘레이터 수요</span><span>전력 피크 대응</span><span>냉방가전 교체 수요</span></div>
+  <div class="comment">폭염/냉방가전 기사 흐름과 에어컨 판매 증가, 선풍기/써큘레이터 수요, 전력 피크 대응 포인트가 감지됐고, 경동나비엔 차트가 가장 먼저 반응 중입니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>폭염/냉방가전 관련 신호 점검: 폭염 이슈 부각</div>
+  <div class="muted">20260515 · sample · 폭염, 열대야</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">6종목</span></div>
+      <div class="stocks"><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">1. 경동나비엔</span> <span class="muted mono">009450</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:92%"></i></span><span class="mono">92</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  
+  <div class="muted">RSI 65.2 · 거래량 4.1x · 20일 이격 8.2%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">2. 에스씨디</span> <span class="muted mono">042110</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:39%"></i></span><span class="mono">39</span></div>
+  
+  <div class="muted">RSI 45.4 · 거래량 0.6x · 20일 이격 -3.8%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">3. 오텍</span> <span class="muted mono">067170</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:58%"></i></span><span class="mono">58</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  
+  <div class="muted">RSI 78.9 · 거래량 0.8x · 20일 이격 43.8%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. 파세코</span> <span class="muted mono">037070</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:20%"></i></span><span class="mono">20</span></div>
+  
+  <div class="muted">RSI 35.0 · 거래량 1.6x · 20일 이격 -7.3%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. 위닉스</span> <span class="muted mono">044340</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:13%"></i></span><span class="mono">13</span></div>
+  
+  <div class="muted">RSI 36.9 · 거래량 1.4x · 20일 이격 -3.1%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">6. 신일전자</span> <span class="muted mono">002700</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:23%"></i></span><span class="mono">23</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:4%"></i></span><span class="mono">4</span></div>
+  
+  <div class="muted">RSI 40.2 · 거래량 1.0x · 20일 이격 -2.4%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="early_candidate,wait_pullback,weak" data-search="재개발/부동산 가치 재개발, 용적률 완화, 대형 부지 개발, 터미널/역세권 개발 뉴스가 자산가치 보유주로 연결됩니다. 보유 부동산 가치 개발 기대감 용적률 완화 역세권 수혜 재개발 재건축 용적률 역세권 개발 터미널 개발 부동산 가치 재개발/부동산 가치 관련 신호 점검: 재개발 이슈 부각 한국공항 현대건설 대우건설 천일고속 동양고속 성창기업지주">
+  <div class="row">
+    <div>
+      <h2>재개발/부동산 가치</h2>
+      <div class="muted">재개발, 용적률 완화, 대형 부지 개발, 터미널/역세권 개발 뉴스가 자산가치 보유주로 연결됩니다.</div>
+    </div>
+    <div class="score">68</div>
+  </div>
+  <div class="chips"><span>보유 부동산 가치</span><span>개발 기대감</span><span>용적률 완화</span><span>역세권 수혜</span></div>
+  <div class="comment">재개발/부동산 가치 기사 흐름과 보유 부동산 가치, 개발 기대감, 용적률 완화 포인트가 감지됐고, 한국공항 차트가 가장 먼저 반응 중입니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>재개발/부동산 가치 관련 신호 점검: 재개발 이슈 부각</div>
+  <div class="muted">20260515 · sample · 재개발, 재건축</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">6종목</span></div>
+      <div class="stocks"><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">1. 한국공항</span> <span class="muted mono">005430</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">volume_breakout</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:87%"></i></span><span class="mono">87</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:100%"></i></span><span class="mono">100</span></div>
+  
+  <div class="muted">RSI 79.8 · 거래량 6.1x · 20일 이격 19.4%</div>
+</article><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">2. 현대건설</span> <span class="muted mono">000720</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:78%"></i></span><span class="mono">78</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:81%"></i></span><span class="mono">81</span></div>
+  
+  <div class="muted">RSI 50.4 · 거래량 1.3x · 20일 이격 0.3%</div>
+</article><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">3. 대우건설</span> <span class="muted mono">047040</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:78%"></i></span><span class="mono">78</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:79%"></i></span><span class="mono">79</span></div>
+  
+  <div class="muted">RSI 50.1 · 거래량 0.5x · 20일 이격 1.6%</div>
+</article><article class="stock wait_pullback">
+  <div class="row">
+    <div><span class="name">4. 천일고속</span> <span class="muted mono">000650</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">risk high</span>
+    <span class="badge">ma20_recovery</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:71%"></i></span><span class="mono">71</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:71%"></i></span><span class="mono">71</span></div>
+  
+  <div class="muted">RSI 73.7 · 거래량 15.8x · 20일 이격 40.8%</div>
+</article><article class="stock wait_pullback">
+  <div class="row">
+    <div><span class="name">5. 동양고속</span> <span class="muted mono">084670</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">ma20_recovery</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:71%"></i></span><span class="mono">71</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:55%"></i></span><span class="mono">55</span></div>
+  
+  <div class="muted">RSI 75.1 · 거래량 7.5x · 20일 이격 42.5%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">6. 성창기업지주</span> <span class="muted mono">000180</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:40%"></i></span><span class="mono">40</span></div>
+  
+  <div class="muted">RSI 24.4 · 거래량 0.8x · 20일 이격 -9.5%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="early_candidate,weak" data-search="ai 데이터센터 ai 투자, 데이터센터 증설, gpu 서버, 냉각, 전력 인프라 뉴스가 반도체/전력/냉각 테마로 확산될 수 있습니다. ai 서버 투자 gpu 공급망 데이터센터 냉각 전력 인프라 증설 ai 데이터센터 gpu 서버 액침냉각 데이터센터 증설 엔비디아 ai 인프라 ai 데이터센터 관련 신호 점검: ai 데이터센터 이슈 부각 유니셈 한미반도체 gst 대덕전자 sk하이닉스 이수페타시스">
+  <div class="row">
+    <div>
+      <h2>AI 데이터센터</h2>
+      <div class="muted">AI 투자, 데이터센터 증설, GPU 서버, 냉각, 전력 인프라 뉴스가 반도체/전력/냉각 테마로 확산될 수 있습니다.</div>
+    </div>
+    <div class="score">56</div>
+  </div>
+  <div class="chips"><span>AI 서버 투자</span><span>GPU 공급망</span><span>데이터센터 냉각</span><span>전력 인프라 증설</span></div>
+  <div class="comment">AI 데이터센터 기사 흐름과 AI 서버 투자, GPU 공급망, 데이터센터 냉각 포인트가 감지됐고, 유니셈 차트가 가장 먼저 반응 중입니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>AI 데이터센터 관련 신호 점검: AI 데이터센터 이슈 부각</div>
+  <div class="muted">20260515 · sample · AI 데이터센터, GPU 서버</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">6종목</span></div>
+      <div class="stocks"><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">1. 유니셈</span> <span class="muted mono">036200</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:78%"></i></span><span class="mono">78</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:79%"></i></span><span class="mono">79</span></div>
+  
+  <div class="muted">RSI 55.5 · 거래량 0.6x · 20일 이격 1.1%</div>
+</article><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">2. 한미반도체</span> <span class="muted mono">042700</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:70%"></i></span><span class="mono">70</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:72%"></i></span><span class="mono">72</span></div>
+  
+  <div class="muted">RSI 78.7 · 거래량 0.9x · 20일 이격 17.9%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">3. GST</span> <span class="muted mono">083450</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:56%"></i></span><span class="mono">56</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:35%"></i></span><span class="mono">35</span></div>
+  
+  <div class="muted">RSI 80.4 · 거래량 0.5x · 20일 이격 26.7%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. 대덕전자</span> <span class="muted mono">353200</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:49%"></i></span><span class="mono">49</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:28%"></i></span><span class="mono">28</span></div>
+  
+  <div class="muted">RSI 78.8 · 거래량 0.4x · 20일 이격 28.3%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. SK하이닉스</span> <span class="muted mono">000660</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">trend_continuation</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:52%"></i></span><span class="mono">52</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:25%"></i></span><span class="mono">25</span></div>
+  
+  <div class="muted">RSI 92.3 · 거래량 1.2x · 20일 이격 37.3%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">6. 이수페타시스</span> <span class="muted mono">007660</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:17%"></i></span><span class="mono">17</span></div>
+  
+  <div class="muted">RSI 26.9 · 거래량 0.4x · 20일 이격 -6.1%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="wait_pullback,watch,weak" data-search="감염병/진단키트 코로나, 독감, 변이 바이러스처럼 감염병 이슈가 다시 커질 때 진단키트, 백신, 마스크, 의료기기 수요가 부각되는 테마입니다. 자가진단키트 수요 백신/치료제 기대 검사 수요 증가 방역용품 재고 확충 코로나 재확산 확진자 증가 변이 바이러스 자가진단키트 독감 유행 감염병 위기 감염병/진단키트 관련 신호 점검: 코로나 재확산 이슈 부각 씨젠 휴마시스 엑세스바이오 수젠텍 랩지노믹스 진매트릭스">
+  <div class="row">
+    <div>
+      <h2>감염병/진단키트</h2>
+      <div class="muted">코로나, 독감, 변이 바이러스처럼 감염병 이슈가 다시 커질 때 진단키트, 백신, 마스크, 의료기기 수요가 부각되는 테마입니다.</div>
+    </div>
+    <div class="score">55</div>
+  </div>
+  <div class="chips"><span>자가진단키트 수요</span><span>백신/치료제 기대</span><span>검사 수요 증가</span><span>방역용품 재고 확충</span></div>
+  <div class="comment">감염병/진단키트 이슈는 살아 있지만 씨젠은 단기 과열입니다. 눌림 또는 재돌파 확인이 우선입니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>감염병/진단키트 관련 신호 점검: 코로나 재확산 이슈 부각</div>
+  <div class="muted">20260515 · sample · 코로나 재확산, 확진자 증가</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">6종목</span></div>
+      <div class="stocks"><article class="stock wait_pullback">
+  <div class="row">
+    <div><span class="name">1. 씨젠</span> <span class="muted mono">096530</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">wait_pullback</span>
+    <span class="badge">risk high</span>
+    <span class="badge">trend_continuation</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:81%"></i></span><span class="mono">81</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:77%"></i></span><span class="mono">77</span></div>
+  
+  <div class="muted">RSI 83.3 · 거래량 3.6x · 20일 이격 24.5%</div>
+</article><article class="stock watch">
+  <div class="row">
+    <div><span class="name">2. 휴마시스</span> <span class="muted mono">205470</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">watch</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">trend_continuation</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:61%"></i></span><span class="mono">61</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:66%"></i></span><span class="mono">66</span></div>
+  
+  <div class="muted">RSI 79.1 · 거래량 3.2x · 20일 이격 6.0%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">3. 엑세스바이오</span> <span class="muted mono">950130</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:59%"></i></span><span class="mono">59</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  
+  <div class="muted">RSI 57.8 · 거래량 3.3x · 20일 이격 10.3%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. 수젠텍</span> <span class="muted mono">253840</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:55%"></i></span><span class="mono">55</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:35%"></i></span><span class="mono">35</span></div>
+  
+  <div class="muted">RSI 62.2 · 거래량 0.9x · 20일 이격 15.5%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. 랩지노믹스</span> <span class="muted mono">084650</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:47%"></i></span><span class="mono">47</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:26%"></i></span><span class="mono">26</span></div>
+  
+  <div class="muted">RSI 43.0 · 거래량 0.5x · 20일 이격 0.1%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">6. 진매트릭스</span> <span class="muted mono">109820</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:23%"></i></span><span class="mono">23</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:1%"></i></span><span class="mono">1</span></div>
+  
+  <div class="muted">RSI 39.4 · 거래량 0.2x · 20일 이격 -2.6%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="early_candidate,weak" data-search="전력망/전력설비 전력수요, 데이터센터, 송전망 확충, 변압기 부족 같은 이슈가 전력기기/전선 테마로 연결됩니다. 전력망 투자 변압기 수요 전선 수주 ai 데이터센터 전력 증설 전력망 송전망 변압기 전력수요 데이터센터 전력 전력설비 전력망/전력설비 관련 신호 점검: 전력망 이슈 부각 hd현대일렉트릭 효성중공업 제룡전기 ls electric 가온전선 대한전선">
+  <div class="row">
+    <div>
+      <h2>전력망/전력설비</h2>
+      <div class="muted">전력수요, 데이터센터, 송전망 확충, 변압기 부족 같은 이슈가 전력기기/전선 테마로 연결됩니다.</div>
+    </div>
+    <div class="score">52</div>
+  </div>
+  <div class="chips"><span>전력망 투자</span><span>변압기 수요</span><span>전선 수주</span><span>AI 데이터센터 전력 증설</span></div>
+  <div class="comment">전력망/전력설비 기사 흐름과 전력망 투자, 변압기 수요, 전선 수주 포인트가 감지됐고, HD현대일렉트릭 차트가 가장 먼저 반응 중입니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>전력망/전력설비 관련 신호 점검: 전력망 이슈 부각</div>
+  <div class="muted">20260515 · sample · 전력망, 송전망</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">6종목</span></div>
+      <div class="stocks"><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">1. HD현대일렉트릭</span> <span class="muted mono">267260</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:70%"></i></span><span class="mono">70</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:72%"></i></span><span class="mono">72</span></div>
+  
+  <div class="muted">RSI 63.9 · 거래량 0.7x · 20일 이격 2.9%</div>
+</article><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">2. 효성중공업</span> <span class="muted mono">298040</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:70%"></i></span><span class="mono">70</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:72%"></i></span><span class="mono">72</span></div>
+  
+  <div class="muted">RSI 71.1 · 거래량 1.0x · 20일 이격 7.0%</div>
+</article><article class="stock early_candidate">
+  <div class="row">
+    <div><span class="name">3. 제룡전기</span> <span class="muted mono">033100</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">early_candidate</span>
+    <span class="badge">risk low</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:70%"></i></span><span class="mono">70</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:72%"></i></span><span class="mono">72</span></div>
+  
+  <div class="muted">RSI 69.1 · 거래량 0.8x · 20일 이격 12.4%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. LS ELECTRIC</span> <span class="muted mono">010120</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:62%"></i></span><span class="mono">62</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:56%"></i></span><span class="mono">56</span></div>
+  
+  <div class="muted">RSI 76.3 · 거래량 0.8x · 20일 이격 11.2%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. 가온전선</span> <span class="muted mono">000500</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:58%"></i></span><span class="mono">58</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:41%"></i></span><span class="mono">41</span></div>
+  
+  <div class="muted">RSI 69.2 · 거래량 1.8x · 20일 이격 41.1%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">6. 대한전선</span> <span class="muted mono">001440</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk extreme</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:41%"></i></span><span class="mono">41</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:4%"></i></span><span class="mono">4</span></div>
+  
+  <div class="muted">RSI 75.0 · 거래량 0.5x · 20일 이격 23.4%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="weak" data-search="저출산/육아정책 저출산 대책, 출산 지원, 육아휴직 확대, 난임 지원 뉴스가 육아/교육/난임 테마로 연결됩니다. 육아용품 수요 교육/보육 정책 난임 치료 지원 정부 지원 확대 저출산 대책 출산 지원 육아휴직 난임 지원 아동수당 보육 정책 저출산/육아정책 관련 신호 점검: 저출산 대책 이슈 부각 웅진씽크빅 메디앙스 ne능률 깨끗한나라 아가방컴퍼니 제로투세븐">
+  <div class="row">
+    <div>
+      <h2>저출산/육아정책</h2>
+      <div class="muted">저출산 대책, 출산 지원, 육아휴직 확대, 난임 지원 뉴스가 육아/교육/난임 테마로 연결됩니다.</div>
+    </div>
+    <div class="score">42</div>
+  </div>
+  <div class="chips"><span>육아용품 수요</span><span>교육/보육 정책</span><span>난임 치료 지원</span><span>정부 지원 확대</span></div>
+  <div class="comment">저출산/육아정책 이슈가 감지됐습니다. 현재는 웅진씽크빅이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>저출산/육아정책 관련 신호 점검: 저출산 대책 이슈 부각</div>
+  <div class="muted">20260515 · sample · 저출산 대책, 출산 지원</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">6종목</span></div>
+      <div class="stocks"><article class="stock weak">
+  <div class="row">
+    <div><span class="name">1. 웅진씽크빅</span> <span class="muted mono">095720</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:62%"></i></span><span class="mono">62</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:54%"></i></span><span class="mono">54</span></div>
+  
+  <div class="muted">RSI - · 거래량 0.0x · 20일 이격 0.3%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">2. 메디앙스</span> <span class="muted mono">014100</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:41%"></i></span><span class="mono">41</span></div>
+  
+  <div class="muted">RSI 33.7 · 거래량 1.1x · 20일 이격 -7.9%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">3. NE능률</span> <span class="muted mono">053290</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:41%"></i></span><span class="mono">41</span></div>
+  
+  <div class="muted">RSI 23.5 · 거래량 1.3x · 20일 이격 -13.8%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. 깨끗한나라</span> <span class="muted mono">004540</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  
+  <div class="muted">RSI 25.0 · 거래량 0.2x · 20일 이격 -5.1%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. 아가방컴퍼니</span> <span class="muted mono">013990</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:55%"></i></span><span class="mono">55</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:36%"></i></span><span class="mono">36</span></div>
+  
+  <div class="muted">RSI 51.2 · 거래량 1.3x · 20일 이격 1.3%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">6. 제로투세븐</span> <span class="muted mono">159580</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:10%"></i></span><span class="mono">10</span></div>
+  
+  <div class="muted">RSI 20.2 · 거래량 0.4x · 20일 이격 -6.2%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="weak" data-search="미세먼지/공기질 미세먼지, 황사, 대기질 악화 뉴스가 늘면 공기청정기, 마스크, 필터 관련 종목을 점검합니다. 공기청정기 수요 필터 교체 수요 마스크 수요 환경 규제 강화 미세먼지 초미세먼지 황사 대기질 공기청정기 마스크 미세먼지/공기질 관련 신호 점검: 미세먼지 이슈 부각 오공 웰크론 모나리자 크린앤사이언스 케이엠 위닉스">
+  <div class="row">
+    <div>
+      <h2>미세먼지/공기질</h2>
+      <div class="muted">미세먼지, 황사, 대기질 악화 뉴스가 늘면 공기청정기, 마스크, 필터 관련 종목을 점검합니다.</div>
+    </div>
+    <div class="score">36</div>
+  </div>
+  <div class="chips"><span>공기청정기 수요</span><span>필터 교체 수요</span><span>마스크 수요</span><span>환경 규제 강화</span></div>
+  <div class="comment">미세먼지/공기질 이슈가 감지됐습니다. 현재는 오공이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>미세먼지/공기질 관련 신호 점검: 미세먼지 이슈 부각</div>
+  <div class="muted">20260515 · sample · 미세먼지, 초미세먼지</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">6종목</span></div>
+      <div class="stocks"><article class="stock weak">
+  <div class="row">
+    <div><span class="name">1. 오공</span> <span class="muted mono">045060</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:42%"></i></span><span class="mono">42</span></div>
+  
+  <div class="muted">RSI 40.9 · 거래량 1.5x · 20일 이격 -3.7%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">2. 웰크론</span> <span class="muted mono">065950</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:39%"></i></span><span class="mono">39</span></div>
+  
+  <div class="muted">RSI 18.9 · 거래량 0.3x · 20일 이격 -10.7%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">3. 모나리자</span> <span class="muted mono">012690</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:39%"></i></span><span class="mono">39</span></div>
+  
+  <div class="muted">RSI 40.7 · 거래량 0.4x · 20일 이격 -3.3%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. 크린앤사이언스</span> <span class="muted mono">045520</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:17%"></i></span><span class="mono">17</span></div>
+  
+  <div class="muted">RSI 6.8 · 거래량 0.6x · 20일 이격 -11.6%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. 케이엠</span> <span class="muted mono">083550</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:16%"></i></span><span class="mono">16</span></div>
+  
+  <div class="muted">RSI 34.3 · 거래량 0.1x · 20일 이격 -5.2%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">6. 위닉스</span> <span class="muted mono">044340</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:13%"></i></span><span class="mono">13</span></div>
+  
+  <div class="muted">RSI 36.9 · 거래량 1.4x · 20일 이격 -3.1%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="weak" data-search="방산/지정학 전쟁, 중동 긴장, 국방 예산, 무기 수출 뉴스가 방산과 드론/전자전 테마로 이어질 수 있습니다. 방산 수출 국방 예산 증가 드론/대공 방어 탄약/미사일 수요 중동 긴장 전쟁 무기 수출 국방 예산 방산 수주 드론 공격 방산/지정학 관련 신호 점검: 중동 긴장 이슈 부각 한국항공우주 풍산 한화에어로스페이스 현대로템 퍼스텍">
+  <div class="row">
+    <div>
+      <h2>방산/지정학</h2>
+      <div class="muted">전쟁, 중동 긴장, 국방 예산, 무기 수출 뉴스가 방산과 드론/전자전 테마로 이어질 수 있습니다.</div>
+    </div>
+    <div class="score">35</div>
+  </div>
+  <div class="chips"><span>방산 수출</span><span>국방 예산 증가</span><span>드론/대공 방어</span><span>탄약/미사일 수요</span></div>
+  <div class="comment">방산/지정학 이슈가 감지됐습니다. 현재는 한국항공우주이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>방산/지정학 관련 신호 점검: 중동 긴장 이슈 부각</div>
+  <div class="muted">20260515 · sample · 중동 긴장, 전쟁</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">5종목</span></div>
+      <div class="stocks"><article class="stock weak">
+  <div class="row">
+    <div><span class="name">1. 한국항공우주</span> <span class="muted mono">047810</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:41%"></i></span><span class="mono">41</span></div>
+  
+  <div class="muted">RSI 39.4 · 거래량 1.3x · 20일 이격 -2.1%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">2. 풍산</span> <span class="muted mono">103140</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:40%"></i></span><span class="mono">40</span></div>
+  
+  <div class="muted">RSI 27.8 · 거래량 0.8x · 20일 이격 -5.8%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">3. 한화에어로스페이스</span> <span class="muted mono">012450</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:11%"></i></span><span class="mono">11</span></div>
+  
+  <div class="muted">RSI 36.6 · 거래량 0.9x · 20일 이격 -6.6%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. 현대로템</span> <span class="muted mono">064350</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:10%"></i></span><span class="mono">10</span></div>
+  
+  <div class="muted">RSI 37.6 · 거래량 0.5x · 20일 이격 -8.5%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. 퍼스텍</span> <span class="muted mono">010820</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:9%"></i></span><span class="mono">9</span></div>
+  
+  <div class="muted">RSI 15.8 · 거래량 0.1x · 20일 이격 -10.8%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="weak" data-search="장마/태풍/복구 장마, 태풍, 침수, 복구 이슈가 커질 때 폐기물 처리, 배수, 복구 장비, 농업 피해 관련 종목이 반응할 수 있습니다. 폐기물 처리 수해 복구 배수 설비 농작물 피해 대응 장마 태풍 집중호우 침수 수해 복구 폭우 장마/태풍/복구 관련 신호 점검: 장마 이슈 부각 남해화학 자연과환경 와이엔텍 인선이엔티 뉴보텍">
+  <div class="row">
+    <div>
+      <h2>장마/태풍/복구</h2>
+      <div class="muted">장마, 태풍, 침수, 복구 이슈가 커질 때 폐기물 처리, 배수, 복구 장비, 농업 피해 관련 종목이 반응할 수 있습니다.</div>
+    </div>
+    <div class="score">34</div>
+  </div>
+  <div class="chips"><span>폐기물 처리</span><span>수해 복구</span><span>배수 설비</span><span>농작물 피해 대응</span></div>
+  <div class="comment">장마/태풍/복구 이슈가 감지됐습니다. 현재는 남해화학이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>장마/태풍/복구 관련 신호 점검: 장마 이슈 부각</div>
+  <div class="muted">20260515 · sample · 장마, 태풍</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">5종목</span></div>
+      <div class="stocks"><article class="stock weak">
+  <div class="row">
+    <div><span class="name">1. 남해화학</span> <span class="muted mono">025860</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk medium</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:46%"></i></span><span class="mono">46</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  
+  <div class="muted">RSI 50.9 · 거래량 0.1x · 20일 이격 -4.4%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">2. 자연과환경</span> <span class="muted mono">043910</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:16%"></i></span><span class="mono">16</span></div>
+  
+  <div class="muted">RSI 0.0 · 거래량 0.0x · 20일 이격 -0.4%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">3. 와이엔텍</span> <span class="muted mono">067900</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:13%"></i></span><span class="mono">13</span></div>
+  
+  <div class="muted">RSI 50.0 · 거래량 1.6x · 20일 이격 -0.4%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. 인선이엔티</span> <span class="muted mono">060150</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:23%"></i></span><span class="mono">23</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:2%"></i></span><span class="mono">2</span></div>
+  
+  <div class="muted">RSI 38.7 · 거래량 0.6x · 20일 이격 -6.7%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. 뉴보텍</span> <span class="muted mono">060260</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:23%"></i></span><span class="mono">23</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:2%"></i></span><span class="mono">2</span></div>
+  
+  <div class="muted">RSI 41.0 · 거래량 0.6x · 20일 이격 -6.0%</div>
+</article></div>
+    </div>
+  </div>
+</section>
+<section class="theme " data-tags="weak" data-search="봄/야외활동 봄철 야외활동, 자전거, 캠핑, 레저 소비가 살아날 때 반응할 수 있는 계절 소비 테마입니다. 자전거 판매 캠핑/아웃도어 소비 레저 활동 증가 봄철 소비 회복 봄나들이 야외활동 자전거 캠핑 레저 따뜻한 날씨 봄/야외활동 관련 신호 점검: 봄나들이 이슈 부각 더네이쳐홀딩스 감성코퍼레이션 알톤 참좋은여행 노랑풍선 삼천리자전거">
+  <div class="row">
+    <div>
+      <h2>봄/야외활동</h2>
+      <div class="muted">봄철 야외활동, 자전거, 캠핑, 레저 소비가 살아날 때 반응할 수 있는 계절 소비 테마입니다.</div>
+    </div>
+    <div class="score">22</div>
+  </div>
+  <div class="chips"><span>자전거 판매</span><span>캠핑/아웃도어 소비</span><span>레저 활동 증가</span><span>봄철 소비 회복</span></div>
+  <div class="comment">봄/야외활동 이슈가 감지됐습니다. 현재는 더네이쳐홀딩스이 상대적으로 앞서지만 강한 진입 신호는 더 확인해야 합니다.</div>
+  <div class="layout">
+    <div class="box">
+      <div class="row"><b>감지 기사</b><span class="muted mono">heat 28</span></div>
+      <div class="article">
+  <div>봄/야외활동 관련 신호 점검: 봄나들이 이슈 부각</div>
+  <div class="muted">20260515 · sample · 봄나들이, 야외활동</div>
+</div>
+    </div>
+    <div class="box">
+      <div class="row"><b>관련 종목 차트 랭킹</b><span class="muted">6종목</span></div>
+      <div class="stocks"><article class="stock weak">
+  <div class="row">
+    <div><span class="name">1. 더네이쳐홀딩스</span> <span class="muted mono">298540</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:18%"></i></span><span class="mono">18</span></div>
+  
+  <div class="muted">RSI 33.8 · 거래량 0.9x · 20일 이격 -6.1%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">2. 감성코퍼레이션</span> <span class="muted mono">036620</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:18%"></i></span><span class="mono">18</span></div>
+  
+  <div class="muted">RSI 36.2 · 거래량 0.9x · 20일 이격 -8.6%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">3. 알톤</span> <span class="muted mono">123750</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:38%"></i></span><span class="mono">38</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:16%"></i></span><span class="mono">16</span></div>
+  
+  <div class="muted">RSI 39.3 · 거래량 0.2x · 20일 이격 -5.2%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">4. 참좋은여행</span> <span class="muted mono">094850</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:10%"></i></span><span class="mono">10</span></div>
+  
+  <div class="muted">RSI 38.9 · 거래량 0.4x · 20일 이격 -4.6%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">5. 노랑풍선</span> <span class="muted mono">104620</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:31%"></i></span><span class="mono">31</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:9%"></i></span><span class="mono">9</span></div>
+  
+  <div class="muted">RSI 38.0 · 거래량 0.3x · 20일 이격 -5.6%</div>
+</article><article class="stock weak">
+  <div class="row">
+    <div><span class="name">6. 삼천리자전거</span> <span class="muted mono">024950</span></div>
+    <span class="pct mono">+0.00%</span>
+  </div>
+  <div>
+    <span class="badge">weak</span>
+    <span class="badge">risk high</span>
+    <span class="badge">momentum_watch</span>
+  </div>
+  <div class="bars"><span>차트</span><span class="bar"><i style="width:23%"></i></span><span class="mono">23</span></div>
+  <div class="bars"><span>랭킹</span><span class="bar"><i style="width:1%"></i></span><span class="mono">1</span></div>
+  
+  <div class="muted">RSI 24.7 · 거래량 0.1x · 20일 이격 -5.1%</div>
+</article></div>
+    </div>
+  </div>
+</section></main>
+<script>
+let filter = 'all';
+let query = '';
+const buttons = [...document.querySelectorAll('button[data-filter]')];
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  filter = btn.dataset.filter;
+  buttons.forEach(b => b.classList.toggle('active', b === btn));
+  applyFilters();
+}));
+document.getElementById('search').addEventListener('input', e => {
+  query = e.target.value.trim().toLowerCase();
+  applyFilters();
+});
+function applyFilters() {
+  document.querySelectorAll('[data-tags]').forEach(card => {
+    const tags = card.dataset.tags.split(',');
+    const typeOK = filter === 'all' || tags.includes(filter);
+    const queryOK = !query || card.dataset.search.includes(query);
+    card.classList.toggle('hide', !(typeOK && queryOK));
+  });
+}
+</script>
+</body>
+</html>

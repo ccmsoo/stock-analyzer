@@ -44,32 +44,81 @@ def fake_analyze_single_stock(client, stock, articles, model=None):
     }
 
 
+def _snapshot(paths):
+    """기존 파일 백업 + 새로 생긴 파일 추적용 (state 오염 방지)."""
+    snaps = {}
+    for p in paths:
+        snaps[p] = p.read_bytes() if p.exists() else None
+    return snaps
+
+
+def _restore(snaps, created_after=None):
+    """백업한 파일 복구 + smoke 가 새로 만든 파일 삭제."""
+    for p, blob in snaps.items():
+        if blob is None and p.exists():
+            try:
+                p.unlink()
+            except Exception:
+                pass
+        elif blob is not None:
+            p.write_bytes(blob)
+
+    if created_after is not None:
+        before, after = created_after
+        for p in after - before:
+            try:
+                p.unlink()
+            except Exception:
+                pass
+
+
 def main():
-    # AI 호출 mock + general news 끄기 (속도/네트워크 부담↓)
-    with patch('analyzers.gpt_analyzer.analyze_single_stock', side_effect=fake_analyze_single_stock), \
-         patch('analyzers.claude_analyzer.analyze_single_stock', side_effect=fake_analyze_single_stock), \
-         patch('main._make_client', return_value=None):
-        import main as runner
-        runner.main(top_n=5, use_general_news=False)
+    # === 보호 영역 백업 ===
+    state_path = ROOT / 'state' / 'signals.json'
+    dash_path = ROOT / 'reports' / 'dashboard.json'
+    rev_path = ROOT / 'reports' / 'reverse_candidates.json'
 
-    # 산출물 검증
-    reports = ROOT / 'reports'
-    files = list(reports.glob('report_*.html')) + list(reports.glob('report_*.md')) + list(reports.glob('report_*.csv'))
-    print(f"\n[검증] reports 산출물 {len(files)}개")
-    for f in sorted(files)[-6:]:
-        print(f"  - {f.name} ({f.stat().st_size:,} bytes)")
+    # 기존 reports/report_*.csv|md|html 도 백업해야 함 — smoke 가 같은 영업일 리포트를 덮어쓰면
+    # 실제 분석 결과가 사라진다.
+    reports_dir = ROOT / 'reports'
+    existing_reports = (
+        list(reports_dir.glob('report_*.csv'))
+        + list(reports_dir.glob('report_*.md'))
+        + list(reports_dir.glob('report_*.html'))
+    )
+    snaps = _snapshot([state_path, dash_path, rev_path] + existing_reports)
 
-    dashboard = reports / 'dashboard.json'
-    assert dashboard.exists(), "dashboard.json 미생성"
-    d = json.loads(dashboard.read_text())
-    print(f"  - dashboard.json: 누적 종목 {len(d.get('signals', {}))}건")
+    # 추가로 smoke 가 새로 만든 파일은 정리
+    before_files = set(reports_dir.glob('*'))
 
-    state = ROOT / 'state' / 'signals.json'
-    assert state.exists(), "state/signals.json 미생성"
-    s = json.loads(state.read_text())
-    print(f"  - state/signals.json: signals {len(s['signals'])}건, seen_articles {len(s['seen_articles'])}티커")
+    try:
+        # AI 호출 mock + general news 끄기
+        with patch('analyzers.gpt_analyzer.analyze_single_stock', side_effect=fake_analyze_single_stock), \
+             patch('analyzers.claude_analyzer.analyze_single_stock', side_effect=fake_analyze_single_stock), \
+             patch('main._make_client', return_value=None):
+            import main as runner
+            runner.main(top_n=5, use_general_news=False)
 
-    print("\n✅ 스모크 테스트 통과")
+        # 산출물 검증
+        files = list(reports_dir.glob('report_*.html')) + list(reports_dir.glob('report_*.md')) + list(reports_dir.glob('report_*.csv'))
+        print(f"\n[검증] reports 산출물 {len(files)}개")
+        for f in sorted(files)[-6:]:
+            print(f"  - {f.name} ({f.stat().st_size:,} bytes)")
+
+        assert dash_path.exists(), "dashboard.json 미생성"
+        d = json.loads(dash_path.read_text())
+        print(f"  - dashboard.json: 누적 종목 {len(d.get('signals', {}))}건")
+
+        assert state_path.exists(), "state/signals.json 미생성"
+        s = json.loads(state_path.read_text())
+        print(f"  - state/signals.json: signals {len(s['signals'])}건, seen_articles {len(s['seen_articles'])}티커")
+
+        print("\n✅ 스모크 테스트 통과")
+    finally:
+        # === 복구 ===
+        after_files = set(reports_dir.glob('*'))
+        _restore(snaps, created_after=(before_files, after_files))
+        print("\n♻️  state/reports 원래 상태로 복구 완료")
 
 
 if __name__ == '__main__':

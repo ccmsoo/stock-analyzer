@@ -17,6 +17,14 @@ state/hist_cache_*.pkl
 
 # 로컬 로그
 logs/*.log
+logs/
+
+# 백업/생성물 (커밋 X)
+state/backup_*/
+state/*.backup*
+state/*.conflict_backup
+state/*.before_cleanup
+tools/output/
 
 # 개인 메모/실험
 notes/
