@@ -75,11 +75,19 @@ const COARSE_RULES: Array<[RegExp, string]> = [
 
 const JUNK_INDUSTRY = /^(서비스|기타|장비|부품|최종재|원소재|조립\/제조|유통\/판매|지주사)$|테마|수급|소형주|저유동성|리스크/;
 
-function coarseIndustry(ind: string): string | null {
+export function coarseIndustry(ind: string): string | null {
   for (const [re, name] of COARSE_RULES) {
     if (re.test(ind)) return name;
   }
   return null;
+}
+
+/** 표시용 coarse 그룹명: 매칭되면 coarse, 쓰레기/빈값이면 "기타", 그 외 원시 산업 그대로 */
+export function coarseGroup(ind: string): string {
+  const c = coarseIndustry(ind);
+  if (c) return c;
+  if (!ind || JUNK_INDUSTRY.test(ind)) return "기타";
+  return ind;
 }
 
 /** 전파 그룹 키 + 표시 라벨 */

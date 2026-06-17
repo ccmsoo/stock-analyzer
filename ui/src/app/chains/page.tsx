@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { loadChains, loadState, businessDaysAgo } from "@/lib/data";
+import { coarseGroup } from "@/lib/chains-predict";
 import { formatPct, priceColorClass } from "@/lib/format";
 
 export const revalidate = 0;
@@ -41,12 +42,24 @@ export default async function ChainsPage({
   const filterIndustry = params.industry || "";
   const q = (params.q || "").toLowerCase();
 
-  // 산업 → 정렬
-  const industries = Object.entries(chains.by_industry).sort(
-    ([, a], [, b]) =>
-      Object.values(b).reduce((s, x) => s + x.length, 0) -
-      Object.values(a).reduce((s, x) => s + x.length, 0),
+  // by_ticker → coarse 그룹핑 (엔진과 동일). 원시 industry_chain 은 너무 세분화돼서
+  // "반도체 후공정 패키징" + "검사·계측 장비" 등을 "반도체 후공정" 으로 묶는다.
+  const coarseByIndustry: Record<string, Record<string, PositionStock[]>> = {};
+  for (const [ticker, e] of Object.entries(chains.by_ticker)) {
+    const g = coarseGroup(e.industry_chain || "");
+    const pos = e.chain_position || "기타";
+    (coarseByIndustry[g] ??= {})[pos] ??= [];
+    coarseByIndustry[g][pos].push({ ticker, name: e.name, role: e.chain_role || "" });
+  }
+  const sizeOf = (p: Record<string, PositionStock[]>) =>
+    Object.values(p).reduce((s, x) => s + x.length, 0);
+
+  const allGroups = Object.entries(coarseByIndustry).sort(
+    ([, a], [, b]) => sizeOf(b) - sizeOf(a),
   );
+  // 2종목 이상만 "체인"으로 표시 (단독은 전파 의미 없음)
+  const industries = allGroups.filter(([, p]) => sizeOf(p) >= 2);
+  const singletonCount = allGroups.length - industries.length;
 
   const filtered = filterIndustry
     ? industries.filter(([name]) => name === filterIndustry)
@@ -60,11 +73,12 @@ export default async function ChainsPage({
             밸류체인 맵 <span className="ml-2 text-xs text-muted-foreground">"오늘 누가 오르면 내일 누가 오르나"</span>
           </h1>
           <span className="text-xs text-muted-foreground tabular">
-            {chains.total}종목 · {industries.length}산업
+            {chains.total}종목 · {industries.length}체인
+            {singletonCount > 0 && ` · 단독 ${singletonCount}`}
           </span>
         </div>
         <p className="mt-2 text-xs text-muted-foreground">
-          시그널 종목을 산업/체인 단계로 분류. 한 종목 시그널 → 같은 산업 같은 단계 종목 동반 강세 가능성.
+          시그널 종목을 산업/체인 단계로 분류 (세부 분류를 테마 단위로 묶음). 한 종목 시그널 → 같은 체인 같은 단계 종목 동반 강세 가능성.
         </p>
 
         {/* 산업 필터 칩 */}
