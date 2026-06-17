@@ -29,15 +29,15 @@ export default async function TickerDetail({
   params: Promise<{ ticker: string }>;
 }) {
   const { ticker } = await params;
-  const { signals } = loadState();
+  const { signals } = await loadState();
   const sig = signals[ticker];
   if (!sig) return notFound();
 
   const [quotes, bars, dDayMap, chains] = await Promise.all([
     fetchManyQuotes([ticker]),
     fetchHistory(ticker, 90),
-    Promise.resolve(loadDDayCloseMap()),
-    Promise.resolve(loadChains()),
+    loadDDayCloseMap(),
+    loadChains(),
   ]);
   const q = quotes.get(ticker);
   const dDay = dDayMap.get(ticker);

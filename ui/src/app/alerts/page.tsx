@@ -1,7 +1,6 @@
 import Link from "next/link";
-import path from "path";
-import fs from "fs";
-import { formatDate, priceColorClass, formatPct, formatPrice } from "@/lib/format";
+import { loadAlerts } from "@/lib/data";
+import { priceColorClass, formatPct, formatPrice } from "@/lib/format";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
@@ -35,28 +34,15 @@ const CATEGORY_COLOR: Record<string, string> = {
   "신약/임상": "text-rose-400 border-rose-400/30",
 };
 
-function loadAlerts(): { alerts: Alert[]; generated_at: string; new_today: number } {
-  const p = path.resolve(process.cwd(), "..", "reports", "alerts.json");
-  try {
-    if (!fs.existsSync(p)) return { alerts: [], generated_at: "", new_today: 0 };
-    const data = JSON.parse(fs.readFileSync(p, "utf8"));
-    return {
-      alerts: data.alerts || [],
-      generated_at: data.generated_at || "",
-      new_today: data.new_today || 0,
-    };
-  } catch {
-    return { alerts: [], generated_at: "", new_today: 0 };
-  }
-}
-
 export default async function AlertsPage({
   searchParams,
 }: {
   searchParams: Promise<{ category?: string }>;
 }) {
   const params = await searchParams;
-  const { alerts, generated_at, new_today } = loadAlerts();
+  const raw = await loadAlerts();
+  const alerts = raw.alerts as unknown as Alert[];
+  const generated_at = raw.generated_at;
   const catFilter = params.category || "";
 
   let list = alerts;

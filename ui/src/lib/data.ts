@@ -1,33 +1,42 @@
 /**
  * Backend JSON read helpers.
  *
- * Backend stays as-is (state/signals.json, reports/dashboard.json,
- * profitability/output/backtest_trades_*.json). This module just reads
- * them into normalized TypeScript shapes the UI can consume.
+ * 로컬 개발: stock_analyzer 루트의 파일시스템에서 직접 읽음.
+ * 배포(Vercel): 서버리스라 로컬 파일이 없으므로 GitHub raw 에서 fetch.
+ *   - process.env.VERCEL 자동 감지, 또는 DATA_RAW_BASE 로 강제(로컬 테스트용)
+ *   - cron 이 main 에 push 할 때마다 재배포 없이 최신 데이터 반영
  */
 import fs from "fs";
 import path from "path";
-import type {
-  BacktestTrade,
-  Cumulative,
-  Signal,
-} from "./types";
+import type { BacktestTrade, Cumulative, Signal } from "./types";
 
 // 백엔드 경로 — ui/ 폴더에서 한 단계 위가 stock_analyzer 루트
 const ROOT = path.resolve(process.cwd(), "..");
-
-const STATE_PATH = path.join(ROOT, "state", "signals.json");
-const DASHBOARD_PATH = path.join(ROOT, "reports", "dashboard.json");
 const PROFITABILITY_DIR = path.join(ROOT, "profitability", "output");
 const REPORTS_DIR = path.join(ROOT, "reports");
 
-function safeReadJson<T>(p: string, fallback: T): T {
+// 배포 환경이면 GitHub raw, 로컬이면 빈 문자열(=fs 사용)
+const RAW_BASE =
+  process.env.DATA_RAW_BASE ||
+  (process.env.VERCEL
+    ? "https://raw.githubusercontent.com/ccmsoo/stock-analyzer/main"
+    : "");
+
+export const USING_REMOTE_DATA = RAW_BASE !== "";
+
+/** 단일 JSON 읽기 — 배포면 raw fetch, 로컬이면 fs */
+async function readJson<T>(relPath: string, fallback: T): Promise<T> {
   try {
+    if (RAW_BASE) {
+      const res = await fetch(`${RAW_BASE}/${relPath}`, { cache: "no-store" });
+      if (!res.ok) return fallback;
+      return (await res.json()) as T;
+    }
+    const p = path.join(ROOT, relPath);
     if (!fs.existsSync(p)) return fallback;
-    const txt = fs.readFileSync(p, "utf8");
-    return JSON.parse(txt) as T;
+    return JSON.parse(fs.readFileSync(p, "utf8")) as T;
   } catch (e) {
-    console.error(`safeReadJson ${p}:`, e);
+    console.error(`readJson ${relPath}:`, e);
     return fallback;
   }
 }
@@ -44,9 +53,9 @@ function latestFileByPattern(dir: string, prefix: string, suffix: string): strin
   }
 }
 
-export function loadState(): { signals: Record<string, Signal>; generated_at: string } {
-  const data = safeReadJson<{ signals: Record<string, Signal>; generated_at?: string }>(
-    STATE_PATH,
+export async function loadState(): Promise<{ signals: Record<string, Signal>; generated_at: string }> {
+  const data = await readJson<{ signals?: Record<string, Signal>; generated_at?: string }>(
+    "state/signals.json",
     { signals: {}, generated_at: "" },
   );
   return {
@@ -55,14 +64,34 @@ export function loadState(): { signals: Record<string, Signal>; generated_at: st
   };
 }
 
-export function loadDashboard(): { signals: Record<string, Signal>; generated_at: string } {
-  return safeReadJson(DASHBOARD_PATH, { signals: {}, generated_at: "" });
+export async function loadDashboard(): Promise<{ signals: Record<string, Signal>; generated_at: string }> {
+  return readJson("reports/dashboard.json", { signals: {}, generated_at: "" });
 }
 
-export function loadLatestBacktest(): BacktestTrade[] {
+export interface AlertsData {
+  alerts: Array<Record<string, unknown>>;
+  generated_at: string;
+  new_today: number;
+}
+
+export async function loadAlerts(): Promise<AlertsData> {
+  const d = await readJson<Record<string, unknown> | Array<Record<string, unknown>>>(
+    "reports/alerts.json",
+    { alerts: [], generated_at: "", new_today: 0 },
+  );
+  if (Array.isArray(d)) return { alerts: d, generated_at: "", new_today: 0 };
+  return {
+    alerts: (d.alerts as Array<Record<string, unknown>>) || [],
+    generated_at: (d.generated_at as string) || "",
+    new_today: (d.new_today as number) || 0,
+  };
+}
+
+export async function loadLatestBacktest(): Promise<BacktestTrade[]> {
+  if (RAW_BASE) return []; // 배포: 디렉토리 listing 불가 → graceful
   const p = latestFileByPattern(PROFITABILITY_DIR, "backtest_trades_", ".json");
   if (!p) return [];
-  const data = safeReadJson<{ trades?: BacktestTrade[] } | BacktestTrade[]>(p, []);
+  const data = JSON.parse(fs.readFileSync(p, "utf8")) as { trades?: BacktestTrade[] } | BacktestTrade[];
   return Array.isArray(data) ? data : data.trades || [];
 }
 
@@ -118,27 +147,24 @@ export function businessDaysAgo(yyyymmdd: string): number {
 }
 
 /** 모든 backtest_trades_*.json 을 합쳐서 ticker -> 가장 최근 close_on_signal_date 맵 */
-export function loadDDayCloseMap(): Map<string, { signal_date: string; close: number }> {
+export async function loadDDayCloseMap(): Promise<Map<string, { signal_date: string; close: number }>> {
   const out = new Map<string, { signal_date: string; close: number }>();
+  if (RAW_BASE) return out; // 배포: 디렉토리 listing 불가 → graceful (accum% 미표시)
   try {
     const files = fs
       .readdirSync(PROFITABILITY_DIR)
       .filter((f) => f.startsWith("backtest_trades_") && f.endsWith(".json"))
-      .sort(); // 오래된 것부터 → 최신 것이 덮어쓰게
+      .sort();
     for (const f of files) {
       const p = path.join(PROFITABILITY_DIR, f);
-      const data = safeReadJson<{ trades?: BacktestTrade[] } | BacktestTrade[]>(p, []);
+      const data = JSON.parse(fs.readFileSync(p, "utf8")) as { trades?: BacktestTrade[] } | BacktestTrade[];
       const trades = Array.isArray(data) ? data : data.trades || [];
       for (const t of trades) {
         if (!t.ticker || t.close_on_signal_date === null || t.close_on_signal_date === undefined)
           continue;
         const existing = out.get(t.ticker);
-        // 최신 signal_date 우선
         if (!existing || (t.signal_date && t.signal_date > existing.signal_date)) {
-          out.set(t.ticker, {
-            signal_date: t.signal_date,
-            close: t.close_on_signal_date,
-          });
+          out.set(t.ticker, { signal_date: t.signal_date, close: t.close_on_signal_date });
         }
       }
     }
@@ -167,11 +193,13 @@ export interface ChainsData {
   by_industry: Record<string, Record<string, Array<{ ticker: string; name: string; role: string }>>>;
 }
 
-const CHAINS_PATH = path.join(ROOT, "state", "chains.json");
-
-export function loadChains(): ChainsData {
-  const fallback: ChainsData = { generated_at: "", total: 0, by_ticker: {}, by_industry: {} };
-  return safeReadJson<ChainsData>(CHAINS_PATH, fallback);
+export async function loadChains(): Promise<ChainsData> {
+  return readJson<ChainsData>("state/chains.json", {
+    generated_at: "",
+    total: 0,
+    by_ticker: {},
+    by_industry: {},
+  });
 }
 
 export { ROOT, REPORTS_DIR };

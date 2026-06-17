@@ -15,7 +15,7 @@ export default async function KeywordsPage({
 }: {
   searchParams: Promise<{ q?: string }>;
 }) {
-  const { signals } = loadState();
+  const { signals } = await loadState();
   const params = await searchParams;
   const q = (params.q || "").toLowerCase();
 

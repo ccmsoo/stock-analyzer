@@ -19,10 +19,10 @@ export const revalidate = 0;
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const { signals } = loadState();
+  const { signals } = await loadState();
   const cumulative = loadCumulative(signals);
-  const dDayMap = loadDDayCloseMap();
-  const chains = loadChains();
+  const dDayMap = await loadDDayCloseMap();
+  const chains = await loadChains();
   const { topCandidates: chainCandidates } = buildChainOpportunities(signals, chains);
 
   const recentSignals: Array<{ ticker: string; signal: Signal }> = [];

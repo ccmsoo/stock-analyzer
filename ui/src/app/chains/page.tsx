@@ -36,8 +36,8 @@ export default async function ChainsPage({
   searchParams: Promise<{ industry?: string; q?: string }>;
 }) {
   const params = await searchParams;
-  const chains = loadChains();
-  const { signals } = loadState();
+  const chains = await loadChains();
+  const { signals } = await loadState();
 
   const filterIndustry = params.industry || "";
   const q = (params.q || "").toLowerCase();

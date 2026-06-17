@@ -15,7 +15,7 @@ export default async function SignalsPage({
 }: {
   searchParams: Promise<{ q?: string; confidence?: string; trigger?: string }>;
 }) {
-  const { signals } = loadState();
+  const { signals } = await loadState();
   const params = await searchParams;
   const q = (params.q || "").toLowerCase();
   const confFilter = params.confidence || "";

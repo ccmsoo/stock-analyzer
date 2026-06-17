@@ -23,9 +23,9 @@ export const revalidate = 60; // ISR 1분
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const { signals } = loadState();
+  const { signals } = await loadState();
   const cumulative = loadCumulative(signals);
-  const dDayMap = loadDDayCloseMap();
+  const dDayMap = await loadDDayCloseMap();
 
   // 매수 후보 candidate 추리기 — 너무 많으면 가격 fetch 부담
   const recentSignals: Array<{ ticker: string; signal: Signal }> = [];

@@ -34,8 +34,8 @@ const RELATION_TONE: Record<string, string> = {
 };
 
 export default async function OpportunitiesPage() {
-  const { signals } = loadState();
-  const chains = loadChains();
+  const { signals } = await loadState();
+  const chains = await loadChains();
   const { opportunities, topCandidates, generatedFromDate } =
     buildChainOpportunities(signals, chains);
 
