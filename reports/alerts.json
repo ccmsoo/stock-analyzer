@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-20T18:41:46",
-  "total": 149,
+  "generated_at": "2026-06-20T20:33:32",
+  "total": 145,
   "new_today": 0,
   "alerts": [
     {
@@ -2740,63 +2740,6 @@
       "matched_at": "2026-05-22T20:16:50"
     },
     {
-      "ticker": "069540",
-      "name": "빛과전자",
-      "sosok": "",
-      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
-      "submitter": "빛과전자",
-      "submitted_at": "2026.05.21",
-      "time": "17:29",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000732",
-      "rcp_no": "20260521000732",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 5090,
-      "today_change_pct": 0.97,
-      "signal_last_seen": "20260520",
-      "signal_confidence": "high",
-      "signal_main_theme": "광통신/데이터센터 수요(수급)",
-      "matched_at": "2026-05-21T19:25:18"
-    },
-    {
-      "ticker": "002420",
-      "name": "세기상사",
-      "sosok": "",
-      "report_name": "주요사항보고서(회사합병결정)",
-      "submitter": "세기상사",
-      "submitted_at": "2026.05.21",
-      "time": "17:17",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000642",
-      "rcp_no": "20260521000642",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 6510,
-      "today_change_pct": 7.25,
-      "signal_last_seen": "20260520",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급/시장심리(미디어·테마성 모멘텀)",
-      "matched_at": "2026-05-21T19:25:18"
-    },
-    {
-      "ticker": "012330",
-      "name": "현대모비스",
-      "sosok": "",
-      "report_name": "[기재정정]타법인주식및출자증권취득결정(자율공시)",
-      "submitter": "현대모비스",
-      "submitted_at": "2026.05.21",
-      "time": "16:06",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800577",
-      "rcp_no": "20260521800577",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 670000,
-      "today_change_pct": 25.23,
-      "signal_last_seen": "20260521",
-      "signal_confidence": "medium",
-      "signal_main_theme": "로보틱스/모빌리티(자동차용 로봇) 수혜",
-      "matched_at": "2026-05-21T19:25:19"
-    },
-    {
       "ticker": "336260",
       "name": "두산퓨얼셀",
       "sosok": "",
@@ -2814,25 +2757,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "수주/에너지(연료전지)",
       "matched_at": "2026-05-22T20:16:51"
-    },
-    {
-      "ticker": "288980",
-      "name": "모아데이타",
-      "sosok": "",
-      "report_name": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
-      "submitter": "모아데이타",
-      "submitted_at": "2026.05.20",
-      "time": "16:48",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900607",
-      "rcp_no": "20260520900607",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 1189,
-      "today_change_pct": 29.95,
-      "signal_last_seen": "20260521",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급/테마성(피지컬 AI·AI 로봇주)",
-      "matched_at": "2026-05-21T19:25:20"
     }
   ]
 }
