@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-22T20:14:30",
-  "total": 144,
-  "new_today": 5,
+  "generated_at": "2026-06-23T01:01:25",
+  "total": 145,
+  "new_today": 1,
   "alerts": [
     {
       "ticker": "200470",
@@ -97,6 +97,25 @@
       "signal_confidence": "medium",
       "signal_main_theme": "반도체",
       "matched_at": "2026-06-22T20:14:30"
+    },
+    {
+      "ticker": "446070",
+      "name": "유니드비티플러스",
+      "sosok": "",
+      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "submitter": "유니드비티플러스",
+      "submitted_at": "2026.06.22",
+      "time": "14:28",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260622000157",
+      "rcp_no": "20260622000157",
+      "category": "자본정책_호재",
+      "score": 70,
+      "current_price": 2950,
+      "today_change_pct": 29.96,
+      "signal_last_seen": "20260622",
+      "signal_confidence": "medium",
+      "signal_main_theme": "수급/테마",
+      "matched_at": "2026-06-23T01:01:25"
     },
     {
       "ticker": "491000",
