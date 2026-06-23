@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-23T08:13:38",
-  "total": 145,
-  "new_today": 0,
+  "generated_at": "2026-06-23T10:23:40",
+  "total": 146,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "000720",
+      "name": "현대건설",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "현대건설",
+      "submitted_at": "2026.06.23",
+      "time": "09:02",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260623800109",
+      "rcp_no": "20260623800109",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 121300,
+      "today_change_pct": 5.09,
+      "signal_last_seen": "20260612",
+      "signal_confidence": "medium",
+      "signal_main_theme": "수급/ETF 리밸런싱",
+      "matched_at": "2026-06-23T10:23:40"
+    },
     {
       "ticker": "200470",
       "name": "에이팩트",
