@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-24T06:11:39",
-  "total": 159,
-  "new_today": 0,
+  "generated_at": "2026-06-24T07:37:19",
+  "total": 160,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "089140",
+      "name": "넥스턴앤롤코리아",
+      "sosok": "",
+      "report_name": "합병등종료보고서\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t(자산양수도)",
+      "submitter": "넥스턴앤롤코리아",
+      "submitted_at": "2026.06.24",
+      "time": "07:30",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260623000429",
+      "rcp_no": "20260623000429",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 1960,
+      "today_change_pct": 5.77,
+      "signal_last_seen": "20260604",
+      "signal_confidence": "high",
+      "signal_main_theme": "반도체/수주",
+      "matched_at": "2026-06-24T07:37:19"
+    },
     {
       "ticker": "059090",
       "name": "미코",
