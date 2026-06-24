@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-24T10:30:02",
-  "total": 160,
-  "new_today": 0,
+  "generated_at": "2026-06-24T14:41:19",
+  "total": 161,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "091590",
+      "name": "남화토건",
+      "sosok": "",
+      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
+      "submitter": "남화토건",
+      "submitted_at": "2026.06.24",
+      "time": "14:20",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260624900466",
+      "rcp_no": "20260624900466",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 5980,
+      "today_change_pct": 30.0,
+      "signal_last_seen": "20260619",
+      "signal_confidence": "medium",
+      "signal_main_theme": "지배구조/임원인사",
+      "matched_at": "2026-06-24T14:41:19"
+    },
     {
       "ticker": "089140",
       "name": "넥스턴앤롤코리아",
