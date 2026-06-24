@@ -206,10 +206,12 @@ def main() -> None:
         })
     rows.sort(key=lambda r: -r["change_pct"])
 
-    kospi = [r for r in rows if r["market"] == "KOSPI"][: args.top // 2]
-    kosdaq = [r for r in rows if r["market"] != "KOSPI"][: args.top // 2]
-    all_stocks = kospi + kosdaq
-    print(f"📈 등락률 TOP — KOSPI {len(kospi)} / KOSDAQ {len(kosdaq)} = 총 {len(all_stocks)}건")
+    # 등락률 상위 N (시장 통합 랭킹) — 시장별 10/10 분리 대신 진짜 상위 20
+    all_stocks = rows[: args.top]
+    kospi = [r for r in all_stocks if r["market"] == "KOSPI"]
+    kosdaq = [r for r in all_stocks if r["market"] != "KOSPI"]
+    cutoff = all_stocks[-1]["change_pct"] if all_stocks else 0
+    print(f"📈 등락률 상위 {len(all_stocks)}건 (KOSPI {len(kospi)} / KOSDAQ {len(kosdaq)}) — 컷오프 {cutoff:+.1f}%")
 
     if not all_stocks:
         print("⚠️  조건 맞는 종목 없음")
