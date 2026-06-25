@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-25T09:00:09",
-  "total": 171,
-  "new_today": 0,
+  "generated_at": "2026-06-25T12:58:31",
+  "total": 172,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "211270",
+      "name": "AP위성",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "AP위성",
+      "submitted_at": "2026.06.25",
+      "time": "11:00",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260625900237",
+      "rcp_no": "20260625900237",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 8940,
+      "today_change_pct": 1.87,
+      "signal_last_seen": "20260518",
+      "signal_confidence": "medium",
+      "signal_main_theme": "우주/스페이스 산업",
+      "matched_at": "2026-06-25T12:58:31"
+    },
     {
       "ticker": "043260",
       "name": "성호전자",
