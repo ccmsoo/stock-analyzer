@@ -25510,100 +25510,126 @@
       "a4904e01639c"
     ],
     "live_radar": [
-      "3270f6d72abb",
-      "9885b3b8119e",
-      "2a7ade1e887d",
-      "200d882e245c",
-      "f236de2cf79b",
-      "271cfa1aa9df",
-      "0efb18d749f7",
-      "fdcbe33ec6a1",
-      "6d2aab0abeee",
-      "8d5794a36fd0",
-      "8812e64fb5d3",
-      "e501ad97e8a0",
-      "7b018a0351e9",
-      "821e07819165",
-      "b2c6c4448248",
-      "4cc27e9436ef",
-      "4a790ba500a5",
-      "93d55afb640c",
-      "02c03828bc09",
-      "0de2ad04dbb1",
-      "d95dbb159ff4",
-      "5e333e726b1b",
-      "eea70d0274dc",
-      "db48acadb058",
-      "b37752d4057a",
-      "8b00ca96e468",
-      "a4506365c9f3",
-      "71e122d70adc",
-      "a9a9128d095c",
-      "7d0d1a535cf2",
-      "75667c15dd6a",
-      "3c837a87b1d8",
-      "2d828d67efba",
-      "233a3e5ca932",
+      "7f462e4a9478",
+      "54d21b25b5de",
+      "7211e4a8717a",
       "8f57ba1ceeaa",
-      "9317d768b263",
-      "e0cc2c5afd37",
-      "0c28389a39ac",
-      "9545141d9e60",
-      "b83078b55b7f",
-      "fb73c5826167",
-      "18ba73271e09",
-      "bd2bed16e0ac",
-      "847a13c2def4",
-      "f66b47b0c2a3",
-      "4bce25fa233a",
-      "550f2e709757",
-      "f456094a1330",
-      "6609b0147f3b",
-      "dccae380221a",
+      "54d343f20ab9",
+      "f8a41eed29bf",
+      "992c191bb1bd",
+      "07031d5a6722",
       "dc07c6c78e30",
       "64c122baac21",
-      "ec8aca2109f1",
-      "3307c434e2f9",
-      "1de2cdf0d203",
-      "54d21b25b5de",
-      "f5305af2a8b5",
-      "c4ab137a192c",
-      "4535de65ff5c",
-      "f815ac4f4f9f",
-      "1735e98dcc19",
-      "4d3f36cc6c13",
-      "54b38c7ceff0",
-      "7c517e42b1f5",
-      "3374ffc7faef",
-      "992c191bb1bd",
-      "796106b6e0cd",
-      "8c4063f3f9bf",
-      "ce7818d84c14",
-      "5dd15f627228",
-      "8a118b22007f",
-      "e100dfb9a5de",
-      "682ae68bd253",
-      "6bb2b76c3b82",
-      "7211e4a8717a",
-      "f1f21f6e8fe3",
-      "05802f992f2a",
+      "6d2aab0abeee",
+      "02c03828bc09",
       "8800b3cd0db2",
-      "32ed44b6154d",
-      "ed823d562832",
-      "b81f65946abb",
-      "db830b6f7d3e",
+      "e501ad97e8a0",
+      "1b7892542a0d",
+      "f66b47b0c2a3",
+      "4bce25fa233a",
+      "a334ca5f0129",
+      "2a7ade1e887d",
+      "75667c15dd6a",
+      "a43ed8b4d081",
+      "5e333e726b1b",
+      "768c37b0dd30",
+      "d95dbb159ff4",
+      "dccae380221a",
+      "aa8ecec24176",
+      "cb74c068f321",
+      "3307c434e2f9",
+      "821e07819165",
       "a29d18723a2c",
-      "09438848786b",
-      "9a8297623792",
-      "f8a41eed29bf",
-      "deaaf6d325c1",
-      "a52e9bb6ea5a",
-      "a316a6acf083",
-      "4afdc016364e",
-      "12d0f34b0595",
+      "3eb21c421b48",
+      "ce7818d84c14",
+      "bd2bed16e0ac",
+      "a9a9128d095c",
+      "93d55afb640c",
+      "2d828d67efba",
+      "0de2ad04dbb1",
+      "9e411284f89f",
+      "758fa76841c0",
+      "98bd71c4536d",
+      "4535de65ff5c",
+      "200d882e245c",
+      "7b018a0351e9",
+      "f815ac4f4f9f",
+      "3374ffc7faef",
       "2d48247d4b57",
+      "12d0f34b0595",
+      "ed823d562832",
+      "eea70d0274dc",
+      "7c517e42b1f5",
+      "ffd09309bdf5",
+      "07057b758006",
+      "b83078b55b7f",
+      "c3ab9bf33ca2",
+      "18ba73271e09",
+      "f1f21f6e8fe3",
+      "9545141d9e60",
+      "8b00ca96e468",
+      "233a3e5ca932",
+      "538adfdb9849",
+      "8812e64fb5d3",
+      "fb73c5826167",
+      "4cc27e9436ef",
+      "104b1d0c3f0c",
+      "5b27a9e1fba7",
+      "0c28389a39ac",
+      "8d5794a36fd0",
+      "db830b6f7d3e",
+      "9a8297623792",
+      "f5305af2a8b5",
+      "deaaf6d325c1",
+      "8bf965df799c",
       "874d7f2b57a7",
-      "c3ab9bf33ca2"
+      "4beccb829e57",
+      "a316a6acf083",
+      "4a790ba500a5",
+      "5dd15f627228",
+      "f456094a1330",
+      "271cfa1aa9df",
+      "9885b3b8119e",
+      "1de2cdf0d203",
+      "8a118b22007f",
+      "0efb18d749f7",
+      "3270f6d72abb",
+      "676b222ce3b0",
+      "09438848786b",
+      "550f2e709757",
+      "4e869e4fde7e",
+      "4afdc016364e",
+      "b2c6c4448248",
+      "71e122d70adc",
+      "333368afa4f4",
+      "6609b0147f3b",
+      "c4ab137a192c",
+      "a4506365c9f3",
+      "e0cc2c5afd37",
+      "4a8adb22d1cc",
+      "33cef9c8b2d6",
+      "9317d768b263",
+      "db48acadb058",
+      "54b38c7ceff0",
+      "b81f65946abb",
+      "a52e9bb6ea5a",
+      "1735e98dcc19",
+      "796106b6e0cd",
+      "b37752d4057a",
+      "fdcbe33ec6a1",
+      "4d3f36cc6c13",
+      "6bb2b76c3b82",
+      "f236de2cf79b",
+      "3c837a87b1d8",
+      "ec8aca2109f1",
+      "847a13c2def4",
+      "05802f992f2a",
+      "7d0d1a535cf2",
+      "8c4063f3f9bf",
+      "4d9e37acc104",
+      "682ae68bd253",
+      "e100dfb9a5de",
+      "32ed44b6154d"
     ],
     "069640": [
       "60cf326e55eb",
@@ -39928,6 +39954,311 @@
         }
       ],
       "detected_at": "2026-06-24T00:53:21"
+    },
+    {
+      "keyword": "식품의약품안전처",
+      "matched_owners": [
+        {
+          "ticker": "003060",
+          "name": "에이프로젠바이오로직스",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "007460",
+          "name": "에이프로젠",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "462510",
+          "name": "라메디텍",
+          "cluster": "biotech_policy_beneficiary"
+        }
+      ],
+      "clusters": [
+        "biotech_policy_beneficiary",
+        "osteoarthritis_drug"
+      ],
+      "new_articles": [
+        {
+          "title": "국민 10명 중 4명 ‘의료용 마약류 처방’",
+          "link": "https://www.busan.com/view/busan/view.php?code=2026062523450986040",
+          "source": "",
+          "date": "2026.06.25 23:31",
+          "origin": "search:식품의약품안전처"
+        }
+      ],
+      "detected_at": "2026-06-26T00:16:09"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "코스피, 반도체 투자심리에 힘입어 9,000선 재돌파",
+          "link": "https://www.tokenpost.kr/news/market/372796",
+          "source": "토큰포스트",
+          "date": "2026.06.25 23:58",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "코스피 9000시대, 성장의 빛과 분배의 그늘",
+          "link": "http://www.jeollailbo.com/news/articleView.html?idxno=803618",
+          "source": "전라일보",
+          "date": "2026.06.25 23:50",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "오늘의 금값시세(6월 26일자) 금값 하락세 \"조정국면 분석\"",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3618258",
+          "source": "국제뉴스",
+          "date": "2026.06.25 23:50",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "대한광통신, 보합 마감에도 AI 인프라 기대 지속…중장기 동력 여부 체...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584675",
+          "source": "CBC뉴스",
+          "date": "2026.06.25 23:44",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "한화오션, 잠수함 수주 기대는 여전하지만 숨고르기…캐나다 사업은 여...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584674",
+          "source": "CBC뉴스",
+          "date": "2026.06.25 23:44",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "SK이터닉스, 상한가 직행…강세 주말장까지 이어질까",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=584677",
+          "source": "CBC뉴스",
+          "date": "2026.06.25 23:44",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "코스피 하루6%오른날 서울전세13년만 최대상승",
+          "link": "https://www.munhwa.com/article/11598315?ref=naver",
+          "source": "",
+          "date": "2026.06.25 23:25",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-06-26T00:16:23"
+    },
+    {
+      "keyword": "디지털 트윈 플랫폼",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "SKT ‘새 먹거리’…피지컬 AI로 공장 노린다",
+          "link": "https://www.joongang.co.kr/article/25440008",
+          "source": "",
+          "date": "2026.06.25 23:46",
+          "origin": "search:디지털 트윈 플랫폼"
+        },
+        {
+          "title": "\"게임의 룰을 바꿔라\"… 삼진어묵이 전한 전통 제조업 혁신 전략",
+          "link": "https://www.asiatime.co.kr/article/20260625500378",
+          "source": "아시아타임즈",
+          "date": "2026.06.25 23:40",
+          "origin": "search:디지털 트윈 플랫폼"
+        }
+      ],
+      "detected_at": "2026-06-26T00:16:34"
+    },
+    {
+      "keyword": "글로벌 모빌리티 기업",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "육 시장, 다보스포럼 발제… \"지방정부가 혁신 촉진\"",
+          "link": "https://www.kado.net/news/articleView.html?idxno=2057978",
+          "source": "",
+          "date": "2026.06.25 23:53",
+          "origin": "search:글로벌 모빌리티 기업"
+        },
+        {
+          "title": "한주라이트메탈, 로보틱스로 포트폴리오 넓힌다",
+          "link": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1060545",
+          "source": "경상일보",
+          "date": "2026.06.25 23:46",
+          "origin": "search:글로벌 모빌리티 기업"
+        },
+        {
+          "title": "[프리즘] 한국, 빅테크 ‘기술 소작농’ 될 건가",
+          "link": "https://www.joongang.co.kr/article/25440010",
+          "source": "",
+          "date": "2026.06.25 23:46",
+          "origin": "search:글로벌 모빌리티 기업"
+        }
+      ],
+      "detected_at": "2026-06-26T00:16:36"
+    },
+    {
+      "keyword": "엔비디아",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "'경제도시 원주' 기틀 다진 민선8기 마침표",
+          "link": "https://www.kado.net/news/articleView.html?idxno=2057943",
+          "source": "",
+          "date": "2026.06.25 23:52",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "삼성전자·SK하이닉스 2분기 실적발표 언제? 역대급 성적표 받을까",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3618252",
+          "source": "국제뉴스",
+          "date": "2026.06.25 23:50",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "게임사에서 AI 기업으로…크래프톤, '사업 확장' 본격화",
+          "link": "https://www.wolyo.co.kr/news/articleView.html?idxno=314098",
+          "source": "월요신문",
+          "date": "2026.06.25 23:50",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "아틀라스 보면 “현대차 120만원”…아투싼쏘 보면 “69만원이 적당”",
+          "link": "https://www.joongang.co.kr/article/25439996",
+          "source": "",
+          "date": "2026.06.25 23:46",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "AI칩 직접 만드는 빅테크…오픈AI ‘할라페뇨’ 내놨다",
+          "link": "https://www.joongang.co.kr/article/25440012",
+          "source": "",
+          "date": "2026.06.25 23:46",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "“웬디스 구하라” 한마디에 26% 폭등…밈주식 광풍",
+          "link": "https://www.joongang.co.kr/article/25439986",
+          "source": "",
+          "date": "2026.06.25 23:45",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "마이크론, AI 훈풍에 메타 시총 추월…테슬라도 턱밑 추격",
+          "link": "https://www.thefairnews.co.kr/news/articleView.html?idxno=80536",
+          "source": "더페어",
+          "date": "2026.06.25 23:44",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "시장 이긴 선제 투자… 미국 기술주 ETF 진화",
+          "link": "https://www.newsclaim.co.kr/news/articleView.html?idxno=3067651",
+          "source": "뉴스클레임",
+          "date": "2026.06.25 23:44",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "'삼전닉스' 교육과정평가원장, 40억대 주식부자 군산대 부총장",
+          "link": "https://www.joongang.co.kr/article/25439974",
+          "source": "",
+          "date": "2026.06.25 23:44",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "김문희 교육과정평가원장 98억 '1위'…고위공직자 3월 재산공개",
+          "link": "https://www.mt.co.kr/policy/2026/06/26/2026062514210592179",
+          "source": "",
+          "date": "2026.06.25 23:44",
+          "origin": "search:엔비디아"
+        }
+      ],
+      "detected_at": "2026-06-26T00:16:39"
+    },
+    {
+      "keyword": "인체의약품",
+      "matched_owners": [
+        {
+          "ticker": "060590",
+          "name": "씨티씨바이오",
+          "cluster": "earnings_surprise"
+        }
+      ],
+      "clusters": [
+        "earnings_surprise"
+      ],
+      "new_articles": [
+        {
+          "title": "첨단재생의료 치료 '중위험'→'저위험' 조정…희귀·난치 환자 치료 접...",
+          "link": "https://www.lifein.news/news/articleView.html?idxno=20258",
+          "source": "라이프인",
+          "date": "2026.06.25 23:36",
+          "origin": "search:인체의약품"
+        }
+      ],
+      "detected_at": "2026-06-26T00:16:41"
+    },
+    {
+      "keyword": "하나증권",
+      "matched_owners": [
+        {
+          "ticker": "499790",
+          "name": "GS피앤엘",
+          "cluster": "earnings_surprise"
+        }
+      ],
+      "clusters": [
+        "earnings_surprise"
+      ],
+      "new_articles": [
+        {
+          "title": "무기력한 90분… 거리응원단 “기억 남는 장면도 없어” 허탈",
+          "link": "https://www.kmib.co.kr/article/view.asp?arcid=1782374658&code=11131100&cp=nv",
+          "source": "",
+          "date": "2026.06.25 23:45",
+          "origin": "search:하나증권"
+        },
+        {
+          "title": "[통신 맥락읽기] 기지국이 'AI 두뇌'를 품기 시작했다",
+          "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=309652",
+          "source": "포인트데일리",
+          "date": "2026.06.25 23:33",
+          "origin": "search:하나증권"
+        }
+      ],
+      "detected_at": "2026-06-26T00:17:01"
     }
   ]
 }
