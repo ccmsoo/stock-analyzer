@@ -257,14 +257,5 @@
    "value_traded": null,
    "chart_ok": true
   }
- ],
- "rerise": [
-  {
-   "ticker": "005430",
-   "name": "한국공항",
-   "dip": -8.7,
-   "from_ma": 0.8,
-   "price": 81200
-  }
  ]
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { loadRadar } from "@/lib/data";
-import type { RadarCandidate, RadarRerise } from "@/lib/data";
+import type { RadarCandidate } from "@/lib/data";
 import { formatPrice, formatPct, formatDate, priceColorClass } from "@/lib/format";
 
 export const revalidate = 0;
@@ -9,8 +9,7 @@ export const dynamic = "force-dynamic";
 export default async function RadarPage() {
   const radar = await loadRadar();
   const cands = radar.candidates || [];
-  const rerise = radar.rerise || [];
-  const has = cands.length > 0 || rerise.length > 0;
+  const has = cands.length > 0;
 
   return (
     <main className="container max-w-4xl py-8">
@@ -53,32 +52,6 @@ export default async function RadarPage() {
             )}
           </section>
 
-          {/* 눌림목 재진입 (2차상승) */}
-          {rerise.length > 0 && (
-            <section className="mt-10">
-              <h2 className="mb-2 text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                눌림목 재진입 · 2차상승
-                <span className="ml-2 text-xs normal-case text-muted-foreground/70">
-                  최근 급등 + 얕은 눌림 + 20일선 위 · 재상승 ~75%
-                </span>
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {rerise.map((r) => (
-                  <Link
-                    key={r.ticker}
-                    href={`/signals/${r.ticker}`}
-                    className="rounded-md border border-border px-2.5 py-1.5 text-sm transition-colors hover:border-foreground/30"
-                  >
-                    <span className="font-medium">{r.name}</span>
-                    <span className="ml-2 text-[11px] text-muted-foreground tabular">
-                      고점 <span className={priceColorClass(r.dip)}>{formatPct(r.dip, { sign: true })}</span>
-                      {" · "}20일선 <span className={priceColorClass(r.from_ma)}>{formatPct(r.from_ma, { sign: true })}</span>
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )}
         </>
       )}
 
