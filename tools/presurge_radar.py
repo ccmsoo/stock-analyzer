@@ -52,6 +52,7 @@ def main():
     p.add_argument("--days", type=int, default=3, help="최근 N일 뉴스")
     p.add_argument("--min-score", type=float, default=6.0)
     p.add_argument("--max-move", type=float, default=5.0, help="이 이상 이미 오른 건 제외(%)")
+    p.add_argument("--min-value", type=float, default=5.0, help="유동성 하한: 평균 거래대금 억원(기본 5억)")
     p.add_argument("--max", type=int, default=None, help="워치리스트 상한(테스트)")
     p.add_argument("--all", action="store_true", help="low 포함")
     p.add_argument("--workers", type=int, default=8)
@@ -137,11 +138,16 @@ def main():
             s["from_high"] = (last / hi20 - 1) * 100 if hi20 else None
             volavg = sum(c["volume"] for c in cs[1:21]) / 20
             s["volratio"] = cs[0]["volume"] / volavg if volavg else None
+            s["value_traded"] = last * volavg  # 평균 거래대금 근사(원)
             # 차트 양호 = 아직 안 extended (5일<15%) & 고점근처과열 아님
             s["chart_ok"] = (s["chg5"] is None or s["chg5"] < 15)
         else:
-            s["chg5"] = s["from_high"] = s["volratio"] = None
+            s["chg5"] = s["from_high"] = s["volratio"] = s["value_traded"] = None
             s["chart_ok"] = True
+
+    # 유동성 하한 — 못 빠져나오는 초저유동만 제외 (우량주 필터 아님)
+    min_val = args.min_value * 1e8
+    scored = [s for s in scored if s.get("value_traded") is None or s["value_traded"] >= min_val]
 
     fresh = [s for s in scored if s["today"] is None or s["today"] < args.max_move]
     # 정렬: 촉매점수 → 차트양호 → 거래량
@@ -160,6 +166,9 @@ def main():
     already = [s for s in scored if s["today"] is not None and s["today"] >= args.max_move]
     if already:
         print(f"\n   (이미 오름 제외 {len(already)}: " + ", ".join(f"{s['name'][:8]}+{s['today']:.0f}%" for s in sorted(already, key=lambda x: -x['today'])[:6]) + ")")
+
+    print("\n📌 단기 스윙 플레이북 (백테스트 검증): 촉매 선진입 → 3일 보유(승률 최고) → "
+          "넓은 손절(−10%)·추격 금지. 꽉 조인 +8%/−5%는 오히려 손해.")
 
     out = ROOT / "reports" / "presurge_radar.json"
     json.dump({"date": date_str, "generated_at": datetime.now().isoformat(timespec="seconds"),
