@@ -29,13 +29,16 @@ def main():
     p.add_argument("--from", dest="dfrom", default="20260401")
     p.add_argument("--until", default="20260523")  # D+20 확보
     p.add_argument("--cooldown", type=int, default=10)
+    p.add_argument("--cache", default="/tmp/kw_px.json", help="캔들 캐시(장기: /tmp/hist_px.json)")
     args = p.parse_args()
-    if not KW_CACHE.exists():
-        print("⚠️ /tmp/kw_px.json 없음 — backtest_keywords 먼저"); sys.exit(1)
-    px = json.loads(KW_CACHE.read_text())
-    tickers = sorted({k for k in px if "#order" not in k} - {"069500", "229200"})
+    cache = Path(args.cache)
+    if not cache.exists():
+        print(f"⚠️ {cache} 없음"); sys.exit(1)
+    px = json.loads(cache.read_text())
+    tickers = sorted({k for k in px if not k.endswith("#order") and not k.startswith("#")} - {"069500", "229200"})
     sigs = json.load(open(ROOT / "state" / "signals.json"))["signals"]
-    names = {t: sigs.get(t, {}).get("name", t) for t in tickers}
+    cnames = px.get("#names", {})
+    names = {t: cnames.get(t) or sigs.get(t, {}).get("name", t) for t in tickers}
 
     alld = sorted({d for t in tickers for d in px[t + "#order"]})
     dpos = {d: i for i, d in enumerate(alld)}
