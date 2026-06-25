@@ -7,10 +7,8 @@ const NAV = [
   { href: "/", label: "매수 후보" },
   { href: "/opportunities", label: "오르기 전" },
   { href: "/chains", label: "밸류체인" },
-  { href: "/alerts", label: "DART 알림" },
   { href: "/portfolio", label: "보유 종목" },
   { href: "/signals", label: "전체 시그널" },
-  { href: "/keywords", label: "키워드" },
 ];
 
 export function Nav() {
