@@ -73,9 +73,10 @@ def main():
                 continue
             if c >= args.surge:
                 pos.append((t, d))
-            elif -2 < c < 4 and i - 5 >= 0:
+            elif 2 < abs(c) < 8 and i - 5 >= 0:
+                # 움직였지만 급등 아님 → 뉴스 있을 가능성↑ (비교 가능한 control)
                 fw = maxfwd(t, d, 5)
-                if fw is not None and fw < 6:
+                if fw is not None and fw < 8:
                     ctrl.append((t, d))
 
     def sample(lst, n):
@@ -94,7 +95,7 @@ def main():
         dd = datetime.strptime(d, "%Y%m%d")
         ds = (dd - timedelta(days=args.window)).strftime("%Y%m%d")
         de = (dd - timedelta(days=1)).strftime("%Y%m%d")
-        titles = search_titles(nm, ds, de, pages=2)
+        titles = search_titles(nm, ds, de, pages=1, sleep=0.8)
         if not titles:
             return None
         r = rate(client, nm, titles)

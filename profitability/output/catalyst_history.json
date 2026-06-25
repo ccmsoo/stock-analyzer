@@ -1,0 +1,688 @@
+{
+ "results": [
+  {
+   "group": "pos",
+   "ticker": "000150",
+   "name": "두산",
+   "date": "20251017",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "000155",
+   "name": "두산우",
+   "date": "20251103",
+   "score": 3.0,
+   "keyword": "두산에너빌리티 수혜",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "000810",
+   "name": "삼성화재",
+   "date": "20251211",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 9
+  },
+  {
+   "group": "pos",
+   "ticker": "000990",
+   "name": "DB하이텍",
+   "date": "20251110",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "001820",
+   "name": "삼화콘덴서",
+   "date": "20250903",
+   "score": 5.0,
+   "keyword": "우주부품 국산화",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "003670",
+   "name": "포스코퓨처엠",
+   "date": "20251024",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "004800",
+   "name": "효성",
+   "date": "20251111",
+   "score": 6.0,
+   "keyword": "미국ㆍ인도ㆍ창원에 3000억 투자",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "005070",
+   "name": "코스모신소재",
+   "date": "20251021",
+   "score": 3.0,
+   "keyword": "수직계열화",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "007660",
+   "name": "이수페타시스",
+   "date": "20251110",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "007660",
+   "name": "이수페타시스",
+   "date": "20251125",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "007810",
+   "name": "코리아써키트",
+   "date": "20251112",
+   "score": 2.0,
+   "keyword": "AI·메모리",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "007810",
+   "name": "코리아써키트",
+   "date": "20251201",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "010120",
+   "name": "LS ELECTRIC",
+   "date": "20251023",
+   "score": 6.0,
+   "keyword": "영업이익 급증",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "010130",
+   "name": "고려아연",
+   "date": "20250912",
+   "score": 3.0,
+   "keyword": "적대적 M&A",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "010130",
+   "name": "고려아연",
+   "date": "20251127",
+   "score": 1.0,
+   "keyword": "",
+   "n_titles": 8
+  },
+  {
+   "group": "pos",
+   "ticker": "011170",
+   "name": "롯데케미칼",
+   "date": "20251112",
+   "score": 2.0,
+   "keyword": "수소 출하센터",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "020150",
+   "name": "롯데에너지머티리얼즈",
+   "date": "20251112",
+   "score": 2.0,
+   "keyword": "AI 회로박",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "022100",
+   "name": "포스코DX",
+   "date": "20251103",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "034230",
+   "name": "파라다이스",
+   "date": "20251120",
+   "score": 2.0,
+   "keyword": "할인·프로모션",
+   "n_titles": 9
+  },
+  {
+   "group": "pos",
+   "ticker": "047040",
+   "name": "대우건설",
+   "date": "20250821",
+   "score": 2.0,
+   "keyword": "개포우성7차 재건축 수주전",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "052690",
+   "name": "한전기술",
+   "date": "20250821",
+   "score": 2.0,
+   "keyword": "미국 진출",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "066970",
+   "name": "엘앤에프",
+   "date": "20251024",
+   "score": 3.0,
+   "keyword": "투트랙 전략",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "077970",
+   "name": "STX엔진",
+   "date": "20250814",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "093370",
+   "name": "후성",
+   "date": "20250915",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "093370",
+   "name": "후성",
+   "date": "20251027",
+   "score": 3.0,
+   "keyword": "리튬 관련주",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "097230",
+   "name": "HJ중공업",
+   "date": "20250829",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 8
+  },
+  {
+   "group": "pos",
+   "ticker": "097230",
+   "name": "HJ중공업",
+   "date": "20250903",
+   "score": 3.0,
+   "keyword": "공동 수주",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "103590",
+   "name": "일진전기",
+   "date": "20251024",
+   "score": 3.0,
+   "keyword": "스마트 전력망",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "128940",
+   "name": "한미약품",
+   "date": "20251027",
+   "score": 6.0,
+   "keyword": "표적단백질분해",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "207940",
+   "name": "삼성바이오로직스",
+   "date": "20251124",
+   "score": 6.0,
+   "keyword": "CDMO 재도약",
+   "n_titles": 9
+  },
+  {
+   "group": "pos",
+   "ticker": "243880",
+   "name": "TIGER 200IT레버리지",
+   "date": "20251002",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 1
+  },
+  {
+   "group": "pos",
+   "ticker": "307950",
+   "name": "현대오토에버",
+   "date": "20251031",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "307950",
+   "name": "현대오토에버",
+   "date": "20251204",
+   "score": 1.0,
+   "keyword": "보안투자",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "336260",
+   "name": "두산퓨얼셀",
+   "date": "20250911",
+   "score": 3.0,
+   "keyword": "장기유지보수 계약",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "353200",
+   "name": "대덕전자",
+   "date": "20251010",
+   "score": 3.0,
+   "keyword": "메모리 기판 수요 확대",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "402340",
+   "name": "SK스퀘어",
+   "date": "20251002",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "439260",
+   "name": "대한조선",
+   "date": "20250805",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "457190",
+   "name": "이수스페셜티케미컬",
+   "date": "20250923",
+   "score": 5.0,
+   "keyword": "전고체 배터리 Li₂S 상업화 설비 착공",
+   "n_titles": 10
+  },
+  {
+   "group": "pos",
+   "ticker": "457190",
+   "name": "이수스페셜티케미컬",
+   "date": "20251209",
+   "score": 4.0,
+   "keyword": "수출탑/생산 증설",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "000100",
+   "name": "유한양행",
+   "date": "20250801",
+   "score": 9.0,
+   "keyword": "중국 시판 허가",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "000720",
+   "name": "현대건설",
+   "date": "20250917",
+   "score": 4.0,
+   "keyword": "HD건설기계 출범",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "001120",
+   "name": "LX인터내셔널",
+   "date": "20251212",
+   "score": 2.0,
+   "keyword": "해외자원개발 표창",
+   "n_titles": 9
+  },
+  {
+   "group": "ctrl",
+   "ticker": "002380",
+   "name": "KCC",
+   "date": "20251104",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "003540",
+   "name": "대신증권",
+   "date": "20251118",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "004020",
+   "name": "현대제철",
+   "date": "20251126",
+   "score": 2.0,
+   "keyword": "K-스틸법",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "005385",
+   "name": "현대차우",
+   "date": "20251112",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "005935",
+   "name": "삼성전자우",
+   "date": "20251110",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "006400",
+   "name": "삼성SDI",
+   "date": "20250926",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "008770",
+   "name": "호텔신라",
+   "date": "20251125",
+   "score": 2.0,
+   "keyword": "여행레저 수요증가",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "010120",
+   "name": "LS ELECTRIC",
+   "date": "20250925",
+   "score": 3.0,
+   "keyword": "EV Charging",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "011210",
+   "name": "현대위아",
+   "date": "20251104",
+   "score": 1.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "012630",
+   "name": "HDC",
+   "date": "20251205",
+   "score": 2.0,
+   "keyword": "부동산 분양 성공",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "017960",
+   "name": "한국카본",
+   "date": "20251114",
+   "score": 2.0,
+   "keyword": "밀양 유치",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "023530",
+   "name": "롯데쇼핑",
+   "date": "20251212",
+   "score": 1.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "031210",
+   "name": "서울보증보험",
+   "date": "20251118",
+   "score": 2.0,
+   "keyword": "채무조정 협약식",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "034730",
+   "name": "SK",
+   "date": "20250801",
+   "score": 2.0,
+   "keyword": "전기차 충전시설 사업자 선정",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "042700",
+   "name": "한미반도체",
+   "date": "20251126",
+   "score": 4.0,
+   "keyword": "반도체훈풍",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "064400",
+   "name": "LG씨엔에스",
+   "date": "20250923",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 9
+  },
+  {
+   "group": "ctrl",
+   "ticker": "069960",
+   "name": "현대백화점",
+   "date": "20251124",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "088350",
+   "name": "한화생명",
+   "date": "20251106",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "102780",
+   "name": "KODEX 삼성그룹",
+   "date": "20251027",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 2
+  },
+  {
+   "group": "ctrl",
+   "ticker": "112610",
+   "name": "씨에스윈드",
+   "date": "20251030",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 9
+  },
+  {
+   "group": "ctrl",
+   "ticker": "139260",
+   "name": "TIGER 200 IT",
+   "date": "20250818",
+   "score": 3.0,
+   "keyword": "반도체 실적 가이던스 상향",
+   "n_titles": 4
+  },
+  {
+   "group": "ctrl",
+   "ticker": "175330",
+   "name": "JB금융지주",
+   "date": "20251203",
+   "score": 6.0,
+   "keyword": "배당소득 분리과세",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "229640",
+   "name": "LS에코에너지",
+   "date": "20251027",
+   "score": 3.0,
+   "keyword": "베트남 사업 속도",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "259960",
+   "name": "크래프톤",
+   "date": "20251211",
+   "score": 1.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "278530",
+   "name": "KODEX 200TR",
+   "date": "20251114",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 5
+  },
+  {
+   "group": "ctrl",
+   "ticker": "298040",
+   "name": "효성중공업",
+   "date": "20251118",
+   "score": 3.0,
+   "keyword": "HVDC 국산화",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "322000",
+   "name": "HD현대에너지솔루션",
+   "date": "20251002",
+   "score": 3.0,
+   "keyword": "재생에너지100GW 확충",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "353200",
+   "name": "대덕전자",
+   "date": "20250923",
+   "score": 4.0,
+   "keyword": "첨단 패키지 기판",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "375500",
+   "name": "DL이앤씨",
+   "date": "20251028",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "395160",
+   "name": "KODEX AI반도체TOP2플러스",
+   "date": "20251125",
+   "score": 1.0,
+   "keyword": "",
+   "n_titles": 9
+  },
+  {
+   "group": "ctrl",
+   "ticker": "446770",
+   "name": "ACE 글로벌반도체TOP4 Plus",
+   "date": "20251117",
+   "score": 2.0,
+   "keyword": "",
+   "n_titles": 3
+  },
+  {
+   "group": "ctrl",
+   "ticker": "457190",
+   "name": "이수스페셜티케미컬",
+   "date": "20251121",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  },
+  {
+   "group": "ctrl",
+   "ticker": "475720",
+   "name": "RISE 200위클리커버드콜",
+   "date": "20251104",
+   "score": 1.0,
+   "keyword": "",
+   "n_titles": 4
+  },
+  {
+   "group": "ctrl",
+   "ticker": "489790",
+   "name": "한화비전",
+   "date": "20251121",
+   "score": 0.0,
+   "keyword": "",
+   "n_titles": 10
+  }
+ ]
+}
