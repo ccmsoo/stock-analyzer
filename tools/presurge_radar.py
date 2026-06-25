@@ -23,7 +23,7 @@ except ImportError:
 import os
 from openai import OpenAI
 from collectors.news_collector import collect_news_for_stock
-from tools.toss_client import get_prices
+from tools.toss_client import get_prices, get_candles
 
 SYS = """너는 한국 주식 단기 촉매 분석가다. 종목의 '최근 기사 제목들'만 보고
 앞으로 주가를 급등시킬 촉매가 있는지 평가한다. (향후 결과는 모름. 기사만으로 판단)
@@ -124,14 +124,38 @@ def main():
         s["today"] = chg.get(s["ticker"])
         s["price"] = prices.get(s["ticker"])
 
+    # 4) 차트 매칭 — 이미 extended면 늦음. 5일변동/고점대비/거래량.
+    for s in scored:
+        try:
+            cs = get_candles(s["ticker"])  # newest-first
+        except Exception:
+            cs = []
+        if len(cs) > 21 and cs[0]["close"]:
+            last = cs[0]["close"]
+            s["chg5"] = (last / cs[5]["close"] - 1) * 100 if cs[5]["close"] else None
+            hi20 = max(c["high"] for c in cs[:20])
+            s["from_high"] = (last / hi20 - 1) * 100 if hi20 else None
+            volavg = sum(c["volume"] for c in cs[1:21]) / 20
+            s["volratio"] = cs[0]["volume"] / volavg if volavg else None
+            # 차트 양호 = 아직 안 extended (5일<15%) & 고점근처과열 아님
+            s["chart_ok"] = (s["chg5"] is None or s["chg5"] < 15)
+        else:
+            s["chg5"] = s["from_high"] = s["volratio"] = None
+            s["chart_ok"] = True
+
     fresh = [s for s in scored if s["today"] is None or s["today"] < args.max_move]
-    fresh.sort(key=lambda x: -x["score"])
+    # 정렬: 촉매점수 → 차트양호 → 거래량
+    fresh.sort(key=lambda x: (-x["score"], not x["chart_ok"], -(x.get("volratio") or 0)))
 
     print(f"\n=== 🎯 오르기 전 촉매 후보 ({date_str}) — 점수{args.min_score}+ & 아직<{args.max_move}% ===")
-    print(f"   {'종목':12} {'점수':>4} {'오늘':>6} {'키워드':20} 근거")
+    print(f"   {'종목':12} {'점수':>4} {'오늘':>6} {'5일':>6} {'고점':>6} {'거래량':>5} 차트 키워드")
     for s in fresh[:25]:
         td = f"{s['today']:+.1f}%" if s["today"] is not None else "-"
-        print(f"   {s['name'][:12]:12} {s['score']:>4.0f} {td:>6} {s['keyword'][:20]:20} {s['reason'][:40]}")
+        c5 = f"{s['chg5']:+.0f}%" if s.get("chg5") is not None else "-"
+        fh = f"{s['from_high']:+.0f}%" if s.get("from_high") is not None else "-"
+        vr = f"{s['volratio']:.1f}x" if s.get("volratio") is not None else "-"
+        mark = "✓" if s["chart_ok"] else "⚠"
+        print(f"   {s['name'][:12]:12} {s['score']:>4.0f} {td:>6} {c5:>6} {fh:>6} {vr:>5}  {mark}  {s['keyword'][:18]}")
 
     already = [s for s in scored if s["today"] is not None and s["today"] >= args.max_move]
     if already:
