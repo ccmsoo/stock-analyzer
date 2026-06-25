@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-26T06:12:51",
-  "total": 187,
-  "new_today": 0,
+  "generated_at": "2026-06-26T07:45:40",
+  "total": 188,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "003490",
+      "name": "대한항공",
+      "sosok": "",
+      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
+      "submitter": "대한항공",
+      "submitted_at": "2026.06.26",
+      "time": "07:44",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260626000005",
+      "rcp_no": "20260626000005",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 29100,
+      "today_change_pct": 6.4,
+      "signal_last_seen": "20260615",
+      "signal_confidence": "high",
+      "signal_main_theme": "정책/지정학(거시 이벤트)",
+      "matched_at": "2026-06-26T07:45:40"
+    },
     {
       "ticker": "010960",
       "name": "삼호개발",
