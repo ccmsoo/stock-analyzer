@@ -212,8 +212,10 @@ function relation(
   const li = POSITION_FLOW[leaderPos];
   if (ci === undefined || li === undefined) return { kind: "same_chain", bonus: 8 };
   const d = Math.abs(ci - li);
-  if (d === 0) return { kind: "same_stage", bonus: 30 };
-  if (d === 1) return { kind: "adjacent", bonus: 18 };
+  // 백테스트(토스 캔들): 인접 단계 전파력이 동일 단계와 비슷(인접 +0.2% ≈ 동일 -1.1%),
+  // 먼 단계(far)는 -3.5%로 확실히 약함 → 인접 가점을 동일에 가깝게 상향.
+  if (d === 0) return { kind: "same_stage", bonus: 26 };
+  if (d === 1) return { kind: "adjacent", bonus: 24 };
   return { kind: "same_chain", bonus: 8 };
 }
 

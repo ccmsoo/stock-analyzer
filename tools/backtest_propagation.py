@@ -60,6 +60,17 @@ def coarse(ind: str):
     return ind
 
 
+POSITION_FLOW = {"원소재": 0, "장비": 1, "부품": 2, "조립/제조": 3, "최종재": 4, "유통/판매": 5, "서비스": 5}
+
+
+def relation(cp, lp):
+    ci, li = POSITION_FLOW.get(cp), POSITION_FLOW.get(lp)
+    if ci is None or li is None:
+        return "other"
+    d = abs(ci - li)
+    return "same" if d == 0 else "adjacent" if d == 1 else "far"
+
+
 def agg(rows, key):
     rs = [r[key] for r in rows if r.get(key) is not None]
     if not rs:
@@ -90,7 +101,8 @@ def main():
         sig = signals.get(t, {})
         meta[t] = {"name": e.get("name", t), "group": g,
                    "market": "KOSPI" if sig.get("market") == "KOSPI" else "KOSDAQ",
-                   "fund": sig.get("trigger_type") in FUND}
+                   "fund": sig.get("trigger_type") in FUND,
+                   "pos": e.get("chain_position", "")}
     groups = defaultdict(list)
     for t, m in meta.items():
         groups[m["group"]].append(t)
@@ -174,8 +186,11 @@ def main():
                 if not mt:
                     continue
                 m = meta[t]
+                _pref = {"same": 0, "adjacent": 1, "far": 2, "other": 3}
+                _rels = [relation(m["pos"], meta[ld]["pos"]) for ld in leaders]
+                rel = min(_rels, key=lambda x: _pref[x]) if _rels else "other"
                 rec = {"ticker": t, "name": m["name"], "group": g, "date": d, "fund": m["fund"],
-                       "win_chain": g in WIN_CHAINS, "n_leaders": len(leaders),
+                       "win_chain": g in WIN_CHAINS, "n_leaders": len(leaders), "relation": rel,
                        "maxgain5": mt["maxgain5"], "maxdd5": mt["maxdd5"]}
                 for k in (1, 3, 5, 10):
                     rec["r%d" % k] = mt["r%d" % k]
@@ -234,6 +249,15 @@ def main():
     print("   예시 (승리체인 전파후보, D+5 alpha 상위):")
     for r in sorted([x for x in best if x.get("x5") is not None], key=lambda x: -x["x5"])[:6]:
         print(f"     {r['name'][:11]:11} {r['group'][:12]:12} {r['date']}  D+5 {r['x5']:+.0f}%")
+
+    print("\n=== 단계 관계별 전파 alpha (D+5, 전체) — 엔진 가정 검증 ===")
+    byr = defaultdict(list)
+    for r in peers:
+        byr[r.get("relation", "other")].append(r)
+    for rk in ["same", "adjacent", "far", "other"]:
+        a = agg(byr.get(rk, []), "x5")
+        if a[2]:
+            print(f"   {rk:9} n={a[2]:>3}  D+5 {a[0]:>+5.1f}%  승률 {a[1]:>4.0f}%")
 
     out = ROOT / "profitability" / "output" / "propagation_backtest.json"
     json.dump({"params": vars(args), "n_peer": len(peers), "peers": peers}, open(out, "w"), ensure_ascii=False, indent=1)
