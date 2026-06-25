@@ -280,11 +280,16 @@ export function buildChainOpportunities(
       const la = best.leader.age;
       const freshness = la === 0 ? 10 : la === 1 ? 7 : la <= 3 ? 4 : 0;
 
+      // 백테스트 검증(토스 캔들, 5/1~6/13): 리더 급등 강도가 클수록 동료 전파 alpha↑
+      // (리더 ≥12% → D+5 +2.5% vs ≥4% → +1.1%). 강한 트리거에 가점.
+      const lchg = best.leader.change ?? 0;
+      const leaderStrength = lchg >= 12 ? 12 : lchg >= 8 ? 7 : lchg >= 5 ? 3 : 0;
+
       const score = Math.max(
         0,
         Math.min(
           100,
-          Math.round(heatBase + best.bonus + ownSignalBonus + quietBonus + freshness),
+          Math.round(heatBase + best.bonus + ownSignalBonus + quietBonus + freshness + leaderStrength),
         ),
       );
       if (score < CANDIDATE_THRESHOLD) continue;
