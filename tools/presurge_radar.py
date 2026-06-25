@@ -168,17 +168,50 @@ def main():
     if already:
         print(f"\n   (이미 오름 제외 {len(already)}: " + ", ".join(f"{s['name'][:8]}+{s['today']:.0f}%" for s in sorted(already, key=lambda x: -x['today'])[:6]) + ")")
 
+    # ── 2차상승(눌림목 재진입) 후보 — 최근 급등 + 얕은 눌림(>-12%) + 20일선 위 (재상승 ~75% 검증)
+    surgers = []
+    for t, v in sigs.items():
+        if v.get("confidence") not in ("high", "medium"):
+            continue
+        h = v.get("history") or []
+        if h and max((x.get("change_pct", 0) for x in h[-3:]), default=0) >= 12:
+            surgers.append((t, v.get("name", t)))
+    rerise = []
+    for t, nm in surgers[:80]:
+        try:
+            cs = get_candles(t)
+        except Exception:
+            cs = []
+        if len(cs) < 21 or not cs[0]["close"]:
+            continue
+        peak = max(c["high"] for c in cs[:8])
+        last = cs[0]["close"]
+        dip = (last / peak - 1) * 100 if peak else 0
+        ma20 = sum(c["close"] for c in cs[:20]) / 20
+        if -12 < dip < 2 and last >= ma20:  # 얕은 눌림 + 20일선 유지
+            rerise.append({"ticker": t, "name": nm, "dip": round(dip, 1),
+                           "from_ma": round((last / ma20 - 1) * 100, 1), "price": last})
+    rerise.sort(key=lambda x: x["dip"], reverse=True)
+    if rerise:
+        print(f"\n=== 🔁 눌림목 재진입 후보 ({date_str}) — 최근급등+얕은눌림+20일선위 (재상승~75%) ===")
+        print(f"   {'종목':12} {'고점대비':>7} {'20일선':>7}")
+        for s in rerise[:15]:
+            print(f"   {s['name'][:12]:12} {s['dip']:>+6.1f}% {s['from_ma']:>+6.1f}%")
+
     print("\n📌 단기 스윙 플레이북 (백테스트 검증): 촉매 선진입 → 3일 보유(승률 최고) → "
           "넓은 손절(−10%)·추격 금지. 꽉 조인 +8%/−5%는 오히려 손해.")
 
-    if args.telegram and fresh:
+    if args.telegram and (fresh or rerise):
         try:
             from monitor.live_radar import send_telegram
             lines = [f"📡 오르기 전 촉매 {date_str}", "강한 촉매 + 아직 안 오름 (≤7일 스윙)", ""]
-            for i, s in enumerate(fresh[:12], 1):
+            for i, s in enumerate(fresh[:10], 1):
                 td = f"{s['today']:+.0f}%" if s.get("today") is not None else "-"
                 lines.append(f"{i}. {s['name']} (촉매{s['score']:.0f}) {td}\n   · {s['keyword'][:30]}")
-            lines.append("\n▶ 3일 보유·넓은손절(−10%)·추격금지. 촉매≥6=급등정밀도~70%(검증)")
+            if rerise:
+                lines.append("\n🔁 눌림목 재진입(재상승~75%): " +
+                             ", ".join(f"{s['name']}({s['dip']:+.0f}%)" for s in rerise[:8]))
+            lines.append("\n▶ 3일 보유·넓은손절(−10%)·추격금지. 촉매≥6=정밀도~70%(검증)")
             ok = send_telegram("\n".join(lines))
             print(f"\n📨 텔레그램 발송: {'성공' if ok else '실패(키 없음/오류)'}")
         except Exception as e:
@@ -186,7 +219,7 @@ def main():
 
     out = ROOT / "reports" / "presurge_radar.json"
     json.dump({"date": date_str, "generated_at": datetime.now().isoformat(timespec="seconds"),
-               "candidates": fresh}, open(out, "w"), ensure_ascii=False, indent=1)
+               "candidates": fresh, "rerise": rerise}, open(out, "w"), ensure_ascii=False, indent=1)
     print(f"\n💾 저장: {out}")
 
 

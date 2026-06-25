@@ -202,4 +202,41 @@ export async function loadChains(): Promise<ChainsData> {
   });
 }
 
+/** reports/presurge_radar.json — 오르기 전 촉매 레이더 (cron 생성) */
+export interface RadarCandidate {
+  ticker: string;
+  name: string;
+  market: string;
+  score: number;
+  keyword: string;
+  reason: string;
+  today: number | null;
+  chg5: number | null;
+  from_high: number | null;
+  chart_ok: boolean;
+  price: number | null;
+}
+export interface RadarRerise {
+  ticker: string;
+  name: string;
+  dip: number;
+  from_ma: number;
+  price: number | null;
+}
+export interface RadarData {
+  date: string;
+  generated_at: string;
+  candidates: RadarCandidate[];
+  rerise: RadarRerise[];
+}
+
+export async function loadRadar(): Promise<RadarData> {
+  return readJson<RadarData>("reports/presurge_radar.json", {
+    date: "",
+    generated_at: "",
+    candidates: [],
+    rerise: [],
+  });
+}
+
 export { ROOT, REPORTS_DIR };
