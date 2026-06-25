@@ -1,0 +1,54 @@
+name: 오르기 전 촉매 레이더
+
+"on":
+  schedule:
+    # 평일 08:00 KST (= 23:00 UTC 전날) — 장 시작 전 촉매 후보 발송
+    - cron: '0 23 * * 0-4'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run pre-surge catalyst radar
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # 토스 키(있으면 차트·유동성 필터 사용, 없으면 graceful)
+          TOSS_CLIENT_KEY: ${{ secrets.TOSS_CLIENT_KEY }}
+          TOSS_SECRET_KEY: ${{ secrets.TOSS_SECRET_KEY }}
+          TZ: Asia/Seoul
+        run: python -u -m tools.presurge_radar --telegram --min-score 6 --days 3
+
+      - name: Commit radar result if changed
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar@stockanalyzer"
+          git add reports/presurge_radar.json || true
+          if git diff --staged --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "presurge: $(date -u +%Y%m%d-%H%M)"
+            git pull --rebase origin main || true
+            git push
+          fi

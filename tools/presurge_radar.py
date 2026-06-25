@@ -56,6 +56,7 @@ def main():
     p.add_argument("--max", type=int, default=None, help="워치리스트 상한(테스트)")
     p.add_argument("--all", action="store_true", help="low 포함")
     p.add_argument("--workers", type=int, default=8)
+    p.add_argument("--telegram", action="store_true", help="결과를 텔레그램으로 발송")
     args = p.parse_args()
     if not os.environ.get("OPENAI_API_KEY"):
         print("❌ OPENAI_API_KEY 없음"); sys.exit(1)
@@ -169,6 +170,19 @@ def main():
 
     print("\n📌 단기 스윙 플레이북 (백테스트 검증): 촉매 선진입 → 3일 보유(승률 최고) → "
           "넓은 손절(−10%)·추격 금지. 꽉 조인 +8%/−5%는 오히려 손해.")
+
+    if args.telegram and fresh:
+        try:
+            from monitor.live_radar import send_telegram
+            lines = [f"📡 오르기 전 촉매 {date_str}", "강한 촉매 + 아직 안 오름 (≤7일 스윙)", ""]
+            for i, s in enumerate(fresh[:12], 1):
+                td = f"{s['today']:+.0f}%" if s.get("today") is not None else "-"
+                lines.append(f"{i}. {s['name']} (촉매{s['score']:.0f}) {td}\n   · {s['keyword'][:30]}")
+            lines.append("\n▶ 3일 보유·넓은손절(−10%)·추격금지. 촉매≥6=급등정밀도~70%(검증)")
+            ok = send_telegram("\n".join(lines))
+            print(f"\n📨 텔레그램 발송: {'성공' if ok else '실패(키 없음/오류)'}")
+        except Exception as e:
+            print(f"\n📨 텔레그램 실패: {str(e)[:80]}")
 
     out = ROOT / "reports" / "presurge_radar.json"
     json.dump({"date": date_str, "generated_at": datetime.now().isoformat(timespec="seconds"),
