@@ -44,7 +44,7 @@ jobs:
         run: |
           git config user.name "radar-bot"
           git config user.email "radar@stockanalyzer"
-          git add reports/presurge_radar.json || true
+          git add reports/presurge_radar.json state/radar_ledger.jsonl || true
           if git diff --staged --quiet; then
             echo "변경 없음"
           else

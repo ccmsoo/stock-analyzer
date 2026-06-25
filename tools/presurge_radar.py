@@ -190,6 +190,14 @@ def main():
                "candidates": fresh}, open(out, "w"), ensure_ascii=False, indent=1)
     print(f"\n💾 저장: {out}")
 
+    # 포워드 성적표용 장부에 누적(append-only, 중복방지) — 며칠 뒤 score_ledger가 채점
+    try:
+        from tools.radar_ledger import append_picks
+        n_added = append_picks(date_str, fresh)
+        print(f"📒 장부 추가: {n_added}건 (state/radar_ledger.jsonl)")
+    except Exception as e:
+        print(f"📒 장부 기록 실패: {str(e)[:80]}")
+
 
 if __name__ == "__main__":
     main()
