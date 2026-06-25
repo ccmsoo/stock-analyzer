@@ -74,16 +74,19 @@ def main():
     p.add_argument("--from", dest="dfrom", default="20260401")
     p.add_argument("--until", default="20260610")
     p.add_argument("--workers", type=int, default=6)
+    p.add_argument("--cache", default="/tmp/kw_px.json", help="캔들 캐시(유니버스 확대 시 /tmp/univ_px.json)")
     args = p.parse_args()
     if not os.environ.get("OPENAI_API_KEY"):
         print("❌ OPENAI_API_KEY 없음"); sys.exit(1)
-    if not KW_CACHE.exists():
-        print("⚠️ /tmp/kw_px.json 없음 — backtest_keywords 먼저"); sys.exit(1)
+    cache_path = Path(args.cache)
+    if not cache_path.exists():
+        print(f"⚠️ {cache_path} 없음 — fetch_universe / backtest_keywords 먼저"); sys.exit(1)
 
-    px = json.loads(KW_CACHE.read_text())
-    tickers = sorted({k for k in px if "#order" not in k} - {"069500", "229200"})
+    px = json.loads(cache_path.read_text())
+    tickers = sorted({k for k in px if not k.endswith("#order") and not k.startswith("#")} - {"069500", "229200"})
     sigs = json.load(open(ROOT / "state" / "signals.json"))["signals"]
-    names = {t: sigs.get(t, {}).get("name", t) for t in tickers}
+    cache_names = px.get("#names", {})
+    names = {t: cache_names.get(t) or sigs.get(t, {}).get("name", t) for t in tickers}
 
     def chg(t, d):
         order = px[t + "#order"]; m = px[t]
