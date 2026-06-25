@@ -1,0 +1,1396 @@
+{
+ "params": {
+  "surge": 12.0,
+  "window": 6,
+  "max": 150,
+  "dfrom": "20260401",
+  "until": "20260613",
+  "cooldown": 5,
+  "sleep": 0.25
+ },
+ "n": 150,
+ "results": [
+  {
+   "ticker": "217590",
+   "name": "티엠씨",
+   "date": "20260519",
+   "chg": 30.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "059090",
+   "name": "미코",
+   "date": "20260416",
+   "chg": 30.8,
+   "n_pre": 3,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "007390",
+   "name": "네이처셀",
+   "date": "20260522",
+   "chg": 30.6,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "011790",
+   "name": "SKC",
+   "date": "20260506",
+   "chg": 30.6,
+   "n_pre": 3,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "307950",
+   "name": "현대오토에버",
+   "date": "20260508",
+   "chg": 30.3,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "001740",
+   "name": "SK네트웍스",
+   "date": "20260526",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "001740",
+   "name": "SK네트웍스",
+   "date": "20260608",
+   "chg": 30.0,
+   "n_pre": 9,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "003060",
+   "name": "에이프로젠바이오로직스",
+   "date": "20260512",
+   "chg": 30.0,
+   "n_pre": 3,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "006660",
+   "name": "삼성공조",
+   "date": "20260527",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "007460",
+   "name": "에이프로젠",
+   "date": "20260512",
+   "chg": 30.0,
+   "n_pre": 10,
+   "cats": [
+    "임상/허가"
+   ],
+   "lead": 4
+  },
+  {
+   "ticker": "007610",
+   "name": "선도전기",
+   "date": "20260429",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "007610",
+   "name": "선도전기",
+   "date": "20260511",
+   "chg": 30.0,
+   "n_pre": 8,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "009415",
+   "name": "태영건설우",
+   "date": "20260415",
+   "chg": 30.0,
+   "n_pre": 6,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "009415",
+   "name": "태영건설우",
+   "date": "20260521",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "011000",
+   "name": "진원생명과학",
+   "date": "20260519",
+   "chg": 30.0,
+   "n_pre": 6,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "012170",
+   "name": "아센디오",
+   "date": "20260528",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "012860",
+   "name": "모베이스전자",
+   "date": "20260512",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "032800",
+   "name": "판타지오",
+   "date": "20260513",
+   "chg": 30.0,
+   "n_pre": 5,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "032820",
+   "name": "우리기술",
+   "date": "20260612",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "037460",
+   "name": "삼지전자",
+   "date": "20260515",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "037560",
+   "name": "LG헬로비전",
+   "date": "20260601",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "065420",
+   "name": "에스아이리소스",
+   "date": "20260420",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "065440",
+   "name": "이루온",
+   "date": "20260401",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "066430",
+   "name": "아이로보틱스",
+   "date": "20260515",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "066980",
+   "name": "한성크린텍",
+   "date": "20260520",
+   "chg": 30.0,
+   "n_pre": 8,
+   "cats": [
+    "수주/계약"
+   ],
+   "lead": 1
+  },
+  {
+   "ticker": "069540",
+   "name": "빛과전자",
+   "date": "20260409",
+   "chg": 30.0,
+   "n_pre": 4,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "078890",
+   "name": "가온그룹",
+   "date": "20260414",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "079190",
+   "name": "케스피온",
+   "date": "20260504",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "079190",
+   "name": "케스피온",
+   "date": "20260515",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [
+    "M&A"
+   ],
+   "lead": 5
+  },
+  {
+   "ticker": "084650",
+   "name": "랩지노믹스",
+   "date": "20260609",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [
+    "M&A"
+   ],
+   "lead": 1
+  },
+  {
+   "ticker": "092190",
+   "name": "서울바이오시스",
+   "date": "20260427",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "092600",
+   "name": "앤씨앤",
+   "date": "20260407",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "098460",
+   "name": "고영",
+   "date": "20260424",
+   "chg": 30.0,
+   "n_pre": 8,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "121850",
+   "name": "코이즈",
+   "date": "20260520",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "125020",
+   "name": "티씨머티리얼즈",
+   "date": "20260521",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "130740",
+   "name": "티피씨글로벌",
+   "date": "20260515",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "187870",
+   "name": "디바이스",
+   "date": "20260513",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "189330",
+   "name": "씨이랩",
+   "date": "20260420",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "208710",
+   "name": "포톤",
+   "date": "20260422",
+   "chg": 30.0,
+   "n_pre": 6,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "208710",
+   "name": "포톤",
+   "date": "20260522",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "223310",
+   "name": "사토시홀딩스",
+   "date": "20260515",
+   "chg": 30.0,
+   "n_pre": 23,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "225430",
+   "name": "케이엠제약",
+   "date": "20260520",
+   "chg": 30.0,
+   "n_pre": 3,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "226340",
+   "name": "본느",
+   "date": "20260424",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "232680",
+   "name": "라온로보틱스",
+   "date": "20260521",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "246690",
+   "name": "TS인베스트먼트",
+   "date": "20260529",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "270520",
+   "name": "앱튼",
+   "date": "20260513",
+   "chg": 30.0,
+   "n_pre": 5,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "271830",
+   "name": "팸텍",
+   "date": "20260601",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "288980",
+   "name": "모아데이타",
+   "date": "20260407",
+   "chg": 30.0,
+   "n_pre": 2,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "307930",
+   "name": "컴퍼니케이",
+   "date": "20260602",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [
+    "M&A"
+   ],
+   "lead": 5
+  },
+  {
+   "ticker": "309930",
+   "name": "조이웍스앤코",
+   "date": "20260417",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "322000",
+   "name": "HD현대에너지솔루션",
+   "date": "20260403",
+   "chg": 30.0,
+   "n_pre": 11,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "365590",
+   "name": "하이딥",
+   "date": "20260612",
+   "chg": 30.0,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "377480",
+   "name": "마음AI",
+   "date": "20260604",
+   "chg": 30.0,
+   "n_pre": 6,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "406820",
+   "name": "뷰티스킨",
+   "date": "20260424",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "429270",
+   "name": "시지트로닉스",
+   "date": "20260410",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "429270",
+   "name": "시지트로닉스",
+   "date": "20260522",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "456010",
+   "name": "아이씨티케이",
+   "date": "20260415",
+   "chg": 30.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "000430",
+   "name": "대원강업",
+   "date": "20260609",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "001740",
+   "name": "SK네트웍스",
+   "date": "20260514",
+   "chg": 29.9,
+   "n_pre": 7,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "004415",
+   "name": "서울식품우",
+   "date": "20260529",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "007610",
+   "name": "선도전기",
+   "date": "20260521",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "009415",
+   "name": "태영건설우",
+   "date": "20260408",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "009415",
+   "name": "태영건설우",
+   "date": "20260507",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "011000",
+   "name": "진원생명과학",
+   "date": "20260417",
+   "chg": 29.9,
+   "n_pre": 2,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "011000",
+   "name": "진원생명과학",
+   "date": "20260508",
+   "chg": 29.9,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "021880",
+   "name": "메이슨캐피탈",
+   "date": "20260526",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "027360",
+   "name": "아주IB투자",
+   "date": "20260414",
+   "chg": 29.9,
+   "n_pre": 12,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "032580",
+   "name": "피델릭스",
+   "date": "20260511",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "032580",
+   "name": "피델릭스",
+   "date": "20260521",
+   "chg": 29.9,
+   "n_pre": 6,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "035620",
+   "name": "바른손이앤에이",
+   "date": "20260519",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "036710",
+   "name": "심텍홀딩스",
+   "date": "20260521",
+   "chg": 29.9,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "065420",
+   "name": "에스아이리소스",
+   "date": "20260527",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "065440",
+   "name": "이루온",
+   "date": "20260408",
+   "chg": 29.9,
+   "n_pre": 2,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "069140",
+   "name": "누리플랜",
+   "date": "20260529",
+   "chg": 29.9,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "069540",
+   "name": "빛과전자",
+   "date": "20260417",
+   "chg": 29.9,
+   "n_pre": 17,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "069540",
+   "name": "빛과전자",
+   "date": "20260522",
+   "chg": 29.9,
+   "n_pre": 1,
+   "cats": [
+    "M&A"
+   ],
+   "lead": 2
+  },
+  {
+   "ticker": "092600",
+   "name": "앤씨앤",
+   "date": "20260515",
+   "chg": 29.9,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "100790",
+   "name": "미래에셋벤처투자",
+   "date": "20260414",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "101140",
+   "name": "인바이오젠",
+   "date": "20260528",
+   "chg": 29.9,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "114450",
+   "name": "그린생명과학",
+   "date": "20260513",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "121850",
+   "name": "코이즈",
+   "date": "20260407",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "142210",
+   "name": "유니트론텍",
+   "date": "20260521",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "147760",
+   "name": "피엠티",
+   "date": "20260513",
+   "chg": 29.9,
+   "n_pre": 3,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "166480",
+   "name": "코아스템켐온",
+   "date": "20260527",
+   "chg": 29.9,
+   "n_pre": 8,
+   "cats": [
+    "기술성과",
+    "신약/기술",
+    "임상/허가"
+   ],
+   "lead": 6
+  },
+  {
+   "ticker": "219130",
+   "name": "타이거일렉",
+   "date": "20260609",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "219750",
+   "name": "한국비티비",
+   "date": "20260601",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "223310",
+   "name": "사토시홀딩스",
+   "date": "20260414",
+   "chg": 29.9,
+   "n_pre": 16,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "261780",
+   "name": "차백신연구소",
+   "date": "20260514",
+   "chg": 29.9,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "288980",
+   "name": "모아데이타",
+   "date": "20260521",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "306040",
+   "name": "에스제이그룹",
+   "date": "20260410",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "307180",
+   "name": "아이엘",
+   "date": "20260521",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "309930",
+   "name": "조이웍스앤코",
+   "date": "20260527",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "355390",
+   "name": "크라우드웍스",
+   "date": "20260414",
+   "chg": 29.9,
+   "n_pre": 8,
+   "cats": [
+    "M&A"
+   ],
+   "lead": 1
+  },
+  {
+   "ticker": "355390",
+   "name": "크라우드웍스",
+   "date": "20260601",
+   "chg": 29.9,
+   "n_pre": 3,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "373110",
+   "name": "엑셀세라퓨틱스",
+   "date": "20260521",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "388790",
+   "name": "라이콤",
+   "date": "20260604",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "389680",
+   "name": "유디엠텍",
+   "date": "20260512",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "403550",
+   "name": "쏘카",
+   "date": "20260430",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "406820",
+   "name": "뷰티스킨",
+   "date": "20260519",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "406820",
+   "name": "뷰티스킨",
+   "date": "20260611",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "412350",
+   "name": "레이저쎌",
+   "date": "20260513",
+   "chg": 29.9,
+   "n_pre": 1,
+   "cats": [
+    "투자/증설"
+   ],
+   "lead": 6
+  },
+  {
+   "ticker": "452280",
+   "name": "한선엔지니어링",
+   "date": "20260513",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "456010",
+   "name": "아이씨티케이",
+   "date": "20260519",
+   "chg": 29.9,
+   "n_pre": 4,
+   "cats": [
+    "투자/증설"
+   ],
+   "lead": 1
+  },
+  {
+   "ticker": "457370",
+   "name": "한켐",
+   "date": "20260605",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "476080",
+   "name": "M83",
+   "date": "20260602",
+   "chg": 29.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "018260",
+   "name": "삼성에스디에스",
+   "date": "20260527",
+   "chg": 29.8,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "066430",
+   "name": "아이로보틱스",
+   "date": "20260605",
+   "chg": 29.8,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "082800",
+   "name": "비보존 제약",
+   "date": "20260602",
+   "chg": 29.8,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "115610",
+   "name": "이미지스",
+   "date": "20260609",
+   "chg": 29.8,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "185490",
+   "name": "아이진",
+   "date": "20260520",
+   "chg": 29.8,
+   "n_pre": 2,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "225430",
+   "name": "케이엠제약",
+   "date": "20260602",
+   "chg": 29.8,
+   "n_pre": 4,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "389680",
+   "name": "유디엠텍",
+   "date": "20260610",
+   "chg": 29.8,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "018700",
+   "name": "졸스",
+   "date": "20260519",
+   "chg": 29.7,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "270520",
+   "name": "앱튼",
+   "date": "20260409",
+   "chg": 29.7,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "005500",
+   "name": "삼진제약",
+   "date": "20260514",
+   "chg": 29.5,
+   "n_pre": 12,
+   "cats": [
+    "신약/기술"
+   ],
+   "lead": 6
+  },
+  {
+   "ticker": "021880",
+   "name": "메이슨캐피탈",
+   "date": "20260514",
+   "chg": 29.5,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "061090",
+   "name": "세나테크놀로지",
+   "date": "20260508",
+   "chg": 29.4,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "113810",
+   "name": "디젠스",
+   "date": "20260604",
+   "chg": 28.3,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "270660",
+   "name": "에브리봇",
+   "date": "20260612",
+   "chg": 28.3,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "295310",
+   "name": "에이치브이엠",
+   "date": "20260518",
+   "chg": 28.2,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "321820",
+   "name": "아티스트컴퍼니",
+   "date": "20260410",
+   "chg": 28.2,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "079900",
+   "name": "전진건설로봇",
+   "date": "20260408",
+   "chg": 28.1,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "204320",
+   "name": "HL만도",
+   "date": "20260612",
+   "chg": 27.5,
+   "n_pre": 19,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "181710",
+   "name": "NHN",
+   "date": "20260529",
+   "chg": 27.4,
+   "n_pre": 11,
+   "cats": [
+    "실적"
+   ],
+   "lead": 3
+  },
+  {
+   "ticker": "307930",
+   "name": "컴퍼니케이",
+   "date": "20260401",
+   "chg": 27.2,
+   "n_pre": 2,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "403550",
+   "name": "쏘카",
+   "date": "20260513",
+   "chg": 27.0,
+   "n_pre": 6,
+   "cats": [
+    "M&A"
+   ],
+   "lead": 5
+  },
+  {
+   "ticker": "033160",
+   "name": "엠케이전자",
+   "date": "20260408",
+   "chg": 26.8,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "036170",
+   "name": "에이치엠넥스",
+   "date": "20260604",
+   "chg": 26.8,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "033160",
+   "name": "엠케이전자",
+   "date": "20260611",
+   "chg": 26.7,
+   "n_pre": 2,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "454910",
+   "name": "두산로보틱스",
+   "date": "20260601",
+   "chg": 26.7,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "217590",
+   "name": "티엠씨",
+   "date": "20260410",
+   "chg": 26.4,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "066575",
+   "name": "LG전자우",
+   "date": "20260521",
+   "chg": 26.3,
+   "n_pre": 4,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "043260",
+   "name": "성호전자",
+   "date": "20260401",
+   "chg": 25.6,
+   "n_pre": 11,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "069540",
+   "name": "빛과전자",
+   "date": "20260401",
+   "chg": 25.6,
+   "n_pre": 3,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "321820",
+   "name": "아티스트컴퍼니",
+   "date": "20260521",
+   "chg": 25.4,
+   "n_pre": 3,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "405000",
+   "name": "플라즈맵",
+   "date": "20260601",
+   "chg": 25.4,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "190510",
+   "name": "나무가",
+   "date": "20260514",
+   "chg": 25.2,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "242040",
+   "name": "나무기술",
+   "date": "20260526",
+   "chg": 24.8,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "160980",
+   "name": "싸이맥스",
+   "date": "20260609",
+   "chg": 24.7,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "295310",
+   "name": "에이치브이엠",
+   "date": "20260401",
+   "chg": 24.5,
+   "n_pre": 2,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "018260",
+   "name": "삼성에스디에스",
+   "date": "20260415",
+   "chg": 24.4,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "036170",
+   "name": "에이치엠넥스",
+   "date": "20260408",
+   "chg": 24.4,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "388790",
+   "name": "라이콤",
+   "date": "20260611",
+   "chg": 24.2,
+   "n_pre": 6,
+   "cats": [
+    "수주/계약"
+   ],
+   "lead": 2
+  },
+  {
+   "ticker": "018310",
+   "name": "삼목에스폼",
+   "date": "20260518",
+   "chg": 24.1,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "406820",
+   "name": "뷰티스킨",
+   "date": "20260511",
+   "chg": 24.1,
+   "n_pre": 3,
+   "cats": [
+    "실적"
+   ],
+   "lead": 3
+  },
+  {
+   "ticker": "383930",
+   "name": "디티앤씨알오",
+   "date": "20260521",
+   "chg": 24.0,
+   "n_pre": 1,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "454910",
+   "name": "두산로보틱스",
+   "date": "20260515",
+   "chg": 24.0,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "055490",
+   "name": "테이팩스",
+   "date": "20260518",
+   "chg": 23.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "307950",
+   "name": "현대오토에버",
+   "date": "20260527",
+   "chg": 23.9,
+   "n_pre": 9,
+   "cats": [],
+   "lead": null
+  },
+  {
+   "ticker": "455900",
+   "name": "엔젤로보틱스",
+   "date": "20260601",
+   "chg": 23.9,
+   "n_pre": 0,
+   "cats": [],
+   "lead": null
+  }
+ ]
+}

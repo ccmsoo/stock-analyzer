@@ -27,7 +27,7 @@ def _build_news_url(ticker: str, page: int) -> tuple[str, dict]:
     return url, headers
 
 
-def collect_news_for_stock(ticker, date_str, articles_per_stock=20, days_before=14, max_pages=3):
+def collect_news_for_stock(ticker, date_str, articles_per_stock=20, days_before=14, max_pages=3, deep=False):
     """
     한 종목의 최근 뉴스 수집 (네이버 금융 종목 뉴스 페이지)
 
@@ -37,9 +37,12 @@ def collect_news_for_stock(ticker, date_str, articles_per_stock=20, days_before=
         articles_per_stock: 최대 기사 수
         days_before: 며칠 전 기사까지 (기본 14일 — 상승 '이전' 시그널 누적 추적)
         max_pages: 최대 페이지 (네이버 뉴스 페이지당 약 20건)
+        deep: 과거 날짜 도달용. 최신부터 '너무 새 기사'는 건너뛰며 윈도우까지 페이징.
     """
     target_date = datetime.strptime(date_str, '%Y%m%d')
     earliest = target_date - timedelta(days=days_before)
+    if deep:
+        max_pages = max(max_pages, 40)
 
     articles = []
     for page in range(1, max_pages + 1):
@@ -53,6 +56,7 @@ def collect_news_for_stock(ticker, date_str, articles_per_stock=20, days_before=
             rows = soup.select('table.type5 tr')
             page_too_old = True   # 이 페이지 기사가 전부 윈도우 밖이면 멈춤
             page_added = 0
+            page_has_old = False  # deep: 윈도우 하한(과거)에 도달했는지
 
             for row in rows:
                 title_tag = row.select_one('td.title a')
@@ -78,6 +82,7 @@ def collect_news_for_stock(ticker, date_str, articles_per_stock=20, days_before=
                 if article_date > target_date + timedelta(days=1):
                     continue
                 if article_date < earliest:
+                    page_has_old = True
                     continue
 
                 page_too_old = False
@@ -94,9 +99,14 @@ def collect_news_for_stock(ticker, date_str, articles_per_stock=20, days_before=
                 if len(articles) >= articles_per_stock:
                     return _finalize(articles)
 
-            # 페이지에 윈도우 안 기사가 하나도 없거나, 아예 row가 없으면 더 안 봐도 됨
-            if page_added == 0 or page_too_old:
-                break
+            if deep:
+                # 과거로 페이징: 윈도우보다 더 과거 기사(하한 도달) 만나면 종료. 너무 새 기사뿐이면 계속.
+                if not rows or page_has_old:
+                    break
+            else:
+                # 기존: 윈도우 안 기사가 하나도 없으면 종료
+                if page_added == 0 or page_too_old:
+                    break
 
             time.sleep(0.3)
 
