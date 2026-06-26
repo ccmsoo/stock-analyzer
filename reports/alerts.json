@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-26T22:21:14",
-  "total": 199,
+  "generated_at": "2026-06-27T00:36:39",
+  "total": 197,
   "new_today": 0,
   "alerts": [
     {
@@ -3669,44 +3669,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "수급/지배구조(투자·인수·재무)",
       "matched_at": "2026-05-28T11:29:34"
-    },
-    {
-      "ticker": "347850",
-      "name": "디앤디파마텍",
-      "sosok": "",
-      "report_name": "[기재정정]투자판단관련주요경영사항(임상시험결과)\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t(대사이상지방간염 (MASH) 치료제 DD01의 미국 임상 제2상 Topline data 수령)",
-      "submitter": "디앤디파마텍",
-      "submitted_at": "2026.05.27",
-      "time": "09:47",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260527900151",
-      "rcp_no": "20260527900151",
-      "category": "신약/임상",
-      "score": 78,
-      "current_price": 98800,
-      "today_change_pct": 30.0,
-      "signal_last_seen": "20260527",
-      "signal_confidence": "high",
-      "signal_main_theme": "바이오",
-      "matched_at": "2026-05-27T22:56:32"
-    },
-    {
-      "ticker": "166480",
-      "name": "코아스템켐온",
-      "sosok": "",
-      "report_name": "투자판단관련주요경영사항\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t(뉴로나타-알주(자가골수유래중간엽줄기세포) 품목허가사항 변경허가 신청 승인)",
-      "submitter": "코아스템켐온",
-      "submitted_at": "2026.05.26",
-      "time": "17:22",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260526900749",
-      "rcp_no": "20260526900749",
-      "category": "신약/임상",
-      "score": 78,
-      "current_price": 4775,
-      "today_change_pct": 29.93,
-      "signal_last_seen": "20260527",
-      "signal_confidence": "high",
-      "signal_main_theme": "바이오",
-      "matched_at": "2026-05-27T22:56:33"
     },
     {
       "ticker": "232680",
