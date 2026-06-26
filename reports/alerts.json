@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-26T08:59:50",
-  "total": 190,
+  "generated_at": "2026-06-26T13:01:53",
+  "total": 192,
   "new_today": 2,
   "alerts": [
+    {
+      "ticker": "229000",
+      "name": "젠큐릭스",
+      "sosok": "",
+      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
+      "submitter": "젠큐릭스",
+      "submitted_at": "2026.06.26",
+      "time": "09:47",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260626000077",
+      "rcp_no": "20260626000077",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 2090,
+      "today_change_pct": 0.71,
+      "signal_last_seen": "20260617",
+      "signal_confidence": "high",
+      "signal_main_theme": "바이오",
+      "matched_at": "2026-06-26T13:01:53"
+    },
     {
       "ticker": "003490",
       "name": "대한항공",
@@ -3612,6 +3631,25 @@
       "signal_confidence": "medium",
       "signal_main_theme": "policy",
       "matched_at": "2026-06-25T16:41:54"
+    },
+    {
+      "ticker": "381620",
+      "name": "제닉스로보틱스",
+      "sosok": "",
+      "report_name": "[첨부추가]사업보고서\n\t\t\t\t\t\t\t\t\t (2025.12)",
+      "submitter": "제닉스로보틱스",
+      "submitted_at": "2026.03.13",
+      "time": "10:23",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313000454",
+      "rcp_no": "20260313000454",
+      "category": "실적",
+      "score": 75,
+      "current_price": 5630,
+      "today_change_pct": 7.4,
+      "signal_last_seen": "20260520",
+      "signal_confidence": "medium",
+      "signal_main_theme": "산업 자동화/로봇",
+      "matched_at": "2026-06-26T13:01:52"
     }
   ]
 }
