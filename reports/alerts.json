@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-28T10:31:42",
-  "total": 188,
+  "generated_at": "2026-06-28T15:01:43",
+  "total": 186,
   "new_today": 0,
   "alerts": [
     {
@@ -3460,44 +3460,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "실적",
       "matched_at": "2026-05-29T18:46:32"
-    },
-    {
-      "ticker": "000370",
-      "name": "한화손해보험",
-      "sosok": "",
-      "report_name": "[기재정정]분기보고서\n\t\t\t\t\t\t\t\t\t (2026.03)",
-      "submitter": "한화손해보험",
-      "submitted_at": "2026.05.29",
-      "time": "10:04",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260529000135",
-      "rcp_no": "20260529000135",
-      "category": "실적",
-      "score": 75,
-      "current_price": 6240,
-      "today_change_pct": 3.11,
-      "signal_last_seen": "20260519",
-      "signal_confidence": "medium",
-      "signal_main_theme": "실적·수급·신상품(보험업 영업확대)",
-      "matched_at": "2026-05-29T10:35:14"
-    },
-    {
-      "ticker": "047040",
-      "name": "대우건설",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "대우건설",
-      "submitted_at": "2026.05.29",
-      "time": "09:27",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260529800181",
-      "rcp_no": "20260529800181",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 26550,
-      "today_change_pct": 4.32,
-      "signal_last_seen": "20260514",
-      "signal_confidence": "high",
-      "signal_main_theme": "부동산, 건설",
-      "matched_at": "2026-05-29T10:35:14"
     },
     {
       "ticker": "232680",
