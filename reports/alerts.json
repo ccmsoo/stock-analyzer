@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-01T06:23:08",
-  "total": 238,
-  "new_today": 0,
+  "generated_at": "2026-07-01T07:48:41",
+  "total": 240,
+  "new_today": 2,
   "alerts": [
+    {
+      "ticker": "290670",
+      "name": "대보마그네틱",
+      "sosok": "",
+      "report_name": "[기재정정]사업보고서\n\t\t\t\t\t\t\t\t\t (2025.12)",
+      "submitter": "대보마그네틱",
+      "submitted_at": "2026.07.01",
+      "time": "07:30",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260630001121",
+      "rcp_no": "20260630001121",
+      "category": "실적",
+      "score": 75,
+      "current_price": 6060,
+      "today_change_pct": 8.41,
+      "signal_last_seen": "20260629",
+      "signal_confidence": "medium",
+      "signal_main_theme": "2차전지",
+      "matched_at": "2026-07-01T07:48:40"
+    },
     {
       "ticker": "348370",
       "name": "엔켐",
@@ -4391,6 +4410,25 @@
       "signal_confidence": "high",
       "signal_main_theme": "수급·기술적(주식병합·거래재개)",
       "matched_at": "2026-06-29T18:25:18"
+    },
+    {
+      "ticker": "290670",
+      "name": "대보마그네틱",
+      "sosok": "",
+      "report_name": "[첨부추가]사업보고서\n\t\t\t\t\t\t\t\t\t (2025.12)",
+      "submitter": "대보마그네틱",
+      "submitted_at": "2026.03.23",
+      "time": "07:30",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001639",
+      "rcp_no": "20260323001639",
+      "category": "실적",
+      "score": 75,
+      "current_price": 6060,
+      "today_change_pct": 8.41,
+      "signal_last_seen": "20260629",
+      "signal_confidence": "medium",
+      "signal_main_theme": "2차전지",
+      "matched_at": "2026-07-01T07:48:41"
     },
     {
       "ticker": "018700",
