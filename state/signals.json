@@ -27151,126 +27151,152 @@
       "a4904e01639c"
     ],
     "live_radar": [
-      "7f462e4a9478",
-      "54d21b25b5de",
-      "7211e4a8717a",
-      "8f57ba1ceeaa",
-      "54d343f20ab9",
-      "f8a41eed29bf",
-      "992c191bb1bd",
-      "07031d5a6722",
-      "dc07c6c78e30",
-      "64c122baac21",
       "6d2aab0abeee",
-      "02c03828bc09",
-      "8800b3cd0db2",
-      "e501ad97e8a0",
-      "1b7892542a0d",
-      "f66b47b0c2a3",
-      "4bce25fa233a",
-      "a334ca5f0129",
-      "2a7ade1e887d",
-      "75667c15dd6a",
-      "a43ed8b4d081",
-      "5e333e726b1b",
-      "768c37b0dd30",
-      "d95dbb159ff4",
-      "dccae380221a",
-      "aa8ecec24176",
-      "cb74c068f321",
-      "3307c434e2f9",
-      "821e07819165",
-      "a29d18723a2c",
-      "3eb21c421b48",
-      "ce7818d84c14",
-      "bd2bed16e0ac",
-      "a9a9128d095c",
-      "93d55afb640c",
-      "2d828d67efba",
-      "0de2ad04dbb1",
-      "9e411284f89f",
-      "758fa76841c0",
-      "98bd71c4536d",
-      "4535de65ff5c",
-      "200d882e245c",
-      "7b018a0351e9",
-      "f815ac4f4f9f",
-      "3374ffc7faef",
-      "2d48247d4b57",
-      "12d0f34b0595",
-      "ed823d562832",
-      "eea70d0274dc",
-      "7c517e42b1f5",
-      "ffd09309bdf5",
       "07057b758006",
-      "b83078b55b7f",
-      "c3ab9bf33ca2",
-      "18ba73271e09",
-      "f1f21f6e8fe3",
-      "9545141d9e60",
-      "8b00ca96e468",
-      "233a3e5ca932",
-      "538adfdb9849",
-      "8812e64fb5d3",
-      "fb73c5826167",
-      "4cc27e9436ef",
-      "104b1d0c3f0c",
-      "5b27a9e1fba7",
-      "0c28389a39ac",
-      "8d5794a36fd0",
-      "db830b6f7d3e",
-      "9a8297623792",
+      "3c837a87b1d8",
+      "703dbe43182d",
+      "d95dbb159ff4",
+      "0de2ad04dbb1",
+      "532b4a1057d7",
+      "1735e98dcc19",
+      "2a7ade1e887d",
+      "9e411284f89f",
+      "6bb2b76c3b82",
+      "3307c434e2f9",
       "f5305af2a8b5",
-      "deaaf6d325c1",
-      "8bf965df799c",
-      "874d7f2b57a7",
-      "4beccb829e57",
+      "dadae2691751",
       "a316a6acf083",
-      "4a790ba500a5",
+      "db830b6f7d3e",
+      "54d343f20ab9",
+      "a52e9bb6ea5a",
+      "4d3f36cc6c13",
+      "f236de2cf79b",
+      "3374ffc7faef",
+      "54b38c7ceff0",
+      "deaaf6d325c1",
+      "54d21b25b5de",
+      "4a8adb22d1cc",
+      "ce7818d84c14",
+      "67995e64ef62",
       "5dd15f627228",
+      "98a76efbfeb1",
+      "09438848786b",
+      "ec8aca2109f1",
+      "9a8297623792",
+      "dc07c6c78e30",
+      "f1f21f6e8fe3",
+      "8812e64fb5d3",
+      "2d48247d4b57",
+      "7211e4a8717a",
+      "c3ab9bf33ca2",
+      "4beccb829e57",
+      "4cc27e9436ef",
+      "07031d5a6722",
+      "b4f4777b7091",
+      "4e869e4fde7e",
+      "6eb80406436b",
+      "eea70d0274dc",
+      "b2c6c4448248",
+      "db52e43b1da1",
+      "b37752d4057a",
+      "0eb4af450891",
+      "cb74c068f321",
+      "ffd09309bdf5",
+      "f97a447251c5",
+      "0efb18d749f7",
+      "dccae380221a",
+      "70f8d33c71c6",
       "f456094a1330",
-      "271cfa1aa9df",
+      "7f462e4a9478",
+      "9317d768b263",
+      "fb73c5826167",
+      "8d5794a36fd0",
+      "8bf965df799c",
+      "e88a06f6b78c",
+      "4d9e37acc104",
+      "0c28389a39ac",
+      "874d7f2b57a7",
+      "e0cc2c5afd37",
+      "8b00ca96e468",
+      "98bd71c4536d",
+      "200d882e245c",
+      "b81f65946abb",
+      "333368afa4f4",
+      "f9c4011a8f87",
+      "758fa76841c0",
+      "550f2e709757",
+      "4a790ba500a5",
+      "796106b6e0cd",
+      "e501ad97e8a0",
+      "bd2bed16e0ac",
+      "682ae68bd253",
+      "4bce25fa233a",
+      "821e07819165",
+      "9545141d9e60",
+      "673aa869e3de",
+      "676b222ce3b0",
+      "c4ab137a192c",
+      "5e333e726b1b",
+      "8c4063f3f9bf",
+      "a43ed8b4d081",
+      "02c03828bc09",
+      "aa8ecec24176",
+      "847a13c2def4",
+      "71e122d70adc",
+      "db48acadb058",
+      "12d0f34b0595",
+      "9a14332be45a",
+      "396b75a1e28e",
+      "f8a41eed29bf",
+      "0fc1e91e19d9",
+      "528b61d04eba",
+      "930ceef20ec7",
+      "a9a9128d095c",
+      "f815ac4f4f9f",
+      "05802f992f2a",
+      "3eb21c421b48",
+      "32ed44b6154d",
+      "684b413a6019",
+      "9b9bf311ca46",
+      "72f587362d8a",
+      "8f57ba1ceeaa",
+      "b83078b55b7f",
+      "6609b0147f3b",
+      "18ba73271e09",
+      "104b1d0c3f0c",
+      "4afdc016364e",
+      "64c122baac21",
+      "3270f6d72abb",
+      "7c517e42b1f5",
+      "d8edad1f21c4",
+      "d560d22f8b8a",
+      "233a3e5ca932",
       "9885b3b8119e",
       "1de2cdf0d203",
-      "8a118b22007f",
-      "0efb18d749f7",
-      "3270f6d72abb",
-      "676b222ce3b0",
-      "09438848786b",
-      "550f2e709757",
-      "4e869e4fde7e",
-      "4afdc016364e",
-      "b2c6c4448248",
-      "71e122d70adc",
-      "333368afa4f4",
-      "6609b0147f3b",
-      "c4ab137a192c",
-      "a4506365c9f3",
-      "e0cc2c5afd37",
-      "4a8adb22d1cc",
-      "33cef9c8b2d6",
-      "9317d768b263",
-      "db48acadb058",
-      "54b38c7ceff0",
-      "b81f65946abb",
-      "a52e9bb6ea5a",
-      "1735e98dcc19",
-      "796106b6e0cd",
-      "b37752d4057a",
-      "fdcbe33ec6a1",
-      "4d3f36cc6c13",
-      "6bb2b76c3b82",
-      "f236de2cf79b",
-      "3c837a87b1d8",
-      "ec8aca2109f1",
-      "847a13c2def4",
-      "05802f992f2a",
-      "7d0d1a535cf2",
-      "8c4063f3f9bf",
-      "4d9e37acc104",
-      "682ae68bd253",
       "e100dfb9a5de",
-      "32ed44b6154d"
+      "538adfdb9849",
+      "a334ca5f0129",
+      "a4506365c9f3",
+      "93d55afb640c",
+      "5b27a9e1fba7",
+      "768c37b0dd30",
+      "8a118b22007f",
+      "a29d18723a2c",
+      "992c191bb1bd",
+      "f66b47b0c2a3",
+      "29d235bfcd7b",
+      "1b7892542a0d",
+      "ed823d562832",
+      "75667c15dd6a",
+      "33cef9c8b2d6",
+      "4535de65ff5c",
+      "7d0d1a535cf2",
+      "271cfa1aa9df",
+      "7b018a0351e9",
+      "fdcbe33ec6a1",
+      "6fddc78782b4",
+      "8800b3cd0db2",
+      "2d828d67efba"
     ],
     "069640": [
       "60cf326e55eb",
@@ -43066,6 +43092,311 @@
         }
       ],
       "detected_at": "2026-06-26T00:17:01"
+    },
+    {
+      "keyword": "식품의약품안전처",
+      "matched_owners": [
+        {
+          "ticker": "003060",
+          "name": "에이프로젠바이오로직스",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "007460",
+          "name": "에이프로젠",
+          "cluster": "osteoarthritis_drug"
+        },
+        {
+          "ticker": "462510",
+          "name": "라메디텍",
+          "cluster": "biotech_policy_beneficiary"
+        }
+      ],
+      "clusters": [
+        "biotech_policy_beneficiary",
+        "osteoarthritis_drug"
+      ],
+      "new_articles": [
+        {
+          "title": "경희대병원, 디지털치료기기 결합한 당뇨병 AI 관리 시스템 개발",
+          "link": "http://www.thefirstmedia.net/news/articleView.html?idxno=202682",
+          "source": "더퍼스트",
+          "date": "2026.06.30 23:50",
+          "origin": "search:식품의약품안전처"
+        }
+      ],
+      "detected_at": "2026-07-01T00:12:44"
+    },
+    {
+      "keyword": "고성능 로봇",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "HD현대로보틱스, 고가반 하이브리드 협동로봇'HDC 시리즈' 3종 출시",
+          "link": "https://www.irobotnews.com/news/articleView.html?idxno=47154",
+          "source": "로봇신문",
+          "date": "2026.06.30 23:56",
+          "origin": "search:고성능 로봇"
+        }
+      ],
+      "detected_at": "2026-07-01T00:12:51"
+    },
+    {
+      "keyword": "한국거래소",
+      "matched_owners": [
+        {
+          "ticker": "048770",
+          "name": "TPC로보틱스",
+          "cluster": "humanoid_robotics"
+        }
+      ],
+      "clusters": [
+        "humanoid_robotics"
+      ],
+      "new_articles": [
+        {
+          "title": "코스닥 30주년 개편…강원 상장사 '생존게임'",
+          "link": "https://www.kado.net/news/articleView.html?idxno=2058771",
+          "source": "",
+          "date": "2026.06.30 23:55",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "오늘의 금값시세(7월 1일자) 금값 \"2026년 전망 들여다보니\"",
+          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3622499",
+          "source": "국제뉴스",
+          "date": "2026.06.30 23:54",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "한화오션 주가 털썩, 장중 10만원선 내주기도…캐나다 잠수함 발표일 다...",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=585661",
+          "source": "CBC뉴스",
+          "date": "2026.06.30 23:54",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "오늘 금시세(금값) 국내 가격은?…미국 증시와 연준의 통화정책 '이목'",
+          "link": "https://www.cbci.co.kr/news/articleView.html?idxno=585629",
+          "source": "CBC뉴스",
+          "date": "2026.06.30 23:54",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "6.6조 끌어모은 '매드업' 오늘(1일) 코스닥 상장, 7호 따따블 터질까",
+          "link": "http://www.newswell.co.kr/news/articleView.html?idxno=19889",
+          "source": "뉴스웰",
+          "date": "2026.06.30 23:50",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "바이낸스發 초위험 레버리지, 국내 증시 공습…규제는 무방비",
+          "link": "https://news.tf.co.kr/read/economy/2338199.htm",
+          "source": "",
+          "date": "2026.06.30 23:49",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "코스닥 '30주년' 시총 500조 회복···정책 바람 타고 재도약 신호탄",
+          "link": "https://www.ziksir.com/news/articleView.html?idxno=138508",
+          "source": "",
+          "date": "2026.06.30 23:48",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "\"호남 반도체 클러스터 기대감에 지역株 급등…거래소경보에도 일부 상...",
+          "link": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=430435",
+          "source": "데일리스포츠한국",
+          "date": "2026.06.30 23:34",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "한국거래소, 에스씨엠생명과학 ‘관리종목 해제 실수’ 배상액 확정",
+          "link": "https://biz.chosun.com/stock/stock_general/2026/06/30/6EFTVU4TRRCV5JPXRM7TUV4TKQ/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "source": "",
+          "date": "2026.06.30 23:27",
+          "origin": "search:한국거래소"
+        },
+        {
+          "title": "한국거래소, 에스씨엠생명과학 '관리종목 해제 실수' 배상액 확정",
+          "link": "https://www.delighti.co.kr/news/articleView.html?idxno=118401",
+          "source": "딜라이트닷넷",
+          "date": "2026.06.30 23:20",
+          "origin": "search:한국거래소"
+        }
+      ],
+      "detected_at": "2026-07-01T00:12:54"
+    },
+    {
+      "keyword": "글로벌 모빌리티 기업",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "7월 1주 주요 제조업 전망",
+          "link": "https://www.laborplus.co.kr/news/articleView.html?idxno=41057",
+          "source": "참여와혁신",
+          "date": "2026.06.30 23:36",
+          "origin": "search:글로벌 모빌리티 기업"
+        }
+      ],
+      "detected_at": "2026-07-01T00:13:03"
+    },
+    {
+      "keyword": "엔비디아",
+      "matched_owners": [
+        {
+          "ticker": "389680",
+          "name": "유디엠텍",
+          "cluster": "digital_twin_contracts"
+        }
+      ],
+      "clusters": [
+        "digital_twin_contracts"
+      ],
+      "new_articles": [
+        {
+          "title": "[김대호 진단] 돈의 질서 ⑯엔비디아그 다음 “반도체 가치사슬\"...기...",
+          "link": "https://www.g-enews.com/view.php?ud=202606301004506704906806b77b_1",
+          "source": "글로벌이코노믹",
+          "date": "2026.06.30 23:47",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[설왕설래] 칩플레이션",
+          "link": "https://www.segye.com/newsView/20260630516877?OutUrl=naver",
+          "source": "",
+          "date": "2026.06.30 23:43",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "반도체로 쏠리는 월가 자금…M7 시총 2조달러 이상 증발",
+          "link": "https://biz.chosun.com/stock/overseas_stock/2026/06/30/ELSOP2TKK5HPPHNZ5NHUH377UE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "source": "",
+          "date": "2026.06.30 23:33",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[뉴욕증시]기술주 강세에 일제히 상승 중",
+          "link": "https://view.asiae.co.kr/article/2026063023362211028",
+          "source": "",
+          "date": "2026.06.30 23:23",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "매그니피센트7, 시가총액 3천560조원 급감... 반도체로 주도권 이동",
+          "link": "https://www.tokenpost.kr/news/market/373992",
+          "source": "토큰포스트",
+          "date": "2026.06.30 23:23",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[마켓인사이드] 반도체 천문학적 성과 배분 놓고 키옥시아 등 글로벌 반...",
+          "link": "https://www.news2day.co.kr/article/20260630500303",
+          "source": "뉴스투데이",
+          "date": "2026.06.30 23:21",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "6년만에 최고의 2분기 보낸 美증시…반기 마지막 날도 상승",
+          "link": "https://www.hankyung.com/article/202606307816i",
+          "source": "",
+          "date": "2026.06.30 23:20",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "[자정 뉴스브리핑] 영국 금융행위감독청, 암호화폐 규제 최종 프레임워...",
+          "link": "https://www.tokenpost.kr/news/briefing/373989",
+          "source": "토큰포스트",
+          "date": "2026.06.30 23:19",
+          "origin": "search:엔비디아"
+        },
+        {
+          "title": "\"李대통령이 되레 지역 갈등 부추겨\"…국민의힘, '호남 반도체' 현실성...",
+          "link": "https://www.dailian.co.kr/news/view/1661785/?sc=Naver",
+          "source": "",
+          "date": "2026.06.30 23:17",
+          "origin": "search:엔비디아"
+        }
+      ],
+      "detected_at": "2026-07-01T00:13:06"
+    },
+    {
+      "keyword": "모래시계",
+      "matched_owners": [
+        {
+          "ticker": "452260",
+          "name": "한화갤러리아",
+          "cluster": "realestate_redevelopment"
+        }
+      ],
+      "clusters": [
+        "realestate_redevelopment"
+      ],
+      "new_articles": [
+        {
+          "title": "[오늘의 운세] 2026년 07월 01일 별자리 운세",
+          "link": "https://www.ytn.co.kr/_ln/0121_202607010000000002",
+          "source": "",
+          "date": "2026.06.30 23:47",
+          "origin": "search:모래시계"
+        }
+      ],
+      "detected_at": "2026-07-01T00:13:14"
+    },
+    {
+      "keyword": "하나증권",
+      "matched_owners": [
+        {
+          "ticker": "499790",
+          "name": "GS피앤엘",
+          "cluster": "earnings_surprise"
+        }
+      ],
+      "clusters": [
+        "earnings_surprise"
+      ],
+      "new_articles": [
+        {
+          "title": "해외펀드 세금 돌려받고 환전은 밤에도…오늘부터 달라지는 금융제도",
+          "link": "https://news.tf.co.kr/read/economy/2338081.htm",
+          "source": "",
+          "date": "2026.06.30 23:48",
+          "origin": "search:하나증권"
+        },
+        {
+          "title": "NH투자증권, 신재욱·배광수 각자대표 체제 출범... '대형사 경쟁 속 책...",
+          "link": "https://www.meconomynews.com/news/articleView.html?idxno=132400",
+          "source": "시장경제신문",
+          "date": "2026.06.30 23:39",
+          "origin": "search:하나증권"
+        },
+        {
+          "title": "농협개혁, '금융·경제지주 인적분할'에 쏠리는 관심",
+          "link": "http://www.youngnong.co.kr/news/articleView.html?idxno=60484",
+          "source": "한국영농신문",
+          "date": "2026.06.30 23:21",
+          "origin": "search:하나증권"
+        }
+      ],
+      "detected_at": "2026-07-01T00:13:25"
     }
   ]
 }
