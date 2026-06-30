@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-06-30T08:15:05",
-  "total": 198,
-  "new_today": 0,
+  "generated_at": "2026-06-30T09:20:30",
+  "total": 199,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "009150",
+      "name": "삼성전기",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "삼성전기",
+      "submitted_at": "2026.06.30",
+      "time": "09:11",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260630800114",
+      "rcp_no": "20260630800114",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 2141000,
+      "today_change_pct": 5.05,
+      "signal_last_seen": "20260618",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체·부품(수급/테마성)",
+      "matched_at": "2026-06-30T09:20:30"
+    },
     {
       "ticker": "034730",
       "name": "SK",
