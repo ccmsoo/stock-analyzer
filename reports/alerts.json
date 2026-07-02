@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-02T08:11:22",
-  "total": 270,
-  "new_today": 0,
+  "generated_at": "2026-07-02T09:20:53",
+  "total": 271,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "003160",
+      "name": "디아이",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결(자율공시)",
+      "submitter": "디아이",
+      "submitted_at": "2026.07.02",
+      "time": "09:20",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260702800103",
+      "rcp_no": "20260702800103",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 25800,
+      "today_change_pct": 10.1,
+      "signal_last_seen": "20260609",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체 장비/부품",
+      "matched_at": "2026-07-02T09:20:53"
+    },
     {
       "ticker": "306620",
       "name": "지아이에스",
