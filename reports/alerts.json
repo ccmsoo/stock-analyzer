@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-03T17:26:28",
-  "total": 300,
-  "new_today": 4,
+  "generated_at": "2026-07-03T20:07:29",
+  "total": 302,
+  "new_today": 2,
   "alerts": [
+    {
+      "ticker": "417010",
+      "name": "나노팀",
+      "sosok": "",
+      "report_name": "[기재정정]신규시설투자등",
+      "submitter": "나노팀",
+      "submitted_at": "2026.07.03",
+      "time": "18:11",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260703901034",
+      "rcp_no": "20260703901034",
+      "category": "투자/시설",
+      "score": 70,
+      "current_price": 5210,
+      "today_change_pct": 1.76,
+      "signal_last_seen": "20260527",
+      "signal_confidence": "high",
+      "signal_main_theme": "전기차(배터리 안전) 부품",
+      "matched_at": "2026-07-03T20:07:28"
+    },
     {
       "ticker": "417010",
       "name": "나노팀",
@@ -325,6 +344,25 @@
       "signal_confidence": "high",
       "signal_main_theme": "수주/계약",
       "matched_at": "2026-07-02T16:56:18"
+    },
+    {
+      "ticker": "452200",
+      "name": "민테크",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "민테크",
+      "submitted_at": "2026.07.02",
+      "time": "15:57",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260702900555",
+      "rcp_no": "20260702900555",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 2085,
+      "today_change_pct": 29.74,
+      "signal_last_seen": "20260703",
+      "signal_confidence": "high",
+      "signal_main_theme": "반도체",
+      "matched_at": "2026-07-03T20:07:29"
     },
     {
       "ticker": "052690",
