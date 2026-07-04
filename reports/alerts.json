@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-04T13:09:19",
-  "total": 302,
+  "generated_at": "2026-07-04T16:13:21",
+  "total": 300,
   "new_today": 0,
   "alerts": [
     {
@@ -5436,44 +5436,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "클라우드·AI 서비스",
       "matched_at": "2026-06-04T18:09:05"
-    },
-    {
-      "ticker": "061090",
-      "name": "세나테크놀로지",
-      "sosok": "",
-      "report_name": "주식소각결정",
-      "submitter": "세나테크놀로지",
-      "submitted_at": "2026.06.04",
-      "time": "12:47",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260604900275",
-      "rcp_no": "20260604900275",
-      "category": "자본정책_호재",
-      "score": 70,
-      "current_price": 50700,
-      "today_change_pct": 0.2,
-      "signal_last_seen": "20260529",
-      "signal_confidence": "high",
-      "signal_main_theme": "로봇/피지컬 AI",
-      "matched_at": "2026-06-04T14:18:58"
-    },
-    {
-      "ticker": "061090",
-      "name": "세나테크놀로지",
-      "sosok": "",
-      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
-      "submitter": "세나테크놀로지",
-      "submitted_at": "2026.06.04",
-      "time": "12:46",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260604000139",
-      "rcp_no": "20260604000139",
-      "category": "자본정책_호재",
-      "score": 70,
-      "current_price": 50700,
-      "today_change_pct": 0.2,
-      "signal_last_seen": "20260529",
-      "signal_confidence": "high",
-      "signal_main_theme": "로봇/피지컬 AI",
-      "matched_at": "2026-06-04T14:18:59"
     },
     {
       "ticker": "388790",
