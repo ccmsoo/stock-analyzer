@@ -25,6 +25,29 @@ from openai import OpenAI
 from collectors.news_collector import collect_news_for_stock
 from tools.toss_client import get_prices, get_candles
 
+# 촉매 신선도 가드: 최근 SPIKE_DAYS 거래일 중 하루라도 +SPIKE_PCT% 이상 급등이면
+# 촉매가 이미 발화한 뒤(스파이크 후 페이드)로 보고 chart_ok 탈락시킨다.
+SPIKE_DAYS = 3
+SPIKE_PCT = 12.0
+
+
+def candles_any(ticker: str) -> list[dict]:
+    """일봉 최신순. 토스 우선, 실패 시 네이버 폴백.
+    cron 환경엔 토스키가 없어 토스는 빈값 → 네이버로 차트필터/가드가 동작하게 한다."""
+    try:
+        cs = get_candles(ticker)
+    except Exception:
+        cs = []
+    if cs and len(cs) > 21 and cs[0].get("close"):
+        return cs
+    try:
+        from tools.fetch_history_naver import fetch_one
+        px = fetch_one(ticker, 4)[1]  # ~40 거래일
+        rows = [px[k] for k in sorted(px)]  # 과거→최신
+        return list(reversed(rows))  # 최신순으로
+    except Exception:
+        return cs or []
+
 SYS = """너는 한국 주식 단기 촉매 분석가다. 종목의 '최근 기사 제목들'만 보고
 앞으로 주가를 급등시킬 촉매가 있는지 평가한다. (향후 결과는 모름. 기사만으로 판단)
 강한 촉매: 대형 수주/계약, 임상/FDA 승인, M&A/경영권, 흑자전환/어닝서프라이즈, 국책과제 선정, 신약/기술이전, 대규모 수출.
@@ -128,10 +151,7 @@ def main():
 
     # 4) 차트 매칭 — 이미 extended면 늦음. 5일변동/고점대비/거래량.
     for s in scored:
-        try:
-            cs = get_candles(s["ticker"])  # newest-first
-        except Exception:
-            cs = []
+        cs = candles_any(s["ticker"])  # newest-first (토스 → 네이버 폴백)
         if len(cs) > 21 and cs[0]["close"]:
             last = cs[0]["close"]
             s["chg5"] = (last / cs[5]["close"] - 1) * 100 if cs[5]["close"] else None
@@ -140,17 +160,33 @@ def main():
             volavg = sum(c["volume"] for c in cs[1:21]) / 20
             s["volratio"] = cs[0]["volume"] / volavg if volavg else None
             s["value_traded"] = last * volavg  # 평균 거래대금 근사(원)
-            # 차트 양호 = 아직 안 extended (5일<15%) & 고점근처과열 아님
-            s["chart_ok"] = (s["chg5"] is None or s["chg5"] < 15)
+            # 촉매 신선도 가드: 최근 SPIKE_DAYS일 중 하루라도 +SPIKE_PCT% 이상 급등 =
+            #   촉매가 이미 발화(상한가 등)한 뒤라 지금 chg5가 평평해도 '가짜 조용함'.
+            #   → 스파이크 후 페이드는 검증상 무버 추격(-12%) 구간이므로 chart_ok 탈락.
+            spike = 0.0
+            for i in range(SPIKE_DAYS):
+                if i + 1 < len(cs) and cs[i + 1]["close"]:
+                    spike = max(spike, (cs[i]["close"] / cs[i + 1]["close"] - 1) * 100)
+            s["max_spike3"] = round(spike, 1)
+            s["stale_catalyst"] = spike >= SPIKE_PCT  # 이미 급등후 페이드
+            # 차트 양호 = 아직 안 extended (5일<15%) & 최근 급등후 페이드 아님
+            s["chart_ok"] = (s["chg5"] is None or s["chg5"] < 15) and not s["stale_catalyst"]
         else:
             s["chg5"] = s["from_high"] = s["volratio"] = s["value_traded"] = None
+            s["max_spike3"] = None
+            s["stale_catalyst"] = False
             s["chart_ok"] = True
 
     # 유동성 하한 — 못 빠져나오는 초저유동만 제외 (우량주 필터 아님)
     min_val = args.min_value * 1e8
     scored = [s for s in scored if s.get("value_traded") is None or s["value_traded"] >= min_val]
 
-    fresh = [s for s in scored if s["today"] is None or s["today"] < args.max_move]
+    # 오늘 이미 오른 것 + 최근 급등후 페이드(촉매 이미 발화) 둘 다 제외
+    fresh = [s for s in scored
+             if (s["today"] is None or s["today"] < args.max_move)
+             and not s.get("stale_catalyst")]
+    stale = [s for s in scored if s.get("stale_catalyst")
+             and (s["today"] is None or s["today"] < args.max_move)]
     # 정렬: 촉매점수 → 차트양호 → 거래량
     fresh.sort(key=lambda x: (-x["score"], not x["chart_ok"], -(x.get("volratio") or 0)))
 
@@ -166,7 +202,10 @@ def main():
 
     already = [s for s in scored if s["today"] is not None and s["today"] >= args.max_move]
     if already:
-        print(f"\n   (이미 오름 제외 {len(already)}: " + ", ".join(f"{s['name'][:8]}+{s['today']:.0f}%" for s in sorted(already, key=lambda x: -x['today'])[:6]) + ")")
+        print(f"\n   (오늘 이미 오름 제외 {len(already)}: " + ", ".join(f"{s['name'][:8]}+{s['today']:.0f}%" for s in sorted(already, key=lambda x: -x['today'])[:6]) + ")")
+    if stale:
+        print(f"   (급등후 페이드 제외 {len(stale)} [최근{SPIKE_DAYS}일 +{SPIKE_PCT:.0f}%↑=촉매 이미 발화]: "
+              + ", ".join(f"{s['name'][:8]}(스파이크+{s['max_spike3']:.0f}%)" for s in sorted(stale, key=lambda x: -(x.get('max_spike3') or 0))[:6]) + ")")
 
     # (눌림목 재진입/2차상승은 백테스트 결과 진입수익 음수(-5.8%)로 미채택 — 촉매 선진입만)
     print("\n📌 단기 스윙 플레이북 (백테스트 검증): 촉매 선진입 → 3일 보유(승률 최고) → "
