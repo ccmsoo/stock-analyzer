@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T17:43:05",
+  "generated_at": "2026-07-10T19:13:40",
   "signals": {
     "003060": {
       "name": "에이프로젠바이오로직스",
@@ -461,31 +461,38 @@
       "name": "선도전기",
       "market": "KOSPI",
       "first_seen": "20260512",
-      "last_seen": "20260702",
-      "consecutive_days": 4,
-      "main_theme": "정책/인프라(메가프로젝트)",
-      "specific_signal": "AI·반도체 메가프로젝트에 따른 전력공급 인프라 수혜 기대",
-      "trigger_type": "policy",
+      "last_seen": "20260710",
+      "consecutive_days": 5,
+      "main_theme": "전력 인프라",
+      "specific_signal": "AI 데이터센터 확장 및 글로벌 노후 전력망 교체 기대에 따른 송·배전·전력기기 수요 급증 기대",
+      "trigger_type": "rumor",
       "confidence": "medium",
       "watch_keywords": [
         "AI 데이터센터",
-        "호남권 반도체",
-        "메가프로젝트",
-        "전력공급 인프라 발주",
-        "변전소·배전설비 수주"
+        "전력 인프라",
+        "송배전 설비",
+        "글로벌 노후 전력망 교체",
+        "초고압선 공급"
       ],
       "related_stocks": [
-        "가온전선",
+        "대원전선",
         "LS전선"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260512, 4일째 등장)",
+      "reasoning": "07.09~07.10에 걸쳐 AI 데이터센터 호재와 '글로벌 노후 전력망 교체'를 언급한 다수 기사에서 전력·송배전 관련 종목들이 부각되며 섹터 베팅성 매수 유입이 관찰됨. 선도전기는 해당 흐름에서 전력기기·송배전 수요 수혜 기대감으로 급등했으나 회사 공시나 신규 계약 등 구체적 본질적 호재는 부재함.",
       "reason_unknown_category": "",
-      "industry_chain": "",
-      "chain_position": "",
-      "chain_role": "",
+      "industry_chain": "AI 데이터센터 전력 인프라",
+      "chain_position": "조립/제조",
+      "chain_role": "송·배전용 전력기기 및 변전소 장비 제공으로 데이터센터·전력사업자 전력공급 인프라 수요 대응",
       "upstream": [],
-      "downstream": [],
-      "peer_chain": [],
+      "downstream": [
+        "데이터센터 운영사",
+        "전력회사"
+      ],
+      "peer_chain": [
+        "대원전선",
+        "LS전선",
+        "현대일렉트릭"
+      ],
       "history": [
         {
           "date": "20260512",
@@ -502,6 +509,10 @@
         {
           "date": "20260702",
           "change_pct": 23.29
+        },
+        {
+          "date": "20260710",
+          "change_pct": 27.29
         }
       ]
     },
@@ -2345,39 +2356,31 @@
       "name": "저스템",
       "market": "KOSDAQ",
       "first_seen": "20260513",
-      "last_seen": "20260625",
-      "consecutive_days": 2,
-      "main_theme": "반도체",
-      "specific_signal": "자사주 취득(16억원) 공시와 동종업체·글로벌 메모리 어닝 서프라이즈에 따른 반도체 장비 수요 기대감",
-      "trigger_type": "disclosure",
-      "confidence": "high",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "수급/테마성",
+      "specific_signal": "코스닥 반도체 장비·AI 데이터센터 테마 동반 강세에 따른 장중·종목 태그 동행 (종목 고유 호재 확인 불가)",
+      "trigger_type": "unknown",
+      "confidence": "low",
       "watch_keywords": [
-        "반도체 장비",
-        "메모리 수요(메모리 3사)",
-        "자사주매입(16억)",
-        "장비 수요 회복",
-        "메모리 섹터 어닝서프라이즈"
+        "코스닥 수급",
+        "테마성 급등",
+        "AI 데이터센터",
+        "반도체 장비 공급계약",
+        "거래량 급증"
       ],
       "related_stocks": [
-        "원익IPS",
-        "테스",
-        "AP시스템"
+        "레이저쎌",
+        "원익IPS"
       ],
-      "reasoning": "D-0(6/24)에 동일일 공시로 16억 규모의 자사주 취득 결정이 나와 직접적인 긍정 재료로 작용했고, 같은 날 마이크론·메모리업종의 어닝 서프라이즈로 인한 반도체 섹터 급등이 장비 수요 개선 기대를 확대해 매수세가 집중되었다. 앞서 6/16에 ‘메모리 3사 납품’ 보도가 있어 중장기 수요 개선 가능성도 시장에 재확인된 점이 상승을 뒷받침했다.",
-      "reason_unknown_category": "",
-      "industry_chain": "반도체 장비(메모리 장비)",
-      "chain_position": "장비",
-      "chain_role": "메모리 제조공정용 반도체 장비 공급",
+      "reasoning": "최근 14일 제공된 기사들은 모두 코스닥 반도체 장비·AI 데이터센터 관련 테마·수급 뉴스로, 종목 고유의 공시·실적·계약 기사 등 직접적 트리거는 확인되지 않습니다. 등락은 같은 기간 반도체 장비주 강세(레이저쎌·원익IPS 등)와 동행한 것으로 보이나, 저스템과의 연결 근거가 약해 테마성·수급성 급등으로 판단됩니다.",
+      "reason_unknown_category": "weak_name_link",
+      "industry_chain": "바이오/줄기세포 치료제",
+      "chain_position": "최종재",
+      "chain_role": "줄기세포 기반 치료제의 개발·임상 및 향후 상용화",
       "upstream": [],
-      "downstream": [
-        "삼성전자",
-        "SK하이닉스"
-      ],
-      "peer_chain": [
-        "원익IPS",
-        "테스",
-        "AP시스템"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260513",
@@ -2386,6 +2389,10 @@
         {
           "date": "20260625",
           "change_pct": 16.63
+        },
+        {
+          "date": "20260710",
+          "change_pct": 24.34
         }
       ]
     },
@@ -2524,8 +2531,8 @@
       "name": "레이저쎌",
       "market": "KOSDAQ",
       "first_seen": "20260513",
-      "last_seen": "20260709",
-      "consecutive_days": 4,
+      "last_seen": "20260710",
+      "consecutive_days": 5,
       "main_theme": "반도체",
       "specific_signal": "18억 규모 반도체 장비 공급계약(패키징/CPO용 본더·레이저 장비)",
       "trigger_type": "contract",
@@ -2541,20 +2548,14 @@
         "한미반도체",
         "삼전닉스"
       ],
-      "reasoning": "7월 7일 공개된 '18억 규모 반도체 장비 공급계약' 보도가 직접적 트리거로 작용했고, 이후 7월 9일 소부장 섹터 반등 국면에서 관련 기사들이 집중 보도되며 주가가 급등했다. 다수 기사(종목 태그 포함)가 공급계약을 언급해 계약 공시성 뉴스에 따른 매수 유입으로 판단된다.",
+      "reasoning": "이전 분석 재사용 (최초 20260513, 5일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "반도체 패키징/후공정",
-      "chain_position": "장비",
-      "chain_role": "반도체 패키징(CPO)용 본더·레이저 장비 공급",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "패키지/OSAT(후공정 업체)",
-        "반도체 제조사/파운드리"
-      ],
-      "peer_chain": [
-        "한미반도체",
-        "삼전닉스"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260513",
@@ -2571,6 +2572,10 @@
         {
           "date": "20260709",
           "change_pct": 13.25
+        },
+        {
+          "date": "20260710",
+          "change_pct": 23.8
         }
       ]
     },
@@ -2992,8 +2997,8 @@
       "name": "신풍",
       "market": "KOSPI",
       "first_seen": "20260514",
-      "last_seen": "20260709",
-      "consecutive_days": 4,
+      "last_seen": "20260710",
+      "consecutive_days": 5,
       "main_theme": "수급",
       "specific_signal": "10억 원 규모 자사주 취득 결정(자기주식 취득)",
       "trigger_type": "disclosure",
@@ -3009,11 +3014,11 @@
         "KB금융",
         "코오롱글로벌"
       ],
-      "reasoning": "회사 공시(자사주 취득 10억 원 결정)가 D-day 당일(07.09)에 나왔고, 자사주 매입은 유통주식 감소 및 주가 지지 요인으로 해석되어 수급 측면에서 즉각적인 매수 유입을 유도했을 가능성이 큽니다. 또한 전일 보도된 코스피 다수 기업의 자기주식 매수 신청 기사와 맞물려 투자심리가 강화된 점도 상승에 기여한 것으로 보입니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260514, 5일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "기업 자본정책/수급",
-      "chain_position": "기타",
-      "chain_role": "자사주 취득을 통한 유통 주식수 축소 및 주가 지지",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
@@ -3033,6 +3038,10 @@
         {
           "date": "20260709",
           "change_pct": 6.27
+        },
+        {
+          "date": "20260710",
+          "change_pct": 14.95
         }
       ]
     },
@@ -3250,33 +3259,39 @@
       "name": "후성",
       "market": "KOSPI",
       "first_seen": "20260514",
-      "last_seen": "20260709",
-      "consecutive_days": 7,
-      "main_theme": "화학/석유화학",
-      "specific_signal": "석유화학 섹터의 '고부가 제품(SSBR 등) 전환' 관련 수급·섹터 재평가(회사 공시·계약성 뉴스 부재)",
-      "trigger_type": "unknown",
-      "confidence": "low",
+      "last_seen": "20260710",
+      "consecutive_days": 8,
+      "main_theme": "석유화학/첨단소재 (반도체·배터리 소재)",
+      "specific_signal": "고부가 첨단 공정용 소재 국산화·사업구조 고부가제품 전환 기대",
+      "trigger_type": "rumor",
+      "confidence": "medium",
       "watch_keywords": [
-        "석유화학",
-        "고부가합성고무(SSBR)",
-        "고부가 제품 전환",
-        "거래대금 급증",
-        "거래상위 랭킹"
+        "반도체 소재",
+        "배터리 소재",
+        "고부가 첨단소재",
+        "국산화(공정소재)",
+        "고부가제품 전환",
+        "석유화학 업황 개선"
       ],
       "related_stocks": [
         "금호석유화학",
+        "동진쎄미켐"
+      ],
+      "reasoning": "7월9일 관련 기사들이 후성을 '반도체+배터리'용 첨단 공정소재의 국산화 선봉장 및 고부가 제품 중심 전환을 언급하면서 석유화학 업황 개선 기대와 맞물려 투자 심리가 개선된 것으로 보인다. 코스피 대형주·반도체 업종 매수세의 확산 속에서 테마성 수급 유입이 단기 급등을 촉발한 것으로 판단된다.",
+      "reason_unknown_category": "",
+      "industry_chain": "반도체·배터리 첨단소재",
+      "chain_position": "원소재",
+      "chain_role": "반도체·배터리 공정용 고부가 화학소재 공급 및 국산화 추진",
+      "upstream": [
         "롯데케미칼"
       ],
-      "reasoning": "당일(7/9) 관련 뉴스는 석유화학·고부가 제품(SSBR) 전환 등 섹터성 보도가 주를 이루고, 다수 기사는 거래상위·랭킹 중심으로 후성에 대한 개별 공시나 계약성 호재는 확인되지 않습니다. 따라서 주가 급등은 종목 고유의 확정 공시보다는 석유화학 섹터 기대감·수급 유입(거래대금 증가)에 따른 테마성 재평가로 추정됩니다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "석유화학/정밀화학",
-      "chain_position": "원소재",
-      "chain_role": "석유화학 원료·중간체(특수화학 제품군) 공급",
-      "upstream": [],
-      "downstream": [],
+      "downstream": [
+        "삼성전자",
+        "SK하이닉스"
+      ],
       "peer_chain": [
         "금호석유화학",
-        "롯데케미칼"
+        "동진쎄미켐"
       ],
       "history": [
         {
@@ -3306,6 +3321,10 @@
         {
           "date": "20260709",
           "change_pct": 10.24
+        },
+        {
+          "date": "20260710",
+          "change_pct": 16.05
         }
       ]
     },
@@ -5765,8 +5784,8 @@
       "name": "대원전선",
       "market": "KOSPI",
       "first_seen": "20260518",
-      "last_seen": "20260703",
-      "consecutive_days": 4,
+      "last_seen": "20260710",
+      "consecutive_days": 5,
       "main_theme": "전력/전선 (전력 인프라 수요)",
       "specific_signal": "정부 메가프로젝트·호남권 반도체 투자 기대감에 따른 전력케이블 수요 확대 기대(전선업계 사상 최대 수주잔고 보도 및 전력기기株 동반 강세)",
       "trigger_type": "policy",
@@ -5783,7 +5802,7 @@
         "계양전기",
         "한국전선"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260518, 4일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260518, 5일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -5807,6 +5826,10 @@
         {
           "date": "20260703",
           "change_pct": 8.84
+        },
+        {
+          "date": "20260710",
+          "change_pct": 17.34
         }
       ]
     },
@@ -5901,35 +5924,31 @@
       "name": "베셀",
       "market": "KOSDAQ",
       "first_seen": "20260518",
-      "last_seen": "20260622",
-      "consecutive_days": 2,
-      "main_theme": "수급/테마",
-      "specific_signal": "",
-      "trigger_type": "unknown",
-      "confidence": "low",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "수급/테마(항공부품·전시 모멘텀)",
+      "specific_signal": "UAM(도심항공모빌리티) 부품 국산화 관련 언론 보도·전시회 노출(전동 드라이버 전시)",
+      "trigger_type": "rumor",
+      "confidence": "medium",
       "watch_keywords": [
-        "코스닥 수급",
-        "테마성 급등",
-        "화학업종 변동성",
-        "공시(유상증자·수주)",
-        "외국인·기관 순매수"
+        "UAM 부품 국산화",
+        "도심항공모빌리티",
+        "전동 드라이버 전시",
+        "코리아빌드위크 출품",
+        "UAM 핵심기술 장착"
       ],
       "related_stocks": [
-        "비비안",
-        "부국철강",
-        "크린앤사이언스"
+        "선도전기",
+        "웰킵스하이텍"
       ],
-      "reasoning": "14일 내 제공된 기사들은 주로 코스닥 전체 마감·상한가 종목 목록·화학주 관련 언급 등 시장·테마성 보도에 그치며 베셀 고유의 공시나 계약성 뉴스는 확인되지 않습니다. 외국인·기관 순매수와 상한가·급등 종목 집중 보도가 다수 있어, 이날 급등은 회사 고유 호재보다는 단기적 수급·테마성 랠리로 보는 것이 합리적입니다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "화학",
-      "chain_position": "",
-      "chain_role": "",
+      "reasoning": "장중·장마감 전후에 복수의 기사(검색기사)가 ‘베셀’ 제품 전시(코리아빌드) 및 UAM 부품 국산화 관련 내용을 다루면서 테마성 매수세가 유입된 것으로 보입니다. 동시에 코스닥·반도체 등 시장 모멘텀(기관 순매수 등)이 겹치며 주가가 급등했으나 회사의 공식 공시·수주 공지는 확인되지 않습니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "UAM/항공부품 (도심항공모빌리티)",
+      "chain_position": "부품",
+      "chain_role": "UAM용 부품 및 전동공구용 전동 드라이브/모듈 공급",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "크린앤사이언스",
-        "비비안"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260518",
@@ -5938,6 +5957,10 @@
         {
           "date": "20260622",
           "change_pct": 29.94
+        },
+        {
+          "date": "20260710",
+          "change_pct": 20.07
         }
       ]
     },
@@ -6002,24 +6025,37 @@
       "name": "티에스이",
       "market": "KOSDAQ",
       "first_seen": "20260518",
-      "last_seen": "20260520",
-      "consecutive_days": 2,
-      "main_theme": "반도체 장비/부품",
-      "specific_signal": "1분기 호실적(어닝 서프라이즈) 발표 및 중국 허페이 법인 기반 수주·매출 기대",
-      "trigger_type": "earnings",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "반도체",
+      "specific_signal": "HBM(고대역폭메모리) 확대 및 고객사 증가 기대에 따른 반도체 장비(패키징·첨단공정) 테마 매수",
+      "trigger_type": "technical",
       "confidence": "medium",
       "watch_keywords": [
-        "어닝 서프라이즈",
         "반도체 장비",
-        "중국 법인 확대(허페이)",
-        "520mm 기판 AI 불량검출",
-        "대량 핀 소켓"
+        "HBM 메모리 확대",
+        "첨단공정 수혜",
+        "고객사 증가",
+        "수주공시"
       ],
       "related_stocks": [
         "주성엔지니어링",
-        "에스에이엠티"
+        "원익IPS"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260518, 2일째 등장)",
+      "reasoning": "복수의 기사(특히 2026.07.09 보도)가 HBM 확대와 고객사 증가 기대를 근거로 반도체 장비 섹터에 매수세가 집중됐다고 보도했으며, 이로 인해 티에스이가 장비 테마 수혜주로 부각되어 급등한 것으로 판단됨. 별도 공시·수주공시는 확인되지 않아 주가 상승은 섹터·수급(매수 사이드카·테마 매수)에 따른 기술적 급등 영향이 큰 것으로 보임.",
+      "reason_unknown_category": "",
+      "industry_chain": "반도체 장비(패키징·첨단공정)",
+      "chain_position": "장비",
+      "chain_role": "HBM·첨단공정용 반도체 제조·패키징 장비 공급",
+      "upstream": [],
+      "downstream": [
+        "메모리 반도체 제조사"
+      ],
+      "peer_chain": [
+        "주성엔지니어링",
+        "원익IPS",
+        "피에스케이"
+      ],
       "history": [
         {
           "date": "20260518",
@@ -6028,6 +6064,10 @@
         {
           "date": "20260520",
           "change_pct": 12.86
+        },
+        {
+          "date": "20260710",
+          "change_pct": 20.31
         }
       ]
     },
@@ -6381,26 +6421,32 @@
       "name": "콘텐트리중앙",
       "market": "KOSPI",
       "first_seen": "20260519",
-      "last_seen": "20260612",
-      "consecutive_days": 2,
-      "main_theme": "미디어/스포츠 중계",
-      "specific_signal": "월드컵(체코전) 승리로 인한 '월드컵 중계권' 관련 수혜 기대 및 시청률·광고 수요 급증",
-      "trigger_type": "rumor",
-      "confidence": "medium",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "기업구조조정/수급(크레딧·워크아웃)",
+      "specific_signal": "금융채권단의 '워크아웃' 개시 결정(채권단 75% 이상 동의) — 경영권 매각/자산처분 수순 가능성",
+      "trigger_type": "disclosure",
+      "confidence": "high",
       "watch_keywords": [
-        "스포츠중계",
-        "월드컵 중계권",
-        "시청률 급증",
-        "광고수익 증가",
-        "중계권 가치",
-        "플랫폼 시청자수"
+        "워크아웃",
+        "경영권 매각",
+        "회사채 검사 확대",
+        "채권단 75% 동의",
+        "5500억 부동산 인수 철회"
       ],
       "related_stocks": [
-        "CJ ENM",
-        "티빙",
-        "메가박스중앙"
+        "코람코",
+        "한양증권",
+        "JTBC"
       ],
-      "reasoning": "D-day 당일 다수의 종목 태그 기사들이 '월드컵 중계권' 관련 수혜 기대를 근거로 콘텐트리중앙을 언급했고, 체코전 승리로 시청률·광고수요가 즉각 기대되며 단기 과열 매수세를 유발한 것으로 보인다. 별도 공시나 계약 발표는 없어 언론 보도가 매수 심리를 촉발한 테마성 급등으로 판단된다.",
+      "reasoning": "채권단이 워크아웃 개시를 결의(보도에 채권단 75% 이상 동의)하며 실질적 구조조정과 경영권 매각 가능성이 커졌다. 시장은 이를 '가치 실현(자산매각·인수합병) 가능성' 신호로 해석해 단기 매수세가 유입된 것으로 보인다.",
+      "reason_unknown_category": "",
+      "industry_chain": "미디어·콘텐츠(언론·방송)",
+      "chain_position": "서비스",
+      "chain_role": "신문·방송 콘텐츠 제작·유통 및 그룹 지배구조 관리",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260519",
@@ -6409,6 +6455,10 @@
         {
           "date": "20260612",
           "change_pct": 12.5
+        },
+        {
+          "date": "20260710",
+          "change_pct": 16.92
         }
       ]
     },
@@ -6947,8 +6997,8 @@
       "name": "광전자",
       "market": "KOSPI",
       "first_seen": "20260520",
-      "last_seen": "20260709",
-      "consecutive_days": 4,
+      "last_seen": "20260710",
+      "consecutive_days": 5,
       "main_theme": "광통신/AI 데이터센터 인프라",
       "specific_signal": "광통신·광반도체주 동반 강세(인공지능 인프라 수요 기대)로 섹터 랠리",
       "trigger_type": "rumor",
@@ -6965,16 +7015,14 @@
         "대한광통신",
         "삼화전자"
       ],
-      "reasoning": "7/8 보도에서 '광통신·광반도체주 강세…AI 인프라' 등 섹터 차원의 수급·테마가 광전자를 포함한 종목들을 끌어올린 것으로 확인된다. 개별 공시·계약성 뉴스는 없고 거래량이 크게 증가한 점으로 보아 섹터·수급성 매수(테마 랠리)가 주된 원인으로 판단된다.",
+      "reasoning": "이전 분석 재사용 (최초 20260520, 5일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "AI 데이터센터 (광통신 인프라)",
-      "chain_position": "부품",
-      "chain_role": "데이터센터·통신용 광통신 부품(광모듈·광수신기·수동 소자) 공급",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "대한광통신"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260520",
@@ -6991,6 +7039,10 @@
         {
           "date": "20260709",
           "change_pct": 7.84
+        },
+        {
+          "date": "20260710",
+          "change_pct": 18.79
         }
       ]
     },
@@ -7766,24 +7818,34 @@
       "name": "빛과전자",
       "market": "KOSDAQ",
       "first_seen": "20260520",
-      "last_seen": "20260522",
-      "consecutive_days": 2,
-      "main_theme": "광통신/데이터센터 수요(수급)",
-      "specific_signal": "100% 자회사 흡수합병 결정(지배구조 단순화) — 병행된 전환사채 발행 및 데이터센터용 차세대 광통신 전시 이력",
-      "trigger_type": "disclosure",
-      "confidence": "high",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "수급/섹터(데이터센터·광통신)",
+      "specific_signal": "AI 데이터센터 훈풍에 따른 광통신 업종 동반 강세(섹터 랠리)",
+      "trigger_type": "unknown",
+      "confidence": "low",
       "watch_keywords": [
-        "광통신",
         "AI 데이터센터",
-        "자회사 흡수합병",
-        "전환사채 80억원",
-        "데이터센터용 차세대 광모듈"
+        "광통신 인프라",
+        "광트랜시버 수요",
+        "기관 순매수",
+        "데이터센터 투자"
       ],
       "related_stocks": [
         "대한광통신",
-        "이노인스트루먼트"
+        "주성엔지니어링",
+        "원익IPS"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260520, 2일째 등장)",
+      "reasoning": "D-day 전후 다수 기사에서 'AI 데이터센터 훈풍'과 '광통신·전력주 강세'를 언급하며 해당 섹터에 속한 종목들이 일제히 급등한 점이 확인됩니다. 빛과전자는 종목 태그로 거래상위·강세 종목으로 반복 노출되어 섹터성·수급성 랠리에 편승한 것으로 판단되며, 회사 차원의 공시·계약성 뉴스는 14일 내 확인되지 않습니다.",
+      "reason_unknown_category": "theme_only_supply",
+      "industry_chain": "AI 데이터센터",
+      "chain_position": "부품",
+      "chain_role": "AI 데이터센터·통신용 광통신 모듈·부품 공급(섹터 내 부품사 역할)",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [
+        "대한광통신"
+      ],
       "history": [
         {
           "date": "20260520",
@@ -7792,6 +7854,10 @@
         {
           "date": "20260522",
           "change_pct": 29.86
+        },
+        {
+          "date": "20260710",
+          "change_pct": 29.89
         }
       ]
     },
@@ -10922,24 +10988,31 @@
       "name": "두산",
       "market": "KOSPI",
       "first_seen": "20260529",
-      "last_seen": "20260612",
-      "consecutive_days": 3,
-      "main_theme": "수주·사업 모멘텀",
-      "specific_signal": "발전용 대형 주강·가스터빈 수주 확대 기대(두산 가스터빈 관련 보도)",
-      "trigger_type": "contract",
-      "confidence": "medium",
+      "last_seen": "20260710",
+      "consecutive_days": 4,
+      "main_theme": "AI 데이터센터",
+      "specific_signal": "광모듈용 CCL 매출(약 1,360억) 공개 및 AI 데이터센터 수요 성장 기대",
+      "trigger_type": "disclosure",
+      "confidence": "high",
       "watch_keywords": [
-        "지주사 가치 재평가",
-        "가스터빈 수주",
-        "AI 인프라 공급망",
-        "대형 발전용 주강 수주",
-        "실리콘웨이퍼 매각 표류"
+        "AI 데이터센터",
+        "광모듈/광인터커넥트",
+        "CCL 매출 1360억",
+        "영남권 5.1조 투자",
+        "SMR 전력거점"
       ],
       "related_stocks": [
-        "한국주강",
-        "두산테스나"
+        "삼성SDS",
+        "삼성전자"
       ],
-      "reasoning": "전일(6.11) 복수 기사에서 두산의 가스터빈·발전용 주강 수주 확대 기대와 수주 수혜 관측이 제기됐고(아시아경제 등), 이는 단기적인 매수 수요를 자극해 D-day에 급등을 만든 것으로 보인다. 추가로 지주사 가치 재평가·주주환원 논의가 시장의 관심을 끌며 수급이 뒷받침된 것으로 판단된다.",
+      "reasoning": "07.10자 종목 태그 기사들이 당일에 광모듈향 CCL 매출 규모(약 1,360억) 공개와 AI 데이터센터 수요 기대를 직접 보도했고, 같은 날 AI 데이터센터 호재로 증권사들의 목표가 상향 보도가 겹치며 매수세를 촉발한 것으로 보임. 추가로 영남권 대규모 투자·전력 인프라(예: SMR) 관련 보도가 데이터센터 전력·인프라 확충 기대를 뒷받침했다.",
+      "reason_unknown_category": "",
+      "industry_chain": "AI 데이터센터",
+      "chain_position": "부품",
+      "chain_role": "데이터센터 광모듈·광인터커넥트용 CCL(동박 적층기판) 공급",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260529",
@@ -10952,6 +11025,10 @@
         {
           "date": "20260612",
           "change_pct": 16.96
+        },
+        {
+          "date": "20260710",
+          "change_pct": 14.88
         }
       ]
     },
@@ -11354,28 +11431,36 @@
       "name": "세나테크놀로지",
       "market": "KOSDAQ",
       "first_seen": "20260529",
-      "last_seen": "20260529",
-      "consecutive_days": 1,
-      "main_theme": "로봇/피지컬 AI",
-      "specific_signal": "증권사(하나證) 목표가 상향·리포트(피지컬 AI·통신기술 고도화) 및 관련 기사(미국 생산시설 신설·무인 골프로봇 상용화)",
-      "trigger_type": "disclosure",
+      "last_seen": "20260710",
+      "consecutive_days": 2,
+      "main_theme": "실적",
+      "specific_signal": "2분기 영업이익 전년비 127.7% 증가(영업이익 180억) 공시·보도",
+      "trigger_type": "earnings",
       "confidence": "high",
       "watch_keywords": [
-        "피지컬 AI",
-        "로봇 부품 재평가",
-        "할리데이비슨 매출 개선",
-        "미국 생산시설 신설",
-        "무인 골프 로봇 상용화"
+        "어닝 서프라이즈",
+        "영업이익 개선",
+        "영업이익 127.7%↑",
+        "2분기 영업익 180억",
+        "기관 순매수"
       ],
-      "related_stocks": [
-        "현대모비스",
-        "LG전자"
-      ],
-      "reasoning": "당일 다수 매체에 나온 하나증권의 리포트(목표가 상향·피지컬 AI 전망 언급)와 이를 인용한 증권/금융 기사들이 매수 심리를 자극했고, 추가로 미국 생산시설 신설 및 무인 골프로봇 상용화 등 구체적 사업성과성 보도가 겹치며 수급이 몰림. 분석 리포트가 직접적인 투자심리 변화(재평가)로 연결된 것으로 판단됨.",
+      "related_stocks": [],
+      "reasoning": "동일일(2026.07.10) 다수 언론 및 종목 태깅 기사에서 2분기 영업이익이 전년 대비 127% 증가해 180억원을 기록했다고 보도되었고, 이를 계기로 매수세가 유입되어 주가가 급등한 것으로 판단됩니다. 거래량 확대와 여러 매체의 동시 보도가 단기 급등을 촉발한 표면적 원인입니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260529",
           "change_pct": 15.93
+        },
+        {
+          "date": "20260710",
+          "change_pct": 21.47
         }
       ]
     },
@@ -11721,31 +11806,37 @@
       "name": "주성코퍼레이션",
       "market": "KOSPI",
       "first_seen": "20260601",
-      "last_seen": "20260619",
-      "consecutive_days": 2,
-      "main_theme": "통신장비/네트워크",
-      "specific_signal": "AI·양자통신 기대감과 통신장비(특히 RF·군(방산) 통신 관련) 테마 반응 — 섹터·수급성 재평가",
-      "trigger_type": "unknown",
-      "confidence": "low",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "공시 (유상증자/수급)",
+      "specific_signal": "최대주주 대상 150억 원 규모 유상증자 공시(최대주주 참여 형태의 자금조달 발표)",
+      "trigger_type": "disclosure",
+      "confidence": "high",
       "watch_keywords": [
-        "통신장비",
-        "AI 통신",
-        "양자통신",
-        "RF 고주파 기술",
-        "통신장비 수주"
+        "유상증자",
+        "수급(기관 매수)",
+        "최대주주 대상 제3자배정",
+        "150억 원 자금조달",
+        "전선주 강세"
       ],
       "related_stocks": [
-        "웨이브일렉트로",
-        "유비쿼스"
+        "LS전선",
+        "대한전선"
       ],
-      "reasoning": "14일 내 확인된 뉴스들은 주로 코스피·코스닥 전반의 시황 기사와 통신장비·AI·양자통신 등 섹터성 보도에 머물러 있어, 종목 고유의 공시·수주·실적성 재료는 확인되지 않습니다. 따라서 이날 주가 상승(+5.70%)은 개별 호재보다는 통신장비/AI·양자통신 테마에 대한 수급·섹터 재평가 또는 코스닥·동종업종의 옥석가리기(테마 성향)에 따른 수급 쏠림 가능성이 큽니다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "통신장비",
-      "chain_position": "",
-      "chain_role": "",
+      "reasoning": "당일(07.10) 종목 태그 기사에서 최대주주 대상 150억 원 규모 유상증자 공시가 보도되며 주가가 급등했습니다. 유상증자 발표가 최대주주 참여 형태로 전해지자 재무적 지원·구조적 안정 기대와 함께 매수세가 유입된 것으로 보이며, 기관 순매수·전선주 동반 강세 등 시장 수급 호조도 상승을 부추긴 것으로 판단됩니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "전선·케이블 (전력·통신 케이블)",
+      "chain_position": "조립/제조",
+      "chain_role": "전력·통신용 전선·케이블의 제조 및 공급",
       "upstream": [],
-      "downstream": [],
-      "peer_chain": [],
+      "downstream": [
+        "전력·인프라",
+        "건설업체"
+      ],
+      "peer_chain": [
+        "LS전선",
+        "대한전선"
+      ],
       "history": [
         {
           "date": "20260601",
@@ -11754,6 +11845,10 @@
         {
           "date": "20260619",
           "change_pct": 5.7
+        },
+        {
+          "date": "20260710",
+          "change_pct": 21.74
         }
       ]
     },
@@ -13170,33 +13265,35 @@
       "name": "케이씨텍",
       "market": "KOSPI",
       "first_seen": "20260604",
-      "last_seen": "20260626",
-      "consecutive_days": 5,
+      "last_seen": "20260710",
+      "consecutive_days": 6,
       "main_theme": "반도체",
-      "specific_signal": "삼성·SK 대규모 반도체 클러스터(1000조) 투자 기대로 반도체 장비주 동반 강세(업계 수혜 기대)",
+      "specific_signal": "용인 반도체클러스터(팹) 조기 가동 기대 및 정부/업계의 대규모(4,800조) 반도체 투자계획에 따른 소부장·장비주 수혜 기대",
       "trigger_type": "policy",
       "confidence": "medium",
       "watch_keywords": [
         "반도체 장비",
-        "삼성·SK 1000조 투자",
-        "반도체 슈퍼사이클",
-        "TC본더",
-        "HKC 상장"
+        "용인 반도체클러스터",
+        "4,800조 반도체 투자계획",
+        "HBM·첨단공정 수혜",
+        "팹 가동 일정"
       ],
       "related_stocks": [
-        "한미반도체",
-        "피에스케이"
+        "원익IPS",
+        "피에스케이",
+        "레이저쎌"
       ],
-      "reasoning": "당일(25일) 반도체 업종·장비주에 대한 호재성 보도(삼성·SK의 대규모 투자 기대, HKC 상장 관련 수혜 전망 등)가 집중되며 장비주 중심으로 동반 상승한 것으로 판단됩니다. 케이씨텍 역시 개별 공시성 호재는 없지만 섹터 모멘텀(장비 수주·투자 기대)에 따라 수급·테마성 매수로 가격이 오른 것으로 보입니다.",
+      "reasoning": "당일 및 직전 보도에서 용인 반도체클러스터의 팹 가동 기대와 4,800조원 규모 반도체 투자계획이 반복 보도되며 반도체 소부장·장비 테마에 매수세가 집중됐다. 케이씨텍은 소부장/장비군으로 분류되어 해당 섹터 랠리의 수혜를 받은 것으로 판단된다(회사 고유의 계약 공시 등 개별 호재는 확인되지 않음).",
       "reason_unknown_category": "",
-      "industry_chain": "반도체 장비",
+      "industry_chain": "반도체 장비/소부장",
       "chain_position": "장비",
-      "chain_role": "반도체 제조 공정용 장비(장비주) 공급",
+      "chain_role": "팹 증설·가동 시 수혜를 받는 반도체 장비·소부장 공급",
       "upstream": [],
       "downstream": [],
       "peer_chain": [
-        "한미반도체",
-        "피에스케이"
+        "원익IPS",
+        "피에스케이",
+        "레이저쎌"
       ],
       "history": [
         {
@@ -13218,6 +13315,10 @@
         {
           "date": "20260626",
           "change_pct": 6.85
+        },
+        {
+          "date": "20260710",
+          "change_pct": 16.65
         }
       ]
     },
@@ -13521,27 +13622,37 @@
       "name": "덕산하이메탈",
       "market": "KOSDAQ",
       "first_seen": "20260604",
-      "last_seen": "20260604",
-      "consecutive_days": 1,
-      "main_theme": "정책(중복상장·IPO 규제)",
-      "specific_signal": "모회사 임시주총서 모회사 주주 동의로 자회사(덕산넵코어스) 중복상장 예외 사례 승인 및 중복상장 예외허용 가이드라인 임박 보도",
+      "last_seen": "20260710",
+      "consecutive_days": 2,
+      "main_theme": "정책",
+      "specific_signal": "중복상장(자회사 IPO) 가이드라인 충족으로 덕산넵코어스 상장 탄력화(일반주주 동의 확보 보도)",
       "trigger_type": "policy",
       "confidence": "high",
       "watch_keywords": [
-        "중복상장 규제 완화",
-        "주주동의제 도입",
-        "자회사 IPO 예외허용 기준",
-        "모회사 임시주총 주주찬성",
-        "대주주 의결권 제한 3%"
+        "중복상장 가이드라인",
+        "자회사 IPO",
+        "일반주주 동의",
+        "3%룰",
+        "물적분할",
+        "상장심사"
       ],
-      "related_stocks": [
-        "덕산넵코어스"
-      ],
-      "reasoning": "최근 다수 기사에서 모회사 임시주총을 통해 자회사 IPO 추진이 주주동의로 승인되었다는 보도가 집중되었고, 정부·금감원의 중복상장 예외허용 가이드라인 발표 임박 보도가 함께 나와 규제 완화 기대가 급등을 촉발한 것으로 보입니다. 덕산하이메탈은 해당 사례로 시장의 주목을 받으면서 수급·테마성 매수세가 몰렸습니다.",
+      "related_stocks": [],
+      "reasoning": "여러 언론이 7월 7일 새 중복상장 기준 충족 및 일반주주 동의 확보 사실을 보도하며 자회사(덕산넵코어스) IPO 추진이 탄력받을 것이라는 기대가 확산됐다. 시장은 자회사 상장을 통한 지배구조 개선 및 잠재적 자산가치 실현을 단기 재평가 요인으로 해석해 급등·거래량 증가를 일으킨 것으로 보인다.",
+      "reason_unknown_category": "",
+      "industry_chain": "정책/지배구조·IPO",
+      "chain_position": "기타",
+      "chain_role": "자회사 상장 추진으로 보유지분·기업가치 재평가 유발",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260604",
           "change_pct": 29.96
+        },
+        {
+          "date": "20260710",
+          "change_pct": 20.0
         }
       ]
     },
@@ -13583,23 +13694,40 @@
       "name": "테스",
       "market": "KOSDAQ",
       "first_seen": "20260604",
-      "last_seen": "20260609",
-      "consecutive_days": 2,
-      "main_theme": "반도체(장비·소부장)",
-      "specific_signal": "글로벌 WFE(장비투자) 전망 상향·전공정 장비사에 대한 수주 기대감으로 인한 섹터 랠리",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "반도체",
+      "specific_signal": "AI 데이터센터·메모리 수요 회복에 따른 반도체 검사·테스트 장비 수혜(섹터 랠리)",
       "trigger_type": "unknown",
-      "confidence": "medium",
+      "confidence": "low",
       "watch_keywords": [
+        "AI 데이터센터",
         "반도체 소부장",
-        "장비 수주",
-        "WFE 전망 상향",
-        "전공정 장비 훈풍"
+        "메모리 가격 상승",
+        "검사·테스트 장비 수요",
+        "전공정 기판 수요",
+        "기관·ETF 매수세"
       ],
       "related_stocks": [
+        "주성엔지니어링",
         "원익IPS",
-        "유진테크"
+        "피에스케이"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260604, 2일째 등장)",
+      "reasoning": "당일(07.10) 다수 기사에서 AI 데이터센터 기대, 메모리값 상승·전공정·소부장 랠리를 배경으로 코스닥·반도체 섹터가 급등했고, 테스는 개별 공시나 계약 관련 보도 없이 섹터 동반 상승으로 급등한 것으로 보임. 즉, 회사 고유 호재보다는 AI·메모리 수급·ETF·기관 매수에 따른 테마성 동반 상승 가능성이 높다.",
+      "reason_unknown_category": "theme_only_supply",
+      "industry_chain": "AI 데이터센터",
+      "chain_position": "장비",
+      "chain_role": "반도체 검사·테스트 장비 공급",
+      "upstream": [],
+      "downstream": [
+        "삼성전자",
+        "SK하이닉스"
+      ],
+      "peer_chain": [
+        "주성엔지니어링",
+        "원익IPS",
+        "피에스케이"
+      ],
       "history": [
         {
           "date": "20260604",
@@ -13608,6 +13736,10 @@
         {
           "date": "20260609",
           "change_pct": 22.74
+        },
+        {
+          "date": "20260710",
+          "change_pct": 22.55
         }
       ]
     },
@@ -13761,24 +13893,37 @@
       "name": "피에스케이",
       "market": "KOSDAQ",
       "first_seen": "20260604",
-      "last_seen": "20260609",
-      "consecutive_days": 2,
-      "main_theme": "반도체 (장비/소부장)",
-      "specific_signal": "반도체 장비주 순환매·기관·코스닥 매수 러시 (원익IPS·유진테크 등 주도)",
-      "trigger_type": "technical",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "반도체",
+      "specific_signal": "전방위 증설 수혜로 역대 최대 실적 전망(KB 리포트) + 美 AI/반도체 훈풍에 따른 수급 유입",
+      "trigger_type": "earnings",
       "confidence": "medium",
       "watch_keywords": [
-        "반도체 장비주",
-        "기관 매수 러시",
-        "업종 순환매",
-        "코스닥 반도체 강세"
+        "반도체",
+        "AI 반도체",
+        "설비 증설",
+        "전방위 증설 수혜",
+        "역대 최대 실적 전망"
       ],
       "related_stocks": [
         "원익IPS",
-        "유진테크",
-        "테스"
+        "주성엔지니어링"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260604, 2일째 등장)",
+      "reasoning": "7월 7일 KB 리포트에서 '전방위 증설 수혜'로 역대 최대 실적을 전망한 기업별 커버리지 확대로 개별 수요 기대가 높아진 상태에서, 7월 10일 미국발 반도체·AI 호재가 코스닥 전반의 강한 수급을 불러와 종목으로 자금이 집중되며 급등을 유발한 것으로 판단됩니다. 거래량 급증과 시장 전반의 반도체 랠리가 동시 작용한 흐름입니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "반도체 장비/부품",
+      "chain_position": "부품",
+      "chain_role": "반도체 제조·패키징 공정용 부품 공급",
+      "upstream": [],
+      "downstream": [
+        "메모리 제조사",
+        "파운드리/팹"
+      ],
+      "peer_chain": [
+        "원익IPS",
+        "주성엔지니어링"
+      ],
       "history": [
         {
           "date": "20260604",
@@ -13787,6 +13932,10 @@
         {
           "date": "20260609",
           "change_pct": 24.28
+        },
+        {
+          "date": "20260710",
+          "change_pct": 24.44
         }
       ]
     },
@@ -14264,28 +14413,47 @@
       "name": "싸이맥스",
       "market": "KOSDAQ",
       "first_seen": "20260609",
-      "last_seen": "20260609",
-      "consecutive_days": 1,
+      "last_seen": "20260710",
+      "consecutive_days": 2,
       "main_theme": "반도체",
-      "specific_signal": "HBM·전공정용 반도체 이송장비 수주(수주 릴레이)",
-      "trigger_type": "contract",
-      "confidence": "medium",
+      "specific_signal": "HBM·첨단공정(선단공정)·패키징 장비 테마 매수세",
+      "trigger_type": "unknown",
+      "confidence": "low",
       "watch_keywords": [
-        "반도체 이송장비",
-        "HBM 수요",
-        "전공정 장비",
-        "이송장비 수주 릴레이",
-        "정밀 제어 무인화"
+        "반도체 장비",
+        "HBM",
+        "첨단공정",
+        "선단공정 장비",
+        "패키징 국산화"
       ],
       "related_stocks": [
-        "테스",
-        "피에스케이"
+        "인텍플러스",
+        "레이저쎌",
+        "케이씨텍"
       ],
-      "reasoning": "복수의 기사(search)에서 싸이맥스를 차세대 반도체 공급망의 핵심으로 소개하며 'HBM·전공정 겹호재'와 '반도체 이송 장비 수주 릴레이'를 언급한 점이 직간접적 매수 재료로 작용. 더불어 AI·데이터센터·중소형주 랠리 속에서 반도체 장비 관련 종목으로 수급이 집중되며 급등한 것으로 판단된다.",
+      "reasoning": "제공된 뉴스는 대체로 HBM·선단공정·첨단패키징 등 반도체 장비·테마 전반의 매수세 급증을 보도하고 있으나, 목록에 싸이맥스를 직접 지칭한 종목 공시·계약·실적 기사는 없다. 따라서 싸이맥스의 급등은 종목 고유의 호재라기보다 반도체 장비 테마 랠리에 동행한 수급성 움직임으로 판단된다.",
+      "reason_unknown_category": "theme_only_supply",
+      "industry_chain": "반도체 장비 (첨단공정/패키징)",
+      "chain_position": "장비",
+      "chain_role": "반도체 선단공정·패키징용 장비 공급",
+      "upstream": [],
+      "downstream": [
+        "삼성전자",
+        "SK하이닉스"
+      ],
+      "peer_chain": [
+        "인텍플러스",
+        "레이저쎌",
+        "케이씨텍"
+      ],
       "history": [
         {
           "date": "20260609",
           "change_pct": 24.68
+        },
+        {
+          "date": "20260710",
+          "change_pct": 21.65
         }
       ]
     },
@@ -16638,27 +16806,40 @@
       "name": "에이엔피",
       "market": "KOSPI",
       "first_seen": "20260616",
-      "last_seen": "20260616",
-      "consecutive_days": 1,
-      "main_theme": "전자부품 / 수급·테마(PCB 관련)",
-      "specific_signal": "AI 서버 수요 폭발 보도로 PCB주(에이엔피 포함) 수혜 기대감이 부각된 언급",
-      "trigger_type": "rumor",
-      "confidence": "medium",
+      "last_seen": "20260710",
+      "consecutive_days": 2,
+      "main_theme": "수급/시황",
+      "specific_signal": "코스피 반등에 따른 기관 순매수·방어주(은행주 등) 로테이션에 편승한 중소형 급등",
+      "trigger_type": "unknown",
+      "confidence": "low",
       "watch_keywords": [
-        "AI 데이터센터",
-        "전자부품(PCB) 수요",
-        "서버용 PCB 공급부족",
-        "AI 서버용 고밀도 PCB"
+        "기관 순매수",
+        "방어주 로테이션",
+        "코스피 반등",
+        "거래대금 급증",
+        "저유통주 물량 집중",
+        "단기 과매수"
       ],
       "related_stocks": [
-        "네오티스",
-        "팸트론"
+        "금호타이어",
+        "KB금융"
       ],
-      "reasoning": "최근 기사에서 AI 서버·전기차 등 전자부품 수요 급증을 이유로 PCB 관련 종목들이 거론되었고, 에이엔피도 해당 섹터 묶음으로 동반 상승한 것으로 보입니다. 별도 공시·실적·수주 소식은 없고 종목별 개별 호재보다는 섹터(테마) 언급이 직접적 촉발 요인입니다.",
+      "reasoning": "제공된 14일 뉴스는 대부분 코스피·장 마감 시황과 섹터 전반(반도체 약세→방어주 강세) 관련 보도로, 에이엔피에 대한 개별 공시·계약·실적성 기사는 확인되지 않습니다. 따라서 이날 급등은 코스피 반등·기관 순매수·테마(방어주/중소형) 수급 쏠림 및 저유통주 특성에 따른 단기 과열(투기성 매수/공매도 커버링) 영향으로 추정됩니다.",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260616",
           "change_pct": 10.09
+        },
+        {
+          "date": "20260710",
+          "change_pct": 29.9
         }
       ]
     },
@@ -16757,8 +16938,8 @@
       "name": "더코디",
       "market": "KOSDAQ",
       "first_seen": "20260616",
-      "last_seen": "20260706",
-      "consecutive_days": 2,
+      "last_seen": "20260710",
+      "consecutive_days": 3,
       "main_theme": "수급·시장감시(과열·투자주의 지정)",
       "specific_signal": "거래소 투자주의종목 지정(소수계좌 매수 집중·이격도 과열 징후)",
       "trigger_type": "disclosure",
@@ -16775,7 +16956,7 @@
         "금호건설우",
         "가온전선"
       ],
-      "reasoning": "당일·직전 보도에서 ‘소수계좌 매수 집중’과 ‘투자주의종목 지정(이격도 과열)’이 명시되어 있어, 급등은 개별 수급(과열·투자 경고) 관련 매매와 단기 투기성 유입에 따른 것으로 판단됩니다. 회사 고유의 계약·실적·정책성 호재는 확인되지 않아 주가 상승은 본질적 펀더멘털보다는 수급·모멘텀(감시·과열 해프닝) 영향이 큽니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260616, 3일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -16791,6 +16972,10 @@
         {
           "date": "20260706",
           "change_pct": 15.38
+        },
+        {
+          "date": "20260710",
+          "change_pct": 19.41
         }
       ]
     },
@@ -17883,26 +18068,26 @@
       "name": "예스티",
       "market": "KOSDAQ",
       "first_seen": "20260617",
-      "last_seen": "20260618",
-      "consecutive_days": 2,
+      "last_seen": "20260710",
+      "consecutive_days": 3,
       "main_theme": "반도체",
-      "specific_signal": "228억 원 규모 반도체 제조장비 공급계약(메모리향 장비)",
-      "trigger_type": "contract",
-      "confidence": "high",
+      "specific_signal": "HBM·첨단공정 장비 테마에 따른 코스닥 장비주 동반 급등(기관 순매수 확산)",
+      "trigger_type": "unknown",
+      "confidence": "low",
       "watch_keywords": [
-        "반도체 장비",
-        "메모리(HBM)",
-        "228억 공급계약",
-        "메모리향 장비 본격화",
-        "HBM 4세대/5세대"
+        "반도체",
+        "HBM·첨단공정",
+        "장비·소부장",
+        "삼성 파운드리 투자",
+        "기관 순매수"
       ],
       "related_stocks": [
-        "원익IPS",
         "주성엔지니어링",
-        "한솔테크닉스"
+        "원익IPS",
+        "HPSP"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260617, 2일째 등장)",
-      "reason_unknown_category": "",
+      "reasoning": "최근 14일 기사들에서는 예스티 자체 공시·수주·실적 관련 핵심 보도가 확인되지 않습니다. 7월9일 전후로 코스닥과 반도체 장비·소부장 관련 종목들에 대한 기관 순매수 및 HBM·첨단공정 수혜 기대가 확산되며 장비 테마가 급등했는데, 예스티의 급등은 이 같은 테마·수급 영향으로 해석됩니다.",
+      "reason_unknown_category": "theme_only_supply",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -17917,6 +18102,10 @@
         {
           "date": "20260618",
           "change_pct": 18.42
+        },
+        {
+          "date": "20260710",
+          "change_pct": 26.25
         }
       ]
     },
@@ -17924,34 +18113,43 @@
       "name": "툴젠",
       "market": "KOSDAQ",
       "first_seen": "20260617",
-      "last_seen": "20260617",
-      "consecutive_days": 1,
+      "last_seen": "20260710",
+      "consecutive_days": 2,
       "main_theme": "바이오",
-      "specific_signal": "오송 유전자교정 작물(종자) 실증필드 구축 — 종자 실증·상용화 추진 및 SAF 원료 시장 공략 언급",
+      "specific_signal": "미국 특허 소송 최종심사 임박 보도 및 회사의 ‘특허소송 승리’ 입장 표명(주주 달램)",
       "trigger_type": "disclosure",
       "confidence": "medium",
       "watch_keywords": [
-        "유전자교정 작물",
-        "SAF 원료",
-        "오송 실증필드",
-        "종자 실증 상용화",
-        "작물 유전자편집 규제/허가"
+        "특허소송",
+        "유상증자",
+        "바이오/유전자 편집",
+        "미국 특허 최종심사",
+        "법률비용 충당",
+        "증권신고서 정정"
       ],
       "related_stocks": [
-        "팜한농"
+        "에이비엘바이오",
+        "펩트론"
       ],
-      "reasoning": "회사·언론(네이버 태그 기사 포함)이 6월11일 오송에 유전자교정 작물 실증필드를 구축했다고 보도했고, 기사에서 종자 실증·상용화와 '글로벌 SAF 원료 시장 공략'을 연결해 사업 확장성(매출화 가능성)이 부각되었다. 이후 바이오 섹터 회복성(6/16의 섹터 강세)과 결합해 투자심리가 집중된 것으로 판단된다.",
+      "reasoning": "7/9~7/10 보도에서 '미국 특허 소송 최종심사 임박' 보도와 회사 측의 '특허소송 승리 보여주겠다'라는 직접적 대응(주주 달램)이 동일기간에 나와 소송 불확실성 해소 기대가 부각되며 투심이 개선된 것으로 보입니다. 공식적 승소 발표는 없지만 임박한 심사와 회사 메시지가 결합되며 단기 분위기(투기·쇼트커버 포함)를 촉발한 것으로 판단됩니다.",
       "reason_unknown_category": "",
-      "industry_chain": "농업용 유전자교정/아그리바이오",
-      "chain_position": "최종재",
-      "chain_role": "유전자교정 작물(종자) 실증·상용화 테스트베드 및 종자 상용화 추진",
+      "industry_chain": "유전자 편집/CRISPR 바이오",
+      "chain_position": "서비스",
+      "chain_role": "유전자 편집 플랫폼(특허) 보유 및 라이선스·임상지원 등 기술 제공",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [],
+      "peer_chain": [
+        "에이비엘바이오",
+        "펩트론"
+      ],
       "history": [
         {
           "date": "20260617",
           "change_pct": 15.97
+        },
+        {
+          "date": "20260710",
+          "change_pct": 25.11
         }
       ]
     },
@@ -19488,8 +19686,8 @@
       "name": "해성디에스",
       "market": "KOSPI",
       "first_seen": "20260622",
-      "last_seen": "20260709",
-      "consecutive_days": 2,
+      "last_seen": "20260710",
+      "consecutive_days": 3,
       "main_theme": "반도체",
       "specific_signal": "2분기 실적 기대치 상회 전망(리드프레임·패키지 기판 수요 회복 기대)",
       "trigger_type": "earnings",
@@ -19505,21 +19703,14 @@
         "삼성전기",
         "이수페타시스"
       ],
-      "reasoning": "7월 8일 관련 기사에서 2분기 실적이 기대치를 상회할 것이라는 전망이 제기되었고, 이는 리드프레임 수요 회복·패키지기판 업황 개선 기대와 맞물려 주가를 끌어올린 것으로 보인다. 추가로 판가 인하 우려 완화(7/3 보도)와 반도체 섹터 강세·ETF 개인 순매수 흐름이 수급 측면에서 상승을 뒷받침했다.",
+      "reasoning": "이전 분석 재사용 (최초 20260622, 3일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "반도체 후공정 패키징",
-      "chain_position": "부품",
-      "chain_role": "메모리 및 패키지용 리드프레임·기판을 공급하는 부품업체",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "삼성전자",
-        "SK하이닉스"
-      ],
-      "peer_chain": [
-        "삼성전기",
-        "이수페타시스",
-        "코리아써키트"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260622",
@@ -19528,6 +19719,10 @@
         {
           "date": "20260709",
           "change_pct": 6.5
+        },
+        {
+          "date": "20260710",
+          "change_pct": 13.36
         }
       ]
     },
@@ -20058,23 +20253,27 @@
       "name": "디와이에이",
       "market": "KOSPI",
       "first_seen": "20260623",
-      "last_seen": "20260706",
-      "consecutive_days": 3,
-      "main_theme": "반도체(수급/테마성 랠리)",
-      "specific_signal": "호남(광주) 반도체 관련 수혜주 관심 및 공매도 거래대금 급감에 따른 수급 개선 가능성",
+      "last_seen": "20260710",
+      "consecutive_days": 4,
+      "main_theme": "수급/시장 재료",
+      "specific_signal": "코스피 반등에 따른 방어주·은행주 동반 강세(기관 순매수 영향)",
       "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "반도체(호남) 프로젝트",
-        "공매도 거래대금 급감",
-        "지역 반도체 수혜주",
+        "기관 순매수",
+        "방어주 강세",
+        "반도체 조정",
         "거래량 급증",
-        "장중 반도체 강세"
+        "지수 연동 급등"
       ],
-      "related_stocks": [],
-      "reasoning": "제공된 14일 내 기사들은 코스피·반도체 업황 강세나 상승 종목 리스트, 공매도 거래대금 급감 등 시장·수급 관련 일반 기사에 머물며 디와이에이의 개별 공시·수주·실적 관련 직접 트리거는 확인되지 않습니다. 따라서 이번 급등은 '호남 반도체' 등 섹터·지역 테마의 랠리와 공매도 축소에 따른 수급 재배치(숏커버링·매수유입) 가능성이 복합적으로 작용했을 가능성이 크지만, 회사 고유의 확정적 뉴스는 확인되지 않습니다.",
-      "reason_unknown_category": "headline_only_generic",
-      "industry_chain": "반도체(지역 공급망/수급 테마)",
+      "related_stocks": [
+        "KB금융",
+        "신한지주",
+        "우리금융"
+      ],
+      "reasoning": "동일 기간 제공된 기사들은 모두 코스피·수급(기관 순매수) 중심의 마감·시황 보도로, 개별 기업의 공시·실적·수주 등 직접적 호재는 확인되지 않습니다. 디와이에이의 급등은 시장 전반의 반등과 방어주(은행주 등)의 강세에 동조한 단기 수급성 랠리로 판단됩니다.",
+      "reason_unknown_category": "weak_name_link",
+      "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
       "upstream": [],
@@ -20092,6 +20291,10 @@
         {
           "date": "20260706",
           "change_pct": 20.21
+        },
+        {
+          "date": "20260710",
+          "change_pct": 29.95
         }
       ]
     },
@@ -20988,8 +21191,8 @@
       "name": "광주신세계",
       "market": "KOSPI",
       "first_seen": "20260624",
-      "last_seen": "20260706",
-      "consecutive_days": 3,
+      "last_seen": "20260710",
+      "consecutive_days": 4,
       "main_theme": "정책/지역 개발(호남 반도체 클러스터)",
       "specific_signal": "호남(광주·전남) 반도체 클러스터 조성·대규모 투자(지역 메가프로젝트) 기대감으로 지역 인구유입·관광·명품 소비 증가 예상 — 지역 백화점 수혜",
       "trigger_type": "policy",
@@ -21006,21 +21209,14 @@
         "신세계인터내셔날",
         "롯데쇼핑"
       ],
-      "reasoning": "6/29~7/2 사이 호남권 반도체 클러스터(메가프로젝트) 관련 다수 보도가 나오며 지역 건설·유통·백화점 업종에 대한 수혜 기대감이 형성되었고, 관련 기사에서 지역 백화점주의 동반 강세를 직접 언급함. 광주 지역 인프라(군공항 연계 등) 개발 가능성 및 방문객·근로자 증가 기대가 광주신세계의 매출 성장(명품·유통)로 연결될 것이라는 시장 해석으로 급등한 것으로 판단된다.",
+      "reasoning": "이전 분석 재사용 (최초 20260624, 4일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "지역 유통·백화점(리테일)",
-      "chain_position": "유통/판매",
-      "chain_role": "광주권 백화점으로서 지역 방문객 및 근로자 대상의 소매(명품·패션·서비스) 제공으로 소비 수혜 흡수",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "외국인 관광객",
-        "지역 소비자/근로자"
-      ],
-      "peer_chain": [
-        "신세계",
-        "롯데쇼핑",
-        "현대백화점"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260624",
@@ -21033,6 +21229,10 @@
         {
           "date": "20260706",
           "change_pct": 29.82
+        },
+        {
+          "date": "20260710",
+          "change_pct": 19.71
         }
       ]
     },
@@ -21177,28 +21377,25 @@
       "name": "화천기공",
       "market": "KOSPI",
       "first_seen": "20260624",
-      "last_seen": "20260626",
-      "consecutive_days": 2,
-      "main_theme": "공작기계·제조장비",
-      "specific_signal": "AI·반도체 투자 확대로 K-공작기계 수요 회복 및 화천기공의 'AI 결합 차세대 공작기계' 스토리(언론 보도 기반의 수요 기대감)",
-      "trigger_type": "unknown",
+      "last_seen": "20260710",
+      "consecutive_days": 3,
+      "main_theme": "공작기계/기계업종",
+      "specific_signal": "전남 광주 1만6000평 공장부지 재평가(자산가치 상승 기대)",
+      "trigger_type": "disclosure",
       "confidence": "medium",
       "watch_keywords": [
-        "K-공작기계",
-        "AI 제조투자",
-        "반도체 장비 수요",
-        "AI 결합 차세대 공작기계",
-        "해외수주 증가",
-        "수주 실적 공시"
+        "공작기계",
+        "자산재평가",
+        "광주 1만6000평",
+        "공장부지 재평가",
+        "AI 자동화 수요"
       ],
-      "related_stocks": [
-        "서암기계공업"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260624, 2일째 등장)",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "",
-      "chain_position": "",
-      "chain_role": "",
+      "related_stocks": [],
+      "reasoning": "7/9 보도에서 '전남 광주 1만6000평 공장부지 재평가'가 지목되어 실물자산 가치가 재평가될 가능성이 제기되었고, 이 소식이 단기간에 주가를 급등시킨 직접적 촉매로 작용한 것으로 보인다. 또한 공작기계·로봇·자동화 업종에 대한 긍정적 센티먼트(AI·로봇 관련 테마 확산)가 동반 매수세를 확대했을 가능성이 있다.",
+      "reason_unknown_category": "",
+      "industry_chain": "공작기계·산업장비",
+      "chain_position": "장비",
+      "chain_role": "CNC 공작기계 및 산업용 장비의 제조·공급",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
@@ -21210,6 +21407,10 @@
         {
           "date": "20260626",
           "change_pct": 11.76
+        },
+        {
+          "date": "20260710",
+          "change_pct": 26.89
         }
       ]
     },
@@ -22818,8 +23019,8 @@
       "name": "금호타이어",
       "market": "KOSPI",
       "first_seen": "20260626",
-      "last_seen": "20260706",
-      "consecutive_days": 2,
+      "last_seen": "20260710",
+      "consecutive_days": 3,
       "main_theme": "정책/지역개발·수급(테마성 M&A/자산매각 기대)",
       "specific_signal": "금호타이어 광주공장 매각설·호남반도체 연계(공장부지 반도체단지 편입 기대)",
       "trigger_type": "rumor",
@@ -22835,20 +23036,14 @@
         "한국타이어앤테크놀로지",
         "넥센타이어"
       ],
-      "reasoning": "당일 다수 보도는 종목명 연관 언급·검색 급증을 다루거나 판촉성 기사였으나, 전일(7/5) 보도에서 '금호타이어 광주공장 매각'과 '호남반도체(광주 반도체단지) 연계 기대'가 제기되며 투자심리를 자극한 것으로 보인다. 공식 공시가 없는 상태에서 관련 소문·지역 개발 기대가 거래량 급증과 30%대 급등을 초래했다.",
+      "reasoning": "이전 분석 재사용 (최초 20260626, 3일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "자동차 타이어 제조(완성재)",
-      "chain_position": "최종재",
-      "chain_role": "승용·상용차용 타이어의 제조 및 유통(완제품 공급)",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "자동차 제조사",
-        "애프터마켓(개인소비자·정비업체)"
-      ],
-      "peer_chain": [
-        "한국타이어앤테크놀로지",
-        "넥센타이어"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260626",
@@ -22857,6 +23052,10 @@
         {
           "date": "20260706",
           "change_pct": 29.96
+        },
+        {
+          "date": "20260710",
+          "change_pct": 30.0
         }
       ]
     },
@@ -24179,41 +24378,46 @@
       "name": "HD현대마린엔진",
       "market": "KOSPI",
       "first_seen": "20260701",
-      "last_seen": "20260701",
-      "consecutive_days": 1,
-      "main_theme": "조선/수주",
-      "specific_signal": "중국 조선소서 1,000억 규모 수주 포함, 최근 3주간 선박엔진 계약 총 약 1,554억 원(6월 중 추가 280억 포함)",
-      "trigger_type": "contract",
+      "last_seen": "20260710",
+      "consecutive_days": 2,
+      "main_theme": "조선기자재(선박 엔진)",
+      "specific_signal": "2분기 선박 엔진 수익성 개선(중국 발주 증가) + 데이터센터용 엔진 사업 확대 기대",
+      "trigger_type": "earnings",
       "confidence": "high",
       "watch_keywords": [
-        "조선 수주",
-        "엔진 공급 부족",
-        "친환경 선박엔진",
-        "중국 조선소 1000억 수주",
-        "3주간 1554억 엔진계약"
+        "선박 엔진",
+        "AI 데이터센터",
+        "2분기 수익성 개선",
+        "중국 발주 증가",
+        "데이터센터용 엔진 사업 확대"
       ],
       "related_stocks": [
+        "STX엔진",
         "한화엔진",
-        "HD현대중공업",
-        "한화오션"
+        "HD현대마린솔루션"
       ],
-      "reasoning": "공시·태깅 기사(6/30)를 중심으로 중국 조선소에서의 1,000억원 수주와 최근 3주간 집계된 엔진계약 총 1,554억원 규모가 확인되어 단기 매수세를 유발한 것으로 보인다. 여기에 '엔진 품귀'·중국 조선 호황을 다룬 다수 기사들이 동반되며 수주 낙관론이 강화되어 주가가 급등했다.",
+      "reasoning": "당일 조선비즈 기사에서 2분기 선박 엔진 수익성 개선 및 중국 주문 증가를 보도했고(직접적 수요·수익성 호재), 이전 기사들과 분석에서 조선업체들이 데이터센터용 엔진 등 비전통 수요로 영역을 확대한다는 보도가 이어지며(사업 확장 기대) 기관·개인 수급이 몰린 것으로 판단됩니다. 이 복합 호재가 같은 업종 내 엔진주 동반 강세를 촉발해 해당 종목의 급등으로 연결됐습니다.",
       "reason_unknown_category": "",
-      "industry_chain": "조선 엔진/선박 기자재",
-      "chain_position": "부품",
-      "chain_role": "선박용 주기관 및 친환경 엔진 공급업체(선박엔진 모듈 납품)",
+      "industry_chain": "조선기자재(선박 엔진)",
+      "chain_position": "조립/제조",
+      "chain_role": "내연 선박 엔진 제조 및 데이터센터용 엔진 개발/공급 기대",
       "upstream": [],
       "downstream": [
-        "HD현대중공업",
-        "한화오션"
+        "해운선주",
+        "데이터센터 운영사"
       ],
       "peer_chain": [
+        "STX엔진",
         "한화엔진"
       ],
       "history": [
         {
           "date": "20260701",
           "change_pct": 17.41
+        },
+        {
+          "date": "20260710",
+          "change_pct": 13.03
         }
       ]
     },
@@ -24746,40 +24950,47 @@
       "name": "대구백화점",
       "market": "KOSPI",
       "first_seen": "20260702",
-      "last_seen": "20260702",
-      "consecutive_days": 1,
-      "main_theme": "유통/백화점",
-      "specific_signal": "지역 '메가 프로젝트' 가동에 따른 지역 백화점株 동반 강세(대구권 소비·상권 회복 기대)",
-      "trigger_type": "policy",
-      "confidence": "medium",
+      "last_seen": "20260710",
+      "consecutive_days": 2,
+      "main_theme": "수급/시장",
+      "specific_signal": "기관 순매수에 따른 코스피 반등으로 방어주·지역 유통주 강세(시장전반 수급이 종목에 파급)",
+      "trigger_type": "unknown",
+      "confidence": "low",
       "watch_keywords": [
-        "유통/백화점",
-        "지역 재개발·도심재생",
-        "메가 프로젝트 가동",
-        "동성로 부활",
-        "대구 대형소매점 5월 매출"
+        "기관 순매수",
+        "방어주·유통 강세",
+        "장마·폭염 전용 상품",
+        "팝업 콜라보레이션",
+        "지역 백화점 유동인구"
       ],
       "related_stocks": [
-        "롯데쇼핑",
         "현대백화점",
-        "신세계"
+        "신세계",
+        "롯데쇼핑"
       ],
-      "reasoning": "한국경제의 '메가 프로젝트 가동' 보도가 지역 상권·백화점에 대한 수요 회복 기대를 자극하면서 지역 백화점 종목에 매수세가 유입된 것으로 보인다. 여기에 5월 대구 대형소매점 매출 호조 및 동성로 활성화 관련 지방정부·지자체 발언이 결합되어 투자심리를 강화한 것으로 판단된다.",
-      "reason_unknown_category": "",
-      "industry_chain": "백화점·리테일(유통)",
+      "reasoning": "D-day에 발표된 마감시황 기사(코스피 기관 순매수·반등)가 바로 직전·당일 전반적 매수심리를 설명하고 있어, 개별 기업 공시나 계약성 뉴스 없이 수급 영향으로 급등한 것으로 보입니다. 유통업계의 계절적(장마·폭염) 수요와 팝업 콜라보 소식이 보조적 스토리를 제공했지만 회사 고유의 확정적 호재는 확인되지 않습니다.",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "백화점·유통",
       "chain_position": "유통/판매",
-      "chain_role": "지역 백화점으로서 오프라인 유통·리테일 판매 채널 운영 및 지역 상권 수혜",
+      "chain_role": "지역 기반 오프라인 백화점 운영 및 입점 브랜드 상품 판매",
       "upstream": [],
-      "downstream": [],
+      "downstream": [
+        "지역 소비자",
+        "입점 브랜드(패션·생활용품)"
+      ],
       "peer_chain": [
-        "롯데쇼핑",
         "현대백화점",
-        "신세계"
+        "신세계",
+        "롯데쇼핑"
       ],
       "history": [
         {
           "date": "20260702",
           "change_pct": 11.88
+        },
+        {
+          "date": "20260710",
+          "change_pct": 29.97
         }
       ]
     },
@@ -25906,8 +26117,8 @@
       "name": "CS",
       "market": "KOSDAQ",
       "first_seen": "20260703",
-      "last_seen": "20260703",
-      "consecutive_days": 1,
+      "last_seen": "20260710",
+      "consecutive_days": 2,
       "main_theme": "M&A / 기업금융",
       "specific_signal": "우리은행과 110억원 대출 약정으로 인수자금 확보(미래정보기술 인수 추진)",
       "trigger_type": "disclosure",
@@ -25920,11 +26131,11 @@
         "인수자금 조달"
       ],
       "related_stocks": [],
-      "reasoning": "종목 태그 기사로 회사가 우리은행과 110억원 규모의 대출 약정을 체결해 인수자금을 마련했다고 보도되었음. 인수자금 확보는 인수 추진 불확실성을 해소하는 명확한 재무적 신호라 단기 급등을 유발했을 가능성이 높음. 기사 시점(07.02 장후)으로 볼 때 실제 시장 반응은 다음 거래일(07.03)로 이어진 것으로 판단.",
+      "reasoning": "이전 분석 재사용 (최초 20260703, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "M&A/기업금융",
-      "chain_position": "기타",
-      "chain_role": "인수자금 조달을 통한 기업 인수 추진(재무적·전략적 거래 실행)",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
@@ -25932,6 +26143,10 @@
         {
           "date": "20260703",
           "change_pct": 29.98
+        },
+        {
+          "date": "20260710",
+          "change_pct": 20.2
         }
       ]
     },
@@ -27500,8 +27715,8 @@
       "name": "한성기업",
       "market": "KOSPI",
       "first_seen": "20260709",
-      "last_seen": "20260709",
-      "consecutive_days": 1,
+      "last_seen": "20260710",
+      "consecutive_days": 2,
       "main_theme": "수급(개미·테마성 매수)",
       "specific_signal": "SNS·언론을 통한 '애국 기업' 입소문 및 '돈쭐'·주식 매수운동(참전용사 후원 사실 부각)으로 단기간 대량 매수·상한가",
       "trigger_type": "rumor",
@@ -27514,24 +27729,22 @@
         "크래미 브랜드 지지"
       ],
       "related_stocks": [],
-      "reasoning": "당일(7/9) 다수 언론과 기사(주식태그 포함)가 '애국 개미'·'돈쭐' 캠페인과 회사의 참전용사 후원 이력을 보도하면서 개인투자자 중심의 매수세가 집중돼 주가가 급등한 것으로 판단된다. 보도 내용은 상장폐지 우려 완화(심리적 요인)를 직접 언급해 수급(심리·테마성 매수)이 핵심 트리거로 작용했다.",
+      "reasoning": "이전 분석 재사용 (최초 20260709, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "가공식품(수산물 가공·즉석식품)",
-      "chain_position": "최종재",
-      "chain_role": "수산 가공 완제품(맛살·어묵류 등) 제조·판매",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "대형마트",
-        "온라인 식품몰"
-      ],
-      "peer_chain": [
-        "동원F&B",
-        "사조오양"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260709",
           "change_pct": 29.94
+        },
+        {
+          "date": "20260710",
+          "change_pct": 29.95
         }
       ]
     },
@@ -27539,8 +27752,8 @@
       "name": "모나미",
       "market": "KOSPI",
       "first_seen": "20260709",
-      "last_seen": "20260709",
-      "consecutive_days": 1,
+      "last_seen": "20260710",
+      "consecutive_days": 2,
       "main_theme": "수급/테마성",
       "specific_signal": "정치 테마주 매수세에 따른 단기 급등(정치 테마 관련 매수)",
       "trigger_type": "rumor",
@@ -27553,21 +27766,22 @@
         "색조 화장품 ODM"
       ],
       "related_stocks": [],
-      "reasoning": "장중·시황 기사(2026.07.08)에서 '정치 테마주 매수세'로 모나미가 급등했다고 직접 지목된 점이 D-day 급등의 직적 원인으로 보입니다. 배경에는 최근의 색조 화장품(ODM) 진출·브랜딩 강화 소식이 있어 투자자들의 관심이 확대된 상태에서 테마성 매수세가 증폭된 것으로 추정됩니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260709, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "소비재(문구·코스메틱)",
-      "chain_position": "최종재",
-      "chain_role": "문구류 및 색조 화장품 완제품 제조·브랜드 운영",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "문구 소매업",
-        "화장품 소매·유통"
-      ],
+      "downstream": [],
       "peer_chain": [],
       "history": [
         {
           "date": "20260709",
           "change_pct": 24.69
+        },
+        {
+          "date": "20260710",
+          "change_pct": 25.66
         }
       ]
     },
@@ -27715,36 +27929,41 @@
       "name": "웰킵스하이텍",
       "market": "KOSDAQ",
       "first_seen": "20260709",
-      "last_seen": "20260709",
-      "consecutive_days": 1,
-      "main_theme": "수급(코스닥 소형주 테마성 수급)",
-      "specific_signal": "개별 소형주 중심의 단기 매수·거래량 급증(애국 테마주·상폐 리스크 관련 장내 쏠림)",
-      "trigger_type": "unknown",
-      "confidence": "low",
+      "last_seen": "20260710",
+      "consecutive_days": 2,
+      "main_theme": "수급/단기 테마(투기성 급등)",
+      "specific_signal": "특정계좌의 집중 매수로 인한 거래량 급증 및 거래소의 '투자주의종목' 지정",
+      "trigger_type": "disclosure",
+      "confidence": "high",
       "watch_keywords": [
-        "코스닥 소형주 수급",
-        "애국 테마주",
-        "상장폐지 리스크",
-        "거래량 급증",
-        "단타 매매",
-        "시총 200억 이하"
+        "수급(특정계좌)",
+        "투자주의 지정",
+        "거래소 모니터링",
+        "거래량 급증"
       ],
       "related_stocks": [
-        "한성기업",
-        "네이처셀"
+        "선도전기",
+        "광전자"
       ],
-      "reasoning": "직접적으로 웰킵스하이텍을 지목하는 회사 공시나 계약·실적 관련 기사 본문이 최근 14일 내에 확인되지 않습니다. 다수의 기사들이 코스닥 시황, 소형주·애국(테마) 관련 급등주 목록·상폐 이슈 등을 다루고 있어 단기 수급·테마성 매매로 급등한 것으로 판단됩니다.",
-      "reason_unknown_category": "headline_only_generic",
-      "industry_chain": "",
-      "chain_position": "",
-      "chain_role": "",
+      "reasoning": "거래소·언론 보도에 따르면 특정계좌의 집중 매수로 인해 거래량과 주가가 급등했고 이에 따라 거래소에서 투자주의종목으로 지정된 사실이 확인된다. AI 데이터센터 등 업종 재료성 뉴스가 시장 전반의 매수심리를 자극했으나, 웰킵스하이텍의 급등 원인은 수급(특정계좌 매수)으로 보는 것이 타당하다.",
+      "reason_unknown_category": "",
+      "industry_chain": "시장수급/단기 테마성 매매",
+      "chain_position": "기타",
+      "chain_role": "주식시장에서 특정 계좌 집중매수로 단기 급등·변동성을 유발하는 대상",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [],
+      "peer_chain": [
+        "선도전기",
+        "광전자"
+      ],
       "history": [
         {
           "date": "20260709",
           "change_pct": 30.0
+        },
+        {
+          "date": "20260710",
+          "change_pct": 23.33
         }
       ]
     },
@@ -27987,6 +28206,253 @@
         {
           "date": "20260709",
           "change_pct": 13.16
+        }
+      ]
+    },
+    "007660": {
+      "name": "이수페타시스",
+      "market": "KOSPI",
+      "first_seen": "20260710",
+      "last_seen": "20260710",
+      "consecutive_days": 1,
+      "main_theme": "반도체",
+      "specific_signal": "반도체 후공정·패키징 관련 테마 랠리(패키징 국산화·AI·6G 수요 기대)",
+      "trigger_type": "unknown",
+      "confidence": "low",
+      "watch_keywords": [
+        "반도체",
+        "패키징(후공정)",
+        "AI 반도체",
+        "패키징 국산화",
+        "후공정 수주",
+        "6G 통신 수요"
+      ],
+      "related_stocks": [
+        "피에스케이",
+        "레이저쎌"
+      ],
+      "reasoning": "최근 보도들은 삼성전자·SK하이닉스 실적·ETF 재편과 AI·6G 기대에 따른 반도체 섹터 순환 매수에 초점이 맞춰져 있다. 이수페타시스의 급등은 회사 고유 공시가 없이 반도체 후공정·패키징 관련 테마성 수급·섹터 모멘텀에 연동된 것으로 판단된다(거래량 동반 상승).",
+      "reason_unknown_category": "theme_only_supply",
+      "industry_chain": "반도체 후공정 (패키징/테스트)",
+      "chain_position": "부품",
+      "chain_role": "반도체 패키징·후공정용 부품/모듈 공급",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [
+        "피에스케이",
+        "레이저쎌"
+      ],
+      "history": [
+        {
+          "date": "20260710",
+          "change_pct": 13.07
+        }
+      ]
+    },
+    "226330": {
+      "name": "신테카바이오",
+      "market": "KOSDAQ",
+      "first_seen": "20260710",
+      "last_seen": "20260710",
+      "consecutive_days": 1,
+      "main_theme": "바이오",
+      "specific_signal": "약 65억 규모 아토리서치 대상 코로케이션(서비스) 공급계약 체결",
+      "trigger_type": "contract",
+      "confidence": "high",
+      "watch_keywords": [
+        "의료AI",
+        "AI 헬스케어",
+        "코로케이션 공급계약",
+        "아토리서치 65억",
+        "클라우드 인프라"
+      ],
+      "related_stocks": [
+        "뷰노",
+        "루닛"
+      ],
+      "reasoning": "회사와 아토리서치 간 약 64.8~65억원 규모 서비스(코로케이션) 계약 체결 보도가 7월 9일에 나왔고, 관련 종목태그 기사들이 7월 10일 장중 재보도되며 매수세가 집중되어 상한가로 이어진 것으로 판단됩니다. 계약금액이 비교적 명확하고 다수 매체의 종목 태그 보도가 있어 단기 급등의 직접 트리거로 해석됩니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "의료AI 플랫폼/서비스",
+      "chain_position": "서비스",
+      "chain_role": "의료 AI 모델·데이터 코로케이션 및 서비스 제공",
+      "upstream": [],
+      "downstream": [
+        "아토리서치",
+        "의료기관"
+      ],
+      "peer_chain": [
+        "뷰노",
+        "루닛"
+      ],
+      "history": [
+        {
+          "date": "20260710",
+          "change_pct": 30.0
+        }
+      ]
+    },
+    "065660": {
+      "name": "안트로젠",
+      "market": "KOSDAQ",
+      "first_seen": "20260710",
+      "last_seen": "20260710",
+      "consecutive_days": 1,
+      "main_theme": "바이오",
+      "specific_signal": "회사 설명자료: '日 환자수 25명은 초기 추계'라는 해명(일본 임상 환자수 관련 불확실성 부분 해소)",
+      "trigger_type": "disclosure",
+      "confidence": "high",
+      "watch_keywords": [
+        "바이오/임상",
+        "경영권 분쟁",
+        "일본 임상 환자수",
+        "초기 추계 해명",
+        "기관 순매수"
+      ],
+      "related_stocks": [
+        "HLB",
+        "HLB제약"
+      ],
+      "reasoning": "D-day 당일(07.10) 회사가 일본 임상 관련 숫자(환자수 25명)가 초기 추계라는 취지로 해명하면서 불확실성이 일부 해소된 것으로 보입니다. 여기에 같은 날 코스닥 전반의 기관 대규모 순매수 등 시장 수급 개선이 겹치며 급등으로 이어진 것으로 판단됩니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "바이오/제약 (임상·신약 개발)",
+      "chain_position": "기타",
+      "chain_role": "임상시험 진행(일본 환자 모집·임상 데이터 확보 관련 활동)",
+      "upstream": [],
+      "downstream": [
+        "일본 의료기관",
+        "임상시험 CRO"
+      ],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260710",
+          "change_pct": 29.94
+        }
+      ]
+    },
+    "049080": {
+      "name": "기가레인",
+      "market": "KOSDAQ",
+      "first_seen": "20260710",
+      "last_seen": "20260710",
+      "consecutive_days": 1,
+      "main_theme": "반도체 장비",
+      "specific_signal": "AI 기반 플라즈마 식각 공정 최적화 성공 공시(공정 개발 효율화)",
+      "trigger_type": "disclosure",
+      "confidence": "medium",
+      "watch_keywords": [
+        "반도체 장비",
+        "AI 데이터센터",
+        "플라즈마 식각 최적화",
+        "공정 개발 효율화",
+        "주권매매거래 정지 해제"
+      ],
+      "related_stocks": [
+        "주성엔지니어링",
+        "원익IPS"
+      ],
+      "reasoning": "최근 코스닥·반도체 장비·AI 데이터센터 관련 동반 랠리(7/9~7/10) 속에서, 기가레인이 6/29에 발표한 'AI 활용 플라즈마 식각 공정 최적화' 공시가 투자심리의 개별 촉매로 작용한 것으로 보인다. 장중 업종·수급 호조가 D-day의 직접적 촉매 역할을 했고, 회사의 공정 경쟁력 개선 뉴스가 주가 상승의 근거를 제공했다.",
+      "reason_unknown_category": "",
+      "industry_chain": "반도체 장비 (식각 공정)",
+      "chain_position": "장비",
+      "chain_role": "플라즈마 식각 공정용 장비 및 AI 기반 공정 최적화 솔루션 제공",
+      "upstream": [],
+      "downstream": [
+        "반도체 제조사",
+        "메모리/파운드리 업체"
+      ],
+      "peer_chain": [
+        "주성엔지니어링",
+        "원익IPS",
+        "레이저쎌"
+      ],
+      "history": [
+        {
+          "date": "20260710",
+          "change_pct": 29.92
+        }
+      ]
+    },
+    "354320": {
+      "name": "알멕",
+      "market": "KOSDAQ",
+      "first_seen": "20260710",
+      "last_seen": "20260710",
+      "consecutive_days": 1,
+      "main_theme": "자동차(전기차) 경량화",
+      "specific_signal": "전기차 경량화용 알루미늄 압출재 수요·기대(언론의 기술·제품 소개로 인한 테마성 기대감)",
+      "trigger_type": "rumor",
+      "confidence": "low",
+      "watch_keywords": [
+        "전기차 경량화",
+        "우주항공 밸류체인",
+        "알루미늄 압출재",
+        "경량 구조용 프로파일",
+        "EV 차체 부품 수주"
+      ],
+      "related_stocks": [
+        "유림테크",
+        "태웅"
+      ],
+      "reasoning": "최근 언론(2026.07.09)을 중심으로 '알루미늄 압출재(경량화 부품)' 관련 기사들이 다수 노출되며 전기차·항공우주 밸류체인 기대감이 확대된 것으로 보입니다. 명확한 공시·계약 없이 기술·제품 소개성 기사가 매매심리를 자극해 급등한 것으로 판단됩니다.",
+      "reason_unknown_category": "theme_only_supply",
+      "industry_chain": "전기차 경량소재(자동차 부품)",
+      "chain_position": "부품",
+      "chain_role": "차체·구조용 알루미늄 압출 프로파일 공급",
+      "upstream": [],
+      "downstream": [
+        "전기차 OEM",
+        "항공우주 부품사"
+      ],
+      "peer_chain": [
+        "유림테크",
+        "태웅"
+      ],
+      "history": [
+        {
+          "date": "20260710",
+          "change_pct": 20.97
+        }
+      ]
+    },
+    "089890": {
+      "name": "코세스",
+      "market": "KOSDAQ",
+      "first_seen": "20260710",
+      "last_seen": "20260710",
+      "consecutive_days": 1,
+      "main_theme": "반도체",
+      "specific_signal": "HBM·첨단공정(어드밴스드 패키징) 수혜 기대에 따른 반도체 장비주 동반 매수(테마성 랠리)",
+      "trigger_type": "rumor",
+      "confidence": "medium",
+      "watch_keywords": [
+        "반도체 장비",
+        "AI 데이터센터",
+        "어드밴스드 패키징",
+        "HBM 수요",
+        "공급계약(장비)"
+      ],
+      "related_stocks": [
+        "레이저쎌",
+        "테크윙",
+        "피에스케이홀딩스"
+      ],
+      "reasoning": "동일 기간 다수 기사에서 '반도체 장비주 강세'·'HBM·첨단공정 수혜' 등 테마성 매수 흐름이 부각되며 코스닥 장비주로 태깅된 기사가 당일 오전에 확인된다. 코세스에 대한 별도 공시(수주·실적)는 확인되지 않아 개별 호재라기보다 섹터·테마 매수에 동반한 상승으로 판단된다.",
+      "reason_unknown_category": "",
+      "industry_chain": "반도체 후공정·패키징 장비",
+      "chain_position": "장비",
+      "chain_role": "반도체 패키징·후공정 장비 공급",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [
+        "레이저쎌",
+        "테크윙",
+        "피에스케이홀딩스"
+      ],
+      "history": [
+        {
+          "date": "20260710",
+          "change_pct": 19.78
         }
       ]
     }
