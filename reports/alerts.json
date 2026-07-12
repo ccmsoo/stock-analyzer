@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T08:28:15",
-  "total": 337,
+  "generated_at": "2026-07-12T10:03:48",
+  "total": 336,
   "new_today": 0,
   "alerts": [
     {
@@ -6120,25 +6120,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "디스플레이/소부장",
       "matched_at": "2026-06-12T14:00:38"
-    },
-    {
-      "ticker": "042700",
-      "name": "한미반도체",
-      "sosok": "",
-      "report_name": "타법인주식및출자증권취득결정",
-      "submitter": "한미반도체",
-      "submitted_at": "2026.06.12",
-      "time": "09:01",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260612800119",
-      "rcp_no": "20260612800119",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 313500,
-      "today_change_pct": 7.73,
-      "signal_last_seen": "20260604",
-      "signal_confidence": "medium",
-      "signal_main_theme": "반도체",
-      "matched_at": "2026-06-12T09:01:42"
     },
     {
       "ticker": "047770",
