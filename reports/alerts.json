@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T20:51:41",
-  "total": 331,
+  "generated_at": "2026-07-12T21:59:20",
+  "total": 330,
   "new_today": 0,
   "alerts": [
     {
@@ -6006,25 +6006,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "바이오",
       "matched_at": "2026-06-15T08:02:52"
-    },
-    {
-      "ticker": "304360",
-      "name": "에스바이오메딕스",
-      "sosok": "",
-      "report_name": "투자판단관련주요경영사항(임상시험결과)",
-      "submitter": "에스바이오메딕스",
-      "submitted_at": "2026.06.12",
-      "time": "18:11",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260612901141",
-      "rcp_no": "20260612901141",
-      "category": "신약/임상",
-      "score": 78,
-      "current_price": 31450,
-      "today_change_pct": 5.54,
-      "signal_last_seen": "20260522",
-      "signal_confidence": "medium",
-      "signal_main_theme": "바이오",
-      "matched_at": "2026-06-12T21:29:29"
     },
     {
       "ticker": "047770",
