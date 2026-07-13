@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-13T08:27:47",
-  "total": 330,
-  "new_today": 0,
+  "generated_at": "2026-07-13T10:02:57",
+  "total": 331,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "089890",
+      "name": "코세스",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "코세스",
+      "submitted_at": "2026.07.13",
+      "time": "09:53",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260713900131",
+      "rcp_no": "20260713900131",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 37050,
+      "today_change_pct": 11.26,
+      "signal_last_seen": "20260710",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체",
+      "matched_at": "2026-07-13T10:02:57"
+    },
     {
       "ticker": "358570",
       "name": "지아이이노베이션",
