@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-13T10:02:57",
-  "total": 331,
+  "generated_at": "2026-07-13T13:43:54",
+  "total": 332,
   "new_today": 1,
   "alerts": [
+    {
+      "ticker": "126340",
+      "name": "비나텍",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "비나텍",
+      "submitted_at": "2026.07.13",
+      "time": "11:53",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260713900228",
+      "rcp_no": "20260713900228",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 69400,
+      "today_change_pct": 3.34,
+      "signal_last_seen": "20260701",
+      "signal_confidence": "high",
+      "signal_main_theme": "수주/계약",
+      "matched_at": "2026-07-13T13:43:54"
+    },
     {
       "ticker": "089890",
       "name": "코세스",
