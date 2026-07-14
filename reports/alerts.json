@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T07:30:26",
-  "total": 365,
+  "generated_at": "2026-07-15T08:26:36",
+  "total": 364,
   "new_today": 0,
   "alerts": [
     {
@@ -6652,25 +6652,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "투자/지분투자(우주·AI 인프라 연관)",
       "matched_at": "2026-06-15T09:22:24"
-    },
-    {
-      "ticker": "011000",
-      "name": "진원생명과학",
-      "sosok": "",
-      "report_name": "[기재정정]타법인주식및출자증권취득결정",
-      "submitter": "진원생명과학",
-      "submitted_at": "2026.06.15",
-      "time": "07:36",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260615800002",
-      "rcp_no": "20260615800002",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 918,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260604",
-      "signal_confidence": "medium",
-      "signal_main_theme": "바이오",
-      "matched_at": "2026-06-15T08:02:52"
     },
     {
       "ticker": "047770",
