@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-15T09:12:33",
+  "generated_at": "2026-07-15T12:32:47",
   "total": 364,
-  "new_today": 0,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "119850",
+      "name": "지엔씨에너지",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "지엔씨에너지",
+      "submitted_at": "2026.07.15",
+      "time": "09:19",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260715900077",
+      "rcp_no": "20260715900077",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 31900,
+      "today_change_pct": 6.33,
+      "signal_last_seen": "20260714",
+      "signal_confidence": "high",
+      "signal_main_theme": "전력기기",
+      "matched_at": "2026-07-15T12:32:47"
+    },
     {
       "ticker": "069920",
       "name": "엑시온그룹",
@@ -6633,25 +6652,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "반도체(장비/검사)",
       "matched_at": "2026-06-15T14:35:09"
-    },
-    {
-      "ticker": "042700",
-      "name": "한미반도체",
-      "sosok": "",
-      "report_name": "[기재정정]타법인주식및출자증권취득결정",
-      "submitter": "한미반도체",
-      "submitted_at": "2026.06.15",
-      "time": "08:36",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260615800107",
-      "rcp_no": "20260615800107",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 353000,
-      "today_change_pct": 2.22,
-      "signal_last_seen": "20260612",
-      "signal_confidence": "high",
-      "signal_main_theme": "투자/지분투자(우주·AI 인프라 연관)",
-      "matched_at": "2026-06-15T09:22:24"
     },
     {
       "ticker": "047770",
