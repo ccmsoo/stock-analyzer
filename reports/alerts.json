@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-17T20:56:53",
-  "total": 372,
+  "generated_at": "2026-07-17T22:18:02",
+  "total": 369,
   "new_today": 0,
   "alerts": [
     {
@@ -6692,25 +6692,6 @@
       "matched_at": "2026-06-18T11:46:29"
     },
     {
-      "ticker": "002420",
-      "name": "세기상사",
-      "sosok": "",
-      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
-      "submitter": "세기상사",
-      "submitted_at": "2026.06.17",
-      "time": "17:24",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260617000483",
-      "rcp_no": "20260617000483",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 5530,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260603",
-      "signal_confidence": "medium",
-      "signal_main_theme": "지배구조 개편 / 기업 M&A",
-      "matched_at": "2026-06-17T20:58:07"
-    },
-    {
       "ticker": "096250",
       "name": "와이즈넛",
       "sosok": "",
@@ -6730,25 +6711,6 @@
       "matched_at": "2026-06-18T20:36:05"
     },
     {
-      "ticker": "066980",
-      "name": "한성크린텍",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "한성크린텍",
-      "submitted_at": "2026.06.17",
-      "time": "16:31",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260617900488",
-      "rcp_no": "20260617900488",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 1962,
-      "today_change_pct": 0.67,
-      "signal_last_seen": "20260520",
-      "signal_confidence": "high",
-      "signal_main_theme": "반도체",
-      "matched_at": "2026-06-17T20:58:08"
-    },
-    {
       "ticker": "046390",
       "name": "삼화네트웍스",
       "sosok": "",
@@ -6766,25 +6728,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "수급",
       "matched_at": "2026-06-18T20:36:05"
-    },
-    {
-      "ticker": "469610",
-      "name": "이노테크",
-      "sosok": "",
-      "report_name": "[기재정정]사업보고서\n\t\t\t\t\t\t\t\t\t (2025.12)",
-      "submitter": "이노테크",
-      "submitted_at": "2026.06.17",
-      "time": "15:34",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260617000355",
-      "rcp_no": "20260617000355",
-      "category": "실적",
-      "score": 75,
-      "current_price": 19810,
-      "today_change_pct": 29.99,
-      "signal_last_seen": "20260617",
-      "signal_confidence": "high",
-      "signal_main_theme": "투자/설비증설",
-      "matched_at": "2026-06-17T20:58:09"
     },
     {
       "ticker": "047770",
