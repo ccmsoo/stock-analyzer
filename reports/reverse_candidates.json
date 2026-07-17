@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-16T18:00:19",
-  "reference_date": "20260716",
+  "generated_at": "2026-07-17T17:45:19",
+  "reference_date": "20260717",
   "themes": [
     {
       "keyword": "인프라",
@@ -8543,6 +8543,216 @@
       ]
     },
     {
+      "keyword": "소수계좌",
+      "risen_members": [
+        {
+          "ticker": "001380",
+          "name": "SG글로벌",
+          "change_pct": 6.96,
+          "specific_signal": "소수계좌 거래집중 지정(투자주의) 및 중소형주 매수세 편입",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "002785",
+          "name": "진흥기업우B",
+          "change_pct": 29.87,
+          "specific_signal": "호남권 반도체 투자 기대감으로 인한 지역 건설·전력주 동반 급등(단기 수급 몰림) + 소수계좌 거래 집중으로 투자주의종목 지정되어 매매 집중",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "002787",
+          "name": "진흥기업2우B",
+          "change_pct": 29.83,
+          "specific_signal": "호남권 반도체 투자 기대감 확산으로 건설·전력주 동반 급등 — 지역 반도체 인프라·전력 공사 수혜 기대",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "009620",
+          "name": "삼보산업",
+          "change_pct": 15.88,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 투자주의 경보(시장감시 조치)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "011330",
+          "name": "유니켐",
+          "change_pct": 15.22,
+          "specific_signal": "휴머노이드 로봇용 외피(외장재) 시장 진출/적용 기대(자동차 외장재에서 휴머노이드 외피로 확대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "012160",
+          "name": "영흥",
+          "change_pct": 10.37,
+          "specific_signal": "소수계좌 거래집중 지정(거래집중 지정 → 단기 변동성 확대 및 매매 집중)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "014990",
+          "name": "인디에프",
+          "change_pct": 20.99,
+          "specific_signal": "패션·섬유 업종 재평가(원가 절감·고부가 제품 다변화)로 인한 섬유·의류 섹터 강세에 동반 급등",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "035620",
+          "name": "바른손이앤에이",
+          "change_pct": 16.2,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 거래감시·투자주의 공시(거래집중 지정으로 인한 단기 변동성 확대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "040350",
+          "name": "크레오에스지",
+          "change_pct": 16.34,
+          "specific_signal": "메르스 백신 캐나다 특허 취득",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "055490",
+          "name": "테이팩스",
+          "change_pct": 12.88,
+          "specific_signal": "금융투자업체 공시·검토로 인한 '소수계좌 거래집중 지정' 및 투자주의 공지(거래 쏠림)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "060230",
+          "name": "제이케이시냅스",
+          "change_pct": 24.6,
+          "specific_signal": "소수계좌 집중거래로 인한 투자주의종목 지정(감시·수급 이슈)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "082210",
+          "name": "옵트론텍",
+          "change_pct": 16.25,
+          "specific_signal": "광학필터·OIS 경쟁력 회복 및 신규 생산라인 가동에 따른 생산능력 확대·실적 정상화 기대",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "109670",
+          "name": "씨싸이트",
+          "change_pct": 15.45,
+          "specific_signal": "이격도 과열·중소형주 매수세 집중(언론의 '상승 종목·과열 신호' 노출)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "119830",
+          "name": "아이텍",
+          "change_pct": 20.61,
+          "specific_signal": "소수계좌 거래집중에 따른 단기 수급 급등(투자주의·매매동향 주목)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "137080",
+          "name": "나래나노텍",
+          "change_pct": 14.32,
+          "specific_signal": "20억 규모 자사주 취득 결정 및 이후 동일 금액 자사주 소각 결정",
+          "confidence": "high"
+        },
+        {
+          "ticker": "159010",
+          "name": "아스플로",
+          "change_pct": 23.81,
+          "specific_signal": "HBM(고대역폭메모리) 훈풍에 따른 반도체 장비·소부장 매수 확산 (업종 랠리)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "192410",
+          "name": "오늘이엔엠",
+          "change_pct": 17.25,
+          "specific_signal": "2028 LA 올림픽 주경기장 안테나 공급 계약 및 美 통신 인프라 기업과 북미 공급 확대 계약",
+          "confidence": "high"
+        },
+        {
+          "ticker": "219550",
+          "name": "디와이디",
+          "change_pct": 15.01,
+          "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "224060",
+          "name": "더코디",
+          "change_pct": 19.41,
+          "specific_signal": "거래소 투자주의종목 지정(소수계좌 매수 집중·이격도 과열 징후)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "438700",
+          "name": "버넥트",
+          "change_pct": 29.88,
+          "specific_signal": "소수계좌 거래집중 경보로 거래감시(시장감시) → 투자주의종목 지정(거래집중·수급 이슈)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "455180",
+          "name": "케이지에이",
+          "change_pct": 27.89,
+          "specific_signal": "경영진 잇단 장내매수(2026.07.03 기사) — D-day 직접 트리거; 2026.06.29 국가첨단전략산업(이차전지) 선정이 추가적 모멘텀",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "088800",
+          "name": "에이스테크",
+          "market": "KOSDAQ",
+          "marcap": 134552465388,
+          "last_close": 1782,
+          "last_change_pct": -0.78,
+          "avg_abs_change_5d": 5.81,
+          "avg_value_5d_eok": 3.6,
+          "vol_surge": 1.06,
+          "value_surge": 0.93,
+          "close_5d_return": -2.46,
+          "risk_score": 6.17
+        },
+        {
+          "code": "247540",
+          "name": "에코프로비엠",
+          "market": "KOSDAQ",
+          "marcap": 10996140781600,
+          "last_close": 112400,
+          "last_change_pct": -7.03,
+          "avg_abs_change_5d": 6.19,
+          "avg_value_5d_eok": 554.1,
+          "vol_surge": 0.65,
+          "value_surge": 0.56,
+          "close_5d_return": -7.57,
+          "risk_score": 4.04
+        },
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
+        },
+        {
+          "code": "015760",
+          "name": "한국전력",
+          "market": "KOSPI",
+          "marcap": 21858876821850,
+          "last_close": 34050,
+          "last_change_pct": 0.44,
+          "avg_abs_change_5d": 1.94,
+          "avg_value_5d_eok": 622.4,
+          "vol_surge": 0.84,
+          "value_surge": 0.77,
+          "close_5d_return": -5.94,
+          "risk_score": 1.63
+        }
+      ]
+    },
+    {
       "keyword": "메모리",
       "risen_members": [
         {
@@ -10160,6 +10370,111 @@
       ]
     },
     {
+      "keyword": "상반기",
+      "risen_members": [
+        {
+          "ticker": "026960",
+          "name": "동서",
+          "change_pct": 6.68,
+          "specific_signal": "SSG닷컴 '상반기 장보기 결산(쓱 장보기 페스타)' 등 이커머스 대형 할인·장보기 행사에서 식음료 카테고리 노출 및 수요 기대감",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "044380",
+          "name": "주연테크",
+          "change_pct": 30.0,
+          "specific_signal": "상반기 영업이익·당기순이익 흑자(어닝 서프라이즈 보도)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "050110",
+          "name": "캠시스",
+          "change_pct": 29.93,
+          "specific_signal": "상반기 연결 영업이익 87억원으로 전년 대비 흑자전환(공시·보도)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "161890",
+          "name": "한국콜마",
+          "change_pct": 8.73,
+          "specific_signal": "애널리스트들 목표가 상향 및 '2분기 사상 최대 실적' 전망(분석 리포트)과 상반기 K-뷰티 수출 신기록(대미 선케어 수출 호조·상반기 수출 70억달러)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "303360",
+          "name": "프로티아",
+          "change_pct": 22.21,
+          "specific_signal": "2분기 영업이익 약 16.5~17억원, 영업이익률 32% 돌파·분기·상반기 사상 최대 실적",
+          "confidence": "high"
+        },
+        {
+          "ticker": "900300",
+          "name": "오가닉티코스메틱",
+          "change_pct": 29.98,
+          "specific_signal": "상반기 화장품 수출 '역대 최대' 보도에 따른 K-뷰티 섹터 강세(관련 소형주 중심 테마성 매수)",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "007310",
+          "name": "오뚜기",
+          "market": "KOSPI",
+          "marcap": 1254450790000,
+          "last_close": 313000,
+          "last_change_pct": 2.62,
+          "avg_abs_change_5d": 2.15,
+          "avg_value_5d_eok": 17.2,
+          "vol_surge": 1.16,
+          "value_surge": 1.15,
+          "close_5d_return": 0.16,
+          "risk_score": 2.51
+        },
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
+        },
+        {
+          "code": "091700",
+          "name": "파트론",
+          "market": "KOSDAQ",
+          "marcap": 288500000000,
+          "last_close": 5770,
+          "last_change_pct": -1.54,
+          "avg_abs_change_5d": 2.8,
+          "avg_value_5d_eok": 8.2,
+          "vol_surge": 0.61,
+          "value_surge": 0.6,
+          "close_5d_return": -3.51,
+          "risk_score": 1.71
+        },
+        {
+          "code": "005300",
+          "name": "롯데칠성",
+          "market": "KOSPI",
+          "marcap": 922321069600,
+          "last_close": 99400,
+          "last_change_pct": 0.51,
+          "avg_abs_change_5d": 1.37,
+          "avg_value_5d_eok": 21.3,
+          "vol_surge": 1.0,
+          "value_surge": 1.0,
+          "close_5d_return": -1.39,
+          "risk_score": 1.37
+        }
+      ]
+    },
+    {
       "keyword": "광통신",
       "risen_members": [
         {
@@ -10450,104 +10765,6 @@
           "value_surge": 0.6,
           "close_5d_return": -5.54,
           "risk_score": 1.26
-        }
-      ]
-    },
-    {
-      "keyword": "상반기",
-      "risen_members": [
-        {
-          "ticker": "026960",
-          "name": "동서",
-          "change_pct": 6.68,
-          "specific_signal": "SSG닷컴 '상반기 장보기 결산(쓱 장보기 페스타)' 등 이커머스 대형 할인·장보기 행사에서 식음료 카테고리 노출 및 수요 기대감",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "050110",
-          "name": "캠시스",
-          "change_pct": 29.93,
-          "specific_signal": "상반기 연결 영업이익 87억원으로 전년 대비 흑자전환(공시·보도)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "161890",
-          "name": "한국콜마",
-          "change_pct": 8.73,
-          "specific_signal": "애널리스트들 목표가 상향 및 '2분기 사상 최대 실적' 전망(분석 리포트)과 상반기 K-뷰티 수출 신기록(대미 선케어 수출 호조·상반기 수출 70억달러)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "303360",
-          "name": "프로티아",
-          "change_pct": 22.21,
-          "specific_signal": "2분기 영업이익 약 16.5~17억원, 영업이익률 32% 돌파·분기·상반기 사상 최대 실적",
-          "confidence": "high"
-        },
-        {
-          "ticker": "900300",
-          "name": "오가닉티코스메틱",
-          "change_pct": 29.98,
-          "specific_signal": "상반기 화장품 수출 '역대 최대' 보도에 따른 K-뷰티 섹터 강세(관련 소형주 중심 테마성 매수)",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "007310",
-          "name": "오뚜기",
-          "market": "KOSPI",
-          "marcap": 1254450790000,
-          "last_close": 313000,
-          "last_change_pct": 2.62,
-          "avg_abs_change_5d": 2.15,
-          "avg_value_5d_eok": 17.2,
-          "vol_surge": 1.16,
-          "value_surge": 1.15,
-          "close_5d_return": 0.16,
-          "risk_score": 2.51
-        },
-        {
-          "code": "090430",
-          "name": "아모레퍼시픽",
-          "market": "KOSPI",
-          "marcap": 7276499219600,
-          "last_close": 124400,
-          "last_change_pct": 2.98,
-          "avg_abs_change_5d": 2.41,
-          "avg_value_5d_eok": 358.7,
-          "vol_surge": 0.73,
-          "value_surge": 0.79,
-          "close_5d_return": 1.06,
-          "risk_score": 1.79
-        },
-        {
-          "code": "091700",
-          "name": "파트론",
-          "market": "KOSDAQ",
-          "marcap": 288500000000,
-          "last_close": 5770,
-          "last_change_pct": -1.54,
-          "avg_abs_change_5d": 2.8,
-          "avg_value_5d_eok": 8.2,
-          "vol_surge": 0.61,
-          "value_surge": 0.6,
-          "close_5d_return": -3.51,
-          "risk_score": 1.71
-        },
-        {
-          "code": "005300",
-          "name": "롯데칠성",
-          "market": "KOSPI",
-          "marcap": 922321069600,
-          "last_close": 99400,
-          "last_change_pct": 0.51,
-          "avg_abs_change_5d": 1.37,
-          "avg_value_5d_eok": 21.3,
-          "vol_surge": 1.0,
-          "value_surge": 1.0,
-          "close_5d_return": -1.39,
-          "risk_score": 1.37
         }
       ]
     },
@@ -11364,181 +11581,6 @@
       ]
     },
     {
-      "keyword": "소수계좌",
-      "risen_members": [
-        {
-          "ticker": "001380",
-          "name": "SG글로벌",
-          "change_pct": 6.96,
-          "specific_signal": "소수계좌 거래집중 지정(투자주의) 및 중소형주 매수세 편입",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "002785",
-          "name": "진흥기업우B",
-          "change_pct": 29.87,
-          "specific_signal": "호남권 반도체 투자 기대감으로 인한 지역 건설·전력주 동반 급등(단기 수급 몰림) + 소수계좌 거래 집중으로 투자주의종목 지정되어 매매 집중",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "002787",
-          "name": "진흥기업2우B",
-          "change_pct": 29.83,
-          "specific_signal": "호남권 반도체 투자 기대감 확산으로 건설·전력주 동반 급등 — 지역 반도체 인프라·전력 공사 수혜 기대",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "011330",
-          "name": "유니켐",
-          "change_pct": 15.22,
-          "specific_signal": "휴머노이드 로봇용 외피(외장재) 시장 진출/적용 기대(자동차 외장재에서 휴머노이드 외피로 확대)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "012160",
-          "name": "영흥",
-          "change_pct": 10.37,
-          "specific_signal": "소수계좌 거래집중 지정(거래집중 지정 → 단기 변동성 확대 및 매매 집중)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "014990",
-          "name": "인디에프",
-          "change_pct": 20.99,
-          "specific_signal": "패션·섬유 업종 재평가(원가 절감·고부가 제품 다변화)로 인한 섬유·의류 섹터 강세에 동반 급등",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "040350",
-          "name": "크레오에스지",
-          "change_pct": 16.34,
-          "specific_signal": "메르스 백신 캐나다 특허 취득",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "055490",
-          "name": "테이팩스",
-          "change_pct": 12.88,
-          "specific_signal": "금융투자업체 공시·검토로 인한 '소수계좌 거래집중 지정' 및 투자주의 공지(거래 쏠림)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "060230",
-          "name": "제이케이시냅스",
-          "change_pct": 24.6,
-          "specific_signal": "소수계좌 집중거래로 인한 투자주의종목 지정(감시·수급 이슈)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "082210",
-          "name": "옵트론텍",
-          "change_pct": 16.25,
-          "specific_signal": "광학필터·OIS 경쟁력 회복 및 신규 생산라인 가동에 따른 생산능력 확대·실적 정상화 기대",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "109670",
-          "name": "씨싸이트",
-          "change_pct": 15.45,
-          "specific_signal": "이격도 과열·중소형주 매수세 집중(언론의 '상승 종목·과열 신호' 노출)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "119830",
-          "name": "아이텍",
-          "change_pct": 20.61,
-          "specific_signal": "소수계좌 거래집중에 따른 단기 수급 급등(투자주의·매매동향 주목)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "137080",
-          "name": "나래나노텍",
-          "change_pct": 14.32,
-          "specific_signal": "20억 규모 자사주 취득 결정 및 이후 동일 금액 자사주 소각 결정",
-          "confidence": "high"
-        },
-        {
-          "ticker": "159010",
-          "name": "아스플로",
-          "change_pct": 23.81,
-          "specific_signal": "HBM(고대역폭메모리) 훈풍에 따른 반도체 장비·소부장 매수 확산 (업종 랠리)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "192410",
-          "name": "오늘이엔엠",
-          "change_pct": 17.25,
-          "specific_signal": "2028 LA 올림픽 주경기장 안테나 공급 계약 및 美 통신 인프라 기업과 북미 공급 확대 계약",
-          "confidence": "high"
-        },
-        {
-          "ticker": "224060",
-          "name": "더코디",
-          "change_pct": 19.41,
-          "specific_signal": "거래소 투자주의종목 지정(소수계좌 매수 집중·이격도 과열 징후)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "438700",
-          "name": "버넥트",
-          "change_pct": 29.88,
-          "specific_signal": "소수계좌 거래집중 경보로 거래감시(시장감시) → 투자주의종목 지정(거래집중·수급 이슈)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "455180",
-          "name": "케이지에이",
-          "change_pct": 27.89,
-          "specific_signal": "경영진 잇단 장내매수(2026.07.03 기사) — D-day 직접 트리거; 2026.06.29 국가첨단전략산업(이차전지) 선정이 추가적 모멘텀",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "088800",
-          "name": "에이스테크",
-          "market": "KOSDAQ",
-          "marcap": 134552465388,
-          "last_close": 1782,
-          "last_change_pct": -0.78,
-          "avg_abs_change_5d": 5.81,
-          "avg_value_5d_eok": 3.6,
-          "vol_surge": 1.06,
-          "value_surge": 0.93,
-          "close_5d_return": -2.46,
-          "risk_score": 6.17
-        },
-        {
-          "code": "247540",
-          "name": "에코프로비엠",
-          "market": "KOSDAQ",
-          "marcap": 10996140781600,
-          "last_close": 112400,
-          "last_change_pct": -7.03,
-          "avg_abs_change_5d": 6.19,
-          "avg_value_5d_eok": 554.1,
-          "vol_surge": 0.65,
-          "value_surge": 0.56,
-          "close_5d_return": -7.57,
-          "risk_score": 4.04
-        },
-        {
-          "code": "015760",
-          "name": "한국전력",
-          "market": "KOSPI",
-          "marcap": 21858876821850,
-          "last_close": 34050,
-          "last_change_pct": 0.44,
-          "avg_abs_change_5d": 1.94,
-          "avg_value_5d_eok": 622.4,
-          "vol_surge": 0.84,
-          "value_surge": 0.77,
-          "close_5d_return": -5.94,
-          "risk_score": 1.63
-        }
-      ]
-    },
-    {
       "keyword": "HBM",
       "risen_members": [
         {
@@ -11696,6 +11738,160 @@
           "value_surge": 0.53,
           "close_5d_return": -10.52,
           "risk_score": 4.17
+        }
+      ]
+    },
+    {
+      "keyword": "거래집중",
+      "risen_members": [
+        {
+          "ticker": "001380",
+          "name": "SG글로벌",
+          "change_pct": 6.96,
+          "specific_signal": "소수계좌 거래집중 지정(투자주의) 및 중소형주 매수세 편입",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "002960",
+          "name": "한국쉘석유",
+          "change_pct": 4.86,
+          "specific_signal": "거래소·금감원 관련 단일계좌 거래집중·투자주의(투자경고) 지정 및 특정계좌 매매관여 과다 보도",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "009620",
+          "name": "삼보산업",
+          "change_pct": 15.88,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 투자주의 경보(시장감시 조치)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "011330",
+          "name": "유니켐",
+          "change_pct": 15.22,
+          "specific_signal": "휴머노이드 로봇용 외피(외장재) 시장 진출/적용 기대(자동차 외장재에서 휴머노이드 외피로 확대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "012160",
+          "name": "영흥",
+          "change_pct": 10.37,
+          "specific_signal": "소수계좌 거래집중 지정(거래집중 지정 → 단기 변동성 확대 및 매매 집중)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "035620",
+          "name": "바른손이앤에이",
+          "change_pct": 16.2,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 거래감시·투자주의 공시(거래집중 지정으로 인한 단기 변동성 확대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "040350",
+          "name": "크레오에스지",
+          "change_pct": 16.34,
+          "specific_signal": "메르스 백신 캐나다 특허 취득",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "055490",
+          "name": "테이팩스",
+          "change_pct": 12.88,
+          "specific_signal": "금융투자업체 공시·검토로 인한 '소수계좌 거래집중 지정' 및 투자주의 공지(거래 쏠림)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "082210",
+          "name": "옵트론텍",
+          "change_pct": 16.25,
+          "specific_signal": "광학필터·OIS 경쟁력 회복 및 신규 생산라인 가동에 따른 생산능력 확대·실적 정상화 기대",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "119830",
+          "name": "아이텍",
+          "change_pct": 20.61,
+          "specific_signal": "소수계좌 거래집중에 따른 단기 수급 급등(투자주의·매매동향 주목)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "137080",
+          "name": "나래나노텍",
+          "change_pct": 14.32,
+          "specific_signal": "20억 규모 자사주 취득 결정 및 이후 동일 금액 자사주 소각 결정",
+          "confidence": "high"
+        },
+        {
+          "ticker": "192410",
+          "name": "오늘이엔엠",
+          "change_pct": 17.25,
+          "specific_signal": "2028 LA 올림픽 주경기장 안테나 공급 계약 및 美 통신 인프라 기업과 북미 공급 확대 계약",
+          "confidence": "high"
+        },
+        {
+          "ticker": "219550",
+          "name": "디와이디",
+          "change_pct": 15.01,
+          "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "438700",
+          "name": "버넥트",
+          "change_pct": 29.88,
+          "specific_signal": "소수계좌 거래집중 경보로 거래감시(시장감시) → 투자주의종목 지정(거래집중·수급 이슈)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "455180",
+          "name": "케이지에이",
+          "change_pct": 27.89,
+          "specific_signal": "경영진 잇단 장내매수(2026.07.03 기사) — D-day 직접 트리거; 2026.06.29 국가첨단전략산업(이차전지) 선정이 추가적 모멘텀",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "088800",
+          "name": "에이스테크",
+          "market": "KOSDAQ",
+          "marcap": 134552465388,
+          "last_close": 1782,
+          "last_change_pct": -0.78,
+          "avg_abs_change_5d": 5.81,
+          "avg_value_5d_eok": 3.6,
+          "vol_surge": 1.06,
+          "value_surge": 0.93,
+          "close_5d_return": -2.46,
+          "risk_score": 6.17
+        },
+        {
+          "code": "247540",
+          "name": "에코프로비엠",
+          "market": "KOSDAQ",
+          "marcap": 10996140781600,
+          "last_close": 112400,
+          "last_change_pct": -7.03,
+          "avg_abs_change_5d": 6.19,
+          "avg_value_5d_eok": 554.1,
+          "vol_surge": 0.65,
+          "value_surge": 0.56,
+          "close_5d_return": -7.57,
+          "risk_score": 4.04
+        },
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
         }
       ]
     },
@@ -11966,6 +12162,118 @@
       ]
     },
     {
+      "keyword": "증권사",
+      "risen_members": [
+        {
+          "ticker": "001380",
+          "name": "SG글로벌",
+          "change_pct": 6.96,
+          "specific_signal": "소수계좌 거래집중 지정(투자주의) 및 중소형주 매수세 편입",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "001510",
+          "name": "SK증권",
+          "change_pct": 7.5,
+          "specific_signal": "코스피 반등에 따른 증권주 동반 강세 + 증권사 2Q 순익 컨센서스 상향(변동성·거래대금 재확대 수혜)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "002380",
+          "name": "KCC",
+          "change_pct": 11.27,
+          "specific_signal": "증권사 실적 전망 상향 및 투자자산(보유지분) 가치 재평가 기대(신한證 목표가 75만원 등) — 실리콘·도료 부문 실적 개선 가시화",
+          "confidence": "high"
+        },
+        {
+          "ticker": "007690",
+          "name": "국도화학",
+          "change_pct": 16.74,
+          "specific_signal": "증권사(신한) 리포트: '실적 모멘텀 및 포트폴리오 다변화' 전망(투자 의견·밸류에이션 재조정 가능)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "085910",
+          "name": "네오티스",
+          "change_pct": 18.01,
+          "specific_signal": "증권사 리포트·기사로 촉발된 AI 서버용 PCB·기판 수요 확대에 따른 후공정(기판·정밀부품) 밸류체인 재평가 및 수익성 개선 기대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "140860",
+          "name": "파크시스템스",
+          "change_pct": 28.6,
+          "specific_signal": "증권사 목표가 상향·2분기 실적 개선 전망(6/9) 및 IR 공개된 AFM 장비에 IR 분광 통합('Park FX40')으로 첨단 패키징 검사 수요 기대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "219550",
+          "name": "디와이디",
+          "change_pct": 15.01,
+          "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "295310",
+          "name": "에이치브이엠",
+          "change_pct": 27.99,
+          "specific_signal": "3공장 증설 완료 시 연 5000억 이상 매출 가능(증권사 전망·기사 보도)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "456010",
+          "name": "아이씨티케이",
+          "change_pct": 18.02,
+          "specific_signal": "미 정부의 양자컴퓨팅 산업 육성·지분투자(대규모 투자 소식)로 국내 양자 관련주 수혜 기대 및 증권사 목표가 상향·호평",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
+        },
+        {
+          "code": "004140",
+          "name": "동방",
+          "market": "KOSPI",
+          "marcap": 87788331780,
+          "last_close": 1830,
+          "last_change_pct": 0.6,
+          "avg_abs_change_5d": 2.19,
+          "avg_value_5d_eok": 3.3,
+          "vol_surge": 0.76,
+          "value_surge": 0.76,
+          "close_5d_return": -3.28,
+          "risk_score": 1.66
+        },
+        {
+          "code": "115500",
+          "name": "케이씨에스",
+          "market": "KOSDAQ",
+          "marcap": 96240000000,
+          "last_close": 8020,
+          "last_change_pct": -4.07,
+          "avg_abs_change_5d": 5.43,
+          "avg_value_5d_eok": 5.5,
+          "vol_surge": 0.18,
+          "value_surge": 0.14,
+          "close_5d_return": -8.45,
+          "risk_score": 0.95
+        }
+      ]
+    },
+    {
       "keyword": "자금조달",
       "risen_members": [
         {
@@ -12179,6 +12487,111 @@
           "value_surge": 0.67,
           "close_5d_return": -5.12,
           "risk_score": 2.06
+        }
+      ]
+    },
+    {
+      "keyword": "화장품",
+      "risen_members": [
+        {
+          "ticker": "005360",
+          "name": "모나미",
+          "change_pct": 8.27,
+          "specific_signal": "정치 테마주 매수세에 따른 단기 급등(정치 테마 관련 매수)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "044820",
+          "name": "코스맥스비티아이",
+          "change_pct": 7.16,
+          "specific_signal": "일본 후지신과 합작법인 설립해 AI 기반 맞춤형 화장품(미용실 대상 AI 처방·맞춤 샴푸 등) 해외 첫 진출",
+          "confidence": "high"
+        },
+        {
+          "ticker": "192820",
+          "name": "코스맥스",
+          "change_pct": 6.72,
+          "specific_signal": "일본 후지신(Fujishin)과 합작법인(JV) 설립을 통한 AI 기반 맞춤형 화장품(미용실 대상 AI 처방 및 제품 공급) 일본 첫 해외진출",
+          "confidence": "high"
+        },
+        {
+          "ticker": "219550",
+          "name": "디와이디",
+          "change_pct": 15.01,
+          "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "278470",
+          "name": "에이피알",
+          "change_pct": 8.32,
+          "specific_signal": "메디큐브 '흡수율 625%' 마케팅 논란에 대한 회사의 해명 및 시험성적서 공개(논란 불식)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "406820",
+          "name": "뷰티스킨",
+          "change_pct": 29.9,
+          "specific_signal": "화장품 대형주들의 '역대급 실적(어닝 서프라이즈)' 발표로 섹터 전반 강세 및 K-뷰티 관련 이벤트·유통 확대(5월 초~18일의 연쇄 호재)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "489460",
+          "name": "바이오비쥬",
+          "change_pct": 12.24,
+          "specific_signal": "20억원 규모 자사주 취득 결정 및 소각 공시",
+          "confidence": "high"
+        },
+        {
+          "ticker": "900300",
+          "name": "오가닉티코스메틱",
+          "change_pct": 29.98,
+          "specific_signal": "상반기 화장품 수출 '역대 최대' 보도에 따른 K-뷰티 섹터 강세(관련 소형주 중심 테마성 매수)",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "241710",
+          "name": "코스메카코리아",
+          "market": "KOSDAQ",
+          "marcap": 905664000000,
+          "last_close": 84800,
+          "last_change_pct": 3.29,
+          "avg_abs_change_5d": 4.1,
+          "avg_value_5d_eok": 88.4,
+          "vol_surge": 1.03,
+          "value_surge": 1.15,
+          "close_5d_return": 2.17,
+          "risk_score": 4.42
+        },
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
+        },
+        {
+          "code": "051900",
+          "name": "LG생활건강",
+          "market": "KOSPI",
+          "marcap": 3691466419500,
+          "last_close": 246500,
+          "last_change_pct": 3.57,
+          "avg_abs_change_5d": 2.18,
+          "avg_value_5d_eok": 103.1,
+          "vol_surge": 0.68,
+          "value_surge": 0.7,
+          "close_5d_return": 0.61,
+          "risk_score": 1.51
         }
       ]
     },
@@ -12781,104 +13194,6 @@
           "value_surge": 0.6,
           "close_5d_return": -3.51,
           "risk_score": 1.71
-        }
-      ]
-    },
-    {
-      "keyword": "화장품",
-      "risen_members": [
-        {
-          "ticker": "005360",
-          "name": "모나미",
-          "change_pct": 8.27,
-          "specific_signal": "정치 테마주 매수세에 따른 단기 급등(정치 테마 관련 매수)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "044820",
-          "name": "코스맥스비티아이",
-          "change_pct": 7.16,
-          "specific_signal": "일본 후지신과 합작법인 설립해 AI 기반 맞춤형 화장품(미용실 대상 AI 처방·맞춤 샴푸 등) 해외 첫 진출",
-          "confidence": "high"
-        },
-        {
-          "ticker": "192820",
-          "name": "코스맥스",
-          "change_pct": 6.72,
-          "specific_signal": "일본 후지신(Fujishin)과 합작법인(JV) 설립을 통한 AI 기반 맞춤형 화장품(미용실 대상 AI 처방 및 제품 공급) 일본 첫 해외진출",
-          "confidence": "high"
-        },
-        {
-          "ticker": "278470",
-          "name": "에이피알",
-          "change_pct": 8.32,
-          "specific_signal": "메디큐브 '흡수율 625%' 마케팅 논란에 대한 회사의 해명 및 시험성적서 공개(논란 불식)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "406820",
-          "name": "뷰티스킨",
-          "change_pct": 29.9,
-          "specific_signal": "화장품 대형주들의 '역대급 실적(어닝 서프라이즈)' 발표로 섹터 전반 강세 및 K-뷰티 관련 이벤트·유통 확대(5월 초~18일의 연쇄 호재)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "489460",
-          "name": "바이오비쥬",
-          "change_pct": 12.24,
-          "specific_signal": "20억원 규모 자사주 취득 결정 및 소각 공시",
-          "confidence": "high"
-        },
-        {
-          "ticker": "900300",
-          "name": "오가닉티코스메틱",
-          "change_pct": 29.98,
-          "specific_signal": "상반기 화장품 수출 '역대 최대' 보도에 따른 K-뷰티 섹터 강세(관련 소형주 중심 테마성 매수)",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "241710",
-          "name": "코스메카코리아",
-          "market": "KOSDAQ",
-          "marcap": 905664000000,
-          "last_close": 84800,
-          "last_change_pct": 3.29,
-          "avg_abs_change_5d": 4.1,
-          "avg_value_5d_eok": 88.4,
-          "vol_surge": 1.03,
-          "value_surge": 1.15,
-          "close_5d_return": 2.17,
-          "risk_score": 4.42
-        },
-        {
-          "code": "090430",
-          "name": "아모레퍼시픽",
-          "market": "KOSPI",
-          "marcap": 7276499219600,
-          "last_close": 124400,
-          "last_change_pct": 2.98,
-          "avg_abs_change_5d": 2.41,
-          "avg_value_5d_eok": 358.7,
-          "vol_surge": 0.73,
-          "value_surge": 0.79,
-          "close_5d_return": 1.06,
-          "risk_score": 1.79
-        },
-        {
-          "code": "051900",
-          "name": "LG생활건강",
-          "market": "KOSPI",
-          "marcap": 3691466419500,
-          "last_close": 246500,
-          "last_change_pct": 3.57,
-          "avg_abs_change_5d": 2.18,
-          "avg_value_5d_eok": 103.1,
-          "vol_surge": 0.68,
-          "value_surge": 0.7,
-          "close_5d_return": 0.61,
-          "risk_score": 1.51
         }
       ]
     },
@@ -16621,125 +16936,6 @@
       ]
     },
     {
-      "keyword": "거래집중",
-      "risen_members": [
-        {
-          "ticker": "001380",
-          "name": "SG글로벌",
-          "change_pct": 6.96,
-          "specific_signal": "소수계좌 거래집중 지정(투자주의) 및 중소형주 매수세 편입",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "002960",
-          "name": "한국쉘석유",
-          "change_pct": 4.86,
-          "specific_signal": "거래소·금감원 관련 단일계좌 거래집중·투자주의(투자경고) 지정 및 특정계좌 매매관여 과다 보도",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "011330",
-          "name": "유니켐",
-          "change_pct": 15.22,
-          "specific_signal": "휴머노이드 로봇용 외피(외장재) 시장 진출/적용 기대(자동차 외장재에서 휴머노이드 외피로 확대)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "012160",
-          "name": "영흥",
-          "change_pct": 10.37,
-          "specific_signal": "소수계좌 거래집중 지정(거래집중 지정 → 단기 변동성 확대 및 매매 집중)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "040350",
-          "name": "크레오에스지",
-          "change_pct": 16.34,
-          "specific_signal": "메르스 백신 캐나다 특허 취득",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "055490",
-          "name": "테이팩스",
-          "change_pct": 12.88,
-          "specific_signal": "금융투자업체 공시·검토로 인한 '소수계좌 거래집중 지정' 및 투자주의 공지(거래 쏠림)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "082210",
-          "name": "옵트론텍",
-          "change_pct": 16.25,
-          "specific_signal": "광학필터·OIS 경쟁력 회복 및 신규 생산라인 가동에 따른 생산능력 확대·실적 정상화 기대",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "119830",
-          "name": "아이텍",
-          "change_pct": 20.61,
-          "specific_signal": "소수계좌 거래집중에 따른 단기 수급 급등(투자주의·매매동향 주목)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "137080",
-          "name": "나래나노텍",
-          "change_pct": 14.32,
-          "specific_signal": "20억 규모 자사주 취득 결정 및 이후 동일 금액 자사주 소각 결정",
-          "confidence": "high"
-        },
-        {
-          "ticker": "192410",
-          "name": "오늘이엔엠",
-          "change_pct": 17.25,
-          "specific_signal": "2028 LA 올림픽 주경기장 안테나 공급 계약 및 美 통신 인프라 기업과 북미 공급 확대 계약",
-          "confidence": "high"
-        },
-        {
-          "ticker": "438700",
-          "name": "버넥트",
-          "change_pct": 29.88,
-          "specific_signal": "소수계좌 거래집중 경보로 거래감시(시장감시) → 투자주의종목 지정(거래집중·수급 이슈)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "455180",
-          "name": "케이지에이",
-          "change_pct": 27.89,
-          "specific_signal": "경영진 잇단 장내매수(2026.07.03 기사) — D-day 직접 트리거; 2026.06.29 국가첨단전략산업(이차전지) 선정이 추가적 모멘텀",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "088800",
-          "name": "에이스테크",
-          "market": "KOSDAQ",
-          "marcap": 134552465388,
-          "last_close": 1782,
-          "last_change_pct": -0.78,
-          "avg_abs_change_5d": 5.81,
-          "avg_value_5d_eok": 3.6,
-          "vol_surge": 1.06,
-          "value_surge": 0.93,
-          "close_5d_return": -2.46,
-          "risk_score": 6.17
-        },
-        {
-          "code": "247540",
-          "name": "에코프로비엠",
-          "market": "KOSDAQ",
-          "marcap": 10996140781600,
-          "last_close": 112400,
-          "last_change_pct": -7.03,
-          "avg_abs_change_5d": 6.19,
-          "avg_value_5d_eok": 554.1,
-          "vol_surge": 0.65,
-          "value_surge": 0.56,
-          "close_5d_return": -7.57,
-          "risk_score": 4.04
-        }
-      ]
-    },
-    {
       "keyword": "MOU",
       "risen_members": [
         {
@@ -17541,97 +17737,6 @@
           "value_surge": 0.72,
           "close_5d_return": -1.33,
           "risk_score": 2.17
-        }
-      ]
-    },
-    {
-      "keyword": "증권사",
-      "risen_members": [
-        {
-          "ticker": "001380",
-          "name": "SG글로벌",
-          "change_pct": 6.96,
-          "specific_signal": "소수계좌 거래집중 지정(투자주의) 및 중소형주 매수세 편입",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "001510",
-          "name": "SK증권",
-          "change_pct": 7.5,
-          "specific_signal": "코스피 반등에 따른 증권주 동반 강세 + 증권사 2Q 순익 컨센서스 상향(변동성·거래대금 재확대 수혜)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "002380",
-          "name": "KCC",
-          "change_pct": 11.27,
-          "specific_signal": "증권사 실적 전망 상향 및 투자자산(보유지분) 가치 재평가 기대(신한證 목표가 75만원 등) — 실리콘·도료 부문 실적 개선 가시화",
-          "confidence": "high"
-        },
-        {
-          "ticker": "007690",
-          "name": "국도화학",
-          "change_pct": 16.74,
-          "specific_signal": "증권사(신한) 리포트: '실적 모멘텀 및 포트폴리오 다변화' 전망(투자 의견·밸류에이션 재조정 가능)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "085910",
-          "name": "네오티스",
-          "change_pct": 18.01,
-          "specific_signal": "증권사 리포트·기사로 촉발된 AI 서버용 PCB·기판 수요 확대에 따른 후공정(기판·정밀부품) 밸류체인 재평가 및 수익성 개선 기대",
-          "confidence": "high"
-        },
-        {
-          "ticker": "140860",
-          "name": "파크시스템스",
-          "change_pct": 28.6,
-          "specific_signal": "증권사 목표가 상향·2분기 실적 개선 전망(6/9) 및 IR 공개된 AFM 장비에 IR 분광 통합('Park FX40')으로 첨단 패키징 검사 수요 기대",
-          "confidence": "high"
-        },
-        {
-          "ticker": "295310",
-          "name": "에이치브이엠",
-          "change_pct": 27.99,
-          "specific_signal": "3공장 증설 완료 시 연 5000억 이상 매출 가능(증권사 전망·기사 보도)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "456010",
-          "name": "아이씨티케이",
-          "change_pct": 18.02,
-          "specific_signal": "미 정부의 양자컴퓨팅 산업 육성·지분투자(대규모 투자 소식)로 국내 양자 관련주 수혜 기대 및 증권사 목표가 상향·호평",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "004140",
-          "name": "동방",
-          "market": "KOSPI",
-          "marcap": 87788331780,
-          "last_close": 1830,
-          "last_change_pct": 0.6,
-          "avg_abs_change_5d": 2.19,
-          "avg_value_5d_eok": 3.3,
-          "vol_surge": 0.76,
-          "value_surge": 0.76,
-          "close_5d_return": -3.28,
-          "risk_score": 1.66
-        },
-        {
-          "code": "115500",
-          "name": "케이씨에스",
-          "market": "KOSDAQ",
-          "marcap": 96240000000,
-          "last_close": 8020,
-          "last_change_pct": -4.07,
-          "avg_abs_change_5d": 5.43,
-          "avg_value_5d_eok": 5.5,
-          "vol_surge": 0.18,
-          "value_surge": 0.14,
-          "close_5d_return": -8.45,
-          "risk_score": 0.95
         }
       ]
     },
@@ -19092,76 +19197,6 @@
       ]
     },
     {
-      "keyword": "증권업종",
-      "risen_members": [
-        {
-          "ticker": "001510",
-          "name": "SK증권",
-          "change_pct": 7.5,
-          "specific_signal": "코스피 반등에 따른 증권주 동반 강세 + 증권사 2Q 순익 컨센서스 상향(변동성·거래대금 재확대 수혜)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "001515",
-          "name": "SK증권우",
-          "change_pct": 8.55,
-          "specific_signal": "증권주 실적 기대 확산(키움·메리츠 중심의 어닝 모멘텀 확산)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "001720",
-          "name": "신영증권",
-          "change_pct": 7.47,
-          "specific_signal": "국민연금 리밸런싱(포트폴리오 조정)로 인한 기관 매수 편입 보도 및 증권업종 동반 강세(신영증권이 리밸런싱 매수 대상에 포함됨)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "005940",
-          "name": "NH투자증권",
-          "change_pct": 8.46,
-          "specific_signal": "코스피 급반등·대형 IT 실적에 따른 증시 회복과 거래대금 증가로 증권업종 강세(증권채 발행 증가 보도 병행)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "016360",
-          "name": "삼성증권",
-          "change_pct": 10.38,
-          "specific_signal": "코스피 대규모 급변동에 따른 거래대금 급증·증권업종 일제 강세(위탁수수료·거래수수료 기대치 상승, 증권채 발행 증가 보도)",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "006800",
-          "name": "미래에셋증권",
-          "market": "KOSPI",
-          "marcap": 22410653544000,
-          "last_close": 40050,
-          "last_change_pct": -4.07,
-          "avg_abs_change_5d": 5.0,
-          "avg_value_5d_eok": 759.2,
-          "vol_surge": 0.61,
-          "value_surge": 0.58,
-          "close_5d_return": -5.09,
-          "risk_score": 3.07
-        },
-        {
-          "code": "138040",
-          "name": "메리츠금융지주",
-          "market": "KOSPI",
-          "marcap": 19797182395900,
-          "last_close": 118300,
-          "last_change_pct": 1.2,
-          "avg_abs_change_5d": 2.12,
-          "avg_value_5d_eok": 351.3,
-          "vol_surge": 0.95,
-          "value_surge": 1.02,
-          "close_5d_return": 2.87,
-          "risk_score": 2.13
-        }
-      ]
-    },
-    {
       "keyword": "증권주",
       "risen_members": [
         {
@@ -19198,6 +19233,76 @@
           "change_pct": 13.7,
           "specific_signal": "3,000억원 규모 자사주 취득 후 전량 소각 결정(우선주에 우호적 효과)",
           "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "006800",
+          "name": "미래에셋증권",
+          "market": "KOSPI",
+          "marcap": 22410653544000,
+          "last_close": 40050,
+          "last_change_pct": -4.07,
+          "avg_abs_change_5d": 5.0,
+          "avg_value_5d_eok": 759.2,
+          "vol_surge": 0.61,
+          "value_surge": 0.58,
+          "close_5d_return": -5.09,
+          "risk_score": 3.07
+        },
+        {
+          "code": "138040",
+          "name": "메리츠금융지주",
+          "market": "KOSPI",
+          "marcap": 19797182395900,
+          "last_close": 118300,
+          "last_change_pct": 1.2,
+          "avg_abs_change_5d": 2.12,
+          "avg_value_5d_eok": 351.3,
+          "vol_surge": 0.95,
+          "value_surge": 1.02,
+          "close_5d_return": 2.87,
+          "risk_score": 2.13
+        }
+      ]
+    },
+    {
+      "keyword": "증권업종",
+      "risen_members": [
+        {
+          "ticker": "001510",
+          "name": "SK증권",
+          "change_pct": 7.5,
+          "specific_signal": "코스피 반등에 따른 증권주 동반 강세 + 증권사 2Q 순익 컨센서스 상향(변동성·거래대금 재확대 수혜)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "001515",
+          "name": "SK증권우",
+          "change_pct": 8.55,
+          "specific_signal": "증권주 실적 기대 확산(키움·메리츠 중심의 어닝 모멘텀 확산)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "001720",
+          "name": "신영증권",
+          "change_pct": 7.47,
+          "specific_signal": "국민연금 리밸런싱(포트폴리오 조정)로 인한 기관 매수 편입 보도 및 증권업종 동반 강세(신영증권이 리밸런싱 매수 대상에 포함됨)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "005940",
+          "name": "NH투자증권",
+          "change_pct": 8.46,
+          "specific_signal": "코스피 급반등·대형 IT 실적에 따른 증시 회복과 거래대금 증가로 증권업종 강세(증권채 발행 증가 보도 병행)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "016360",
+          "name": "삼성증권",
+          "change_pct": 10.38,
+          "specific_signal": "코스피 대규모 급변동에 따른 거래대금 급증·증권업종 일제 강세(위탁수수료·거래수수료 기대치 상승, 증권채 발행 증가 보도)",
+          "confidence": "medium"
         }
       ],
       "candidates": [
@@ -20912,6 +21017,62 @@
       ]
     },
     {
+      "keyword": "방어력",
+      "risen_members": [
+        {
+          "ticker": "011790",
+          "name": "SKC",
+          "change_pct": 11.2,
+          "specific_signal": "미국 동박(cu-foil) 특허 소송 승소로 후발주자 기술 모방 제동 — 시장지배력 및 수율·가격 방어력 강화 기대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "219550",
+          "name": "디와이디",
+          "change_pct": 15.01,
+          "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "491000",
+          "name": "리브스메드",
+          "change_pct": 11.31,
+          "specific_signal": "수술로봇 출시 임박(제품명 '스타크') 및 지식재산권(IP) 누적 1,000건 확보로 특허 방어력 강화",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "041920",
+          "name": "메디아나",
+          "market": "KOSDAQ",
+          "marcap": 181332674250,
+          "last_close": 9750,
+          "last_change_pct": 0.62,
+          "avg_abs_change_5d": 5.54,
+          "avg_value_5d_eok": 9.4,
+          "vol_surge": 0.93,
+          "value_surge": 0.81,
+          "close_5d_return": -5.34,
+          "risk_score": 5.16
+        },
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
+        }
+      ]
+    },
+    {
       "keyword": "오프라인",
       "risen_members": [
         {
@@ -21132,6 +21293,62 @@
           "value_surge": 0.76,
           "close_5d_return": -1.83,
           "risk_score": 1.17
+        }
+      ]
+    },
+    {
+      "keyword": "동일일",
+      "risen_members": [
+        {
+          "ticker": "039490",
+          "name": "키움증권",
+          "change_pct": 8.06,
+          "specific_signal": "코스피의 급반등(장중 758p 변동·5.76% 반등)으로 거래대금·변동성 급증해 증권업 수혜(브로커리지·위탁매매 증가) — 동일일 다수 보도",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "100090",
+          "name": "SK오션플랜트",
+          "change_pct": 17.25,
+          "specific_signal": "가상발전소(VPP) 협약·SK그룹 신재생 테마 동반강세에 따른 그룹 수급 쏠림 (동일일 SK그룹 신재생 관련 호재로 연동)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "219550",
+          "name": "디와이디",
+          "change_pct": 15.01,
+          "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "006800",
+          "name": "미래에셋증권",
+          "market": "KOSPI",
+          "marcap": 22410653544000,
+          "last_close": 40050,
+          "last_change_pct": -4.07,
+          "avg_abs_change_5d": 5.0,
+          "avg_value_5d_eok": 759.2,
+          "vol_surge": 0.61,
+          "value_surge": 0.58,
+          "close_5d_return": -5.09,
+          "risk_score": 3.07
+        },
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
         }
       ]
     },
@@ -22081,55 +22298,6 @@
       ]
     },
     {
-      "keyword": "환자모니터링",
-      "risen_members": [
-        {
-          "ticker": "288980",
-          "name": "모아데이타",
-          "change_pct": 14.25,
-          "specific_signal": "아크릴社의 11억원 규모 GPU 베이스(AI 클라우드) 공급 계약(모아데이타 대상)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "458870",
-          "name": "씨어스",
-          "change_pct": 16.7,
-          "specific_signal": "병원용 환자모니터링·이상징후 탐지 플랫폼 '씽크'의 대규모 병원 구축(전남대·화순 558병상) 및 해외 수주(신한투자 보고서: UAE 220억 규모)·대웅제약과의 파트너십 부각",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "0007C0",
-          "name": "아크릴",
-          "market": "KOSDAQ",
-          "marcap": 122060924800,
-          "last_close": 15200,
-          "last_change_pct": -9.47,
-          "avg_abs_change_5d": 10.24,
-          "avg_value_5d_eok": 8.2,
-          "vol_surge": 0.58,
-          "value_surge": 0.54,
-          "close_5d_return": -9.36,
-          "risk_score": 5.94
-        },
-        {
-          "code": "069620",
-          "name": "대웅제약",
-          "market": "KOSPI",
-          "marcap": 1412403492500,
-          "last_close": 121900,
-          "last_change_pct": 2.52,
-          "avg_abs_change_5d": 2.74,
-          "avg_value_5d_eok": 47.5,
-          "vol_surge": 0.7,
-          "value_surge": 0.7,
-          "close_5d_return": -7.58,
-          "risk_score": 1.93
-        }
-      ]
-    },
-    {
       "keyword": "주담대",
       "risen_members": [
         {
@@ -22175,6 +22343,55 @@
           "value_surge": 1.47,
           "close_5d_return": 0.44,
           "risk_score": 3.44
+        }
+      ]
+    },
+    {
+      "keyword": "환자모니터링",
+      "risen_members": [
+        {
+          "ticker": "288980",
+          "name": "모아데이타",
+          "change_pct": 14.25,
+          "specific_signal": "아크릴社의 11억원 규모 GPU 베이스(AI 클라우드) 공급 계약(모아데이타 대상)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "458870",
+          "name": "씨어스",
+          "change_pct": 16.7,
+          "specific_signal": "병원용 환자모니터링·이상징후 탐지 플랫폼 '씽크'의 대규모 병원 구축(전남대·화순 558병상) 및 해외 수주(신한투자 보고서: UAE 220억 규모)·대웅제약과의 파트너십 부각",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "0007C0",
+          "name": "아크릴",
+          "market": "KOSDAQ",
+          "marcap": 122060924800,
+          "last_close": 15200,
+          "last_change_pct": -9.47,
+          "avg_abs_change_5d": 10.24,
+          "avg_value_5d_eok": 8.2,
+          "vol_surge": 0.58,
+          "value_surge": 0.54,
+          "close_5d_return": -9.36,
+          "risk_score": 5.94
+        },
+        {
+          "code": "069620",
+          "name": "대웅제약",
+          "market": "KOSPI",
+          "marcap": 1412403492500,
+          "last_close": 121900,
+          "last_change_pct": 2.52,
+          "avg_abs_change_5d": 2.74,
+          "avg_value_5d_eok": 47.5,
+          "vol_surge": 0.7,
+          "value_surge": 0.7,
+          "close_5d_return": -7.58,
+          "risk_score": 1.93
         }
       ]
     },
@@ -22326,7 +22543,7 @@
       ]
     },
     {
-      "keyword": "재검토",
+      "keyword": "식약처의",
       "risen_members": [
         {
           "ticker": "007390",
@@ -22336,11 +22553,11 @@
           "confidence": "high"
         },
         {
-          "ticker": "046210",
-          "name": "HLB파나진",
-          "change_pct": 30.0,
-          "specific_signal": "리보세라닙에 대한 'FDA 보류(허가 불발) 사유 일부 해소' 주장(시장에 확산)으로 허가 재검토·우려 완화 기대",
-          "confidence": "medium"
+          "ticker": "166480",
+          "name": "코아스템켐온",
+          "change_pct": 29.93,
+          "specific_signal": "식약처의 '뉴로나타-알' 조건부 품목허가(품목허가 변경) — 루게릭병(ALS) 적응증 관련 세계 최초 사례 보도",
+          "confidence": "high"
         }
       ],
       "candidates": [
@@ -22375,7 +22592,7 @@
       ]
     },
     {
-      "keyword": "식약처의",
+      "keyword": "재검토",
       "risen_members": [
         {
           "ticker": "007390",
@@ -22385,11 +22602,11 @@
           "confidence": "high"
         },
         {
-          "ticker": "166480",
-          "name": "코아스템켐온",
-          "change_pct": 29.93,
-          "specific_signal": "식약처의 '뉴로나타-알' 조건부 품목허가(품목허가 변경) — 루게릭병(ALS) 적응증 관련 세계 최초 사례 보도",
-          "confidence": "high"
+          "ticker": "046210",
+          "name": "HLB파나진",
+          "change_pct": 30.0,
+          "specific_signal": "리보세라닙에 대한 'FDA 보류(허가 불발) 사유 일부 해소' 주장(시장에 확산)으로 허가 재검토·우려 완화 기대",
+          "confidence": "medium"
         }
       ],
       "candidates": [
@@ -22816,14 +23033,14 @@
       ]
     },
     {
-      "keyword": "LLM",
+      "keyword": "급여화",
       "risen_members": [
         {
-          "ticker": "279600",
-          "name": "미디어젠",
-          "change_pct": 9.13,
-          "specific_signal": "AI 음성인식 고도화 및 LLM 관련 신사업 확대(조직개편으로 수익구조 개선 추진, ETRI와 LLM 협의)",
-          "confidence": "medium"
+          "ticker": "317240",
+          "name": "TS트릴리온",
+          "change_pct": 29.96,
+          "specific_signal": "하반기 탈모치료 건강보험(급여) 적용 추진 — 복지부·복지장관 발언",
+          "confidence": "high"
         },
         {
           "ticker": "322510",
@@ -22865,14 +23082,14 @@
       ]
     },
     {
-      "keyword": "급여화",
+      "keyword": "LLM",
       "risen_members": [
         {
-          "ticker": "317240",
-          "name": "TS트릴리온",
-          "change_pct": 29.96,
-          "specific_signal": "하반기 탈모치료 건강보험(급여) 적용 추진 — 복지부·복지장관 발언",
-          "confidence": "high"
+          "ticker": "279600",
+          "name": "미디어젠",
+          "change_pct": 9.13,
+          "specific_signal": "AI 음성인식 고도화 및 LLM 관련 신사업 확대(조직개편으로 수익구조 개선 추진, ETRI와 LLM 협의)",
+          "confidence": "medium"
         },
         {
           "ticker": "322510",
@@ -23390,6 +23607,132 @@
       ]
     },
     {
+      "keyword": "투자주의",
+      "risen_members": [
+        {
+          "ticker": "001380",
+          "name": "SG글로벌",
+          "change_pct": 6.96,
+          "specific_signal": "소수계좌 거래집중 지정(투자주의) 및 중소형주 매수세 편입",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "002960",
+          "name": "한국쉘석유",
+          "change_pct": 4.86,
+          "specific_signal": "거래소·금감원 관련 단일계좌 거래집중·투자주의(투자경고) 지정 및 특정계좌 매매관여 과다 보도",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "009620",
+          "name": "삼보산업",
+          "change_pct": 15.88,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 투자주의 경보(시장감시 조치)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "011330",
+          "name": "유니켐",
+          "change_pct": 15.22,
+          "specific_signal": "휴머노이드 로봇용 외피(외장재) 시장 진출/적용 기대(자동차 외장재에서 휴머노이드 외피로 확대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "013000",
+          "name": "세우글로벌",
+          "change_pct": 7.75,
+          "specific_signal": "단일계좌 집중매수로 인한 투자주의 지정",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "035620",
+          "name": "바른손이앤에이",
+          "change_pct": 16.2,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 거래감시·투자주의 공시(거래집중 지정으로 인한 단기 변동성 확대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "043590",
+          "name": "웰킵스하이텍",
+          "change_pct": 23.33,
+          "specific_signal": "특정계좌의 집중 매수로 인한 거래량 급증 및 거래소의 '투자주의종목' 지정",
+          "confidence": "high"
+        },
+        {
+          "ticker": "055490",
+          "name": "테이팩스",
+          "change_pct": 12.88,
+          "specific_signal": "금융투자업체 공시·검토로 인한 '소수계좌 거래집중 지정' 및 투자주의 공지(거래 쏠림)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "060230",
+          "name": "제이케이시냅스",
+          "change_pct": 24.6,
+          "specific_signal": "소수계좌 집중거래로 인한 투자주의종목 지정(감시·수급 이슈)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "065440",
+          "name": "이루온",
+          "change_pct": 20.13,
+          "specific_signal": "투자경고 및 투자주의 지정 후 단기 변동성 확대",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "073190",
+          "name": "듀오백",
+          "change_pct": 29.92,
+          "specific_signal": "거래소 현저한 시황변동 조회공시 및 특정계좌의 과다 매매 관여로 인한 투자주의·변동성 확대 우려",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "109670",
+          "name": "씨싸이트",
+          "change_pct": 15.45,
+          "specific_signal": "이격도 과열·중소형주 매수세 집중(언론의 '상승 종목·과열 신호' 노출)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "119830",
+          "name": "아이텍",
+          "change_pct": 20.61,
+          "specific_signal": "소수계좌 거래집중에 따른 단기 수급 급등(투자주의·매매동향 주목)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "159010",
+          "name": "아스플로",
+          "change_pct": 23.81,
+          "specific_signal": "HBM(고대역폭메모리) 훈풍에 따른 반도체 장비·소부장 매수 확산 (업종 랠리)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "219550",
+          "name": "디와이디",
+          "change_pct": 15.01,
+          "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
+        }
+      ]
+    },
+    {
       "keyword": "프로젝트",
       "risen_members": [
         {
@@ -23540,6 +23883,13 @@
           "confidence": "medium"
         },
         {
+          "ticker": "035620",
+          "name": "바른손이앤에이",
+          "change_pct": 16.2,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 거래감시·투자주의 공시(거래집중 지정으로 인한 단기 변동성 확대)",
+          "confidence": "medium"
+        },
+        {
           "ticker": "039490",
           "name": "키움증권",
           "change_pct": 8.06,
@@ -23589,6 +23939,97 @@
           "value_surge": 0.58,
           "close_5d_return": -5.09,
           "risk_score": 3.07
+        }
+      ]
+    },
+    {
+      "keyword": "거래소",
+      "risen_members": [
+        {
+          "ticker": "002960",
+          "name": "한국쉘석유",
+          "change_pct": 4.86,
+          "specific_signal": "거래소·금감원 관련 단일계좌 거래집중·투자주의(투자경고) 지정 및 특정계좌 매매관여 과다 보도",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "014680",
+          "name": "한솔케미칼",
+          "change_pct": 10.4,
+          "specific_signal": "거래소·금융당국 '밸류업' 우수기업 표창(05.27) 및 '반도체 사이클 수혜' 보도(05.28)가 맞물려 재평가·수급 유입",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "043590",
+          "name": "웰킵스하이텍",
+          "change_pct": 23.33,
+          "specific_signal": "특정계좌의 집중 매수로 인한 거래량 급증 및 거래소의 '투자주의종목' 지정",
+          "confidence": "high"
+        },
+        {
+          "ticker": "073190",
+          "name": "듀오백",
+          "change_pct": 29.92,
+          "specific_signal": "거래소 현저한 시황변동 조회공시 및 특정계좌의 과다 매매 관여로 인한 투자주의·변동성 확대 우려",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "079000",
+          "name": "와토스코리아",
+          "change_pct": 29.84,
+          "specific_signal": "거래소의 '투자주의종목(투자경고) 지정'에 따른 관심·매수 유입(이후 바이오 섹터 랠리와 결합)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "219550",
+          "name": "디와이디",
+          "change_pct": 15.01,
+          "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "224060",
+          "name": "더코디",
+          "change_pct": 19.41,
+          "specific_signal": "거래소 투자주의종목 지정(소수계좌 매수 집중·이격도 과열 징후)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "227100",
+          "name": "프로브잇",
+          "change_pct": 177.78,
+          "specific_signal": "거래소의 '경영 투명성 악화'에 따른 상장폐지 결정 및 정리매매 지정(정리매매 개시 6월22일)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "377030",
+          "name": "비트맥스",
+          "change_pct": 16.54,
+          "specific_signal": "기관 비트코인 보유량 증가(기관수요 확대로 코인 관련주 수급 개선)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "446070",
+          "name": "유니드비티플러스",
+          "change_pct": 29.96,
+          "specific_signal": "상한가 잔량 상위로 인한 매수 쏠림 및 거래소 투자주의종목 지정(단기 수급 집중)",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "090430",
+          "name": "아모레퍼시픽",
+          "market": "KOSPI",
+          "marcap": 7276499219600,
+          "last_close": 124400,
+          "last_change_pct": 2.98,
+          "avg_abs_change_5d": 2.41,
+          "avg_value_5d_eok": 358.7,
+          "vol_surge": 0.73,
+          "value_surge": 0.79,
+          "close_5d_return": 1.06,
+          "risk_score": 1.79
         }
       ]
     },
@@ -23908,6 +24349,76 @@
       ]
     },
     {
+      "keyword": "투자경고",
+      "risen_members": [
+        {
+          "ticker": "002960",
+          "name": "한국쉘석유",
+          "change_pct": 4.86,
+          "specific_signal": "거래소·금감원 관련 단일계좌 거래집중·투자주의(투자경고) 지정 및 특정계좌 매매관여 과다 보도",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "009620",
+          "name": "삼보산업",
+          "change_pct": 15.88,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 투자주의 경보(시장감시 조치)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "050120",
+          "name": "ES큐브",
+          "change_pct": 17.65,
+          "specific_signal": "단일계좌 거래량 급증 → 투자주의종목(투자경고) 지정 예고 공시/보도",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "065440",
+          "name": "이루온",
+          "change_pct": 20.13,
+          "specific_signal": "투자경고 및 투자주의 지정 후 단기 변동성 확대",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "073190",
+          "name": "듀오백",
+          "change_pct": 29.92,
+          "specific_signal": "거래소 현저한 시황변동 조회공시 및 특정계좌의 과다 매매 관여로 인한 투자주의·변동성 확대 우려",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "079000",
+          "name": "와토스코리아",
+          "change_pct": 29.84,
+          "specific_signal": "거래소의 '투자주의종목(투자경고) 지정'에 따른 관심·매수 유입(이후 바이오 섹터 랠리와 결합)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "198440",
+          "name": "강동씨앤엘",
+          "change_pct": 13.27,
+          "specific_signal": "정부 SOC(인프라·메가프로젝트) 기대감으로 시멘트·레미콘주 전반 강세(2026.07.06 보도); 앞서 투자경고 해제→투자주의종목 재지정 예고(2026.07.03)로 하방 리스크 완화",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "241770",
+          "name": "메카로",
+          "market": "KOSDAQ",
+          "marcap": 335847488000,
+          "last_close": 32950,
+          "last_change_pct": -9.85,
+          "avg_abs_change_5d": 5.09,
+          "avg_value_5d_eok": 7.5,
+          "vol_surge": 0.81,
+          "value_surge": 0.69,
+          "close_5d_return": -8.73,
+          "risk_score": 4.13
+        }
+      ]
+    },
+    {
       "keyword": "매수세",
       "risen_members": [
         {
@@ -24048,69 +24559,6 @@
       ]
     },
     {
-      "keyword": "투자경고",
-      "risen_members": [
-        {
-          "ticker": "002960",
-          "name": "한국쉘석유",
-          "change_pct": 4.86,
-          "specific_signal": "거래소·금감원 관련 단일계좌 거래집중·투자주의(투자경고) 지정 및 특정계좌 매매관여 과다 보도",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "050120",
-          "name": "ES큐브",
-          "change_pct": 17.65,
-          "specific_signal": "단일계좌 거래량 급증 → 투자주의종목(투자경고) 지정 예고 공시/보도",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "065440",
-          "name": "이루온",
-          "change_pct": 20.13,
-          "specific_signal": "투자경고 및 투자주의 지정 후 단기 변동성 확대",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "073190",
-          "name": "듀오백",
-          "change_pct": 29.92,
-          "specific_signal": "거래소 현저한 시황변동 조회공시 및 특정계좌의 과다 매매 관여로 인한 투자주의·변동성 확대 우려",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "079000",
-          "name": "와토스코리아",
-          "change_pct": 29.84,
-          "specific_signal": "거래소의 '투자주의종목(투자경고) 지정'에 따른 관심·매수 유입(이후 바이오 섹터 랠리와 결합)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "198440",
-          "name": "강동씨앤엘",
-          "change_pct": 13.27,
-          "specific_signal": "정부 SOC(인프라·메가프로젝트) 기대감으로 시멘트·레미콘주 전반 강세(2026.07.06 보도); 앞서 투자경고 해제→투자주의종목 재지정 예고(2026.07.03)로 하방 리스크 완화",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "241770",
-          "name": "메카로",
-          "market": "KOSDAQ",
-          "marcap": 335847488000,
-          "last_close": 32950,
-          "last_change_pct": -9.85,
-          "avg_abs_change_5d": 5.09,
-          "avg_value_5d_eok": 7.5,
-          "vol_surge": 0.81,
-          "value_surge": 0.69,
-          "close_5d_return": -8.73,
-          "risk_score": 4.13
-        }
-      ]
-    },
-    {
       "keyword": "수주잔고",
       "risen_members": [
         {
@@ -24170,6 +24618,69 @@
           "value_surge": 0.72,
           "close_5d_return": -8.65,
           "risk_score": 4.91
+        }
+      ]
+    },
+    {
+      "keyword": "거래소의",
+      "risen_members": [
+        {
+          "ticker": "009620",
+          "name": "삼보산업",
+          "change_pct": 15.88,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 투자주의 경보(시장감시 조치)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "035620",
+          "name": "바른손이앤에이",
+          "change_pct": 16.2,
+          "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 거래감시·투자주의 공시(거래집중 지정으로 인한 단기 변동성 확대)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "043590",
+          "name": "웰킵스하이텍",
+          "change_pct": 23.33,
+          "specific_signal": "특정계좌의 집중 매수로 인한 거래량 급증 및 거래소의 '투자주의종목' 지정",
+          "confidence": "high"
+        },
+        {
+          "ticker": "079000",
+          "name": "와토스코리아",
+          "change_pct": 29.84,
+          "specific_signal": "거래소의 '투자주의종목(투자경고) 지정'에 따른 관심·매수 유입(이후 바이오 섹터 랠리와 결합)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "227100",
+          "name": "프로브잇",
+          "change_pct": 177.78,
+          "specific_signal": "거래소의 '경영 투명성 악화'에 따른 상장폐지 결정 및 정리매매 지정(정리매매 개시 6월22일)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "397030",
+          "name": "에이프릴바이오",
+          "change_pct": 15.57,
+          "specific_signal": "거래소의 '태광산업 피인수설' 조회공시 요구(인수설 기반 공시 요청)",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "003240",
+          "name": "태광산업",
+          "market": "KOSPI",
+          "marcap": 964204400000,
+          "last_close": 866000,
+          "last_change_pct": 1.05,
+          "avg_abs_change_5d": 2.71,
+          "avg_value_5d_eok": 29.1,
+          "vol_surge": 1.26,
+          "value_surge": 1.3,
+          "close_5d_return": 1.76,
+          "risk_score": 3.54
         }
       ]
     },
@@ -25276,55 +25787,6 @@
           "value_surge": 0.43,
           "close_5d_return": -7.53,
           "risk_score": 2.98
-        }
-      ]
-    },
-    {
-      "keyword": "거래소의",
-      "risen_members": [
-        {
-          "ticker": "043590",
-          "name": "웰킵스하이텍",
-          "change_pct": 23.33,
-          "specific_signal": "특정계좌의 집중 매수로 인한 거래량 급증 및 거래소의 '투자주의종목' 지정",
-          "confidence": "high"
-        },
-        {
-          "ticker": "079000",
-          "name": "와토스코리아",
-          "change_pct": 29.84,
-          "specific_signal": "거래소의 '투자주의종목(투자경고) 지정'에 따른 관심·매수 유입(이후 바이오 섹터 랠리와 결합)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "227100",
-          "name": "프로브잇",
-          "change_pct": 177.78,
-          "specific_signal": "거래소의 '경영 투명성 악화'에 따른 상장폐지 결정 및 정리매매 지정(정리매매 개시 6월22일)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "397030",
-          "name": "에이프릴바이오",
-          "change_pct": 15.57,
-          "specific_signal": "거래소의 '태광산업 피인수설' 조회공시 요구(인수설 기반 공시 요청)",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "003240",
-          "name": "태광산업",
-          "market": "KOSPI",
-          "marcap": 964204400000,
-          "last_close": 866000,
-          "last_change_pct": 1.05,
-          "avg_abs_change_5d": 2.71,
-          "avg_value_5d_eok": 29.1,
-          "vol_surge": 1.26,
-          "value_surge": 1.3,
-          "close_5d_return": 1.76,
-          "risk_score": 3.54
         }
       ]
     },
@@ -27016,14 +27478,14 @@
       ]
     },
     {
-      "keyword": "대형투자",
+      "keyword": "관련주에",
       "risen_members": [
         {
-          "ticker": "001210",
-          "name": "금호전기",
-          "change_pct": 29.96,
-          "specific_signal": "호남(광주·전남) 반도체 클러스터 추진 기대 — 정부 대형투자 발표 예고/투자설",
-          "confidence": "medium"
+          "ticker": "004310",
+          "name": "현대약품",
+          "change_pct": 13.26,
+          "specific_signal": "대통령의 '미프진' 언급으로 낙태약(미프진) 관련주에 대한 투기성 매수 발생",
+          "confidence": "high"
         },
         {
           "ticker": "274090",
@@ -27051,14 +27513,14 @@
       ]
     },
     {
-      "keyword": "관련주에",
+      "keyword": "대형투자",
       "risen_members": [
         {
-          "ticker": "004310",
-          "name": "현대약품",
-          "change_pct": 13.26,
-          "specific_signal": "대통령의 '미프진' 언급으로 낙태약(미프진) 관련주에 대한 투기성 매수 발생",
-          "confidence": "high"
+          "ticker": "001210",
+          "name": "금호전기",
+          "change_pct": 29.96,
+          "specific_signal": "호남(광주·전남) 반도체 클러스터 추진 기대 — 정부 대형투자 발표 예고/투자설",
+          "confidence": "medium"
         },
         {
           "ticker": "274090",
@@ -27327,41 +27789,6 @@
           "value_surge": 1.15,
           "close_5d_return": 2.17,
           "risk_score": 4.42
-        }
-      ]
-    },
-    {
-      "keyword": "방어력",
-      "risen_members": [
-        {
-          "ticker": "011790",
-          "name": "SKC",
-          "change_pct": 11.2,
-          "specific_signal": "미국 동박(cu-foil) 특허 소송 승소로 후발주자 기술 모방 제동 — 시장지배력 및 수율·가격 방어력 강화 기대",
-          "confidence": "high"
-        },
-        {
-          "ticker": "491000",
-          "name": "리브스메드",
-          "change_pct": 11.31,
-          "specific_signal": "수술로봇 출시 임박(제품명 '스타크') 및 지식재산권(IP) 누적 1,000건 확보로 특허 방어력 강화",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "041920",
-          "name": "메디아나",
-          "market": "KOSDAQ",
-          "marcap": 181332674250,
-          "last_close": 9750,
-          "last_change_pct": 0.62,
-          "avg_abs_change_5d": 5.54,
-          "avg_value_5d_eok": 9.4,
-          "vol_surge": 0.93,
-          "value_surge": 0.81,
-          "close_5d_return": -5.34,
-          "risk_score": 5.16
         }
       ]
     },
@@ -27716,7 +28143,7 @@
       ]
     },
     {
-      "keyword": "랠리와",
+      "keyword": "마이크론",
       "risen_members": [
         {
           "ticker": "028260",
@@ -27726,10 +28153,10 @@
           "confidence": "medium"
         },
         {
-          "ticker": "079000",
-          "name": "와토스코리아",
-          "change_pct": 29.84,
-          "specific_signal": "거래소의 '투자주의종목(투자경고) 지정'에 따른 관심·매수 유입(이후 바이오 섹터 랠리와 결합)",
+          "ticker": "494220",
+          "name": "UNICORN SK하이닉스밸류체인액티브",
+          "change_pct": 6.25,
+          "specific_signal": "메모리(DRAM) 중심 반도체 ETF로서 글로벌 메모리 실적(마이크론 등) 및 TSMC·메모리 섹터 강세에 따른 ETF 수급·섹터 모멘텀",
           "confidence": "medium"
         }
       ],
@@ -27751,7 +28178,7 @@
       ]
     },
     {
-      "keyword": "마이크론",
+      "keyword": "랠리와",
       "risen_members": [
         {
           "ticker": "028260",
@@ -27761,10 +28188,10 @@
           "confidence": "medium"
         },
         {
-          "ticker": "494220",
-          "name": "UNICORN SK하이닉스밸류체인액티브",
-          "change_pct": 6.25,
-          "specific_signal": "메모리(DRAM) 중심 반도체 ETF로서 글로벌 메모리 실적(마이크론 등) 및 TSMC·메모리 섹터 강세에 따른 ETF 수급·섹터 모멘텀",
+          "ticker": "079000",
+          "name": "와토스코리아",
+          "change_pct": 29.84,
+          "specific_signal": "거래소의 '투자주의종목(투자경고) 지정'에 따른 관심·매수 유입(이후 바이오 섹터 랠리와 결합)",
           "confidence": "medium"
         }
       ],
@@ -28097,41 +28524,6 @@
           "value_surge": 0.88,
           "close_5d_return": -1.89,
           "risk_score": 1.25
-        }
-      ]
-    },
-    {
-      "keyword": "동일일",
-      "risen_members": [
-        {
-          "ticker": "039490",
-          "name": "키움증권",
-          "change_pct": 8.06,
-          "specific_signal": "코스피의 급반등(장중 758p 변동·5.76% 반등)으로 거래대금·변동성 급증해 증권업 수혜(브로커리지·위탁매매 증가) — 동일일 다수 보도",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "100090",
-          "name": "SK오션플랜트",
-          "change_pct": 17.25,
-          "specific_signal": "가상발전소(VPP) 협약·SK그룹 신재생 테마 동반강세에 따른 그룹 수급 쏠림 (동일일 SK그룹 신재생 관련 호재로 연동)",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "006800",
-          "name": "미래에셋증권",
-          "market": "KOSPI",
-          "marcap": 22410653544000,
-          "last_close": 40050,
-          "last_change_pct": -4.07,
-          "avg_abs_change_5d": 5.0,
-          "avg_value_5d_eok": 759.2,
-          "vol_surge": 0.61,
-          "value_surge": 0.58,
-          "close_5d_return": -5.09,
-          "risk_score": 3.07
         }
       ]
     },

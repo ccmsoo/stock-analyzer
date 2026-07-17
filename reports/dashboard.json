@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T15:42:03",
+  "generated_at": "2026-07-17T17:40:52",
   "signals": {
     "003060": {
       "name": "에이프로젠바이오로직스",
@@ -2073,8 +2073,8 @@
       "name": "코아스",
       "market": "KOSPI",
       "first_seen": "20260513",
-      "last_seen": "20260716",
-      "consecutive_days": 8,
+      "last_seen": "20260717",
+      "consecutive_days": 9,
       "main_theme": "ESG/친환경",
       "specific_signal": "산불 피해목 업사이클링 기술 특허 획득 및 'ESG 오피스 풀 패키지' 사업화 보도",
       "trigger_type": "disclosure",
@@ -2089,11 +2089,11 @@
       "related_stocks": [
         "한샘"
       ],
-      "reasoning": "당일(7/16) 종목 태그 기사에서 산불 피해목을 활용한 업사이클링 기술 특허 취득과 ESG 오피스 패키지 사업화를 보도해 직접적 호재로 작용한 것으로 보인다. 이전(7/13~14)의 소수계좌 거래집중 지정·주의 공시는 유동성 왜곡 가능성을 높여 동일 공시에 대한 변동성을 증폭시켰을 가능성이 있다.",
+      "reasoning": "이전 분석 재사용 (최초 20260513, 9일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "친환경 건자재·업사이클링",
-      "chain_position": "유통/판매",
-      "chain_role": "산불 피해목을 활용한 친환경 오피스 인테리어·자재 공급",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
@@ -2128,6 +2128,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.27
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.27
         }
       ]
@@ -2681,8 +2685,8 @@
       "name": "형지I&C",
       "market": "KOSDAQ",
       "first_seen": "20260513",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
+      "last_seen": "20260717",
+      "consecutive_days": 4,
       "main_theme": "섬유·패션·뷰티",
       "specific_signal": "유상증자 흥행 공시 및 온라인 브랜드·아시안핏 기반 중국·일본 시장 공략 가속화",
       "trigger_type": "disclosure",
@@ -2699,21 +2703,14 @@
         "좋은사람들",
         "비비안"
       ],
-      "reasoning": "동종 섬유·패션주 급등 장세 속에서 7월15일 보도(공시 Pick 등)에 유상증자 흥행·온라인 브랜드 기대가 부각되며 매수세가 집중된 것으로 보인다. 전일(7/14)에도 ‘아시안핏’ 중국·일본 공략, 대구 사무소 개소·국산 소재 확대, 온라인 매출 급증 등의 보도가 이어져 사업 모멘텀이 확인된 점이 단기 급등을 촉발한 복합 요인이다.",
+      "reasoning": "이전 분석 재사용 (최초 20260513, 4일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "섬유·패션·뷰티",
-      "chain_position": "유통/판매",
-      "chain_role": "브랜드 의류의 온라인·오프라인 유통 및 아시안핏 상품 개발·판매",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "온라인 플랫폼(이커머스)",
-        "백화점·리테일"
-      ],
-      "peer_chain": [
-        "원풍물산",
-        "좋은사람들",
-        "비비안"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260513",
@@ -2725,6 +2722,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.93
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.93
         }
       ]
@@ -3539,8 +3540,8 @@
       "name": "폴레드",
       "market": "KOSDAQ",
       "first_seen": "20260514",
-      "last_seen": "20260716",
-      "consecutive_days": 2,
+      "last_seen": "20260717",
+      "consecutive_days": 3,
       "main_theme": "정책·소비재(유아용품)",
       "specific_signal": "유아사업(프리미엄 카시트 포함) 매출 '내년 2배' 가이던스 공개 및 카시트 안전기술 학회 발표",
       "trigger_type": "disclosure",
@@ -3556,20 +3557,14 @@
         "모나리자",
         "손오공"
       ],
-      "reasoning": "회사 측의 공식 발언(유아사업 매출 내년 2배 전망)과 카시트 안전기술 관련 학회 발표가 동일일에 보도되어 성장성(가이던스)과 제품·기술 모멘텀을 동시에 부각시켰습니다. 저출생 대응 정책 기대감과 전통 소비재의 수혜 관점에서 투자심리가 집중되며 급등이 발생한 것으로 판단됩니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260514, 3일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "유아용품·프리미엄 카시트",
-      "chain_position": "최종재",
-      "chain_role": "프리미엄 유아용 카시트 및 유아용품의 제조·판매",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "유통·리테일",
-        "영유아 소비자(부모층)"
-      ],
-      "peer_chain": [
-        "모나리자",
-        "손오공"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260514",
@@ -3577,6 +3572,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 19.94
+        },
+        {
+          "date": "20260717",
           "change_pct": 19.94
         }
       ]
@@ -4252,8 +4251,8 @@
       "name": "제이케이시냅스",
       "market": "KOSDAQ",
       "first_seen": "20260514",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
+      "last_seen": "20260717",
+      "consecutive_days": 4,
       "main_theme": "수급/단기 테마(동전주·투자경고)",
       "specific_signal": "소수계좌 집중거래로 인한 투자주의종목 지정(감시·수급 이슈)",
       "trigger_type": "technical",
@@ -4270,11 +4269,11 @@
         "한성기업",
         "포커스에이아이"
       ],
-      "reasoning": "최근 보도에서 '소수계좌 집중거래→투자주의종목 지정'이 7/15일자로 확인되어 단기 급등은 수급(투기성·집중매수)으로 해석됩니다. 이전에 거래정지 해제(7/3 공시)로 유동성이 커진 점과 D-day의 거래대금 증가(거래량 772,292주)가 과열성 매매를 뒷받침합니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260514, 4일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "부동산 자산보유/소형 상장사(동전주)",
-      "chain_position": "지주사",
-      "chain_role": "토지·부동산 자산 보유 및 투자(소규모 자산관리)",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
@@ -4289,6 +4288,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 24.6
+        },
+        {
+          "date": "20260717",
           "change_pct": 24.6
         }
       ]
@@ -6740,40 +6743,32 @@
       "name": "바른손이앤에이",
       "market": "KOSDAQ",
       "first_seen": "20260519",
-      "last_seen": "20260716",
-      "consecutive_days": 2,
-      "main_theme": "정책/콘텐츠(영화·엔터)",
-      "specific_signal": "OTT 규제 완화 및 K-콘텐츠 수출 기대감에 따른 영화업종(제작·배급) 슈퍼사이클 테마",
-      "trigger_type": "unknown",
-      "confidence": "low",
+      "last_seen": "20260717",
+      "consecutive_days": 3,
+      "main_theme": "수급",
+      "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 거래감시·투자주의 공시(거래집중 지정으로 인한 단기 변동성 확대)",
+      "trigger_type": "disclosure",
+      "confidence": "medium",
       "watch_keywords": [
-        "OTT 규제 완화",
-        "K-콘텐츠 수출",
-        "글로벌 플랫폼 진출",
-        "배급 계약 수주",
-        "영화 흥행 수익",
-        "IP OTT 판권 판매"
+        "수급",
+        "거래감시",
+        "투자주의",
+        "소수계좌 거래집중 지정",
+        "거래집중 지정 해제 시점"
       ],
       "related_stocks": [
-        "CJ ENM",
-        "에스엠",
-        "NEW"
+        "모나미",
+        "지앤이헬스케어",
+        "비비안"
       ],
-      "reasoning": "최근 보도들은 OTT 규제 완화와 글로벌 수출 호재 등 영화·콘텐츠 업종 전반의 수혜를 거론하고 있어, 개별 호재 없이도 엔터·영화 관련 소형주로의 테마성 매수 압력이 강해진 것으로 보인다. 바른손이앤에이는 별도 공시나 계약 보도 없이 업종 뉴스에 동반 상승한 것으로 판단된다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "콘텐츠/영화 제작·배급",
-      "chain_position": "유통/판매",
-      "chain_role": "영화·콘텐츠 제작 및 배급을 통한 IP 유통·판매",
+      "reasoning": "거래량 급증과 함께 같은 날 보도된 '소수계좌 거래집중 지정→투자주의' 뉴스가 직접적 트리거로 보입니다. 거래집중 지정은 단기 투기적 매수·매도 집중을 유발해 변동성과 거래량을 확대시키므로 등락률 급등의 주된 원인으로 판단됩니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "수급/시장감시·테마성 거래",
+      "chain_position": "기타",
+      "chain_role": "거래 집중에 따른 거래소의 감시 대상 지정(수급 이슈로 인한 단기 변동성 촉발)",
       "upstream": [],
-      "downstream": [
-        "넷플릭스",
-        "티빙"
-      ],
-      "peer_chain": [
-        "NEW",
-        "CJ ENM",
-        "에스엠"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260519",
@@ -6781,6 +6776,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 16.2
+        },
+        {
+          "date": "20260717",
           "change_pct": 16.2
         }
       ]
@@ -10110,8 +10109,8 @@
       "name": "삼성공조",
       "market": "KOSPI",
       "first_seen": "20260527",
-      "last_seen": "20260716",
-      "consecutive_days": 4,
+      "last_seen": "20260717",
+      "consecutive_days": 5,
       "main_theme": "수급/테마(자동차 공조·HVAC)",
       "specific_signal": "증권시장 변동성완화장치(VI) 발동에 따른 단기 수급 집중 및 개인매수 유입(7/13 VI 이후 과열·연속 상승)",
       "trigger_type": "technical",
@@ -10127,7 +10126,7 @@
         "한온시스템",
         "현대모비스"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260527, 4일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260527, 5일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -10150,6 +10149,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 17.07
+        },
+        {
+          "date": "20260717",
           "change_pct": 17.07
         }
       ]
@@ -13597,34 +13600,29 @@
       "name": "아진전자부품",
       "market": "KOSPI",
       "first_seen": "20260604",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
-      "main_theme": "자동차부품/전장",
-      "specific_signal": "명확한 회사 고유 트리거 미확인 — 보도들은 일반 브랜드·업종 이슈에 그침",
+      "last_seen": "20260717",
+      "consecutive_days": 4,
+      "main_theme": "전자부품",
+      "specific_signal": "",
       "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "자동차 전장",
-        "브랜드 라이선스",
-        "대우 상표 라이선스",
-        "전장용 선재 공급망",
-        "부품 브랜드 순위"
+        "전자부품",
+        "수급",
+        "공급계약",
+        "공시(계약·자금조달)",
+        "단기 기술적 반등",
+        "기관/외국인 순매수"
       ],
-      "related_stocks": [
-        "현대모비스",
-        "한온시스템"
-      ],
-      "reasoning": "제공된 14일 내 기사들은 종목 태그된 한 건(대우 상표 관련 보도)과 자동차업종 일반 기사들뿐으로, 본문 발췌가 없어 아진전자부품과의 직접적 계약·실적·공시 연결 근거가 부족합니다. 따라서 이날 주가 급등(+6.50%)은 개별 수급·테마성 매매나 연관 업종 뉴스에 동조한 움직임일 가능성이 높습니다.",
-      "reason_unknown_category": "weak_name_link",
-      "industry_chain": "자동차 전장",
+      "related_stocks": [],
+      "reasoning": "최근 14일 내 종목 태그·일반 뉴스가 전혀 확인되지 않아 명확한 뉴스 트리거는 존재하지 않습니다. D-day에 +6.50% 상승과 거래량 444,087주라는 거래 확대가 관찰되어 단기 수급(개인·단타), 기술적 반등 또는 무형의 테마성 매매 가능성이 가장 합리적 추정입니다.",
+      "reason_unknown_category": "no_news_in_window",
+      "industry_chain": "전자부품(산업용/소형 B2B 부품)",
       "chain_position": "부품",
-      "chain_role": "자동차 전장용 전자부품 공급",
+      "chain_role": "전자기기·산업용 부품의 제조·공급",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "현대모비스",
-        "한온시스템"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260604",
@@ -13636,6 +13634,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 6.5
+        },
+        {
+          "date": "20260717",
           "change_pct": 6.5
         }
       ]
@@ -15862,8 +15864,8 @@
       "name": "현대약품",
       "market": "KOSPI",
       "first_seen": "20260615",
-      "last_seen": "20260716",
-      "consecutive_days": 4,
+      "last_seen": "20260717",
+      "consecutive_days": 5,
       "main_theme": "정책",
       "specific_signal": "대통령의 '미프진' 언급으로 낙태약(미프진) 관련주에 대한 투기성 매수 발생",
       "trigger_type": "policy",
@@ -15878,7 +15880,7 @@
       "related_stocks": [
         "대화제약"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260615, 4일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260615, 5일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -15901,6 +15903,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 13.26
+        },
+        {
+          "date": "20260717",
           "change_pct": 13.26
         }
       ]
@@ -16447,8 +16453,8 @@
       "name": "삼익제약",
       "market": "KOSDAQ",
       "first_seen": "20260615",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
+      "last_seen": "20260717",
+      "consecutive_days": 4,
       "main_theme": "바이오",
       "specific_signal": "장기지속형 DDS 플랫폼 기반 탈모 치료제(원형 탈모 신약) 개발 가속 보도",
       "trigger_type": "rumor",
@@ -16464,20 +16470,14 @@
         "파마리서치",
         "조아제약"
       ],
-      "reasoning": "7/15 다수 기사에서 삼익제약의 '장기지속형 DDS 플랫폼'과 '원형 탈모 신약 개발 가속' 보도가 나오며 투자심리가 집중된 것으로 보입니다. 별도 공시(수주·허가·실적) 근거는 확인되지 않아 언론 보도·테마성 매수로 급등한 가능성이 높습니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260615, 4일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "바이오 신약 개발 (탈모 치료)",
-      "chain_position": "최종재",
-      "chain_role": "장기지속형 DDS 기반 탈모치료제 개발 및 제조",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "병·의원",
-        "약국"
-      ],
-      "peer_chain": [
-        "파마리서치",
-        "조아제약"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260615",
@@ -16489,6 +16489,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.84
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.84
         }
       ]
@@ -16639,8 +16643,8 @@
       "name": "좋은사람들",
       "market": "KOSDAQ",
       "first_seen": "20260615",
-      "last_seen": "20260716",
-      "consecutive_days": 2,
+      "last_seen": "20260717",
+      "consecutive_days": 3,
       "main_theme": "소비재/의류",
       "specific_signal": "일본 제품 불매·애국소비에 따른 의류 섹터 수급 쏠림(원풍물산·좋은사람들·비비안 등 동반 급등)",
       "trigger_type": "rumor",
@@ -16658,21 +16662,14 @@
         "모나리자",
         "비비안"
       ],
-      "reasoning": "최근 뉴스는 특정 기업의 공시나 계약이 아닌 '애국소비(일본 제품 불매)' 관련 투자자 수급이 의류·전통 소비재로 쏠리며 좋은사람들에 매수세가 집중된 결과로 보입니다. 다수 기사에서 '의류 테마주에 뭉칫돈 유입'·'동반 상한가'를 지적하고 있어 테마성(수급) 급등이 핵심 원인입니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260615, 3일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "전통 소비재(의류·패션)",
-      "chain_position": "최종재",
-      "chain_role": "패션·의류 완제품의 제조 및 유통(내수 소비자 대상)",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "일반 소비자",
-        "리테일/온라인몰"
-      ],
-      "peer_chain": [
-        "원풍물산",
-        "모나리자",
-        "비비안"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260615",
@@ -16680,6 +16677,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.9
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.9
         }
       ]
@@ -16786,8 +16787,8 @@
       "name": "엑스큐어",
       "market": "KOSDAQ",
       "first_seen": "20260615",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
+      "last_seen": "20260717",
+      "consecutive_days": 4,
       "main_theme": "수급/재무",
       "specific_signal": "잔여 64억원 규모 CB 전환가액 상향 리픽싱(잠재 전환주식수 감소)",
       "trigger_type": "disclosure",
@@ -16804,20 +16805,14 @@
         "라온시큐어",
         "케이사인"
       ],
-      "reasoning": "동일일자(2026.07.07) 다수 종목태그 기사에서 잔여 CB의 전환가액이 상향 조정(리픽싱)되어 잠재 전환주식 수가 줄었다고 보도되어 희석 우려가 즉시 완화된 점이 주가 급등의 핵심 요인으로 판단된다. 추가로 7월6일 발표된 강남 신사업 통합 거점(양자보안·디지털자산) 소식이 성장성 서사도 보강해 투자 심리에 플러스 영향을 미친 것으로 보인다.",
+      "reasoning": "이전 분석 재사용 (최초 20260615, 4일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "양자암호 보안",
-      "chain_position": "서비스",
-      "chain_role": "양자암호 기반 인프라·보안 솔루션 및 디지털자산 보안 서비스 제공",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "금융기관",
-        "공공기관"
-      ],
-      "peer_chain": [
-        "라온시큐어",
-        "케이사인"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260615",
@@ -16829,6 +16824,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 18.74
+        },
+        {
+          "date": "20260717",
           "change_pct": 18.74
         }
       ]
@@ -17129,34 +17128,33 @@
       "name": "에이엔피",
       "market": "KOSPI",
       "first_seen": "20260616",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
-      "main_theme": "수급(테마성)",
-      "specific_signal": "애국 소비 심리(국산품)·전통 소비재 섹터로의 수급 쏠림 및 급등락주 편입",
+      "last_seen": "20260717",
+      "consecutive_days": 4,
+      "main_theme": "수급(단기 테마성 매매)",
+      "specific_signal": "뚜렷한 호재성 공시·계약 없음 — 당일(07.16) 투자경고 지정예고 관련 시장 기사와 함께 단기 매수(동반상한가·테마성 수급) 발생",
       "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "전통 소비재",
-        "애국 소비 심리",
-        "수급 쏠림",
-        "거래대금 집중",
-        "급등락주 편입"
+        "수급",
+        "투자경고",
+        "동반상한가",
+        "단기 공매도 청산",
+        "거래정지/투자경고 공시",
+        "거래량 급증"
       ],
       "related_stocks": [
-        "형지엘리트",
-        "모나리자"
+        "모나리자",
+        "비비안",
+        "삼익제약"
       ],
-      "reasoning": "최근 14일 기사들은 코스피 전반의 거래상위·전통 소비재 급등과 '애국' 관련 테마성 수급 집중을 지목하는 목록성 보도 위주로, 에이엔피에 대한 별도 공시·수주·실적 발표 등 직접적 호재는 확인되지 않습니다. 따라서 이날 대량 거래와 급등은 종목 태그로의 수급 유입(테마성 매수) 또는 급등락주 편입에 따른 모멘텀으로 보는 것이 합리적입니다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "전통 소비재/생활용품",
-      "chain_position": "최종재",
-      "chain_role": "생활용품·전통 소비재 쪽에서 수급성 급등을 받는 리테일/브랜드주",
+      "reasoning": "최근 기사들은 '투자경고 지정예고' 등 시장 전체·종목대상 헤드라인에 그치며 에이엔피 자체의 긍정적 공시나 사업적 호재는 확인되지 않습니다. 따라서 D-day의 급등(+29.85%, 거래량 급증)은 개별 호재보다는 단기 수급·테마성 매매(동반상한가, 공매도 청산·과열 매수 등)로 해석하는 것이 합리적입니다.",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "형지엘리트",
-        "모나리자"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260616",
@@ -17168,6 +17166,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.85
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.85
         }
       ]
@@ -17870,8 +17872,8 @@
       "name": "에넥스",
       "market": "KOSPI",
       "first_seen": "20260617",
-      "last_seen": "20260716",
-      "consecutive_days": 5,
+      "last_seen": "20260717",
+      "consecutive_days": 6,
       "main_theme": "소비재(가구/리빙)",
       "specific_signal": "유통 플랫폼 제휴(홈캉스 시즌 맞춘 플랫폼 공동 프로모션 및 상품 공급)",
       "trigger_type": "contract",
@@ -17888,7 +17890,7 @@
         "한샘",
         "리바트"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260617, 5일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260617, 6일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -17915,6 +17917,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.95
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.95
         }
       ]
@@ -18272,27 +18278,27 @@
       "name": "동일스틸럭스",
       "market": "KOSDAQ",
       "first_seen": "20260617",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
-      "main_theme": "수급/테마성 급등",
-      "specific_signal": "애국(정치·사회) 테마에 따른 수급 쏠림 및 인버스 ETF 연계 매매로 인한 급등(회사 공시·계약·실적 등 기업 고유 호재 부재)",
+      "last_seen": "20260717",
+      "consecutive_days": 4,
+      "main_theme": "수급(테마/개별수급)",
+      "specific_signal": "",
       "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "애국테마",
-        "인버스 ETF 연계 매매",
-        "테마성 수급 쏠림",
-        "상한가 급등 반복",
-        "거래대금 급증"
+        "상한가",
+        "수급(개미·기관)",
+        "대량거래",
+        "공시(계약·유상증자)"
       ],
       "related_stocks": [
-        "형지엘리트",
-        "모나리자"
+        "모나리자",
+        "비비안",
+        "손오공"
       ],
-      "reasoning": "제공된 기사들은 코스닥 거래상위·테마성 급등을 다루고 있으며 동일스틸럭스에 대한 회사 공시·계약·실적 관련 본문 근거는 발견되지 않습니다. 다수 기사에서 '애국테마'와 인버스 ETF 연계 급등을 언급해 단기 수급·테마성 매매가 가격 급등의 가장 그럴듯한 원인으로 보입니다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "정치/사회 테마주 (테마성·수급주)",
-      "chain_position": "기타",
+      "reasoning": "14일 내에 동일스틸럭스 관련된 개별 공시·계약·실적 기사 등 핵심 트리거가 확인되지 않고, 제공된 기사도 여러 상한가 종목을 나열하는 시장 마감 요약에 불과합니다. 따라서 이번 급등은 특정 공시보다 단기 수급·투기성 매매(대량거래·동시호가·개미 매수) 또는 테마성·풍문성 매매의 가능성이 큽니다.",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
       "chain_role": "",
       "upstream": [],
       "downstream": [],
@@ -18308,6 +18314,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.97
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.97
         }
       ]
@@ -18768,19 +18778,25 @@
       "name": "주연테크",
       "market": "KOSPI",
       "first_seen": "20260618",
-      "last_seen": "20260716",
-      "consecutive_days": 2,
-      "main_theme": "분석 실패",
-      "specific_signal": "JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)",
-      "trigger_type": "",
-      "confidence": "low",
-      "watch_keywords": [],
+      "last_seen": "20260717",
+      "consecutive_days": 3,
+      "main_theme": "실적",
+      "specific_signal": "상반기 영업이익·당기순이익 흑자(어닝 서프라이즈 보도)",
+      "trigger_type": "earnings",
+      "confidence": "medium",
+      "watch_keywords": [
+        "어닝 서프라이즈",
+        "영업이익 흑자전환",
+        "상반기 당기순이익 흑자",
+        "상한가·수급 급증",
+        "단기 호재성 기사"
+      ],
       "related_stocks": [],
-      "reasoning": "",
-      "reason_unknown_category": "other",
-      "industry_chain": "",
-      "chain_position": "",
-      "chain_role": "",
+      "reasoning": "동일일(7/16) 보도에서 상반기 영업이익 및 당기순이익 흑자 전환을 언급한 기사가 나오며 투자자들이 어닝 서프라이즈로 해석해 매수세가 유입된 것으로 보입니다. 여기에 당일 다른 종목들의 상한가·수급 쏠림 장세가 동반되며 급등폭이 확대된 것으로 판단됩니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "PC·IT 완제품 유통/제조",
+      "chain_position": "유통/판매",
+      "chain_role": "PC·노트북·모니터 등 IT 완제품의 유통·브랜드 판매",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
@@ -18791,6 +18807,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 30.0
+        },
+        {
+          "date": "20260717",
           "change_pct": 30.0
         }
       ]
@@ -18832,34 +18852,31 @@
       "name": "삼보산업",
       "market": "KOSDAQ",
       "first_seen": "20260618",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
-      "main_theme": "수급",
-      "specific_signal": "VI(변동성완화장치) 잦은 발동·중소형주 '폭탄돌리기' 수급 테마",
-      "trigger_type": "unknown",
-      "confidence": "low",
+      "last_seen": "20260717",
+      "consecutive_days": 4,
+      "main_theme": "수급(단기 투기·거래감시)",
+      "specific_signal": "거래소의 '소수계좌 거래집중 지정'에 따른 투자주의 경보(시장감시 조치)",
+      "trigger_type": "technical",
+      "confidence": "medium",
       "watch_keywords": [
-        "수급·테마성 매매",
-        "VI 잦은 발동",
-        "액면병합 사례",
-        "시총 미달·유통주식수 감소",
-        "중소형주 폭탄돌리기"
+        "거래집중",
+        "시장감시(투자주의경보)",
+        "소수계좌 지정",
+        "거래량 급증",
+        "투자경고 해제 여부"
       ],
       "related_stocks": [
-        "삼아알미늄",
-        "주연테크"
+        "모나미",
+        "지앤이헬스케어"
       ],
-      "reasoning": "최근 14일 제공된 기사들은 종목 태그가 없고 시장 전반의 수급·테마성 보도(예: VI 잦은 발동, 중소형주 거래 패턴)에 국한돼 있어 삼보산업 고유의 공시·실적·수주성 호재는 확인되지 않습니다. D-day 거래량 급증(602,391주)과 급등(+15.88%)은 개별 투자자·테마성 매매 또는 수급 쏠림에 의한 것으로 판단됩니다. 회사 차원의 명확한 호재 공시가 없어 확증은 어렵습니다.",
-      "reason_unknown_category": "weak_name_link",
-      "industry_chain": "시장수급/중소형주 테마",
+      "reasoning": "거래소 방송/뉴스에 '삼보산업 소수계좌 거래집중 지정→투자주의 경보'가 보도되며 단기간 매수·거래량 집중이 발생해 가격이 급등한 것으로 판단됩니다. 별도 호재성 공시·실적·수주 뉴스가 없는 가운데 시장감시 조치 자체가 수급 불안을 자극해 단기 급등을 초래한 케이스입니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "수급/단기투기",
       "chain_position": "기타",
-      "chain_role": "시장 수급 변화의 대상(테마성·단기 투매/반등 발생 가능)",
+      "chain_role": "거래감시(소수계좌 지정)에 따른 단기 수급 변동성 유발",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "주연테크",
-        "삼아알미늄"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260618",
@@ -18871,6 +18888,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 15.88
+        },
+        {
+          "date": "20260717",
           "change_pct": 15.88
         }
       ]
@@ -19980,8 +20001,8 @@
       "name": "비비안",
       "market": "KOSPI",
       "first_seen": "20260622",
-      "last_seen": "20260716",
-      "consecutive_days": 5,
+      "last_seen": "20260717",
+      "consecutive_days": 6,
       "main_theme": "수급",
       "specific_signal": "‘애국기업 상장폐지 막자’ 캠페인에 따른 개인·테마성 매수(애국매수) 확산으로 인한 급등",
       "trigger_type": "rumor",
@@ -19999,7 +20020,7 @@
         "에넥스",
         "우성머티리얼즈"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260622, 5일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260622, 6일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -20026,6 +20047,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.94
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.94
         }
       ]
@@ -23872,26 +23897,26 @@
       "name": "디와이디",
       "market": "KOSDAQ",
       "first_seen": "20260626",
-      "last_seen": "20260716",
-      "consecutive_days": 2,
-      "main_theme": "수급/테마 (K-뷰티)",
-      "specific_signal": "",
-      "trigger_type": "unknown",
-      "confidence": "low",
+      "last_seen": "20260717",
+      "consecutive_days": 3,
+      "main_theme": "수급/시장심리",
+      "specific_signal": "거래소(혹은 증권사) '소수계좌 거래집중' 투자주의 공시·지정(동일일 보도)",
+      "trigger_type": "disclosure",
+      "confidence": "medium",
       "watch_keywords": [
-        "화장품",
-        "K-뷰티",
-        "코스닥",
-        "브랜드평판 7월",
-        "차익실현"
+        "거래소 투자주의 지정",
+        "화장품 섹터 방어력",
+        "소수계좌 거래집중",
+        "거래량 급증"
       ],
       "related_stocks": [
-        "뷰티스킨",
-        "달바글로벌"
+        "아모레퍼시픽",
+        "한국콜마",
+        "코스맥스"
       ],
-      "reasoning": "등락(+15.01%)은 최근 코스닥·화장품주 전반의 등락과 K-뷰티 관련 종목군 강세(브랜드평판·테마 수혜) 영향으로 보입니다. 제공된 기사들은 시장·섹터(화장품·코스닥) 전반의 흐름을 다루고 있으나, 디와이디에 대한 직접적 공시나 계약·실적 트리거는 확인되지 않습니다.",
-      "reason_unknown_category": "weak_name_link",
-      "industry_chain": "K-뷰티 (화장품)",
+      "reasoning": "당일 보도된 '소수계좌 거래집중' 투자주의 관련 뉴스가 직접적으로 언급되어 단기적 투기성·수급 집중 가능성이 높아졌고, 코스피 급락 속 화장품 섹터의 방어력 보도도 동반 매수 심리를 자극해 가격과 거래량이 동반 급증한 것으로 보입니다. 증가한 거래대금과 '투자유의' 표시는 변동성을 확대해 급등을 유발했을 가능성이 큽니다.",
+      "reason_unknown_category": "",
+      "industry_chain": "화장품/뷰티",
       "chain_position": "",
       "chain_role": "",
       "upstream": [],
@@ -23904,6 +23929,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 15.01
+        },
+        {
+          "date": "20260717",
           "change_pct": 15.01
         }
       ]
@@ -26258,8 +26287,8 @@
       "name": "엑시온그룹",
       "market": "KOSDAQ",
       "first_seen": "20260702",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
+      "last_seen": "20260717",
+      "consecutive_days": 4,
       "main_theme": "테마/수급(애국테마주)",
       "specific_signal": "애국테마주로 분류되어 단기 수급 쏠림·급등락주 편입",
       "trigger_type": "rumor",
@@ -26275,17 +26304,14 @@
         "형지엘리트",
         "모나리자"
       ],
-      "reasoning": "직접적인 공시나 계약·실적 뉴스는 확인되지 않으며, 제공된 검색 기사들은 '애국테마주 수급 쏠림'과 급등락 종목으로 엑시온그룹을 거론한 목록성 보도가 다수입니다. 따라서 이날(또는 전일) 테마성·수급 유입(개미 매수·테마 베팅)에 의해 주가가 급등한 것으로 판단됩니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260702, 4일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "테마/수급(투자심리 기반 소형주)",
-      "chain_position": "기타",
-      "chain_role": "테마성 수급 대상(투자심리·단기 베팅에 민감한 소형주)",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "형지엘리트",
-        "모나리자"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260702",
@@ -26297,6 +26323,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 30.0
+        },
+        {
+          "date": "20260717",
           "change_pct": 30.0
         }
       ]
@@ -26644,8 +26674,8 @@
       "name": "원풍물산",
       "market": "KOSDAQ",
       "first_seen": "20260703",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
+      "last_seen": "20260717",
+      "consecutive_days": 4,
       "main_theme": "수급/섬유·의류 섹터 테마",
       "specific_signal": "의류 테마주에 쏠린 단기 개미 수급(동반 상한가·테마성 매수)",
       "trigger_type": "rumor",
@@ -26661,18 +26691,14 @@
         "형지엘리트",
         "모나리자"
       ],
-      "reasoning": "7/15~7/16 보도에서 '의류 테마주에 뭉칫돈 유입', '원풍물산·좋은사람들 동반 상한가' 등 수급성 기사들이 반복되었고, 회사 고유의 긍정적 공시·계약은 확인되지 않아 급등은 테마성·수급 유입에 따른 것으로 판단됩니다. 일부 기사(동전주·꼼수 병합)는 본질적 호재가 아닌데도 투자심리로 인해 매수세가 확대된 것으로 보입니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260703, 4일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "섬유·의류 제조·유통",
-      "chain_position": "유통/판매",
-      "chain_role": "저가 의류·섬유 제품의 제조·도매·소매 유통",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "좋은사람들",
-        "형지엘리트",
-        "모나리자"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260703",
@@ -26684,6 +26710,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 30.0
+        },
+        {
+          "date": "20260717",
           "change_pct": 30.0
         }
       ]
@@ -26993,8 +27023,8 @@
       "name": "인디에프",
       "market": "KOSPI",
       "first_seen": "20260706",
-      "last_seen": "20260716",
-      "consecutive_days": 2,
+      "last_seen": "20260717",
+      "consecutive_days": 3,
       "main_theme": "소비재/패션·섬유",
       "specific_signal": "패션·섬유 업종 재평가(원가 절감·고부가 제품 다변화)로 인한 섬유·의류 섹터 강세에 동반 급등",
       "trigger_type": "rumor",
@@ -27012,24 +27042,14 @@
         "원풍물산",
         "좋은사람들"
       ],
-      "reasoning": "7/15일자 복수 매체에서 '섬유·의류 업종 재평가'와 '원가 절감·고부가가치 제품 다변화'를 근거로 패션·의류주에 자금이 유입됐다는 보도가 나왔고, 같은 날 의류 관련 종목들이 동반 급등한 점이 인디에프의 급등을 설명한다. 회사 고유의 긍정적 공시·계약은 확인되지 않지만 업종 모멘텀(섹터 리레이팅)이 주가 급등의 주된 동력으로 판단된다.",
+      "reasoning": "이전 분석 재사용 (최초 20260706, 3일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "패션·섬유",
-      "chain_position": "유통/판매",
-      "chain_role": "패션 브랜드 의류의 제조·도소매(리테일) 제공",
-      "upstream": [
-        "효성티앤씨",
-        "우성머티리얼즈"
-      ],
-      "downstream": [
-        "백화점·온라인몰",
-        "소비자(리테일)"
-      ],
-      "peer_chain": [
-        "비비안",
-        "원풍물산",
-        "좋은사람들"
-      ],
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260706",
@@ -27037,6 +27057,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 20.99
+        },
+        {
+          "date": "20260717",
           "change_pct": 20.99
         }
       ]
@@ -27080,8 +27104,8 @@
       "name": "영흥",
       "market": "KOSPI",
       "first_seen": "20260706",
-      "last_seen": "20260716",
-      "consecutive_days": 4,
+      "last_seen": "20260717",
+      "consecutive_days": 5,
       "main_theme": "수급/테마성(단기 수급)",
       "specific_signal": "소수계좌 거래집중 지정(거래집중 지정 → 단기 변동성 확대 및 매매 집중)",
       "trigger_type": "technical",
@@ -27094,7 +27118,7 @@
         "공시 모니터링"
       ],
       "related_stocks": [],
-      "reasoning": "이전 분석 재사용 (최초 20260706, 4일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260706, 5일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -27117,6 +27141,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 10.37
+        },
+        {
+          "date": "20260717",
           "change_pct": 10.37
         }
       ]
@@ -28254,8 +28282,8 @@
       "name": "모나미",
       "market": "KOSPI",
       "first_seen": "20260709",
-      "last_seen": "20260716",
-      "consecutive_days": 5,
+      "last_seen": "20260717",
+      "consecutive_days": 6,
       "main_theme": "수급/테마성",
       "specific_signal": "정치 테마주 매수세에 따른 단기 급등(정치 테마 관련 매수)",
       "trigger_type": "rumor",
@@ -28268,7 +28296,7 @@
         "색조 화장품 ODM"
       ],
       "related_stocks": [],
-      "reasoning": "이전 분석 재사용 (최초 20260709, 5일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260709, 6일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -28295,6 +28323,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 8.27
+        },
+        {
+          "date": "20260717",
           "change_pct": 8.27
         }
       ]
@@ -29590,8 +29622,8 @@
       "name": "모나리자",
       "market": "KOSPI",
       "first_seen": "20260714",
-      "last_seen": "20260716",
-      "consecutive_days": 3,
+      "last_seen": "20260717",
+      "consecutive_days": 4,
       "main_theme": "생활용품/위생용품",
       "specific_signal": "프리미엄 화장지 브랜드 '파세오' 론칭 및 뉴질랜드 진출(신제품 2종 출시)",
       "trigger_type": "disclosure",
@@ -29608,7 +29640,7 @@
         "한솔제지",
         "유한킴벌리"
       ],
-      "reasoning": "이전 분석 재사용 (최초 20260714, 3일째 등장)",
+      "reasoning": "이전 분석 재사용 (최초 20260714, 4일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -29627,6 +29659,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.94
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.94
         }
       ]
@@ -30129,35 +30165,35 @@
       "name": "형지엘리트",
       "market": "KOSPI",
       "first_seen": "20260715",
-      "last_seen": "20260716",
-      "consecutive_days": 2,
-      "main_theme": "수급/테마성(의류·전통 소비재)",
-      "specific_signal": "애국 테마(애국심 관련 수급 쏠림) 및 태화복지재단 사회공헌 보도에 따른 의류·생활용품 섹터 동반 급등",
-      "trigger_type": "rumor",
+      "last_seen": "20260717",
+      "consecutive_days": 3,
+      "main_theme": "수급/테마(패션·섬유)",
+      "specific_signal": "패션·섬유 섹터 동반매수(패션업종 군집 급등)으로 인한 수급 쏠림",
+      "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "의류·생활용품 랠리",
-        "애국 테마 수급",
-        "전통 소비재 재평가",
-        "태화복지재단 사회공헌",
-        "원가 절감·고부가가치 제품 다변화",
-        "의류 테마 매수 쏠림"
+        "수급/테마",
+        "패션·섬유",
+        "투자경고 지정예고",
+        "투자경고 해제 가능성",
+        "패션업체 동반급등"
       ],
       "related_stocks": [
-        "모나리자",
-        "원풍물산"
+        "비비안",
+        "형지I&C"
       ],
-      "reasoning": "D-day 전후로 회사의 공시성 호재는 없고, 7/15~7/16의 다수 보도는 형지엘리트가 태화복지재단의 사회공헌 활동에 참여했다는 기사와 함께 '애국테마주'·'의류 테마주'로 분류된 점을 강조하고 있습니다. 거래대금·수급이 몰리며 테마성 매매로 급등한 것으로 판단되며, 기업 본질(실적·계약)은 확인되지 않습니다.",
+      "reasoning": "최근 보도들은 '패션·섬유·뷰티' 업종 전반의 동반 급등을 지적하고 있으며(형지3사·비비안 등 언급) 회사 고유의 호재성 공시나 계약 기사 등 구체적 재료는 확인되지 않습니다. 따라서 D-day 급등은 특정 공시보다는 섹터·수급 중심의 테마성 매수로 해석됩니다.",
       "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "의류 제조·유통 (교복·제복·학생복)",
+      "industry_chain": "패션·섬유·의류",
       "chain_position": "최종재",
-      "chain_role": "학교복·제복 등 의류 제품의 제조 및 유통",
+      "chain_role": "교복·학생복 등 의류의 제조·유통(패션 리테일 최종재)",
       "upstream": [],
-      "downstream": [],
+      "downstream": [
+        "학교·교육기관",
+        "리테일/유통 채널"
+      ],
       "peer_chain": [
-        "모나리자",
-        "원풍물산",
-        "좋은사람들"
+        "비비안"
       ],
       "history": [
         {
@@ -30166,6 +30202,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 29.86
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.86
         }
       ]
@@ -30459,8 +30499,8 @@
       "name": "핀텔",
       "market": "KOSDAQ",
       "first_seen": "20260715",
-      "last_seen": "20260716",
-      "consecutive_days": 2,
+      "last_seen": "20260717",
+      "consecutive_days": 3,
       "main_theme": "수급/단기 변동성(소형주)",
       "specific_signal": "7.15 코스피 급락에 따른 매도 사이드카 발동·인버스 ETF 급등(2026.07.15)로 인한 소형주 단기 랠리 및 쇼트커버링 — 종목별로는 시가총액 200억원 미만으로 관리종목 지정 우려가 있는 종목의 변동성이 확대",
       "trigger_type": "technical",
@@ -30476,7 +30516,7 @@
         "한미반도체",
         "모나미"
       ],
-      "reasoning": "D-day(7.15) 당일 코스피 급락과 매도 사이드카·인버스 ETF 급등을 다룬 기사가 다수 보도되었고, 같은 날 소형주·테마주 상한가·급등 종목 목록에도 이름이 오르내렸습니다. 핀텔은 '시가총액 200억원 미달→관리종목 지정 우려' 보도가 있어 유통주식수·공매도·쇼트커버 등으로 인한 단기 과열·반등이 발생했을 가능성이 높아 기술적 수급 요인이 주된 원인으로 판단됩니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260715, 3일째 등장)",
       "reason_unknown_category": "",
       "industry_chain": "",
       "chain_position": "",
@@ -30491,6 +30531,10 @@
         },
         {
           "date": "20260716",
+          "change_pct": 16.36
+        },
+        {
+          "date": "20260717",
           "change_pct": 16.36
         }
       ]
@@ -30647,8 +30691,8 @@
       "name": "깨끗한나라",
       "market": "KOSPI",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "생활용품·위생용품",
       "specific_signal": "영구채 발행 통한 자본구조 개선(영구성 자본 확보) — + 기존의 세제·위생용품 라인업 확장(캡슐세제·식기세척기 타블렛 출시)과 공공생리대 지원사업 수혜 기대",
       "trigger_type": "disclosure",
@@ -30664,23 +30708,21 @@
         "모나리자",
         "비비안"
       ],
-      "reasoning": "7월14일 보도된 영구채 발행·자본구조 조정 소식이 단기 신용·재무 안정성 개선 신호로 해석되어 주가에 즉각적 호재로 작용한 것으로 보인다. 이와 함께 7월9일의 캡슐세제·타블렛 출시(시장 다각화) 및 7월3일 공공생리대 지원 시범사업 관련 소식이 수요 측면의 긍정적 기대를 더해 급등을 촉발한 것으로 판단된다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "생활용품·위생용품",
-      "chain_position": "최종재",
-      "chain_role": "휴지·생리대 등 위생용품과 생활세제 등 최종소비재 생산·공급",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "대형마트·e커머스",
-        "공공기관(생리대 지원 등)"
-      ],
-      "peer_chain": [
-        "모나리자",
-        "비비안"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 26.54
+        },
+        {
+          "date": "20260717",
           "change_pct": 26.54
         }
       ]
@@ -30689,8 +30731,8 @@
       "name": "케이뱅크",
       "market": "KOSPI",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "금리·수급(은행주)",
       "specific_signal": "코픽스 상승(1년5개월만 3%대 진입) 및 기준금리 인상 기대에 따른 주담대 변동금리·예금금리 상승 전망으로 인터넷은행·중소은행 이자마진(NIM) 개선 기대",
       "trigger_type": "disclosure",
@@ -30706,22 +30748,21 @@
         "카카오뱅크",
         "토스뱅크"
       ],
-      "reasoning": "D-day 당일 다수 보도가 '코픽스 상승'과 '금리 인상 전야'를 이유로 은행주, 특히 인터넷·중소은행 강세를 지목했으며 케이뱅크도 코픽스 관련 뉴스에서 직접적으로 언급되어 급등했다. 변동금리 상승은 대출 금리 인상으로 이어져 이자이익 개선 기대를 높이는 본질적 시그널이다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "인터넷은행/디지털 금융",
-      "chain_position": "서비스",
-      "chain_role": "인터넷 플랫폼 기반의 예·적금·대출 공급을 통한 이자수익 창출 및 디지털 뱅킹 서비스 제공",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "가계대출(주택담보대출)"
-      ],
-      "peer_chain": [
-        "카카오뱅크",
-        "토스뱅크"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 11.13
+        },
+        {
+          "date": "20260717",
           "change_pct": 11.13
         }
       ]
@@ -30730,8 +30771,8 @@
       "name": "한익스프레스",
       "market": "KOSPI",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "수급(자사주/자기주식)",
       "specific_signal": "9억 원 규모 자사주 취득 결정(2026.07.16) 및 18만2,117주 자기주식 소각(2026.07.02)",
       "trigger_type": "disclosure",
@@ -30747,23 +30788,21 @@
         "현대글로비스",
         "CJ대한통운"
       ],
-      "reasoning": "공시로 9억 원 규모 자사주 취득을 발표한 점이 즉각적 수급 개선(유통주식수 축소)과 주주환원 기대를 불러와 주가를 끌어올린 것으로 판단된다. 이전에 이미 18만여 주 소각을 공시한 이력이 있어 시장에서 실효성 있는 밸류업 신호로 해석되었을 가능성이 크다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "항공화물운송/종합물류",
-      "chain_position": "서비스",
-      "chain_role": "항공·해상 화물 운송 및 종합 물류 서비스 제공",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "전자·자동차 제조업체",
-        "이커머스 리테일러"
-      ],
-      "peer_chain": [
-        "현대글로비스",
-        "CJ대한통운"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 10.14
+        },
+        {
+          "date": "20260717",
           "change_pct": 10.14
         }
       ]
@@ -30772,8 +30811,8 @@
       "name": "롯데렌탈",
       "market": "KOSPI",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "모빌리티 서비스/렌터카",
       "specific_signal": "코웨이와 멤버십 기반 서비스 제휴(신차 장기렌터카 이용 시 3.5% 캐시백 등 멤버스 혜택 확대)",
       "trigger_type": "contract",
@@ -30790,26 +30829,21 @@
         "코웨이",
         "AJ네트웍스"
       ],
-      "reasoning": "D-day(7.16) 오전에 코웨이와의 서비스 제휴 보도가 집중되며 멤버십 연계를 통한 수요 확대(장기렌터카 이용자 혜택·차량관리 서비스 연계)가 즉각적 수요·구독 확대 기대를 자극해 주가를 끌어올린 것으로 판단된다. 기존에 제기된 사모펀드 인수 추진·재평가 기대 뉴스가 투자심리를 보강한 점도 상승을 확대했을 가능성이 있다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "모빌리티 서비스/렌터카",
-      "chain_position": "서비스",
-      "chain_role": "장기렌터카 및 차량관리 서비스를 멤버십과 연계해 고객 유치·구독 확대",
-      "upstream": [
-        "현대자동차",
-        "기아"
-      ],
-      "downstream": [
-        "개인 렌터카 이용자",
-        "기업(법인) 장기렌터카 고객"
-      ],
-      "peer_chain": [
-        "AJ네트웍스",
-        "현대글로비스"
-      ],
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 8.09
+        },
+        {
+          "date": "20260717",
           "change_pct": 8.09
         }
       ]
@@ -30818,8 +30852,8 @@
       "name": "화승엔터프라이즈",
       "market": "KOSPI",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "수급/테마",
       "specific_signal": "내수 방어주(패션·의류)로의 자금 유입 — 의류 테마주의 동반 강세",
       "trigger_type": "rumor",
@@ -30836,21 +30870,21 @@
         "좋은사람들",
         "비비안"
       ],
-      "reasoning": "코스피 약세 속에서 '식음료·패션 등 내수업종 선방'이라는 기사에 네이버금융이 종목을 태깅하며 패션·의류 섹터로의 자금 유입이 확인됩니다. 복수의 검색 기사도 의류·섬유 업종의 재평가·테마성 자금 유입을 지적하고 있어, 화승엔터프라이즈의 상승은 섹터 수급·테마에 의한 것으로 판단됩니다. 다만 회사 고유의 공시·수주 등 직접 호재는 확인되지 않아 확신은 중간 수준입니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "패션·의류",
-      "chain_position": "유통/판매",
-      "chain_role": "의류·패션 제품의 유통·판매 및 브랜드 운영(테마성 수급에 민감)",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "원풍물산",
-        "좋은사람들",
-        "비비안"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 7.24
+        },
+        {
+          "date": "20260717",
           "change_pct": 7.24
         }
       ]
@@ -30859,31 +30893,36 @@
       "name": "삼영무역",
       "market": "KOSPI",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
-      "main_theme": "수급/테마",
+      "last_seen": "20260717",
+      "consecutive_days": 2,
+      "main_theme": "수급",
       "specific_signal": "",
       "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "수급(개미·프로그램) 급증",
-        "고배당주 편입",
-        "화학 유통/무역",
-        "수출입 물량 확대",
-        "유통계약 재체결"
+        "수급",
+        "무역/물류",
+        "환율(원/달러)",
+        "대량보유보고서",
+        "블록딜/시간외대량",
+        "단기 과열거래"
       ],
       "related_stocks": [],
-      "reasoning": "제공된 14일치 뉴스에서는 삼영무역을 직접적으로 지목한 공시·수주·실적·정책성 기사가 확인되지 않습니다. 검색 결과들은 화학업계 브랜드 평판, 고배당주 목록 등 일반 기사로 보이며 종목과의 연결 근거가 약해, 이번 +7% 급등은 개별 수급(매수창구·프로그램·개인 매수) 또는 테마성 매매·기술적 반등 가능성이 큽니다. 단, 명확한 공시나 보도가 없어 원인 확인은 불가능합니다.",
-      "reason_unknown_category": "weak_name_link",
-      "industry_chain": "화학 유통/무역",
+      "reasoning": "최근 14일 내 종목 태그·일반 뉴스가 전혀 확인되지 않아(공시·보도성 이슈 부재) 상승 원인을 특정하기 어렵습니다. 거래량(35,146주)이 폭발적으로 증가한 수준은 아니어서 대형 공시성 호재보다는 단기 기관·개인 매수, 소규모 블록딜·시간외 거래, 혹은 테마·수급성 쪽에서 움직인 것으로 추정됩니다.",
+      "reason_unknown_category": "no_news_in_window",
+      "industry_chain": "무역/유통",
       "chain_position": "유통/판매",
-      "chain_role": "화학 원부자재의 해외 조달 및 국내 유통 중개",
+      "chain_role": "수입·수출 상품의 매매 및 국내 유통 중개",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 7.02
+        },
+        {
+          "date": "20260717",
           "change_pct": 7.02
         }
       ]
@@ -30892,8 +30931,8 @@
       "name": "제일파마홀딩스",
       "market": "KOSPI",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "바이오·제약",
       "specific_signal": "한상철 대표 지분변동·경영 보폭 확대(승계 관련 보도·지배구조 이슈)",
       "trigger_type": "disclosure",
@@ -30909,20 +30948,21 @@
         "제일약품",
         "온코닉테라퓨틱스"
       ],
-      "reasoning": "7월 초(7/10) 보도에서 한상철 대표의 지분 변화와 승계 관련 논의가 제기되며 지배구조 개선·경영 의지 강화 신호로 해석될 수 있습니다. 낮은 유동성 종목 특성상 그런 지배구조·지분 이슈가 투자심리를 자극해 7/16 단기 급등을 촉발했을 가능성이 높습니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "바이오·제약",
-      "chain_position": "지주사",
-      "chain_role": "계열사 지분 보유를 통한 경영 관리·투자·승계 관여",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "한미사이언스",
-        "녹십자홀딩스"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 6.74
+        },
+        {
+          "date": "20260717",
           "change_pct": 6.74
         }
       ]
@@ -30931,27 +30971,27 @@
       "name": "멤레이비티",
       "market": "KOSDAQ",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
-      "main_theme": "수급/테마성",
-      "specific_signal": "애국 관련 테마·단기 수급 쏠림에 따른 급등(단기 이슈성 매수)",
+      "last_seen": "20260717",
+      "consecutive_days": 2,
+      "main_theme": "수급(테마성)",
+      "specific_signal": "단기 수급·테마성 매수로 인한 상한가(회사 공시·사업 호재 미확인)",
       "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "수급 쏠림",
-        "인버스 ETF 급등",
-        "개별종목 급등락",
-        "상한가 단기 급등",
-        "외국인·기관 매매"
+        "수급·동시호가",
+        "테마랠리(종목군별 급등)",
+        "공시(사업·계약)",
+        "대주주 지분변동",
+        "대량매매/블록딜"
       ],
       "related_stocks": [
-        "형지엘리트",
         "모나리자",
-        "동일스틸럭스"
+        "비비안",
+        "삼익제약"
       ],
-      "reasoning": "제공된 14일 내 기사들은 대부분 코스피 급락, 인버스 ETF 급등, 애국 테마주 수급 쏠림 등 시장·수급성 헤드라인에 그치며 멤레이비티 자체의 공시·계약·실적 관련 핵심 단서는 발견되지 않습니다. 따라서 이날의 +30% 급등은 회사 고유 호재보다는 테마·수급성 매수(단기 추격 매수·상한가 군집) 또는 변동성 확대로 인한 가격 왜곡일 가능성이 큽니다.",
+      "reasoning": "제공된 14일 내 기사 중 멤레이비티를 직접적으로 설명하는 회사 공시·계약·실적 기사는 발견되지 않았고, 해당 기사도 여러 종목의 상한가를 나열하는 시장 요약성 기사로 보입니다. 따라서 이날 급등은 개별 호재보다는 동시호가·단기 수급 집중·테마성 매매에 따른 것으로 판단됩니다. 관련 구체 근거가 없어 확신도가 낮습니다.",
       "reason_unknown_category": "headline_only_generic",
-      "industry_chain": "",
+      "industry_chain": "기타",
       "chain_position": "기타",
       "chain_role": "",
       "upstream": [],
@@ -30961,6 +31001,10 @@
         {
           "date": "20260716",
           "change_pct": 30.0
+        },
+        {
+          "date": "20260717",
+          "change_pct": 30.0
         }
       ]
     },
@@ -30968,34 +31012,39 @@
       "name": "손오공",
       "market": "KOSDAQ",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
-      "main_theme": "소비재/캐릭터·완구",
-      "specific_signal": "백화점 팝업스토어 개설(치타부 팝업 — 현대백화점 판교 전개)",
+      "last_seen": "20260717",
+      "consecutive_days": 2,
+      "main_theme": "수급/테마성 매매",
+      "specific_signal": "",
       "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "캐릭터 라이선스",
-        "팝업스토어 유통",
-        "치타부 팝업",
-        "현대백화점 판교",
-        "백화점 완구 판매"
+        "수급 쏠림",
+        "상한가 랠리",
+        "완구·캐릭터",
+        "라이선스 계약",
+        "유통 채널 입점",
+        "프로모션 이벤트"
       ],
-      "related_stocks": [],
-      "reasoning": "당일·전일 보도에서 '치타부'라는 인기 토종 캐릭터의 판교 현대백화점 팝업스토어 소식이 집중 보도되며 캐릭터·완구 관련 종목에 수급 쏠림이 발생한 것으로 판단된다. 다만 제공된 기사 목록은 일반 소비재·캐릭터 기사로 회사(종목)와의 직접 연결점이 명시되지 않아, 종목 급등의 직접적 원인으로 확정하기는 어렵다.",
-      "reason_unknown_category": "weak_name_link",
-      "industry_chain": "캐릭터·완구 라이선스 및 유통",
-      "chain_position": "유통/판매",
-      "chain_role": "캐릭터 상품의 유통·프로모션(팝업스토어 전개 등) 역할",
+      "related_stocks": [
+        "모나리자",
+        "비비안"
+      ],
+      "reasoning": "등락 +29.98%에 거래량이 급증했으나 14일 창 내에 종목 태그된 공시나 구체적 호재 기사가 없어 개별 호재보다 단기 수급·테마성 매수로 보입니다. 제공된 유일한 뉴스도 ‘상한가 종목’ 목록에 이름을 올린 단문성 보도로, 직접적 원인 설명이 없어 확정적 트리거를 특정하기 어렵습니다.",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "완구·캐릭터 유통 및 라이선스",
+      "chain_position": "최종재",
+      "chain_role": "완구 및 캐릭터 상품의 개발·제조·유통(완제품 판매)",
       "upstream": [],
-      "downstream": [
-        "백화점 유통사",
-        "일반 소비자"
-      ],
+      "downstream": [],
       "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 29.98
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.98
         }
       ]
@@ -31004,8 +31053,8 @@
       "name": "진영",
       "market": "KOSDAQ",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "수급/공시",
       "specific_signal": "5억원 규모 제3자배정 유상증자 결정(신주 발행을 통한 소액 자금조달)",
       "trigger_type": "disclosure",
@@ -31018,17 +31067,21 @@
         "주식수급"
       ],
       "related_stocks": [],
-      "reasoning": "D-day 당일(2026.07.16) 종목 태그 기사로 '5억 규모 제3자배정 유상증자 결정' 공시가 나왔고, 소액 유상증자 발표 직후 거래량이 급증하며 주가가 크게 올랐습니다. 시장은 신규 투자자 유입·유동성 개선 또는 지분구조 변화 가능성을 즉각적인 촉매로 해석한 것으로 보입니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "기업공시/자금조달",
-      "chain_position": "기타",
-      "chain_role": "단기 운영자금 확보를 위한 소액 신주발행(제3자배정)",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 29.96
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.96
         }
       ]
@@ -31037,8 +31090,8 @@
       "name": "형지글로벌",
       "market": "KOSDAQ",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "섬유·패션·의류",
       "specific_signal": "국산 소재 사용 확대 및 대구 사무소 개소(국내 원단·봉제 공정 강화)",
       "trigger_type": "disclosure",
@@ -31055,21 +31108,21 @@
         "비비안",
         "모나리자"
       ],
-      "reasoning": "회사(패션그룹형지)가 7월 13일 대구 사무소 개소와 '메이드 인 코리아' 확대, 국내 원단·봉제 완결 전략을 공시성 기사로 알리며 투자심리를 자극한 것으로 보인다. 이후 7월 15일 섬유·패션 업종 재평가·애국(국산) 테마에 수급이 집중됐고, 이 흐름이 7월 16일 급등으로 이어진 것으로 판단된다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "패션·의류 제조/브랜드",
-      "chain_position": "조립/제조",
-      "chain_role": "원단·봉제 기반 의류 제조를 국내에서 완결해 '메이드 인 코리아' 비중 확대",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "비비안",
-        "형지엘리트",
-        "모나리자"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 29.9
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.9
         }
       ]
@@ -31078,41 +31131,39 @@
       "name": "PN풍년",
       "market": "KOSDAQ",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
-      "main_theme": "수급/테마 (전통 소비재)",
-      "specific_signal": "애국테마주·전통 소비재 쏠림에 따른 단기 수급 집중 (회사 측 공시·계약 등 구체 호재 없음)",
+      "last_seen": "20260717",
+      "consecutive_days": 2,
+      "main_theme": "수급/테마(리테일·생활용품)",
+      "specific_signal": "",
       "trigger_type": "unknown",
       "confidence": "low",
       "watch_keywords": [
-        "애국테마주",
-        "전통 소비재",
-        "수급 쏠림",
-        "주방용품 수요",
-        "리오프닝 소비",
-        "데일리 생활용품"
+        "수급/상한가",
+        "생활용품·주방용품",
+        "유통/홈쇼핑",
+        "거래량 급증",
+        "상한가 연속"
       ],
       "related_stocks": [
         "모나리자",
-        "형지엘리트"
+        "비비안",
+        "손오공"
       ],
-      "reasoning": "당일 보도들은 '애국테마주', '전통 소비재' 급등·수급 쏠림을 지목하고 있으며 PN풍년은 주방·생활용품 제조업체로 테마성 매수의 수혜로 보입니다. 회사 공시·실적·수주 등 구체적 본질적 호재는 확인되지 않아 단순 테마·수급 중심의 급등으로 판단됩니다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "전통 소비재 (주방용품/생활용품)",
+      "reasoning": "14일 내 확인된 관련 기사에는 종목 태그·회사 특정 호재가 없고, 다수 종목의 상한가를 나열하는 일반 뉴스만 존재합니다. 따라서 PN풍년의 급등(+29.81%)은 개별 호재보다는 단기적 수급·테마성 매매(상한가 연속/거래량 급증)에 따른 것으로 판단됩니다.",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "생활용품/주방용품",
       "chain_position": "최종재",
-      "chain_role": "주방용품·생활용품의 제조 및 소매 공급",
+      "chain_role": "주방용 조리기구의 제조 및 유통(소비자 최종재)",
       "upstream": [],
-      "downstream": [
-        "대형마트/온라인 유통",
-        "일반 소비자(가정용)"
-      ],
-      "peer_chain": [
-        "모나리자",
-        "형지엘리트"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 29.81
+        },
+        {
+          "date": "20260717",
           "change_pct": 29.81
         }
       ]
@@ -31121,8 +31172,8 @@
       "name": "웹스",
       "market": "KOSDAQ",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "수급(자사주 매입)",
       "specific_signal": "자사주 매수(매입) 창 개시 포함 — 언론의 '자사주 매수 새 창 열림' 리스트에 웹스 포함 보도",
       "trigger_type": "disclosure",
@@ -31139,20 +31190,21 @@
         "엑셈",
         "엑사이엔씨"
       ],
-      "reasoning": "7/14~7/15 보도에서 웹스가 '자사주 매수 창 열림' 대상 목록에 포함된 것으로 보도되었고(기사들이 7/15~16일 자사주 관련 목록 제공), 이는 단기적으로 유동성·수급 개선 기대를 불러와 D-day에 급등·거래량 증가를 촉발했을 가능성이 큽니다. 같은 기간에 웹스 관련한 별도 사업·공시성 호재는 확인되지 않아 수급(자사주) 이슈가 표면적 트리거로 판단됩니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "기업재무/수급(자사주)",
-      "chain_position": "기타",
-      "chain_role": "자사주 매입에 따른 단기 수급 개선(시장 유동성 영향)",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "엑셈",
-        "엑사이엔씨"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 20.56
+        },
+        {
+          "date": "20260717",
           "change_pct": 20.56
         }
       ]
@@ -31161,8 +31213,8 @@
       "name": "온코닉테라퓨틱스",
       "market": "KOSDAQ",
       "first_seen": "20260716",
-      "last_seen": "20260716",
-      "consecutive_days": 1,
+      "last_seen": "20260717",
+      "consecutive_days": 2,
       "main_theme": "바이오",
       "specific_signal": "네수파립(PARP/TNKS 계열) 전임상서 PTEN 결핍 자궁내막암 유효성 확인 및 국제학술지(SCI) 게재",
       "trigger_type": "disclosure",
@@ -31178,19 +31230,21 @@
       "related_stocks": [
         "프로티나"
       ],
-      "reasoning": "D-day에 다수의 종목 태그 기사들이 회사 발표를 인용해 네수파립의 PTEN 결핍 자궁내막암 비임상 효능과 국제학술지 게재를 보도했고(시장성이 큰 자궁내막암 언급 포함), 전일에는 프로티나와의 공동연구 뉴스와 자큐보 병용 안전성 근거 보도가 이어져 투자심리를 자극했기 때문에 급등한 것으로 판단됩니다. 학술지 게재·비임상 효능 확인은 임상 진입 가능성·사업화 기대를 높이는 본질적 모멘텀입니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260716, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "바이오(항암신약 개발)",
-      "chain_position": "최종재",
-      "chain_role": "PARP/TNKS 이중억제제 '네수파립' 전임상 개발로 임상 진입 전 모멘텀 확보",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "프로티나"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260716",
+          "change_pct": 20.33
+        },
+        {
+          "date": "20260717",
           "change_pct": 20.33
         }
       ]
