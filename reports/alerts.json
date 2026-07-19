@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-19T17:41:16",
-  "total": 351,
+  "generated_at": "2026-07-19T19:14:20",
+  "total": 349,
   "new_today": 0,
   "alerts": [
     {
@@ -6367,44 +6367,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "바이오",
       "matched_at": "2026-06-22T14:28:53"
-    },
-    {
-      "ticker": "200470",
-      "name": "에이팩트",
-      "sosok": "",
-      "report_name": "[기재정정]최대주주변경을수반하는주식양수도계약체결",
-      "submitter": "에이팩트",
-      "submitted_at": "2026.06.19",
-      "time": "17:15",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260619900952",
-      "rcp_no": "20260619900952",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 11120,
-      "today_change_pct": 8.33,
-      "signal_last_seen": "20260609",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급/재무(전환사채·경영권 변경) 및 반도체 공급망 기대",
-      "matched_at": "2026-06-19T18:57:42"
-    },
-    {
-      "ticker": "295310",
-      "name": "에이치브이엠",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "에이치브이엠",
-      "submitted_at": "2026.06.19",
-      "time": "14:51",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260619900580",
-      "rcp_no": "20260619900580",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 65800,
-      "today_change_pct": 10.96,
-      "signal_last_seen": "20260518",
-      "signal_confidence": "medium",
-      "signal_main_theme": "우주항공/국가(민간) 우주사업 수혜",
-      "matched_at": "2026-06-19T18:57:42"
     },
     {
       "ticker": "309930",
