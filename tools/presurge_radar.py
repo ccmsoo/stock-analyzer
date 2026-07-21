@@ -180,6 +180,12 @@ def main():
             s["stale_catalyst"] = False
             s["chart_ok"] = True
 
+    # 촉매 유형/문구 분류 — UI가 track_record.json의 유형별 실적과 조인
+    from tools.catalyst_events import cat_of, wording
+    for s in scored:
+        s["cat"] = cat_of(s.get("keyword"))
+        s["wording"] = wording(s)
+
     # 유동성 하한 — 못 빠져나오는 초저유동만 제외 (우량주 필터 아님)
     min_val = args.min_value * 1e8
     scored = [s for s in scored if s.get("value_traded") is None or s["value_traded"] >= min_val]

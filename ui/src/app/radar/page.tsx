@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { loadRadar } from "@/lib/data";
-import type { RadarCandidate } from "@/lib/data";
+import { loadRadar, loadTrackRecord } from "@/lib/data";
+import type { RadarCandidate, TrackRecord } from "@/lib/data";
 import { formatPrice, formatPct, formatDate, priceColorClass } from "@/lib/format";
 
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
 
 export default async function RadarPage() {
-  const radar = await loadRadar();
+  const [radar, track] = await Promise.all([loadRadar(), loadTrackRecord()]);
   const cands = radar.candidates || [];
   const has = cands.length > 0;
 
@@ -46,7 +46,7 @@ export default async function RadarPage() {
             ) : (
               <div className="space-y-2">
                 {cands.slice(0, 20).map((c, i) => (
-                  <CatalystRow key={c.ticker} c={c} rank={i + 1} />
+                  <CatalystRow key={c.ticker} c={c} rank={i + 1} track={track} />
                 ))}
               </div>
             )}
@@ -62,7 +62,9 @@ export default async function RadarPage() {
   );
 }
 
-function CatalystRow({ c, rank }: { c: RadarCandidate; rank: number }) {
+function CatalystRow({ c, rank, track }: { c: RadarCandidate; rank: number; track: TrackRecord | null }) {
+  const t = c.cat ? track?.types?.[c.cat] : undefined;
+  const d7 = t?.d7?.alpha;
   return (
     <Link
       href={`/signals/${c.ticker}`}
@@ -73,7 +75,16 @@ function CatalystRow({ c, rank }: { c: RadarCandidate; rank: number }) {
           <span className="w-5 shrink-0 text-xs text-muted-foreground tabular">{rank}</span>
           <span className="truncate font-medium">{c.name}</span>
           <span className="shrink-0 text-[11px] text-muted-foreground tabular">{c.ticker}</span>
-          {!c.chart_ok && (
+          {c.cat && (
+            <span className="shrink-0 rounded border border-border px-1 text-[10px] text-muted-foreground">
+              {c.cat}
+              {c.wording === "확정형" && <span className="text-emerald-400"> 확정</span>}
+            </span>
+          )}
+          {c.stale_catalyst && (
+            <span className="shrink-0 rounded border border-red-400/40 px-1 text-[10px] text-red-400">급등후</span>
+          )}
+          {!c.chart_ok && !c.stale_catalyst && (
             <span className="shrink-0 rounded border border-amber-400/40 px-1 text-[10px] text-amber-400">과열</span>
           )}
         </span>
@@ -89,6 +100,14 @@ function CatalystRow({ c, rank }: { c: RadarCandidate; rank: number }) {
         {c.chg5 != null && <span className="text-muted-foreground">5일 {formatPct(c.chg5, { sign: true })}</span>}
         {c.from_high != null && <span className="text-muted-foreground">고점 {formatPct(c.from_high, { sign: true })}</span>}
         {c.price != null && <span className="text-muted-foreground">{formatPrice(c.price)}원</span>}
+        {d7 && (
+          <span className="text-muted-foreground/80">
+            이 유형 과거 {t!.n_events}건 · D+7 알파{" "}
+            <span className={d7.avg > 0 ? "text-emerald-400" : "text-red-400"}>
+              {d7.avg > 0 ? "+" : ""}{d7.avg.toFixed(1)}%/{d7.win}%
+            </span>
+          </span>
+        )}
       </div>
     </Link>
   );

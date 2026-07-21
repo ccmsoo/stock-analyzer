@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 const NAV = [
   { href: "/", label: "매수 후보" },
   { href: "/radar", label: "레이더" },
+  { href: "/track", label: "성적표" },
   { href: "/opportunities", label: "오르기 전" },
   { href: "/themes", label: "테마" },
   { href: "/chains", label: "밸류체인" },

@@ -17,7 +17,9 @@
    "value_traded": 84537653760.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "수주",
+   "wording": "혼합"
   },
   {
    "ticker": "008060",
@@ -34,7 +36,9 @@
    "value_traded": 1380115469.5,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "투자/증설",
+   "wording": "혼합"
   },
   {
    "ticker": "089030",
@@ -51,7 +55,9 @@
    "value_traded": 85604623650.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "수주",
+   "wording": "기대형"
   },
   {
    "ticker": "458870",
@@ -68,7 +74,9 @@
    "value_traded": 8631125360.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "임상/FDA",
+   "wording": "확정형"
   },
   {
    "ticker": "067310",
@@ -85,7 +93,9 @@
    "value_traded": 85389033652.5,
    "max_spike3": 2.5,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "실적",
+   "wording": "기대형"
   },
   {
    "ticker": "100790",
@@ -102,7 +112,9 @@
    "value_traded": 8153068770.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "기대형"
   },
   {
    "ticker": "000500",
@@ -119,7 +131,9 @@
    "value_traded": 36482863920.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기술수출",
+   "wording": "혼합"
   },
   {
    "ticker": "115450",
@@ -136,7 +150,9 @@
    "value_traded": 1265174432.5,
    "max_spike3": 11.9,
    "stale_catalyst": false,
-   "chart_ok": false
+   "chart_ok": false,
+   "cat": "기타",
+   "wording": "확정형"
   },
   {
    "ticker": "047920",
@@ -153,7 +169,9 @@
    "value_traded": 2238182206.0,
    "max_spike3": 9.2,
    "stale_catalyst": false,
-   "chart_ok": false
+   "chart_ok": false,
+   "cat": "임상/FDA",
+   "wording": "기대형"
   },
   {
    "ticker": "067630",
@@ -170,7 +188,9 @@
    "value_traded": 1272941599.25,
    "max_spike3": 2.4,
    "stale_catalyst": false,
-   "chart_ok": false
+   "chart_ok": false,
+   "cat": "임상/FDA",
+   "wording": "기대형"
   },
   {
    "ticker": "046210",
@@ -187,7 +207,9 @@
    "value_traded": 714581450.0,
    "max_spike3": 8.5,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "임상/FDA",
+   "wording": "기대형"
   },
   {
    "ticker": "003230",
@@ -204,7 +226,9 @@
    "value_traded": 53345373950.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기술수출",
+   "wording": "기대형"
   },
   {
    "ticker": "195870",
@@ -221,7 +245,9 @@
    "value_traded": 11335444725.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "수주",
+   "wording": "기대형"
   },
   {
    "ticker": "065770",
@@ -238,7 +264,9 @@
    "value_traded": 1957443149.9999998,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "M&A",
+   "wording": "혼합"
   },
   {
    "ticker": "347850",
@@ -255,7 +283,9 @@
    "value_traded": 97492772390.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "기대형"
   },
   {
    "ticker": "010060",
@@ -272,7 +302,9 @@
    "value_traded": 40320049070.0,
    "max_spike3": 2.8,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "실적",
+   "wording": "기대형"
   },
   {
    "ticker": "102460",
@@ -289,7 +321,9 @@
    "value_traded": 579443060.0,
    "max_spike3": 0.5,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "임상/FDA",
+   "wording": "기대형"
   },
   {
    "ticker": "004170",
@@ -306,7 +340,9 @@
    "value_traded": 47892456450.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "기대형"
   },
   {
    "ticker": "042700",
@@ -323,7 +359,9 @@
    "value_traded": 229086251100.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "투자/증설",
+   "wording": "기대형"
   },
   {
    "ticker": "018260",
@@ -340,7 +378,9 @@
    "value_traded": 68305458910.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "혼합"
   },
   {
    "ticker": "192650",
@@ -357,7 +397,9 @@
    "value_traded": 1863744178.5,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "투자/증설",
+   "wording": "기대형"
   },
   {
    "ticker": "028300",
@@ -374,7 +416,9 @@
    "value_traded": 38206089707.5,
    "max_spike3": 6.2,
    "stale_catalyst": false,
-   "chart_ok": false
+   "chart_ok": false,
+   "cat": "임상/FDA",
+   "wording": "기대형"
   },
   {
    "ticker": "096770",
@@ -391,7 +435,9 @@
    "value_traded": 72902292120.0,
    "max_spike3": 3.8,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "기대형"
   },
   {
    "ticker": "397030",
@@ -408,7 +454,9 @@
    "value_traded": 8859080115.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "M&A",
+   "wording": "혼합"
   },
   {
    "ticker": "278470",
@@ -425,7 +473,9 @@
    "value_traded": 100140524775.0,
    "max_spike3": 1.9,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "기대형"
   },
   {
    "ticker": "092040",
@@ -442,7 +492,9 @@
    "value_traded": 1265525420.8000002,
    "max_spike3": 1.3,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "혼합"
   },
   {
    "ticker": "024850",
@@ -459,7 +511,9 @@
    "value_traded": 2981695746.5,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "기대형"
   },
   {
    "ticker": "194700",
@@ -476,7 +530,9 @@
    "value_traded": 1378774683.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "기대형"
   },
   {
    "ticker": "027360",
@@ -493,7 +549,9 @@
    "value_traded": 5633327411.25,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "투자/증설",
+   "wording": "기대형"
   },
   {
    "ticker": "000400",
@@ -510,7 +568,9 @@
    "value_traded": 3486831257.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "M&A",
+   "wording": "기대형"
   },
   {
    "ticker": "108490",
@@ -527,7 +587,9 @@
    "value_traded": 30401123220.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "투자/증설",
+   "wording": "기대형"
   },
   {
    "ticker": "388720",
@@ -544,7 +606,9 @@
    "value_traded": 2280754750.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "혼합"
   },
   {
    "ticker": "036570",
@@ -561,7 +625,9 @@
    "value_traded": 20577837975.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "확정형"
   },
   {
    "ticker": "006400",
@@ -578,7 +644,9 @@
    "value_traded": 220075055600.0,
    "max_spike3": 0.0,
    "stale_catalyst": false,
-   "chart_ok": true
+   "chart_ok": true,
+   "cat": "기타",
+   "wording": "혼합"
   },
   {
    "ticker": "003580",
@@ -595,7 +663,9 @@
    "value_traded": 692007542.85,
    "max_spike3": 8.9,
    "stale_catalyst": false,
-   "chart_ok": false
+   "chart_ok": false,
+   "cat": "기타",
+   "wording": "혼합"
   },
   {
    "ticker": "187420",
@@ -612,7 +682,9 @@
    "value_traded": 505785019.99999994,
    "max_spike3": 3.5,
    "stale_catalyst": false,
-   "chart_ok": false
+   "chart_ok": false,
+   "cat": "임상/FDA",
+   "wording": "기대형"
   }
  ]
 }

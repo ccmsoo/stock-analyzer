@@ -215,6 +215,13 @@ export interface RadarCandidate {
   from_high: number | null;
   chart_ok: boolean;
   price: number | null;
+  /** 촉매 유형(수주/M&A/국책…) — track_record.types 와 조인 */
+  cat?: string;
+  /** 확정형/기대형/혼합 — 기사 문구 분류 */
+  wording?: string;
+  /** 최근 5거래일 내 +12%↑ 급등(촉매 이미 발화) */
+  stale_catalyst?: boolean;
+  max_spike3?: number | null;
 }
 export interface RadarRerise {
   ticker: string;
@@ -237,6 +244,36 @@ export async function loadRadar(): Promise<RadarData> {
     candidates: [],
     rerise: [],
   });
+}
+
+/** reports/track_record.json — 포워드 장부 성적표 (cron 생성, build_track_record) */
+export interface TRStat {
+  n: number;
+  avg: number;
+  win: number;
+}
+export interface TRPair {
+  abs: TRStat | null;
+  alpha: TRStat | null;
+}
+export interface TrackRecord {
+  generated_at: string;
+  since: string | null;
+  n_picks: number;
+  n_events: number;
+  /** 보유일("1"|"3"|"5"|"7") → 픽 단위 성적 */
+  overall: Record<string, TRPair>;
+  /** 보유일 → 촉매 이벤트 단위(첫날 진입) 성적 */
+  events_overall: Record<string, TRPair>;
+  weekly: Array<{ week: string } & TRPair>;
+  /** 촉매 유형 → { d3, d7, n_events } (이벤트 단위) */
+  types: Record<string, { d3: TRPair; d7: TRPair; n_events: number }>;
+  wording: Record<string, TRPair>;
+  scenarios: Array<{ name: string; desc: string } & TRPair>;
+}
+
+export async function loadTrackRecord(): Promise<TrackRecord | null> {
+  return readJson<TrackRecord | null>("reports/track_record.json", null);
 }
 
 export { ROOT, REPORTS_DIR };
