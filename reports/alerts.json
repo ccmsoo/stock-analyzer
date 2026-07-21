@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-21T10:06:38",
-  "total": 362,
-  "new_today": 0,
+  "generated_at": "2026-07-21T13:29:28",
+  "total": 363,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "133820",
+      "name": "화인베스틸",
+      "sosok": "",
+      "report_name": "영업(잠정)실적(공정공시)",
+      "submitter": "화인베스틸",
+      "submitted_at": "2026.07.21",
+      "time": "11:07",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260721800174",
+      "rcp_no": "20260721800174",
+      "category": "실적",
+      "score": 75,
+      "current_price": 1167,
+      "today_change_pct": 6.97,
+      "signal_last_seen": "20260720",
+      "signal_confidence": "medium",
+      "signal_main_theme": "철강",
+      "matched_at": "2026-07-21T13:29:28"
+    },
     {
       "ticker": "065420",
       "name": "에스아이리소스",
