@@ -270,6 +270,15 @@ export interface TrackRecord {
   types: Record<string, { d3: TRPair; d7: TRPair; n_events: number }>;
   wording: Record<string, TRPair>;
   scenarios: Array<{ name: string; desc: string } & TRPair>;
+  /** 가상계좌 — 시작 1,000만원, 매일 픽 균등투자(3일 보유) 근사 */
+  sim?: {
+    start: number;
+    daily: Array<{ date: string; n: number; ret: number; value: number; alpha_value: number }>;
+    final: number;
+    final_alpha: number;
+    total_ret: number;
+    total_alpha: number;
+  };
 }
 
 export async function loadTrackRecord(): Promise<TrackRecord | null> {

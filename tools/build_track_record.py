@@ -161,6 +161,29 @@ def main() -> None:
     dip = [x for x in (_score(r, 1, px, idxs) for r in dip_rows) if x]
     scenarios[-1].update(_pair(dip))
 
+    # 가상계좌 시뮬 — 시작 1,000만원, 자본 3분할(보유 3일 = 매일 1/3 회전).
+    # 하루 코호트의 평균수익 r 이 자본의 1/3 에만 적용되는 슬리브 모델(과대계상 방지).
+    START = 10_000_000
+    HOLD_SLEEVES = 3
+    by_date: dict[str, list] = {}
+    for x in picks[3]:
+        by_date.setdefault(x["date"], []).append(x)
+    sim_daily = []
+    v, va = float(START), float(START)
+    for d in sorted(by_date):
+        xs = by_date[d]
+        r = sum(x["ret"] for x in xs) / len(xs) / 100
+        al = [x["alpha"] for x in xs if x["alpha"] is not None]
+        a = (sum(al) / len(al) / 100) if al else 0.0
+        v *= 1 + r / HOLD_SLEEVES
+        va *= 1 + a / HOLD_SLEEVES
+        sim_daily.append({"date": d, "n": len(xs), "ret": round(r * 100, 2),
+                          "value": round(v), "alpha_value": round(va)})
+    sim = {"start": START, "daily": sim_daily,
+           "final": round(v), "final_alpha": round(va),
+           "total_ret": round((v / START - 1) * 100, 1),
+           "total_alpha": round((va / START - 1) * 100, 1)}
+
     out = {
         "generated_at": datetime.datetime.now().isoformat(timespec="seconds"),
         "since": min((r["date"] for r in rows), default=None),
@@ -172,6 +195,7 @@ def main() -> None:
         "wording": {w: _pair([x for x in evs[3] if x["wording"] == w])
                     for w in ("확정형", "기대형", "혼합")},
         "scenarios": scenarios,
+        "sim": sim,
     }
     dest = ROOT / "reports" / "track_record.json"
     json.dump(out, open(dest, "w"), ensure_ascii=False, indent=1)

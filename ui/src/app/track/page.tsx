@@ -45,6 +45,38 @@ export default async function TrackPage() {
         </p>
       </header>
 
+      {/* 가상계좌 시뮬레이션 */}
+      {tr.sim && tr.sim.daily.length > 1 && (
+        <Section
+          title="가상계좌 시뮬레이션"
+          sub="시작 1,000만원 · 자본 3분할, 매일 그날 픽 균등 매수(다음날 시초·3일 보유·손절 −10%)"
+        >
+          <div className="rounded-md border border-border p-4">
+            <div className="flex flex-wrap items-baseline justify-between gap-3">
+              <div>
+                <div className="text-xs text-muted-foreground">그대로 따라했다면 (절대)</div>
+                <div className={cn("text-lg font-medium tabular", tr.sim.final >= tr.sim.start ? "text-emerald-400" : "text-red-400")}>
+                  {tr.sim.final.toLocaleString()}원
+                  <span className="ml-1 text-sm">({tr.sim.total_ret > 0 ? "+" : ""}{tr.sim.total_ret}%)</span>
+                </div>
+              </div>
+              <div className="text-right">
+                <div className="text-xs text-muted-foreground">시장중립 가정 (알파만)</div>
+                <div className={cn("text-lg font-medium tabular", tr.sim.final_alpha >= tr.sim.start ? "text-emerald-400" : "text-red-400")}>
+                  {tr.sim.final_alpha.toLocaleString()}원
+                  <span className="ml-1 text-sm">({tr.sim.total_alpha > 0 ? "+" : ""}{tr.sim.total_alpha}%)</span>
+                </div>
+              </div>
+            </div>
+            <Sparkline daily={tr.sim.daily} start={tr.sim.start} />
+            <p className="mt-2 text-[11px] text-muted-foreground/70">
+              절대(빨강/초록)는 실제 롱온리 결과, 알파(회색)는 지수 헷지를 깔았다는 가정 —
+              선별력은 살아있는데 하락장 노출이 절대수익을 깎는 구조가 그대로 보입니다.
+            </p>
+          </div>
+        </Section>
+      )}
+
       {/* 보유기간별 */}
       <Section title="보유기간별" sub="알파는 보유일과 함께 커지고, 절대는 장세를 따라갑니다">
         <table className="w-full text-xs tabular">
@@ -164,6 +196,34 @@ function Section({ title, sub, children }: { title: string; sub?: string; childr
       {sub && <p className="mb-2 mt-0.5 text-[11px] text-muted-foreground/70">{sub}</p>}
       {children}
     </section>
+  );
+}
+
+function Sparkline({
+  daily,
+  start,
+}: {
+  daily: Array<{ date: string; value: number; alpha_value: number }>;
+  start: number;
+}) {
+  const W = 640;
+  const H = 80;
+  const vals = [start, ...daily.map((d) => d.value)];
+  const avals = [start, ...daily.map((d) => d.alpha_value)];
+  const all = [...vals, ...avals];
+  const min = Math.min(...all);
+  const max = Math.max(...all);
+  const span = max - min || 1;
+  const x = (i: number) => (i / (vals.length - 1)) * W;
+  const y = (v: number) => H - ((v - min) / span) * (H - 8) - 4;
+  const path = (vs: number[]) => vs.map((v, i) => `${i === 0 ? "M" : "L"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  const lastAbs = vals[vals.length - 1];
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="mt-3 w-full" role="img" aria-label="가상계좌 곡선">
+      <line x1="0" x2={W} y1={y(start)} y2={y(start)} stroke="currentColor" strokeOpacity="0.15" strokeDasharray="3 3" />
+      <path d={path(avals)} fill="none" stroke="currentColor" strokeOpacity="0.35" strokeWidth="1.5" />
+      <path d={path(vals)} fill="none" stroke={lastAbs >= start ? "#34d399" : "#f87171"} strokeWidth="1.5" />
+    </svg>
   );
 }
 
