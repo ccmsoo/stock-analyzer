@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-22T08:39:34",
-  "total": 368,
-  "new_today": 0,
+  "generated_at": "2026-07-22T10:05:32",
+  "total": 369,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "034220",
+      "name": "LG디스플레이",
+      "sosok": "",
+      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "submitter": "LG디스플레이",
+      "submitted_at": "2026.07.22",
+      "time": "09:25",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722800138",
+      "rcp_no": "20260722800138",
+      "category": "실적",
+      "score": 75,
+      "current_price": 10010,
+      "today_change_pct": 2.67,
+      "signal_last_seen": "20260521",
+      "signal_confidence": "medium",
+      "signal_main_theme": "수급·그룹주 동반 랠리",
+      "matched_at": "2026-07-22T10:05:32"
+    },
     {
       "ticker": "119850",
       "name": "지엔씨에너지",
