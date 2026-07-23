@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-23T20:33:27",
-  "total": 397,
+  "generated_at": "2026-07-23T22:12:12",
+  "total": 395,
   "new_today": 0,
   "alerts": [
     {
@@ -7222,44 +7222,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "반도체/수주",
       "matched_at": "2026-06-24T07:37:19"
-    },
-    {
-      "ticker": "059090",
-      "name": "미코",
-      "sosok": "",
-      "report_name": "최대주주변경을수반하는주식담보제공계약체결",
-      "submitter": "미코",
-      "submitted_at": "2026.06.23",
-      "time": "18:10",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260623900776",
-      "rcp_no": "20260623900776",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 19920,
-      "today_change_pct": 4.92,
-      "signal_last_seen": "20260603",
-      "signal_confidence": "high",
-      "signal_main_theme": "M&A / 에너지 (LNG 발전)",
-      "matched_at": "2026-06-23T20:53:51"
-    },
-    {
-      "ticker": "025620",
-      "name": "차AI헬스케어",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "차AI헬스케어",
-      "submitted_at": "2026.06.22",
-      "time": "19:07",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260622800884",
-      "rcp_no": "20260622800884",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 7500,
-      "today_change_pct": 29.98,
-      "signal_last_seen": "20260623",
-      "signal_confidence": "high",
-      "signal_main_theme": "의료AI/헬스케어",
-      "matched_at": "2026-06-23T20:53:52"
     },
     {
       "ticker": "309930",
