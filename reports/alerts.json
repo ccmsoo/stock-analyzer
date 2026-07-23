@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-24T07:37:43",
-  "total": 396,
-  "new_today": 2,
+  "generated_at": "2026-07-24T08:36:52",
+  "total": 397,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "397030",
+      "name": "에이프릴바이오",
+      "sosok": "",
+      "report_name": "최대주주변경",
+      "submitter": "에이프릴바이오",
+      "submitted_at": "2026.07.24",
+      "time": "07:45",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724900005",
+      "rcp_no": "20260724900005",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 26550,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260624",
+      "signal_confidence": "high",
+      "signal_main_theme": "바이오",
+      "matched_at": "2026-07-24T08:36:52"
+    },
     {
       "ticker": "028260",
       "name": "삼성물산",
