@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-26T07:08:30",
-  "total": 394,
+  "generated_at": "2026-07-26T08:09:46",
+  "total": 393,
   "new_today": 0,
   "alerts": [
     {
@@ -7222,25 +7222,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "M&A/지분확대",
       "matched_at": "2026-06-26T08:59:50"
-    },
-    {
-      "ticker": "003490",
-      "name": "대한항공",
-      "sosok": "",
-      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
-      "submitter": "대한항공",
-      "submitted_at": "2026.06.26",
-      "time": "07:44",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260626000005",
-      "rcp_no": "20260626000005",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 29100,
-      "today_change_pct": 6.4,
-      "signal_last_seen": "20260615",
-      "signal_confidence": "high",
-      "signal_main_theme": "정책/지정학(거시 이벤트)",
-      "matched_at": "2026-06-26T07:45:40"
     },
     {
       "ticker": "309930",
