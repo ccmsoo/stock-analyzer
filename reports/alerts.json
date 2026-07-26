@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-27T07:10:57",
-  "total": 372,
-  "new_today": 0,
+  "generated_at": "2026-07-27T08:10:31",
+  "total": 373,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "035420",
+      "name": "NAVER",
+      "sosok": "",
+      "report_name": "주식소각결정",
+      "submitter": "NAVER",
+      "submitted_at": "2026.07.27",
+      "time": "07:34",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260727800009",
+      "rcp_no": "20260727800009",
+      "category": "자본정책_호재",
+      "score": 70,
+      "current_price": 207500,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260601",
+      "signal_confidence": "medium",
+      "signal_main_theme": "AI / 기업 협력 이슈",
+      "matched_at": "2026-07-27T08:10:31"
+    },
     {
       "ticker": "397030",
       "name": "에이프릴바이오",
