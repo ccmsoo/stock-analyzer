@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-26T08:09:46",
-  "total": 393,
+  "generated_at": "2026-07-26T09:11:42",
+  "total": 391,
   "new_today": 0,
   "alerts": [
     {
@@ -7184,44 +7184,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "바이오",
       "matched_at": "2026-06-26T13:01:53"
-    },
-    {
-      "ticker": "003490",
-      "name": "대한항공",
-      "sosok": "",
-      "report_name": "[기재정정]회사합병결정(종속회사의주요경영사항)",
-      "submitter": "대한항공",
-      "submitted_at": "2026.06.26",
-      "time": "07:49",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260626800036",
-      "rcp_no": "20260626800036",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 29100,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260615",
-      "signal_confidence": "high",
-      "signal_main_theme": "정책/지정학(거시 이벤트)",
-      "matched_at": "2026-06-26T08:59:49"
-    },
-    {
-      "ticker": "020560",
-      "name": "아시아나항공",
-      "sosok": "",
-      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
-      "submitter": "아시아나항공",
-      "submitted_at": "2026.06.26",
-      "time": "07:46",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260626000007",
-      "rcp_no": "20260626000007",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 7710,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260615",
-      "signal_confidence": "high",
-      "signal_main_theme": "M&A/지분확대",
-      "matched_at": "2026-06-26T08:59:50"
     },
     {
       "ticker": "309930",
