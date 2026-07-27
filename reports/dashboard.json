@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T17:34:00",
+  "generated_at": "2026-07-27T19:16:44",
   "signals": {
     "003060": {
       "name": "에이프로젠바이오로직스",
@@ -517,8 +517,8 @@
       "name": "달바글로벌",
       "market": "KOSPI",
       "first_seen": "20260512",
-      "last_seen": "20260720",
-      "consecutive_days": 4,
+      "last_seen": "20260727",
+      "consecutive_days": 5,
       "main_theme": "수급/지분구조",
       "specific_signal": "VC(벤처캐피탈) 보유 지분 전량 매각으로 오버행 해소 및 피델리티·국민연금 등 기관투자가 편입",
       "trigger_type": "disclosure",
@@ -536,23 +536,14 @@
         "클리오",
         "토니모리"
       ],
-      "reasoning": "최근 다수 기사(7/16~7/19)에서 VC 오버행이 해소됐고, 그 자리를 피델리티·국민연금 등 장기 기관투자가 채웠다는 보도가 나왔다. 이는 잠재적 매도 물량(오버행) 제거와 기관 수요 유입으로 수급 개선 기대를 높여 주가 상승을 촉발한 것으로 판단된다.",
+      "reasoning": "이전 분석 재사용 (최초 20260512, 5일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "K-뷰티(화장품) 브랜드·유통",
-      "chain_position": "유통/판매",
-      "chain_role": "브랜드 운영을 통한 국내외 유통·판매(완제품 공급)",
-      "upstream": [
-        "한국콜마",
-        "코스맥스"
-      ],
-      "downstream": [
-        "글로벌 온라인 유통(역직구·아마존 등)"
-      ],
-      "peer_chain": [
-        "클리오",
-        "토니모리",
-        "아모레퍼시픽"
-      ],
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260512",
@@ -569,6 +560,10 @@
         {
           "date": "20260720",
           "change_pct": 4.08
+        },
+        {
+          "date": "20260727",
+          "change_pct": 7.9
         }
       ]
     },
@@ -1845,24 +1840,18 @@
       "name": "미래산업",
       "market": "KOSPI",
       "first_seen": "20260513",
-      "last_seen": "20260622",
-      "consecutive_days": 8,
-      "main_theme": "수급",
-      "specific_signal": "개별 공시·계약·실적 등 명확한 호재 부재 — '빚투·부동산 자금' 유입에 따른 소형주·테마성 매수 집중으로 단기 급등",
-      "trigger_type": "unknown",
+      "last_seen": "20260727",
+      "consecutive_days": 9,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
       "confidence": "low",
-      "watch_keywords": [
-        "수급(개미) 유입",
-        "부동산 유동성(빚투)",
-        "동탄 집값 상승",
-        "지역개발·특별시 정책",
-        "산업자동화 스토리"
-      ],
+      "watch_keywords": [],
       "related_stocks": [],
-      "reasoning": "제공된 14일 내 기사들은 대체로 '빚투·집값 상승' 같은 시장·수급 관련 보도 또는 지역정책·일반 기사로, 회사 고유의 공시·계약·실적 관련 본문 근거가 확인되지 않습니다. 따라서 이날 급등은 회사 고유의 본질적 뉴스보다 유동성·개미 매수 집중(테마·수급성)으로 해석하는 것이 합리적입니다.",
+      "reasoning": "",
       "reason_unknown_category": "weak_name_link",
-      "industry_chain": "기타",
-      "chain_position": "기타",
+      "industry_chain": "",
+      "chain_position": "",
       "chain_role": "",
       "upstream": [],
       "downstream": [],
@@ -1899,6 +1888,10 @@
         {
           "date": "20260622",
           "change_pct": 12.71
+        },
+        {
+          "date": "20260727",
+          "change_pct": 22.28
         }
       ]
     },
@@ -3427,27 +3420,32 @@
       "name": "카카오페이",
       "market": "KOSPI",
       "first_seen": "20260514",
-      "last_seen": "20260514",
-      "consecutive_days": 1,
-      "main_theme": "정책",
-      "specific_signal": "고객 정보 알리페이 제공 의혹 관련 수사 착수",
-      "trigger_type": "rumor",
-      "confidence": "medium",
-      "watch_keywords": [
-        "정책",
-        "고객 정보 제공 의혹",
-        "수사 착수",
-        "단기적 투자 관심"
-      ],
+      "last_seen": "20260727",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
       "related_stocks": [],
-      "reasoning": "카카오페이는 중국 알리페이에 고객 정보를 제공했다는 의혹으로 경찰 수사를 받고 있다는 소식이 전해졌다. 이러한 소식이 오히려 단기적 투자 관심을 끌며 거래량과 주가가 상승한 것으로 보인다.",
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260514",
           "change_pct": 13.11
+        },
+        {
+          "date": "20260727",
+          "change_pct": 6.8
         }
-      ],
-      "cluster_tag": "policy_rumor_investment"
+      ]
     },
     "499790": {
       "name": "GS피앤엘",
@@ -9367,25 +9365,16 @@
       "name": "삼화전자",
       "market": "KOSPI",
       "first_seen": "20260522",
-      "last_seen": "20260709",
-      "consecutive_days": 6,
-      "main_theme": "수급/시장 모멘텀 (반도체 랠리 연동)",
-      "specific_signal": "대형 반도체주(삼성전자·SK하이닉스) 강세에 따른 중소형 전자부품·전선류로의 수급 쏠림 및 '이격도과열/급등락주' 지정",
-      "trigger_type": "technical",
-      "confidence": "medium",
-      "watch_keywords": [
-        "수급(기관 순매수)",
-        "반도체 랠리",
-        "단기 과열(이격도)",
-        "이격도과열 종목",
-        "거래대금 집중"
-      ],
-      "related_stocks": [
-        "삼성전자",
-        "SK하이닉스"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260522, 6일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260727",
+      "consecutive_days": 7,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -9416,6 +9405,10 @@
         {
           "date": "20260709",
           "change_pct": 6.33
+        },
+        {
+          "date": "20260727",
+          "change_pct": 9.18
         }
       ]
     },
@@ -11351,25 +11344,22 @@
       "name": "NHN",
       "market": "KOSPI",
       "first_seen": "20260529",
-      "last_seen": "20260601",
-      "consecutive_days": 2,
-      "main_theme": "클라우드·AI 서비스",
-      "specific_signal": "NHN클라우드 '팩토리X' 출범 및 AI 매출 목표 상향(내년 50%대)·'올해 무조건 흑자 전환' 자신 표명",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "AI 인프라 팩토리X",
-        "AI 매출 비중 50%대",
-        "클라우드 공공 전환",
-        "무조건 흑자 전환",
-        "한게임 포커 러시홀덤",
-        "데이터센터·AI 서비스 계약"
-      ],
-      "related_stocks": [
-        "LG씨엔에스",
-        "이노그리드"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260529, 2일째 등장)",
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260529",
@@ -11378,6 +11368,10 @@
         {
           "date": "20260601",
           "change_pct": 17.09
+        },
+        {
+          "date": "20260727",
+          "change_pct": 10.16
         }
       ]
     },
@@ -11521,23 +11515,22 @@
       "name": "NAVER",
       "market": "KOSPI",
       "first_seen": "20260529",
-      "last_seen": "20260601",
-      "consecutive_days": 2,
-      "main_theme": "AI / 기업 협력 이슈",
-      "specific_signal": "젠슨 황(엔비디아) 방한·재계 총수·이해진 등과 '피지컬 AI' 연쇄 회동 소식 + 네이버-서울대 커넥트재단 AI 인재양성 협약(커리큘럼 공동 개발)",
-      "trigger_type": "rumor",
-      "confidence": "medium",
-      "watch_keywords": [
-        "피지컬 AI",
-        "젠슨 황 방한",
-        "AI 인재양성",
-        "커넥트재단 서울대 협약"
-      ],
-      "related_stocks": [
-        "삼성전자",
-        "SK하이닉스"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260529, 2일째 등장)",
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "weak_name_link",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260529",
@@ -11546,6 +11539,10 @@
         {
           "date": "20260601",
           "change_pct": 16.03
+        },
+        {
+          "date": "20260727",
+          "change_pct": 8.43
         }
       ]
     },
@@ -11648,25 +11645,22 @@
       "name": "오브젠",
       "market": "KOSDAQ",
       "first_seen": "20260529",
-      "last_seen": "20260601",
-      "consecutive_days": 2,
-      "main_theme": "AI/플랫폼",
-      "specific_signal": "KNIME 세미나 성료로 '데이터 운영 체계' 역량 부각 (기업 AI 도입·플랫폼 수혜 기대)",
-      "trigger_type": "rumor",
-      "confidence": "medium",
-      "watch_keywords": [
-        "생성형 AI",
-        "AI 데이터플랫폼",
-        "KNIME 세미나 성료",
-        "엔비디아-LG 회동설",
-        "데이터 운영 체계"
-      ],
-      "related_stocks": [
-        "삼성SDS",
-        "LG",
-        "NAVER"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260529, 2일째 등장)",
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260529",
@@ -11675,6 +11669,10 @@
         {
           "date": "20260601",
           "change_pct": 29.9
+        },
+        {
+          "date": "20260727",
+          "change_pct": 30.0
         }
       ]
     },
@@ -13075,28 +13073,30 @@
       "name": "아남전자",
       "market": "KOSPI",
       "first_seen": "20260603",
-      "last_seen": "20260603",
-      "consecutive_days": 1,
-      "main_theme": "수급(자사주 신탁) / 전자제품 업종 모멘텀",
-      "specific_signal": "20억원 규모 자사주 신탁계약 체결 (자사주 소각/신탁에 따른 매수수급 개선 기대)",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "자사주 신탁",
-        "가전·전자업종 랠리",
-        "20억원 규모 신탁",
-        "외국인 순매수",
-        "거래상위 편입"
-      ],
-      "related_stocks": [
-        "LG헬로비전",
-        "LG전자"
-      ],
-      "reasoning": "5월 28일 공시된 '20억원 규모 자사주 신탁계약'이 수급 측면의 명확한 호재로 작용했으며, 이후 전자제품 업종의 전반적 강세와 외국인 매수 흐름 속에서 주가가 급등한 것으로 보임. 6월 2일 관련 시황기사에선 거래상위 종목으로 편입되어 단기 수급 쏠림이 강화된 점도 상승을 뒷받침함.",
+      "last_seen": "20260727",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260603",
           "change_pct": 10.47
+        },
+        {
+          "date": "20260727",
+          "change_pct": 7.73
         }
       ]
     },
@@ -13177,28 +13177,30 @@
       "name": "프레스티지바이오파마",
       "market": "KOSPI",
       "first_seen": "20260603",
-      "last_seen": "20260603",
-      "consecutive_days": 1,
-      "main_theme": "바이오",
-      "specific_signal": "췌장암 신약 PBP1510의 임상 2a상 진입 준비 및 ASCO 데이터 공개/로드맵 발표",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "항암신약 개발",
-        "임상2a 진입",
-        "PBP1510 임상 2a",
-        "ASCO 데이터 발표",
-        "췌장암 표적치료"
-      ],
-      "related_stocks": [
-        "비보존제약",
-        "올릭스"
-      ],
-      "reasoning": "6월 1일자 다수의 종목 태그 기사(네이버 금융 등)가 PBP1510의 임상 2a상 진입 준비와 ASCO 관련 데이터 공개·로드맵 구체화를 보도해 직접적 투자자 관심을 자극한 점이 가격 급등의 핵심 트리거로 보인다. 관련 보도가 D-2에 집중되어 있고 거래량 증가와 함께 주가가 급등해 뉴스 기반의 호재 반응으로 판단된다.",
+      "last_seen": "20260727",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260603",
           "change_pct": 9.34
+        },
+        {
+          "date": "20260727",
+          "change_pct": 6.86
         }
       ]
     },
@@ -13807,24 +13809,22 @@
       "name": "디아이",
       "market": "KOSPI",
       "first_seen": "20260604",
-      "last_seen": "20260609",
-      "consecutive_days": 2,
-      "main_theme": "반도체 장비/부품",
-      "specific_signal": "6월 초 반도체 장비주에 대한 언론·브랜드평판 집중 보도로 HBM 등 메모리 수요 관련 수혜 기대가 확산되며 장비주 동반 매수 발생",
-      "trigger_type": "rumor",
-      "confidence": "medium",
-      "watch_keywords": [
-        "반도체 장비주",
-        "HBM 수요 확대",
-        "장비주 브랜드평판",
-        "장비 수주·납품 공시"
-      ],
-      "related_stocks": [
-        "한미반도체",
-        "이오테크닉스",
-        "피에스케이"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260604, 2일째 등장)",
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260604",
@@ -13833,6 +13833,10 @@
         {
           "date": "20260609",
           "change_pct": 19.36
+        },
+        {
+          "date": "20260727",
+          "change_pct": 6.89
         }
       ]
     },
@@ -17032,22 +17036,16 @@
       "name": "듀오백",
       "market": "KOSDAQ",
       "first_seen": "20260615",
-      "last_seen": "20260622",
-      "consecutive_days": 2,
-      "main_theme": "수급/공시 관련 변동성",
-      "specific_signal": "거래소 현저한 시황변동 조회공시 및 특정계좌의 과다 매매 관여로 인한 투자주의·변동성 확대 우려",
-      "trigger_type": "disclosure",
-      "confidence": "medium",
-      "watch_keywords": [
-        "거래소 조회공시",
-        "투자경고/관리종목 우려",
-        "특정계좌 매매관여 과다",
-        "에르고백·T-체어 투트랙",
-        "북미 전시(네오콘) 라인업"
-      ],
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
       "related_stocks": [],
-      "reasoning": "이전 분석 재사용 (최초 20260615, 2일째 등장)",
-      "reason_unknown_category": "",
+      "reasoning": "",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -17062,6 +17060,10 @@
         {
           "date": "20260622",
           "change_pct": 29.92
+        },
+        {
+          "date": "20260727",
+          "change_pct": 17.86
         }
       ]
     },
@@ -17954,26 +17956,16 @@
       "name": "뉴엔AI",
       "market": "KOSDAQ",
       "first_seen": "20260616",
-      "last_seen": "20260617",
-      "consecutive_days": 2,
-      "main_theme": "AI·소프트웨어",
-      "specific_signal": "온톨로지 기반 AI 분석 플랫폼 공개 및 에너지 이슈 조기포착 협력(에너지정보문화재단) — 전시·데모·해외(미국) 출시 예고",
-      "trigger_type": "disclosure",
-      "confidence": "medium",
-      "watch_keywords": [
-        "AI 플랫폼",
-        "에너지 AI",
-        "온톨로지 기반 AI",
-        "글로벌 뷰티 AI 플랫폼 7월",
-        "미국 출시",
-        "에너지 이슈 조기포착 협력"
-      ],
-      "related_stocks": [
-        "솔트룩스",
-        "데이터스트림즈"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260616, 2일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -17988,6 +17980,10 @@
         {
           "date": "20260617",
           "change_pct": 16.73
+        },
+        {
+          "date": "20260727",
+          "change_pct": 18.36
         }
       ]
     },
@@ -18208,26 +18204,16 @@
       "name": "에넥스",
       "market": "KOSPI",
       "first_seen": "20260617",
-      "last_seen": "20260717",
-      "consecutive_days": 6,
-      "main_theme": "소비재(가구/리빙)",
-      "specific_signal": "유통 플랫폼 제휴(홈캉스 시즌 맞춘 플랫폼 공동 프로모션 및 상품 공급)",
-      "trigger_type": "contract",
-      "confidence": "medium",
-      "watch_keywords": [
-        "리빙/가구",
-        "유통 플랫폼 제휴",
-        "여름 냉감 침구",
-        "홈캉스 프로모션",
-        "판매량 증가",
-        "계절성 수요"
-      ],
-      "related_stocks": [
-        "한샘",
-        "리바트"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260617, 6일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260727",
+      "consecutive_days": 7,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -18258,6 +18244,10 @@
         {
           "date": "20260717",
           "change_pct": 29.95
+        },
+        {
+          "date": "20260727",
+          "change_pct": 9.1
         }
       ]
     },
@@ -20061,33 +20051,21 @@
       "name": "씨피시스템",
       "market": "KOSDAQ",
       "first_seen": "20260619",
-      "last_seen": "20260715",
-      "consecutive_days": 4,
-      "main_theme": "반도체",
-      "specific_signal": "반도체 클린룸용 세미휴머노이드 '로보킷' 시제품 공급(국내 반도체사 대상)",
-      "trigger_type": "contract",
-      "confidence": "medium",
-      "watch_keywords": [
-        "반도체",
-        "세미휴머노이드",
-        "클린룸 자동화",
-        "로보킷 공급",
-        "시제품 납품"
-      ],
-      "related_stocks": [
-        "한미반도체",
-        "로보티즈"
-      ],
-      "reasoning": "다수 뉴스에서 씨피시스템이 반도체 클린룸에 투입되는 세미휴머노이드 '로보킷'을 국내 반도체 기업에 시제품·공급했다는 보도가 나왔고, 해당 소식이 단기 매수 심리를 자극해 급등한 것으로 보임. 다만 보도는 기사(검색) 기반으로 공식 공시 확인이 필요해 신뢰도는 중간 수준으로 판단.",
-      "reason_unknown_category": "",
-      "industry_chain": "휴머노이드 로봇(반도체 클린룸 자동화)",
-      "chain_position": "장비",
-      "chain_role": "반도체 클린룸 환경에 투입되는 세미휴머노이드 로봇(로보킷) 공급 및 납품",
+      "last_seen": "20260727",
+      "consecutive_days": 5,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "반도체 제조업체",
-        "클린룸 운영현장"
-      ],
+      "downstream": [],
       "peer_chain": [],
       "history": [
         {
@@ -20105,6 +20083,10 @@
         {
           "date": "20260715",
           "change_pct": 30.0
+        },
+        {
+          "date": "20260727",
+          "change_pct": 29.87
         }
       ]
     },
@@ -20440,25 +20422,16 @@
       "name": "해성디에스",
       "market": "KOSPI",
       "first_seen": "20260622",
-      "last_seen": "20260710",
-      "consecutive_days": 3,
-      "main_theme": "반도체",
-      "specific_signal": "2분기 실적 기대치 상회 전망(리드프레임·패키지 기판 수요 회복 기대)",
-      "trigger_type": "earnings",
-      "confidence": "medium",
-      "watch_keywords": [
-        "반도체 패키지 기판",
-        "메모리 수요 회복",
-        "리드프레임 수요 폭증",
-        "판가 인하 우려 완화",
-        "2분기 실적 기대치 상회"
-      ],
-      "related_stocks": [
-        "삼성전기",
-        "이수페타시스"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260622, 3일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260727",
+      "consecutive_days": 4,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -20477,6 +20450,10 @@
         {
           "date": "20260710",
           "change_pct": 13.36
+        },
+        {
+          "date": "20260727",
+          "change_pct": 6.87
         }
       ]
     },
@@ -24213,42 +24190,30 @@
       "name": "셀리드",
       "market": "KOSDAQ",
       "first_seen": "20260626",
-      "last_seen": "20260626",
-      "consecutive_days": 1,
-      "main_theme": "바이오",
-      "specific_signal": "코로나19 백신 연구결과 공개(BA.3.2.2 변이의 면역회피 가능성 확인) 및 이달 내 백신 관련 추가 발표 예고",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "코로나19 백신",
-        "임상(3상)",
-        "백신 상용화",
-        "BA.3.2.2 변이 면역회피",
-        "1차 평가지표 미충족",
-        "추가 임상시험 설계"
-      ],
-      "related_stocks": [
-        "알테오젠",
-        "에이비엘바이오"
-      ],
-      "reasoning": "당일(2026.06.18) 네이버 금융 태그 기사들이 회사의 연구결과(BA.3.2.2 변이의 면역회피 가능성 확인·이달 내 백신 관련 추가 공개 예고)를 직접 보도해 투자심리를 자극한 것으로 보입니다. 해당 보도는 회사명 태깅된 기사로 직접적 트리거 성격이 강해 단기 급등을 유발했을 가능성이 높습니다. 이후 6월25일 임상 3상 1차지표 미충족 보도가 나오며 반대 방향의 재료가 등장했습니다.",
-      "reason_unknown_category": "",
-      "industry_chain": "코로나19 백신 개발(바이오)",
-      "chain_position": "조립/제조",
-      "chain_role": "백신 후보물질 개발 및 임상시험 수행·제조",
+      "last_seen": "20260727",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "의료기관",
-        "정부/백신구매"
-      ],
-      "peer_chain": [
-        "알테오젠",
-        "에이비엘바이오"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260626",
           "change_pct": 14.61
+        },
+        {
+          "date": "20260727",
+          "change_pct": 29.94
         }
       ]
     },
@@ -24256,22 +24221,16 @@
       "name": "파이온엑스",
       "market": "KOSDAQ",
       "first_seen": "20260626",
-      "last_seen": "20260626",
-      "consecutive_days": 1,
-      "main_theme": "수급/기업공시",
-      "specific_signal": "액면병합에 따른 주권 변경상장 및 매매거래정지 해제(거래 재개)",
-      "trigger_type": "disclosure",
-      "confidence": "medium",
-      "watch_keywords": [
-        "주식 액면병합",
-        "매매거래정지 해제",
-        "유통주식수 감소",
-        "거래 재개 수요",
-        "코스닥 수급 변동"
-      ],
+      "last_seen": "20260727",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
       "related_stocks": [],
-      "reasoning": "목격된 회사 관련 뉴스는 6월22일 '액면병합 주권 변경상장 → 매매거래 정지 해제' 보도로, 거래정지 해제에 따라 유통주식수 감소와 재매수 수요가 집중되었을 가능성이 큽니다. 여기에 같은 기간 코스닥의 일시적 반등 흐름이 겹치며 D-day에 +13% 급등을 유발한 것으로 판단됩니다.",
-      "reason_unknown_category": "",
+      "reasoning": "",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -24282,6 +24241,10 @@
         {
           "date": "20260626",
           "change_pct": 13.0
+        },
+        {
+          "date": "20260727",
+          "change_pct": 29.9
         }
       ]
     },
@@ -25792,36 +25755,22 @@
       "name": "대구백화점",
       "market": "KOSPI",
       "first_seen": "20260702",
-      "last_seen": "20260713",
-      "consecutive_days": 3,
-      "main_theme": "유통/백화점",
-      "specific_signal": "인근 메가 프로젝트 수혜 기대(상권 재편·점포 가치 상승 기대)",
-      "trigger_type": "rumor",
-      "confidence": "medium",
-      "watch_keywords": [
-        "재개발",
-        "도심 재생",
-        "유통(백화점) 수혜",
-        "인근 메가 프로젝트",
-        "상권 재편",
-        "점포 리모델링"
-      ],
-      "related_stocks": [
-        "현대백화점",
-        "신세계"
-      ],
-      "reasoning": "장초반에 나온 종목 태그 기사에서 '메가 프로젝트 효과?'를 거론하며 지역 개발 기대감이 부각되어 단기 매수세가 유입된 것으로 보임. 다만 기사 제목만 확인되며 회사 공시·확정된 계약 내용 등은 확인되지 않아 확정적 호재로 보기에는 근거가 약함.",
-      "reason_unknown_category": "",
-      "industry_chain": "오프라인 유통/백화점",
-      "chain_position": "유통/판매",
-      "chain_role": "지역 기반 백화점 운영 및 점포·상권 관리로 임대수익 및 소매매출 창출",
+      "last_seen": "20260727",
+      "consecutive_days": 4,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "현대백화점",
-        "신세계",
-        "롯데쇼핑"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260702",
@@ -25834,6 +25783,10 @@
         {
           "date": "20260713",
           "change_pct": 13.07
+        },
+        {
+          "date": "20260727",
+          "change_pct": 7.07
         }
       ]
     },
@@ -25884,39 +25837,30 @@
       "name": "우진아이엔에스",
       "market": "KOSPI",
       "first_seen": "20260702",
-      "last_seen": "20260702",
-      "consecutive_days": 1,
-      "main_theme": "정책",
-      "specific_signal": "정부 'AI 응용제품 신속상용화 지원사업' 선정",
-      "trigger_type": "policy",
-      "confidence": "high",
-      "watch_keywords": [
-        "정부 R&D·상용화 지원",
-        "AI 응용서비스",
-        "공공지원사업 선정",
-        "AI 응용제품 신속상용화 지원사업 선정",
-        "기계설비공사 88억원 계약",
-        "플랜트 153억원 수주"
-      ],
-      "related_stocks": [
-        "롯데건설",
-        "SK에코플랜트"
-      ],
-      "reasoning": "D-day 당일(2026.07.02) 복수의 종목 태그 기사들이 'AI 응용제품 신속상용화 지원사업' 선정 소식을 보도해 즉각적인 매수세를 유발한 것으로 판단됩니다. 이전의 건설·기계설비 수주(6월 말 롯데건설 88억, SK에코플랜트 153억)도 재무적 신뢰도를 보강했으나, 당일 급등의 직접적 촉매는 정부 지원사업 선정 뉴스입니다.",
-      "reason_unknown_category": "",
-      "industry_chain": "AI 응용서비스 / 건설기계설비",
-      "chain_position": "장비",
-      "chain_role": "건설현장용 기계설비의 공급·시공을 제공하며 AI 응용제품 상용화 추진",
+      "last_seen": "20260727",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "롯데건설",
-        "SK에코플랜트"
-      ],
+      "downstream": [],
       "peer_chain": [],
       "history": [
         {
           "date": "20260702",
           "change_pct": 9.07
+        },
+        {
+          "date": "20260727",
+          "change_pct": 12.16
         }
       ]
     },
@@ -26363,32 +26307,22 @@
       "name": "썸에이지",
       "market": "KOSDAQ",
       "first_seen": "20260702",
-      "last_seen": "20260720",
-      "consecutive_days": 2,
-      "main_theme": "게임주",
-      "specific_signal": "확인된 공시·계약 없음 — 다수 매체의 ‘상한가’ 보도(헤드라인)만 존재하여 구체 트리거 불명",
-      "trigger_type": "unknown",
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
       "confidence": "low",
-      "watch_keywords": [
-        "게임주",
-        "단기수급",
-        "동시호가 매수",
-        "거래량 급증",
-        "유상증자 정정요구"
-      ],
-      "related_stocks": [
-        "위메이드맥스"
-      ],
-      "reasoning": "제공된 14일 내 기사에는 회사 측 공시·계약·실적 개선 등 명확한 호재 본문이 포함되어 있지 않고, 다수 보도는 장중·장마감의 ‘상한가·급등’ 표제 중심이다. 따라서 이날 급등은 개별 공시보다는 단기수급·테마성 매매(동시호가 매수·거래량 급증 등)에 따른 기술적·투기적 급등으로 판단된다.",
-      "reason_unknown_category": "headline_only_generic",
-      "industry_chain": "게임·모바일 게임",
-      "chain_position": "서비스",
-      "chain_role": "모바일/온라인 게임의 개발 및 퍼블리싱",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "위메이드맥스"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260702",
@@ -26397,6 +26331,10 @@
         {
           "date": "20260720",
           "change_pct": 29.99
+        },
+        {
+          "date": "20260727",
+          "change_pct": 30.0
         }
       ]
     },
@@ -28248,8 +28186,8 @@
       "name": "JB금융지주",
       "market": "KOSPI",
       "first_seen": "20260707",
-      "last_seen": "20260724",
-      "consecutive_days": 3,
+      "last_seen": "20260727",
+      "consecutive_days": 4,
       "main_theme": "실적",
       "specific_signal": "2분기·상반기 사상 최대 순이익(2Q 순익 2,196억·상반기 3,857억) 및 자사주 매입·주주환원율 50% 목표 공시(자사주 1,000억원 언급)",
       "trigger_type": "disclosure",
@@ -28267,18 +28205,14 @@
         "신한금융",
         "JB우리캐피탈"
       ],
-      "reasoning": "7월 23일 발표된 2분기 및 상반기 실적(사상 최대 이익)과 컨콜에서의 주주환원(자사주 매입 확대·주주환원율 50% 목표) 공개가 투자심리 개선으로 이어져 매수세를 촉발한 것으로 보임. 특히 비은행(캐피탈) 이익 기여가 컸다는 점이 향후 이익지속성에 대한 신뢰를 높였음.",
+      "reasoning": "이전 분석 재사용 (최초 20260707, 4일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "은행·금융지주",
-      "chain_position": "지주사",
-      "chain_role": "그룹 지주사로서 자회사 이익을 통합·관리하고 배당·자사주 등 주주환원 정책을 결정",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "DGB금융지주",
-        "BNK금융지주",
-        "KB금융"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260707",
@@ -28291,6 +28225,10 @@
         {
           "date": "20260724",
           "change_pct": 5.28
+        },
+        {
+          "date": "20260727",
+          "change_pct": 6.88
         }
       ]
     },
@@ -28467,25 +28405,16 @@
       "name": "가온칩스",
       "market": "KOSDAQ",
       "first_seen": "20260707",
-      "last_seen": "20260709",
-      "consecutive_days": 2,
-      "main_theme": "반도체(시스템반도체/파운드리)",
-      "specific_signal": "ASIC(시스템반도체) 공급계약 체결 보도(파운드리 협력사 관련 소식)",
-      "trigger_type": "contract",
-      "confidence": "medium",
-      "watch_keywords": [
-        "파운드리 협력",
-        "ASIC 공급계약",
-        "K-팹리스 인프라",
-        "SAFE 포럼 파운드리 로드맵",
-        "외국인 대량매수"
-      ],
-      "related_stocks": [
-        "테스",
-        "브이엠"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260707, 2일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -28500,6 +28429,10 @@
         {
           "date": "20260709",
           "change_pct": 29.91
+        },
+        {
+          "date": "20260727",
+          "change_pct": 27.25
         }
       ]
     },
@@ -29658,42 +29591,30 @@
       "name": "코스맥스",
       "market": "KOSPI",
       "first_seen": "20260713",
-      "last_seen": "20260713",
-      "consecutive_days": 1,
-      "main_theme": "뷰티/화장품",
-      "specific_signal": "일본 후지신(Fujishin)과 합작법인(JV) 설립을 통한 AI 기반 맞춤형 화장품(미용실 대상 AI 처방 및 제품 공급) 일본 첫 해외진출",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "K-뷰티 해외진출",
-        "AI 맞춤화장품",
-        "화장품 ODM 해외JV",
-        "합작법인 설립(일본)",
-        "미용실 대상 AI 처방 공급",
-        "해외 매출 확장(미국·유럽 계획)"
-      ],
-      "related_stocks": [
-        "한국콜마",
-        "코스메카코리아"
-      ],
-      "reasoning": "동일 날짜 다수의 종목태그 기사들이 코스맥스가 일본 업체와 합작법인 설립·AI 맞춤형 화장품을 일본 미용시장에 공급한다고 보도해 직접적 기업 공시(또는 보도자료)에 기반한 호재로 해석됩니다. 해외 진출과 AI 처방 적용이라는 성장성 기대가 단기 매수 심리를 촉발해 D-day에 주가가 상승한 것으로 판단됩니다.",
-      "reason_unknown_category": "",
-      "industry_chain": "AI 맞춤형 뷰티(화장품 ODM)",
-      "chain_position": "조립/제조",
-      "chain_role": "AI 진단·처방 연계 제품의 ODM 개발·생산 및 현지 공급",
+      "last_seen": "20260727",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "일본 미용실 체인",
-        "글로벌 화장품 브랜드·유통"
-      ],
-      "peer_chain": [
-        "한국콜마",
-        "코스메카코리아"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260713",
           "change_pct": 6.72
+        },
+        {
+          "date": "20260727",
+          "change_pct": 7.9
         }
       ]
     },
@@ -30392,16 +30313,16 @@
       "name": "신라에스지",
       "market": "KOSDAQ",
       "first_seen": "20260714",
-      "last_seen": "20260714",
-      "consecutive_days": 1,
+      "last_seen": "20260727",
+      "consecutive_days": 2,
       "main_theme": "분석 실패",
-      "specific_signal": "JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
       "trigger_type": "",
       "confidence": "low",
       "watch_keywords": [],
       "related_stocks": [],
       "reasoning": "",
-      "reason_unknown_category": "other",
+      "reason_unknown_category": "headline_only_generic",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -30412,6 +30333,10 @@
         {
           "date": "20260714",
           "change_pct": 15.1
+        },
+        {
+          "date": "20260727",
+          "change_pct": 15.8
         }
       ]
     },
@@ -32542,21 +32467,15 @@
       "name": "소프트센우",
       "market": "KOSDAQ",
       "first_seen": "20260723",
-      "last_seen": "20260724",
-      "consecutive_days": 2,
-      "main_theme": "수급",
-      "specific_signal": "단기 소액·저유동성 수급 집중에 따른 테마성·기술적 급등(상한가)",
-      "trigger_type": "unknown",
+      "last_seen": "20260727",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
       "confidence": "low",
-      "watch_keywords": [
-        "수급",
-        "소형주·저유동성",
-        "우선주 매매차익",
-        "상한가 사유 공시",
-        "거래집중(동호가·오더북)"
-      ],
+      "watch_keywords": [],
       "related_stocks": [],
-      "reasoning": "제공된 14일 내 기사들은 대부분 시장 전체·급등락 종목 목록이나 타 종목 호재를 다루고 있으며, 회사 측 공시·수주·실적 등의 구체적 호재는 확인되지 않습니다. '소프트센우주가, 상한가... 이유는?'라는 제목의 기사만 존재하지만 본문 근거가 없어 원인 불명이며, 거래량이 매우 적어(132주) 저유동성 환경에서 단기 수급·투기적 매매로 급등했을 가능성이 큽니다.",
+      "reasoning": "",
       "reason_unknown_category": "headline_only_generic",
       "industry_chain": "",
       "chain_position": "",
@@ -32572,6 +32491,10 @@
         {
           "date": "20260724",
           "change_pct": 29.93
+        },
+        {
+          "date": "20260727",
+          "change_pct": 29.9
         }
       ]
     },
@@ -32656,8 +32579,8 @@
       "name": "셀바스AI",
       "market": "KOSDAQ",
       "first_seen": "20260723",
-      "last_seen": "20260723",
-      "consecutive_days": 1,
+      "last_seen": "20260727",
+      "consecutive_days": 2,
       "main_theme": "AI",
       "specific_signal": "인천공항 안내로봇에 AI 음성엔진(‘셀바스 트리거’) 탑재 — 클로봇 협업·현장 적용 발표",
       "trigger_type": "contract",
@@ -32674,25 +32597,22 @@
         "폴라리스AI",
         "마음AI"
       ],
-      "reasoning": "회사 측 발표(회사 태그 기사)에 따라 인천공항 안내로봇에 자사 음성 AI가 탑재된다는 구체 소식이 나왔고, 피지컬 AI·AI 음성 솔루션 테마의 동반 매수로 이어진 것으로 보인다. D-3일 전 발표된 기술/적용 사례가 투자심리를 자극해 단기 급등을 촉발했다.",
+      "reasoning": "이전 분석 재사용 (최초 20260723, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "피지컬 AI (안내·서비스 로봇)",
-      "chain_position": "서비스",
-      "chain_role": "안내·서비스 로봇에 탑재되는 음성 AI 엔진 및 대화 서비스 제공",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "공항·공공시설 안내로봇",
-        "로봇 운영사/서비스 사업자"
-      ],
-      "peer_chain": [
-        "폴라리스AI",
-        "마음AI",
-        "뉴엔AI"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260723",
           "change_pct": 18.92
+        },
+        {
+          "date": "20260727",
+          "change_pct": 17.66
         }
       ]
     },
@@ -33162,8 +33082,8 @@
       "name": "아이씨에이치",
       "market": "KOSDAQ",
       "first_seen": "20260724",
-      "last_seen": "20260724",
-      "consecutive_days": 1,
+      "last_seen": "20260727",
+      "consecutive_days": 2,
       "main_theme": "소재/부품",
       "specific_signal": "테슬라 '옵티머스' 로봇용 소재 퀄리피케이션 완료 및 양산 준비 (동시에 삼성·애플 폴더블폰용 PE/완충소재 양산 공급 확인)",
       "trigger_type": "contract",
@@ -33180,21 +33100,22 @@
         "삼성전자",
         "테슬라"
       ],
-      "reasoning": "D-day 당일(07.24) 테슬라 옵티머스 로봇용 소재의 퀄리피케이션 완료·양산 소식이 나왔고, 이전 1~2주 내 애플·삼성 폴더블폰용 PE/완충소재의 양산·공급 보도와 대표의 대량 자사주 매수·5대1 주식병합 결정이 복합적으로 투자심리를 자극해 급등을 유발한 것으로 판단됩니다. 특히 퀄 테스트 완료·양산(실수요 연결 가능)은 실질적 수주/매출 기대를 높이는 핵심 트리거입니다.",
+      "reasoning": "이전 분석 재사용 (최초 20260724, 2일째 등장)",
       "reason_unknown_category": "",
-      "industry_chain": "휴머노이드 로봇·폴더블폰 소재",
-      "chain_position": "원소재",
-      "chain_role": "폴더블폰 및 로봇용 완충·차음 PE/PU폼 등 기능성 폴리머 소재의 양산 공급 및 퀄리피케이션 완료",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "삼성전자",
-        "테슬라"
-      ],
+      "downstream": [],
       "peer_chain": [],
       "history": [
         {
           "date": "20260724",
           "change_pct": 29.9
+        },
+        {
+          "date": "20260727",
+          "change_pct": 29.94
         }
       ]
     },
@@ -33349,6 +33270,357 @@
         {
           "date": "20260724",
           "change_pct": 9.47
+        }
+      ]
+    },
+    "082640": {
+      "name": "동양생명",
+      "market": "KOSPI",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 8.38
+        }
+      ]
+    },
+    "316140": {
+      "name": "우리금융지주",
+      "market": "KOSPI",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 7.29
+        }
+      ]
+    },
+    "009460": {
+      "name": "한창제지",
+      "market": "KOSPI",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 7.11
+        }
+      ]
+    },
+    "100220": {
+      "name": "비상교육",
+      "market": "KOSPI",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 7.03
+        }
+      ]
+    },
+    "003350": {
+      "name": "한국화장품제조",
+      "market": "KOSPI",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "weak_name_link",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 6.58
+        }
+      ]
+    },
+    "052460": {
+      "name": "아이크래프트",
+      "market": "KOSDAQ",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 30.0
+        }
+      ]
+    },
+    "199430": {
+      "name": "케이엔알시스템",
+      "market": "KOSDAQ",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 29.96
+        }
+      ]
+    },
+    "199730": {
+      "name": "바이오인프라",
+      "market": "KOSDAQ",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 29.7
+        }
+      ]
+    },
+    "402030": {
+      "name": "코난테크놀로지",
+      "market": "KOSDAQ",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 19.65
+        }
+      ]
+    },
+    "059120": {
+      "name": "아진엑스텍",
+      "market": "KOSDAQ",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 19.34
+        }
+      ]
+    },
+    "264850": {
+      "name": "이랜시스",
+      "market": "KOSDAQ",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "weak_name_link",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 17.52
+        }
+      ]
+    },
+    "098660": {
+      "name": "에스티오",
+      "market": "KOSDAQ",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 16.67
+        }
+      ]
+    },
+    "304100": {
+      "name": "솔트룩스",
+      "market": "KOSDAQ",
+      "first_seen": "20260727",
+      "last_seen": "20260727",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260727",
+          "change_pct": 16.62
         }
       ]
     }
