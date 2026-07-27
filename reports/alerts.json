@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-07-28T06:48:08",
-  "total": 394,
-  "new_today": 0,
+  "generated_at": "2026-07-28T07:53:29",
+  "total": 395,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "900270",
+      "name": "헝셩그룹",
+      "sosok": "",
+      "report_name": "최대주주변경",
+      "submitter": "헝셩그룹",
+      "submitted_at": "2026.07.28",
+      "time": "07:50",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260728900013",
+      "rcp_no": "20260728900013",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 420,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260623",
+      "signal_confidence": "high",
+      "signal_main_theme": "공시/유상증자",
+      "matched_at": "2026-07-28T07:53:29"
+    },
     {
       "ticker": "004150",
       "name": "한솔홀딩스",
