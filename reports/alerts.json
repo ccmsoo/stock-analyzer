@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-29T08:14:05",
-  "total": 419,
-  "new_today": 1,
+  "generated_at": "2026-07-29T09:09:14",
+  "total": 417,
+  "new_today": 0,
   "alerts": [
     {
       "ticker": "000660",
@@ -7716,44 +7716,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "반도체 (시스템·AI 반도체 설계 및 장비·소재 수요)",
       "matched_at": "2026-06-29T13:57:38"
-    },
-    {
-      "ticker": "300080",
-      "name": "플리토",
-      "sosok": "",
-      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
-      "submitter": "플리토",
-      "submitted_at": "2026.06.29",
-      "time": "07:59",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260629900047",
-      "rcp_no": "20260629900047",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 5620,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260529",
-      "signal_confidence": "high",
-      "signal_main_theme": "AI 서비스·플랫폼",
-      "matched_at": "2026-06-29T09:03:53"
-    },
-    {
-      "ticker": "300080",
-      "name": "플리토",
-      "sosok": "",
-      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
-      "submitter": "플리토",
-      "submitted_at": "2026.06.29",
-      "time": "07:59",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260629900039",
-      "rcp_no": "20260629900039",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 5620,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260529",
-      "signal_confidence": "high",
-      "signal_main_theme": "AI 서비스·플랫폼",
-      "matched_at": "2026-06-29T09:03:54"
     },
     {
       "ticker": "309930",
