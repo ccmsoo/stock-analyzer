@@ -130,7 +130,16 @@ def main():
                 print(f"   {done}/{len(have_news)}")
 
     if not scored:
+        # 후보 0건이어도 json은 날짜 갱신해서 저장 — 안 그러면 UI가 며칠 전
+        # 후보를 오늘 것처럼 계속 보여줌 (2026-07-28~31 폭락주간 실사례:
+        # 뉴스가 전부 시황이라 촉매 0건 → 7/27자 화면이 나흘간 정지).
         print(f"\n촉매점수 {args.min_score}+ 종목 없음.")
+        from datetime import datetime as _dt
+        out = ROOT / "reports" / "presurge_radar.json"
+        json.dump({"date": date_str, "generated_at": _dt.now().isoformat(timespec="seconds"),
+                   "candidates": [], "note": "촉매 후보 없음 (시황성 뉴스만 감지)"},
+                  open(out, "w"), ensure_ascii=False, indent=1)
+        print(f"💾 저장: {out} (후보 0건)")
         return
 
     # 3) 현재가 — 이미 오른 것 제외 (toss prices)
