@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-01T09:02:35",
-  "total": 438,
+  "generated_at": "2026-08-01T12:46:58",
+  "total": 437,
   "new_today": 0,
   "alerts": [
     {
@@ -8191,25 +8191,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "부동산·건설(주택 개발)",
       "matched_at": "2026-07-02T13:37:57"
-    },
-    {
-      "ticker": "003160",
-      "name": "디아이",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결(자율공시)",
-      "submitter": "디아이",
-      "submitted_at": "2026.07.02",
-      "time": "09:20",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260702800103",
-      "rcp_no": "20260702800103",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 25800,
-      "today_change_pct": 10.1,
-      "signal_last_seen": "20260609",
-      "signal_confidence": "medium",
-      "signal_main_theme": "반도체 장비/부품",
-      "matched_at": "2026-07-02T09:20:53"
     },
     {
       "ticker": "002780",
