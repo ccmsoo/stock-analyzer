@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-02T13:37:21",
-  "total": 410,
+  "generated_at": "2026-08-02T16:16:13",
+  "total": 408,
   "new_today": 0,
   "alerts": [
     {
@@ -7678,44 +7678,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "수급/공모주(IPO)",
       "matched_at": "2026-07-03T17:26:28"
-    },
-    {
-      "ticker": "017000",
-      "name": "신원종합개발",
-      "sosok": "",
-      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
-      "submitter": "신원종합개발",
-      "submitted_at": "2026.07.03",
-      "time": "13:50",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260703900394",
-      "rcp_no": "20260703900394",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 2675,
-      "today_change_pct": 16.14,
-      "signal_last_seen": "20260702",
-      "signal_confidence": "medium",
-      "signal_main_theme": "정책/메가프로젝트(지역 인프라·건설)",
-      "matched_at": "2026-07-03T14:08:37"
-    },
-    {
-      "ticker": "043260",
-      "name": "성호전자",
-      "sosok": "",
-      "report_name": "합병등종료보고서\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t(합병)",
-      "submitter": "성호전자",
-      "submitted_at": "2026.07.03",
-      "time": "13:08",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260703000183",
-      "rcp_no": "20260703000183",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 21600,
-      "today_change_pct": 1.37,
-      "signal_last_seen": "20260603",
-      "signal_confidence": "high",
-      "signal_main_theme": "반도체 (광/인터커넥트 — 실리콘 포토닉스)",
-      "matched_at": "2026-07-03T14:08:38"
     },
     {
       "ticker": "452200",
