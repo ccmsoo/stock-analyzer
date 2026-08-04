@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-04T09:57:48",
-  "total": 410,
-  "new_today": 2,
+  "generated_at": "2026-08-04T13:11:16",
+  "total": 411,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "046390",
+      "name": "삼화네트웍스",
+      "sosok": "",
+      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
+      "submitter": "삼화네트웍스",
+      "submitted_at": "2026.08.04",
+      "time": "10:27",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804900150",
+      "rcp_no": "20260804900150",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 2015,
+      "today_change_pct": 0.25,
+      "signal_last_seen": "20260625",
+      "signal_confidence": "high",
+      "signal_main_theme": "수급",
+      "matched_at": "2026-08-04T13:11:16"
+    },
     {
       "ticker": "090460",
       "name": "비에이치",
