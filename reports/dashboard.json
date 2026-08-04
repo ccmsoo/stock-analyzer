@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T17:42:39",
+  "generated_at": "2026-08-04T18:21:18",
   "signals": {
     "003060": {
       "name": "에이프로젠바이오로직스",
@@ -781,8 +781,8 @@
       "name": "디아이씨",
       "market": "KOSPI",
       "first_seen": "20260512",
-      "last_seen": "20260803",
-      "consecutive_days": 6,
+      "last_seen": "20260804",
+      "consecutive_days": 7,
       "main_theme": "분석 실패",
       "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
@@ -821,6 +821,10 @@
         {
           "date": "20260803",
           "change_pct": 7.51
+        },
+        {
+          "date": "20260804",
+          "change_pct": 14.63
         }
       ]
     },
@@ -3399,25 +3403,22 @@
       "name": "대우건설",
       "market": "KOSPI",
       "first_seen": "20260514",
-      "last_seen": "20260616",
-      "consecutive_days": 2,
-      "main_theme": "건설/부동산",
-      "specific_signal": "라이프케어사와의 시니어주택 개발 협력 MOU(시니어주택 사업 파트너십)",
-      "trigger_type": "contract",
-      "confidence": "high",
-      "watch_keywords": [
-        "시니어주택",
-        "중동 재건사업 수주 기회",
-        "라이프케어 연계 시니어주택 MOU",
-        "공공재개발 관리처분",
-        "시니어 주거서비스 플랫폼",
-        "재건시장 프로젝트 파이낸싱"
-      ],
-      "related_stocks": [
-        "GS건설",
-        "현대건설"
-      ],
-      "reasoning": "대우건설이 6월16일 다수 언론에 보도된 신한라이프케어와의 시니어주택 사업 업무협약(MOU)을 발표하면서 해당 사업 기대감이 즉각 주가에 반영됐습니다. 같은 날 중동 종전 합의로 건설업종 전반이 강세를 보인 매크로 호재가 동반되어 상승 폭이 커졌습니다.",
+      "last_seen": "20260804",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260514",
@@ -3426,6 +3427,10 @@
         {
           "date": "20260616",
           "change_pct": 19.87
+        },
+        {
+          "date": "20260804",
+          "change_pct": 14.29
         }
       ]
     },
@@ -4261,8 +4266,8 @@
       "name": "한세엠케이",
       "market": "KOSPI",
       "first_seen": "20260515",
-      "last_seen": "20260803",
-      "consecutive_days": 5,
+      "last_seen": "20260804",
+      "consecutive_days": 6,
       "main_theme": "분석 실패",
       "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
@@ -4297,6 +4302,10 @@
         {
           "date": "20260803",
           "change_pct": 9.04
+        },
+        {
+          "date": "20260804",
+          "change_pct": 14.96
         }
       ]
     },
@@ -5497,38 +5506,22 @@
       "name": "OCI홀딩스",
       "market": "KOSPI",
       "first_seen": "20260518",
-      "last_seen": "20260723",
-      "consecutive_days": 5,
-      "main_theme": "실적",
-      "specific_signal": "2분기 영업이익 1,080억원(3개 분기 연속 흑자) 발표 및 폴리실리콘 생산능력 2배(7만t 증설 언급)·미국 태양광용 1.4조원 베팅·기존 생산물량 솔드아웃(2029년까지)",
-      "trigger_type": "earnings",
-      "confidence": "high",
-      "watch_keywords": [
-        "태양광",
-        "어닝 서프라이즈",
-        "폴리실리콘 7만t 증설",
-        "생산능력 2배",
-        "솔드아웃 2029",
-        "美 1.4조 투자"
-      ],
-      "related_stocks": [
-        "한화솔루션",
-        "에스에너지"
-      ],
-      "reasoning": "회사 발표(및 관련 보도)에 따르면 2Q 영업이익이 1,080억원으로 흑자 전환했고 연속 흑자 및 '생산능력 2배·폴리실리콘 증설·미국 대규모 투자·솔드아웃' 구체화로 향후 실적 지속성·수주(수급) 우려 해소가 동시에 확인됐다. 이러한 실적·증설·수급 동시 확인이 직전 부진 탈피 기대를 자극해 급등·상한가로 이어진 것으로 판단된다.",
-      "reason_unknown_category": "",
-      "industry_chain": "태양광/재생에너지 (폴리실리콘 원재료 생산)",
-      "chain_position": "원소재",
-      "chain_role": "태양광용 폴리실리콘 원재료 생산 및 공급",
+      "last_seen": "20260804",
+      "consecutive_days": 6,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "태양광 모듈 제조사",
-        "태양광 발전사업자"
-      ],
-      "peer_chain": [
-        "REC Silicon",
-        "GCL-Poly"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260518",
@@ -5549,6 +5542,10 @@
         {
           "date": "20260723",
           "change_pct": 30.0
+        },
+        {
+          "date": "20260804",
+          "change_pct": 14.27
         }
       ]
     },
@@ -6421,8 +6418,8 @@
       "name": "티웨이홀딩스",
       "market": "KOSPI",
       "first_seen": "20260519",
-      "last_seen": "20260803",
-      "consecutive_days": 8,
+      "last_seen": "20260804",
+      "consecutive_days": 9,
       "main_theme": "분석 실패",
       "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
@@ -6469,6 +6466,10 @@
         {
           "date": "20260803",
           "change_pct": 30.0
+        },
+        {
+          "date": "20260804",
+          "change_pct": 12.98
         }
       ]
     },
@@ -6476,37 +6477,22 @@
       "name": "티엠씨",
       "market": "KOSPI",
       "first_seen": "20260519",
-      "last_seen": "20260715",
-      "consecutive_days": 2,
-      "main_theme": "반도체(후공정 패키징/전자파 차폐)",
-      "specific_signal": "AI 반도체 확산에 따른 전자파 차폐(EMI)·고성능 패키징 수요 기대",
-      "trigger_type": "unknown",
-      "confidence": "medium",
-      "watch_keywords": [
-        "AI 반도체",
-        "고성능 패키징",
-        "전자파 차폐",
-        "EMI 실드 부품",
-        "패키징 소재 수요",
-        "데이터센터 AI 가속기"
-      ],
-      "related_stocks": [
-        "한국첨단소재",
-        "삼성전자"
-      ],
-      "reasoning": "7/14 보도에서 AI 반도체 랠리로 전자파 차폐·고성능 패키징 관련주가 강세를 보였다는 점이 반복적으로 언급되어, 티엠씨는 해당 섹터 수혜 기대감에 매수세가 유입된 것으로 보인다. 회사 측의 별도 공시·계약·실적 발표는 확인되지 않아 테마(섹터) 랠리가 표면적 트리거로 작용한 것으로 판단된다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "반도체 후공정 패키징",
-      "chain_position": "부품",
-      "chain_role": "반도체·전자기기용 전자파 차폐(EMI) 부품 및 패키징 소재 공급",
+      "last_seen": "20260804",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "weak_name_link",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "삼성전자",
-        "SK하이닉스"
-      ],
-      "peer_chain": [
-        "한국첨단소재"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260519",
@@ -6515,6 +6501,10 @@
         {
           "date": "20260715",
           "change_pct": 17.54
+        },
+        {
+          "date": "20260804",
+          "change_pct": 18.64
         }
       ]
     },
@@ -8192,36 +8182,22 @@
       "name": "한올바이오파마",
       "market": "KOSPI",
       "first_seen": "20260521",
-      "last_seen": "20260707",
-      "consecutive_days": 7,
-      "main_theme": "바이오",
-      "specific_signal": "7월 R&D 모멘텀(기술수출·임상 데이터 공개 기대)에 따른 섹터 랠리",
-      "trigger_type": "unknown",
+      "last_seen": "20260804",
+      "consecutive_days": 8,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
       "confidence": "low",
-      "watch_keywords": [
-        "제약·바이오 이벤트",
-        "R&D 모멘텀",
-        "기술수출",
-        "임상 중간결과 발표",
-        "라이선스아웃 계약",
-        "주가상승률 Top100"
-      ],
-      "related_stocks": [
-        "삼성바이오로직스",
-        "유한양행"
-      ],
-      "reasoning": "7월 6일 다수 매체가 '제약·바이오 하반기 이벤트 장세·R&D 모멘텀'을 언급했고 같은 날 해당 종목이 '상반기 주가상승률 Top100'으로도 보도되어 섹터·모멘텀성 자금 유입이 관측됩니다. 다만 회사의 별도 공시(기술수출·임상 탑라인 등)나 계약성 뉴스는 확인되지 않아 개별 실적·공시보다는 섹터 랠리에 따른 수급성 상승으로 판단됩니다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "신약개발/바이오텍 (기술수출·임상 중심)",
-      "chain_position": "최종재",
-      "chain_role": "바이오의약품(신약) 개발 및 기술이전/라이선스아웃 추진",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
-      "peer_chain": [
-        "셀트리온",
-        "한미약품",
-        "유한양행"
-      ],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260521",
@@ -8250,6 +8226,10 @@
         {
           "date": "20260707",
           "change_pct": 7.16
+        },
+        {
+          "date": "20260804",
+          "change_pct": 13.17
         }
       ]
     },
@@ -9281,41 +9261,22 @@
       "name": "대양금속",
       "market": "KOSPI",
       "first_seen": "20260522",
-      "last_seen": "20260706",
-      "consecutive_days": 6,
-      "main_theme": "실적",
-      "specific_signal": "스테인리스(STS) 가격 반등으로 인한 실적 개선·흑자 전환 기대",
-      "trigger_type": "earnings",
-      "confidence": "medium",
-      "watch_keywords": [
-        "스테인리스 가격 반등",
-        "실적 개선(흑자 전환)",
-        "STS 절삭가공 수요",
-        "조선·반도체 수요 회복",
-        "니켈·크롬 가격"
-      ],
-      "related_stocks": [
-        "POSCO",
-        "세아제강",
-        "동국제강"
-      ],
-      "reasoning": "7월 5일 보도에서 스테인리스 가격이 바닥을 찍고 반등하고 있다는 점과 이에 따른 대양금속의 흑자 전환 기대가 제기되며 매수세가 유입된 것으로 보입니다. 같은 날 업계권 기사(티플랙스 언급)는 STS 절삭가공 수요 회복 가능성을 보강해 수급·실적 기대를 확대했습니다.",
-      "reason_unknown_category": "",
-      "industry_chain": "스테인리스 가공·금속가공",
-      "chain_position": "조립/제조",
-      "chain_role": "스테인리스(STS) 절삭가공 및 가공제품(부품/판재) 공급",
-      "upstream": [
-        "POSCO",
-        "세아제강"
-      ],
-      "downstream": [
-        "조선업체(현대중공업 등)",
-        "반도체 장비업체"
-      ],
-      "peer_chain": [
-        "티플랙스",
-        "세아제강"
-      ],
+      "last_seen": "20260804",
+      "consecutive_days": 7,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260522",
@@ -9340,6 +9301,10 @@
         {
           "date": "20260706",
           "change_pct": 12.18
+        },
+        {
+          "date": "20260804",
+          "change_pct": 14.28
         }
       ]
     },
@@ -11162,10 +11127,10 @@
       "name": "NHN",
       "market": "KOSPI",
       "first_seen": "20260529",
-      "last_seen": "20260727",
-      "consecutive_days": 3,
+      "last_seen": "20260804",
+      "consecutive_days": 4,
       "main_theme": "분석 실패",
-      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
       "confidence": "low",
       "watch_keywords": [],
@@ -11190,6 +11155,10 @@
         {
           "date": "20260727",
           "change_pct": 10.16
+        },
+        {
+          "date": "20260804",
+          "change_pct": 17.63
         }
       ]
     },
@@ -11552,8 +11521,8 @@
       "name": "본느",
       "market": "KOSDAQ",
       "first_seen": "20260529",
-      "last_seen": "20260803",
-      "consecutive_days": 3,
+      "last_seen": "20260804",
+      "consecutive_days": 4,
       "main_theme": "분석 실패",
       "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
@@ -11580,6 +11549,10 @@
         {
           "date": "20260803",
           "change_pct": 29.99
+        },
+        {
+          "date": "20260804",
+          "change_pct": 29.82
         }
       ]
     },
@@ -12301,29 +12274,30 @@
       "name": "크라우드웍스",
       "market": "KOSDAQ",
       "first_seen": "20260601",
-      "last_seen": "20260601",
-      "consecutive_days": 1,
-      "main_theme": "AI / 피지컬AI",
-      "specific_signal": "피지컬AI 데이터랩 신설(회사 공시·보도)",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "피지컬AI",
-        "합성데이터",
-        "피지컬AI 데이터랩 신설",
-        "국책과제 수주 7배",
-        "로봇 산업 수요",
-        "AI 데이터 인프라"
-      ],
-      "related_stocks": [
-        "두산로보틱스",
-        "LG전자"
-      ],
-      "reasoning": "회사(크라우드웍스)가 5월 28일 피지컬AI 데이터랩 신설을 발표하며 피지컬AI 전환 및 데이터 인프라 강화 의지를 알렸고, 앞서 국책과제 수주 실적(작년 대비 7배) 보도로 기술력 입증이 이어진 점이 시장의 매수 심리를 자극한 것으로 보인다. 젠슨 황 방한 등 피지컬AI·로보틱스에 대한 전방 수요 기대감도 동반되어 관련 종목군과 함께 급등을 촉발했다.",
+      "last_seen": "20260804",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260601",
           "change_pct": 29.86
+        },
+        {
+          "date": "20260804",
+          "change_pct": 29.83
         }
       ]
     },
@@ -14430,37 +14404,22 @@
       "name": "랩지노믹스",
       "market": "KOSDAQ",
       "first_seen": "20260609",
-      "last_seen": "20260709",
-      "consecutive_days": 2,
-      "main_theme": "바이오",
-      "specific_signal": "5대 1 주식병합 결정(주식병합) — 유통주식수 감소에 따른 주가 안정 기대",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "바이오·진단",
-        "구조조정/턴어라운드",
-        "5대1 주식병합",
-        "잠재적 회계 리스크 해소",
-        "분자진단 키트"
-      ],
-      "related_stocks": [
-        "씨젠",
-        "바이오니아"
-      ],
-      "reasoning": "6월 30일 발표된 5대1 주식병합 공시는 유통주식 감소로 단기 주가 안정 및 수급 개선 기대를 불러와 투자심리를 자극했으며, 회사의 '수익성 중심 사업 재편' 및 이후 보도된 '잠재적 회계 리스크 선제 해소' 관련 언급이 상승 흐름을 뒷받침했습니다. 이러한 복합적 기업활동(주식병합+구조조정 해명)이 D-day 전후 외형적 매수로 연결된 것으로 판단됩니다.",
-      "reason_unknown_category": "",
-      "industry_chain": "분자진단/체외진단",
-      "chain_position": "최종재",
-      "chain_role": "분자진단 키트 및 검사서비스(체외진단) 제공",
+      "last_seen": "20260804",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "병원·임상검사기관",
-        "공공보건기관"
-      ],
-      "peer_chain": [
-        "씨젠",
-        "바이오니아"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260609",
@@ -14469,6 +14428,10 @@
         {
           "date": "20260709",
           "change_pct": 18.18
+        },
+        {
+          "date": "20260804",
+          "change_pct": 29.93
         }
       ]
     },
@@ -16096,25 +16059,16 @@
       "name": "SK이터닉스",
       "market": "KOSPI",
       "first_seen": "20260615",
-      "last_seen": "20260723",
-      "consecutive_days": 6,
-      "main_theme": "신재생에너지/전력망(ESS·VPP)",
-      "specific_signal": "중동 긴장·유가 급등에 따른 신재생에너지 섹터 플레이라이트(ESS/VPP 관련주 일제 강세) — 신안우이 해상풍력 착공 등 국내 프로젝트 모멘텀 병행",
-      "trigger_type": "rumor",
-      "confidence": "medium",
-      "watch_keywords": [
-        "신재생에너지",
-        "유가 급등(중동 리스크)",
-        "신안우이 해상풍력 390MW",
-        "VPP 주도권 경쟁",
-        "ESS 설치·VPP 수주"
-      ],
-      "related_stocks": [
-        "한화에너지",
-        "두산중공업"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260615, 6일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260804",
+      "consecutive_days": 7,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -16145,6 +16099,10 @@
         {
           "date": "20260723",
           "change_pct": 30.0
+        },
+        {
+          "date": "20260804",
+          "change_pct": 19.87
         }
       ]
     },
@@ -17071,39 +17029,22 @@
       "name": "LIG디펜스앤에어로스페이스",
       "market": "KOSPI",
       "first_seen": "20260616",
-      "last_seen": "20260715",
-      "consecutive_days": 2,
-      "main_theme": "방산",
-      "specific_signal": "글로벌 6500 장비 2대 계약·한국형 전자전 체계 개발 관련 계약 소식(수주)",
-      "trigger_type": "contract",
-      "confidence": "high",
-      "watch_keywords": [
-        "K-방산 수출",
-        "중동 지정학 리스크",
-        "외국인 순매수",
-        "글로벌 6500 2대 계약",
-        "한국형 전자전 체계",
-        "우주·위성 기술 확보"
-      ],
-      "related_stocks": [
-        "한화에어로스페이스",
-        "한화시스템"
-      ],
-      "reasoning": "D-day에 네이버 태깅 기사에서 '글로벌 6500' 2대 계약 체결 및 한국형 전자전 체계 개발 관련 보도가 나왔고, 같은 날 중동 지정학 리스크로 방산 섹터 전반이 강세를 보이며 외국인 매수도 동반되어 주가가 급등한 것으로 판단됩니다. 즉, 개별 수주(계약 발표)가 직접적 촉매였고 섹터·수급 요인이 상승을 증폭시켰습니다.",
-      "reason_unknown_category": "",
-      "industry_chain": "방공·전자전(국방·방산)",
-      "chain_position": "조립/제조",
-      "chain_role": "전자전·무기체계의 설계·통합·완제품 공급(수주·수출 중심)",
+      "last_seen": "20260804",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "weak_name_link",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "국방부",
-        "해외 방산 고객(중동 등)"
-      ],
-      "peer_chain": [
-        "한화에어로스페이스",
-        "한화시스템",
-        "LIG넥스원"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260616",
@@ -17112,6 +17053,10 @@
         {
           "date": "20260715",
           "change_pct": 13.83
+        },
+        {
+          "date": "20260804",
+          "change_pct": 14.59
         }
       ]
     },
@@ -17179,26 +17124,15 @@
       "name": "에이엔피",
       "market": "KOSPI",
       "first_seen": "20260616",
-      "last_seen": "20260717",
-      "consecutive_days": 4,
-      "main_theme": "수급(단기 테마성 매매)",
-      "specific_signal": "뚜렷한 호재성 공시·계약 없음 — 당일(07.16) 투자경고 지정예고 관련 시장 기사와 함께 단기 매수(동반상한가·테마성 수급) 발생",
-      "trigger_type": "unknown",
+      "last_seen": "20260804",
+      "consecutive_days": 5,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
       "confidence": "low",
-      "watch_keywords": [
-        "수급",
-        "투자경고",
-        "동반상한가",
-        "단기 공매도 청산",
-        "거래정지/투자경고 공시",
-        "거래량 급증"
-      ],
-      "related_stocks": [
-        "모나리자",
-        "비비안",
-        "삼익제약"
-      ],
-      "reasoning": "최근 기사들은 '투자경고 지정예고' 등 시장 전체·종목대상 헤드라인에 그치며 에이엔피 자체의 긍정적 공시나 사업적 호재는 확인되지 않습니다. 따라서 D-day의 급등(+29.85%, 거래량 급증)은 개별 호재보다는 단기 수급·테마성 매매(동반상한가, 공매도 청산·과열 매수 등)로 해석하는 것이 합리적입니다.",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
       "reason_unknown_category": "headline_only_generic",
       "industry_chain": "",
       "chain_position": "",
@@ -17222,6 +17156,10 @@
         {
           "date": "20260717",
           "change_pct": 29.85
+        },
+        {
+          "date": "20260804",
+          "change_pct": 13.98
         }
       ]
     },
@@ -21618,25 +21556,16 @@
       "name": "SHD",
       "market": "KOSPI",
       "first_seen": "20260624",
-      "last_seen": "20260703",
-      "consecutive_days": 2,
-      "main_theme": "수급/시장(섹터 랠리 연동)",
-      "specific_signal": "기관 순매수 주도 코스피 반등·반도체 섹터 동반 강세로 인한 단기 동반 상승(시장 매크로/수급 흐름)",
-      "trigger_type": "unknown",
+      "last_seen": "20260804",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
       "confidence": "low",
-      "watch_keywords": [
-        "수급(기관) 유입",
-        "반도체 섹터 랠리",
-        "상장폐지 칼바람(7월)",
-        "동전주 유동성 급증",
-        "거래량 스파이크"
-      ],
-      "related_stocks": [
-        "SK하이닉스",
-        "삼성전자"
-      ],
-      "reasoning": "14일 내 제공된 기사들은 SHD 개별 공시·실적·수주 등 회사 고유의 호재가 아닌 코스피 전반의 반도체 랠리와 기관 대량 순매수 관련 보도입니다. SHD의 급등은 특정 기업 이슈보다는 장중 수급(기관 매수)과 섹터 동반 상승에 동조한 것으로 판단됩니다.",
-      "reason_unknown_category": "theme_only_supply",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -21651,6 +21580,10 @@
         {
           "date": "20260703",
           "change_pct": 19.06
+        },
+        {
+          "date": "20260804",
+          "change_pct": 29.85
         }
       ]
     },
@@ -22081,25 +22014,16 @@
       "name": "삼기에너지솔루션즈",
       "market": "KOSDAQ",
       "first_seen": "20260624",
-      "last_seen": "20260702",
-      "consecutive_days": 3,
-      "main_theme": "로봇/자동화",
-      "specific_signal": "휴머노이드 프레임 개발 낙점(프레임 개발·수주 기대)",
-      "trigger_type": "contract",
-      "confidence": "high",
-      "watch_keywords": [
-        "휴머노이드",
-        "로봇/자동화",
-        "프레임 개발 낙점",
-        "개발·양산 일정",
-        "수주 공시"
-      ],
-      "related_stocks": [
-        "로킷",
-        "레인보우로보틱스"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260624, 3일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260804",
+      "consecutive_days": 4,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -22118,6 +22042,10 @@
         {
           "date": "20260702",
           "change_pct": 29.95
+        },
+        {
+          "date": "20260804",
+          "change_pct": 29.96
         }
       ]
     },
@@ -22266,26 +22194,16 @@
       "name": "삼기",
       "market": "KOSDAQ",
       "first_seen": "20260624",
-      "last_seen": "20260702",
-      "consecutive_days": 4,
-      "main_theme": "로봇/자동화",
-      "specific_signal": "글로벌 휴머노이드 로봇 기업의 '프레임(골격) 개발' 협력업체로 선정(프레임 개발·공급 수주 기대)",
-      "trigger_type": "contract",
-      "confidence": "high",
-      "watch_keywords": [
-        "휴머노이드",
-        "로봇 부품",
-        "프레임 개발 선정",
-        "글로벌 파트너십",
-        "프레임 모듈 수주"
-      ],
-      "related_stocks": [
-        "유진로봇",
-        "로보티즈",
-        "로킷"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260624, 4일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260804",
+      "consecutive_days": 5,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "weak_name_link",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -22308,6 +22226,10 @@
         {
           "date": "20260702",
           "change_pct": 29.97
+        },
+        {
+          "date": "20260804",
+          "change_pct": 30.0
         }
       ]
     },
@@ -24057,25 +23979,16 @@
       "name": "자이에스앤디",
       "market": "KOSPI",
       "first_seen": "20260629",
-      "last_seen": "20260723",
-      "consecutive_days": 3,
-      "main_theme": "부동산·건설 (주택 분양)",
-      "specific_signal": "도심 분양 착수: '충정로역자이르네' 299가구 8월 분양(2·5호선 더블역세권)",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "주택 분양",
-        "자산매각",
-        "충정로역자이르네 299가구",
-        "영종하늘도시 1,327억 수주",
-        "서초 토지 1,400억 매각"
-      ],
-      "related_stocks": [
-        "DL이앤씨",
-        "GS건설"
-      ],
-      "reasoning": "이전 분석 재사용 (최초 20260629, 3일째 등장)",
-      "reason_unknown_category": "",
+      "last_seen": "20260804",
+      "consecutive_days": 4,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -24094,6 +24007,10 @@
         {
           "date": "20260723",
           "change_pct": 27.51
+        },
+        {
+          "date": "20260804",
+          "change_pct": 14.99
         }
       ]
     },
@@ -24796,37 +24713,22 @@
       "name": "GS건설",
       "market": "KOSPI",
       "first_seen": "20260701",
-      "last_seen": "20260723",
-      "consecutive_days": 2,
-      "main_theme": "정비사업·주택 분양(재개발·재건축)",
-      "specific_signal": "대형 재개발 수주·프리미엄 단지(목동 윤슬자이) 부각 — 성수·송파 등 굵직한 재개발 포트폴리오 부각",
-      "trigger_type": "contract",
-      "confidence": "medium",
-      "watch_keywords": [
-        "재개발(정비사업)",
-        "주택 분양(프리미엄 브랜드)",
-        "목동 윤슬자이 관리비 절감",
-        "성수·송파 대형 재개발(7조대)"
-      ],
-      "related_stocks": [
-        "현대건설",
-        "DL이앤씨"
-      ],
-      "reasoning": "D-day에 다수의 종목 태그 기사들이 GS건설의 정비사업(재개발) 경쟁력과 목동 윤슬자이 등 프리미엄 주거모델을 부각시켰습니다. 시장은 대형 재개발 수주 기대와 분양·운영 차별화(관리비 절감 등)를 즉각적 매수 재료로 해석해 주가를 급등시킨 것으로 보입니다.",
-      "reason_unknown_category": "",
-      "industry_chain": "정비사업·주거(주택 분양·도심 재개발)",
-      "chain_position": "조립/제조",
-      "chain_role": "도심 재개발 사업 수행 및 아파트 단지 건설·분양·단지 운영(프리미엄 주거모델 제공)",
+      "last_seen": "20260804",
+      "consecutive_days": 3,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "재개발 조합",
-        "주택 실수요자(분양 수요)"
-      ],
-      "peer_chain": [
-        "현대건설",
-        "대우건설",
-        "DL이앤씨"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260701",
@@ -24835,6 +24737,10 @@
         {
           "date": "20260723",
           "change_pct": 18.21
+        },
+        {
+          "date": "20260804",
+          "change_pct": 18.56
         }
       ]
     },
@@ -28890,10 +28796,10 @@
       "name": "기가레인",
       "market": "KOSDAQ",
       "first_seen": "20260710",
-      "last_seen": "20260730",
-      "consecutive_days": 6,
+      "last_seen": "20260804",
+      "consecutive_days": 7,
       "main_theme": "분석 실패",
-      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
       "confidence": "low",
       "watch_keywords": [],
@@ -28930,6 +28836,10 @@
         {
           "date": "20260730",
           "change_pct": 13.67
+        },
+        {
+          "date": "20260804",
+          "change_pct": 21.89
         }
       ]
     },
@@ -29827,28 +29737,19 @@
       "name": "이스트에이드",
       "market": "KOSDAQ",
       "first_seen": "20260714",
-      "last_seen": "20260714",
-      "consecutive_days": 1,
-      "main_theme": "수급/공시",
-      "specific_signal": "5대 1 주식병합(역병합) 결정",
-      "trigger_type": "disclosure",
-      "confidence": "high",
-      "watch_keywords": [
-        "주식병합",
-        "5대1 병합",
-        "유동성 축소",
-        "모두의 AI 참여",
-        "그룹사 AI 시너지"
-      ],
-      "related_stocks": [
-        "이스트소프트",
-        "업스테이지"
-      ],
-      "reasoning": "7월 14일 이스트에이드가 5대1 주식병합을 결정했다고 공시했으며, 주식수 축소에 따른 주가 단위 상승·유동성 개선 기대가 당일 대량 매수세를 유발한 직접적 원인으로 판단된다. 같은 기간 이스트소프트 그룹의 '모두의 AI' 사업 참여 보도가 그룹주 전반에 우호적 심리를 더해 매수세를 강화했을 가능성도 있음.",
-      "reason_unknown_category": "",
-      "industry_chain": "AI 플랫폼/서비스",
-      "chain_position": "서비스",
-      "chain_role": "그룹 계열사로서 그룹 AI 사업 참여에 따른 서비스·사업 연계 가능성",
+      "last_seen": "20260804",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
       "downstream": [],
       "peer_chain": [],
@@ -29856,6 +29757,10 @@
         {
           "date": "20260714",
           "change_pct": 23.89
+        },
+        {
+          "date": "20260804",
+          "change_pct": 29.95
         }
       ]
     },
@@ -30010,16 +29915,16 @@
       "name": "지엔씨에너지",
       "market": "KOSDAQ",
       "first_seen": "20260714",
-      "last_seen": "20260723",
-      "consecutive_days": 2,
+      "last_seen": "20260804",
+      "consecutive_days": 3,
       "main_theme": "분석 실패",
-      "specific_signal": "JSON 파싱 오류: Expecting value: line 1 column 1 (char 0)",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
       "confidence": "low",
       "watch_keywords": [],
       "related_stocks": [],
       "reasoning": "",
-      "reason_unknown_category": "headline_only_generic",
+      "reason_unknown_category": "other",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -30034,6 +29939,10 @@
         {
           "date": "20260723",
           "change_pct": 29.96
+        },
+        {
+          "date": "20260804",
+          "change_pct": 21.9
         }
       ]
     },
@@ -31700,8 +31609,8 @@
       "name": "SGC에너지",
       "market": "KOSPI",
       "first_seen": "20260723",
-      "last_seen": "20260803",
-      "consecutive_days": 2,
+      "last_seen": "20260804",
+      "consecutive_days": 3,
       "main_theme": "분석 실패",
       "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
@@ -31724,6 +31633,10 @@
         {
           "date": "20260803",
           "change_pct": 8.47
+        },
+        {
+          "date": "20260804",
+          "change_pct": 14.03
         }
       ]
     },
@@ -31731,44 +31644,30 @@
       "name": "한미글로벌",
       "market": "KOSPI",
       "first_seen": "20260723",
-      "last_seen": "20260723",
-      "consecutive_days": 1,
-      "main_theme": "건설/엔지니어링",
-      "specific_signal": "회장 국민훈장(모란장) 수훈 및 사회공헌(베네수엘라 지진 구호 기부) 등 이미지·ESG 관련 뉴스에 따른 수혜 가능성",
-      "trigger_type": "unknown",
+      "last_seen": "20260804",
+      "consecutive_days": 2,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
       "confidence": "low",
-      "watch_keywords": [
-        "건설·엔지니어링",
-        "ESG·사회공헌",
-        "코스피 건설주 랠리",
-        "국민훈장 모란장",
-        "베네수엘라 지진 구호 5만달러",
-        "모듈러 건축 MOU 몽골"
-      ],
-      "related_stocks": [
-        "GS건설",
-        "현대건설",
-        "삼성엔지니어링"
-      ],
-      "reasoning": "최근 보도는 회장 수훈(7/12~7/13)과 구호 기부(7/15), ESG 평가 관련 리포트(7/21) 등 주로 이미지·사회공헌·섹터 호재성 기사에 집중되어 있으며, 당일 급등(+25.91%)을 설명할 명확한 수주·공시·실적성 뉴스는 확인되지 않습니다. 따라서 개별 호재보다는 7/22~23일 코스피·건설주 동반 랠리와 PR·ESG 관련 보도가 복합적으로 작용했을 가능성이 큽니다.",
-      "reason_unknown_category": "theme_only_supply",
-      "industry_chain": "건설 프로젝트관리(PM)/엔지니어링",
-      "chain_position": "서비스",
-      "chain_role": "건설 프로젝트 관리(PM)·감리·엔지니어링 제공",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "weak_name_link",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
       "upstream": [],
-      "downstream": [
-        "건설사(발주처)",
-        "공공기관"
-      ],
-      "peer_chain": [
-        "GS건설",
-        "현대건설",
-        "삼성엔지니어링"
-      ],
+      "downstream": [],
+      "peer_chain": [],
       "history": [
         {
           "date": "20260723",
           "change_pct": 25.91
+        },
+        {
+          "date": "20260804",
+          "change_pct": 16.51
         }
       ]
     },
@@ -33210,16 +33109,16 @@
       "name": "솔트룩스",
       "market": "KOSDAQ",
       "first_seen": "20260727",
-      "last_seen": "20260727",
-      "consecutive_days": 1,
+      "last_seen": "20260804",
+      "consecutive_days": 2,
       "main_theme": "분석 실패",
-      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
       "confidence": "low",
       "watch_keywords": [],
       "related_stocks": [],
       "reasoning": "",
-      "reason_unknown_category": "other",
+      "reason_unknown_category": "headline_only_generic",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -33230,6 +33129,10 @@
         {
           "date": "20260727",
           "change_pct": 16.62
+        },
+        {
+          "date": "20260804",
+          "change_pct": 29.97
         }
       ]
     },
@@ -34074,8 +33977,8 @@
       "name": "RF머트리얼즈",
       "market": "KOSDAQ",
       "first_seen": "20260731",
-      "last_seen": "20260731",
-      "consecutive_days": 1,
+      "last_seen": "20260804",
+      "consecutive_days": 2,
       "main_theme": "분석 실패",
       "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
@@ -34094,6 +33997,10 @@
         {
           "date": "20260731",
           "change_pct": 29.79
+        },
+        {
+          "date": "20260804",
+          "change_pct": 29.93
         }
       ]
     },
@@ -34209,8 +34116,8 @@
       "name": "DL",
       "market": "KOSPI",
       "first_seen": "20260803",
-      "last_seen": "20260803",
-      "consecutive_days": 1,
+      "last_seen": "20260804",
+      "consecutive_days": 2,
       "main_theme": "분석 실패",
       "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
@@ -34229,6 +34136,10 @@
         {
           "date": "20260803",
           "change_pct": 6.98
+        },
+        {
+          "date": "20260804",
+          "change_pct": 12.95
         }
       ]
     },
@@ -34317,8 +34228,8 @@
       "name": "알트",
       "market": "KOSDAQ",
       "first_seen": "20260803",
-      "last_seen": "20260803",
-      "consecutive_days": 1,
+      "last_seen": "20260804",
+      "consecutive_days": 2,
       "main_theme": "분석 실패",
       "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "trigger_type": "",
@@ -34326,7 +34237,7 @@
       "watch_keywords": [],
       "related_stocks": [],
       "reasoning": "",
-      "reason_unknown_category": "other",
+      "reason_unknown_category": "weak_name_link",
       "industry_chain": "",
       "chain_position": "",
       "chain_role": "",
@@ -34337,6 +34248,10 @@
         {
           "date": "20260803",
           "change_pct": 29.97
+        },
+        {
+          "date": "20260804",
+          "change_pct": 19.5
         }
       ]
     },
@@ -34391,6 +34306,303 @@
         {
           "date": "20260803",
           "change_pct": 20.1
+        }
+      ]
+    },
+    "078930": {
+      "name": "GS",
+      "market": "KOSPI",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 14.54
+        }
+      ]
+    },
+    "028670": {
+      "name": "팬오션",
+      "market": "KOSPI",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 14.29
+        }
+      ]
+    },
+    "148780": {
+      "name": "비큐AI",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 30.0
+        }
+      ]
+    },
+    "469750": {
+      "name": "아이비젼웍스",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "headline_only_generic",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 30.0
+        }
+      ]
+    },
+    "225190": {
+      "name": "LK삼양",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 29.94
+        }
+      ]
+    },
+    "163730": {
+      "name": "핑거",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 28.87
+        }
+      ]
+    },
+    "115180": {
+      "name": "큐리언트",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 27.25
+        }
+      ]
+    },
+    "347700": {
+      "name": "스피어",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 23.14
+        }
+      ]
+    },
+    "290650": {
+      "name": "엘앤씨바이오",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 20.91
+        }
+      ]
+    },
+    "174900": {
+      "name": "앱클론",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 20.73
+        }
+      ]
+    },
+    "456160": {
+      "name": "지투지바이오",
+      "market": "KOSDAQ",
+      "first_seen": "20260804",
+      "last_seen": "20260804",
+      "consecutive_days": 1,
+      "main_theme": "분석 실패",
+      "specific_signal": "API 오류: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "trigger_type": "",
+      "confidence": "low",
+      "watch_keywords": [],
+      "related_stocks": [],
+      "reasoning": "",
+      "reason_unknown_category": "other",
+      "industry_chain": "",
+      "chain_position": "",
+      "chain_role": "",
+      "upstream": [],
+      "downstream": [],
+      "peer_chain": [],
+      "history": [
+        {
+          "date": "20260804",
+          "change_pct": 19.58
         }
       ]
     }
