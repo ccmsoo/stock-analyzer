@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-05T21:17:35",
-  "total": 436,
+  "generated_at": "2026-08-05T23:44:30",
+  "total": 433,
   "new_today": 0,
   "alerts": [
     {
@@ -8155,44 +8155,6 @@
       "matched_at": "2026-07-07T08:22:02"
     },
     {
-      "ticker": "003490",
-      "name": "대한항공",
-      "sosok": "",
-      "report_name": "정정신고서제출요구\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t( 2026.06.25. 제출 증권신고서(합병) )",
-      "submitter": "금융감독원",
-      "submitted_at": "2026.07.06",
-      "time": "20:00",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260706100006",
-      "rcp_no": "20260706100006",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 28750,
-      "today_change_pct": 0.35,
-      "signal_last_seen": "20260615",
-      "signal_confidence": "high",
-      "signal_main_theme": "정책/지정학(거시 이벤트)",
-      "matched_at": "2026-07-06T22:44:26"
-    },
-    {
-      "ticker": "020560",
-      "name": "아시아나항공",
-      "sosok": "",
-      "report_name": "정정명령부과\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t( 2026.06.26. 제출 주요사항보고서(회사합병 결정) )",
-      "submitter": "금융감독원",
-      "submitted_at": "2026.07.06",
-      "time": "20:00",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260706100007",
-      "rcp_no": "20260706100007",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 7730,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260615",
-      "signal_confidence": "high",
-      "signal_main_theme": "M&A/지분확대",
-      "matched_at": "2026-07-06T22:44:27"
-    },
-    {
       "ticker": "001790",
       "name": "대한제당",
       "sosok": "",
@@ -8210,25 +8172,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "식품·제당 (원재료·가공)",
       "matched_at": "2026-07-07T20:29:37"
-    },
-    {
-      "ticker": "042040",
-      "name": "케이피엠테크",
-      "sosok": "",
-      "report_name": "타법인주식및출자증권취득결정",
-      "submitter": "케이피엠테크",
-      "submitted_at": "2026.07.06",
-      "time": "17:19",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260706900791",
-      "rcp_no": "20260706900791",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 4620,
-      "today_change_pct": 29.96,
-      "signal_last_seen": "20260706",
-      "signal_confidence": "high",
-      "signal_main_theme": "자본재편",
-      "matched_at": "2026-07-06T22:44:28"
     },
     {
       "ticker": "109610",
