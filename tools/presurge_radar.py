@@ -117,6 +117,7 @@ def main():
     # 2) AI 촉매 평가 (스레드)
     client = OpenAI(timeout=60, max_retries=1)
     scored = []
+    err_count = 0
     with ThreadPoolExecutor(max_workers=6) as ex:
         futs = {ex.submit(rate, client, nm, titles): (t, nm, mk) for t, nm, mk, titles in have_news}
         done = 0
@@ -124,15 +125,34 @@ def main():
             done += 1
             t, nm, mk = futs[f]
             r = f.result()
-            if r and r["score"] >= args.min_score:
+            if r is None:
+                err_count += 1
+            elif r["score"] >= args.min_score:
                 scored.append({"ticker": t, "name": nm, "market": mk, **r})
             if done % 50 == 0:
                 print(f"   {done}/{len(have_news)}")
 
+    # AI 호출이 절반 이상 실패면 '촉매 없음'이 아니라 'AI 장애' — 구분해서 실패로 종료.
+    # (실사례 2026-07-28~08-06: OpenAI 크레딧 소진 429를 rate()가 조용히 삼켜
+    #  10일간 '촉매 후보 없음'으로 위장 → 레이더가 장님인 걸 아무도 모름)
+    if have_news and err_count > len(have_news) * 0.5:
+        from datetime import datetime as _dt
+        out = ROOT / "reports" / "presurge_radar.json"
+        json.dump({"date": date_str, "generated_at": _dt.now().isoformat(timespec="seconds"),
+                   "candidates": [], "error": f"AI 평가 실패 {err_count}/{len(have_news)} — OpenAI 크레딧/키 확인 필요"},
+                  open(out, "w"), ensure_ascii=False, indent=1)
+        print(f"\n❌ AI 평가 {err_count}/{len(have_news)} 실패 — OpenAI 크레딧/키 확인 (레이더 무효)")
+        if args.telegram:
+            try:
+                from monitor.live_radar import send_telegram
+                send_telegram(f"⚠️ 레이더 장애: AI 평가 {err_count}/{len(have_news)} 실패 — OpenAI 크레딧/키 확인 필요")
+            except Exception:
+                pass
+        sys.exit(1)
+
     if not scored:
         # 후보 0건이어도 json은 날짜 갱신해서 저장 — 안 그러면 UI가 며칠 전
-        # 후보를 오늘 것처럼 계속 보여줌 (2026-07-28~31 폭락주간 실사례:
-        # 뉴스가 전부 시황이라 촉매 0건 → 7/27자 화면이 나흘간 정지).
+        # 후보를 오늘 것처럼 계속 보여줌.
         print(f"\n촉매점수 {args.min_score}+ 종목 없음.")
         from datetime import datetime as _dt
         out = ROOT / "reports" / "presurge_radar.json"

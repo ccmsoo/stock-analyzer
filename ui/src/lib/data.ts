@@ -235,6 +235,10 @@ export interface RadarData {
   generated_at: string;
   candidates: RadarCandidate[];
   rerise: RadarRerise[];
+  /** 후보 0건일 때 사유 (시황성 뉴스만 등) */
+  note?: string;
+  /** AI 평가 장애 등 — 이 값이 있으면 레이더 무효 */
+  error?: string;
 }
 
 export async function loadRadar(): Promise<RadarData> {

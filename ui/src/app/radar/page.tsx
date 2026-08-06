@@ -30,9 +30,17 @@ export default async function RadarPage() {
       </header>
 
       {!has ? (
-        <p className="mt-10 text-center text-sm text-muted-foreground">
-          아직 후보가 없습니다. (장전 cron 실행 전이거나 오늘 강한 촉매 없음)
-        </p>
+        radar.error ? (
+          <div className="mt-10 rounded-md border border-red-400/40 p-4 text-center text-sm text-red-400">
+            ⚠️ 레이더 장애 — {radar.error}
+          </div>
+        ) : (
+          <p className="mt-10 text-center text-sm text-muted-foreground">
+            {radar.note
+              ? `오늘(${radar.date ? formatDate(radar.date) : ""}) ${radar.note}`
+              : "아직 후보가 없습니다. (장전 cron 실행 전이거나 오늘 강한 촉매 없음)"}
+          </p>
+        )
       ) : (
         <>
           {/* 촉매 선진입 후보 */}
