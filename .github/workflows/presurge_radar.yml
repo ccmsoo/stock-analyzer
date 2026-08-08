@@ -32,6 +32,8 @@ jobs:
       - name: Run pre-surge catalyst radar
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          # OpenAI 장애 시 폴백 (선택 — 있으면 Claude Haiku로 촉매 평가)
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           # 토스 키(있으면 차트·유동성 필터 사용, 없으면 graceful)

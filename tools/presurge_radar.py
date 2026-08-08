@@ -58,6 +58,32 @@ SYS = """너는 한국 주식 단기 촉매 분석가다. 종목의 '최근 기�
 JSON만: {"score":0-10,"keyword":"결정적 키워드 1개","reason":"한 줄"}"""
 
 
+_anthropic_client = None
+
+
+def _rate_anthropic(name: str, txt: str):
+    """OpenAI 장애 시 폴백 — ANTHROPIC_API_KEY 있으면 Claude Haiku로 같은 평가.
+    (2026-07-28~08-06 OpenAI 크레딧 소진으로 레이더 10일 장님 — 단일 의존 제거)"""
+    global _anthropic_client
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return None
+    try:
+        if _anthropic_client is None:
+            import anthropic
+            _anthropic_client = anthropic.Anthropic(timeout=60, max_retries=1)
+        m = _anthropic_client.messages.create(
+            model="claude-haiku-4-5-20251001", max_tokens=300,
+            system=SYS,
+            messages=[{"role": "user", "content": f"종목: {name}\n최근 기사:\n{txt}\n\nJSON:"}])
+        raw = m.content[0].text.strip()
+        if raw.startswith("```"):
+            raw = raw.strip("`").lstrip("json").strip()
+        d = json.loads(raw)
+        return {"score": float(d.get("score", 0)), "keyword": d.get("keyword", ""), "reason": d.get("reason", "")}
+    except Exception:
+        return None
+
+
 def rate(client, name, titles):
     txt = "\n".join(f"- {t}" for t in titles[:12])
     try:
@@ -69,7 +95,7 @@ def rate(client, name, titles):
         d = json.loads(r.choices[0].message.content)
         return {"score": float(d.get("score", 0)), "keyword": d.get("keyword", ""), "reason": d.get("reason", "")}
     except Exception:
-        return None
+        return _rate_anthropic(name, txt)
 
 
 def main():
