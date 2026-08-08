@@ -1,0 +1,2347 @@
+{
+  "generated_at": "2026-05-15T01:30:33",
+  "lookback_days": 5,
+  "active_themes": [
+    {
+      "keyword": "earnings_surprise",
+      "member_tickers": [
+        "001540",
+        "001740",
+        "005430",
+        "007610",
+        "009450",
+        "010780",
+        "011080",
+        "025560",
+        "031430",
+        "042520",
+        "060590",
+        "066570",
+        "090460",
+        "092190",
+        "187870",
+        "196450",
+        "417840",
+        "420570",
+        "483650",
+        "493280",
+        "499790"
+      ],
+      "members": [
+        {
+          "name": "코아시아씨엠",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업이익 96% 증가 발표",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "실적 호조",
+            "영업이익 증가",
+            "수익성 개선",
+            "성장 가능성"
+          ],
+          "related_stocks": [],
+          "reasoning": "코아시아씨엠의 1분기 영업이익이 전년 대비 96.2% 증가한 18억 원이 발표되면서 실적 호조가 주가 상승의 직접적 요인이 되었다고 판단된다. 이는 회사의 성장 가능성과 수익성 개선에 대한 기대감을 시장에 전달한 것으로 보인다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 30.0
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_performance"
+        },
+        {
+          "name": "LG전자",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260514",
+          "consecutive_days": 2,
+          "main_theme": "실적",
+          "specific_signal": "1분기 깜짝 실적 및 로봇 사업 확장 가시화",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "어닝 서프라이즈",
+            "로봇 사업 확장",
+            "1분기 깜짝 실적"
+          ],
+          "related_stocks": [
+            "LG이노텍",
+            "LG화학"
+          ],
+          "reasoning": "이전 분석 재사용 (최초 20260512, 2일째 등장)",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 18.0
+            },
+            {
+              "date": "20260514",
+              "change_pct": 13.38
+            }
+          ],
+          "cluster_tag": "earnings_surprise"
+        },
+        {
+          "name": "GS피앤엘",
+          "market": "KOSPI",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업익 58.8% 증가",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "어닝 서프라이즈",
+            "영업이익 증가",
+            "실적 발표",
+            "매수세 집중"
+          ],
+          "related_stocks": [],
+          "reasoning": "GS피앤엘은 최근 발표된 1분기 실적에서 영업이익이 전년 대비 58.8% 증가한 242억 원을 기록하였다는 소식이 전해졌다. 이는 시장 예상을 뛰어넘는 결과로 투자자들의 매수세가 집중되며 주가 상승을 이끌었다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 12.84
+            }
+          ],
+          "cluster_tag": "earnings_surprise"
+        },
+        {
+          "name": "형지I&C",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "자사몰 '하이진닷컴' 매출 성장 및 목표치 발표",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "실적",
+            "자사몰 매출 성장",
+            "연간 매출 목표",
+            "하이진닷컴 론칭",
+            "목표치 발표"
+          ],
+          "related_stocks": [],
+          "reasoning": "형지I&C의 자사몰 '하이진닷컴'이 론칭 3년 만에 매출이 52% 증가했다는 실적 발표가 큰 호재로 작용했습니다. 이를 통해 연간 매출 60억 원을 목표로 하고 있다는 점이 긍정적으로 작용하여 주가가 급등했을 가능성이 높습니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.88
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_growth"
+        },
+        {
+          "name": "한국공항",
+          "market": "KOSPI",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "한국공항의 1분기 영업이익 급증",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "영업이익 급증",
+            "실적 개선",
+            "회사의 성과 향상",
+            "35.51% 증가"
+          ],
+          "related_stocks": [],
+          "reasoning": "한국공항의 1분기 영업이익이 전년 대비 35.51% 증가했다는 소식이 전해지면서 시장에서 긍정적으로 반영된 것으로 보입니다. 높은 영업이익 증가율이 투자자들에게 회사의 성과 향상에 대한 기대감을 높인 것으로 추정됩니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 18.11
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_improvement"
+        },
+        {
+          "name": "아이엠바이오로직스",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "바이오",
+          "specific_signal": "1분기 영업익·순이익 달성 및 IMB-101 마일스톤 인식",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "바이오",
+            "신약",
+            "IMB-101 마일스톤",
+            "1분기 영업익",
+            "순이익 달성"
+          ],
+          "related_stocks": [],
+          "reasoning": "아이엠바이오로직스는 신약 개발 본업을 통해 1분기 영업이익과 순이익을 달성했으며, IMB-101 마일스톤 인식을 통해 실적이 긍정적으로 평가되었습니다. 이는 당일 주가 상승에 주요 트리거로 작용했을 가능성이 높습니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 20.9
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "biotech_earnings"
+        },
+        {
+          "name": "서울바이오시스",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "서울바이오시스의 2026년 1분기 흑자 전환",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "어닝 서프라이즈",
+            "흑자 전환",
+            "영업이익",
+            "실적 회복",
+            "2026년 1분기"
+          ],
+          "related_stocks": [
+            "서울반도체"
+          ],
+          "reasoning": "서울바이오시스의 1분기 영업이익이 108억원으로 흑자 전환되었다는 실적 발표가 주가의 급등을 이끌었다. 이 실적은 전년 대비 회복된 모습으로 시장의 긍정적 반응을 받았다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.94
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_recovery"
+        },
+        {
+          "name": "경동나비엔",
+          "market": "KOSPI",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업이익 638억 원 발표, 전년 대비 62% 증가",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "실적 개선",
+            "영업이익 증가",
+            "북미 시장 성장",
+            "비용 절감",
+            "2023 1분기"
+          ],
+          "related_stocks": [],
+          "reasoning": "경동나비엔의 1분기 영업이익이 전년 대비 62% 증가한 638억 원을 발표하면서 주가가 상승했다. 실적 개선 원인으로는 북미 시장에서의 성장과 비용 절감 효과가 강조되었고, 이는 긍정적인 시장 반응을 이끌어냈다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 11.98
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_growth"
+        },
+        {
+          "name": "달바글로벌",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "달바글로벌 1분기 영업이익 451억원, 전년 대비 50% 증가 및 해외 매출 85% 급증",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "실적",
+            "영업이익 증가",
+            "해외 매출 급증",
+            "글로벌 성장 가능성"
+          ],
+          "related_stocks": [
+            "한국콜마",
+            "코스메카"
+          ],
+          "reasoning": "달바글로벌의 주가가 급등한 이유는 최근 발표한 1분기 실적이 예상을 초과하여 시장의 주목을 받았기 때문입니다. 특히 영업이익이 전년 대비 50% 증가하였고, 해외 시장에서의 매출이 85% 급증하면서 글로벌 성장 가능성을 보여주었습니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 13.5
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_growth"
+        },
+        {
+          "name": "안국약품",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 어닝 서프라이즈 및 영업이익 급증",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "어닝 서프라이즈",
+            "영업이익 급증",
+            "실적 개선",
+            "1분기 실적",
+            "투자자 반응"
+          ],
+          "related_stocks": [],
+          "reasoning": "안국약품의 1분기 영업이익이 전년 대비 173% 증가하여 시장의 기대를 초과하는 '어닝 서프라이즈'를 기록했다는 소식이 전해졌습니다. 이로 인해 투자자들 사이에서 긍정적 반응을 얻으며 주가가 상한가로 마감했습니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 29.94
+            }
+          ],
+          "cluster_tag": "earnings_surprise"
+        },
+        {
+          "name": "SK네트웍스",
+          "market": "KOSPI",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업이익 102% 증가",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "실적 개선",
+            "AI 사업 협업",
+            "영업이익 증가",
+            "투자자 매수세",
+            "시장 기대치 상회"
+          ],
+          "related_stocks": [
+            "SK스퀘어"
+          ],
+          "reasoning": "SK네트웍스의 1분기 영업이익이 전년 대비 102% 증가하며 시장 기대치를 상회하는 실적을 발표하였고, 이에 따라 투자자들의 매수세가 몰리며 주가가 급등한 것으로 판단됩니다. 특히 AI 사업 협업 확대에 따른 기대감이 실적 개선의 주요 요인으로 작용했을 가능성이 높습니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 29.93
+            }
+          ],
+          "cluster_tag": "earnings_surprise"
+        },
+        {
+          "name": "신세계인터내셔날",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 역대 최대 실적 달성",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "어닝 서프라이즈",
+            "역대 최대 실적",
+            "백화점 사업",
+            "내실 다지기",
+            "전략적 투자"
+          ],
+          "related_stocks": [],
+          "reasoning": "신세계인터내셔날은 1분기 매출 3.2조 및 영업익 1978억으로 역대 최대 실적을 달성했다는 소식이 주가 상승의 주요한 원인으로 보입니다. 특히 백화점 사업 부문의 두 자릿수 성장과 내실을 다진 전략적 투자가 결실을 맺은 것으로 분석됩니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 15.79
+            }
+          ],
+          "cluster_tag": "earnings_surprise"
+        },
+        {
+          "name": "씨티씨바이오",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업이익 414% 증가",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "실적 개선",
+            "영업이익 증가",
+            "해외 수출",
+            "사업 가지치기"
+          ],
+          "related_stocks": [],
+          "reasoning": "씨티씨바이오는 1분기 실적 발표에서 전년 대비 414% 증가한 영업이익을 기록했다고 발표했습니다. 이와 같은 수익성 개선의 배경에는 사업 가지치기 및 해외 수출 효과가 있는 것으로 보입니다. 이러한 실적 개선 소식이 주가 급등의 직접적인 원인으로 작용했습니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 15.29
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_improvement"
+        },
+        {
+          "name": "아이에스동서",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "아이에스동서 1분기 영업이익 흑자 전환",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "영업이익 흑자 전환",
+            "건설",
+            "2차전지",
+            "수익성 개선",
+            "실적 호조"
+          ],
+          "related_stocks": [],
+          "reasoning": "아이에스동서가 1분기 영업이익 1181억 원을 기록하며 흑자 전환을 이뤘다는 소식이 주요 매체를 통해 보도되면서 주가가 급등했다. 건설 및 2차전지 사업 수익성 개선이 실적 호조의 주된 요인으로 평가받고 있다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 13.72
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_growth"
+        },
+        {
+          "name": "한스바이오메드",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "셀르디엠 효과 본격화 및 영업익 전년比 538% 증가",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "실적 개선",
+            "셀르디엠 효과",
+            "영업익 증가",
+            "ECM 스킨부스터",
+            "주가 상승"
+          ],
+          "related_stocks": [],
+          "reasoning": "한스바이오메드의 ECM 스킨부스터 제품인 '셀르디엠'의 효과가 본격화되면서 영업이익이 전년 대비 538% 증가했다는 뉴스가 주가 상승의 주요 원인으로 보인다. 이러한 실적 개선 뉴스는 투자자들의 매수세를 촉발하여 주가 상승을 이끌었다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 21.3
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_improvement"
+        },
+        {
+          "name": "제이투케이바이오",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업이익 전년 대비 476% 증가",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "K뷰티 수혜 본격화",
+            "1분기 영업이익",
+            "실적 호조",
+            "증가세",
+            "투자자 관심"
+          ],
+          "related_stocks": [],
+          "reasoning": "제이투케이바이오의 1분기 영업이익이 전년 대비 476.6% 증가했다는 실적 발표가 주요 상승 요인이다. 이러한 실적 호조는 'K뷰티 수혜 본격화'와 같은 긍정적인 전망을 강화하며 투자자들의 관심을 끌어 주가를 급등시켰다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 19.47
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_boost"
+        },
+        {
+          "name": "미래산업",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업이익 및 매출 급증",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "어닝 서프라이즈",
+            "영업이익 급증",
+            "매출 급증",
+            "1분기 실적",
+            "폭발적 실적 개선"
+          ],
+          "related_stocks": [],
+          "reasoning": "미래산업의 1분기 실적 발표에서 영업이익이 전년 대비 1572% 증가하고 매출 또한 336% 증가한 것이 보도되었다. 이러한 폭발적인 실적 개선이 투자자들의 매수세를 자극하여 주가 급등을 촉발했다고 판단된다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.98
+            }
+          ],
+          "cluster_tag": "earnings_surprise"
+        },
+        {
+          "name": "선도전기",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "흑자 전환 및 경영 정상화 발표",
+          "trigger_type": "earnings",
+          "confidence": "medium",
+          "watch_keywords": [
+            "흑자 전환",
+            "경영 정상화",
+            "전력설비",
+            "에너지 대전환",
+            "주가 상승"
+          ],
+          "related_stocks": [],
+          "reasoning": "선도전기는 4월 30일, 흑자 전환과 경영 정상화 발표를 통해 주가 상승을 견인했습니다. 이후 전력설비와 에너지 대전환 테마와 맞물려 투자자들의 관심이 지속적으로 증가한 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 17.4
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_recovery"
+        },
+        {
+          "name": "디바이스",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "바이오",
+          "specific_signal": "성장호르몬 '유트로핀' 신제품 발표",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "바이오",
+            "신제품 발표",
+            "성장호르몬",
+            "자가 주사"
+          ],
+          "related_stocks": [
+            "동아ST"
+          ],
+          "reasoning": "디바이스의 급등은 성장호르몬 '유트로핀'의 신제품 발표가 원인으로 보입니다. 해당 신제품은 자가 주사가 더 쉬워졌다는 점에서 주목받고 있으며, 이로 인해 투자자들의 관심이 집중되어 주가 급등을 만든 것으로 분석됩니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 30.0
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "biotech_growth_hormones"
+        },
+        {
+          "name": "비에이치",
+          "market": "KOSPI",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업이익 흑자전환",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "실적",
+            "흑자전환",
+            "목표가 상향",
+            "주가 상승",
+            "1분기"
+          ],
+          "related_stocks": [
+            "LG이노텍",
+            "삼성전기"
+          ],
+          "reasoning": "비에이치는 최근 1분기 영업이익이 흑자전환 하면서 주가가 크게 상승하였습니다. 이와 함께 DB의 목표가 상향 발표가 주가 상승에 긍정적으로 작용한 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 24.38
+            }
+          ],
+          "cluster_tag": "earnings_surprise",
+          "cluster_tag_orig": "earnings_recovery"
+        },
+        {
+          "name": "저스템",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "1분기 영업이익 147% 성장 발표",
+          "trigger_type": "earnings",
+          "confidence": "high",
+          "watch_keywords": [
+            "어닝 서프라이즈",
+            "영업이익 성장",
+            "시장 주목",
+            "수익성 개선",
+            "최대 실적 기록"
+          ],
+          "related_stocks": [],
+          "reasoning": "저스템은 2026년 1분기에 영업이익이 147% 성장하며 역대 최대 실적을 기록했다는 발표가 있었습니다. 이러한 실적 발표는 회사의 수익성 개선을 명확히 보여줬고, 이에 따라 시장에서 큰 주목을 받아 주가가 급등한 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 30.0
+            }
+          ],
+          "cluster_tag": "earnings_surprise"
+        }
+      ],
+      "date_span": [
+        "20260512",
+        "20260513",
+        "20260514"
+      ],
+      "avg_change_pct": 21.6,
+      "momentum_score": 136.2
+    },
+    {
+      "keyword": "semiconductor_backend",
+      "member_tickers": [
+        "032580",
+        "078350",
+        "080220",
+        "131970",
+        "144960",
+        "290520",
+        "330860",
+        "412350",
+        "418420"
+      ],
+      "members": [
+        {
+          "name": "두산테스나",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "반도체",
+          "specific_signal": "AI 반도체 밸류체인 확대",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "반도체",
+            "AI 반도체",
+            "밸류체인 확대",
+            "대규모 매입"
+          ],
+          "related_stocks": [
+            "테스",
+            "원익IPS"
+          ],
+          "reasoning": "두산테스나의 주가는 AI 반도체 관련 사업 확장 소식과 기관의 대규모 매입 소식에 따라 급등한 것으로 보입니다. 특히 두산이 AI 반도체 밸류체인을 전방위적으로 가동한다는 뉴스가 주가 상승에 직접적인 영향을 준 것으로 판단됩니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 25.69
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "ai_semiconductor_expansion"
+        },
+        {
+          "name": "레이저쎌",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "반도체",
+          "specific_signal": "레이저 본딩 글로벌 CPO 제조사 양산용 첫 수주",
+          "trigger_type": "contract",
+          "confidence": "high",
+          "watch_keywords": [
+            "반도체",
+            "레이저 본딩",
+            "글로벌 CPO",
+            "양산용 수주"
+          ],
+          "related_stocks": [
+            "티에스이",
+            "이오테크닉스"
+          ],
+          "reasoning": "레이저쎌이 글로벌 CPO 제조사를 대상으로 레이저 본딩 관련 양산용 첫 수주를 했다는 소식이 주가 급등의 주요 요인으로 보인다. 이 소식이 발표된 이후 반도체 장비주에 대한 긍정적인 시장 반응이 거래량과 주가 상승으로 연결되었다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.95
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "semiconductor_contracts"
+        },
+        {
+          "name": "뉴파워프라즈마",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260513",
+          "consecutive_days": 2,
+          "main_theme": "반도체",
+          "specific_signal": "세정 및 친환경 배기 시스템 개발",
+          "trigger_type": "unknown",
+          "confidence": "medium",
+          "watch_keywords": [
+            "반도체",
+            "세정",
+            "친환경 배기 시스템",
+            "기술력 강화"
+          ],
+          "related_stocks": [
+            "주성엔지니어링",
+            "한울반도체"
+          ],
+          "reasoning": "뉴파워프라즈마가 반도체 공정에서 중요한 위치를 차지하고 있다는 내용의 기사가 최근 보도되었습니다. 특히 반도체 세정 및 친환경 배기 시스템 개발에 대한 강화된 기술력이 언급되면서 시장 관심을 받은 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 14.4
+            },
+            {
+              "date": "20260513",
+              "change_pct": 29.95
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "semiconductor_cleaning"
+        },
+        {
+          "name": "제주반도체",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "반도체",
+          "specific_signal": "에이팩트와 메모리 웨이퍼 테스트 협력",
+          "trigger_type": "contract",
+          "confidence": "high",
+          "watch_keywords": [
+            "반도체",
+            "웨이퍼 테스트",
+            "매출 성장",
+            "협력",
+            "계약"
+          ],
+          "related_stocks": [
+            "에이팩트"
+          ],
+          "reasoning": "제주반도체는 에이팩트와 메모리 웨이퍼 테스트 협력을 맺었다는 소식이 주가 상승의 주요 트리거로 작용했다. 해당 협력이 회사의 향후 매출 성장에 긍정적인 영향을 미칠 것으로 시장이 반응하면서 주가가 급등한 것으로 판단된다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 28.35
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "semiconductor_collaboration"
+        },
+        {
+          "name": "한양디지텍",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "반도체",
+          "specific_signal": "삼성전자 역사적 신고가 돌파와 중소형 반도체주 상승",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "반도체",
+            "중소형 반도체주",
+            "삼성전자 신고가",
+            "투자자 관심",
+            "급등"
+          ],
+          "related_stocks": [
+            "라온텍",
+            "제주반도체"
+          ],
+          "reasoning": "한양디지텍은 삼성전자 역사적 신고가 돌파와 함께 중소형 반도체주들이 상승세를 보이면서 급등한 것으로 보입니다. 특히, 삼성전자가 반도체 시장에서 긍정적 행보를 보이며 관련 종목들이 투자자들의 관심을 끌고 있는 상황입니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 25.18
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "semiconductor_rumor"
+        },
+        {
+          "name": "신도기연",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "반도체",
+          "specific_signal": "초정밀 평탄 식각 장비 시장 성장",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "반도체",
+            "초정밀 평탄 식각 장비",
+            "시장 성장",
+            "경쟁력 강화"
+          ],
+          "related_stocks": [
+            "주성엔지니어링"
+          ],
+          "reasoning": "신도기연은 초정밀 평탄 식각 장비를 제조하는 기업으로, 5월 7일에 관련 시장 성장 기대감과 함께 장비 시장 내 경쟁력을 강화하고 있다는 뉴스가 보도되었습니다. 이는 투자자들의 관심을 끌어 주가 상승의 직접적인 요인으로 작용했을 가능성이 있습니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 22.43
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "semiconductor_tools_growth"
+        },
+        {
+          "name": "네패스아크",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "반도체",
+          "specific_signal": "뉴로모픽 테마 수급 집중",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "반도체",
+            "뉴로모픽",
+            "수급 집중",
+            "주가 급등"
+          ],
+          "related_stocks": [
+            "뉴파워프라즈마"
+          ],
+          "reasoning": "네패스아크의 주가가 급등한 이유는 '뉴로모픽'이라는 테마와 연관이 있습니다. 2026년 5월 12일 핀포인트뉴스 기사에서는 네패스아크 주가가 급등한 이유로 뉴로모픽 테마에 수급이 집중되었다고 언급되고 있습니다. 이는 반도체 관련 새로운 기술 테마가 주식 수요를 증가시킨 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 22.01
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "neuromorphic_semiconductors"
+        },
+        {
+          "name": "피델릭스",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260514",
+          "consecutive_days": 3,
+          "main_theme": "반도체",
+          "specific_signal": "미래반도체와 한울반도체의 상한가 영향",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "반도체",
+            "상한가",
+            "미래반도체",
+            "한울반도체",
+            "루머"
+          ],
+          "related_stocks": [
+            "미래반도체",
+            "한울반도체"
+          ],
+          "reasoning": "이전 분석 재사용 (최초 20260512, 3일째 등장)",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 29.93
+            },
+            {
+              "date": "20260513",
+              "change_pct": 29.96
+            },
+            {
+              "date": "20260514",
+              "change_pct": 20.4
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "semiconductor_rumors"
+        },
+        {
+          "name": "라온텍",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "디스플레이",
+          "specific_signal": "SID 2026에서 마이크로 디스플레이 라인업 공개",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "디스플레이",
+            "마이크로 디스플레이",
+            "SID 2026",
+            "라인업 공개"
+          ],
+          "related_stocks": [
+            "아바코",
+            "원익IPS"
+          ],
+          "reasoning": "라온텍이 SID 2026에서 마이크로 디스플레이 라인업을 공개하며 디스플레이 관련 모멘텀이 형성된 것이 주가 상승의 주요 이유로 보입니다. 이벤트 당시에는 큰 반응이 없었으나 시장이 재평가되며 이슈가 급갑한 것으로 추정됩니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 29.95
+            }
+          ],
+          "cluster_tag": "semiconductor_backend",
+          "cluster_tag_orig": "micro_display_rumor"
+        }
+      ],
+      "date_span": [
+        "20260512",
+        "20260513",
+        "20260514"
+      ],
+      "avg_change_pct": 25.7,
+      "momentum_score": 69.3
+    },
+    {
+      "keyword": "humanoid_robotics",
+      "member_tickers": [
+        "010690",
+        "012330",
+        "048770",
+        "066430",
+        "190510",
+        "307950"
+      ],
+      "members": [
+        {
+          "name": "아이로보틱스",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "정책",
+          "specific_signal": "신사업 확장 및 이사회 재편",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "정책",
+            "신사업 확장",
+            "이사회 재편",
+            "로봇 산업 확장"
+          ],
+          "related_stocks": [],
+          "reasoning": "아이로보틱스의 주가 상승은 최근 이사회 재편과 신사업 확장 계획 발표가 영향을 미친 것으로 보입니다. 특히, 로봇 관련 산업 확장을 위한 전략적 변화가 투자자들에게 긍정적으로 작용했을 가능성이 큽니다. 이러한 움직임은 정책적 변화 혹은 기업의 전략적 방향성 변화 가능성에 대한 기대감으로 해석될 수 있습니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 15.22
+            }
+          ],
+          "cluster_tag": "humanoid_robotics",
+          "cluster_tag_orig": "policy_innovation"
+        },
+        {
+          "name": "현대모비스",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "정책",
+          "specific_signal": "현대차 그룹 로보틱스 사업 기대감",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "정책",
+            "로보틱스",
+            "그룹주 상승",
+            "기대감",
+            "핵심 사업"
+          ],
+          "related_stocks": [
+            "현대차",
+            "현대오토에버"
+          ],
+          "reasoning": "현대차 그룹의 로보틱스 사업에 대한 기대감이 높아지면서 그룹주들이 동반 상승하였다. 현대모비스는 현대차와 함께 그룹의 핵심 사업을 담당하고 있어 로보틱스 기대감이 모비스의 주가에도 긍정적인 영향을 미친 것으로 보인다. 특히, 현대차가 사상 최고가를 갱신함에 따라 모비스가 동반 급등한 것이 주요 요인으로 판단된다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 18.43
+            }
+          ],
+          "cluster_tag": "humanoid_robotics",
+          "cluster_tag_orig": "robotics_expectations"
+        },
+        {
+          "name": "현대오토에버",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "로보틱스",
+          "specific_signal": "현대차그룹의 로봇 사업 기대감",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "로보틱스",
+            "로봇 사업",
+            "IT 서비스",
+            "주가 급등",
+            "그룹 내 부상"
+          ],
+          "related_stocks": [
+            "현대차",
+            "현대모비스"
+          ],
+          "reasoning": "현대차의 주가 급등이 로보틱스 사업에 대한 기대감에서 비롯되었고, 이와 함께 현대오토에버도 그룹 내 IT 서비스 시총 1위로 부상하며 동반 상승한 것으로 보입니다. 현대차 그룹의 로봇 및 IT 중심 사업이 시장의 주목을 받은 것으로 추정됩니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 13.66
+            }
+          ],
+          "cluster_tag": "humanoid_robotics",
+          "cluster_tag_orig": "robotics_growth"
+        },
+        {
+          "name": "나무가",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "로봇",
+          "specific_signal": "로봇 비전솔루션 라인업 확대",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "로봇",
+            "로봇 비전솔루션",
+            "자동화 기술",
+            "라인업 확대"
+          ],
+          "related_stocks": [],
+          "reasoning": "나무가는 로봇 비전솔루션 라인업을 확대했다는 소식이 2026년 5월 14일 주식 시장에 영향을 주어 급등세를 보였다. 이 확장은 로봇과 자동화 기술에 대한 관심이 높아지고 있는 상황에서 긍정적인 반응을 이끌어냈다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 20.54
+            }
+          ],
+          "cluster_tag": "humanoid_robotics",
+          "cluster_tag_orig": "robotics_vision"
+        },
+        {
+          "name": "TPC로보틱스",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260514",
+          "consecutive_days": 3,
+          "main_theme": "로봇",
+          "specific_signal": "중국 HCBOT과의 휴머노이드 로봇 기술 협력",
+          "trigger_type": "contract",
+          "confidence": "high",
+          "watch_keywords": [
+            "로봇",
+            "휴머노이드",
+            "기술 협력",
+            "계약 체결",
+            "중국 시장"
+          ],
+          "related_stocks": [
+            "두산로보틱스",
+            "레인보우로보틱스"
+          ],
+          "reasoning": "이전 분석 재사용 (최초 20260512, 3일째 등장)",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 29.98
+            },
+            {
+              "date": "20260513",
+              "change_pct": 29.91
+            },
+            {
+              "date": "20260514",
+              "change_pct": 29.96
+            }
+          ],
+          "cluster_tag": "humanoid_robotics",
+          "cluster_tag_orig": "humanoid_robot_partnership"
+        },
+        {
+          "name": "화신",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "정책",
+          "specific_signal": "완성차 로봇 전략",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "정책",
+            "완성차 로봇 전략",
+            "자동차 부품사",
+            "모빌리티 트렌드"
+          ],
+          "related_stocks": [
+            "현대모비스",
+            "한온시스템"
+          ],
+          "reasoning": "화신의 주가 급등은 '아틀라스'와 같은 완성차 로봇 전략에 자동차 부품사들이 주목하고 있다는 뉴스와 연관이 있을 것으로 보입니다. 이는 전통적인 부품 업체들이 새로운 모빌리티 트렌드에 맞춰 전략을 재편할 가능성에서 비롯된 관심으로 해석됩니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 10.4
+            }
+          ],
+          "cluster_tag": "humanoid_robotics",
+          "cluster_tag_orig": "automotive_robotics"
+        }
+      ],
+      "date_span": [
+        "20260512",
+        "20260513",
+        "20260514"
+      ],
+      "avg_change_pct": 21.0,
+      "momentum_score": 37.8
+    },
+    {
+      "keyword": "realestate_redevelopment",
+      "member_tickers": [
+        "000650",
+        "047040",
+        "084670",
+        "221800",
+        "452260"
+      ],
+      "members": [
+        {
+          "name": "동양고속",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260514",
+          "consecutive_days": 2,
+          "main_theme": "정책",
+          "specific_signal": "서울고속터미널 60층 재개발 기대감",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "정책",
+            "재개발",
+            "서울고속터미널",
+            "60층"
+          ],
+          "related_stocks": [
+            "천일고속"
+          ],
+          "reasoning": "이전 분석 재사용 (최초 20260513, 2일째 등장)",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.88
+            },
+            {
+              "date": "20260514",
+              "change_pct": 29.94
+            }
+          ],
+          "cluster_tag": "realestate_redevelopment",
+          "cluster_tag_orig": "policy_redevelopment"
+        },
+        {
+          "name": "천일고속",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260514",
+          "consecutive_days": 2,
+          "main_theme": "정책",
+          "specific_signal": "서울고속터미널 60층 재개발 기대감",
+          "trigger_type": "rumor",
+          "confidence": "high",
+          "watch_keywords": [
+            "정책",
+            "재개발",
+            "서울고속터미널",
+            "기대감"
+          ],
+          "related_stocks": [
+            "동양고속"
+          ],
+          "reasoning": "이전 분석 재사용 (최초 20260513, 2일째 등장)",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.79
+            },
+            {
+              "date": "20260514",
+              "change_pct": 29.96
+            }
+          ],
+          "cluster_tag": "realestate_redevelopment",
+          "cluster_tag_orig": "urban_redevelopment"
+        },
+        {
+          "name": "한화갤러리아",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "정책",
+          "specific_signal": "압구정 명품관 재건축 심의 통과",
+          "trigger_type": "policy",
+          "confidence": "high",
+          "watch_keywords": [
+            "정책",
+            "재건축",
+            "압구정",
+            "자산 가치",
+            "매출 증대"
+          ],
+          "related_stocks": [],
+          "reasoning": "한화갤러리아의 압구정 명품관 재건축 심의 통과 소식이 시장에 긍정적으로 반영되면서 주가가 상승한 것으로 풀이됩니다. 이는 회사의 자산 가치 증가와 향후 매출 증대에 대한 기대감을 반영한 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 30.0
+            }
+          ],
+          "cluster_tag": "realestate_redevelopment",
+          "cluster_tag_orig": "policy_redevelopment"
+        },
+        {
+          "name": "대우건설",
+          "market": "KOSPI",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "부동산, 건설",
+          "specific_signal": "신축 단지 재개발 및 대단지 분양 착수",
+          "trigger_type": "contract",
+          "confidence": "high",
+          "watch_keywords": [
+            "부동산",
+            "건설",
+            "재개발",
+            "대규모 분양",
+            "신축 단지",
+            "광명 하안주공"
+          ],
+          "related_stocks": [],
+          "reasoning": "대우건설은 최근 다양한 지역에서의 신축 단지 재개발 속도전과 대규모 분양 사업을 실행하고 있습니다. 특히 '광명 하안주공'과 같은 대규모 개발 소식이 주목을 끌고 있으며, 이는 기업의 미래 성장성을 긍정적으로 평가받았습니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 12.61
+            }
+          ],
+          "cluster_tag": "realestate_redevelopment",
+          "cluster_tag_orig": "realestate_construction"
+        },
+        {
+          "name": "지구홀딩스",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "정책",
+          "specific_signal": "성남시 '다이아몬드형 산업벨트' 개발",
+          "trigger_type": "policy",
+          "confidence": "medium",
+          "watch_keywords": [
+            "정책",
+            "산업벨트",
+            "개발",
+            "확장 가능성"
+          ],
+          "related_stocks": [],
+          "reasoning": "지구홀딩스의 주가 급등은 성남시의 '다이아몬드형 산업벨트' 발표와 관련 있다. 이를 통해 지역 내 개발과 확장 가능성이 높아지면서 투자자들의 기대감을 불러일으켰을 가능성이 있다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 13.75
+            }
+          ],
+          "cluster_tag": "realestate_redevelopment",
+          "cluster_tag_orig": "local_development_policy"
+        }
+      ],
+      "date_span": [
+        "20260512",
+        "20260513",
+        "20260514"
+      ],
+      "avg_change_pct": 25.1,
+      "momentum_score": 37.7
+    },
+    {
+      "keyword": "momentum_speculation",
+      "member_tickers": [
+        "004545",
+        "014915",
+        "065440",
+        "093370",
+        "439960"
+      ],
+      "members": [
+        {
+          "name": "깨끗한나라우",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "수급",
+          "specific_signal": "전체 코스피 지수 상승에 따른 우선주 매수세",
+          "trigger_type": "technical",
+          "confidence": "medium",
+          "watch_keywords": [
+            "수급",
+            "우선주 매수세",
+            "코스피 지수 상승",
+            "52주 최고치 경신"
+          ],
+          "related_stocks": [],
+          "reasoning": "코스피 지수가 급격히 상승하며 52주 최고치를 경신했기 때문에 시장 전반적인 투자 심리가 개선되면서 우선주인 깨끗한나라우에도 매수세가 몰린 것으로 추정된다. 종목 자체의 뉴스는 없지만, 전체 시장 환경이 긍정적으로 바뀌었다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 7.41
+            }
+          ],
+          "cluster_tag": "momentum_speculation"
+        },
+        {
+          "name": "성문전자우",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260513",
+          "consecutive_days": 2,
+          "main_theme": "테마성",
+          "specific_signal": "이격도과열 및 급등락주 관련 테마",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "테마성",
+            "이격도과열",
+            "급등락주",
+            "로봇주",
+            "테크니컬 트레이딩"
+          ],
+          "related_stocks": [],
+          "reasoning": "성문전자우의 급등은 특이한 뉴스나 공시의 직접적 영향을 받았다기보다는, 최근 주식 시장에서 '로봇주' 등의 특정 테마성 테크니컬 트레이딩의 영향을 받은 것으로 보입니다. '이격도과열 종목'으로 함께 언급되며 투자자들의 관심을 얻은 결과일 가능성이 높습니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 30.0
+            },
+            {
+              "date": "20260513",
+              "change_pct": 29.91
+            }
+          ],
+          "cluster_tag": "momentum_speculation",
+          "cluster_tag_orig": "thematic_speculation"
+        },
+        {
+          "name": "코스모로보틱스",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260514",
+          "consecutive_days": 3,
+          "main_theme": "수급",
+          "specific_signal": "코스모로보틱스 상장 이틀째 상한가 달성",
+          "trigger_type": "technical",
+          "confidence": "high",
+          "watch_keywords": [
+            "상한가",
+            "수급",
+            "기술적 분석",
+            "상장",
+            "주가 상승"
+          ],
+          "related_stocks": [],
+          "reasoning": "이전 분석 재사용 (최초 20260512, 3일째 등장)",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 30.0
+            },
+            {
+              "date": "20260513",
+              "change_pct": 29.97
+            },
+            {
+              "date": "20260514",
+              "change_pct": 29.96
+            }
+          ],
+          "cluster_tag": "momentum_speculation"
+        },
+        {
+          "name": "후성",
+          "market": "KOSPI",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "2차전지",
+          "specific_signal": "리튬 공급 부족에 따른 가격 상승 기대감",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "2차전지",
+            "리튬 공급 부족",
+            "리튬 가격 상승",
+            "수급 불안"
+          ],
+          "related_stocks": [
+            "포스코홀딩스"
+          ],
+          "reasoning": "후성의 주가 급등은 리튬 품귀 현상에 대한 뉴스와 관련이 있습니다. 리튬은 2차전지의 핵심 원료로, 리튬의 수급 불안으로 인해 관련 주식들이 주목을 받으면서 급등했습니다. 특히, 5월 5일의 뉴스는 포스코홀딩스와 함께 후성이 리튬 관련 수혜주로 부각된 점에서 주가에 긍정적 영향을 미쳤을 가능성이 높습니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 13.22
+            }
+          ],
+          "cluster_tag": "momentum_speculation",
+          "cluster_tag_orig": "lithium_supply_rumor"
+        },
+        {
+          "name": "이루온",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "수급",
+          "specific_signal": "투자경고 및 투자주의 지정 후 단기 변동성 확대",
+          "trigger_type": "technical",
+          "confidence": "medium",
+          "watch_keywords": [
+            "수급",
+            "단기 변동성",
+            "투자경고",
+            "투자주의",
+            "과열된 매수세"
+          ],
+          "related_stocks": [],
+          "reasoning": "이루온은 투자경고종목 및 투자주의종목으로 지정됨에 따라 단기 거래량 증가와 변동성 확대가 일어났다. 이에 따라 투자자들의 과열된 매수세가 형성되면서 주가가 급등한 것으로 보인다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 20.13
+            }
+          ],
+          "cluster_tag": "momentum_speculation"
+        }
+      ],
+      "date_span": [
+        "20260512",
+        "20260513",
+        "20260514"
+      ],
+      "avg_change_pct": 23.8,
+      "momentum_score": 35.7
+    },
+    {
+      "keyword": "dilutive_finance",
+      "member_tickers": [
+        "032800",
+        "065060",
+        "147760",
+        "183300",
+        "290690"
+      ],
+      "members": [
+        {
+          "name": "지엔코",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "수급",
+          "specific_signal": "유상증자 통한 자금 조달",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "수급",
+            "유상증자",
+            "자금 조달",
+            "재무구조 개선",
+            "성장 가능성"
+          ],
+          "related_stocks": [],
+          "reasoning": "지엔코가 크레오에스지 등을 대상으로 35억 규모의 유상증자를 통해 자금을 조달하겠다는 소식이 전해지며 수급이 개선될 것이란 기대감에 주가가 급등했습니다. 이는 기업의 재무구조 개선 및 성장 가능성에 긍정적으로 작용한 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 20.34
+            }
+          ],
+          "cluster_tag": "dilutive_finance"
+        },
+        {
+          "name": "피엠티",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "유상증자 권리락 발생",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "유상증자",
+            "권리락",
+            "주가 급등",
+            "주식 매입",
+            "공시"
+          ],
+          "related_stocks": [],
+          "reasoning": "피엠티는 유상증자 권리락 발생과 관련된 공시를 통해 주가 급등을 기록한 것으로 보입니다. 유상증자권리락은 주주들에게 주식 매입 기회를 제공하여 긍정적인 반응을 이끌어낼 수 있으며, 이러한 권리락은 매매가의 일시적인 상승을 유발할 수 있습니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.86
+            }
+          ],
+          "cluster_tag": "dilutive_finance"
+        },
+        {
+          "name": "소룩스",
+          "market": "KOSDAQ",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "250억 CB 발행으로 자금 확보",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "자금 조달",
+            "전환사채",
+            "실적 개선",
+            "성장 가능성"
+          ],
+          "related_stocks": [],
+          "reasoning": "소룩스의 250억 원 규모 전환사채(CB) 발행 소식이 주가 급등의 트리거로 작용한 것으로 보입니다. 이는 회사의 자금 조달 능력을 강화하고, 이를 통한 향후 성장 가능성을 긍정적으로 평가 받은 것으로 판단됩니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 30.0
+            }
+          ],
+          "cluster_tag": "dilutive_finance",
+          "cluster_tag_orig": "convertible_bond_impact"
+        },
+        {
+          "name": "판타지오",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "50억 규모 제3자배정 유상증자 추진",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "유상증자",
+            "자금 수혈",
+            "경쟁력 강화",
+            "주가 급등"
+          ],
+          "related_stocks": [],
+          "reasoning": "판타지오는 50억 원 규모의 제3자배정 유상증자를 추진한다고 발표하며 주가가 급등했습니다. 유상증자는 추가 자금을 수혈하여 회사의 경쟁력을 강화하는 의미로 해석될 수 있어 투자자들의 긍정적인 반응을 이끌어낸 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 30.0
+            }
+          ],
+          "cluster_tag": "dilutive_finance"
+        },
+        {
+          "name": "코미코",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "반도체",
+          "specific_signal": "코미코 100% 무상증자",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "반도체",
+            "무상증자",
+            "주식 유동성",
+            "장기 가치",
+            "주가 상승"
+          ],
+          "related_stocks": [],
+          "reasoning": "무상증자 발표로 인해 코미코의 주가가 크게 상승했다. 무상증자를 통해 주식의 유동성이 증가하고, 회사의 장기적인 가치에 대해 긍정적인 시각이 형성되었을 가능성이 있다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.95
+            }
+          ],
+          "cluster_tag": "dilutive_finance"
+        }
+      ],
+      "date_span": [
+        "20260513",
+        "20260514"
+      ],
+      "avg_change_pct": 28.0,
+      "momentum_score": 28.0
+    },
+    {
+      "keyword": "osteoarthritis_drug",
+      "member_tickers": [
+        "003060",
+        "007460"
+      ],
+      "members": [
+        {
+          "name": "에이프로젠바이오로직스",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260513",
+          "consecutive_days": 2,
+          "main_theme": "바이오",
+          "specific_signal": "퇴행성관절염 신약 승인 기대",
+          "trigger_type": "rumor",
+          "confidence": "high",
+          "watch_keywords": [
+            "바이오",
+            "신약",
+            "퇴행성관절염",
+            "환자 투약",
+            "승인 기대"
+          ],
+          "related_stocks": [],
+          "reasoning": "에이프로젠바이오로직스의 퇴행성관절염 신약의 승인이 기대된다는 뉴스가 발표된 후 주가가 급등한 것으로 보인다. 특히 '8월초 환자 투약 예정'이라는 구체적인 일정이 투자자들에게 긍정적으로 작용했을 가능성이 높다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 30.0
+            },
+            {
+              "date": "20260513",
+              "change_pct": 29.97
+            }
+          ],
+          "cluster_tag": "osteoarthritis_drug",
+          "cluster_tag_orig": "osteoarthritis_drug_approval"
+        },
+        {
+          "name": "에이프로젠",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260513",
+          "consecutive_days": 2,
+          "main_theme": "바이오",
+          "specific_signal": "퇴행성관절염 신약 AP209 8월초 환자 투약 예정",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "바이오",
+            "신약",
+            "퇴행성관절염",
+            "AP209 8월초 환자 투약",
+            "FDA 승인"
+          ],
+          "related_stocks": [],
+          "reasoning": "에이프로젠의 퇴행성관절염 신약인 AP209가 오는 8월초에 환자 투약을 예정하고 있다는 소식이 5월 12일에 발표되면서 주가에 긍정적인 영향을 미쳤다. 특히, 임상 3상 생략에 대한 FDA 및 EMA 승인을 받았다는 이전 소식들로 인해 신약 개발에 대한 기대감이 증대된 상황이다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 30.0
+            },
+            {
+              "date": "20260513",
+              "change_pct": 30.0
+            }
+          ],
+          "cluster_tag": "osteoarthritis_drug"
+        }
+      ],
+      "date_span": [
+        "20260512",
+        "20260513"
+      ],
+      "avg_change_pct": 30.0,
+      "momentum_score": 12.0
+    },
+    {
+      "keyword": "cell_therapy",
+      "member_tickers": [
+        "005250",
+        "005257",
+        "024850"
+      ],
+      "members": [
+        {
+          "name": "녹십자홀딩스2우",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260513",
+          "consecutive_days": 2,
+          "main_theme": "바이오",
+          "specific_signal": "자회사 메이드사이언티픽의 세포치료제 상업화 이슈",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "바이오",
+            "세포치료제",
+            "상업화",
+            "자회사 강화",
+            "시장 기대"
+          ],
+          "related_stocks": [],
+          "reasoning": "녹십자홀딩스2우의 급등은 자회사 메이드사이언티픽이 세포치료제 상업화 관련 이사회 강화를 발표한 것과 관련이 있을 가능성이 있다. 이는 바이오테크 업계에서 중요한 진전으로 시장의 긍정적인 기대를 반영한 것으로 보인다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 19.73
+            },
+            {
+              "date": "20260513",
+              "change_pct": 16.8
+            }
+          ],
+          "cluster_tag": "cell_therapy",
+          "cluster_tag_orig": "cell_therapy_commercialization"
+        },
+        {
+          "name": "녹십자홀딩스",
+          "market": "KOSPI",
+          "first_seen": "20260512",
+          "last_seen": "20260513",
+          "consecutive_days": 2,
+          "main_theme": "바이오",
+          "specific_signal": "아티바 NK세포치료제 임상 3상 진입 및 3억 달러 조달",
+          "trigger_type": "contract",
+          "confidence": "high",
+          "watch_keywords": [
+            "바이오",
+            "NK세포치료제",
+            "임상 3상",
+            "3억 달러 조달",
+            "글로벌 시장 진출"
+          ],
+          "related_stocks": [
+            "GC녹십자"
+          ],
+          "reasoning": "넥서비스의 미국 관계사 아티바가 NK세포치료제의 임상 3상에 진입하고 3억 달러의 대규모 자금을 조달했다는 소식이 주요한 상승 트리거로 작용한 것으로 보인다. 이는 회사의 성장 가능성과 글로벌 시장 진출에 대한 기대를 높이며 투자를 이끌어낸 것으로 보인다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 19.68
+            },
+            {
+              "date": "20260513",
+              "change_pct": 14.39
+            }
+          ],
+          "cluster_tag": "cell_therapy",
+          "cluster_tag_orig": "nk_cell_therapy"
+        },
+        {
+          "name": "HLB이노베이션",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "바이오",
+          "specific_signal": "HLB이노베이션 CAR-T 고형암 신약 사업화 기대",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "바이오",
+            "CAR-T 신약",
+            "사업화 기대",
+            "고형암 치료제",
+            "기술이전 기대감"
+          ],
+          "related_stocks": [
+            "HLB"
+          ],
+          "reasoning": "HLB이노베이션은 CAR-T 신약의 사업화에 대한 기대감이 주가 상승의 주요 원인으로 보입니다. 특히 고형암 CAR-T 치료제 개발 전략 발표가 시장의 주목을 받았으며, 기술이전 기대감 또한 호재로 작용한 것으로 판단됩니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 13.69
+            }
+          ],
+          "cluster_tag": "cell_therapy",
+          "cluster_tag_orig": "car_t_therapy"
+        }
+      ],
+      "date_span": [
+        "20260512",
+        "20260513"
+      ],
+      "avg_change_pct": 16.9,
+      "momentum_score": 10.1
+    },
+    {
+      "keyword": "ai_infrastructure",
+      "member_tickers": [
+        "189330",
+        "270520"
+      ],
+      "members": [
+        {
+          "name": "씨이랩",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "정책",
+          "specific_signal": "호남권 AI 데이터센터 구축 MOU 체결",
+          "trigger_type": "contract",
+          "confidence": "high",
+          "watch_keywords": [
+            "정책",
+            "AI 데이터센터",
+            "MOU",
+            "호남권",
+            "AI 인프라"
+          ],
+          "related_stocks": [
+            "KT",
+            "코나아이"
+          ],
+          "reasoning": "씨이랩은 KT 등과 함께 호남권 AI 데이터센터 구축을 위한 MOU를 체결했다고 발표했습니다. 이는 국내 AI 인프라 시장을 주도하는 큰 프로젝트로 투자자들의 관심을 끌며 주가 상승을 견인한 것으로 평가됩니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 16.92
+            }
+          ],
+          "cluster_tag": "ai_infrastructure",
+          "cluster_tag_orig": "ai_infrastructure_policy"
+        },
+        {
+          "name": "앱튼",
+          "market": "KOSDAQ",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "온디바이스 AI 및 스마트 데이터센터",
+          "specific_signal": "온디바이스 AI 기반 스마트 데이터센터 사업 본격화 발표",
+          "trigger_type": "disclosure",
+          "confidence": "high",
+          "watch_keywords": [
+            "온디바이스 AI",
+            "스마트 데이터센터",
+            "사업 본격화",
+            "사업 확장"
+          ],
+          "related_stocks": [
+            "엠아르오디펜스"
+          ],
+          "reasoning": "앱튼은 온디바이스 AI 기반의 스마트 데이터센터 사업을 본격화한다고 발표했습니다. 이는 데이터센터 관련 신규 사업 확장에 관한 발표로, 미래 성장 가치가 반영되어 주가가 급등한 것으로 보입니다. 거래재개와 함께 더 많은 투자자들이 관심을 가질 수 있는 조건이 형성되었습니다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.97
+            }
+          ],
+          "cluster_tag": "ai_infrastructure",
+          "cluster_tag_orig": "ondevice_ai_datacenter"
+        }
+      ],
+      "date_span": [
+        "20260512",
+        "20260513"
+      ],
+      "avg_change_pct": 23.4,
+      "momentum_score": 9.4
+    },
+    {
+      "keyword": "m_and_a",
+      "member_tickers": [
+        "020560",
+        "403550"
+      ],
+      "members": [
+        {
+          "name": "쏘카",
+          "market": "KOSPI",
+          "first_seen": "20260513",
+          "last_seen": "20260513",
+          "consecutive_days": 1,
+          "main_theme": "M&A",
+          "specific_signal": "크래프톤과 자율주행 법인 신설",
+          "trigger_type": "contract",
+          "confidence": "high",
+          "watch_keywords": [
+            "M&A",
+            "자율주행 법인 신설",
+            "사업 확장",
+            "기술 진입"
+          ],
+          "related_stocks": [
+            "크래프톤"
+          ],
+          "reasoning": "쏘카의 주가는 크래프톤과의 자율주행 법인 설립 소식이 알려지면서 큰 폭으로 상승했다. 이는 쏘카가 자율주행 기술에 대한 사업 확장 및 잠재력 있는 영역으로의 진입을 의미하여 투자자들에게 긍정적인 신호로 작용했기 때문이다.",
+          "history": [
+            {
+              "date": "20260513",
+              "change_pct": 29.95
+            }
+          ],
+          "cluster_tag": "m_and_a",
+          "cluster_tag_orig": "autonomous_vehicle_m_a"
+        },
+        {
+          "name": "아시아나항공",
+          "market": "KOSPI",
+          "first_seen": "20260514",
+          "last_seen": "20260514",
+          "consecutive_days": 1,
+          "main_theme": "실적",
+          "specific_signal": "대한항공·아시아나항공 합병 확정 발표",
+          "trigger_type": "policy",
+          "confidence": "high",
+          "watch_keywords": [
+            "합병",
+            "재무 구조 개선",
+            "경영 안정화",
+            "정책 수혜",
+            "항공산업 회복"
+          ],
+          "related_stocks": [
+            "대한항공"
+          ],
+          "reasoning": "아시아나항공 주가는 대한항공과의 합병이 확정되면서 급등했습니다. 5월 13일에 발표된 합병 일정 확정은 아시아나항공의 재무 구조 개선 기대와 경영 안정화에 대한 긍정적 시장 반응을 유도했을 가능성이 큽니다.",
+          "history": [
+            {
+              "date": "20260514",
+              "change_pct": 16.94
+            }
+          ],
+          "cluster_tag": "m_and_a",
+          "cluster_tag_orig": "airline_merger_policy"
+        }
+      ],
+      "date_span": [
+        "20260513",
+        "20260514"
+      ],
+      "avg_change_pct": 23.4,
+      "momentum_score": 9.4
+    },
+    {
+      "keyword": "hantavirus_diagnostics",
+      "member_tickers": [
+        "142280",
+        "253840"
+      ],
+      "members": [
+        {
+          "name": "수젠텍",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "바이오",
+          "specific_signal": "한타바이러스 확산 우려 및 WHO 경고",
+          "trigger_type": "rumor",
+          "confidence": "high",
+          "watch_keywords": [
+            "바이오",
+            "한타바이러스",
+            "WHO 경고",
+            "감염병 진단키트",
+            "주가 급등"
+          ],
+          "related_stocks": [
+            "녹십자엠에스"
+          ],
+          "reasoning": "최근 수젠텍의 주가 급등은 한타바이러스 추가 확진과 관련한 우려가 커지면서, WHO가 해당 바이러스의 잠복기가 최대 8주가 될 수 있다는 경고를 했기 때문으로 보인다. 이로 인해 감염병 진단키트를 생산하는 수젠텍에 대한 관심이 증가하며 주가에 긍정적으로 작용한 것으로 판단된다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 16.53
+            }
+          ],
+          "cluster_tag": "hantavirus_diagnostics",
+          "cluster_tag_orig": "hantavirus_related_bio"
+        },
+        {
+          "name": "녹십자엠에스",
+          "market": "KOSDAQ",
+          "first_seen": "20260512",
+          "last_seen": "20260512",
+          "consecutive_days": 1,
+          "main_theme": "바이오",
+          "specific_signal": "크루즈선 '한타바이러스' 감염 발생에 대한 진단·백신 역량 부각",
+          "trigger_type": "rumor",
+          "confidence": "medium",
+          "watch_keywords": [
+            "바이오",
+            "한타바이러스",
+            "진단 역량",
+            "백신 역량"
+          ],
+          "related_stocks": [
+            "녹십자",
+            "셀트리온"
+          ],
+          "reasoning": "녹십자엠에스가 관련된 크루즈선에서 '한타바이러스' 감염으로 인한 사망 사건은 진단 및 백신 역량을 보유한 바이오 기업으로서 주목받게 만드는 요인으로 작용했을 가능성이 높습니다. 이로 인해 해당 종목이 투자자들 사이에서 재평가되면서 주가가 급등한 것으로 보입니다.",
+          "history": [
+            {
+              "date": "20260512",
+              "change_pct": 29.85
+            }
+          ],
+          "cluster_tag": "hantavirus_diagnostics",
+          "cluster_tag_orig": "hantavirus_biotech"
+        }
+      ],
+      "date_span": [
+        "20260512"
+      ],
+      "avg_change_pct": 23.2,
+      "momentum_score": 4.6
+    }
+  ],
+  "scored_candidates": {
+    "earnings_surprise": [
+      {
+        "code": "161890",
+        "name": "한국콜마",
+        "market": "KOSPI",
+        "marcap": 2379391761600,
+        "last_close": 100800,
+        "last_change_pct": 3.49,
+        "avg_abs_change_5d": 4.17,
+        "avg_value_5d_eok": 467.8,
+        "vol_surge": 2.15,
+        "ret_5d": 7.69,
+        "short_term_score": 9.63
+      },
+      {
+        "code": "046890",
+        "name": "서울반도체",
+        "market": "KOSDAQ",
+        "marcap": 1065822712000,
+        "last_close": 18280,
+        "last_change_pct": 3.34,
+        "avg_abs_change_5d": 5.5,
+        "avg_value_5d_eok": 677.3,
+        "vol_surge": 1.16,
+        "ret_5d": 1.56,
+        "short_term_score": 6.47
+      },
+      {
+        "code": "402340",
+        "name": "SK스퀘어",
+        "market": "KOSPI",
+        "marcap": 154523270006000,
+        "last_close": 1171000,
+        "last_change_pct": -1.6,
+        "avg_abs_change_5d": 4.12,
+        "avg_value_5d_eok": 12232.6,
+        "vol_surge": 1.46,
+        "ret_5d": 6.65,
+        "short_term_score": 6.41
+      },
+      {
+        "code": "011070",
+        "name": "LG이노텍",
+        "market": "KOSPI",
+        "marcap": 17987001320000,
+        "last_close": 760000,
+        "last_change_pct": 0.93,
+        "avg_abs_change_5d": 4.52,
+        "avg_value_5d_eok": 2216.5,
+        "vol_surge": 0.98,
+        "ret_5d": 21.79,
+        "short_term_score": 5.29
+      },
+      {
+        "code": "009150",
+        "name": "삼성전기",
+        "market": "KOSPI",
+        "marcap": 76486344704000,
+        "last_close": 1024000,
+        "last_change_pct": -0.49,
+        "avg_abs_change_5d": 3.24,
+        "avg_value_5d_eok": 10541.3,
+        "vol_surge": 1.38,
+        "ret_5d": 12.04,
+        "short_term_score": 5.02
+      }
+    ],
+    "semiconductor_backend": [
+      {
+        "code": "254490",
+        "name": "미래반도체",
+        "market": "KOSDAQ",
+        "marcap": 620834000000,
+        "last_close": 43000,
+        "last_change_pct": 13.76,
+        "avg_abs_change_5d": 13.21,
+        "avg_value_5d_eok": 855.7,
+        "vol_surge": 2.25,
+        "ret_5d": 39.38,
+        "short_term_score": 17.84
+      },
+      {
+        "code": "034220",
+        "name": "LG디스플레이",
+        "market": "KOSPI",
+        "marcap": 7670000000000,
+        "last_close": 15340,
+        "last_change_pct": 8.26,
+        "avg_abs_change_5d": 4.75,
+        "avg_value_5d_eok": 2410.2,
+        "vol_surge": 2.33,
+        "ret_5d": 24.41,
+        "short_term_score": 13.28
+      },
+      {
+        "code": "305090",
+        "name": "마이크로디지탈",
+        "market": "KOSDAQ",
+        "marcap": 79958736500,
+        "last_close": 4300,
+        "last_change_pct": -10.23,
+        "avg_abs_change_5d": 5.11,
+        "avg_value_5d_eok": 13.1,
+        "vol_surge": 2.21,
+        "ret_5d": -18.87,
+        "short_term_score": 11.28
+      },
+      {
+        "code": "039030",
+        "name": "이오테크닉스",
+        "market": "KOSDAQ",
+        "marcap": 5901064450000,
+        "last_close": 479000,
+        "last_change_pct": -0.1,
+        "avg_abs_change_5d": 6.93,
+        "avg_value_5d_eok": 646.1,
+        "vol_surge": 1.55,
+        "ret_5d": 0.1,
+        "short_term_score": 10.76
+      },
+      {
+        "code": "320000",
+        "name": "한울반도체",
+        "market": "KOSDAQ",
+        "marcap": 90028935000,
+        "last_close": 13500,
+        "last_change_pct": -5.86,
+        "avg_abs_change_5d": 15.25,
+        "avg_value_5d_eok": 276.6,
+        "vol_surge": 1,
+        "ret_5d": 35.41,
+        "short_term_score": 9.15
+      }
+    ],
+    "humanoid_robotics": [
+      {
+        "code": "460940",
+        "name": "피앤에스로보틱스",
+        "market": "KOSDAQ",
+        "marcap": 122039389600,
+        "last_close": 9070,
+        "last_change_pct": -8.38,
+        "avg_abs_change_5d": 7.48,
+        "avg_value_5d_eok": 122.9,
+        "vol_surge": 13.25,
+        "ret_5d": 7.08,
+        "short_term_score": 106.18
+      },
+      {
+        "code": "007820",
+        "name": "엠엑스로보틱스",
+        "market": "KOSDAQ",
+        "marcap": 106580592720,
+        "last_close": 5320,
+        "last_change_pct": -6.83,
+        "avg_abs_change_5d": 4.37,
+        "avg_value_5d_eok": 106.4,
+        "vol_surge": 12.39,
+        "ret_5d": 3.5,
+        "short_term_score": 56.0
+      },
+      {
+        "code": "475400",
+        "name": "씨메스로보틱스",
+        "market": "KOSDAQ",
+        "marcap": 374430574700,
+        "last_close": 31850,
+        "last_change_pct": -2.3,
+        "avg_abs_change_5d": 6.44,
+        "avg_value_5d_eok": 121.0,
+        "vol_surge": 3.26,
+        "ret_5d": -15.18,
+        "short_term_score": 20.99
+      },
+      {
+        "code": "277810",
+        "name": "레인보우로보틱스",
+        "market": "KOSDAQ",
+        "marcap": 16315280578000,
+        "last_close": 841000,
+        "last_change_pct": -4.21,
+        "avg_abs_change_5d": 6.17,
+        "avg_value_5d_eok": 3826.9,
+        "vol_surge": 2.87,
+        "ret_5d": 7.27,
+        "short_term_score": 18.99
+      },
+      {
+        "code": "005380",
+        "name": "현대차",
+        "market": "KOSPI",
+        "marcap": 145787529392000,
+        "last_close": 712000,
+        "last_change_pct": 0.28,
+        "avg_abs_change_5d": 4.55,
+        "avg_value_5d_eok": 24919.5,
+        "vol_surge": 3.11,
+        "ret_5d": 16.15,
+        "short_term_score": 16.43
+      }
+    ],
+    "cell_therapy": [
+      {
+        "code": "028300",
+        "name": "HLB",
+        "market": "KOSDAQ",
+        "marcap": 7085350336400,
+        "last_close": 53200,
+        "last_change_pct": -0.56,
+        "avg_abs_change_5d": 2.26,
+        "avg_value_5d_eok": 442.8,
+        "vol_surge": 1.17,
+        "ret_5d": -8.59,
+        "short_term_score": 2.65
+      }
+    ],
+    "ai_infrastructure": [
+      {
+        "code": "052400",
+        "name": "코나아이",
+        "market": "KOSDAQ",
+        "marcap": 894186067400,
+        "last_close": 61400,
+        "last_change_pct": 3.02,
+        "avg_abs_change_5d": 3.02,
+        "avg_value_5d_eok": 113.9,
+        "vol_surge": 1.17,
+        "ret_5d": 3.19,
+        "short_term_score": 3.64
+      },
+      {
+        "code": "030200",
+        "name": "KT",
+        "market": "KOSPI",
+        "marcap": 15524535796000,
+        "last_close": 61600,
+        "last_change_pct": 3.88,
+        "avg_abs_change_5d": 1.59,
+        "avg_value_5d_eok": 294.5,
+        "vol_surge": 1.08,
+        "ret_5d": 3.88,
+        "short_term_score": 1.77
+      }
+    ],
+    "m_and_a": [
+      {
+        "code": "003490",
+        "name": "대한항공",
+        "market": "KOSPI",
+        "marcap": 10052424045300,
+        "last_close": 27300,
+        "last_change_pct": 6.02,
+        "avg_abs_change_5d": 4.12,
+        "avg_value_5d_eok": 663.1,
+        "vol_surge": 1.53,
+        "ret_5d": 0.92,
+        "short_term_score": 6.34
+      },
+      {
+        "code": "259960",
+        "name": "크래프톤",
+        "market": "KOSPI",
+        "marcap": 13914340746000,
+        "last_close": 293500,
+        "last_change_pct": 4.45,
+        "avg_abs_change_5d": 2.7,
+        "avg_value_5d_eok": 608.1,
+        "vol_surge": 1.13,
+        "ret_5d": 7.51,
+        "short_term_score": 3.28
+      }
+    ],
+    "hantavirus_diagnostics": [
+      {
+        "code": "006280",
+        "name": "녹십자",
+        "market": "KOSPI",
+        "marcap": 1692210702400,
+        "last_close": 144800,
+        "last_change_pct": 4.78,
+        "avg_abs_change_5d": 2.33,
+        "avg_value_5d_eok": 177.0,
+        "vol_surge": 3.39,
+        "ret_5d": 4.85,
+        "short_term_score": 8.28
+      },
+      {
+        "code": "068270",
+        "name": "셀트리온",
+        "market": "KOSPI",
+        "marcap": 43300154721100,
+        "last_close": 195100,
+        "last_change_pct": 2.41,
+        "avg_abs_change_5d": 2.1,
+        "avg_value_5d_eok": 1601.6,
+        "vol_surge": 1.61,
+        "ret_5d": -1.66,
+        "short_term_score": 3.39
+      }
+    ]
+  }
+}
