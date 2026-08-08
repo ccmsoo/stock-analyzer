@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-08T14:08:32",
-  "total": 432,
+  "generated_at": "2026-08-08T14:54:30",
+  "total": 431,
   "new_today": 0,
   "alerts": [
     {
@@ -8115,25 +8115,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "공시/기업이슈",
       "matched_at": "2026-07-09T20:47:10"
-    },
-    {
-      "ticker": "329180",
-      "name": "HD현대중공업",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "HD현대중공업",
-      "submitted_at": "2026.07.09",
-      "time": "10:49",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260709800137",
-      "rcp_no": "20260709800137",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 498500,
-      "today_change_pct": 3.58,
-      "signal_last_seen": "20260520",
-      "signal_confidence": "medium",
-      "signal_main_theme": "정책/방산·수주",
-      "matched_at": "2026-07-09T14:30:16"
     },
     {
       "ticker": "000760",
