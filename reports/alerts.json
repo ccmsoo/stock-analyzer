@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-09T13:34:09",
-  "total": 413,
+  "generated_at": "2026-08-09T14:32:48",
+  "total": 411,
   "new_today": 0,
   "alerts": [
     {
@@ -7697,44 +7697,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "수급/ETF 리밸런싱",
       "matched_at": "2026-07-10T17:48:20"
-    },
-    {
-      "ticker": "046940",
-      "name": "우원개발",
-      "sosok": "",
-      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
-      "submitter": "우원개발",
-      "submitted_at": "2026.07.10",
-      "time": "11:30",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710900320",
-      "rcp_no": "20260710900320",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 3705,
-      "today_change_pct": 4.81,
-      "signal_last_seen": "20260702",
-      "signal_confidence": "medium",
-      "signal_main_theme": "정책/건설(인프라)",
-      "matched_at": "2026-07-10T14:28:52"
-    },
-    {
-      "ticker": "181710",
-      "name": "NHN",
-      "sosok": "",
-      "report_name": "[첨부정정]주요사항보고서(회사합병결정)",
-      "submitter": "NHN",
-      "submitted_at": "2026.07.10",
-      "time": "11:01",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000147",
-      "rcp_no": "20260710000147",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 38200,
-      "today_change_pct": 0.79,
-      "signal_last_seen": "20260601",
-      "signal_confidence": "high",
-      "signal_main_theme": "클라우드·AI 서비스",
-      "matched_at": "2026-07-10T14:28:52"
     },
     {
       "ticker": "089890",
