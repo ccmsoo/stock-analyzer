@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-10T12:18:44",
-  "total": 403,
-  "new_today": 4,
+  "generated_at": "2026-08-10T14:02:51",
+  "total": 404,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "013360",
+      "name": "일성건설",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "일성건설",
+      "submitted_at": "2026.08.10",
+      "time": "13:04",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260810800210",
+      "rcp_no": "20260810800210",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 1486,
+      "today_change_pct": 4.21,
+      "signal_last_seen": "20260720",
+      "signal_confidence": "medium",
+      "signal_main_theme": "건설/인프라",
+      "matched_at": "2026-08-10T14:02:51"
+    },
     {
       "ticker": "051600",
       "name": "한전KPS",
