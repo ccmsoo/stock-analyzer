@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-10T08:56:15",
-  "total": 398,
-  "new_today": 0,
+  "generated_at": "2026-08-10T10:12:25",
+  "total": 399,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "021880",
+      "name": "메이슨캐피탈",
+      "sosok": "",
+      "report_name": "분기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
+      "submitter": "메이슨캐피탈",
+      "submitted_at": "2026.08.10",
+      "time": "09:13",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260810000028",
+      "rcp_no": "20260810000028",
+      "category": "실적",
+      "score": 75,
+      "current_price": 1267,
+      "today_change_pct": 5.15,
+      "signal_last_seen": "20260519",
+      "signal_confidence": "medium",
+      "signal_main_theme": "정책",
+      "matched_at": "2026-08-10T10:12:25"
+    },
     {
       "ticker": "005940",
       "name": "NH투자증권",
