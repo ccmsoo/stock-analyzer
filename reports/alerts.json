@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-13T07:58:34",
-  "total": 475,
+  "generated_at": "2026-08-13T08:39:39",
+  "total": 476,
   "new_today": 1,
   "alerts": [
+    {
+      "ticker": "212710",
+      "name": "아이에스티이",
+      "sosok": "",
+      "report_name": "반기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
+      "submitter": "아이에스티이",
+      "submitted_at": "2026.08.13",
+      "time": "08:01",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813000001",
+      "rcp_no": "20260813000001",
+      "category": "실적",
+      "score": 75,
+      "current_price": 8230,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260527",
+      "signal_confidence": "medium",
+      "signal_main_theme": "정책/국책수주 (국책 과제·공공연구 사업) 및 반도체/반도체 공정장비",
+      "matched_at": "2026-08-13T08:39:39"
+    },
     {
       "ticker": "054940",
       "name": "엑사이엔씨",
