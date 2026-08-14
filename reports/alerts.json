@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-14T19:30:44",
-  "total": 797,
-  "new_today": 3,
+  "generated_at": "2026-08-14T20:20:50",
+  "total": 798,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "046940",
+      "name": "우원개발",
+      "sosok": "",
+      "report_name": "반기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
+      "submitter": "우원개발",
+      "submitted_at": "2026.08.14",
+      "time": "20:18",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814004309",
+      "rcp_no": "20260814004309",
+      "category": "실적",
+      "score": 75,
+      "current_price": 3155,
+      "today_change_pct": 2.27,
+      "signal_last_seen": "20260702",
+      "signal_confidence": "medium",
+      "signal_main_theme": "정책/건설(인프라)",
+      "matched_at": "2026-08-14T20:20:50"
+    },
     {
       "ticker": "226330",
       "name": "신테카바이오",
