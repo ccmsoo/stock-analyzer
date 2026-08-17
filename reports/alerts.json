@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-18T07:42:49",
-  "total": 774,
-  "new_today": 0,
+  "generated_at": "2026-08-18T07:59:16",
+  "total": 775,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "012340",
+      "name": "뉴인텍",
+      "sosok": "",
+      "report_name": "반기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
+      "submitter": "뉴인텍",
+      "submitted_at": "2026.08.18",
+      "time": "07:30",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818000001",
+      "rcp_no": "20260818000001",
+      "category": "실적",
+      "score": 75,
+      "current_price": 653,
+      "today_change_pct": 2.19,
+      "signal_last_seen": "20260626",
+      "signal_confidence": "medium",
+      "signal_main_theme": "전력전자·첨단소재",
+      "matched_at": "2026-08-18T07:59:16"
+    },
     {
       "ticker": "046940",
       "name": "우원개발",
