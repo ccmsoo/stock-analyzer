@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-18T10:15:50",
-  "total": 776,
+  "generated_at": "2026-08-18T11:32:44",
+  "total": 777,
   "new_today": 1,
   "alerts": [
+    {
+      "ticker": "092040",
+      "name": "아미코젠",
+      "sosok": "",
+      "report_name": "[기재정정]반기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
+      "submitter": "아미코젠",
+      "submitted_at": "2026.08.18",
+      "time": "11:04",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818000066",
+      "rcp_no": "20260818000066",
+      "category": "실적",
+      "score": 75,
+      "current_price": 994,
+      "today_change_pct": 2.47,
+      "signal_last_seen": "20260623",
+      "signal_confidence": "medium",
+      "signal_main_theme": "바이오",
+      "matched_at": "2026-08-18T11:32:44"
+    },
     {
       "ticker": "012160",
       "name": "영흥",
