@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-18T13:49:23",
-  "total": 780,
-  "new_today": 2,
+  "generated_at": "2026-08-18T14:20:40",
+  "total": 781,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "288180",
+      "name": "케이피항공산업",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "케이피항공산업",
+      "submitted_at": "2026.08.18",
+      "time": "13:56",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818900230",
+      "rcp_no": "20260818900230",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 8490,
+      "today_change_pct": 1.28,
+      "signal_last_seen": "20260519",
+      "signal_confidence": "high",
+      "signal_main_theme": "우주·항공·방산 테마",
+      "matched_at": "2026-08-18T14:20:40"
+    },
     {
       "ticker": "445090",
       "name": "에이직랜드",
