@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-18T15:27:28",
-  "total": 781,
-  "new_today": 0,
+  "generated_at": "2026-08-18T16:13:37",
+  "total": 783,
+  "new_today": 2,
   "alerts": [
+    {
+      "ticker": "304840",
+      "name": "피플바이오",
+      "sosok": "",
+      "report_name": "[첨부정정]주요사항보고서(유형자산양수결정)",
+      "submitter": "피플바이오",
+      "submitted_at": "2026.08.18",
+      "time": "16:09",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818000196",
+      "rcp_no": "20260818000196",
+      "category": "투자/시설",
+      "score": 70,
+      "current_price": 561,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260706",
+      "signal_confidence": "high",
+      "signal_main_theme": "AI",
+      "matched_at": "2026-08-18T16:13:37"
+    },
     {
       "ticker": "288180",
       "name": "케이피항공산업",
@@ -2415,6 +2434,25 @@
       "signal_confidence": "medium",
       "signal_main_theme": "바이오",
       "matched_at": "2026-08-14T17:01:46"
+    },
+    {
+      "ticker": "101530",
+      "name": "해태제과식품",
+      "sosok": "",
+      "report_name": "[첨부추가]반기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
+      "submitter": "해태제과식품",
+      "submitted_at": "2026.08.14",
+      "time": "16:10",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003005",
+      "rcp_no": "20260814003005",
+      "category": "실적",
+      "score": 75,
+      "current_price": 5700,
+      "today_change_pct": 3.06,
+      "signal_last_seen": "20260623",
+      "signal_confidence": "high",
+      "signal_main_theme": "유통·소비재",
+      "matched_at": "2026-08-18T16:13:37"
     },
     {
       "ticker": "322510",
