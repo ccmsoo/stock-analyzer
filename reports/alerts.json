@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-18T17:25:20",
-  "total": 787,
-  "new_today": 2,
+  "generated_at": "2026-08-18T18:01:29",
+  "total": 788,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "010960",
+      "name": "삼호개발",
+      "sosok": "",
+      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
+      "submitter": "삼호개발",
+      "submitted_at": "2026.08.18",
+      "time": "17:34",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818800616",
+      "rcp_no": "20260818800616",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 3220,
+      "today_change_pct": 1.83,
+      "signal_last_seen": "20260706",
+      "signal_confidence": "high",
+      "signal_main_theme": "건설/토목",
+      "matched_at": "2026-08-18T18:01:29"
+    },
     {
       "ticker": "042940",
       "name": "상지건설",
