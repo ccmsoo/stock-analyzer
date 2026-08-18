@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-18T11:32:44",
-  "total": 777,
+  "generated_at": "2026-08-18T12:26:05",
+  "total": 778,
   "new_today": 1,
   "alerts": [
+    {
+      "ticker": "294870",
+      "name": "IPARK현대산업개발",
+      "sosok": "",
+      "report_name": "[기재정정]반기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
+      "submitter": "IPARK현대산업개발",
+      "submitted_at": "2026.08.18",
+      "time": "11:33",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818000088",
+      "rcp_no": "20260818000088",
+      "category": "실적",
+      "score": 75,
+      "current_price": 22300,
+      "today_change_pct": 0.9,
+      "signal_last_seen": "20260720",
+      "signal_confidence": "high",
+      "signal_main_theme": "분양/수급",
+      "matched_at": "2026-08-18T12:26:05"
+    },
     {
       "ticker": "092040",
       "name": "아미코젠",
