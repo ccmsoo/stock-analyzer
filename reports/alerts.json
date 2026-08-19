@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-19T17:26:12",
-  "total": 793,
-  "new_today": 4,
+  "generated_at": "2026-08-19T18:03:05",
+  "total": 794,
+  "new_today": 1,
   "alerts": [
     {
       "ticker": "275630",
@@ -21,6 +21,25 @@
       "signal_confidence": "high",
       "signal_main_theme": "사이버·클라우드 보안",
       "matched_at": "2026-08-19T16:52:26"
+    },
+    {
+      "ticker": "028260",
+      "name": "삼성물산",
+      "sosok": "",
+      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
+      "submitter": "삼성물산",
+      "submitted_at": "2026.08.19",
+      "time": "17:28",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819800608",
+      "rcp_no": "20260819800608",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 347000,
+      "today_change_pct": 5.96,
+      "signal_last_seen": "20260625",
+      "signal_confidence": "medium",
+      "signal_main_theme": "수급(대형주·그룹주 순환매)",
+      "matched_at": "2026-08-19T18:03:05"
     },
     {
       "ticker": "307870",
