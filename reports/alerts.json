@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-19T15:03:02",
-  "total": 787,
-  "new_today": 0,
+  "generated_at": "2026-08-19T16:03:33",
+  "total": 788,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "221800",
+      "name": "지구홀딩스",
+      "sosok": "",
+      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "submitter": "지구홀딩스",
+      "submitted_at": "2026.08.19",
+      "time": "15:45",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819900331",
+      "rcp_no": "20260819900331",
+      "category": "실적",
+      "score": 75,
+      "current_price": 4075,
+      "today_change_pct": 6.0,
+      "signal_last_seen": "20260512",
+      "signal_confidence": "medium",
+      "signal_main_theme": "정책",
+      "matched_at": "2026-08-19T16:03:33"
+    },
     {
       "ticker": "445090",
       "name": "에이직랜드",
