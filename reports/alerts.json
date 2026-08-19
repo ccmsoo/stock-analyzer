@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-19T18:47:39",
-  "total": 795,
+  "generated_at": "2026-08-19T19:19:54",
+  "total": 796,
   "new_today": 1,
   "alerts": [
     {
@@ -21,6 +21,25 @@
       "signal_confidence": "high",
       "signal_main_theme": "사이버·클라우드 보안",
       "matched_at": "2026-08-19T16:52:26"
+    },
+    {
+      "ticker": "322780",
+      "name": "코퍼스코리아",
+      "sosok": "",
+      "report_name": "최대주주변경",
+      "submitter": "코퍼스코리아",
+      "submitted_at": "2026.08.19",
+      "time": "18:52",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819900694",
+      "rcp_no": "20260819900694",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 2050,
+      "today_change_pct": 1.2,
+      "signal_last_seen": "20260713",
+      "signal_confidence": "medium",
+      "signal_main_theme": "콘텐츠·IP/미디어",
+      "matched_at": "2026-08-19T19:19:54"
     },
     {
       "ticker": "033530",
