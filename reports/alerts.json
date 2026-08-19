@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-19T18:03:05",
-  "total": 794,
+  "generated_at": "2026-08-19T18:47:39",
+  "total": 795,
   "new_today": 1,
   "alerts": [
     {
@@ -21,6 +21,25 @@
       "signal_confidence": "high",
       "signal_main_theme": "사이버·클라우드 보안",
       "matched_at": "2026-08-19T16:52:26"
+    },
+    {
+      "ticker": "033530",
+      "name": "SJG세종",
+      "sosok": "",
+      "report_name": "주요사항보고서(회사합병결정)",
+      "submitter": "SJG세종",
+      "submitted_at": "2026.08.19",
+      "time": "18:17",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819000385",
+      "rcp_no": "20260819000385",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 6700,
+      "today_change_pct": 6.56,
+      "signal_last_seen": "20260518",
+      "signal_confidence": "medium",
+      "signal_main_theme": "policy",
+      "matched_at": "2026-08-19T18:47:39"
     },
     {
       "ticker": "028260",
