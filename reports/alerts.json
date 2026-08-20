@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-20T12:22:55",
-  "total": 792,
-  "new_today": 0,
+  "generated_at": "2026-08-20T13:05:04",
+  "total": 793,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "206560",
+      "name": "덱스터",
+      "sosok": "",
+      "report_name": "[첨부정정]반기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
+      "submitter": "덱스터",
+      "submitted_at": "2026.08.20",
+      "time": "12:40",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260820000112",
+      "rcp_no": "20260820000112",
+      "category": "실적",
+      "score": 75,
+      "current_price": 894,
+      "today_change_pct": 14.53,
+      "signal_last_seen": "20260819",
+      "signal_confidence": "medium",
+      "signal_main_theme": "콘텐츠·미디어 (VFX·시각솔루션)",
+      "matched_at": "2026-08-20T13:05:04"
+    },
     {
       "ticker": "445090",
       "name": "에이직랜드",
