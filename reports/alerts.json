@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-20T15:29:45",
+  "generated_at": "2026-08-20T16:23:17",
   "total": 794,
-  "new_today": 0,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "001340",
+      "name": "PKC",
+      "sosok": "",
+      "report_name": "[기재정정]주요사항보고서(유형자산양수결정)",
+      "submitter": "PKC",
+      "submitted_at": "2026.08.20",
+      "time": "15:52",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260820000285",
+      "rcp_no": "20260820000285",
+      "category": "투자/시설",
+      "score": 70,
+      "current_price": 5020,
+      "today_change_pct": 1.93,
+      "signal_last_seen": "20260624",
+      "signal_confidence": "high",
+      "signal_main_theme": "반도체 소재·전구체",
+      "matched_at": "2026-08-20T16:23:17"
+    },
     {
       "ticker": "189330",
       "name": "씨이랩",
@@ -14993,25 +15012,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "수급/지분구조",
       "matched_at": "2026-07-21T18:37:27"
-    },
-    {
-      "ticker": "085620",
-      "name": "미래에셋생명",
-      "sosok": "",
-      "report_name": "[기재정정]사업보고서\n\t\t\t\t\t\t\t\t\t (2025.12)",
-      "submitter": "미래에셋생명",
-      "submitted_at": "2026.07.21",
-      "time": "16:08",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260721001043",
-      "rcp_no": "20260721001043",
-      "category": "실적",
-      "score": 75,
-      "current_price": 15930,
-      "today_change_pct": 1.46,
-      "signal_last_seen": "20260625",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급·밸류업(기업가치 재평가)",
-      "matched_at": "2026-07-21T16:09:06"
     },
     {
       "ticker": "082800",
