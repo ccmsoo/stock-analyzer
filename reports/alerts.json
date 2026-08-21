@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-21T09:47:03",
+  "generated_at": "2026-08-21T11:18:56",
   "total": 797,
-  "new_today": 0,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "347850",
+      "name": "디앤디파마텍",
+      "sosok": "",
+      "report_name": "투자판단관련주요경영사항(임상시험결과)\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t(대사이상지방간염 (MASH) 치료제 DD01의 미국 임상 제2상 임상시험결과보고서(CSR) 수령)",
+      "submitter": "디앤디파마텍",
+      "submitted_at": "2026.08.21",
+      "time": "10:52",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821900144",
+      "rcp_no": "20260821900144",
+      "category": "신약/임상",
+      "score": 78,
+      "current_price": 53800,
+      "today_change_pct": 6.92,
+      "signal_last_seen": "20260707",
+      "signal_confidence": "high",
+      "signal_main_theme": "바이오",
+      "matched_at": "2026-08-21T11:18:56"
+    },
     {
       "ticker": "012630",
       "name": "HDC",
@@ -15050,25 +15069,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "반도체",
       "matched_at": "2026-07-22T16:19:55"
-    },
-    {
-      "ticker": "034220",
-      "name": "LG디스플레이",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "LG디스플레이",
-      "submitted_at": "2026.07.22",
-      "time": "09:25",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722800138",
-      "rcp_no": "20260722800138",
-      "category": "실적",
-      "score": 75,
-      "current_price": 10010,
-      "today_change_pct": 2.67,
-      "signal_last_seen": "20260521",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급·그룹주 동반 랠리",
-      "matched_at": "2026-07-22T10:05:32"
     },
     {
       "ticker": "082800",
