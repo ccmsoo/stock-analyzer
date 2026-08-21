@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-21T13:09:23",
-  "total": 797,
-  "new_today": 0,
+  "generated_at": "2026-08-21T13:52:06",
+  "total": 798,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "065770",
+      "name": "CS",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결(자율공시)",
+      "submitter": "CS",
+      "submitted_at": "2026.08.21",
+      "time": "12:29",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821900225",
+      "rcp_no": "20260821900225",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 1539,
+      "today_change_pct": 0.9,
+      "signal_last_seen": "20260714",
+      "signal_confidence": "high",
+      "signal_main_theme": "M&A / 기업금융",
+      "matched_at": "2026-08-21T13:52:06"
+    },
     {
       "ticker": "347850",
       "name": "디앤디파마텍",
