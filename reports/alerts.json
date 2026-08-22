@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-22T10:07:47",
-  "total": 800,
+  "generated_at": "2026-08-22T11:20:23",
+  "total": 798,
   "new_today": 0,
   "alerts": [
     {
@@ -15088,44 +15088,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "바이오",
       "matched_at": "2026-07-24T18:31:58"
-    },
-    {
-      "ticker": "240600",
-      "name": "유진테크놀로지",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "유진테크놀로지",
-      "submitted_at": "2026.07.23",
-      "time": "09:47",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260723900120",
-      "rcp_no": "20260723900120",
-      "category": "실적",
-      "score": 75,
-      "current_price": 2530,
-      "today_change_pct": 11.95,
-      "signal_last_seen": "20260713",
-      "signal_confidence": "high",
-      "signal_main_theme": "2차전지(장비)",
-      "matched_at": "2026-07-23T10:10:59"
-    },
-    {
-      "ticker": "009150",
-      "name": "삼성전기",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "삼성전기",
-      "submitted_at": "2026.07.23",
-      "time": "08:58",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260723800073",
-      "rcp_no": "20260723800073",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 1449000,
-      "today_change_pct": 7.73,
-      "signal_last_seen": "20260618",
-      "signal_confidence": "medium",
-      "signal_main_theme": "반도체·부품(수급/테마성)",
-      "matched_at": "2026-07-23T10:11:00"
     },
     {
       "ticker": "207940",
