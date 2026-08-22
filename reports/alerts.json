@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-23T07:13:41",
-  "total": 764,
+  "generated_at": "2026-08-23T07:38:16",
+  "total": 762,
   "new_today": 0,
   "alerts": [
     {
@@ -14347,44 +14347,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "바이오",
       "matched_at": "2026-07-24T08:36:52"
-    },
-    {
-      "ticker": "028260",
-      "name": "삼성물산",
-      "sosok": "",
-      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
-      "submitter": "삼성물산",
-      "submitted_at": "2026.07.24",
-      "time": "07:34",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724800002",
-      "rcp_no": "20260724800002",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 360000,
-      "today_change_pct": 1.69,
-      "signal_last_seen": "20260625",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급(대형주·그룹주 순환매)",
-      "matched_at": "2026-07-24T07:37:42"
-    },
-    {
-      "ticker": "003490",
-      "name": "대한항공",
-      "sosok": "",
-      "report_name": "효력발생안내\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t( 2026.7.13. 제출 증권신고서(합병) )",
-      "submitter": "금융감독원",
-      "submitted_at": "2026.07.24",
-      "time": "07:30",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260713100004",
-      "rcp_no": "20260713100004",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 25750,
-      "today_change_pct": 3.41,
-      "signal_last_seen": "20260615",
-      "signal_confidence": "high",
-      "signal_main_theme": "정책/지정학(거시 이벤트)",
-      "matched_at": "2026-07-24T07:37:43"
     },
     {
       "ticker": "000100",
