@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-23T10:04:00",
-  "total": 761,
+  "generated_at": "2026-08-23T11:36:21",
+  "total": 760,
   "new_today": 0,
   "alerts": [
     {
@@ -14309,25 +14309,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "소비재/패션·섬유",
       "matched_at": "2026-07-24T13:30:12"
-    },
-    {
-      "ticker": "012330",
-      "name": "현대모비스",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "현대모비스",
-      "submitted_at": "2026.07.24",
-      "time": "09:52",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724800096",
-      "rcp_no": "20260724800096",
-      "category": "실적",
-      "score": 75,
-      "current_price": 505000,
-      "today_change_pct": 3.63,
-      "signal_last_seen": "20260521",
-      "signal_confidence": "medium",
-      "signal_main_theme": "로보틱스/모빌리티(자동차용 로봇) 수혜",
-      "matched_at": "2026-07-24T10:06:27"
     },
     {
       "ticker": "000100",
