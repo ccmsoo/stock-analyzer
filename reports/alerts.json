@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-24T14:51:09",
-  "total": 739,
-  "new_today": 2,
+  "generated_at": "2026-08-24T15:38:32",
+  "total": 740,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "290520",
+      "name": "신도기연",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "신도기연",
+      "submitted_at": "2026.08.24",
+      "time": "15:17",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260824900284",
+      "rcp_no": "20260824900284",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 1550,
+      "today_change_pct": 0.32,
+      "signal_last_seen": "20260513",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체",
+      "matched_at": "2026-08-24T15:38:32"
+    },
     {
       "ticker": "064290",
       "name": "인텍플러스",
