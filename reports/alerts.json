@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-24T16:43:19",
-  "total": 740,
-  "new_today": 0,
+  "generated_at": "2026-08-24T17:26:18",
+  "total": 741,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "005960",
+      "name": "동부건설",
+      "sosok": "",
+      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
+      "submitter": "동부건설",
+      "submitted_at": "2026.08.24",
+      "time": "17:16",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260824800603",
+      "rcp_no": "20260824800603",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 7350,
+      "today_change_pct": 1.08,
+      "signal_last_seen": "20260625",
+      "signal_confidence": "high",
+      "signal_main_theme": "건설/수주(공공 인프라)",
+      "matched_at": "2026-08-24T17:26:18"
+    },
     {
       "ticker": "290520",
       "name": "신도기연",
