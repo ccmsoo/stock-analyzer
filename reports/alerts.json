@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-25T16:28:51",
-  "total": 749,
+  "generated_at": "2026-08-25T17:07:23",
+  "total": 750,
   "new_today": 1,
   "alerts": [
+    {
+      "ticker": "089140",
+      "name": "넥스턴앤롤코리아",
+      "sosok": "",
+      "report_name": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "submitter": "넥스턴앤롤코리아",
+      "submitted_at": "2026.08.25",
+      "time": "17:04",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825900571",
+      "rcp_no": "20260825900571",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 2165,
+      "today_change_pct": 3.1,
+      "signal_last_seen": "20260604",
+      "signal_confidence": "high",
+      "signal_main_theme": "반도체/수주",
+      "matched_at": "2026-08-25T17:07:23"
+    },
     {
       "ticker": "051630",
       "name": "진양화학",
