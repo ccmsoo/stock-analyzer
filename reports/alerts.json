@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-25T15:30:53",
-  "total": 748,
-  "new_today": 2,
+  "generated_at": "2026-08-25T16:28:51",
+  "total": 749,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "051630",
+      "name": "진양화학",
+      "sosok": "",
+      "report_name": "주요사항보고서(자기주식취득결정)",
+      "submitter": "진양화학",
+      "submitted_at": "2026.08.25",
+      "time": "16:00",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825000332",
+      "rcp_no": "20260825000332",
+      "category": "자본정책_호재",
+      "score": 70,
+      "current_price": 1060,
+      "today_change_pct": 3.82,
+      "signal_last_seen": "20260604",
+      "signal_confidence": "medium",
+      "signal_main_theme": "정치/선거(테마주)",
+      "matched_at": "2026-08-25T16:28:51"
+    },
     {
       "ticker": "303030",
       "name": "지니틱스",
