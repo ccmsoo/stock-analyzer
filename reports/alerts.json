@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-25T11:13:50",
-  "total": 745,
-  "new_today": 2,
+  "generated_at": "2026-08-25T12:13:14",
+  "total": 746,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "159010",
+      "name": "아스플로",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "아스플로",
+      "submitted_at": "2026.08.25",
+      "time": "11:21",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825900155",
+      "rcp_no": "20260825900155",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 19210,
+      "today_change_pct": 3.9,
+      "signal_last_seen": "20260715",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체",
+      "matched_at": "2026-08-25T12:13:14"
+    },
     {
       "ticker": "486990",
       "name": "노타",
