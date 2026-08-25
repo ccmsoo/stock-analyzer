@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-25T18:32:11",
-  "total": 752,
-  "new_today": 0,
+  "generated_at": "2026-08-25T19:05:01",
+  "total": 753,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "270520",
+      "name": "앱튼",
+      "sosok": "",
+      "report_name": "투자판단관련주요경영사항\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t(독점적 라이선스 취득(기술도입 계약))",
+      "submitter": "앱튼",
+      "submitted_at": "2026.08.25",
+      "time": "18:57",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825900738",
+      "rcp_no": "20260825900738",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 3620,
+      "today_change_pct": 1.23,
+      "signal_last_seen": "20260629",
+      "signal_confidence": "high",
+      "signal_main_theme": "신재생에너지",
+      "matched_at": "2026-08-25T19:05:01"
+    },
     {
       "ticker": "375500",
       "name": "DL이앤씨",
