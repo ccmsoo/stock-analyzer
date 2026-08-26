@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-26T15:32:44",
-  "total": 753,
+  "generated_at": "2026-08-26T16:30:38",
+  "total": 754,
   "new_today": 1,
   "alerts": [
+    {
+      "ticker": "018670",
+      "name": "SK가스",
+      "sosok": "",
+      "report_name": "주요사항보고서(회사합병결정)",
+      "submitter": "SK가스",
+      "submitted_at": "2026.08.26",
+      "time": "16:26",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826000626",
+      "rcp_no": "20260826000626",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 236000,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260723",
+      "signal_confidence": "high",
+      "signal_main_theme": "에너지/자원(가스·LPG·LNG)",
+      "matched_at": "2026-08-26T16:30:38"
+    },
     {
       "ticker": "034730",
       "name": "SK",
