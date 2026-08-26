@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-08-26T14:02:47",
-  "total": 751,
-  "new_today": 0,
+  "generated_at": "2026-08-26T14:48:21",
+  "total": 752,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "189330",
+      "name": "씨이랩",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "씨이랩",
+      "submitted_at": "2026.08.26",
+      "time": "14:41",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826900307",
+      "rcp_no": "20260826900307",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 14950,
+      "today_change_pct": 0.34,
+      "signal_last_seen": "20260529",
+      "signal_confidence": "high",
+      "signal_main_theme": "실적/수주(Physical AI·AI 비전)",
+      "matched_at": "2026-08-26T14:48:21"
+    },
     {
       "ticker": "007390",
       "name": "네이처셀",
