@@ -43,7 +43,10 @@ def evaluate_scores(panel, score_fn, hold=10, top=20, min_group=30):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--n", type=int, default=30, help="무작위 신호 반복 횟수")
+    ap.add_argument("--n", type=int, default=100,
+                    help="무작위 신호 반복 횟수. **20~30회는 너무 적다** — "
+                         "2026-08-28에 20회로 4/20(20%)이 나와 프레임워크를 의심했는데 "
+                         "100회로 재니 9/100(9%)로 정상이었다. 표본 잡음이었다")
     ap.add_argument("--hold", type=int, default=10)
     ap.add_argument("--signal", default="기관5일", help="비교할 실제 신호")
     a = ap.parse_args()

@@ -35,8 +35,11 @@ OUT = "state/dart_days.pkl"
 # ⚠️ DART는 공격적 수집에 IP를 즉시 차단한다 (RemoteDisconnected).
 # 2026-08-28에 워커 4개로 16초에 ~2,600요청을 날려 차단당했다.
 # 그래서 기본값을 **단일 워커 + 요청 간 대기**로 둔다. 빠르게 하고 싶어도 하지 말 것.
-PAGE_SLEEP = 0.6      # 페이지 사이
-DAY_SLEEP = 1.2       # 날짜 사이
+# 2026-08-28에 **두 번** 차단당했다(워커4 공격 수집 1회, 단일워커 0.6/1.2초 1회).
+# 단일 워커에 0.6/1.2초로도 197일에서 막혔으므로 간격을 두 배 이상으로 늘린다.
+# 하루 ~6페이지 기준 약 12초/일 — 200일에 40분. 느리지만 끝까지 간다.
+PAGE_SLEEP = 1.4      # 페이지 사이
+DAY_SLEEP = 3.0       # 날짜 사이
 MARKET = {"tagCom_kospi": "KOSPI", "tagCom_kosdaq": "KOSDAQ",
           "tagCom_konex": "KONEX", "tagCom_etc": "기타"}
 

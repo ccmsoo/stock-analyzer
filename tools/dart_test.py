@@ -44,6 +44,12 @@ EVENTS = {
     "특허취득": ["특허권취득"],
     "소송": ["소송등의제기"],
     "유형자산취득": ["유형자산취득결정"],
+    # 2026-08-28 2차 추가 — 미분류 6만건을 훑어 표본이 충분하고 문헌 근거가 있는 것만.
+    # (결과를 보기 전에 docs/dart_prereg.md 에 예상을 먼저 적었다)
+    "최대주주지분변동": ["최대주주등소유주식변동신고서"],
+    "배당결정": ["현금ㆍ현물배당결정", "현금·현물배당결정"],
+    "채무보증": ["타인에대한채무보증결정"],
+    "기업설명회": ["기업설명회개최"],
 }
 
 
@@ -199,7 +205,7 @@ def evaluate(hit, px, meta, kind, hold, fw, base, dates=None):
     return tstat(by_date), n_ev[0]
 
 
-def null_check(hit, px, meta, hold, fw, base, n_trials=20, seed0=0):
+def null_check(hit, px, meta, hold, fw, base, n_trials=100, seed0=0):
     """가짜 이벤트를 실제와 같은 빈도로 무작위 배치 → t 분포.
 
     |t|>2가 5% 안팎이 아니라 훨씬 많이 나오면 이 검정 틀 자체가 거짓 양성을 만든다는 뜻이고,
@@ -246,8 +252,18 @@ def main():
     cut = alld[int(len(alld) * 0.6)]
     tr = {d for d in alld if d < cut}
     te = {d for d in alld if d >= cut}
+    # 본페로니 — 가설 개수에서 직접 계산한다 (하드코딩하면 유형을 늘렸을 때 틀린다)
+    def _z(alpha):
+        lo, hi = 0.0, 10.0
+        for _ in range(200):
+            mid = (lo + hi) / 2
+            if 2 * (1 - 0.5 * (1 + math.erf(mid / math.sqrt(2)))) > alpha:
+                lo = mid
+            else:
+                hi = mid
+        return (lo + hi) / 2
     n_h = len(EVENTS)
-    crit = 2.87 if n_h >= 10 else 2.5
+    crit = round(_z(0.05 / n_h), 2)
     print(f"  탐색 {len(tr)}일 / 검증 {len(te)}일 · 가설 {n_h}개 → 본페로니 |t| ≥ {crit}\n")
 
     fw = precompute(px, a.hold)
