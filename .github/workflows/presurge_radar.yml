@@ -84,13 +84,14 @@ jobs:
         run: |
           python -u -m tools.signal_radar --flows /tmp/flows_daily.pkl \
             --uni 100 --top 12 --json reports/signal_radar.json \
+            --ledger state/signal_ledger.jsonl \
             || echo "신호 레이더 실패 — 촉매 레이더 결과는 이미 커밋됨"
 
       - name: Commit signal radar if changed
         run: |
           git config user.name "radar-bot"
           git config user.email "radar@stockanalyzer"
-          git add reports/signal_radar.json || true
+          git add reports/signal_radar.json state/signal_ledger.jsonl || true
           if git diff --staged --quiet; then
             echo "변경 없음"
           else

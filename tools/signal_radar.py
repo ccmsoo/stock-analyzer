@@ -104,6 +104,9 @@ def main():
     ap.add_argument("--top", type=int, default=TOP_DEFAULT)
     ap.add_argument("--flows", default="state/flows.pkl")
     ap.add_argument("--json", help="결과 저장 경로")
+    ap.add_argument("--ledger", help="포워드 장부(append-only) 경로. "
+                                     "결과를 모르는 상태로 픽을 누적해 "
+                                     "나중에 과적합 불가능한 표본을 만든다")
     a = ap.parse_args()
 
     flows, meta = load(a.flows)
@@ -159,6 +162,40 @@ def main():
                "candidates": cands}
         json.dump(out, open(a.json, "w"), ensure_ascii=False, indent=1)
         print(f"\n저장: {a.json}  (presurge_radar.json 과 동일 스키마)")
+
+    if a.ledger:
+        # 포워드 장부 (append-only) — **이 프로젝트에서 가장 값진 자산의 방식**을 그대로 쓴다.
+        #
+        # 2026-08-28 감사에서 배운 것: 촉매 레이더의 1,137픽 장부가 '결과를 모르는 상태로'
+        # 기록돼 있었기 때문에, 대조군을 붙이자마자 결론이 뒤집혔다. 과적합이 불가능한
+        # 유일한 표본이다. 같은 데이터를 반복해서 파면 이제 거짓 양성만 나오므로
+        # (실제로 하루에 여섯 번 속았다), 오염되지 않은 증거를 만들 방법은 이것뿐이다.
+        #
+        # 덮어쓰지 않는다. 같은 날짜가 이미 있으면 건너뛴다.
+        import os
+        seen = set()
+        if os.path.exists(a.ledger):
+            for line in open(a.ledger):
+                line = line.strip()
+                if line:
+                    try:
+                        seen.add(json.loads(line)["date"])
+                    except Exception:
+                        pass
+        if date in seen:
+            print(f"장부: {date} 이미 기록됨 — 건너뜀")
+        else:
+            with open(a.ledger, "a") as f:
+                for k, p in enumerate(picks, 1):
+                    f.write(json.dumps({
+                        "date": date, "rank": k,
+                        "ticker": p["ticker"], "name": p["name"], "market": p["market"],
+                        "price": p["close"], "value_traded": p["tv"],
+                        "mom20": round(p["mom20"], 3), "inst5": round(p["inst5"], 4),
+                        "rank_mom": p["rank_mom"], "rank_inst": p["rank_inst"],
+                        "universe": a.uni, "signal": "mom20+inst5_rev",
+                    }, ensure_ascii=False) + "\n")
+            print(f"장부: {a.ledger} 에 {len(picks)}건 append")
 
 
 if __name__ == "__main__":
