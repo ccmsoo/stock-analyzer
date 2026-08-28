@@ -33,3 +33,16 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TZ: Asia/Seoul
         run: python -u -m tools.score_ledger --telegram
+
+      # ── 신호 장부 채점 (대조군 포함) ────────────────────────────────
+      # 기존 score_ledger는 비용 0%·갭 미반영·**대조군 없음**이다.
+      # score_signal_ledger는 같은날·같은시장 유니버스 평균을 대조군으로 쓰고
+      # 거래일 클러스터 t로 판정한다. 채점기 자체는 촉매 장부로 검증했다
+      # (감사 결과 t=-6.2를 재현 → docs/audit_20260820.md).
+      - name: 신호 장부 채점
+        env:
+          TZ: Asia/Seoul
+        run: |
+          python -u -m tools.score_signal_ledger \
+            --ledger state/signal_ledger.jsonl --hold 3 5 10 \
+            || echo "신호 장부 채점 실패 (아직 픽이 적을 수 있음)"
