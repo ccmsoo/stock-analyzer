@@ -12,7 +12,7 @@ permissions:
 jobs:
   radar:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25   # 신호 레이더 단계(수급 수집 ~2분) 추가분 반영
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
@@ -42,26 +42,6 @@ jobs:
           TZ: Asia/Seoul
         run: python -u -m tools.presurge_radar --telegram --min-score 6 --days 3
 
-      # ── 신호 레이더 (검증된 신호) ─────────────────────────────────────
-      # 위 촉매 레이더의 AI 점수는 2026-08-20 대조군 감사에서 **역엣지**로 판정됐다
-      # (같은날·같은시장 대비 −2.7%p, t=−6.2 · docs/audit_20260820.md).
-      # 아래는 검증된 신호(20일 모멘텀 상위 + 기관 순매수 아님)로 나란히 생성한다.
-      # 텔레그램은 아직 위 레이더가 보낸다 — 며칠 비교 후 전환 여부를 결정할 것.
-      # 상태 파일(flows)은 /tmp에 받고 커밋하지 않는다 (10MB → 저장소 비대화 방지).
-      # 3페이지=60거래일이면 500일 이력과 **완전히 동일한 픽**이 나온다(검증됨).
-      - name: 수급 수집 (외인·기관, 약 2분)
-        env:
-          TZ: Asia/Seoul
-        run: python -u -m tools.fetch_flows --pages 3 --tickers 400 --out /tmp/flows_daily.pkl || true
-
-      - name: 신호 레이더
-        env:
-          TZ: Asia/Seoul
-        run: |
-          python -u -m tools.signal_radar --flows /tmp/flows_daily.pkl \
-            --uni 100 --top 12 --json reports/signal_radar.json \
-            || echo "신호 레이더 실패 — 촉매 레이더 결과는 유지"
-
       - name: Build track record (성적표 JSON — UI /track 데이터)
         env:
           TOSS_CLIENT_KEY: ${{ secrets.TOSS_CLIENT_KEY }}
@@ -73,11 +53,48 @@ jobs:
         run: |
           git config user.name "radar-bot"
           git config user.email "radar@stockanalyzer"
-          git add reports/presurge_radar.json state/radar_ledger.jsonl reports/track_record.json reports/signal_radar.json || true
+          git add reports/presurge_radar.json state/radar_ledger.jsonl reports/track_record.json || true
           if git diff --staged --quiet; then
             echo "변경 없음"
           else
             git commit -m "presurge: $(date -u +%Y%m%d-%H%M)"
             git pull --rebase origin main || true
             git push
+          fi
+
+      # ── 신호 레이더 (검증된 신호) — **기존 커밋 뒤에** 둔다 ──────────────
+      # 위 촉매 레이더의 AI 점수는 2026-08-20 대조군 감사에서 역엣지로 판정됐다
+      # (같은날·같은시장 대비 −2.7%p, t=−6.2 · docs/audit_20260820.md).
+      # 아래는 검증된 신호(20일 모멘텀 상위 + 기관 순매수 아님)로 나란히 생성한다.
+      #
+      # **순서가 중요하다.** 이 단계들이 실패하거나 시간을 초과해도 위의 촉매 레이더
+      # 결과는 이미 커밋된 뒤라 안전하다. (앞에 두면 여기서 죽을 때 기존 결과까지 날아간다)
+      #
+      # 상태 파일(flows, 10MB)은 /tmp에 받고 커밋하지 않는다.
+      # 3페이지=60거래일이면 500일 이력과 픽이 12/12 동일함을 실측 확인했다.
+      # 텔레그램은 아직 위 레이더가 보낸다 — 며칠 비교 후 전환 여부를 결정할 것.
+      - name: 수급 수집 (외인·기관, 약 2분)
+        env:
+          TZ: Asia/Seoul
+        run: python -u -m tools.fetch_flows --pages 3 --tickers 400 --out /tmp/flows_daily.pkl || true
+
+      - name: 신호 레이더
+        env:
+          TZ: Asia/Seoul
+        run: |
+          python -u -m tools.signal_radar --flows /tmp/flows_daily.pkl \
+            --uni 100 --top 12 --json reports/signal_radar.json \
+            || echo "신호 레이더 실패 — 촉매 레이더 결과는 이미 커밋됨"
+
+      - name: Commit signal radar if changed
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar@stockanalyzer"
+          git add reports/signal_radar.json || true
+          if git diff --staged --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "signal: $(date -u +%Y%m%d-%H%M)"
+            git pull --rebase --autostash || true
+            git push || echo "push 실패 — 다음 실행에서 재시도"
           fi
