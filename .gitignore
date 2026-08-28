@@ -32,3 +32,10 @@ scratch/
 
 # Claude Code local settings (퍼스널 권한 등)
 .claude/
+state/control_px.pkl
+state/deep_px.pkl
+state/deep_px.pkl.meta.json
+state/panel.pkl
+state/flows.pkl
+state/flows_deep.pkl
+state/dart_days.pkl

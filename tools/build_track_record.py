@@ -23,6 +23,9 @@ from tools.presurge_radar import candles_any, SPIKE_DAYS, SPIKE_PCT
 
 STOP = 10.0
 HOLDS = (1, 3, 5, 7)
+# 왕복 거래비용 % — 증권거래세 0.18 + 수수료 + 시초가 슬리피지. 2026-08-20 감사에서
+# 비용 0% 가정이 알파를 통째로 부풀리고 있었다(3일 알파 +0.35→-0.05%). 0%는 금지.
+COST = 0.4
 
 
 def _index_series() -> dict:
@@ -74,15 +77,23 @@ def _score(r: dict, hold: int, px: dict, idxs: dict) -> dict | None:
     if not entry:
         return None
     ret = None
+    exit_i = xi
     stop_px = entry * (1 - STOP / 100)
     for j in range(ei, xi + 1):
-        if s[days[j]]["low"] <= stop_px:
-            ret = -STOP
+        c = s[days[j]]
+        if c["low"] <= stop_px:
+            exit_i = j
+            # 갭하락으로 시초가가 이미 손절선 아래면 -10%가 아니라 시초가에 체결된다.
+            # -10% 고정은 낙관 편향(2026-08-20 감사).
+            ret = (min(c["open"], stop_px) / entry - 1) * 100
             break
     if ret is None:
         ret = (s[days[xi]]["close"] / entry - 1) * 100
+    ret -= COST
     idx = idxs.get(r.get("market") or "KOSDAQ") or idxs["KOSDAQ"]
-    ik = [d for d in sorted(idx) if edate <= d <= days[xi]]
+    # 벤치마크 창은 **실제 보유 구간**과 일치시킨다. 손절로 D+1에 나왔는데 지수를
+    # D+7까지 재면, 하락장에서 알파가 통째로 만들어진다(감사: 7일 알파 +1.66→+1.15%).
+    ik = [d for d in sorted(idx) if edate <= d <= days[exit_i]]
     alpha = None
     if ik and idx[ik[0]]["open"]:
         alpha = ret - (idx[ik[-1]]["close"] / idx[ik[0]]["open"] - 1) * 100
