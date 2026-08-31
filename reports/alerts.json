@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-01T04:41:24",
-  "total": 647,
-  "new_today": 0,
+  "generated_at": "2026-09-01T08:23:58",
+  "total": 648,
+  "new_today": 1,
   "alerts": [
     {
       "ticker": "052400",
@@ -116,6 +116,25 @@
       "signal_confidence": "medium",
       "signal_main_theme": "정책/보험업",
       "matched_at": "2026-08-31T22:42:04"
+    },
+    {
+      "ticker": "161000",
+      "name": "애경케미칼",
+      "sosok": "",
+      "report_name": "[기재정정]타법인주식및출자증권취득결정",
+      "submitter": "애경케미칼",
+      "submitted_at": "2026.08.31",
+      "time": "17:00",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800704",
+      "rcp_no": "20260831800704",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 11020,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260831",
+      "signal_confidence": "medium",
+      "signal_main_theme": "2차전지",
+      "matched_at": "2026-09-01T08:23:58"
     },
     {
       "ticker": "028260",
