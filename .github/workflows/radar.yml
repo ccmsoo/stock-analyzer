@@ -32,8 +32,6 @@ jobs:
       - name: Run live radar
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TZ: Asia/Seoul
         run: python -u -m monitor.live_radar --once --hours 1 --max-keywords 30
 

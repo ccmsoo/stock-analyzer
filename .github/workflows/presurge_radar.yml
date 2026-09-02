@@ -34,13 +34,11 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           # OpenAI 장애 시 폴백 (선택 — 있으면 Claude Haiku로 촉매 평가)
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           # 토스 키(있으면 차트·유동성 필터 사용, 없으면 graceful)
           TOSS_CLIENT_KEY: ${{ secrets.TOSS_CLIENT_KEY }}
           TOSS_SECRET_KEY: ${{ secrets.TOSS_SECRET_KEY }}
           TZ: Asia/Seoul
-        run: python -u -m tools.presurge_radar --telegram --min-score 6 --days 3
+        run: python -u -m tools.presurge_radar --min-score 6 --days 3
 
       - name: Build track record (성적표 JSON — UI /track 데이터)
         env:
@@ -72,7 +70,6 @@ jobs:
       #
       # 상태 파일(flows, 10MB)은 /tmp에 받고 커밋하지 않는다.
       # 3페이지=60거래일이면 500일 이력과 픽이 12/12 동일함을 실측 확인했다.
-      # 텔레그램은 아직 위 레이더가 보낸다 — 며칠 비교 후 전환 여부를 결정할 것.
       - name: 수급 수집 (외인·기관, 약 2분)
         env:
           TZ: Asia/Seoul

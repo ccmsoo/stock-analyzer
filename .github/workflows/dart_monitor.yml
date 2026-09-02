@@ -31,8 +31,6 @@ jobs:
 
       - name: Run DART monitor
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TZ: Asia/Seoul
         run: python -u -m tools.dart_monitor --days 2
 

@@ -29,10 +29,8 @@ jobs:
 
       - name: Score radar ledger (forward P&L)
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TZ: Asia/Seoul
-        run: python -u -m tools.score_ledger --telegram
+        run: python -u -m tools.score_ledger
 
       # ── 신호 장부 채점 (대조군 포함) ────────────────────────────────
       # 기존 score_ledger는 비용 0%·갭 미반영·**대조군 없음**이다.
