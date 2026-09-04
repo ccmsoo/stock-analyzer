@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-04T07:02:37",
-  "total": 662,
+  "generated_at": "2026-09-04T09:03:14",
+  "total": 661,
   "new_today": 0,
   "alerts": [
     {
@@ -12523,25 +12523,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "policy",
       "matched_at": "2026-08-05T10:53:08"
-    },
-    {
-      "ticker": "000990",
-      "name": "DB하이텍",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "DB하이텍",
-      "submitted_at": "2026.08.05",
-      "time": "08:39",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805800063",
-      "rcp_no": "20260805800063",
-      "category": "실적",
-      "score": 75,
-      "current_price": 85000,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260622",
-      "signal_confidence": "medium",
-      "signal_main_theme": "반도체",
-      "matched_at": "2026-08-05T08:56:11"
     },
     {
       "ticker": "082800",
