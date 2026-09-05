@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-05T09:56:24",
-  "total": 654,
+  "generated_at": "2026-09-05T14:09:47",
+  "total": 652,
   "new_today": 0,
   "alerts": [
     {
@@ -12352,44 +12352,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "반도체",
       "matched_at": "2026-08-06T15:31:05"
-    },
-    {
-      "ticker": "011330",
-      "name": "유니켐",
-      "sosok": "",
-      "report_name": "[기재정정]타법인주식및출자증권취득결정",
-      "submitter": "유니켐",
-      "submitted_at": "2026.08.06",
-      "time": "11:45",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806800145",
-      "rcp_no": "20260806800145",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 4550,
-      "today_change_pct": 30.0,
-      "signal_last_seen": "20260706",
-      "signal_confidence": "medium",
-      "signal_main_theme": "로봇·로봇부품 소재",
-      "matched_at": "2026-08-06T12:59:05"
-    },
-    {
-      "ticker": "037560",
-      "name": "LG헬로비전",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "LG헬로비전",
-      "submitted_at": "2026.08.06",
-      "time": "10:05",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806800075",
-      "rcp_no": "20260806800075",
-      "category": "실적",
-      "score": 75,
-      "current_price": 1628,
-      "today_change_pct": 4.57,
-      "signal_last_seen": "20260603",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급/그룹주 연동",
-      "matched_at": "2026-08-06T12:59:06"
     },
     {
       "ticker": "082800",
