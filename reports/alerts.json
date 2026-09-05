@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-05T08:11:35",
-  "total": 655,
+  "generated_at": "2026-09-05T09:56:24",
+  "total": 654,
   "new_today": 0,
   "alerts": [
     {
@@ -12390,25 +12390,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "수급/그룹주 연동",
       "matched_at": "2026-08-06T12:59:06"
-    },
-    {
-      "ticker": "020150",
-      "name": "롯데에너지머티리얼즈",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "롯데에너지머티리얼즈",
-      "submitted_at": "2026.08.06",
-      "time": "09:08",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806800043",
-      "rcp_no": "20260806800043",
-      "category": "실적",
-      "score": 75,
-      "current_price": 30900,
-      "today_change_pct": 1.12,
-      "signal_last_seen": "20260612",
-      "signal_confidence": "high",
-      "signal_main_theme": "반도체/첨단소재",
-      "matched_at": "2026-08-06T09:49:19"
     },
     {
       "ticker": "082800",
