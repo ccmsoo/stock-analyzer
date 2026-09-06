@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-06T18:57:45",
-  "total": 623,
+  "generated_at": "2026-09-06T22:23:28",
+  "total": 622,
   "new_today": 0,
   "alerts": [
     {
@@ -11782,25 +11782,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "정책",
       "matched_at": "2026-08-10T10:12:25"
-    },
-    {
-      "ticker": "005940",
-      "name": "NH투자증권",
-      "sosok": "",
-      "report_name": "타법인주식및출자증권취득결정",
-      "submitter": "NH투자증권",
-      "submitted_at": "2026.08.07",
-      "time": "18:10",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807800998",
-      "rcp_no": "20260807800998",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 27800,
-      "today_change_pct": 1.77,
-      "signal_last_seen": "20260703",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급/증권업(시장 반등·거래대금 증가)",
-      "matched_at": "2026-08-07T19:01:09"
     },
     {
       "ticker": "082800",
