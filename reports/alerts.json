@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-06T08:16:58",
-  "total": 644,
+  "generated_at": "2026-09-06T10:08:52",
+  "total": 642,
   "new_today": 0,
   "alerts": [
     {
@@ -12162,44 +12162,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "정책/규제(재생에너지)",
       "matched_at": "2026-08-07T12:37:39"
-    },
-    {
-      "ticker": "007070",
-      "name": "GS리테일",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "GS리테일",
-      "submitted_at": "2026.08.07",
-      "time": "09:29",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807800098",
-      "rcp_no": "20260807800098",
-      "category": "실적",
-      "score": 75,
-      "current_price": 27850,
-      "today_change_pct": 5.29,
-      "signal_last_seen": "20260623",
-      "signal_confidence": "high",
-      "signal_main_theme": "유통/리테일",
-      "matched_at": "2026-08-07T09:36:24"
-    },
-    {
-      "ticker": "023530",
-      "name": "롯데쇼핑",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "롯데쇼핑",
-      "submitted_at": "2026.08.07",
-      "time": "08:39",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807800048",
-      "rcp_no": "20260807800048",
-      "category": "실적",
-      "score": 75,
-      "current_price": 98800,
-      "today_change_pct": 13.71,
-      "signal_last_seen": "20260604",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급/소비(백화점·명품 소비 심리)",
-      "matched_at": "2026-08-07T09:36:25"
     },
     {
       "ticker": "082800",
