@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-09-08T07:09:21",
-  "total": 633,
-  "new_today": 0,
+  "generated_at": "2026-09-08T09:22:22",
+  "total": 634,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "002780",
+      "name": "진흥기업",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "진흥기업",
+      "submitted_at": "2026.09.08",
+      "time": "08:55",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908800066",
+      "rcp_no": "20260908800066",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 7330,
+      "today_change_pct": 3.17,
+      "signal_last_seen": "20260706",
+      "signal_confidence": "medium",
+      "signal_main_theme": "정책(메가프로젝트·지역인프라)",
+      "matched_at": "2026-09-08T09:22:22"
+    },
     {
       "ticker": "320000",
       "name": "한울반도체",
