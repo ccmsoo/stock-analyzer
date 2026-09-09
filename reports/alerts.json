@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-09T19:06:50",
-  "total": 642,
-  "new_today": 10,
+  "generated_at": "2026-09-09T23:33:03",
+  "total": 643,
+  "new_today": 1,
   "alerts": [
     {
       "ticker": "006980",
@@ -477,6 +477,25 @@
       "signal_confidence": "high",
       "signal_main_theme": "실적/재무구조 개선 (건설)",
       "matched_at": "2026-09-08T18:17:30"
+    },
+    {
+      "ticker": "327260",
+      "name": "RF머트리얼즈",
+      "sosok": "",
+      "report_name": "주식소각결정",
+      "submitter": "RF머트리얼즈",
+      "submitted_at": "2026.09.08",
+      "time": "12:26",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908900177",
+      "rcp_no": "20260908900177",
+      "category": "자본정책_호재",
+      "score": 70,
+      "current_price": 42300,
+      "today_change_pct": 22.61,
+      "signal_last_seen": "20260909",
+      "signal_confidence": "medium",
+      "signal_main_theme": "광통신/통신장비",
+      "matched_at": "2026-09-09T23:33:03"
     },
     {
       "ticker": "002780",
