@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-09-11T07:14:50",
-  "total": 631,
-  "new_today": 0,
+  "generated_at": "2026-09-11T09:11:54",
+  "total": 632,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "012450",
+      "name": "한화에어로스페이스",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결(자율공시)",
+      "submitter": "한화에어로스페이스",
+      "submitted_at": "2026.09.11",
+      "time": "07:37",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911800004",
+      "rcp_no": "20260911800004",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 1077000,
+      "today_change_pct": 0.94,
+      "signal_last_seen": "20260616",
+      "signal_confidence": "high",
+      "signal_main_theme": "수급/지배구조 (지분확대·M&A)",
+      "matched_at": "2026-09-11T09:11:54"
+    },
     {
       "ticker": "267250",
       "name": "HD현대",
