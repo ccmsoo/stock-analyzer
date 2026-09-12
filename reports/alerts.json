@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-13T06:38:24",
-  "total": 485,
+  "generated_at": "2026-09-13T08:20:59",
+  "total": 482,
   "new_today": 0,
   "alerts": [
     {
@@ -9160,63 +9160,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "조선/해양플랜트",
       "matched_at": "2026-08-14T08:43:15"
-    },
-    {
-      "ticker": "026910",
-      "name": "광진실업",
-      "sosok": "",
-      "report_name": "[기재정정]최대주주변경",
-      "submitter": "광진실업",
-      "submitted_at": "2026.08.14",
-      "time": "07:49",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814900008",
-      "rcp_no": "20260814900008",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 4605,
-      "today_change_pct": 0.22,
-      "signal_last_seen": "20260713",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급/풍문 (루머·해명)",
-      "matched_at": "2026-08-14T07:59:37"
-    },
-    {
-      "ticker": "026910",
-      "name": "광진실업",
-      "sosok": "",
-      "report_name": "최대주주변경을수반하는주식담보제공계약체결",
-      "submitter": "광진실업",
-      "submitted_at": "2026.08.14",
-      "time": "07:49",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814900009",
-      "rcp_no": "20260814900009",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 4605,
-      "today_change_pct": 0.22,
-      "signal_last_seen": "20260713",
-      "signal_confidence": "medium",
-      "signal_main_theme": "수급/풍문 (루머·해명)",
-      "matched_at": "2026-08-14T07:59:38"
-    },
-    {
-      "ticker": "304360",
-      "name": "에스바이오메딕스",
-      "sosok": "",
-      "report_name": "반기보고서\n\t\t\t\t\t\t\t\t\t (2026.06)",
-      "submitter": "에스바이오메딕스",
-      "submitted_at": "2026.08.14",
-      "time": "07:30",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813001795",
-      "rcp_no": "20260813001795",
-      "category": "실적",
-      "score": 75,
-      "current_price": 20300,
-      "today_change_pct": 0.73,
-      "signal_last_seen": "20260522",
-      "signal_confidence": "medium",
-      "signal_main_theme": "바이오",
-      "matched_at": "2026-08-14T07:59:39"
     }
   ]
 }
