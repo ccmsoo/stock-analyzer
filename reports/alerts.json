@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-09-15T05:41:42",
-  "total": 263,
-  "new_today": 0,
+  "generated_at": "2026-09-15T08:28:58",
+  "total": 264,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "418620",
+      "name": "E8",
+      "sosok": "",
+      "report_name": "최대주주변경",
+      "submitter": "E8",
+      "submitted_at": "2026.09.15",
+      "time": "07:44",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260915900012",
+      "rcp_no": "20260915900012",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 715,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260904",
+      "signal_confidence": "high",
+      "signal_main_theme": "수급 (유상증자/자본확충)",
+      "matched_at": "2026-09-15T08:28:58"
+    },
     {
       "ticker": "002780",
       "name": "진흥기업",
