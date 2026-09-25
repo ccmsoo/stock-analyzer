@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T21:05:21",
+  "generated_at": "2026-09-25T21:06:16",
   "reference_date": "20260909",
   "themes": [
     {
@@ -8991,125 +8991,6 @@
       ]
     },
     {
-      "keyword": "파트너십",
-      "risen_members": [
-        {
-          "ticker": "000720",
-          "name": "현대건설",
-          "change_pct": 5.81,
-          "specific_signal": "테라파워와의 원전(특히 SMR·나트륨냉각형) 사업 협약 및 원전 EPC 우선권 확보",
-          "confidence": "high"
-        },
-        {
-          "ticker": "033790",
-          "name": "피노",
-          "change_pct": 15.52,
-          "specific_signal": "코스모신소재 대상 150억원 규모 유상증자 결정 — 이차전지 소재 사업 경쟁력 강화 목적",
-          "confidence": "high"
-        },
-        {
-          "ticker": "049480",
-          "name": "오픈베이스",
-          "change_pct": 13.16,
-          "specific_signal": "고객사 초청 AI 보안 세미나(무비 데이) 개최·보안 벤더와의 파트너십 영업 강화",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "064400",
-          "name": "LG씨엔에스",
-          "change_pct": 26.27,
-          "specific_signal": "LG CNS의 '에이전틱·피지컬 AI'(AI 에이전트·휴머노이드) 실증·사업화 공개 및 오픈AI 관련 협업·AX(Enterprise ChatGPT) 실행 사례 발표",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "066575",
-          "name": "LG전자우",
-          "change_pct": 29.99,
-          "specific_signal": "젠슨 황 방한 기대감(엔비디아 CEO 방한설)으로 AI협력·파트너십 기대가 부각되며 LG그룹주에 수급 집중",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "100840",
-          "name": "SNT에너지",
-          "change_pct": 14.98,
-          "specific_signal": "사우디 중동전쟁 피해 복구 프로젝트용 에어쿨드 콘덴서 공급 계약 체결(약 320억원)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "168330",
-          "name": "내츄럴엔도텍",
-          "change_pct": 19.0,
-          "specific_signal": "EstroG-100의 글로벌 제약사·대형 건기식 브랜드 연속 채택 및 미국 시장(Thorne HealthTech) 관련 캠페인 노출로 인한 수출·유통 파트너십 기대감",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "357880",
-          "name": "SKAI",
-          "change_pct": 13.22,
-          "specific_signal": "블루포지와 전략적 파트너십으로 'AI 바이브코딩 플랫폼' 공동 발표(및 성균관대와 에이전틱 AI MOU)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "405000",
-          "name": "플라즈맵",
-          "change_pct": 19.35,
-          "specific_signal": "70억원 규모 제3자배정 유상증자 결정(하반기 신제품 출시·글로벌 파트너십 자금조달)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "458870",
-          "name": "씨어스",
-          "change_pct": 16.7,
-          "specific_signal": "병원용 환자모니터링·이상징후 탐지 플랫폼 '씽크'의 대규모 병원 구축(전남대·화순 558병상) 및 해외 수주(신한투자 보고서: UAE 220억 규모)·대웅제약과의 파트너십 부각",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "069620",
-          "name": "대웅제약",
-          "market": "KOSPI",
-          "marcap": 1230494265000,
-          "last_close": 114400,
-          "last_change_pct": -1.04,
-          "avg_abs_change_5d": 2.19,
-          "avg_value_5d_eok": 29.2,
-          "vol_surge": 0.99,
-          "value_surge": 0.92,
-          "close_5d_return": -0.35,
-          "risk_score": 2.17
-        },
-        {
-          "code": "278280",
-          "name": "천보",
-          "market": "KOSDAQ",
-          "marcap": 425179967500,
-          "last_close": 40100,
-          "last_change_pct": 2.82,
-          "avg_abs_change_5d": 1.49,
-          "avg_value_5d_eok": 9.9,
-          "vol_surge": 0.68,
-          "value_surge": 0.69,
-          "close_5d_return": 0.63,
-          "risk_score": 1.03
-        },
-        {
-          "code": "347860",
-          "name": "알체라",
-          "market": "KOSDAQ",
-          "marcap": 60743405327,
-          "last_close": 1319,
-          "last_change_pct": 1.7,
-          "avg_abs_change_5d": 1.57,
-          "avg_value_5d_eok": 1.0,
-          "vol_surge": 0.43,
-          "value_surge": 0.41,
-          "close_5d_return": 6.8,
-          "risk_score": 0.77
-        }
-      ]
-    },
-    {
       "keyword": "MOU",
       "risen_members": [
         {
@@ -9211,6 +9092,125 @@
           "value_surge": 0.54,
           "close_5d_return": -7.9,
           "risk_score": 1.35
+        },
+        {
+          "code": "347860",
+          "name": "알체라",
+          "market": "KOSDAQ",
+          "marcap": 60743405327,
+          "last_close": 1319,
+          "last_change_pct": 1.7,
+          "avg_abs_change_5d": 1.57,
+          "avg_value_5d_eok": 1.0,
+          "vol_surge": 0.43,
+          "value_surge": 0.41,
+          "close_5d_return": 6.8,
+          "risk_score": 0.77
+        }
+      ]
+    },
+    {
+      "keyword": "파트너십",
+      "risen_members": [
+        {
+          "ticker": "000720",
+          "name": "현대건설",
+          "change_pct": 5.81,
+          "specific_signal": "테라파워와의 원전(특히 SMR·나트륨냉각형) 사업 협약 및 원전 EPC 우선권 확보",
+          "confidence": "high"
+        },
+        {
+          "ticker": "033790",
+          "name": "피노",
+          "change_pct": 15.52,
+          "specific_signal": "코스모신소재 대상 150억원 규모 유상증자 결정 — 이차전지 소재 사업 경쟁력 강화 목적",
+          "confidence": "high"
+        },
+        {
+          "ticker": "049480",
+          "name": "오픈베이스",
+          "change_pct": 13.16,
+          "specific_signal": "고객사 초청 AI 보안 세미나(무비 데이) 개최·보안 벤더와의 파트너십 영업 강화",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "064400",
+          "name": "LG씨엔에스",
+          "change_pct": 26.27,
+          "specific_signal": "LG CNS의 '에이전틱·피지컬 AI'(AI 에이전트·휴머노이드) 실증·사업화 공개 및 오픈AI 관련 협업·AX(Enterprise ChatGPT) 실행 사례 발표",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "066575",
+          "name": "LG전자우",
+          "change_pct": 29.99,
+          "specific_signal": "젠슨 황 방한 기대감(엔비디아 CEO 방한설)으로 AI협력·파트너십 기대가 부각되며 LG그룹주에 수급 집중",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "100840",
+          "name": "SNT에너지",
+          "change_pct": 14.98,
+          "specific_signal": "사우디 중동전쟁 피해 복구 프로젝트용 에어쿨드 콘덴서 공급 계약 체결(약 320억원)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "168330",
+          "name": "내츄럴엔도텍",
+          "change_pct": 19.0,
+          "specific_signal": "EstroG-100의 글로벌 제약사·대형 건기식 브랜드 연속 채택 및 미국 시장(Thorne HealthTech) 관련 캠페인 노출로 인한 수출·유통 파트너십 기대감",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "357880",
+          "name": "SKAI",
+          "change_pct": 13.22,
+          "specific_signal": "블루포지와 전략적 파트너십으로 'AI 바이브코딩 플랫폼' 공동 발표(및 성균관대와 에이전틱 AI MOU)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "405000",
+          "name": "플라즈맵",
+          "change_pct": 19.35,
+          "specific_signal": "70억원 규모 제3자배정 유상증자 결정(하반기 신제품 출시·글로벌 파트너십 자금조달)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "458870",
+          "name": "씨어스",
+          "change_pct": 16.7,
+          "specific_signal": "병원용 환자모니터링·이상징후 탐지 플랫폼 '씽크'의 대규모 병원 구축(전남대·화순 558병상) 및 해외 수주(신한투자 보고서: UAE 220억 규모)·대웅제약과의 파트너십 부각",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "069620",
+          "name": "대웅제약",
+          "market": "KOSPI",
+          "marcap": 1230494265000,
+          "last_close": 114400,
+          "last_change_pct": -1.04,
+          "avg_abs_change_5d": 2.19,
+          "avg_value_5d_eok": 29.2,
+          "vol_surge": 0.99,
+          "value_surge": 0.92,
+          "close_5d_return": -0.35,
+          "risk_score": 2.17
+        },
+        {
+          "code": "278280",
+          "name": "천보",
+          "market": "KOSDAQ",
+          "marcap": 425179967500,
+          "last_close": 40100,
+          "last_change_pct": 2.82,
+          "avg_abs_change_5d": 1.49,
+          "avg_value_5d_eok": 9.9,
+          "vol_surge": 0.68,
+          "value_surge": 0.69,
+          "close_5d_return": 0.63,
+          "risk_score": 1.03
         },
         {
           "code": "347860",
@@ -15375,7 +15375,7 @@
       ]
     },
     {
-      "keyword": "열관리",
+      "keyword": "내재화",
       "risen_members": [
         {
           "ticker": "033790",
@@ -15385,17 +15385,17 @@
           "confidence": "high"
         },
         {
-          "ticker": "107640",
-          "name": "한중엔시에스",
-          "change_pct": 16.36,
-          "specific_signal": "800억 규모 신종자본 조달 계획 및 'ESS 전환' 전략(미국 시장 확장)·메인비즈협회 경영혁신 대상 선정으로 IR·투자 가시성 제고",
-          "confidence": "high"
-        },
-        {
           "ticker": "161000",
           "name": "애경케미칼",
           "change_pct": 8.04,
           "specific_signal": "하드카본(음극재) 중심 차세대 소재 내재화 기대 및 전해액·양극재·열관리 소재 내재화 긍정 보도",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "464080",
+          "name": "에스오에스랩",
+          "change_pct": 18.19,
+          "specific_signal": "피지컬 AI 고도화 MOU(스페이스에이아이) 및 LiDAR/SPAD 센서 내재화·엔비디아 파트너 등재 관련 호재",
           "confidence": "medium"
         }
       ],
@@ -15431,7 +15431,7 @@
       ]
     },
     {
-      "keyword": "내재화",
+      "keyword": "열관리",
       "risen_members": [
         {
           "ticker": "033790",
@@ -15441,17 +15441,17 @@
           "confidence": "high"
         },
         {
+          "ticker": "107640",
+          "name": "한중엔시에스",
+          "change_pct": 16.36,
+          "specific_signal": "800억 규모 신종자본 조달 계획 및 'ESS 전환' 전략(미국 시장 확장)·메인비즈협회 경영혁신 대상 선정으로 IR·투자 가시성 제고",
+          "confidence": "high"
+        },
+        {
           "ticker": "161000",
           "name": "애경케미칼",
           "change_pct": 8.04,
           "specific_signal": "하드카본(음극재) 중심 차세대 소재 내재화 기대 및 전해액·양극재·열관리 소재 내재화 긍정 보도",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "464080",
-          "name": "에스오에스랩",
-          "change_pct": 18.19,
-          "specific_signal": "피지컬 AI 고도화 MOU(스페이스에이아이) 및 LiDAR/SPAD 센서 내재화·엔비디아 파트너 등재 관련 호재",
           "confidence": "medium"
         }
       ],
@@ -16047,7 +16047,7 @@
       ]
     },
     {
-      "keyword": "양자내성암호",
+      "keyword": "PQC",
       "risen_members": [
         {
           "ticker": "124500",
@@ -19484,62 +19484,6 @@
       ]
     },
     {
-      "keyword": "우선주",
-      "risen_members": [
-        {
-          "ticker": "000105",
-          "name": "유한양행우",
-          "change_pct": 6.7,
-          "specific_signal": "자사주 4,253억원 규모 소각 결정(자기주식 소각 발표)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "000155",
-          "name": "두산우",
-          "change_pct": 6.97,
-          "specific_signal": "언론 보도로 우선주 할인율(보통주 대비 약 45% 저평가) 부각 → 우선주 재평가 수요 유입",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "000545",
-          "name": "흥국화재우",
-          "change_pct": 9.01,
-          "specific_signal": "우선주-보통주 가격괴리율 확대 및 '단일가매매' 논의로 우선주에 수급 쏠림(우선주 거래 집중)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "006805",
-          "name": "미래에셋증권우",
-          "change_pct": 13.7,
-          "specific_signal": "3,000억원 규모 자사주 취득 후 전량 소각 결정(우선주에 우호적 효과)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "012205",
-          "name": "계양전기우",
-          "change_pct": 8.41,
-          "specific_signal": "시장 변동성 속 '우선주 대피 수요' 확대(우선주 상대적 안전자산 선호로 거래·수급 집중)",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "005385",
-          "name": "현대차우",
-          "market": "KOSPI",
-          "marcap": 4044793452700,
-          "last_close": 186400,
-          "last_change_pct": -0.05,
-          "avg_abs_change_5d": 1.18,
-          "avg_value_5d_eok": 72.1,
-          "vol_surge": 0.51,
-          "value_surge": 0.48,
-          "close_5d_return": 0.87,
-          "risk_score": 0.61
-        }
-      ]
-    },
-    {
       "keyword": "보통주",
       "risen_members": [
         {
@@ -19576,6 +19520,62 @@
           "change_pct": 14.43,
           "specific_signal": "보통주 1주당 1주 100% 무상증자 결정(주주친화·유동성 확대)",
           "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "005385",
+          "name": "현대차우",
+          "market": "KOSPI",
+          "marcap": 4044793452700,
+          "last_close": 186400,
+          "last_change_pct": -0.05,
+          "avg_abs_change_5d": 1.18,
+          "avg_value_5d_eok": 72.1,
+          "vol_surge": 0.51,
+          "value_surge": 0.48,
+          "close_5d_return": 0.87,
+          "risk_score": 0.61
+        }
+      ]
+    },
+    {
+      "keyword": "우선주",
+      "risen_members": [
+        {
+          "ticker": "000105",
+          "name": "유한양행우",
+          "change_pct": 6.7,
+          "specific_signal": "자사주 4,253억원 규모 소각 결정(자기주식 소각 발표)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "000155",
+          "name": "두산우",
+          "change_pct": 6.97,
+          "specific_signal": "언론 보도로 우선주 할인율(보통주 대비 약 45% 저평가) 부각 → 우선주 재평가 수요 유입",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "000545",
+          "name": "흥국화재우",
+          "change_pct": 9.01,
+          "specific_signal": "우선주-보통주 가격괴리율 확대 및 '단일가매매' 논의로 우선주에 수급 쏠림(우선주 거래 집중)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "006805",
+          "name": "미래에셋증권우",
+          "change_pct": 13.7,
+          "specific_signal": "3,000억원 규모 자사주 취득 후 전량 소각 결정(우선주에 우호적 효과)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "012205",
+          "name": "계양전기우",
+          "change_pct": 8.41,
+          "specific_signal": "시장 변동성 속 '우선주 대피 수요' 확대(우선주 상대적 안전자산 선호로 거래·수급 집중)",
+          "confidence": "medium"
         }
       ],
       "candidates": [
@@ -20100,62 +20100,6 @@
       ]
     },
     {
-      "keyword": "전력기기",
-      "risen_members": [
-        {
-          "ticker": "062040",
-          "name": "산일전기",
-          "change_pct": 13.91,
-          "specific_signal": "미국 행정명령으로 중국산 외산 전력망 장비 퇴출 → 국내 변압기·리액터 등 전력기기 수혜 기대",
-          "confidence": "high"
-        },
-        {
-          "ticker": "103590",
-          "name": "일진전기",
-          "change_pct": 8.53,
-          "specific_signal": "미국의 중국산 전력장비 배제(외산 장비 퇴출) 정책으로 국내 전력기기·변압기·전선 공급 확대 기대",
-          "confidence": "high"
-        },
-        {
-          "ticker": "126340",
-          "name": "비나텍",
-          "change_pct": 29.92,
-          "specific_signal": "데이터센터용 시스템 400억원대 수주(데이터센터·AI 수요 대응)",
-          "confidence": "high"
-        },
-        {
-          "ticker": "229640",
-          "name": "LS에코에너지",
-          "change_pct": 9.38,
-          "specific_signal": "미국 대통령의 '외국산 전력장비 금지' 행정명령(탈중국화) — 북미 전력망·전력기기 공급망에서 국내 업체 수혜 기대",
-          "confidence": "high"
-        },
-        {
-          "ticker": "267260",
-          "name": "HD현대일렉트릭",
-          "change_pct": 12.01,
-          "specific_signal": "미 행정부의 중국산 전력장비 수입 금지(외산 전력장비 퇴출) 행정명령으로 북미 전력망용 변압기·스위치기어 등 대체 공급기회 확대",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "028050",
-          "name": "삼성E&A",
-          "market": "KOSPI",
-          "marcap": 9672600000000,
-          "last_close": 50800,
-          "last_change_pct": 3.36,
-          "avg_abs_change_5d": 3.3,
-          "avg_value_5d_eok": 823.3,
-          "vol_surge": 1.18,
-          "value_surge": 1.19,
-          "close_5d_return": 10.2,
-          "risk_score": 4.67
-        }
-      ]
-    },
-    {
       "keyword": "재생에너지",
       "risen_members": [
         {
@@ -20208,6 +20152,62 @@
           "value_surge": 1.05,
           "close_5d_return": 4.01,
           "risk_score": 2.66
+        }
+      ]
+    },
+    {
+      "keyword": "전력기기",
+      "risen_members": [
+        {
+          "ticker": "062040",
+          "name": "산일전기",
+          "change_pct": 13.91,
+          "specific_signal": "미국 행정명령으로 중국산 외산 전력망 장비 퇴출 → 국내 변압기·리액터 등 전력기기 수혜 기대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "103590",
+          "name": "일진전기",
+          "change_pct": 8.53,
+          "specific_signal": "미국의 중국산 전력장비 배제(외산 장비 퇴출) 정책으로 국내 전력기기·변압기·전선 공급 확대 기대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "126340",
+          "name": "비나텍",
+          "change_pct": 29.92,
+          "specific_signal": "데이터센터용 시스템 400억원대 수주(데이터센터·AI 수요 대응)",
+          "confidence": "high"
+        },
+        {
+          "ticker": "229640",
+          "name": "LS에코에너지",
+          "change_pct": 9.38,
+          "specific_signal": "미국 대통령의 '외국산 전력장비 금지' 행정명령(탈중국화) — 북미 전력망·전력기기 공급망에서 국내 업체 수혜 기대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "267260",
+          "name": "HD현대일렉트릭",
+          "change_pct": 12.01,
+          "specific_signal": "미 행정부의 중국산 전력장비 수입 금지(외산 전력장비 퇴출) 행정명령으로 북미 전력망용 변압기·스위치기어 등 대체 공급기회 확대",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "028050",
+          "name": "삼성E&A",
+          "market": "KOSPI",
+          "marcap": 9672600000000,
+          "last_close": 50800,
+          "last_change_pct": 3.36,
+          "avg_abs_change_5d": 3.3,
+          "avg_value_5d_eok": 823.3,
+          "vol_surge": 1.18,
+          "value_surge": 1.19,
+          "close_5d_return": 10.2,
+          "risk_score": 4.67
         }
       ]
     },
@@ -22704,20 +22704,20 @@
       ]
     },
     {
-      "keyword": "스틸법",
+      "keyword": "인프라용",
       "risen_members": [
-        {
-          "ticker": "008420",
-          "name": "문배철강",
-          "change_pct": 4.33,
-          "specific_signal": "미·이란 종전 합의 및 '이란 재건(약 454조)' 기대 + 'K-스틸법' 시행으로 철강업종 전반에 재건 수요 기대감 고조",
-          "confidence": "medium"
-        },
         {
           "ticker": "058430",
           "name": "포스코스틸리온",
           "change_pct": 17.29,
           "specific_signal": "미·이란 종전 합의에 따른 중동 재건 기대 및 'K-스틸법' 시행 소식으로 호르무즈 우회 송유관 등 인프라용 강관 수주 기대 증대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "071090",
+          "name": "하이스틸",
+          "change_pct": 8.31,
+          "specific_signal": "미-이란 종전 합의로 촉발된 대규모 이란 재건사업(보도상 약 454조원 규모) 기대감에 따른 건설·인프라용 철강 수요 증가 기대",
           "confidence": "high"
         },
         {
@@ -22746,20 +22746,20 @@
       ]
     },
     {
-      "keyword": "인프라용",
+      "keyword": "스틸법",
       "risen_members": [
+        {
+          "ticker": "008420",
+          "name": "문배철강",
+          "change_pct": 4.33,
+          "specific_signal": "미·이란 종전 합의 및 '이란 재건(약 454조)' 기대 + 'K-스틸법' 시행으로 철강업종 전반에 재건 수요 기대감 고조",
+          "confidence": "medium"
+        },
         {
           "ticker": "058430",
           "name": "포스코스틸리온",
           "change_pct": 17.29,
           "specific_signal": "미·이란 종전 합의에 따른 중동 재건 기대 및 'K-스틸법' 시행 소식으로 호르무즈 우회 송유관 등 인프라용 강관 수주 기대 증대",
-          "confidence": "high"
-        },
-        {
-          "ticker": "071090",
-          "name": "하이스틸",
-          "change_pct": 8.31,
-          "specific_signal": "미-이란 종전 합의로 촉발된 대규모 이란 재건사업(보도상 약 454조원 규모) 기대감에 따른 건설·인프라용 철강 수요 증가 기대",
           "confidence": "high"
         },
         {
@@ -23040,41 +23040,6 @@
       ]
     },
     {
-      "keyword": "이미지",
-      "risen_members": [
-        {
-          "ticker": "443670",
-          "name": "에스피소프트",
-          "change_pct": 13.87,
-          "specific_signal": "구글 워크스페이스 파트너 자격 확보로 기업용 협업 솔루션 영업 채널·신뢰도 확충",
-          "confidence": "high"
-        },
-        {
-          "ticker": "900140",
-          "name": "엘브이엠씨홀딩스",
-          "change_pct": 9.82,
-          "specific_signal": "대한민국 최고의 경영대상 수상",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "047560",
-          "name": "이스트소프트",
-          "market": "KOSDAQ",
-          "marcap": 87677991720,
-          "last_close": 7810,
-          "last_change_pct": 0.9,
-          "avg_abs_change_5d": 2.37,
-          "avg_value_5d_eok": 2.1,
-          "vol_surge": 0.69,
-          "value_surge": 0.65,
-          "close_5d_return": 9.23,
-          "risk_score": 1.94
-        }
-      ]
-    },
-    {
       "keyword": "대한민국",
       "risen_members": [
         {
@@ -23106,6 +23071,41 @@
           "value_surge": 0.51,
           "close_5d_return": -7.07,
           "risk_score": 1.03
+        }
+      ]
+    },
+    {
+      "keyword": "이미지",
+      "risen_members": [
+        {
+          "ticker": "443670",
+          "name": "에스피소프트",
+          "change_pct": 13.87,
+          "specific_signal": "구글 워크스페이스 파트너 자격 확보로 기업용 협업 솔루션 영업 채널·신뢰도 확충",
+          "confidence": "high"
+        },
+        {
+          "ticker": "900140",
+          "name": "엘브이엠씨홀딩스",
+          "change_pct": 9.82,
+          "specific_signal": "대한민국 최고의 경영대상 수상",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "047560",
+          "name": "이스트소프트",
+          "market": "KOSDAQ",
+          "marcap": 87677991720,
+          "last_close": 7810,
+          "last_change_pct": 0.9,
+          "avg_abs_change_5d": 2.37,
+          "avg_value_5d_eok": 2.1,
+          "vol_surge": 0.69,
+          "value_surge": 0.65,
+          "close_5d_return": 9.23,
+          "risk_score": 1.94
         }
       ]
     },
@@ -23285,14 +23285,14 @@
       ]
     },
     {
-      "keyword": "패키징용",
+      "keyword": "CPO",
       "risen_members": [
         {
-          "ticker": "161580",
-          "name": "필옵틱스",
-          "change_pct": 29.84,
-          "specific_signal": "국내 최초 2.0mm 두께 TGV(유리기판) 첫 공개 및 글로벌 고객사 장비 발주·수주 기대",
-          "confidence": "high"
+          "ticker": "043260",
+          "name": "성호전자",
+          "change_pct": 12.99,
+          "specific_signal": "미국 광통신주 급등·AI 데이터센터 초고속망 수요 폭증에 따른 국내 광통신·통신장비주 동반 강세 (동일 시기에 성호전자 관련 M&A·BW 소각 이슈 병행)",
+          "confidence": "medium"
         },
         {
           "ticker": "412350",
@@ -23320,14 +23320,14 @@
       ]
     },
     {
-      "keyword": "CPO",
+      "keyword": "패키징용",
       "risen_members": [
         {
-          "ticker": "043260",
-          "name": "성호전자",
-          "change_pct": 12.99,
-          "specific_signal": "미국 광통신주 급등·AI 데이터센터 초고속망 수요 폭증에 따른 국내 광통신·통신장비주 동반 강세 (동일 시기에 성호전자 관련 M&A·BW 소각 이슈 병행)",
-          "confidence": "medium"
+          "ticker": "161580",
+          "name": "필옵틱스",
+          "change_pct": 29.84,
+          "specific_signal": "국내 최초 2.0mm 두께 TGV(유리기판) 첫 공개 및 글로벌 고객사 장비 발주·수주 기대",
+          "confidence": "high"
         },
         {
           "ticker": "412350",
@@ -23425,41 +23425,6 @@
       ]
     },
     {
-      "keyword": "식약처",
-      "risen_members": [
-        {
-          "ticker": "007390",
-          "name": "네이처셀",
-          "change_pct": 29.89,
-          "specific_signal": "법원, 식약처의 조인트스템 반려처분 취소 판결로 허가 재검토(재도전) 가능성 열림",
-          "confidence": "high"
-        },
-        {
-          "ticker": "462510",
-          "name": "라메디텍",
-          "change_pct": 29.81,
-          "specific_signal": "인체조직은행 식약처 허가",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "078160",
-          "name": "메디포스트",
-          "market": "KOSDAQ",
-          "marcap": 351665288910,
-          "last_close": 8900,
-          "last_change_pct": 0.56,
-          "avg_abs_change_5d": 1.42,
-          "avg_value_5d_eok": 2.8,
-          "vol_surge": 0.54,
-          "value_surge": 0.51,
-          "close_5d_return": 2.42,
-          "risk_score": 0.8
-        }
-      ]
-    },
-    {
       "keyword": "ECM",
       "risen_members": [
         {
@@ -23490,6 +23455,41 @@
           "vol_surge": 0.59,
           "value_surge": 0.56,
           "close_5d_return": -1.87,
+          "risk_score": 0.8
+        }
+      ]
+    },
+    {
+      "keyword": "식약처",
+      "risen_members": [
+        {
+          "ticker": "007390",
+          "name": "네이처셀",
+          "change_pct": 29.89,
+          "specific_signal": "법원, 식약처의 조인트스템 반려처분 취소 판결로 허가 재검토(재도전) 가능성 열림",
+          "confidence": "high"
+        },
+        {
+          "ticker": "462510",
+          "name": "라메디텍",
+          "change_pct": 29.81,
+          "specific_signal": "인체조직은행 식약처 허가",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "078160",
+          "name": "메디포스트",
+          "market": "KOSDAQ",
+          "marcap": 351665288910,
+          "last_close": 8900,
+          "last_change_pct": 0.56,
+          "avg_abs_change_5d": 1.42,
+          "avg_value_5d_eok": 2.8,
+          "vol_surge": 0.54,
+          "value_surge": 0.51,
+          "close_5d_return": 2.42,
           "risk_score": 0.8
         }
       ]
@@ -23705,41 +23705,6 @@
       ]
     },
     {
-      "keyword": "나스닥",
-      "risen_members": [
-        {
-          "ticker": "086280",
-          "name": "현대글로비스",
-          "change_pct": 4.95,
-          "specific_signal": "현대차, 보스턴다이내믹스 지분 100% 인수 추진(피지컬AI 완전독립·나스닥 상장 검토)",
-          "confidence": "medium"
-        },
-        {
-          "ticker": "100790",
-          "name": "미래에셋벤처투자",
-          "change_pct": 22.77,
-          "specific_signal": "초대형 우주항공 기업의 상장 일정 단축(나스닥 상장 6월 가능성) 소식으로 국내 '우주항공·해외 IPO 관련주' 동반 강세",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "005380",
-          "name": "현대차",
-          "market": "KOSPI",
-          "marcap": 71925404922000,
-          "last_close": 388000,
-          "last_change_pct": 0.78,
-          "avg_abs_change_5d": 1.35,
-          "avg_value_5d_eok": 1601.9,
-          "vol_surge": 0.64,
-          "value_surge": 0.6,
-          "close_5d_return": 1.17,
-          "risk_score": 0.88
-        }
-      ]
-    },
-    {
       "keyword": "기업의",
       "risen_members": [
         {
@@ -23771,6 +23736,41 @@
           "value_surge": 0.43,
           "close_5d_return": 0.23,
           "risk_score": 0.62
+        }
+      ]
+    },
+    {
+      "keyword": "나스닥",
+      "risen_members": [
+        {
+          "ticker": "086280",
+          "name": "현대글로비스",
+          "change_pct": 4.95,
+          "specific_signal": "현대차, 보스턴다이내믹스 지분 100% 인수 추진(피지컬AI 완전독립·나스닥 상장 검토)",
+          "confidence": "medium"
+        },
+        {
+          "ticker": "100790",
+          "name": "미래에셋벤처투자",
+          "change_pct": 22.77,
+          "specific_signal": "초대형 우주항공 기업의 상장 일정 단축(나스닥 상장 6월 가능성) 소식으로 국내 '우주항공·해외 IPO 관련주' 동반 강세",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "005380",
+          "name": "현대차",
+          "market": "KOSPI",
+          "marcap": 71925404922000,
+          "last_close": 388000,
+          "last_change_pct": 0.78,
+          "avg_abs_change_5d": 1.35,
+          "avg_value_5d_eok": 1601.9,
+          "vol_surge": 0.64,
+          "value_surge": 0.6,
+          "close_5d_return": 1.17,
+          "risk_score": 0.88
         }
       ]
     },
@@ -24090,7 +24090,7 @@
       ]
     },
     {
-      "keyword": "재검토",
+      "keyword": "식약처의",
       "risen_members": [
         {
           "ticker": "007390",
@@ -24100,11 +24100,11 @@
           "confidence": "high"
         },
         {
-          "ticker": "046210",
-          "name": "HLB파나진",
-          "change_pct": 30.0,
-          "specific_signal": "리보세라닙에 대한 'FDA 보류(허가 불발) 사유 일부 해소' 주장(시장에 확산)으로 허가 재검토·우려 완화 기대",
-          "confidence": "medium"
+          "ticker": "166480",
+          "name": "코아스템켐온",
+          "change_pct": 29.93,
+          "specific_signal": "식약처의 '뉴로나타-알' 조건부 품목허가(품목허가 변경) — 루게릭병(ALS) 적응증 관련 세계 최초 사례 보도",
+          "confidence": "high"
         }
       ],
       "candidates": [
@@ -24125,7 +24125,7 @@
       ]
     },
     {
-      "keyword": "식약처의",
+      "keyword": "재검토",
       "risen_members": [
         {
           "ticker": "007390",
@@ -24135,11 +24135,11 @@
           "confidence": "high"
         },
         {
-          "ticker": "166480",
-          "name": "코아스템켐온",
-          "change_pct": 29.93,
-          "specific_signal": "식약처의 '뉴로나타-알' 조건부 품목허가(품목허가 변경) — 루게릭병(ALS) 적응증 관련 세계 최초 사례 보도",
-          "confidence": "high"
+          "ticker": "046210",
+          "name": "HLB파나진",
+          "change_pct": 30.0,
+          "specific_signal": "리보세라닙에 대한 'FDA 보류(허가 불발) 사유 일부 해소' 주장(시장에 확산)으로 허가 재검토·우려 완화 기대",
+          "confidence": "medium"
         }
       ],
       "candidates": [
@@ -24265,7 +24265,7 @@
       ]
     },
     {
-      "keyword": "가상자산",
+      "keyword": "비트코인",
       "risen_members": [
         {
           "ticker": "003530",
@@ -25560,14 +25560,14 @@
       ]
     },
     {
-      "keyword": "해외진출",
+      "keyword": "생산성",
       "risen_members": [
         {
-          "ticker": "001250",
-          "name": "GS글로벌",
-          "change_pct": 14.17,
-          "specific_signal": "일본 편집숍 '코스메키친' 입점 — K-뷰티 브랜드 3종 현지 공급(일본 유통 진출)",
-          "confidence": "high"
+          "ticker": "051910",
+          "name": "LG화학",
+          "change_pct": 6.69,
+          "specific_signal": "시장 수급·모멘텀 회복(원통형 캔 수요) 및 LG화학의 IT소재·석유화학 사업 성장 재가동 기사들이 겹치며 수급·밸류 재평가",
+          "confidence": "medium"
         },
         {
           "ticker": "109670",
@@ -25595,14 +25595,14 @@
       ]
     },
     {
-      "keyword": "생산성",
+      "keyword": "해외진출",
       "risen_members": [
         {
-          "ticker": "051910",
-          "name": "LG화학",
-          "change_pct": 6.69,
-          "specific_signal": "시장 수급·모멘텀 회복(원통형 캔 수요) 및 LG화학의 IT소재·석유화학 사업 성장 재가동 기사들이 겹치며 수급·밸류 재평가",
-          "confidence": "medium"
+          "ticker": "001250",
+          "name": "GS글로벌",
+          "change_pct": 14.17,
+          "specific_signal": "일본 편집숍 '코스메키친' 입점 — K-뷰티 브랜드 3종 현지 공급(일본 유통 진출)",
+          "confidence": "high"
         },
         {
           "ticker": "109670",
