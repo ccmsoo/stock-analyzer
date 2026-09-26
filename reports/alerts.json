@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-26T08:24:23",
-  "total": 269,
+  "generated_at": "2026-09-26T10:45:42",
+  "total": 266,
   "new_today": 0,
   "alerts": [
     {
@@ -5056,63 +5056,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "에너지/자원(가스·LPG·LNG)",
       "matched_at": "2026-08-27T14:56:32"
-    },
-    {
-      "ticker": "375500",
-      "name": "DL이앤씨",
-      "sosok": "",
-      "report_name": "[기재정정]단일판매ㆍ공급계약체결",
-      "submitter": "DL이앤씨",
-      "submitted_at": "2026.08.27",
-      "time": "07:49",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800008",
-      "rcp_no": "20260827800008",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 73300,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260616",
-      "signal_confidence": "high",
-      "signal_main_theme": "건설·재건축",
-      "matched_at": "2026-08-27T08:53:06"
-    },
-    {
-      "ticker": "043260",
-      "name": "성호전자",
-      "sosok": "",
-      "report_name": "[기재정정]타법인주식및출자증권취득결정(종속회사의주요경영사항)",
-      "submitter": "성호전자",
-      "submitted_at": "2026.08.27",
-      "time": "07:30",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827900001",
-      "rcp_no": "20260827900001",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 16950,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260603",
-      "signal_confidence": "high",
-      "signal_main_theme": "반도체 (광/인터커넥트 — 실리콘 포토닉스)",
-      "matched_at": "2026-08-27T08:53:07"
-    },
-    {
-      "ticker": "115160",
-      "name": "휴맥스",
-      "sosok": "",
-      "report_name": "효력발생안내\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t( 2026.8.14. 제출 증권신고서(합병) )",
-      "submitter": "금융감독원",
-      "submitted_at": "2026.08.27",
-      "time": "07:30",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814100011",
-      "rcp_no": "20260814100011",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 5080,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260701",
-      "signal_confidence": "high",
-      "signal_main_theme": "수급/재무",
-      "matched_at": "2026-08-27T08:53:08"
     }
   ]
 }
