@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-09-28T08:57:45",
-  "total": 248,
-  "new_today": 0,
+  "generated_at": "2026-09-28T12:37:23",
+  "total": 249,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "028670",
+      "name": "팬오션",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "팬오션",
+      "submitted_at": "2026.09.28",
+      "time": "11:15",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260928800130",
+      "rcp_no": "20260928800130",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 5710,
+      "today_change_pct": 1.96,
+      "signal_last_seen": "20260903",
+      "signal_confidence": "medium",
+      "signal_main_theme": "해운·물류",
+      "matched_at": "2026-09-28T12:37:23"
+    },
     {
       "ticker": "229000",
       "name": "젠큐릭스",
