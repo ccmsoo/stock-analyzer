@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-10-02T03:57:36",
-  "total": 342,
-  "new_today": 0,
+  "generated_at": "2026-10-02T07:59:00",
+  "total": 343,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "103590",
+      "name": "일진전기",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "일진전기",
+      "submitted_at": "2026.10.02",
+      "time": "07:36",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002800002",
+      "rcp_no": "20261002800002",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 83300,
+      "today_change_pct": 0.97,
+      "signal_last_seen": "20260827",
+      "signal_confidence": "high",
+      "signal_main_theme": "정책·전력설비",
+      "matched_at": "2026-10-02T07:59:00"
+    },
     {
       "ticker": "052400",
       "name": "코나아이",
