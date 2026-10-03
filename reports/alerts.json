@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-03T11:09:33",
-  "total": 359,
+  "generated_at": "2026-10-03T17:03:30",
+  "total": 358,
   "new_today": 0,
   "alerts": [
     {
@@ -6101,25 +6101,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "수급·지분(전략적 투자) / 사업전환(항공 MRO)",
       "matched_at": "2026-09-03T18:11:26"
-    },
-    {
-      "ticker": "149950",
-      "name": "아바텍",
-      "sosok": "",
-      "report_name": "주요사항보고서(자기주식취득신탁계약체결결정)",
-      "submitter": "아바텍",
-      "submitted_at": "2026.09.03",
-      "time": "13:22",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260903000072",
-      "rcp_no": "20260903000072",
-      "category": "자본정책_호재",
-      "score": 70,
-      "current_price": 9510,
-      "today_change_pct": 6.26,
-      "signal_last_seen": "20260618",
-      "signal_confidence": "medium",
-      "signal_main_theme": "전자부품 (MLCC 관련)",
-      "matched_at": "2026-09-03T13:33:54"
     },
     {
       "ticker": "004770",
