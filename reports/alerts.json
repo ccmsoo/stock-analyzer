@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-10-08T06:33:57",
+  "generated_at": "2026-10-08T10:18:46",
   "total": 369,
-  "new_today": 0,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "373220",
+      "name": "LG에너지솔루션",
+      "sosok": "",
+      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "submitter": "LG에너지솔루션",
+      "submitted_at": "2026.10.08",
+      "time": "08:34",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261008800055",
+      "rcp_no": "20261008800055",
+      "category": "실적",
+      "score": 75,
+      "current_price": 409500,
+      "today_change_pct": 4.73,
+      "signal_last_seen": "20260629",
+      "signal_confidence": "medium",
+      "signal_main_theme": "2차전지",
+      "matched_at": "2026-10-08T10:18:46"
+    },
     {
       "ticker": "008930",
       "name": "한미사이언스",
@@ -6177,25 +6196,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "광통신/통신장비",
       "matched_at": "2026-09-09T23:33:03"
-    },
-    {
-      "ticker": "002780",
-      "name": "진흥기업",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "진흥기업",
-      "submitted_at": "2026.09.08",
-      "time": "08:55",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908800066",
-      "rcp_no": "20260908800066",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 7330,
-      "today_change_pct": 3.17,
-      "signal_last_seen": "20260706",
-      "signal_confidence": "medium",
-      "signal_main_theme": "정책(메가프로젝트·지역인프라)",
-      "matched_at": "2026-09-08T09:22:22"
     },
     {
       "ticker": "900100",
