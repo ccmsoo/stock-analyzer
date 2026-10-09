@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T22:51:45",
+  "generated_at": "2026-10-09T22:36:15",
   "reference_date": "20260909",
   "themes": [
     {
@@ -22200,48 +22200,6 @@
       ]
     },
     {
-      "keyword": "첨단소재",
-      "risen_members": [
-        {
-          "ticker": "011170",
-          "name": "롯데케미칼",
-          "change_pct": 18.12,
-          "specific_signal": "롯데에너지머티리얼즈의 자회사 지분 90% 매각(매각대금 약 1,708억원)으로 고부가 동박(배터리 전류집전체) 확대 및 AI·반도체용 첨단소재에 투자 집중 방침",
-          "confidence": "high"
-        },
-        {
-          "ticker": "020150",
-          "name": "롯데에너지머티리얼즈",
-          "change_pct": 14.11,
-          "specific_signal": "자회사(에코월) 지분 90%를 1,708억 원에 매각해 비핵심 정리·포트폴리오 효율화, 동박(구리박)·첨단소재 사업에 집중한다는 구조개편 신호",
-          "confidence": "high"
-        },
-        {
-          "ticker": "368600",
-          "name": "아이씨에이치",
-          "change_pct": 12.07,
-          "specific_signal": "임시주주총회에서 '로봇 소재부품' 사업목적 추가 및 5대1 주식병합 가결(주식병합·신사업 진출), 기존의 글로벌 휴머노이드 로봇용 PU폼 납품 개시 보도와 결합된 공시성 모멘텀",
-          "confidence": "high"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "056080",
-          "name": "유진로봇",
-          "market": "KOSDAQ",
-          "marcap": 479472994440,
-          "last_close": 12390,
-          "last_change_pct": 0.81,
-          "avg_abs_change_5d": 2.97,
-          "avg_value_5d_eok": 46.5,
-          "vol_surge": 1.42,
-          "value_surge": 1.33,
-          "close_5d_return": 12.23,
-          "risk_score": 5.25
-        }
-      ]
-    },
-    {
       "keyword": "효율화",
       "risen_members": [
         {
@@ -22280,6 +22238,48 @@
           "value_surge": 1.02,
           "close_5d_return": -1.24,
           "risk_score": 2.72
+        }
+      ]
+    },
+    {
+      "keyword": "첨단소재",
+      "risen_members": [
+        {
+          "ticker": "011170",
+          "name": "롯데케미칼",
+          "change_pct": 18.12,
+          "specific_signal": "롯데에너지머티리얼즈의 자회사 지분 90% 매각(매각대금 약 1,708억원)으로 고부가 동박(배터리 전류집전체) 확대 및 AI·반도체용 첨단소재에 투자 집중 방침",
+          "confidence": "high"
+        },
+        {
+          "ticker": "020150",
+          "name": "롯데에너지머티리얼즈",
+          "change_pct": 14.11,
+          "specific_signal": "자회사(에코월) 지분 90%를 1,708억 원에 매각해 비핵심 정리·포트폴리오 효율화, 동박(구리박)·첨단소재 사업에 집중한다는 구조개편 신호",
+          "confidence": "high"
+        },
+        {
+          "ticker": "368600",
+          "name": "아이씨에이치",
+          "change_pct": 12.07,
+          "specific_signal": "임시주주총회에서 '로봇 소재부품' 사업목적 추가 및 5대1 주식병합 가결(주식병합·신사업 진출), 기존의 글로벌 휴머노이드 로봇용 PU폼 납품 개시 보도와 결합된 공시성 모멘텀",
+          "confidence": "high"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "056080",
+          "name": "유진로봇",
+          "market": "KOSDAQ",
+          "marcap": 479472994440,
+          "last_close": 12390,
+          "last_change_pct": 0.81,
+          "avg_abs_change_5d": 2.97,
+          "avg_value_5d_eok": 46.5,
+          "vol_surge": 1.42,
+          "value_surge": 1.33,
+          "close_5d_return": 12.23,
+          "risk_score": 5.25
         }
       ]
     },
@@ -22704,20 +22704,20 @@
       ]
     },
     {
-      "keyword": "인프라용",
+      "keyword": "스틸법",
       "risen_members": [
+        {
+          "ticker": "008420",
+          "name": "문배철강",
+          "change_pct": 4.33,
+          "specific_signal": "미·이란 종전 합의 및 '이란 재건(약 454조)' 기대 + 'K-스틸법' 시행으로 철강업종 전반에 재건 수요 기대감 고조",
+          "confidence": "medium"
+        },
         {
           "ticker": "058430",
           "name": "포스코스틸리온",
           "change_pct": 17.29,
           "specific_signal": "미·이란 종전 합의에 따른 중동 재건 기대 및 'K-스틸법' 시행 소식으로 호르무즈 우회 송유관 등 인프라용 강관 수주 기대 증대",
-          "confidence": "high"
-        },
-        {
-          "ticker": "071090",
-          "name": "하이스틸",
-          "change_pct": 8.31,
-          "specific_signal": "미-이란 종전 합의로 촉발된 대규모 이란 재건사업(보도상 약 454조원 규모) 기대감에 따른 건설·인프라용 철강 수요 증가 기대",
           "confidence": "high"
         },
         {
@@ -22746,20 +22746,20 @@
       ]
     },
     {
-      "keyword": "스틸법",
+      "keyword": "인프라용",
       "risen_members": [
-        {
-          "ticker": "008420",
-          "name": "문배철강",
-          "change_pct": 4.33,
-          "specific_signal": "미·이란 종전 합의 및 '이란 재건(약 454조)' 기대 + 'K-스틸법' 시행으로 철강업종 전반에 재건 수요 기대감 고조",
-          "confidence": "medium"
-        },
         {
           "ticker": "058430",
           "name": "포스코스틸리온",
           "change_pct": 17.29,
           "specific_signal": "미·이란 종전 합의에 따른 중동 재건 기대 및 'K-스틸법' 시행 소식으로 호르무즈 우회 송유관 등 인프라용 강관 수주 기대 증대",
+          "confidence": "high"
+        },
+        {
+          "ticker": "071090",
+          "name": "하이스틸",
+          "change_pct": 8.31,
+          "specific_signal": "미-이란 종전 합의로 촉발된 대규모 이란 재건사업(보도상 약 454조원 규모) 기대감에 따른 건설·인프라용 철강 수요 증가 기대",
           "confidence": "high"
         },
         {
@@ -23040,41 +23040,6 @@
       ]
     },
     {
-      "keyword": "이미지",
-      "risen_members": [
-        {
-          "ticker": "443670",
-          "name": "에스피소프트",
-          "change_pct": 13.87,
-          "specific_signal": "구글 워크스페이스 파트너 자격 확보로 기업용 협업 솔루션 영업 채널·신뢰도 확충",
-          "confidence": "high"
-        },
-        {
-          "ticker": "900140",
-          "name": "엘브이엠씨홀딩스",
-          "change_pct": 9.82,
-          "specific_signal": "대한민국 최고의 경영대상 수상",
-          "confidence": "medium"
-        }
-      ],
-      "candidates": [
-        {
-          "code": "047560",
-          "name": "이스트소프트",
-          "market": "KOSDAQ",
-          "marcap": 89676015660,
-          "last_close": 7810,
-          "last_change_pct": 0.9,
-          "avg_abs_change_5d": 2.37,
-          "avg_value_5d_eok": 2.1,
-          "vol_surge": 0.69,
-          "value_surge": 0.65,
-          "close_5d_return": 9.23,
-          "risk_score": 1.94
-        }
-      ]
-    },
-    {
       "keyword": "대한민국",
       "risen_members": [
         {
@@ -23106,6 +23071,41 @@
           "value_surge": 0.51,
           "close_5d_return": -7.07,
           "risk_score": 1.03
+        }
+      ]
+    },
+    {
+      "keyword": "이미지",
+      "risen_members": [
+        {
+          "ticker": "443670",
+          "name": "에스피소프트",
+          "change_pct": 13.87,
+          "specific_signal": "구글 워크스페이스 파트너 자격 확보로 기업용 협업 솔루션 영업 채널·신뢰도 확충",
+          "confidence": "high"
+        },
+        {
+          "ticker": "900140",
+          "name": "엘브이엠씨홀딩스",
+          "change_pct": 9.82,
+          "specific_signal": "대한민국 최고의 경영대상 수상",
+          "confidence": "medium"
+        }
+      ],
+      "candidates": [
+        {
+          "code": "047560",
+          "name": "이스트소프트",
+          "market": "KOSDAQ",
+          "marcap": 89676015660,
+          "last_close": 7810,
+          "last_change_pct": 0.9,
+          "avg_abs_change_5d": 2.37,
+          "avg_value_5d_eok": 2.1,
+          "vol_surge": 0.69,
+          "value_surge": 0.65,
+          "close_5d_return": 9.23,
+          "risk_score": 1.94
         }
       ]
     },
@@ -23285,14 +23285,14 @@
       ]
     },
     {
-      "keyword": "CPO",
+      "keyword": "패키징용",
       "risen_members": [
         {
-          "ticker": "043260",
-          "name": "성호전자",
-          "change_pct": 12.99,
-          "specific_signal": "미국 광통신주 급등·AI 데이터센터 초고속망 수요 폭증에 따른 국내 광통신·통신장비주 동반 강세 (동일 시기에 성호전자 관련 M&A·BW 소각 이슈 병행)",
-          "confidence": "medium"
+          "ticker": "161580",
+          "name": "필옵틱스",
+          "change_pct": 29.84,
+          "specific_signal": "국내 최초 2.0mm 두께 TGV(유리기판) 첫 공개 및 글로벌 고객사 장비 발주·수주 기대",
+          "confidence": "high"
         },
         {
           "ticker": "412350",
@@ -23320,14 +23320,14 @@
       ]
     },
     {
-      "keyword": "패키징용",
+      "keyword": "CPO",
       "risen_members": [
         {
-          "ticker": "161580",
-          "name": "필옵틱스",
-          "change_pct": 29.84,
-          "specific_signal": "국내 최초 2.0mm 두께 TGV(유리기판) 첫 공개 및 글로벌 고객사 장비 발주·수주 기대",
-          "confidence": "high"
+          "ticker": "043260",
+          "name": "성호전자",
+          "change_pct": 12.99,
+          "specific_signal": "미국 광통신주 급등·AI 데이터센터 초고속망 수요 폭증에 따른 국내 광통신·통신장비주 동반 강세 (동일 시기에 성호전자 관련 M&A·BW 소각 이슈 병행)",
+          "confidence": "medium"
         },
         {
           "ticker": "412350",
@@ -24090,7 +24090,7 @@
       ]
     },
     {
-      "keyword": "재검토",
+      "keyword": "식약처의",
       "risen_members": [
         {
           "ticker": "007390",
@@ -24100,11 +24100,11 @@
           "confidence": "high"
         },
         {
-          "ticker": "046210",
-          "name": "HLB파나진",
-          "change_pct": 30.0,
-          "specific_signal": "리보세라닙에 대한 'FDA 보류(허가 불발) 사유 일부 해소' 주장(시장에 확산)으로 허가 재검토·우려 완화 기대",
-          "confidence": "medium"
+          "ticker": "166480",
+          "name": "코아스템켐온",
+          "change_pct": 29.93,
+          "specific_signal": "식약처의 '뉴로나타-알' 조건부 품목허가(품목허가 변경) — 루게릭병(ALS) 적응증 관련 세계 최초 사례 보도",
+          "confidence": "high"
         }
       ],
       "candidates": [
@@ -24125,7 +24125,7 @@
       ]
     },
     {
-      "keyword": "식약처의",
+      "keyword": "재검토",
       "risen_members": [
         {
           "ticker": "007390",
@@ -24135,11 +24135,11 @@
           "confidence": "high"
         },
         {
-          "ticker": "166480",
-          "name": "코아스템켐온",
-          "change_pct": 29.93,
-          "specific_signal": "식약처의 '뉴로나타-알' 조건부 품목허가(품목허가 변경) — 루게릭병(ALS) 적응증 관련 세계 최초 사례 보도",
-          "confidence": "high"
+          "ticker": "046210",
+          "name": "HLB파나진",
+          "change_pct": 30.0,
+          "specific_signal": "리보세라닙에 대한 'FDA 보류(허가 불발) 사유 일부 해소' 주장(시장에 확산)으로 허가 재검토·우려 완화 기대",
+          "confidence": "medium"
         }
       ],
       "candidates": [
@@ -24265,7 +24265,7 @@
       ]
     },
     {
-      "keyword": "가상자산",
+      "keyword": "비트코인",
       "risen_members": [
         {
           "ticker": "003530",
@@ -25035,7 +25035,7 @@
       ]
     },
     {
-      "keyword": "편의점",
+      "keyword": "가맹점",
       "risen_members": [
         {
           "ticker": "007070",
@@ -25045,10 +25045,10 @@
           "confidence": "high"
         },
         {
-          "ticker": "439090",
-          "name": "마녀공장",
-          "change_pct": 12.28,
-          "specific_signal": "100억 규모 자사주 취득 신탁계약 공시(주주환원 기대)",
+          "ticker": "148250",
+          "name": "알엔투테크놀로지",
+          "change_pct": 13.03,
+          "specific_signal": "스테이블코인 기반 관광바우처 글로벌 결제 POC 추진 및 美 디지털자산 법인 설립",
           "confidence": "high"
         }
       ],
@@ -25070,7 +25070,7 @@
       ]
     },
     {
-      "keyword": "가맹점",
+      "keyword": "편의점",
       "risen_members": [
         {
           "ticker": "007070",
@@ -25080,10 +25080,10 @@
           "confidence": "high"
         },
         {
-          "ticker": "148250",
-          "name": "알엔투테크놀로지",
-          "change_pct": 13.03,
-          "specific_signal": "스테이블코인 기반 관광바우처 글로벌 결제 POC 추진 및 美 디지털자산 법인 설립",
+          "ticker": "439090",
+          "name": "마녀공장",
+          "change_pct": 12.28,
+          "specific_signal": "100억 규모 자사주 취득 신탁계약 공시(주주환원 기대)",
           "confidence": "high"
         }
       ],
@@ -25560,14 +25560,14 @@
       ]
     },
     {
-      "keyword": "해외진출",
+      "keyword": "생산성",
       "risen_members": [
         {
-          "ticker": "001250",
-          "name": "GS글로벌",
-          "change_pct": 14.17,
-          "specific_signal": "일본 편집숍 '코스메키친' 입점 — K-뷰티 브랜드 3종 현지 공급(일본 유통 진출)",
-          "confidence": "high"
+          "ticker": "051910",
+          "name": "LG화학",
+          "change_pct": 6.69,
+          "specific_signal": "시장 수급·모멘텀 회복(원통형 캔 수요) 및 LG화학의 IT소재·석유화학 사업 성장 재가동 기사들이 겹치며 수급·밸류 재평가",
+          "confidence": "medium"
         },
         {
           "ticker": "109670",
@@ -25595,14 +25595,14 @@
       ]
     },
     {
-      "keyword": "생산성",
+      "keyword": "해외진출",
       "risen_members": [
         {
-          "ticker": "051910",
-          "name": "LG화학",
-          "change_pct": 6.69,
-          "specific_signal": "시장 수급·모멘텀 회복(원통형 캔 수요) 및 LG화학의 IT소재·석유화학 사업 성장 재가동 기사들이 겹치며 수급·밸류 재평가",
-          "confidence": "medium"
+          "ticker": "001250",
+          "name": "GS글로벌",
+          "change_pct": 14.17,
+          "specific_signal": "일본 편집숍 '코스메키친' 입점 — K-뷰티 브랜드 3종 현지 공급(일본 유통 진출)",
+          "confidence": "high"
         },
         {
           "ticker": "109670",
@@ -25735,13 +25735,13 @@
       ]
     },
     {
-      "keyword": "기업공시",
+      "keyword": "터미널",
       "risen_members": [
         {
-          "ticker": "008470",
-          "name": "부스타",
-          "change_pct": 14.79,
-          "specific_signal": "1대1(100%) 무상증자 결정·주권매매거래 정지(무상증자 일정에 따른) 및 발행주식수 1,680만9,600주로 확대",
+          "ticker": "018670",
+          "name": "SK가스",
+          "change_pct": 13.82,
+          "specific_signal": "중간현금배당(주당 2,000원) 결정(보도) 및 2분기 영업이익 개선 전망(원가·LPG 트레이딩 수익, 울산 GPS 관련 수혜)",
           "confidence": "high"
         },
         {
@@ -25770,13 +25770,13 @@
       ]
     },
     {
-      "keyword": "터미널",
+      "keyword": "기업공시",
       "risen_members": [
         {
-          "ticker": "018670",
-          "name": "SK가스",
-          "change_pct": 13.82,
-          "specific_signal": "중간현금배당(주당 2,000원) 결정(보도) 및 2분기 영업이익 개선 전망(원가·LPG 트레이딩 수익, 울산 GPS 관련 수혜)",
+          "ticker": "008470",
+          "name": "부스타",
+          "change_pct": 14.79,
+          "specific_signal": "1대1(100%) 무상증자 결정·주권매매거래 정지(무상증자 일정에 따른) 및 발행주식수 1,680만9,600주로 확대",
           "confidence": "high"
         },
         {
