@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-11T07:28:28",
-  "total": 351,
+  "generated_at": "2026-10-11T10:08:49",
+  "total": 350,
   "new_today": 0,
   "alerts": [
     {
@@ -5778,25 +5778,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "사업구조개편/전략전환",
       "matched_at": "2026-09-11T13:37:08"
-    },
-    {
-      "ticker": "012450",
-      "name": "한화에어로스페이스",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결(자율공시)",
-      "submitter": "한화에어로스페이스",
-      "submitted_at": "2026.09.11",
-      "time": "07:37",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911800004",
-      "rcp_no": "20260911800004",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 1077000,
-      "today_change_pct": 0.94,
-      "signal_last_seen": "20260616",
-      "signal_confidence": "high",
-      "signal_main_theme": "수급/지배구조 (지분확대·M&A)",
-      "matched_at": "2026-09-11T09:11:54"
     },
     {
       "ticker": "900100",
