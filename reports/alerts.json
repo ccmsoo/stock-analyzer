@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-11T10:08:49",
-  "total": 350,
+  "generated_at": "2026-10-11T16:08:58",
+  "total": 348,
   "new_today": 0,
   "alerts": [
     {
@@ -5740,44 +5740,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "건설/인프라",
       "matched_at": "2026-09-11T18:09:08"
-    },
-    {
-      "ticker": "005090",
-      "name": "SGC에너지",
-      "sosok": "",
-      "report_name": "타법인주식및출자증권취득결정",
-      "submitter": "SGC에너지",
-      "submitted_at": "2026.09.11",
-      "time": "13:26",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911800199",
-      "rcp_no": "20260911800199",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 59500,
-      "today_change_pct": 1.02,
-      "signal_last_seen": "20260902",
-      "signal_confidence": "high",
-      "signal_main_theme": "정책/인프라 전환 (데이터센터 인프라)",
-      "matched_at": "2026-09-11T13:37:07"
-    },
-    {
-      "ticker": "014910",
-      "name": "성문전자",
-      "sosok": "",
-      "report_name": "[기재정정]타법인주식및출자증권취득결정",
-      "submitter": "성문전자",
-      "submitted_at": "2026.09.11",
-      "time": "11:17",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260911800150",
-      "rcp_no": "20260911800150",
-      "category": "M&A/경영권",
-      "score": 80,
-      "current_price": 2065,
-      "today_change_pct": 1.67,
-      "signal_last_seen": "20260703",
-      "signal_confidence": "medium",
-      "signal_main_theme": "사업구조개편/전략전환",
-      "matched_at": "2026-09-11T13:37:08"
     },
     {
       "ticker": "900100",
