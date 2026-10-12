@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-10-12T07:28:14",
-  "total": 340,
-  "new_today": 0,
+  "generated_at": "2026-10-12T10:32:50",
+  "total": 341,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "064290",
+      "name": "인텍플러스",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "인텍플러스",
+      "submitted_at": "2026.10.12",
+      "time": "10:07",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012900145",
+      "rcp_no": "20261012900145",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 58000,
+      "today_change_pct": 4.29,
+      "signal_last_seen": "20260904",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체",
+      "matched_at": "2026-10-12T10:32:50"
+    },
     {
       "ticker": "011790",
       "name": "SKC",
