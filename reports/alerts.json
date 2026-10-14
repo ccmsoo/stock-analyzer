@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-10-14T07:58:29",
-  "total": 378,
-  "new_today": 0,
+  "generated_at": "2026-10-14T10:36:31",
+  "total": 379,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "010400",
+      "name": "우진아이엔에스",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "우진아이엔에스",
+      "submitted_at": "2026.10.14",
+      "time": "09:53",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261014800068",
+      "rcp_no": "20261014800068",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 3805,
+      "today_change_pct": 0.13,
+      "signal_last_seen": "20260901",
+      "signal_confidence": "high",
+      "signal_main_theme": "재무구조 개선/자산매각",
+      "matched_at": "2026-10-14T10:36:31"
+    },
     {
       "ticker": "002780",
       "name": "진흥기업",
