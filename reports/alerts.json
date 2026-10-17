@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-17T09:04:13",
-  "total": 390,
+  "generated_at": "2026-10-17T13:19:55",
+  "total": 388,
   "new_today": 0,
   "alerts": [
     {
@@ -6348,44 +6348,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "공시 (유상증자/수급)",
       "matched_at": "2026-09-17T18:02:51"
-    },
-    {
-      "ticker": "000150",
-      "name": "두산",
-      "sosok": "",
-      "report_name": "주식소각결정",
-      "submitter": "두산",
-      "submitted_at": "2026.09.17",
-      "time": "11:16",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260917800163",
-      "rcp_no": "20260917800163",
-      "category": "자본정책_호재",
-      "score": 70,
-      "current_price": 1451000,
-      "today_change_pct": 4.61,
-      "signal_last_seen": "20260907",
-      "signal_confidence": "medium",
-      "signal_main_theme": "에너지·전력 인프라",
-      "matched_at": "2026-09-17T12:54:53"
-    },
-    {
-      "ticker": "047040",
-      "name": "대우건설",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "대우건설",
-      "submitted_at": "2026.09.17",
-      "time": "09:10",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260917800057",
-      "rcp_no": "20260917800057",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 18700,
-      "today_change_pct": 0.7,
-      "signal_last_seen": "20260907",
-      "signal_confidence": "high",
-      "signal_main_theme": "policy (인프라/공공공사)",
-      "matched_at": "2026-09-17T12:54:53"
     },
     {
       "ticker": "900100",
