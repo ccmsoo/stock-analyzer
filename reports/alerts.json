@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-10-23T06:31:53",
+  "generated_at": "2026-10-23T09:09:44",
   "total": 401,
-  "new_today": 0,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "006980",
+      "name": "우성",
+      "sosok": "",
+      "report_name": "[기재정정]주요사항보고서(회사합병결정)",
+      "submitter": "우성",
+      "submitted_at": "2026.10.23",
+      "time": "07:30",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022000513",
+      "rcp_no": "20261022000513",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 17980,
+      "today_change_pct": 1.07,
+      "signal_last_seen": "20260907",
+      "signal_confidence": "high",
+      "signal_main_theme": "M&A/지배구조 개편",
+      "matched_at": "2026-10-23T09:09:44"
+    },
     {
       "ticker": "033530",
       "name": "SJG세종",
@@ -6500,25 +6519,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "수급",
       "matched_at": "2026-09-23T11:34:14"
-    },
-    {
-      "ticker": "000720",
-      "name": "현대건설",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "현대건설",
-      "submitted_at": "2026.09.23",
-      "time": "08:26",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923800033",
-      "rcp_no": "20260923800033",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 131300,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260819",
-      "signal_confidence": "high",
-      "signal_main_theme": "정책/수주(원전·플랜트)",
-      "matched_at": "2026-09-23T08:50:31"
     },
     {
       "ticker": "900100",
