@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-31T07:44:19",
-  "total": 497,
+  "generated_at": "2026-10-31T10:51:03",
+  "total": 495,
   "new_today": 0,
   "alerts": [
     {
@@ -8552,44 +8552,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "실적",
       "matched_at": "2026-10-01T15:20:45"
-    },
-    {
-      "ticker": "003160",
-      "name": "디아이",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결(자율공시)",
-      "submitter": "디아이",
-      "submitted_at": "2026.10.01",
-      "time": "09:12",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001800054",
-      "rcp_no": "20261001800054",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 40400,
-      "today_change_pct": 10.08,
-      "signal_last_seen": "20260902",
-      "signal_confidence": "high",
-      "signal_main_theme": "반도체",
-      "matched_at": "2026-10-01T09:17:22"
-    },
-    {
-      "ticker": "034020",
-      "name": "두산에너빌리티",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "두산에너빌리티",
-      "submitted_at": "2026.10.01",
-      "time": "08:59",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001800034",
-      "rcp_no": "20261001800034",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 82200,
-      "today_change_pct": 0.74,
-      "signal_last_seen": "20260907",
-      "signal_confidence": "medium",
-      "signal_main_theme": "정책(대미투자)·원전 수주 기대",
-      "matched_at": "2026-10-01T09:17:23"
     },
     {
       "ticker": "096770",
