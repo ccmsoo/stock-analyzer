@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-11-07T02:28:25",
-  "total": 529,
-  "new_today": 0,
+  "generated_at": "2026-11-07T07:15:23",
+  "total": 530,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "096770",
+      "name": "SK이노베이션",
+      "sosok": "",
+      "report_name": "정정신고서제출요구\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t( 2026.10.28. 제출 증권신고서(합병) )",
+      "submitter": "금융감독원",
+      "submitted_at": "2026.11.06",
+      "time": "20:00",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106100004",
+      "rcp_no": "20261106100004",
+      "category": "M&A/경영권",
+      "score": 80,
+      "current_price": 109900,
+      "today_change_pct": 3.77,
+      "signal_last_seen": "20260909",
+      "signal_confidence": "high",
+      "signal_main_theme": "M&A / 배터리 밸류체인",
+      "matched_at": "2026-11-07T07:15:23"
+    },
     {
       "ticker": "383930",
       "name": "디티앤씨알오",
