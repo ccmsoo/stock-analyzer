@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T08:45:12",
-  "total": 737,
+  "generated_at": "2026-11-14T12:36:44",
+  "total": 736,
   "new_today": 0,
   "alerts": [
     {
@@ -13587,25 +13587,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "정책/국책수주 (국책 과제·공공연구 사업) 및 반도체/반도체 공정장비",
       "matched_at": "2026-10-15T15:46:10"
-    },
-    {
-      "ticker": "310870",
-      "name": "디와이씨",
-      "sosok": "",
-      "report_name": "주요사항보고서(자기주식취득신탁계약해지결정)",
-      "submitter": "디와이씨",
-      "submitted_at": "2026.10.15",
-      "time": "09:48",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000026",
-      "rcp_no": "20261015000026",
-      "category": "자본정책_호재",
-      "score": 70,
-      "current_price": 1375,
-      "today_change_pct": 2.83,
-      "signal_last_seen": "20260904",
-      "signal_confidence": "medium",
-      "signal_main_theme": "제조업/정밀부품·로보틱스",
-      "matched_at": "2026-10-15T10:50:18"
     },
     {
       "ticker": "096770",
