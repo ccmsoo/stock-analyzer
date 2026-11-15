@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-11-16T05:07:55",
-  "total": 698,
-  "new_today": 0,
+  "generated_at": "2026-11-16T08:57:11",
+  "total": 699,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "476080",
+      "name": "M83",
+      "sosok": "",
+      "report_name": "분기보고서\n\t\t\t\t\t\t\t\t\t (2026.09)",
+      "submitter": "M83",
+      "submitted_at": "2026.11.16",
+      "time": "08:00",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116000001",
+      "rcp_no": "20261116000001",
+      "category": "실적",
+      "score": 75,
+      "current_price": 4250,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260604",
+      "signal_confidence": "high",
+      "signal_main_theme": "AI/클라우드 인프라",
+      "matched_at": "2026-11-16T08:57:11"
+    },
     {
       "ticker": "092790",
       "name": "넥스틸",
