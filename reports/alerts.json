@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-19T05:33:02",
-  "total": 836,
-  "new_today": 0,
+  "generated_at": "2026-11-19T11:00:05",
+  "total": 837,
+  "new_today": 2,
   "alerts": [
     {
       "ticker": "137080",
@@ -21,6 +21,44 @@
       "signal_confidence": "high",
       "signal_main_theme": "수급/기업행동",
       "matched_at": "2026-11-18T21:14:33"
+    },
+    {
+      "ticker": "115610",
+      "name": "이미지스",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "이미지스",
+      "submitted_at": "2026.11.19",
+      "time": "10:40",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119900126",
+      "rcp_no": "20261119900126",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 1162,
+      "today_change_pct": 5.37,
+      "signal_last_seen": "20260609",
+      "signal_confidence": "medium",
+      "signal_main_theme": "반도체·광전자(섹터·테마성 랠리)",
+      "matched_at": "2026-11-19T11:00:04"
+    },
+    {
+      "ticker": "112610",
+      "name": "씨에스윈드",
+      "sosok": "",
+      "report_name": "단일판매ㆍ공급계약체결",
+      "submitter": "씨에스윈드",
+      "submitted_at": "2026.11.19",
+      "time": "10:08",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800079",
+      "rcp_no": "20261119800079",
+      "category": "수주/계약",
+      "score": 85,
+      "current_price": 40850,
+      "today_change_pct": 0.37,
+      "signal_last_seen": "20260616",
+      "signal_confidence": "high",
+      "signal_main_theme": "정책/규제(재생에너지)",
+      "matched_at": "2026-11-19T11:00:05"
     },
     {
       "ticker": "000990",
@@ -15506,25 +15544,6 @@
       "signal_confidence": "medium",
       "signal_main_theme": "정책/방산·수주",
       "matched_at": "2026-10-20T15:36:10"
-    },
-    {
-      "ticker": "229640",
-      "name": "LS에코에너지",
-      "sosok": "",
-      "report_name": "연결재무제표기준영업(잠정)실적(공정공시)",
-      "submitter": "LS에코에너지",
-      "submitted_at": "2026.10.20",
-      "time": "09:33",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261020800175",
-      "rcp_no": "20261020800175",
-      "category": "실적",
-      "score": 75,
-      "current_price": 49450,
-      "today_change_pct": 14.59,
-      "signal_last_seen": "20260827",
-      "signal_confidence": "high",
-      "signal_main_theme": "정책",
-      "matched_at": "2026-10-20T10:36:58"
     },
     {
       "ticker": "096770",
