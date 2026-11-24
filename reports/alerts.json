@@ -1,8 +1,27 @@
 {
-  "generated_at": "2026-11-24T22:19:31",
-  "total": 847,
-  "new_today": 16,
+  "generated_at": "2026-11-25T08:09:40",
+  "total": 848,
+  "new_today": 1,
   "alerts": [
+    {
+      "ticker": "048410",
+      "name": "현대바이오",
+      "sosok": "",
+      "report_name": "투자판단관련주요경영사항(임상시험계획변경승인)\n\t\t\t\t\t\t\t\t\t\n\t\t  \t\t\t\t\t\t\t(전립선암 치료제 CPPCA07의 1상 임상시험계획 변경승인)",
+      "submitter": "현대바이오",
+      "submitted_at": "2026.11.25",
+      "time": "07:39",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900002",
+      "rcp_no": "20261125900002",
+      "category": "신약/임상",
+      "score": 78,
+      "current_price": 6420,
+      "today_change_pct": 0.0,
+      "signal_last_seen": "20260909",
+      "signal_confidence": "high",
+      "signal_main_theme": "바이오",
+      "matched_at": "2026-11-25T08:09:40"
+    },
     {
       "ticker": "352820",
       "name": "하이브",
