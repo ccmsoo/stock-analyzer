@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-28T04:05:33",
-  "total": 804,
-  "new_today": 1,
+  "generated_at": "2026-11-28T10:56:14",
+  "total": 803,
+  "new_today": 0,
   "alerts": [
     {
       "ticker": "006120",
@@ -15012,25 +15012,6 @@
       "signal_confidence": "high",
       "signal_main_theme": "2차전지",
       "matched_at": "2026-10-29T11:54:57"
-    },
-    {
-      "ticker": "000720",
-      "name": "현대건설",
-      "sosok": "",
-      "report_name": "단일판매ㆍ공급계약체결",
-      "submitter": "현대건설",
-      "submitted_at": "2026.10.29",
-      "time": "08:04",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800011",
-      "rcp_no": "20261029800011",
-      "category": "수주/계약",
-      "score": 85,
-      "current_price": 95500,
-      "today_change_pct": 0.0,
-      "signal_last_seen": "20260819",
-      "signal_confidence": "high",
-      "signal_main_theme": "정책/수주(원전·플랜트)",
-      "matched_at": "2026-10-29T08:44:26"
     },
     {
       "ticker": "016800",
